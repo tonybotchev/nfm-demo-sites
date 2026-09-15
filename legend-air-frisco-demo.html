@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legend Air Conditioning &amp; Heating | HVAC in Frisco, TX</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { overflow-x:hidden; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:#1e2a32; line-height:1.6; }
+  a { text-decoration:none; }
+  img { max-width:100%; height:auto; }
+  .demo-badge { position:fixed; top:12px; right:12px; z-index:999; background:#eab308; color:#0d3f3a; font-size:12px; font-weight:700; padding:6px 12px; border-radius:20px; box-shadow:0 2px 8px rgba(0,0,0,.25); letter-spacing:.5px; }
+  .topbar { background:#0d3f3a; color:#fff; font-size:14px; padding:8px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; }
+  .topbar a { color:#fde047; font-weight:700; }
+  nav { background:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,.08); position:sticky; top:0; z-index:100; }
+  .logo { font-size:22px; font-weight:800; color:#0d3f3a; }
+  .logo span { color:#b78a00; }
+  .nav-cta { background:#eab308; color:#0d3f3a; font-weight:700; padding:10px 20px; border-radius:8px; }
+  .hero { background:linear-gradient(135deg,#0d3f3a 0%,#14655e 60%,#1d8a7f 100%); color:#fff; padding:70px 20px; text-align:center; }
+  .hero h1 { font-size:clamp(30px,5vw,52px); font-weight:800; line-height:1.15; margin-bottom:16px; }
+  .hero h1 span { color:#fde047; }
+  .hero p { font-size:18px; max-width:620px; margin:0 auto 28px; opacity:.92; }
+  .hero-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:15px 32px; border-radius:10px; font-weight:700; font-size:17px; }
+  .btn-primary { background:#eab308; color:#0d3f3a; }
+  .btn-outline { border:2px solid #fff; color:#fff; }
+  .trust { background:#f8fafc; padding:18px 20px; display:flex; justify-content:center; gap:36px; flex-wrap:wrap; font-size:15px; font-weight:600; color:#0d3f3a; }
+  .trust i { font-style:normal; color:#16a34a; margin-right:6px; }
+  section { padding:60px 20px; max-width:1100px; width:100%; margin:0 auto; }
+  h2 { font-size:clamp(24px,4vw,36px); font-weight:800; color:#0d3f3a; text-align:center; margin-bottom:12px; }
+  .sub { text-align:center; color:#5b6b7d; max-width:640px; margin:0 auto 36px; font-size:17px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+  .card { background:#fff; border:1px solid #e5eaf0; border-radius:14px; padding:28px 24px; box-shadow:0 4px 14px rgba(13,63,58,.06); }
+  .card .icon { font-size:34px; margin-bottom:12px; }
+  .card h3 { font-size:19px; color:#0d3f3a; margin-bottom:8px; }
+  .card p { font-size:15px; color:#5b6b7d; }
+  .why { background:#0d3f3a; border-radius:20px; padding:50px 34px; color:#fff; }
+  .why h2 { color:#fff; }
+  .why .grid { margin-top:30px; }
+  .why .card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); box-shadow:none; }
+  .why .card h3 { color:#fde047; }
+  .why .card p { color:#cbd5e1; }
+  .reviews { text-align:center; background:#f8fafc; border-radius:20px; padding:50px 30px; }
+  .stars { font-size:32px; color:#b78a00; letter-spacing:4px; margin:10px 0; }
+  .review-count { font-size:17px; font-weight:700; color:#0d3f3a; margin-bottom:6px; }
+  .areas { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:8px; }
+  .area-pill { background:#e8eef5; color:#0d3f3a; font-weight:600; font-size:14px; padding:8px 18px; border-radius:20px; }
+  .contact { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; align-items:start; }
+  .contact-info h3 { font-size:22px; color:#0d3f3a; margin-bottom:14px; }
+  .contact-info p { margin-bottom:10px; font-size:16px; }
+  .contact-info a { color:#14655e; font-weight:700; }
+  .big-call { display:block; background:#16a34a; color:#fff; text-align:center; font-size:20px; font-weight:800; padding:18px; border-radius:12px; margin-top:16px; }
+  form { background:#f8fafc; border:1px solid #e5eaf0; border-radius:14px; padding:28px; }
+  form h3 { margin-bottom:16px; color:#0d3f3a; }
+  label { display:block; font-size:14px; font-weight:600; margin:12px 0 4px; color:#0d3f3a; }
+  input, textarea, select { width:100%; padding:12px; border:1px solid #cbd5e1; border-radius:8px; font-size:15px; font-family:inherit; }
+  button[type=submit] { background:#eab308; color:#0d3f3a; border:none; font-weight:800; font-size:16px; padding:14px; width:100%; border-radius:10px; margin-top:18px; cursor:pointer; }
+  .form-note { font-size:12px; color:#8a99ab; margin-top:10px; text-align:center; }
+  footer { background:#0d3f3a; color:#94a3b8; text-align:center; padding:30px 20px; font-size:14px; }
+  footer .demo-credit { margin-top:10px; font-size:12px; color:#64748b; }
+  .sticky-call { display:none; position:fixed; bottom:0; left:0; right:0; background:#16a34a; color:#fff; text-align:center; font-weight:800; font-size:18px; padding:16px; z-index:999; }
+  /* ---- Mobile responsiveness ---- */
+  @media (max-width:768px){
+    .sticky-call{ display:block; }
+    footer{ padding-bottom:88px; }
+    .grid, .contact{ grid-template-columns:1fr; }
+    .hero{ padding:56px 16px; }
+    section{ padding:48px 16px; }
+  }
+  @media (max-width:480px){
+    .hero{ padding:44px 16px; }
+    .hero p{ font-size:16px; }
+    section{ padding:36px 16px; }
+    .topbar{ font-size:12px; padding:8px 12px; }
+    nav{ padding:12px 16px; flex-wrap:wrap; gap:10px; }
+    .logo{ font-size:18px; }
+    .nav-cta{ padding:12px 18px; min-height:44px; display:inline-flex; align-items:center; }
+    .btn{ padding:14px 24px; min-height:44px; font-size:16px; }
+    .trust{ gap:14px; font-size:14px; padding:14px 12px; }
+    .card{ padding:22px 18px; }
+    .why{ padding:36px 20px; }
+    .reviews{ padding:36px 20px; }
+    .big-call{ min-height:44px; }
+    .sticky-call{ min-height:44px; }
+    .sub{ font-size:16px; }
+  }
+</style>
+</head>
+<body>
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<div class="topbar">
+  <div>🏠 Family-Owned HVAC in Frisco, TX</div>
+  <div>Call now: <a href="tel:+12146366163">(214) 636-6163</a></div>
+</div>
+
+<nav>
+  <div class="logo">LEGEND <span>AIR</span></div>
+  <a class="nav-cta" href="tel:+12146366163">Call (214) 636-6163</a>
+</nav>
+
+<div class="hero">
+  <h1>Legendary Comfort for <span>Frisco Homes</span></h1>
+  <p>A family-owned Frisco HVAC company treating every customer like family — affordable, honest, fast, and trustworthy heating &amp; cooling.</p>
+  <div class="hero-btns">
+    <a class="btn btn-primary" href="tel:+12146366163">Call (214) 636-6163</a>
+    <a class="btn btn-outline" href="#estimate">Get a Free Estimate</a>
+  </div>
+</div>
+
+<div class="trust">
+  <div><i>✓</i> Family-Owned</div>
+  <div><i>✓</i> Free Service Calls</div>
+  <div><i>✓</i> Written Estimates</div>
+  <div><i>✓</i> 24/7 Availability</div>
+</div>
+
+<section>
+  <h2>Our Services</h2>
+  <p class="sub">Complete heating &amp; cooling care for Frisco homes — all makes and models.</p>
+  <div class="grid">
+    <div class="card"><div class="icon">❄️</div><h3>AC Repair</h3><p>Fast diagnosis and honest repairs that keep your home cool through the hottest Texas summers.</p></div>
+    <div class="card"><div class="icon">🔥</div><h3>Heating &amp; Furnace Repair</h3><p>Reliable furnace service so your family stays warm when the cold snaps hit North Texas.</p></div>
+    <div class="card"><div class="icon">🏠</div><h3>System Installation</h3><p>Full HVAC replacements guided step by step — the right system for your home and your budget.</p></div>
+    <div class="card"><div class="icon">🛠️</div><h3>Preventive Maintenance</h3><p>Seasonal tune-ups that catch small problems early, boost efficiency, and extend equipment life.</p></div>
+    <div class="card"><div class="icon">💨</div><h3>All Makes &amp; Models</h3><p>We service Bosch, Goodman, York, Rheem, Trane, and more — whatever system you have.</p></div>
+    <div class="card"><div class="icon">💳</div><h3>Financing Options</h3><p>Clear financing guidance so a new system fits your budget without the stress.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="why">
+    <h2>Why Frisco Trusts Legend Air</h2>
+    <div class="grid">
+      <div class="card"><h3>Customers Treated Like Family</h3><p>Every service call comes with honest solutions and clear communication — no surprises, ever.</p></div>
+      <div class="card"><h3>Free Service Calls, Written Estimates</h3><p>You know exactly what the work costs before anything begins. In-person estimates, in writing.</p></div>
+      <div class="card"><h3>Right Here in Frisco</h3><p>Based at 124 Rose Ln in Frisco — a local team that knows North Texas homes and their quirks.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="reviews">
+    <h2>What Your Neighbors Say</h2>
+    <div class="stars">★★★★★</div>
+    <p class="review-count">1,100+ five-star reviews from Frisco homeowners</p>
+    <p class="sub" style="margin-bottom:0">Your Google reviews appear here automatically — every 5-star review becomes a salesperson that works while you sleep.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Areas We Serve</h2>
+  <div class="areas">
+    <span class="area-pill">Frisco</span><span class="area-pill">Plano</span><span class="area-pill">McKinney</span><span class="area-pill">Allen</span><span class="area-pill">Little Elm</span><span class="area-pill">Prosper</span>
+  </div>
+</section>
+
+<section id="estimate">
+  <h2>Get Your Free Estimate</h2>
+  <p class="sub">Tell us what's going on — we'll call you back shortly.</p>
+  <div class="contact">
+    <div class="contact-info">
+      <h3>Legend Air Conditioning &amp; Heating</h3>
+      <p>📍 124 Rose Ln #504, Frisco, TX 75034</p>
+      <p>📞 <a href="tel:+12146366163">(214) 636-6163</a></p>
+      <p>✉️ <a href="mailto:Hello@LegendAirTX.com">Hello@LegendAirTX.com</a></p>
+      <p>🕒 Open 24/7</p>
+      <a class="big-call" href="tel:+12146366163">Tap to Call Now</a>
+    </div>
+    <form onsubmit="return false;">
+      <h3>Request a callback</h3>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="(555) 123-4567">
+      <label>What do you need?</label>
+      <select><option>AC repair</option><option>Heating repair</option><option>System replacement</option><option>Maintenance / tune-up</option><option>Something else</option></select>
+      <label>Details</label><textarea rows="3" placeholder="Tell us what's happening..."></textarea>
+      <button type="submit">Request My Free Estimate</button>
+      <p class="form-note">Demo form — in the live site this goes straight to your phone &amp; email.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>Legend Air Conditioning &amp; Heating — 124 Rose Ln #504, Frisco, TX 75034 — (214) 636-6163</div>
+  <div class="demo-credit">Demo preview built by NoFluff Marketing · nofluffmarketing.io</div>
+</footer>
+
+<a class="sticky-call" href="tel:+12146366163">📞 Call (214) 636-6163</a>
+</body>
+</html>
