@@ -76,7 +76,7 @@
     .sub{ font-size:16px; }
   }
 
-  .demo-badge { position:fixed; top:12px; right:12px; z-index:999; background:#f59e0b; color:#1c2f3a; font-size:12px; font-weight:700; padding:6px 12px; border-radius:20px; box-shadow:0 2px 8px rgba(0,0,0,.25); letter-spacing:.5px; }
+  .demo-badge { display:inline-block; white-space:nowrap; background:#f59e0b; color:#1c2f3a; font-size:12px; font-weight:700; padding:6px 12px; border-radius:20px; box-shadow:0 2px 8px rgba(0,0,0,.25); letter-spacing:.5px; }
   .topbar { background:#4c1d95; color:#fff; font-size:14px; padding:8px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; }
   .topbar a { color:#ddd6fe; font-weight:700; }
   nav { background:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,.08); position:sticky; top:0; z-index:100; }
@@ -99,9 +99,8 @@
 </style>
 </head>
 <body class="dental">
-<div class="demo-badge">DEMO PREVIEW</div>
-
 <div class="topbar">
+  <div class="demo-badge">DEMO PREVIEW</div>
   <div>Braces &amp; family dentistry · Next to Melissa City Hall</div>
   <div>Call now: <a href="tel:+19728374867">(972) 837-4867</a></div>
 </div>
