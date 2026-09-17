@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texas Pride Roofing &amp; Fencing | Prosper, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#FAF3E8;--navy:#14213D;--navy2:#1E2E52;--rust:#E76F51;--rust2:#C4532F;--gold:#E9A13B;--muted:#6B6257;--line:#E5D9C3;--card:#FFFDF8}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--cream);color:var(--navy);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3,.slab{font-family:"Zilla Slab",Georgia,serif;line-height:1.12}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  section{padding:90px 0}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--rust2);margin-bottom:14px}
+  h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:14px}
+  .sub{color:var(--muted);font-size:17px;max-width:640px}
+  .demo-badge{position:fixed;top:14px;right:14px;z-index:2000;background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;padding:8px 14px;border-radius:999px}
+  nav{position:sticky;top:0;z-index:1000;background:rgba(250,243,232,.92);backdrop-filter:blur(14px);border-bottom:2px solid var(--navy)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Zilla Slab";font-weight:700;font-size:19px}
+  .logo .mark{width:34px;height:34px;border-radius:8px;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:19px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--navy);text-decoration:none;font-size:14px;font-weight:600}
+  .btn{display:inline-block;padding:14px 30px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none;font-family:"Inter"}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-rust{background:var(--rust);color:#fff;box-shadow:0 10px 28px rgba(231,111,81,.35)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-sm{padding:10px 22px;font-size:14px}
+  /* hero */
+  header{padding:96px 0 80px;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#F3E8D3, var(--cream))}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  header h1{font-size:clamp(2.6rem,5.2vw,4.1rem);font-weight:700;margin:10px 0 18px}
+  header h1 em{font-style:normal;color:var(--rust2)}
+  .star-card{background:var(--navy);color:#fff;border-radius:20px;padding:38px;box-shadow:0 26px 60px rgba(20,33,61,.3);position:relative}
+  .star-card .bigstar{position:absolute;top:-26px;right:26px;font-size:60px;color:var(--gold);transform:rotate(12deg)}
+  .star-card .stars{color:var(--gold);font-size:20px;letter-spacing:3px}
+  .star-card .big{font-family:"Zilla Slab";font-size:54px;font-weight:700}
+  .star-card .cap{color:#B9C2D6;font-size:14px;margin:6px 0 18px}
+  .hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+  .bbb-strip{margin-top:26px;display:inline-flex;align-items:center;gap:10px;background:rgba(233,161,59,.15);border:1.5px solid var(--gold);
+    padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px}
+  /* marquee */
+  .marquee{background:var(--navy);color:var(--cream);overflow:hidden;white-space:nowrap;padding:15px 0;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)}
+  .marquee-track{display:inline-block;animation:tick 28s linear infinite;font-family:"Zilla Slab";font-size:16px;letter-spacing:2px}
+  .marquee-track span{margin:0 30px}
+  .marquee-track b{color:var(--gold)}
+  @keyframes tick{to{transform:translateX(-50%)}}
+  /* stats */
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;text-align:center}
+  .stat-grid .n{font-family:"Zilla Slab";font-size:48px;font-weight:700;color:var(--rust2)}
+  .stat-grid .l{color:var(--muted);font-size:14px}
+  /* proof band */
+  .proofband{background:var(--navy);color:#fff;border-radius:28px;padding:60px 54px}
+  .proofband h2{color:#fff}
+  .proofband .sub{color:#B9C2D6}
+  .proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:36px}
+  .proof-card{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.14);border-radius:16px;padding:28px}
+  .proof-card .ico{font-size:30px;margin-bottom:12px}
+  .proof-card h3{font-size:18px;margin-bottom:8px;color:#fff}
+  .proof-card p{font-size:14px;color:#B9C2D6}
+  /* services */
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 8px}
+  .tab{padding:12px 22px;border-radius:8px;border:2px solid var(--line);background:var(--card);color:var(--navy);font-weight:700;font-size:14px;cursor:pointer;transition:all .2s;font-family:"Inter"}
+  .tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .tab-panel{display:none;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:40px;margin-top:18px}
+  .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;animation:fade .35s}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+  .tab-panel h3{font-size:24px;margin-bottom:12px}
+  .tab-panel p{color:var(--muted)}
+  .tab-panel ul{margin:18px 0 0;list-style:none}
+  .tab-panel li{padding:8px 0 8px 30px;position:relative;font-size:15px}
+  .tab-panel li::before{content:"\2605";position:absolute;left:0;color:var(--rust2)}
+  .prod-visual{border-radius:14px;min-height:220px;display:flex;align-items:center;justify-content:center;font-size:70px;background:linear-gradient(135deg,#F3E8D3,#FAF3E8);border:2px solid var(--line)}
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .svc-card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:40px}
+  .svc-card h3{font-size:24px;margin:22px 0 12px}
+  .svc-card p{color:var(--muted)}
+  /* owner */
+  .owner{background:var(--card);border-top:2px solid var(--line);border-bottom:2px solid var(--line);text-align:center}
+  .owner .name{font-family:"Zilla Slab";font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:700;max-width:840px;margin:0 auto}
+  .owner .role{margin-top:14px;font-size:15px;color:var(--muted)}
+  /* rating spotlight */
+  .spot-num{font-family:"Zilla Slab";font-size:clamp(4rem,8vw,6.5rem);font-weight:700;color:var(--rust2);line-height:1}
+  .spot-stars{color:var(--gold);font-size:26px;letter-spacing:6px;margin:10px 0}
+  /* faq */
+  .faq{max-width:800px;margin:30px auto 0}
+  .faq-item{border-bottom:2px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 0;font-size:17px;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:"Inter"}
+  .faq-q span{font-size:22px;color:var(--rust2);transition:transform .25s}
+  .faq-item.open .faq-q span{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted);font-size:15px}
+  .faq-a p{padding:0 0 22px}
+  /* contact */
+  .contact{background:var(--navy);color:#fff;border-radius:24px;padding:60px 54px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .contact h2{color:#fff}
+  .contact .sub{color:#B9C2D6}
+  .c-row{display:flex;gap:14px;margin:20px 0;font-size:16px;align-items:flex-start}
+  .c-row .i{font-size:22px}
+  .c-row a{color:#fff}
+  form input,form textarea{width:100%;padding:14px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff;font-family:"Inter";font-size:15px;margin-bottom:14px}
+  form input::placeholder,form textarea::placeholder{color:#8FA0BD}
+  footer{background:#0B1426;color:#8FA0BD;text-align:center;padding:34px;font-size:13px}
+  .sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--rust);text-align:center;padding:16px;font-weight:800;font-size:17px;color:#fff;text-decoration:none}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:900px){.hero-grid,.tab-panel.active,.svc-grid,.contact{grid-template-columns:1fr}.nav-links a:not(.btn){display:none}section{padding:64px 0}.sticky-call{display:block}body{padding-bottom:60px}.proofband{padding:40px 26px}}
+</style>
+</head>
+<body>
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<nav><div class="wrap nav-in">
+  <div class="logo"><span class="mark">&#9733;</span> Texas Pride Roofing &amp; Fencing</div>
+  <div class="nav-links">
+    <a href="#proof">Why Us</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    <a class="btn btn-rust btn-sm" href="tel:+14692884488">(469) 288-4488</a>
+  </div>
+</div></nav>
+
+<header>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Prosper, Texas</span>
+      <h1>A Prosper roofer <em>worth calling.</em></h1>
+      <p class="sub">BBB A+ accredited and rated 4.8 across 60 Birdeye reviews &mdash; with a phone number you can actually find.</p>
+      <div class="hero-cta">
+        <a class="btn btn-rust" href="tel:+14692884488">&#9742; Call (469) 288-4488</a>
+        <a class="btn btn-navy" href="#services">See Services</a>
+      </div>
+      <div><span class="bbb-strip">&#10003; BBB A+ Accredited Business</span></div>
+    </div>
+    <div class="star-card">
+      <div class="bigstar">&#9733;</div>
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="big">4.8</div>
+      <div class="cap">average across <span data-count="60">0</span> reviews on Birdeye</div>
+      <p style="font-size:15px;color:#D6DCEA">Real ratings from real customers &mdash; displayed where homeowners actually look.</p>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="marquee-track">
+  <span><b>&#9733;</b> ROOF REPLACEMENT</span><span><b>&#9733;</b> ROOF REPAIR</span><span><b>&#9733;</b> STORM RESTORATION</span><span><b>&#9733;</b> BBB A+ ACCREDITED</span><span><b>&#9733;</b> ROOF REPLACEMENT</span><span><b>&#9733;</b> ROOF REPAIR</span><span><b>&#9733;</b> STORM RESTORATION</span><span><b>&#9733;</b> BBB A+ ACCREDITED</span>
+</div></div>
+
+<section class="stats" style="padding:64px 0"><div class="wrap stat-grid">
+  <div class="reveal"><div class="n">4.8</div><div class="l">average on Birdeye (60 reviews)</div></div>
+  <div class="reveal"><div class="n">A+</div><div class="l">BBB accredited rating</div></div>
+  <div class="reveal"><div class="n">4.9</div><div class="l">average on a maps listing (53 reviews)</div></div>
+</div></section>
+
+<section id="proof" style="padding-top:20px"><div class="wrap">
+  <div class="proofband reveal">
+    <span class="eyebrow" style="color:var(--gold)">At a glance</span>
+    <h2>The essentials, <span style="color:var(--gold)">up front.</span></h2>
+    <p class="sub">Everything a homeowner needs to make the call &mdash; stated plainly, where it can't be missed.</p>
+    <div class="proof-grid">
+      <div class="proof-card"><div class="ico">&#127963;</div><h3>BBB A+ Accredited</h3><p>An accredited business with the Better Business Bureau.</p></div>
+      <div class="proof-card"><div class="ico">&#9733;</div><h3>4.8 on Birdeye</h3><p>60 reviews averaging 4.8 out of 5 stars.</p></div>
+      <div class="proof-card"><div class="ico">&#128100;</div><h3>Owner: Bret Dickey</h3><p>The owner's name is on the business &mdash; and on the work.</p></div>
+      <div class="proof-card"><div class="ico">&#128205;</div><h3>Prosper, TX</h3><p>4261 E University Dr #30-205, Prosper.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" style="padding-top:20px"><div class="wrap">
+  <span class="eyebrow reveal">The name says it</span>
+  <h2 class="reveal">Roofing, <span style="color:var(--rust2)">&amp;</span> fencing.</h2>
+  <p class="sub reveal">Two trades in the name, one Prosper company. On the finished site, your actual services get their own sections &mdash; you tell us what&rsquo;s offered, we build them.</p>
+  <div class="svc-grid reveal">
+    <div class="svc-card"><div class="prod-visual">&#127968;</div><h3>Roofing</h3><p>Whatever you offer under roofing &mdash; described in your words, shown with your photos.</p></div>
+    <div class="svc-card"><div class="prod-visual">&#129717;</div><h3>Fencing</h3><p>Whatever you offer under fencing &mdash; described in your words, shown with your photos.</p></div>
+  </div>
+</div></section>
+
+<section class="owner"><div class="wrap">
+  <span class="eyebrow reveal" style="display:block">The owner</span>
+  <div class="name reveal">Bret Dickey</div>
+  <p class="role reveal">Owner, Texas Pride Roofing &amp; Fencing &mdash; a BBB A+ accredited business in Prosper, TX.</p>
+</div></section>
+
+<section id="reviews"><div class="wrap" style="text-align:center">
+  <span class="eyebrow reveal">Reviews</span>
+  <h2 class="reveal">Prosper keeps <span style="color:var(--rust2)">rating us well.</span></h2>
+  <div class="reveal" style="margin-top:30px">
+    <div class="spot-num">4.8</div>
+    <div class="spot-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="sub" style="margin:0 auto">4.8 out of 5 across 60 reviews on Birdeye &mdash; and 4.9 across 53 reviews on a maps listing. On the finished site, your real reviews stream in here.</p>
+  </div>
+</div></section>
+
+<section style="padding-top:20px"><div class="wrap">
+  <div style="text-align:center"><span class="eyebrow reveal">FAQ</span><h2 class="reveal">Fair questions.</h2></div>
+  <div class="faq reveal">
+    <div class="faq-item"><button class="faq-q">Do you handle storm damage? <span>+</span></button><div class="faq-a"><p>Yes &mdash; call <a href="tel:+14692884488" style="color:var(--rust2)">(469) 288-4488</a> and we&rsquo;ll come take a look.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are you BBB accredited? <span>+</span></button><div class="faq-a"><p>Yes &mdash; Texas Pride Roofing &amp; Fencing is a BBB A+ Accredited Business.</p></div></div>
+    <div class="faq-item"><button class="faq-q">What do your reviews say? <span>+</span></button><div class="faq-a"><p>4.8 out of 5 across 60 reviews on Birdeye.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Where are you located? <span>+</span></button><div class="faq-a"><p>4261 E University Dr #30-205, Prosper, TX 75078 &mdash; call <a href="tel:+14692884488" style="color:var(--rust2)">(469) 288-4488</a>.</p></div></div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:20px"><div class="wrap">
+  <div class="contact reveal">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)">Get started</span>
+      <h2>Let&rsquo;s look at<br>your roof.</h2>
+      <p class="sub">Call or send the form &mdash; we&rsquo;ll take it from there.</p>
+      <div class="c-row"><span class="i">&#9742;</span><div><a href="tel:+14692884488">(469) 288-4488</a></div></div>
+      <div class="c-row"><span class="i">&#128205;</span><div>4261 E University Dr #30-205<br>Prosper, TX 75078</div></div>
+    </div>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#fff;font-size:18px>Thanks &mdash; we\'ll be in touch shortly.</p>'">
+      <input type="text" placeholder="Your name" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="email" placeholder="Email">
+      <textarea rows="4" placeholder="Roofing or storm damage &mdash; what do you need?"></textarea>
+      <button class="btn btn-rust" type="submit" style="width:100%">Request a Quote</button>
+    </form>
+  </div>
+</div></section>
+
+<footer>Texas Pride Roofing &amp; Fencing &middot; 4261 E University Dr #30-205, Prosper, TX 75078 &middot; (469) 288-4488 &middot; BBB A+ Accredited</footer>
+<a class="sticky-call" href="tel:+14692884488">&#9742; Call (469) 288-4488</a>
+
+<script>
+(function(){
+  /* faq */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+    q.addEventListener('click',function(){var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(x){x.classList.remove('open');x.querySelector('.faq-a').style.maxHeight=null});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}});});
+  /* counters + reveal */
+  function anim(el){var t=+el.dataset.count,d=1400,st=performance.now();
+    function tick(n){var p=Math.min((n-st)/d,1),v=Math.round(t*(1-Math.pow(1-p,3)));
+      el.textContent=v.toLocaleString();if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(anim);io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
