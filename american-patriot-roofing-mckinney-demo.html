@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>American Patriot Roofing | Veteran-Owned Roofer in McKinney, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0F1E33;--navy2:#16294A;--silver:#C0C7D1;--red:#B03A2E;--red2:#8E2B22;--paper:#F6F7F9;--muted:#5A6B82;--line:#DDE3EB;--card:#FFFFFF}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--paper);color:var(--navy);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:"Source Serif 4",Georgia,serif;line-height:1.12;letter-spacing:-.01em}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  section{padding:90px 0}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+  h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:14px}
+  .sub{color:var(--muted);font-size:17px;max-width:640px}
+  .demo-badge{position:fixed;top:14px;right:14px;z-index:2000;background:var(--navy);color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;padding:8px 14px;border-radius:999px}
+  nav{position:sticky;top:0;z-index:1000;background:rgba(246,247,249,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Source Serif 4";font-weight:900;font-size:19px}
+  .logo .mark{width:34px;height:34px;border-radius:8px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--navy);text-decoration:none;font-size:14px;font-weight:600}
+  .btn{display:inline-block;padding:14px 30px;border-radius:6px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none;font-family:"Inter"}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 10px 28px rgba(176,58,46,.3)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-sm{padding:10px 22px;font-size:14px}
+  /* hero */
+  header{padding:100px 0 84px;background:linear-gradient(135deg,#0F1E33 0%,#16294A 60%,#1E3560 100%);color:#fff;position:relative;overflow:hidden}
+  .flag{position:absolute;top:0;right:0;bottom:0;width:34%;opacity:.1;pointer-events:none;
+    background:repeating-linear-gradient(180deg,#B03A2E 0 26px,#fff 26px 52px)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
+  header h1{font-size:clamp(2.6rem,5.2vw,4.1rem);font-weight:900;margin:10px 0 18px;color:#fff}
+  header h1 em{font-style:normal;color:#E8B4AC}
+  header .sub{color:#B9C4D6}
+  .vet-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:36px;backdrop-filter:blur(8px)}
+  .vet-card .seal{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:12px;letter-spacing:2px;padding:8px 18px;border-radius:999px;margin-bottom:18px}
+  .vet-card .big{font-family:"Source Serif 4";font-size:54px;font-weight:900}
+  .vet-card .cap{color:#B9C4D6;font-size:14px;margin:6px 0 18px}
+  .hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+  .hero-proof{margin-top:22px;font-size:14px;color:#B9C4D6}
+  /* stats */
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;text-align:center}
+  .stat-grid .n{font-family:"Source Serif 4";font-size:48px;font-weight:900;color:var(--navy)}
+  .stat-grid .l{color:var(--muted);font-size:14px}
+  /* ratings tabs */
+  .insp{background:#fff;border:1px solid var(--line);border-radius:24px;padding:56px 50px;max-width:940px;margin:36px auto 0;box-shadow:0 20px 50px rgba(15,30,51,.07)}
+  .insp-tabs{display:flex;gap:0;margin:30px 0 0;border-bottom:2px solid var(--line);flex-wrap:wrap}
+  .insp-tab{flex:1;min-width:150px;padding:18px 10px;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;
+    font-family:"Inter";font-weight:700;font-size:15px;color:var(--muted);cursor:pointer;transition:all .2s}
+  .insp-tab .n{display:block;font-family:"Source Serif 4";font-size:24px;color:var(--silver);margin-bottom:4px}
+  .insp-tab.active{color:var(--navy);border-bottom-color:var(--red)}
+  .insp-tab.active .n{color:var(--red)}
+  .insp-panel{display:none;padding:28px 4px 0;animation:fade .35s}
+  .insp-panel.active{display:block}
+  .insp-panel h3{font-size:22px;margin-bottom:10px}
+  .insp-panel p{color:var(--muted);max-width:640px}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+  /* veteran band */
+  .team{background:var(--navy);color:#fff;text-align:center}
+  .team h2{color:#fff}
+  .team .sub{color:#B9C4D6;margin:0 auto}
+  .vet-seal-big{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:13px;letter-spacing:3px;padding:12px 30px;border-radius:999px;margin:26px 0 0}
+  /* reviews spotlight */
+  .spot-row{display:flex;gap:60px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .spot-num{font-family:"Source Serif 4";font-size:clamp(3.4rem,7vw,5.4rem);font-weight:900;color:var(--red);line-height:1}
+  .spot-cap{color:var(--muted);font-size:14px;margin-top:8px;max-width:220px}
+  /* faq */
+  .faq{max-width:800px;margin:30px auto 0}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 0;font-size:17px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:"Inter"}
+  .faq-q span{font-size:22px;color:var(--red);transition:transform .25s}
+  .faq-item.open .faq-q span{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted);font-size:15px}
+  .faq-a p{padding:0 0 22px}
+  /* contact */
+  .contact{background:var(--navy);color:#fff;border-radius:20px;padding:60px 54px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .contact h2{color:#fff}
+  .contact .sub{color:#B9C4D6}
+  .c-row{display:flex;gap:14px;margin:20px 0;font-size:16px;align-items:flex-start}
+  .c-row .i{font-size:22px}
+  .c-row a{color:#fff}
+  form input,form textarea{width:100%;padding:14px 16px;border-radius:6px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff;font-family:"Inter";font-size:15px;margin-bottom:14px}
+  form input::placeholder,form textarea::placeholder{color:#8FA0B8}
+  footer{background:#0A1526;color:#8FA0B8;text-align:center;padding:34px;font-size:13px}
+  .sticky-mail{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--red);text-align:center;padding:16px;font-weight:800;font-size:17px;color:#fff;text-decoration:none}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:900px){.hero-grid,.contact{grid-template-columns:1fr}.nav-links a:not(.btn){display:none}section{padding:64px 0}.sticky-mail{display:block}body{padding-bottom:60px}.insp{padding:36px 24px}.flag{display:none}}
+</style>
+</head>
+<body>
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<nav><div class="wrap nav-in">
+  <div class="logo"><span class="mark">&#9733;</span> American Patriot Roofing</div>
+  <div class="nav-links">
+    <a href="#ratings">Ratings</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    <a class="btn btn-red btn-sm" href="mailto:info@ampatroofing.com">Email Us</a>
+  </div>
+</div></nav>
+
+<header>
+  <div class="flag"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" style="color:#E8B4AC">McKinney, Texas &middot; Veteran-Owned</span>
+      <h1>Veteran-owned.<br><em>Rated 5.0 on HomeAdvisor.</em></h1>
+      <p class="sub">A veteran-owned McKinney roofer &mdash; 5.0 across 20 HomeAdvisor reviews, 4.8 across 62 Birdeye reviews, top 5% on BuildZoom.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="mailto:info@ampatroofing.com">&#9993; Email Us</a>
+        <a class="btn btn-navy" href="#ratings" style="border:1.5px solid rgba(255,255,255,.3)">See Our Ratings</a>
+      </div>
+      <p class="hero-proof">5.0 on HomeAdvisor (20 reviews) &middot; 4.8 on Birdeye (62 reviews) &middot; Top 5% on BuildZoom</p>
+    </div>
+    <div class="vet-card">
+      <div class="seal">&#9733; VETERAN-OWNED</div>
+      <div class="big"><span data-count="62">0</span></div>
+      <div class="cap">Birdeye reviews at 4.8 &mdash; plus a perfect 5.0 on HomeAdvisor</div>
+      <p style="font-size:15px;color:#D6DCEA">BuildZoom score of 108 &mdash; top 5% in Texas &mdash; with a BBB A+ rating.</p>
+    </div>
+  </div>
+</header>
+
+<section class="stats" style="padding:64px 0"><div class="wrap stat-grid">
+  <div class="reveal"><div class="n">5.0</div><div class="l">HomeAdvisor (20 reviews)</div></div>
+  <div class="reveal"><div class="n">4.8</div><div class="l">Birdeye (62 reviews)</div></div>
+  <div class="reveal"><div class="n"><span data-count="108">0</span></div><div class="l">BuildZoom score &mdash; top 5% in Texas</div></div>
+  <div class="reveal"><div class="n"><span data-count="64">0</span></div><div class="l">projects in the last 3 years</div></div>
+</div></section>
+
+<section id="ratings" style="padding-top:20px"><div class="wrap" style="text-align:center">
+  <span class="eyebrow reveal">Ratings &amp; credentials</span>
+  <h2 class="reveal">The numbers <span style="color:var(--red)">speak first.</span></h2>
+  <p class="sub reveal" style="margin:0 auto">Every rating below is real and sourced &mdash; the kind of proof the current site buries.</p>
+  <div class="insp reveal" style="text-align:left">
+    <div class="insp-tabs" id="inspTabs">
+      <button class="insp-tab active" data-p="0"><span class="n">5.0</span>HomeAdvisor</button>
+      <button class="insp-tab" data-p="1"><span class="n">4.8</span>Birdeye</button>
+      <button class="insp-tab" data-p="2"><span class="n">108</span>BuildZoom</button>
+      <button class="insp-tab" data-p="3"><span class="n">A+</span>BBB</button>
+    </div>
+    <div class="insp-panel active">
+      <h3>5.0 on HomeAdvisor</h3>
+      <p>A perfect 5.0 across 20 reviews on HomeAdvisor &mdash; front and center, where it belongs.</p>
+    </div>
+    <div class="insp-panel">
+      <h3>4.8 on Birdeye</h3>
+      <p>4.8 across 62 reviews on Birdeye. On the finished site, your real reviews stream in here.</p>
+    </div>
+    <div class="insp-panel">
+      <h3>Top 5% on BuildZoom</h3>
+      <p>A BuildZoom score of 108 &mdash; top 5% in Texas &mdash; with 64 projects completed over the last three years.</p>
+    </div>
+    <div class="insp-panel">
+      <h3>BBB A+ rating</h3>
+      <p>A BBB A+ rating &mdash; displayed up top, not buried at the bottom of a page nobody reads.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="team"><div class="wrap">
+  <span class="eyebrow reveal" style="color:#E8B4AC">Ownership</span>
+  <h2 class="reveal">Veteran-owned, <span style="color:#E8B4AC">full stop.</span></h2>
+  <p class="sub reveal">American Patriot Roofing is veteran-owned &mdash; stated on their own website and on HomeAdvisor. The preview puts that flag up front instead of leaving it buried.</p>
+  <div class="reveal"><span class="vet-seal-big">&#9733; VETERAN-OWNED</span></div>
+</div></section>
+
+<section id="reviews"><div class="wrap" style="text-align:center">
+  <span class="eyebrow reveal">Reviews</span>
+  <h2 class="reveal">Word gets <span style="color:var(--red)">around.</span></h2>
+  <div class="spot-row reveal">
+    <div><div class="spot-num">5.0</div><div class="spot-cap">on HomeAdvisor, across 20 reviews</div></div>
+    <div><div class="spot-num">4.8</div><div class="spot-cap">on Birdeye, across 62 reviews</div></div>
+  </div>
+  <p class="sub reveal" style="margin:26px auto 0">On the finished site, your real reviews appear here &mdash; every one of them attributed to its source.</p>
+</div></section>
+
+<section id="faq" style="padding-top:20px"><div class="wrap">
+  <div style="text-align:center"><span class="eyebrow reveal">FAQ</span><h2 class="reveal">Straight answers.</h2></div>
+  <div class="faq reveal">
+    <div class="faq-item"><button class="faq-q">What are your ratings? <span>+</span></button><div class="faq-a"><p>5.0 out of 5 across 20 reviews on HomeAdvisor, 4.8 across 62 reviews on Birdeye, and a BuildZoom score of 108 &mdash; top 5% in Texas.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are you veteran-owned? <span>+</span></button><div class="faq-a"><p>Yes &mdash; stated on our website and on HomeAdvisor.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How do I reach you? <span>+</span></button><div class="faq-a"><p>Email <a href="mailto:info@ampatroofing.com" style="color:var(--red)">info@ampatroofing.com</a> or use the form below &mdash; we&rsquo;ll get back to you.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Where are you located? <span>+</span></button><div class="faq-a"><p>1400 N Coit Rd, Suite 604, McKinney, TX 75071.</p></div></div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:20px"><div class="wrap">
+  <div class="contact reveal">
+    <div>
+      <span class="eyebrow" style="color:#E8B4AC">Get started</span>
+      <h2>Get in touch.</h2>
+      <p class="sub">Veteran-owned. McKinney, TX.</p>
+      <div class="c-row"><span class="i">&#9993;</span><div><a href="mailto:info@ampatroofing.com">info@ampatroofing.com</a></div></div>
+      <div class="c-row"><span class="i">&#128205;</span><div>1400 N Coit Rd, Suite 604<br>McKinney, TX 75071</div></div>
+    </div>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#fff;font-size:18px>Thanks &mdash; we\'ll be in touch shortly.</p>'">
+      <input type="text" placeholder="Your name" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="email" placeholder="Email">
+      <textarea rows="4" placeholder="What&rsquo;s going on with your roof?"></textarea>
+      <button class="btn btn-red" type="submit" style="width:100%">Send Message</button>
+    </form>
+  </div>
+</div></section>
+
+<footer>American Patriot Roofing &middot; 1400 N Coit Rd, Suite 604, McKinney, TX 75071 &middot; Veteran-Owned</footer>
+<a class="sticky-mail" href="mailto:info@ampatroofing.com">&#9993; Email Us</a>
+
+<script>
+(function(){
+  /* ratings tabs */
+  var tabs=document.querySelectorAll('#inspTabs .insp-tab'),panels=document.querySelectorAll('.insp-panel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.classList.remove('active')});t.classList.add('active');
+    panels.forEach(function(p){p.classList.remove('active')});panels[+t.dataset.p].classList.add('active');});});
+  /* faq */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+    q.addEventListener('click',function(){var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(x){x.classList.remove('open');x.querySelector('.faq-a').style.maxHeight=null});
+      if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}});});
+  /* counters + reveal */
+  function anim(el){var t=+el.dataset.count,d=1400,st=performance.now();
+    function tick(n){var p=Math.min((n-st)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(anim);io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
