@@ -5,222 +5,405 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frisco Window &amp; Door Solutions | Windows &amp; Doors in Frisco, TX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#F7FAFC;--ink:#0C2340;--sky:#0284C7;--sky-soft:#E0F2FE;--amber:#F59E0B;--muted:#5B6B80;--line:#E2E8F0;--card:#FFFFFF}
+  :root{
+    --paper:#FAF7F1; --paper2:#F3EEE4;
+    --ink:#101C2C; --ink2:#1B2C44;
+    --brass:#C08A2D; --brass-soft:#F3E7CE;
+    --sky:#2E7FB8; --sky-soft:#E3EFF8;
+    --muted:#5C6B7E; --line:#E4DCCB; --card:#FFFFFF;
+  }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:"Inter",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
-  h1,h2,h3,.serif{font-family:"Fraunces",Georgia,serif;line-height:1.12;letter-spacing:-.01em}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-  section{padding:88px 0}
-  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:14px}
-  h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:14px}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:"Fraunces",Georgia,serif;line-height:1.08;letter-spacing:-.015em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  section{padding:96px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--brass);margin-bottom:16px}
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--brass);display:inline-block}
+  h2{font-size:clamp(2.1rem,4.2vw,3.2rem);font-weight:700;margin-bottom:16px}
+  h2 em{font-style:italic;color:var(--brass)}
   .sub{color:var(--muted);font-size:17px;max-width:640px}
   .demo-badge{position:fixed;top:14px;right:14px;z-index:2000;background:var(--ink);color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;padding:8px 14px;border-radius:999px;opacity:.92}
   /* nav */
-  nav{position:sticky;top:0;z-index:1000;background:rgba(247,250,252,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .logo{display:flex;align-items:center;gap:10px;font-family:"Fraunces";font-weight:900;font-size:19px}
-  .logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--sky),#38BDF8);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600}
-  .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none}
+  nav{position:sticky;top:0;z-index:1000;background:rgba(250,247,241,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:center;gap:12px;font-family:"Fraunces";font-weight:700;font-size:19px;text-decoration:none;color:var(--ink)}
+  .logo small{display:block;font-family:"Inter";font-size:10px;letter-spacing:3px;color:var(--muted);font-weight:600}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a.nl{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;position:relative}
+  .nav-links a.nl::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--brass);transition:width .25s}
+  .nav-links a.nl:hover::after{width:100%}
+  .btn{display:inline-block;padding:15px 32px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none;font-family:"Inter"}
   .btn:hover{transform:translateY(-2px)}
-  .btn-amber{background:var(--amber);color:#1F2937;box-shadow:0 10px 28px rgba(245,158,11,.35)}
+  .btn-brass{background:var(--brass);color:#fff;box-shadow:0 12px 30px rgba(192,138,45,.35)}
+  .btn-ink{background:var(--ink);color:#fff}
   .btn-outline{border:2px solid var(--ink);color:var(--ink);background:transparent}
-  .btn-sm{padding:10px 22px;font-size:14px}
+  .btn-sm{padding:11px 24px;font-size:14px}
   /* hero */
-  header{background:linear-gradient(180deg,#EAF4FB 0%,var(--paper) 100%);padding:90px 0 70px;position:relative;overflow:hidden}
-  .sun{position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;
-    background:radial-gradient(circle,rgba(245,158,11,.28),transparent 65%);pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  header h1{font-size:clamp(2.6rem,5.4vw,4.2rem);font-weight:900;margin:10px 0 18px}
-  header h1 em{font-style:normal;color:var(--sky)}
-  .glass{background:rgba(255,255,255,.75);backdrop-filter:blur(16px);border:1px solid #fff;border-radius:24px;
-    padding:34px;box-shadow:0 30px 70px rgba(12,35,64,.12)}
-  .glass .stars{color:var(--amber);font-size:20px;letter-spacing:3px}
-  .glass .big{font-family:"Fraunces";font-size:52px;font-weight:900}
-  .glass .cap{color:var(--muted);font-size:14px;margin-bottom:6px}
-  .hero-cta{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
-  .hero-proof{margin-top:22px;font-size:14px;color:var(--muted)}
-  .hero-proof strong{color:var(--ink)}
+  header{position:relative;overflow:hidden;background:linear-gradient(180deg,#F6F1E6 0%,var(--paper) 100%);padding:84px 0 90px}
+  header::before{content:"";position:absolute;inset:0;background:
+    repeating-linear-gradient(90deg,transparent 0 119px,rgba(16,28,44,.045) 119px 120px);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center;position:relative}
+  header h1{font-size:clamp(2.9rem,5.6vw,4.6rem);font-weight:900;margin:12px 0 20px}
+  header h1 em{font-style:italic;color:var(--brass)}
+  .hero-cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .hero-proof{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+  .hero-proof .hp{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+  .hero-proof .hp strong{color:var(--ink);font-size:16px}
+  .hero-proof .stars{color:var(--brass);letter-spacing:2px}
+  .hero-art{position:relative}
+  .hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 40px 60px rgba(16,28,44,.18))}
+  .hero-card{position:absolute;left:-30px;bottom:34px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border:1px solid #fff;border-radius:20px;padding:20px 24px;box-shadow:0 24px 60px rgba(16,28,44,.16)}
+  .hero-card .big{font-family:"Fraunces";font-size:44px;font-weight:900;line-height:1}
+  .hero-card .cap{font-size:13px;color:var(--muted)}
+  .hero-card .stars{color:var(--brass);letter-spacing:3px;font-size:15px}
+  @keyframes shimmer{0%,100%{opacity:.55}50%{opacity:.95}}
+  .glass-shimmer{animation:shimmer 5s ease-in-out infinite}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .floaty{animation:floaty 7s ease-in-out infinite}
   /* ticker */
-  .ticker{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:15px 0}
-  .ticker-track{display:inline-block;animation:tick 26s linear infinite;font-weight:600;font-size:14px;letter-spacing:1.5px}
-  .ticker-track span{margin:0 26px}
-  .ticker-track b{color:var(--amber)}
+  .ticker{background:var(--ink);color:#F6F1E6;overflow:hidden;white-space:nowrap;padding:16px 0;border-top:1px solid var(--brass);border-bottom:1px solid var(--brass)}
+  .ticker-track{display:inline-block;animation:tick 30s linear infinite;font-weight:600;font-size:13px;letter-spacing:2.5px}
+  .ticker-track span{margin:0 30px}
+  .ticker-track b{color:var(--brass);font-weight:700}
   @keyframes tick{to{transform:translateX(-50%)}}
-  /* stats */
-  .stats{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;text-align:center}
-  .stat-grid .n{font-family:"Fraunces";font-size:46px;font-weight:900;color:var(--sky)}
-  .stat-grid .l{color:var(--muted);font-size:14px}
+  /* statement */
+  .statement{background:var(--paper);text-align:center}
+  .statement p{font-family:"Fraunces";font-size:clamp(1.5rem,3vw,2.3rem);max-width:860px;margin:0 auto;font-weight:600}
+  .statement p em{color:var(--brass);font-style:italic}
   /* products */
-  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 8px}
-  .tab{padding:12px 22px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:14px;cursor:pointer;transition:all .2s}
+  .products{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tabs{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0 10px}
+  .tab{padding:13px 26px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:14px;cursor:pointer;transition:all .22s;font-family:"Inter";color:var(--ink)}
+  .tab:hover{border-color:var(--brass)}
   .tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .tab-panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:40px;margin-top:18px;box-shadow:0 18px 44px rgba(12,35,64,.07)}
-  .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;animation:fade .35s}
-  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
-  .tab-panel h3{font-size:26px;margin-bottom:12px}
-  .tab-panel p{color:var(--muted)}
-  .tab-panel ul{margin:18px 0 0 0;list-style:none}
-  .tab-panel li{padding:8px 0 8px 30px;position:relative;font-size:15px}
-  .tab-panel li::before{content:"\2713";position:absolute;left:0;color:var(--sky);font-weight:800}
-  .tab-panel .cta-row{margin-top:24px}
-  .prod-visual{border-radius:18px;min-height:230px;display:flex;align-items:center;justify-content:center;font-size:74px;
-    background:linear-gradient(135deg,var(--sky-soft),#fff);border:1px solid var(--line)}
+  .tab-panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:48px;margin-top:20px;box-shadow:0 24px 60px rgba(16,28,44,.08)}
+  .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;animation:fade .4s}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+  .tab-panel h3{font-size:30px;margin-bottom:14px}
+  .tab-panel h3 em{color:var(--brass);font-style:italic}
+  .tab-panel p{color:var(--muted);font-size:16px}
+  .tab-panel ul{margin:22px 0 0;list-style:none}
+  .tab-panel li{padding:10px 0 10px 34px;position:relative;font-size:15px;border-bottom:1px dashed var(--line)}
+  .tab-panel li:last-child{border-bottom:none}
+  .tab-panel li::before{content:"";position:absolute;left:2px;top:16px;width:16px;height:16px;border:2px solid var(--brass);border-radius:50%}
+  .tab-panel li::after{content:"";position:absolute;left:7px;top:21px;width:6px;height:6px;background:var(--brass);border-radius:50%}
+  .cta-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+  .prod-art{background:linear-gradient(150deg,#101C2C,#1E3454);border-radius:20px;min-height:380px;display:flex;align-items:center;justify-content:center;padding:36px;position:relative;overflow:hidden}
+  .prod-art::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 47px,rgba(255,255,255,.03) 47px 48px)}
+  .prod-art svg{width:78%;max-width:340px;height:auto;position:relative}
+  .prod-art .tag{position:absolute;top:18px;left:20px;font-size:11px;letter-spacing:3px;color:rgba(255,255,255,.65);font-weight:700}
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:44px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 30px;position:relative;transition:transform .25s,box-shadow .25s}
+  .step:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(16,28,44,.1)}
+  .step .num{font-family:"Fraunces";font-size:15px;font-weight:700;color:var(--brass);letter-spacing:2px;margin-bottom:14px}
+  .step h3{font-size:20px;margin-bottom:10px}
+  .step p{font-size:14.5px;color:var(--muted)}
   /* dark band */
-  .darkband{background:linear-gradient(135deg,#0C2340,#123A63);color:#fff;border-radius:28px;padding:60px 54px;position:relative;overflow:hidden}
+  .darkband{background:linear-gradient(140deg,#0D1826,#1A2F4E 70%,#14324A);color:#F6F1E6;border-radius:30px;padding:66px 60px;position:relative;overflow:hidden}
+  .darkband::after{content:"";position:absolute;right:-90px;top:-90px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(192,138,45,.22),transparent 65%)}
   .darkband h2{color:#fff}
-  .darkband .sub{color:#B9C7D8}
-  .darkband-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:36px}
-  .darkband-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px}
-  .darkband-card .ico{font-size:30px;margin-bottom:12px}
+  .darkband .sub{color:#B9C4D4}
+  .darkband-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px;position:relative;z-index:1}
+  .darkband-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:30px;transition:background .25s}
+  .darkband-card:hover{background:rgba(255,255,255,.1)}
+  .darkband-card .ico{width:46px;height:46px;border-radius:13px;background:rgba(192,138,45,.16);border:1px solid rgba(192,138,45,.4);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
   .darkband-card h3{font-size:17px;margin-bottom:8px;color:#fff}
-  .darkband-card p{font-size:14px;color:#B9C7D8}
-  /* rating spotlight */
+  .darkband-card p{font-size:14px;color:#B9C4D4}
+  /* reviews */
   .spotlight{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
-  .spot-num{font-family:"Fraunces";font-size:clamp(4rem,8vw,6.5rem);font-weight:900;color:var(--sky);line-height:1}
-  .spot-stars{color:var(--amber);font-size:26px;letter-spacing:6px;margin:10px 0}
+  .spot-num{font-family:"Fraunces";font-size:clamp(4.5rem,9vw,7rem);font-weight:900;color:var(--ink);line-height:1}
+  .spot-stars{color:var(--brass);font-size:28px;letter-spacing:8px;margin:12px 0}
   /* faq */
-  .faq{max-width:800px;margin:30px auto 0}
+  .faq{max-width:820px;margin:36px auto 0}
   .faq-item{border-bottom:1px solid var(--line)}
-  .faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 0;font-size:17px;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:"Inter"}
-  .faq-q span{font-size:22px;color:var(--sky);transition:transform .25s}
-  .faq-item.open .faq-q span{transform:rotate(45deg)}
-  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted);font-size:15px}
-  .faq-a p{padding:0 0 22px}
+  .faq-q{width:100%;text-align:left;background:none;border:none;padding:24px 0;font-size:17px;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:"Inter";gap:20px}
+  .faq-q .plus{flex:none;width:34px;height:34px;border:1.5px solid var(--brass);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--brass);transition:transform .3s,background .3s}
+  .faq-item.open .plus{transform:rotate(45deg);background:var(--brass);color:#fff}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted);font-size:15.5px}
+  .faq-a p{padding:0 0 26px;max-width:680px}
   /* contact */
-  .contact{background:var(--ink);color:#fff;border-radius:28px;padding:60px 54px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .contact{background:linear-gradient(140deg,#0D1826,#1A2F4E);color:#F6F1E6;border-radius:30px;padding:66px 60px;display:grid;grid-template-columns:1fr 1fr;gap:56px;position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;left:-100px;bottom:-100px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(192,138,45,.16),transparent 65%)}
   .contact h2{color:#fff}
-  .contact .sub{color:#B9C7D8}
-  .c-row{display:flex;gap:14px;margin:20px 0;font-size:16px;align-items:flex-start}
-  .c-row .i{font-size:22px}
-  .c-row a{color:#fff}
-  form input,form textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-family:"Inter";font-size:15px;margin-bottom:14px}
-  form input::placeholder,form textarea::placeholder{color:#8FA3B8}
-  footer{background:#081726;color:#8FA3B8;text-align:center;padding:34px;font-size:13px}
-  .sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--amber);text-align:center;padding:16px;font-weight:800;font-size:17px;color:#1F2937;text-decoration:none}
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s}
+  .contact .sub{color:#B9C4D4}
+  .c-row{display:flex;gap:16px;margin:22px 0;font-size:16px;align-items:flex-start;position:relative;z-index:1}
+  .c-row .i{flex:none;width:44px;height:44px;border-radius:13px;background:rgba(192,138,45,.15);border:1px solid rgba(192,138,45,.35);display:flex;align-items:center;justify-content:center}
+  .c-row a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(192,138,45,.6)}
+  .c-row .t{font-size:12px;letter-spacing:2.5px;color:#8FA0B5;font-weight:700;margin-bottom:2px}
+  form{position:relative;z-index:1}
+  form input,form textarea{width:100%;padding:15px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:#fff;font-family:"Inter";font-size:15px;margin-bottom:14px;transition:border .2s}
+  form input:focus,form textarea:focus{outline:none;border-color:var(--brass)}
+  form input::placeholder,form textarea::placeholder{color:#8FA0B5}
+  footer{background:#0A1320;color:#8FA0B5;text-align:center;padding:38px 24px;font-size:13px}
+  footer .fbrand{font-family:"Fraunces";color:#EDE6D6;font-size:16px;margin-bottom:8px}
+  .sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--brass);text-align:center;padding:17px;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
   .reveal.in{opacity:1;transform:none}
-  @media(max-width:900px){.hero-grid,.tab-panel.active,.contact{grid-template-columns:1fr}.nav-links a:not(.btn){display:none}section{padding:64px 0}.sticky-call{display:block}body{padding-bottom:60px}}
+  @media(max-width:940px){
+    .hero-grid,.tab-panel.active,.contact{grid-template-columns:1fr}
+    .nav-links a.nl{display:none}
+    section{padding:68px 0}
+    .tab-panel{padding:32px 26px}
+    .darkband,.contact{padding:44px 30px}
+    .hero-card{left:10px;right:10px;bottom:12px}
+    .hero-art{margin-bottom:70px}
+    .sticky-call{display:block}
+    body{padding-bottom:62px}
+  }
 </style>
 </head>
 <body>
 <div class="demo-badge">DEMO PREVIEW</div>
 
 <nav><div class="wrap nav-in">
-  <div class="logo"><span class="mark">&#9673;</span> Frisco Window &amp; Door</div>
+  <a class="logo" href="#top">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="2" y="2" width="36" height="36" rx="10" fill="#101C2C"/><rect x="11" y="11" width="18" height="18" rx="2" stroke="#C08A2D" stroke-width="2.4"/><line x1="20" y1="11" x2="20" y2="29" stroke="#C08A2D" stroke-width="2.4"/><line x1="11" y1="20" x2="29" y2="20" stroke="#C08A2D" stroke-width="2.4"/></svg>
+    <span>Frisco Window &amp; Door<small>FRISCO, TEXAS</small></span>
+  </a>
   <div class="nav-links">
-    <a href="#products">Windows &amp; Doors</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
-    <a class="btn btn-amber btn-sm" href="tel:+19722365037">(972) 236-5037</a>
+    <a class="nl" href="#products">Windows &amp; Doors</a><a class="nl" href="#process">How It Works</a><a class="nl" href="#reviews">Reviews</a><a class="nl" href="#contact">Contact</a>
+    <a class="btn btn-brass btn-sm" href="tel:+19722365037">(972) 236-5037</a>
   </div>
 </div></nav>
 
-<header>
-  <div class="sun"></div>
+<header id="top">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Frisco, Texas</span>
-      <h1>Windows and doors, <em>done right.</em></h1>
-      <p class="sub">A local Frisco team for windows and doors &mdash; straightforward help, honest answers, and a phone that gets picked up.</p>
+      <span class="eyebrow">Frisco, Texas &mdash; since January 2026</span>
+      <h1>Let the <em>Texas light</em> in.</h1>
+      <p class="sub">Frisco Window &amp; Door Solutions designs, fits, and finishes windows and doors for Frisco homes &mdash; measured to the sixteenth of an inch, installed like it matters, and backed by a local team that answers the phone.</p>
       <div class="hero-cta">
-        <a class="btn btn-amber" href="tel:+19722365037">&#9742; Call (972) 236-5037</a>
-        <a class="btn btn-outline" href="#contact">Request a Quote</a>
+        <a class="btn btn-brass" href="tel:+19722365037">Call (972) 236-5037</a>
+        <a class="btn btn-outline" href="#contact">Get a Quote</a>
       </div>
-      <p class="hero-proof"><strong>Based in Frisco, TX</strong> &middot; Launched January 2026</p>
+      <div class="hero-proof">
+        <div class="hp"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span><strong>4.9</strong> across 85 reviews on Birdeye</span></div>
+        <div class="hp"><strong>Windows &amp; doors</strong><span>&mdash; one craft, done well</span></div>
+      </div>
     </div>
-    <div class="glass">
-      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <div class="big">4.9</div>
-      <div class="cap">average across <span data-count="85">0</span> reviews on Birdeye</div>
-      <p style="font-size:15px;color:var(--muted)">A strong start: Frisco homeowners are already rating the experience 4.9 out of 5.</p>
+    <div class="hero-art">
+      <svg viewBox="0 0 420 520" fill="none" role="img" aria-label="Illustration of a tall elegant window glowing with warm light">
+        <defs>
+          <linearGradient id="glassDay" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F7D98B"/><stop offset=".55" stop-color="#F3E7CE"/><stop offset="1" stop-color="#E3EFF8"/>
+          </linearGradient>
+          <linearGradient id="frameWood" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1B2C44"/><stop offset="1" stop-color="#0D1826"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="210" cy="486" rx="150" ry="16" fill="#101C2C" opacity=".12"/>
+        <g class="floaty">
+          <rect x="90" y="30" width="240" height="440" rx="10" fill="url(#frameWood)"/>
+          <rect x="108" y="48" width="204" height="200" rx="4" fill="url(#glassDay)" class="glass-shimmer"/>
+          <rect x="108" y="262" width="204" height="190" rx="4" fill="url(#glassDay)" opacity=".85"/>
+          <rect x="108" y="48" width="204" height="200" rx="4" stroke="#0D1826" stroke-width="3"/>
+          <line x1="210" y1="48" x2="210" y2="248" stroke="#0D1826" stroke-width="10"/>
+          <line x1="108" y1="148" x2="312" y2="148" stroke="#0D1826" stroke-width="10"/>
+          <rect x="108" y="262" width="204" height="190" rx="4" stroke="#0D1826" stroke-width="3"/>
+          <line x1="210" y1="262" x2="210" y2="452" stroke="#0D1826" stroke-width="10"/>
+          <line x1="108" y1="357" x2="312" y2="357" stroke="#0D1826" stroke-width="10"/>
+          <circle cx="268" cy="176" r="26" fill="#FFF6DE" opacity=".9"/>
+          <path d="M130 210 L190 150 L250 205" stroke="#C08A2D" stroke-width="3" opacity=".5" fill="none"/>
+          <rect x="196" y="470" width="28" height="12" rx="3" fill="#0D1826"/>
+        </g>
+        <g stroke="#C08A2D" stroke-width="1.6" opacity=".85">
+          <line x1="40" y1="120" x2="70" y2="120"/><line x1="55" y1="105" x2="55" y2="135"/>
+          <line x1="352" y1="330" x2="382" y2="330"/><line x1="367" y1="315" x2="367" y2="345"/>
+          <circle cx="352" cy="120" r="4"/><circle cx="66" cy="380" r="4"/>
+        </g>
+        <text x="40" y="500" font-family="Inter,sans-serif" font-size="12" letter-spacing="3" fill="#5C6B7E">MEASURED &#183; FITTED &#183; FINISHED</text>
+      </svg>
+      <div class="hero-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="big">4.9</div>
+        <div class="cap">average across <strong>85 reviews</strong> on Birdeye</div>
+      </div>
     </div>
   </div>
 </header>
 
 <div class="ticker"><div class="ticker-track">
-  <span><b>&#10003;</b> 4.9 RATING ON BIRDEYE</span><span><b>&#10003;</b> 85 CUSTOMER REVIEWS</span><span><b>&#10003;</b> WINDOWS &amp; DOORS</span><span><b>&#10003;</b> FRISCO, TEXAS</span><span><b>&#10003;</b> CALL (972) 236-5037</span><span><b>&#10003;</b> 4.9 RATING ON BIRDEYE</span><span><b>&#10003;</b> 85 CUSTOMER REVIEWS</span><span><b>&#10003;</b> WINDOWS &amp; DOORS</span><span><b>&#10003;</b> FRISCO, TEXAS</span><span><b>&#10003;</b> CALL (972) 236-5037</span>
+  <span><b>&#10003;</b> 4.9 ON BIRDEYE</span><span><b>&#10003;</b> 85 FRISCO REVIEWS</span><span><b>&#10003;</b> WINDOWS &amp; DOORS</span><span><b>&#10003;</b> MEASURED TO FIT</span><span><b>&#10003;</b> (972) 236-5037</span><span><b>&#10003;</b> 4.9 ON BIRDEYE</span><span><b>&#10003;</b> 85 FRISCO REVIEWS</span><span><b>&#10003;</b> WINDOWS &amp; DOORS</span><span><b>&#10003;</b> MEASURED TO FIT</span><span><b>&#10003;</b> (972) 236-5037</span>
 </div></div>
 
-<section class="stats" style="padding:56px 0"><div class="wrap stat-grid">
-  <div class="reveal"><div class="n">4.9</div><div class="l">average rating on Birdeye</div></div>
-  <div class="reveal"><div class="n"><span data-count="85">0</span></div><div class="l">customer reviews on Birdeye</div></div>
-  <div class="reveal"><div class="n">2026</div><div class="l">launched in Frisco, TX</div></div>
+<section class="statement"><div class="wrap reveal">
+  <span class="eyebrow" style="justify-content:center;display:inline-flex">Why it matters</span>
+  <p>Windows and doors are the <em>face your home shows the street</em> &mdash; and the seal that keeps Texas weather where it belongs: outside.</p>
 </div></section>
-
-<section id="products"><div class="wrap">
+<section class="products" id="products"><div class="wrap">
   <span class="eyebrow reveal">What we do</span>
-  <h2 class="reveal">Windows <span style="color:var(--sky)">&amp;</span> doors.</h2>
-  <p class="sub reveal">One focus, done well. Pick a lane &mdash; then call or send the form and we'll talk through your project.</p>
+  <h2 class="reveal">Two crafts. <em>One standard:</em> done right.</h2>
+  <p class="sub reveal">Every opening in your home, handled by people who do nothing else. Pick your lane:</p>
   <div class="tabs reveal" id="prodTabs">
     <button class="tab active" data-p="0">Windows</button>
     <button class="tab" data-p="1">Doors</button>
   </div>
   <div id="prodPanels">
-    <div class="tab-panel active"><div><h3>Windows</h3><p>Windows are half the name on the door. On the finished site, your actual window lineup gets the full treatment &mdash; styles, glass options, and photos of your real work.</p><ul><li>Styles to fit your home</li><li>Glass options explained in plain English</li><li>Your photos, your projects</li></ul><div class="cta-row"><a class="btn btn-amber btn-sm" href="#contact">Ask About Windows</a></div></div><div class="prod-visual">&#9763;</div></div>
-    <div class="tab-panel"><div><h3>Doors</h3><p>From the front entry to the back patio &mdash; your door lineup, presented the way it deserves.</p><ul><li>Entry door options</li><li>Patio door options</li><li>Hardware and finishes to choose from</li></ul><div class="cta-row"><a class="btn btn-amber btn-sm" href="#contact">Ask About Doors</a></div></div><div class="prod-visual">&#127748;</div></div>
-  </div>
-</div></section>
-
-<section id="why" style="padding-top:20px"><div class="wrap">
-  <div class="darkband reveal">
-    <span class="eyebrow" style="color:var(--amber)">A new Frisco business</span>
-    <h2>New name. Strong start.</h2>
-    <p class="sub">Frisco Window &amp; Door Solutions launched in January 2026 &mdash; and Frisco homeowners have already left 85 reviews averaging 4.9 on Birdeye.</p>
-    <div class="darkband-grid">
-      <div class="darkband-card"><div class="ico">&#128205;</div><h3>Frisco-based</h3><p>A local team at 8400 Stonebrook Pkwy in Frisco.</p></div>
-      <div class="darkband-card"><div class="ico">&#9733;</div><h3>4.9 on Birdeye</h3><p>85 reviews averaging 4.9 out of 5 stars.</p></div>
-      <div class="darkband-card"><div class="ico">&#9763;</div><h3>Windows &amp; doors</h3><p>One specialty, not twenty trades &mdash; it&rsquo;s right there in the name.</p></div>
-      <div class="darkband-card"><div class="ico">&#9742;</div><h3>Easy to reach</h3><p>Call, email, or send the form &mdash; (972) 236-5037.</p></div>
+    <div class="tab-panel active">
+      <div>
+        <h3>Windows, <em>fitted</em> to your home.</h3>
+        <p>From bright double-hungs to wide picture windows, every unit is measured for your exact opening &mdash; no shims-and-hope, no daylight peeking through the frame.</p>
+        <ul>
+          <li>Double-hung, casement, sliding &amp; picture styles</li>
+          <li>Measured to the sixteenth of an inch</li>
+          <li>Clean interior &amp; exterior finish work</li>
+          <li>One crew, start to finish &mdash; no hand-offs</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-brass btn-sm" href="#contact">Ask About Windows</a>
+          <a class="btn btn-outline btn-sm" href="tel:+19722365037">Call First</a>
+        </div>
+      </div>
+      <div class="prod-art">
+        <span class="tag">DOUBLE-HUNG &#183; SECTION</span>
+        <svg viewBox="0 0 300 380" fill="none" role="img" aria-label="Architectural illustration of a double-hung window">
+          <rect x="60" y="20" width="180" height="340" rx="6" stroke="#F3E7CE" stroke-width="10"/>
+          <rect x="78" y="38" width="144" height="130" fill="#F7D98B" opacity=".28"/>
+          <rect x="78" y="182" width="144" height="160" fill="#F7D98B" opacity=".18"/>
+          <line x1="150" y1="38" x2="150" y2="168" stroke="#F3E7CE" stroke-width="7"/>
+          <line x1="78" y1="103" x2="222" y2="103" stroke="#F3E7CE" stroke-width="7"/>
+          <line x1="150" y1="182" x2="150" y2="342" stroke="#F3E7CE" stroke-width="7"/>
+          <line x1="78" y1="262" x2="222" y2="262" stroke="#F3E7CE" stroke-width="7"/>
+          <circle cx="196" cy="150" r="20" fill="#FFF6DE" opacity=".85"/>
+          <rect x="138" y="168" width="24" height="10" rx="5" fill="#C08A2D"/>
+          <g stroke="#C08A2D" stroke-width="1.4" opacity=".8">
+            <line x1="30" y1="38" x2="30" y2="168" stroke-dasharray="5 5"/>
+            <line x1="22" y1="38" x2="38" y2="38"/><line x1="22" y1="168" x2="38" y2="168"/>
+          </g>
+          <text x="8" y="110" font-family="Inter,sans-serif" font-size="10" fill="#C08A2D" transform="rotate(-90 14 110)" letter-spacing="2">SASH</text>
+        </svg>
+      </div>
+    </div>
+    <div class="tab-panel">
+      <div>
+        <h3>Doors with <em>presence.</em></h3>
+        <p>Your front door is the handshake of your home. Entry doors, patio doors, and French pairs &mdash; hung true, sealed tight, and finished to match the house.</p>
+        <ul>
+          <li>Entry, patio &amp; French door styles</li>
+          <li>Sidelites &amp; transoms to frame the entry</li>
+          <li>Hardware that feels solid in the hand</li>
+          <li>Weather-sealed for Texas storms</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-brass btn-sm" href="#contact">Ask About Doors</a>
+          <a class="btn btn-outline btn-sm" href="tel:+19722365037">Call First</a>
+        </div>
+      </div>
+      <div class="prod-art">
+        <span class="tag">ENTRY &#183; ELEVATION</span>
+        <svg viewBox="0 0 300 380" fill="none" role="img" aria-label="Architectural illustration of an entry door with sidelites">
+          <rect x="95" y="30" width="110" height="320" rx="4" stroke="#F3E7CE" stroke-width="10"/>
+          <rect x="45" y="60" width="36" height="260" stroke="#F3E7CE" stroke-width="6" opacity=".8"/>
+          <rect x="219" y="60" width="36" height="260" stroke="#F3E7CE" stroke-width="6" opacity=".8"/>
+          <rect x="51" y="70" width="24" height="240" fill="#F7D98B" opacity=".25"/>
+          <rect x="225" y="70" width="24" height="240" fill="#F7D98B" opacity=".25"/>
+          <rect x="107" y="46" width="86" height="120" fill="#F7D98B" opacity=".3"/>
+          <rect x="107" y="182" width="86" height="150" stroke="#F3E7CE" stroke-width="5"/>
+          <line x1="150" y1="182" x2="150" y2="332" stroke="#F3E7CE" stroke-width="4"/>
+          <circle cx="188" cy="262" r="7" fill="#C08A2D"/>
+          <path d="M95 30 Q150 4 205 30" stroke="#C08A2D" stroke-width="2" fill="none" opacity=".7"/>
+          <g stroke="#C08A2D" stroke-width="1.4" opacity=".8">
+            <line x1="45" y1="336" x2="255" y2="336" stroke-dasharray="5 5"/>
+          </g>
+          <text x="150" y="366" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" letter-spacing="3" fill="#C08A2D">THRESHOLD</text>
+        </svg>
+      </div>
     </div>
   </div>
 </div></section>
 
+<section id="process"><div class="wrap">
+  <span class="eyebrow reveal">How it works</span>
+  <h2 class="reveal">From first call to <em>final walkthrough.</em></h2>
+  <p class="sub reveal">No mystery, no pressure. Here's exactly what happens when you reach out:</p>
+  <div class="steps">
+    <div class="step reveal"><div class="num">01</div><h3>Say hello</h3><p>Call (972) 236-5037 or send the form. Tell us what's bothering you &mdash; foggy glass, a sticky door, a whole-house refresh.</p></div>
+    <div class="step reveal"><div class="num">02</div><h3>We take a look</h3><p>We visit, measure every opening to the sixteenth of an inch, and talk through what makes sense for your home and budget.</p></div>
+    <div class="step reveal"><div class="num">03</div><h3>You choose</h3><p>Styles, glass, finishes &mdash; explained in plain English, priced straight. You decide; we don't do pressure.</p></div>
+    <div class="step reveal"><div class="num">04</div><h3>We install</h3><p>Clean work, careful finish, old units hauled away. Then we walk it with you until every latch clicks the way it should.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="darkband reveal">
+    <span class="eyebrow" style="color:var(--brass)">A new Frisco name, earning it fast</span>
+    <h2>New on the block.<br>Already <em style="color:var(--brass)">trusted</em> on it.</h2>
+    <p class="sub">Frisco Window &amp; Door Solutions opened its doors in January 2026 &mdash; and Frisco homeowners have already left 85 reviews averaging 4.9 on Birdeye.</p>
+    <div class="darkband-grid">
+      <div class="darkband-card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C08A2D" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Frisco-based</h3><p>A local team at 8400 Stonebrook Pkwy &mdash; not a call center, not a franchise.</p>
+      </div>
+      <div class="darkband-card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="#C08A2D"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></div>
+        <h3>4.9 on Birdeye</h3><p>85 reviews averaging 4.9 out of 5 &mdash; earned one neighbor at a time.</p>
+      </div>
+      <div class="darkband-card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C08A2D" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="4" y1="12" x2="20" y2="12"/></svg></div>
+        <h3>One specialty</h3><p>Windows and doors &mdash; it's the whole name on the sign, and the whole focus of the work.</p>
+      </div>
+      <div class="darkband-card">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C08A2D" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></div>
+        <h3>Easy to reach</h3><p>Call, email, or send the form &mdash; (972) 236-5037, answered by a person.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
 <section class="spotlight" id="reviews"><div class="wrap">
-  <span class="eyebrow reveal">Reviews</span>
-  <h2 class="reveal">Rated by <span style="color:var(--sky)">Frisco homeowners.</span></h2>
-  <div class="reveal" style="margin-top:30px">
-    <div class="spot-num">4.9</div>
+  <span class="eyebrow reveal" style="justify-content:center;display:inline-flex">Reviews</span>
+  <h2 class="reveal">Frisco is <em>talking.</em></h2>
+  <p class="sub reveal" style="margin:0 auto 10px">Eighty-five neighbors have rated their experience on Birdeye &mdash; here's the shape of it:</p>
+  <div class="reveal" style="margin-top:26px">
+    <div class="spot-num"><span data-count="4.9" data-dec="1">0</span></div>
     <div class="spot-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <p class="sub" style="margin:0 auto">Average across 85 reviews on Birdeye. On the finished site, your real reviews stream in here &mdash; always current, always yours.</p>
+    <p class="sub" style="margin:0 auto">average across <strong>85 reviews</strong> on Birdeye</p>
+    <p class="sub" style="margin:26px auto 0;font-size:14px">Every review is real and readable on our Birdeye profile &mdash; ask us and we'll send the link.</p>
   </div>
 </div></section>
 
-<section style="padding-top:20px"><div class="wrap">
-  <div style="text-align:center"><span class="eyebrow reveal">FAQ</span>
-  <h2 class="reveal">Good questions.</h2></div>
+<section style="padding-top:80px"><div class="wrap">
+  <div style="text-align:center"><span class="eyebrow reveal" style="justify-content:center;display:inline-flex">FAQ</span>
+  <h2 class="reveal">Fair questions, <em>straight</em> answers.</h2></div>
   <div class="faq reveal">
-    <div class="faq-item"><button class="faq-q">How do I get a quote? <span>+</span></button><div class="faq-a"><p>Call (972) 236-5037 or send the form below &mdash; tell us about your project and we'll take it from there.</p></div></div>
-    <div class="faq-item"><button class="faq-q">Where are you located? <span>+</span></button><div class="faq-a"><p>8400 Stonebrook Pkwy #825, Frisco, TX 75034.</p></div></div>
-    <div class="faq-item"><button class="faq-q">What are customers saying? <span>+</span></button><div class="faq-a"><p>We're rated 4.9 out of 5 across 85 reviews on Birdeye.</p></div></div>
-    <div class="faq-item"><button class="faq-q">Are you a new company? <span>+</span></button><div class="faq-a"><p>Frisco Window &amp; Door Solutions launched in January 2026.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How do I get a quote?<span class="plus">+</span></button><div class="faq-a"><p>Call (972) 236-5037 or send the form below. Tell us about your project &mdash; what you've got, what's bothering you, what you're hoping for &mdash; and we'll take it from there.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Where are you located?<span class="plus">+</span></button><div class="faq-a"><p>8400 Stonebrook Pkwy #825, Frisco, TX 75034. We're a Frisco team, working in Frisco homes.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are you a new company?<span class="plus">+</span></button><div class="faq-a"><p>Frisco Window &amp; Door Solutions launched in January 2026. New name, experienced hands &mdash; and 85 Birdeye reviews averaging 4.9 already on the board.</p></div></div>
+    <div class="faq-item"><button class="faq-q">What do customers say about you?<span class="plus">+</span></button><div class="faq-a"><p>We're rated 4.9 out of 5 across 85 reviews on Birdeye. That's the number we're proudest of &mdash; and the one we work to keep.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do you only do windows and doors?<span class="plus">+</span></button><div class="faq-a"><p>Yes &mdash; it's the whole name on the sign. One specialty means every measurement, every install, every finish gets our full attention.</p></div></div>
   </div>
 </div></section>
 
-<section id="contact" style="padding-top:20px"><div class="wrap">
+<section id="contact" style="padding-top:40px"><div class="wrap">
   <div class="contact reveal">
     <div>
-      <span class="eyebrow" style="color:var(--amber)">Get in touch</span>
-      <h2>Let's talk about<br>your project.</h2>
-      <p class="sub">Call, email, or send the form &mdash; we'll get back to you.</p>
-      <div class="c-row"><span class="i">&#9742;</span><div><a href="tel:+19722365037">(972) 236-5037</a></div></div>
-      <div class="c-row"><span class="i">&#9993;</span><div><a href="mailto:info@friscowindowanddoor.com">info@friscowindowanddoor.com</a></div></div>
-      <div class="c-row"><span class="i">&#128205;</span><div>8400 Stonebrook Pkwy #825<br>Frisco, TX 75034</div></div>
+      <span class="eyebrow" style="color:var(--brass)">Get in touch</span>
+      <h2>Let's talk about<br>your <em style="color:var(--brass)">project.</em></h2>
+      <p class="sub">Call, email, or send the form &mdash; a real person gets back to you.</p>
+      <div class="c-row"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C08A2D" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span><div><div class="t">CALL OR TEXT</div><a href="tel:+19722365037">(972) 236-5037</a></div></div>
+      <div class="c-row"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C08A2D" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span><div><div class="t">EMAIL</div><a href="mailto:info@friscowindowanddoor.com">info@friscowindowanddoor.com</a></div></div>
+      <div class="c-row"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C08A2D" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><div class="t">VISIT</div>8400 Stonebrook Pkwy #825<br>Frisco, TX 75034</div></div>
     </div>
-    <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#fff;font-size:18px>Thanks &mdash; we\'ll be in touch shortly.</p>'">
+    <form id="quoteForm">
       <input type="text" placeholder="Your name" required>
       <input type="tel" placeholder="Phone" required>
-      <input type="email" placeholder="Email">
-      <textarea rows="4" placeholder="Tell us about your project..."></textarea>
-      <button class="btn btn-amber" type="submit" style="width:100%">Request a Quote</button>
+      <input type="email" placeholder="Email (optional)">
+      <textarea rows="4" placeholder="Tell us about your project &mdash; windows, doors, or both?"></textarea>
+      <button class="btn btn-brass" type="submit" style="width:100%">Request a Quote</button>
+      <p style="font-size:12.5px;color:#8FA0B5;margin-top:12px;text-align:center">No spam, no robocalls. Just a person, getting back to you.</p>
     </form>
   </div>
 </div></section>
 
-<footer>Frisco Window &amp; Door Solutions &middot; 8400 Stonebrook Pkwy #825, Frisco, TX 75034 &middot; (972) 236-5037</footer>
-<a class="sticky-call" href="tel:+19722365037">&#9742; Call (972) 236-5037</a>
+<footer>
+  <div class="fbrand">Frisco Window &amp; Door Solutions</div>
+  8400 Stonebrook Pkwy #825, Frisco, TX 75034 &middot; (972) 236-5037 &middot; info@friscowindowanddoor.com
+</footer>
+<a class="sticky-call" href="tel:+19722365037">Call (972) 236-5037</a>
 
 <script>
 (function(){
@@ -240,14 +423,24 @@
       if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
     });
   });
-  /* counters */
-  function anim(el){var t=+el.dataset.count,s=0,d=1400,st=performance.now();
-    function tick(n){var p=Math.min((n-st)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)}
+  /* counters (supports decimals) */
+  function anim(el){
+    var dec=+(el.dataset.dec||0),t=parseFloat(el.dataset.count),s=0,d=1500,st=performance.now();
+    function tick(n){var p=Math.min((n-st)/d,1),v=t*(1-Math.pow(1-p,3));
+      el.textContent=dec?v.toFixed(dec):Math.round(v);
+      if(p<1)requestAnimationFrame(tick)}
+    requestAnimationFrame(tick)
+  }
   /* reveal */
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
-    e.target.querySelectorAll('[data-count]').forEach(anim);io.unobserve(e.target)}})},{threshold:.15});
+    e.target.querySelectorAll('[data-count]').forEach(anim);
+    io.unobserve(e.target)}})},{threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-  document.querySelectorAll('[data-count]').forEach(function(el){if(el.closest('.glass'))anim(el)});
+  /* form */
+  document.getElementById('quoteForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    this.innerHTML='<div style="text-align:center;padding:40px 10px"><div style="font-family:Fraunces,serif;font-size:30px;color:#fff;margin-bottom:12px">Thanks &mdash; we\'ll be in touch.</div><p style="color:#B9C4D4">Your request is on its way to our Frisco team.</p></div>';
+  });
 })();
 </script>
 </body>
