@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Griffin Plumbing — Anna, TX | TX Master Plumber #36176</title>
+<meta name="description" content="Griffin Plumbing of Anna, TX — TX Master Plumber License #36176. 148 permitted projects since 2003. Serving Sherman, Grayson County and Northern Collin County. Call (903) 815-7900.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#0E2237;
+  --steel-2:#14304D;
+  --steel-3:#1E4265;
+  --concrete:#F3F1EA;
+  --concrete-2:#EAE7DC;
+  --orange:#FF6B1A;
+  --orange-deep:#C94E08;
+  --ink:#0C141D;
+  --ink-soft:#3B4A5C;
+  --line:#D8D4C6;
+  --card:#FFFFFF;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  background:var(--concrete);
+  color:var(--ink);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+::selection{background:var(--orange);color:#fff}
+img{max-width:100%}
+
+/* ============ DEMO BADGE ============ */
+.demo-strip{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:repeating-linear-gradient(-45deg,var(--orange) 0 18px,#111 18px 36px);
+  color:#fff;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;
+  text-align:center;
+  padding:.55rem 1rem;
+  text-transform:uppercase;
+  box-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+.demo-strip span{background:#111;padding:.25rem .9rem;border:1px solid var(--orange)}
+body{padding-top:34px}
+
+/* ============ STICKY NAV ============ */
+.nav{
+  position:sticky;top:34px;z-index:150;
+  background:rgba(14,34,55,.96);backdrop-filter:blur(10px);
+  border-bottom:3px solid var(--orange);
+}
+.nav-inner{
+  max-width:1180px;margin:0 auto;padding:.7rem 1.25rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff;margin-right:auto}
+.brand-mark{
+  width:44px;height:44px;flex:0 0 44px;border-radius:10px;
+  background:var(--orange);
+  display:grid;place-items:center;
+  font-family:'Archivo',sans-serif;font-weight:900;font-size:1.5rem;color:#0E2237;
+  box-shadow:0 3px 0 var(--orange-deep);
+}
+.brand-name{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.05rem;letter-spacing:.04em;line-height:1.05}
+.brand-sub{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.22em;color:#9FB3C8;text-transform:uppercase}
+.nav-links{display:flex;gap:1.35rem;list-style:none}
+.nav-links a{
+  color:#DCE6F0;text-decoration:none;font-weight:600;font-size:.86rem;letter-spacing:.04em;
+  text-transform:uppercase;position:relative;padding:.3rem 0;
+}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;height:3px;width:0;background:var(--orange);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav-call{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:var(--orange);color:#111;text-decoration:none;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:.95rem;
+  padding:.65rem 1.15rem;border-radius:10px;
+  box-shadow:0 4px 0 var(--orange-deep);
+  transition:transform .15s,box-shadow .15s;
+  white-space:nowrap;
+}
+.nav-call:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--orange-deep)}
+.nav-call:active{transform:translateY(4px);box-shadow:none}
+.burger{display:none;background:none;border:2px solid #4a637f;color:#fff;border-radius:8px;padding:.45rem .6rem;font-size:1.1rem;cursor:pointer}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    linear-gradient(rgba(14,34,55,.55),rgba(14,34,55,.55)),
+    repeating-linear-gradient(0deg,transparent 0 39px,rgba(120,160,200,.14) 39px 40px),
+    repeating-linear-gradient(90deg,transparent 0 39px,rgba(120,160,200,.14) 39px 40px),
+    radial-gradient(1100px 500px at 80% -10%,var(--steel-3),var(--steel));
+  color:#fff;
+  padding:5.5rem 1.25rem 4.5rem;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:
+    radial-gradient(circle at 12% 20%,rgba(255,107,26,.16),transparent 40%),
+    radial-gradient(circle at 88% 75%,rgba(255,107,26,.10),transparent 45%);
+}
+.hero-inner{position:relative;max-width:1180px;margin:0 auto}
+.kicker{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;color:#FFD9BE;
+  border:1px solid rgba(255,107,26,.6);border-radius:999px;padding:.5rem 1.1rem;
+  background:rgba(255,107,26,.08);
+}
+.kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px var(--orange);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.5)}}
+.hero h1{
+  font-family:'Archivo',sans-serif;font-weight:900;
+  font-size:clamp(2.8rem,8.5vw,6.2rem);
+  line-height:.95;letter-spacing:-.02em;
+  margin:1.4rem 0 1rem;
+  text-transform:uppercase;
+}
+.hero h1 .stroke{
+  color:transparent;-webkit-text-stroke:2.5px var(--orange);
+}
+.hero-sub{
+  max-width:640px;font-size:1.12rem;color:#CBD8E6;font-weight:400;
+}
+.hero-sub strong{color:#fff}
+.hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.btn-big{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:1.1rem;
+  padding:1rem 1.7rem;border-radius:12px;text-decoration:none;
+  transition:transform .15s,box-shadow .15s;
+}
+.btn-call{background:var(--orange);color:#111;box-shadow:0 5px 0 var(--orange-deep),0 12px 30px rgba(255,107,26,.35)}
+.btn-call:hover{transform:translateY(3px);box-shadow:0 2px 0 var(--orange-deep)}
+.btn-ghost{border:2px solid #5D7894;color:#fff}
+.btn-ghost:hover{border-color:var(--orange);color:#FFD9BE}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);margin-top:3rem;overflow:hidden;
+}
+.stat{background:rgba(10,24,40,.72);padding:1.4rem 1rem;text-align:center;transition:background .25s}
+.stat:hover{background:rgba(255,107,26,.16)}
+.stat-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.7rem,3.5vw,2.6rem);color:#fff}
+.stat-num em{font-style:normal;color:var(--orange)}
+.stat-label{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#9FB3C8;margin-top:.35rem}
+.stat-src{font-family:'IBM Plex Mono',monospace;font-size:.6rem;color:#6E8499;margin-top:.2rem}
+
+/* ============ HAZARD MARQUEE ============ */
+.marquee{
+  background:#0A1725;border-top:3px solid var(--orange);border-bottom:3px solid var(--orange);
+  overflow:hidden;white-space:nowrap;padding:.7rem 0;
+}
+.marquee-track{display:inline-block;animation:slide 26s linear infinite}
+.marquee span{
+  font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:.8rem;letter-spacing:.28em;
+  color:var(--orange);text-transform:uppercase;padding:0 1.6rem;
+}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ============ SECTIONS ============ */
+section{padding:4.5rem 1.25rem}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-tag{
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--orange-deep);
+  display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;
+}
+.sec-tag::before{content:"";width:34px;height:4px;background:var(--orange)}
+.sec-title{
+  font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;
+  font-size:clamp(1.9rem,4.5vw,3.1rem);line-height:1;letter-spacing:-.01em;margin-bottom:1rem;
+}
+.sec-lede{max-width:660px;color:var(--ink-soft);font-size:1.06rem;margin-bottom:2.5rem}
+
+/* ============ LICENSE SEAL BAND ============ */
+.seal-band{background:var(--steel);color:#fff;position:relative;overflow:hidden}
+.seal-band::before{
+  content:"";position:absolute;inset:0;opacity:.08;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 29px,#fff 29px 30px),
+    repeating-linear-gradient(90deg,transparent 0 29px,#fff 29px 30px);
+}
+.seal-grid{position:relative;display:grid;grid-template-columns:340px 1fr;gap:3rem;align-items:center}
+.seal-svg{width:100%;max-width:320px;margin:0 auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5));transition:transform .4s}
+.seal-svg:hover{transform:rotate(8deg) scale(1.04)}
+.seal-copy h2{color:#fff}
+.seal-copy p{color:#CBD8E6;max-width:560px}
+.seal-points{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
+.seal-point{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);
+  border-radius:12px;padding:1.1rem 1.2rem;transition:transform .2s,border-color .2s;
+}
+.seal-point:hover{transform:translateY(-4px);border-color:var(--orange)}
+.seal-point b{display:block;font-family:'Archivo',sans-serif;font-size:1.02rem;color:#fff;margin-bottom:.25rem}
+.seal-point small{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:#9FB3C8;letter-spacing:.06em}
+.seal-note{margin-top:1.5rem;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#8FA3B8}
+
+/* ============ PEOPLE / PROOF ============ */
+.people-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.person-card{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 2px 6px rgba(12,20,29,.06);
+  transition:transform .25s,box-shadow .25s;
+  position:relative;
+}
+.person-card:hover{transform:translateY(-8px);box-shadow:0 22px 45px rgba(12,20,29,.16)}
+.person-card::before{content:"";display:block;height:8px;background:repeating-linear-gradient(-45deg,var(--orange) 0 14px,var(--steel) 14px 28px)}
+.person-body{padding:2rem}
+.person-id{display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem}
+.person-avatar{
+  width:64px;height:64px;border-radius:50%;flex:0 0 64px;
+  background:var(--steel);color:var(--orange);
+  display:grid;place-items:center;
+  font-family:'Archivo',sans-serif;font-weight:900;font-size:1.6rem;
+  border:3px solid var(--orange);
+}
+.person-id h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.35rem;text-transform:uppercase}
+.person-id small{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.14em;color:var(--ink-soft);text-transform:uppercase}
+.person-card blockquote{
+  font-size:1.12rem;font-weight:500;line-height:1.55;color:var(--ink);
+  border-left:5px solid var(--orange);padding-left:1.1rem;margin:0 0 1rem;
+}
+.person-card cite{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--ink-soft);letter-spacing:.08em}
+.stars{color:var(--orange);letter-spacing:.2em;font-size:1.05rem;margin-bottom:.6rem}
+
+/* ============ SERVICE TABS ============ */
+.tabs-section{background:var(--concrete-2)}
+.tab-bar{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.6rem}
+.tab-btn{
+  font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em;
+  background:var(--card);border:2px solid var(--steel);color:var(--steel);
+  padding:.8rem 1.4rem;border-radius:10px;cursor:pointer;
+  transition:all .2s;
+}
+.tab-btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(14,34,55,.18)}
+.tab-btn.active{background:var(--steel);color:#fff;border-color:var(--steel);box-shadow:0 6px 0 var(--orange)}
+.tab-panels{background:var(--card);border-radius:var(--radius);border:1px solid var(--line);overflow:hidden;box-shadow:0 10px 30px rgba(12,20,29,.08)}
+.tab-panel{display:none;padding:2.5rem}
+.tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.7rem;text-transform:uppercase;margin-bottom:.8rem}
+.tab-panel h3 .n{color:var(--orange)}
+.tab-panel p{color:var(--ink-soft);margin-bottom:1rem}
+.tab-list{list-style:none;margin:1rem 0}
+.tab-list li{padding:.55rem 0 .55rem 2rem;position:relative;font-weight:500}
+.tab-list li::before{
+  content:"▸";position:absolute;left:.4rem;color:var(--orange);font-weight:900;
+}
+.tab-proof{
+  background:var(--steel);color:#fff;border-radius:12px;padding:1.8rem;
+  border-top:6px solid var(--orange);
+}
+.tab-proof blockquote{font-size:1.05rem;line-height:1.55;border-left:4px solid var(--orange);padding-left:1rem;margin-bottom:.8rem}
+.tab-proof cite{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#9FB3C8}
+.tab-cta{margin-top:1.4rem;display:inline-flex;align-items:center;gap:.6rem;background:var(--orange);color:#111;font-family:'Archivo',sans-serif;font-weight:800;padding:.85rem 1.5rem;border-radius:10px;text-decoration:none;box-shadow:0 4px 0 var(--orange-deep);transition:transform .15s,box-shadow .15s}
+.tab-cta:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--orange-deep)}
+
+/* ============ TRACK RECORD BAND ============ */
+.record{background:var(--ink);color:#fff;position:relative}
+.record-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.record-card{
+  background:linear-gradient(160deg,var(--steel-3),var(--steel-2));
+  border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);
+  padding:2rem;transition:transform .25s,box-shadow .25s;
+}
+.record-card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.record-card .big{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--orange);line-height:1}
+.record-card h4{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;margin:.7rem 0 .5rem;font-size:1.05rem}
+.record-card p{color:#B9C8DA;font-size:.96rem}
+.record-card small{display:block;margin-top:.8rem;font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:#7E93AA;letter-spacing:.08em}
+
+/* ============ TESTIMONIAL SLIDER ============ */
+.slider-shell{position:relative;max-width:860px;margin:0 auto}
+.slide{display:none;background:var(--card);border-radius:var(--radius);border:1px solid var(--line);padding:3rem;box-shadow:0 14px 40px rgba(12,20,29,.10);position:relative;overflow:hidden}
+.slide.active{display:block;animation:fadeUp .4s ease}
+.slide::before{content:"“";position:absolute;top:-1.4rem;left:1.2rem;font-family:'Archivo',sans-serif;font-size:9rem;color:var(--orange);opacity:.22;line-height:1}
+.slide blockquote{font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:500;line-height:1.5;position:relative}
+.slide .meta{margin-top:1.4rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.slide cite{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase}
+.slider-nav{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1.6rem}
+.slide-btn{
+  width:52px;height:52px;border-radius:50%;border:2px solid var(--steel);
+  background:var(--card);color:var(--steel);font-size:1.3rem;font-weight:900;cursor:pointer;
+  transition:all .2s;display:grid;place-items:center;
+}
+.slide-btn:hover{background:var(--steel);color:#fff;transform:scale(1.08)}
+.slide-dots{display:flex;gap:.5rem}
+.slide-dot{width:12px;height:12px;border-radius:50%;background:#C9C4B2;cursor:pointer;transition:all .2s}
+.slide-dot.active{background:var(--orange);transform:scale(1.3)}
+
+/* ============ SERVICE AREA ============ */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:stretch}
+.area-map{
+  background:var(--steel);border-radius:var(--radius);padding:2.5rem;color:#fff;position:relative;overflow:hidden;
+  border:3px solid var(--orange);
+}
+.area-map::before{
+  content:"";position:absolute;inset:0;opacity:.12;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 24px,#fff 24px 25px),
+    repeating-linear-gradient(90deg,transparent 0 24px,#fff 24px 25px);
+}
+.area-map h3{position:relative;font-family:'Archivo',sans-serif;font-weight:900;font-size:1.6rem;text-transform:uppercase;margin-bottom:1.2rem}
+.area-list{position:relative;list-style:none;display:grid;gap:.8rem}
+.area-list li{
+  display:flex;align-items:center;gap:.9rem;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem 1.1rem;
+  font-weight:600;transition:all .2s;
+}
+.area-list li:hover{background:rgba(255,107,26,.18);border-color:var(--orange);transform:translateX(6px)}
+.pin{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font-size:1rem}
+.area-copy{display:flex;flex-direction:column;justify-content:center}
+.area-copy p{color:var(--ink-soft);margin-bottom:1.2rem}
+.area-quote{
+  background:var(--card);border-left:6px solid var(--orange);border-radius:0 12px 12px 0;
+  padding:1.6rem;box-shadow:0 8px 24px rgba(12,20,29,.08);margin-bottom:1.2rem;
+  transition:transform .2s;
+}
+.area-quote:hover{transform:translateX(6px)}
+.area-quote p{font-size:1.02rem;margin:0 0 .6rem}
+.area-quote cite{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--ink-soft);letter-spacing:.06em}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:860px;margin:0 auto;display:grid;gap:.9rem}
+.faq{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  transition:box-shadow .2s;
+}
+.faq.open{box-shadow:0 12px 30px rgba(12,20,29,.12);border-color:var(--steel)}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  background:none;border:none;cursor:pointer;text-align:left;
+  font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;color:var(--ink);
+  padding:1.3rem 1.5rem;
+}
+.faq-q .plus{
+  flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--steel);color:#fff;
+  display:grid;place-items:center;font-size:1.2rem;font-weight:900;transition:all .25s;
+}
+.faq.open .faq-q .plus{background:var(--orange);transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 1.5rem 1.4rem;color:var(--ink-soft)}
+.faq-a a{color:var(--orange-deep);font-weight:700}
+
+/* ============ CONTACT / FOOTER ============ */
+.contact{background:var(--steel);color:#fff;position:relative;overflow:hidden}
+.contact::before{
+  content:"";position:absolute;inset:0;opacity:.07;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 29px,#fff 29px 30px),
+    repeating-linear-gradient(90deg,transparent 0 29px,#fff 29px 30px);
+}
+.contact-grid{position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:start}
+.contact h2{color:#fff}
+.contact-info{display:grid;gap:1.1rem;margin-top:1.8rem}
+.info-row{
+  display:flex;gap:1.1rem;align-items:flex-start;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:1.2rem 1.3rem;
+  transition:all .2s;text-decoration:none;color:#fff;
+}
+a.info-row:hover{border-color:var(--orange);transform:translateY(-3px)}
+.info-ico{flex:0 0 44px;width:44px;height:44px;border-radius:10px;background:var(--orange);display:grid;place-items:center;font-size:1.3rem}
+.info-row b{display:block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#9FB3C8;margin-bottom:.3rem}
+.info-row .v{font-size:1.15rem;font-weight:700}
+.hours-table{width:100%;border-collapse:collapse;font-size:.98rem}
+.hours-table td{padding:.45rem 0;border-bottom:1px dashed rgba(255,255,255,.18)}
+.hours-table td:last-child{text-align:right;font-family:'IBM Plex Mono',monospace}
+.hours-table .closed{color:#8FA3B8}
+.contact-card{
+  background:var(--concrete);color:var(--ink);border-radius:var(--radius);padding:2.5rem;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);border-top:8px solid var(--orange);
+  position:sticky;top:140px;
+}
+.contact-card h3{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.6rem;text-transform:uppercase;margin-bottom:.6rem}
+.contact-card p{color:var(--ink-soft);margin-bottom:1.4rem}
+.contact-card .btn-big{width:100%;justify-content:center;font-size:1.25rem;padding:1.15rem;margin-bottom:1rem}
+.contact-card small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--ink-soft);letter-spacing:.06em;text-align:center}
+.footer{background:#081220;color:#7E93AA;padding:2.2rem 1.25rem;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em}
+.footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
+
+/* ============ STICKY MOBILE CALL ============ */
+.mobile-call{
+  display:none;position:fixed;bottom:1rem;left:1rem;right:1rem;z-index:150;
+  background:var(--orange);color:#111;text-decoration:none;
+  font-family:'Archivo',sans-serif;font-weight:900;font-size:1.15rem;
+  padding:1rem;border-radius:14px;text-align:center;
+  box-shadow:0 8px 30px rgba(255,107,26,.5),0 4px 0 var(--orange-deep);
+  animation:callBounce 2.4s infinite;
+}
+@keyframes callBounce{0%,100%{transform:scale(1)}6%{transform:scale(1.03)}12%{transform:scale(1)}}
+.mobile-call small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.2em;font-weight:700}
+
+/* ============ SCROLL REVEAL ============ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:940px){
+  .nav-links{display:none}
+  .nav-links.open{
+    display:flex;position:absolute;top:100%;left:0;right:0;
+    background:var(--steel);flex-direction:column;padding:1rem 1.5rem 1.5rem;gap:.2rem;
+    border-bottom:3px solid var(--orange);
+  }
+  .nav-links.open a{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .burger{display:block}
+  .hero{padding:4rem 1.25rem 3.5rem}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .seal-grid{grid-template-columns:1fr;gap:2rem}
+  .people-grid{grid-template-columns:1fr}
+  .tab-panel.active{grid-template-columns:1fr}
+  .record-grid{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-card{position:static}
+  .mobile-call{display:block}
+  body{padding-bottom:0}
+  section{padding:3.5rem 1.25rem}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-strip"><span>DEMO PREVIEW — not a live business site</span></div>
+
+<!-- ============ STICKY NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">G</span>
+      <span><span class="brand-name">GRIFFIN PLUMBING</span><br><span class="brand-sub">Anna, Texas · Lic #36176</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#license">License</a></li>
+      <li><a href="#crew">The Crew</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-call" href="tel:+19038157900">📞 (903) 815-7900</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <span class="kicker"><span class="dot"></span> Anna, Texas — Licensed Master Plumber</span>
+    <h1>Griffin <span class="stroke">Plumbing</span></h1>
+    <p class="hero-sub">
+      Honest, reliable plumbing from a <strong>Texas-licensed Master Plumber</strong> —
+      with <strong>148 permitted projects on record since 2003</strong> across Sherman,
+      Grayson County and Northern Collin County. When reviewers talk about Griffin,
+      they talk about real names: <strong>Mark</strong> and <strong>Tanner's crew</strong>.
+    </p>
+    <div class="hero-cta">
+      <a class="btn-big btn-call" href="tel:+19038157900">📞 Call (903) 815-7900</a>
+      <a class="btn-big btn-ghost" href="#license">Verify the License ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num"><span class="counter" data-target="148">0</span></div>
+        <div class="stat-label">Permitted projects</div>
+        <div class="stat-src">BuildZoom, since 2003</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><em>#</em><span class="counter" data-target="36176">0</span></div>
+        <div class="stat-label">TX Master Plumber license</div>
+        <div class="stat-src">current, per state roster</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><span class="counter" data-target="4.8" data-decimals="1">0</span><em>★</em></div>
+        <div class="stat-label">Birdeye rating</div>
+        <div class="stat-src">6 reviews — 5× 5-star, 1× 4-star</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num"><em>Top</em> <span class="counter" data-target="12">0</span><em>%</em></div>
+        <div class="stat-label">of TX contractors</div>
+        <div class="stat-src">BuildZoom score 101</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>TX Master Plumber #36176</span><span>★</span><span>148 Permitted Projects</span><span>★</span><span>Anna · Sherman · Grayson County</span><span>★</span><span>Northern Collin County</span><span>★</span><span>4.8★ on Birdeye</span><span>★</span>
+    <span>TX Master Plumber #36176</span><span>★</span><span>148 Permitted Projects</span><span>★</span><span>Anna · Sherman · Grayson County</span><span>★</span><span>Northern Collin County</span><span>★</span><span>4.8★ on Birdeye</span><span>★</span>
+  </div>
+</div>
+
+<!-- ============ LICENSE SEAL BAND ============ -->
+<section class="seal-band" id="license">
+  <div class="wrap seal-grid">
+    <div class="reveal">
+      <svg class="seal-svg" viewBox="0 0 220 220" role="img" aria-label="Texas Master Plumber License 36176 seal">
+        <circle cx="110" cy="110" r="104" fill="none" stroke="#FF6B1A" stroke-width="6"/>
+        <circle cx="110" cy="110" r="92" fill="none" stroke="#FF6B1A" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <circle cx="110" cy="110" r="62" fill="#FF6B1A"/>
+        <defs><path id="arcTop" d="M32,110 A78,78 0 0,1 188,110"/></defs>
+        <text font-family="IBM Plex Mono, monospace" font-size="13.5" font-weight="700" fill="#FFD9BE" letter-spacing="3">
+          <textPath href="#arcTop" startOffset="50%" text-anchor="middle">★ TX MASTER PLUMBER ★</textPath>
+        </text>
+        <text x="110" y="104" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="34" fill="#0E2237">#36176</text>
+        <text x="110" y="128" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="700" font-size="13" fill="#0E2237">CURRENT</text>
+        <text x="110" y="196" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#9FB3C8" letter-spacing="2">PER STATE ROSTER</text>
+      </svg>
+    </div>
+    <div class="seal-copy reveal reveal-d1">
+      <div class="sec-tag">License &amp; credentials</div>
+      <h2 class="sec-title">Licensed. Verified.<br>On the record.</h2>
+      <p>Plumbing is one of the most licensed trades in Texas for a reason — a burst pipe or a bad rough-in costs real money. Griffin Plumbing holds an active <strong style="color:#fff">Texas Master Plumber license #36176</strong>, verified current on the state roster. That's the highest plumbing license Texas issues.</p>
+      <div class="seal-points">
+        <div class="seal-point">
+          <b>TX Master Plumber #36176</b>
+          <small>Status: CURRENT — verified on the TX State Board of Plumbing Examiners roster (Aug 2026) and re-verified by BuildZoom (Sep 2026).</small>
+        </div>
+        <div class="seal-point">
+          <b>148 permitted projects</b>
+          <small>On record with BuildZoom since 2003 — permitted work means inspected work.</small>
+        </div>
+        <div class="seal-point">
+          <b>BuildZoom score 101</b>
+          <small>Top 12% of 222,249 Texas licensed contractors, per BuildZoom.</small>
+        </div>
+        <div class="seal-point">
+          <b>Locally owned &amp; operated</b>
+          <small>Per the company's own listing: honest, reliable plumbing in the area for many years.</small>
+        </div>
+      </div>
+      <p class="seal-note">Source attributions: license status via TX State Board of Plumbing Examiners roster / BuildZoom; project count &amp; ranking via BuildZoom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE CREW / NAMED PEOPLE ============ -->
+<section id="crew">
+  <div class="wrap">
+    <div class="sec-tag reveal">The names behind the work</div>
+    <h2 class="sec-title reveal">Reviewers don't talk about a logo.<br>They talk about <span style="color:var(--orange-deep)">Mark</span> and <span style="color:var(--orange-deep)">Tanner's crew</span>.</h2>
+    <p class="sec-lede reveal">Griffin Plumbing has no website — so its entire reputation lives in a handful of directory reviews. And those reviews name names. This is a shop where the people show up, do thorough work, and get remembered for it.</p>
+    <div class="people-grid">
+      <article class="person-card reveal">
+        <div class="person-body">
+          <div class="person-id">
+            <span class="person-avatar">M</span>
+            <div><h3>Mark</h3><small>Named in a 5-star Birdeye review</small></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <blockquote>"Mark did work at our our house several times. Always thorough and great work, reasonable prices. They located the broken pipe in the yard and fixed it quickly. We highly recommend their services."</blockquote>
+          <cite>— Birdeye review (Dec 20, 2024 · reviewer name not displayed)</cite>
+        </div>
+      </article>
+      <article class="person-card reveal reveal-d1">
+        <div class="person-body">
+          <div class="person-id">
+            <span class="person-avatar">T</span>
+            <div><h3>Tanner &amp; his crew</h3><small>Named in a 5-star Birdeye review</small></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <blockquote>"Tanner and his crew were awesome. The attitude and attention to detail were top notch! Thank you so much for such exemplary service!"</blockquote>
+          <cite>— Birdeye review (reviewer name not displayed)</cite>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES TABS ============ -->
+<section class="tabs-section" id="services">
+  <div class="wrap">
+    <div class="sec-tag reveal">What a master plumber handles</div>
+    <h2 class="sec-title reveal">One license.<br>Every pipe in the house.</h2>
+    <p class="sec-lede reveal">A Master Plumber license is the top credential Texas issues — it covers the full trade, from a broken yard line to a permitted rough-in. Pick a category to see what that means for your home.</p>
+    <div class="tab-bar reveal" role="tablist">
+      <button class="tab-btn active" data-tab="t1" role="tab">Leak &amp; Pipe Repair</button>
+      <button class="tab-btn" data-tab="t2" role="tab">Drain &amp; Sewer</button>
+      <button class="tab-btn" data-tab="t3" role="tab">Water Heaters</button>
+      <button class="tab-btn" data-tab="t4" role="tab">Installs &amp; Remodels</button>
+    </div>
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" id="t1">
+        <div>
+          <h3><span class="n">01 /</span> Leak &amp; Pipe Repair</h3>
+          <p>A yard leak can run for weeks before anyone sees the bill. Griffin's reviewers specifically call out how the crew handles exactly this kind of job — find it fast, fix it right.</p>
+          <ul class="tab-list">
+            <li>Yard and slab leak location &amp; repair</li>
+            <li>Broken water line replacement</li>
+            <li>Repiping and pipe rerouting</li>
+            <li>Emergency shut-off and damage control</li>
+          </ul>
+          <a class="tab-cta" href="tel:+19038157900">📞 (903) 815-7900 — Call about a leak</a>
+        </div>
+        <aside class="tab-proof">
+          <blockquote>"They located the broken pipe in the yard and fixed it quickly."</blockquote>
+          <cite>— Birdeye review of Griffin Plumbing</cite>
+        </aside>
+      </div>
+      <div class="tab-panel" id="t2">
+        <div>
+          <h3><span class="n">02 /</span> Drain &amp; Sewer</h3>
+          <p>Slow drains, backups, and sewer line failures are the jobs where experience matters most — misdiagnose it and you pay twice. A shop with 148 permitted projects has seen every version of it.</p>
+          <ul class="tab-list">
+            <li>Drain cleaning and clog removal</li>
+            <li>Sewer line inspection &amp; repair</li>
+            <li>Main line replacement</li>
+            <li>Fixture drain rework</li>
+          </ul>
+          <a class="tab-cta" href="tel:+19038157900">📞 (903) 815-7900 — Call about a drain</a>
+        </div>
+        <aside class="tab-proof">
+          <blockquote>"Always thorough and great work, reasonable prices."</blockquote>
+          <cite>— Birdeye review of Griffin Plumbing</cite>
+        </aside>
+      </div>
+      <div class="tab-panel" id="t3">
+        <div>
+          <h3><span class="n">03 /</span> Water Heaters</h3>
+          <p>No hot water is a same-day problem, not a next-week problem. Licensed installation matters here — gas and electric water heaters both carry real safety and code requirements.</p>
+          <ul class="tab-list">
+            <li>Tank water heater replacement</li>
+            <li>Tankless system installation</li>
+            <li>Repairs, thermostats &amp; elements</li>
+            <li>Code-compliant venting &amp; hookups</li>
+          </ul>
+          <a class="tab-cta" href="tel:+19038157900">📞 (903) 815-7900 — Call about a water heater</a>
+        </div>
+        <aside class="tab-proof">
+          <blockquote>"On time, quality work, fair price, friendly workers."</blockquote>
+          <cite>— Birdeye review of Griffin Plumbing</cite>
+        </aside>
+      </div>
+      <div class="tab-panel" id="t4">
+        <div>
+          <h3><span class="n">04 /</span> Installs &amp; Remodels</h3>
+          <p>Remodels and new installs are where the permit record earns its keep. Griffin's 148 permitted projects since 2003 mean permitted, inspected work — the kind a future home sale never questions.</p>
+          <ul class="tab-list">
+            <li>Bathroom &amp; kitchen rough-in</li>
+            <li>Fixture installation &amp; replacement</li>
+            <li>Permitted new-construction plumbing</li>
+            <li>Gas line work by a licensed master</li>
+          </ul>
+          <a class="tab-cta" href="tel:+19038157900">📞 (903) 815-7900 — Call about a project</a>
+        </div>
+        <aside class="tab-proof">
+          <blockquote>"The attitude and attention to detail were top notch!"</blockquote>
+          <cite>— Birdeye review of Griffin Plumbing (on Tanner and his crew)</cite>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRACK RECORD ============ -->
+<section class="record">
+  <div class="wrap">
+    <div class="sec-tag reveal">Track record</div>
+    <h2 class="sec-title reveal" style="color:#fff">Twenty-plus years of<br>permitted, inspected work.</h2>
+    <p class="sec-lede reveal" style="color:#B9C8DA">No claims, no slogans — just the public record. BuildZoom tracks Griffin Plumbing's permit history back to 2003, and the numbers put the shop near the top of the state.</p>
+    <div class="record-grid">
+      <div class="record-card reveal">
+        <div class="big"><span class="counter" data-target="148">0</span></div>
+        <h4>Permitted projects</h4>
+        <p>On record since 2003 — roughly 23 years of permit activity. Permitted work is inspected work.</p>
+        <small>SOURCE: BUILDZOOM CONTRACTOR PROFILE</small>
+      </div>
+      <div class="record-card reveal reveal-d1">
+        <div class="big">101</div>
+        <h4>BuildZoom score</h4>
+        <p>A score of 101 places Griffin in the top 12% of 222,249 Texas licensed contractors.</p>
+        <small>SOURCE: BUILDZOOM, SEP 2026</small>
+      </div>
+      <div class="record-card reveal reveal-d2">
+        <div class="big"><span class="counter" data-target="4.8" data-decimals="1">0</span>★</div>
+        <h4>Customer rating</h4>
+        <p>4.8 out of 5 across 6 reviews — five 5-star, one 4-star — on the company's Birdeye profile.</p>
+        <small>SOURCE: BIRDEYE (PROFILE UNCLAIMED)</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-tag reveal">Customer reviews</div>
+    <h2 class="sec-title reveal">What Anna homeowners say.</h2>
+    <p class="sec-lede reveal">Every word below is a real review from Griffin Plumbing's Birdeye profile. Reviewer names aren't displayed on the profile — so they're attributed exactly as they appear.</p>
+    <div class="slider-shell reveal">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Mark did work at our our house several times. Always thorough and great work, reasonable prices. They located the broken pipe in the yard and fixed it quickly. We highly recommend their services."</blockquote>
+        <div class="meta"><cite>— Birdeye review · Dec 20, 2024</cite></div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Tanner and his crew were awesome. The attitude and attention to detail were top notch! Thank you so much for such exemplary service!"</blockquote>
+        <div class="meta"><cite>— Birdeye review</cite></div>
+      </div>
+      <div class="slider-nav">
+        <button class="slide-btn" id="prevSlide" aria-label="Previous review">←</button>
+        <div class="slide-dots" id="slideDots"></div>
+        <button class="slide-btn" id="nextSlide" aria-label="Next review">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREA ============ -->
+<section id="area" style="background:var(--concrete-2)">
+  <div class="wrap">
+    <div class="sec-tag reveal">Where we work</div>
+    <h2 class="sec-title reveal">Based in Anna.<br>Serving the corridor.</h2>
+    <p class="sec-lede reveal">Griffin Plumbing is based at 7679 Co Rd 531 in Anna, TX — and works across Sherman, Grayson County, Northern Collin County and the surrounding areas.</p>
+    <div class="area-grid">
+      <div class="area-map reveal">
+        <h3>📍 Service Area</h3>
+        <ul class="area-list">
+          <li><span class="pin">📍</span> Anna, TX — home base</li>
+          <li><span class="pin">📍</span> Sherman, TX</li>
+          <li><span class="pin">📍</span> Grayson County</li>
+          <li><span class="pin">📍</span> Northern Collin County</li>
+          <li><span class="pin">📍</span> Surrounding areas</li>
+        </ul>
+      </div>
+      <div class="area-copy reveal reveal-d1">
+        <div class="area-quote">
+          <p>"…providing honest and reliable plumbing services in Sherman, Texas, as well as in Grayson County, Northern Collin County, and the surrounding areas for many years."</p>
+          <cite>— THE COMPANY'S OWN LISTING DESCRIPTION</cite>
+        </div>
+        <p>Locally owned and operated — the kind of shop where the person who answers the phone knows the streets, the water lines, and the inspectors. If you're in the area and have a plumbing problem, one call reaches a real plumber.</p>
+        <a class="tab-cta" href="tel:+19038157900">📞 Call (903) 815-7900</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-tag reveal">Straight answers</div>
+    <h2 class="sec-title reveal">Questions, answered.</h2>
+    <p class="sec-lede reveal">The short version of everything a homeowner usually asks before calling.</p>
+    <div class="faq-list">
+      <div class="faq reveal">
+        <button class="faq-q">Are you licensed? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. Griffin Plumbing holds <strong>Texas Master Plumber license #36176</strong>, currently active and verified on the TX State Board of Plumbing Examiners roster — the highest plumbing license Texas issues.</p></div>
+      </div>
+      <div class="faq reveal">
+        <button class="faq-q">What are your hours? <span class="plus">+</span></button>
+        <div class="faq-a"><p><strong>Monday–Friday, 8:00 AM–5:00 PM.</strong> Closed Saturday and Sunday. If you have a plumbing issue during the week, call <a href="tel:+19038157900">(903) 815-7900</a> and you'll reach the shop directly.</p></div>
+      </div>
+      <div class="faq reveal">
+        <button class="faq-q">Where are you located? <span class="plus">+</span></button>
+        <div class="faq-a"><p><strong>7679 Co Rd 531, Anna, TX 75409.</strong> The shop serves Anna, Sherman, Grayson County, Northern Collin County and surrounding areas.</p></div>
+      </div>
+      <div class="faq reveal">
+        <button class="faq-q">How do I get a quote or schedule work? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Call <a href="tel:+19038157900">(903) 815-7900</a> during business hours. There's no online form — one call puts you straight through to the plumbing shop.</p></div>
+      </div>
+      <div class="faq reveal">
+        <button class="faq-q">How long have you been in business? <span class="plus">+</span></button>
+        <div class="faq-a"><p>BuildZoom's permit record for Griffin Plumbing goes back to <strong>2003</strong> — 148 permitted projects across roughly 23 years of permit activity.</p></div>
+      </div>
+      <div class="faq reveal">
+        <button class="faq-q">Who will actually show up at my house? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Reviewers name the people: <strong>Mark</strong> has done repeat work for Anna homeowners, and <strong>Tanner and his crew</strong> get called out for attitude and attention to detail. It's a small, locally owned shop — not a call center.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <div class="sec-tag" style="color:var(--orange)">Get in touch</div>
+      <h2 class="sec-title">One number.<br>One real plumber.</h2>
+      <div class="contact-info">
+        <a class="info-row" href="tel:+19038157900">
+          <span class="info-ico">📞</span>
+          <span><b>Call the shop</b><span class="v">(903) 815-7900</span></span>
+        </a>
+        <div class="info-row">
+          <span class="info-ico">📍</span>
+          <span><b>Shop address</b><span class="v">7679 Co Rd 531, Anna, TX 75409</span></span>
+        </div>
+        <div class="info-row">
+          <span class="info-ico">🕗</span>
+          <span style="width:100%"><b>Hours</b>
+            <table class="hours-table">
+              <tr><td>Monday – Friday</td><td>8:00 AM – 5:00 PM</td></tr>
+              <tr><td>Saturday</td><td class="closed">Closed</td></tr>
+              <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+            </table>
+          </span>
+        </div>
+        <div class="info-row">
+          <span class="info-ico">🛡️</span>
+          <span><b>License</b><span class="v">TX Master Plumber #36176</span></span>
+        </div>
+      </div>
+    </div>
+    <aside class="contact-card reveal reveal-d1">
+      <h3>Plumbing problem?</h3>
+      <p>Skip the directories. Call the shop directly — you'll talk to a licensed master plumber's team, not a dispatch center.</p>
+      <a class="btn-big btn-call" href="tel:+19038157900">📞 (903) 815-7900</a>
+      <small>MON–FRI 8 AM–5 PM · ANNA, TX · LIC #36176</small>
+    </aside>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>GRIFFIN PLUMBING · 7679 CO RD 531, ANNA, TX 75409 · (903) 815-7900 · TX MASTER PLUMBER #36176</span>
+    <span>DEMO PREVIEW — NOT A LIVE BUSINESS SITE</span>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:+19038157900"><small>TAP TO CALL</small>📞 (903) 815-7900</a>
+
+<script>
+// ---- burger ----
+const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+// ---- animated counters ----
+function animateCounter(el){
+  const target=parseFloat(el.dataset.target),dec=parseInt(el.dataset.decimals||'0');
+  const dur=1600,start=performance.now();
+  function tick(t){
+    const p=Math.min((t-start)/dur,1),e=1-Math.pow(1-p,3),v=target*e;
+    el.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString();
+    if(p<1)requestAnimationFrame(tick);else el.textContent=dec?target.toFixed(dec):target.toLocaleString();
+  }
+  requestAnimationFrame(tick);
+}
+const counterObs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);counterObs.unobserve(e.target);}});
+},{threshold:.5});
+document.querySelectorAll('.counter').forEach(c=>counterObs.observe(c));
+
+// ---- scroll reveal ----
+const revObs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revObs.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(r=>revObs.observe(r));
+
+// ---- tabs ----
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ---- testimonial slider ----
+const slides=document.querySelectorAll('.slide'),dotsBox=document.getElementById('slideDots');
+let cur=0,timer;
+slides.forEach((_,i)=>{
+  const d=document.createElement('span');
+  d.className='slide-dot'+(i===0?' active':'');
+  d.addEventListener('click',()=>go(i));
+  dotsBox.appendChild(d);
+});
+function go(i){
+  slides[cur].classList.remove('active');
+  dotsBox.children[cur].classList.remove('active');
+  cur=(i+slides.length)%slides.length;
+  slides[cur].classList.add('active');
+  dotsBox.children[cur].classList.add('active');
+  restart();
+}
+function restart(){clearInterval(timer);timer=setInterval(()=>go(cur+1),7000);}
+document.getElementById('prevSlide').addEventListener('click',()=>go(cur-1));
+document.getElementById('nextSlide').addEventListener('click',()=>go(cur+1));
+restart();
+
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq').forEach(f=>{
+  const q=f.querySelector('.faq-q'),a=f.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open=f.classList.contains('open');
+    document.querySelectorAll('.faq.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){f.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+</script>
+</body>
+</html>
