@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exodus Mechanical Heat &amp; Air Conditioning | Melissa, TX</title>
+<meta name="description" content="Demo preview — a family-owned heating and air conditioning shop in Melissa, TX. Father-and-son HVAC since 1986.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF5EB;
+    --cream-2:#F3EAD9;
+    --ink:#22301F;
+    --forest:#1E3A2A;
+    --forest-2:#14301F;
+    --orange:#C65D21;
+    --orange-2:#E07B2D;
+    --gold:#C99B3F;
+    --line:#E3D6BE;
+    --muted:#5C665A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;line-height:1.12}
+  img{max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Demo badge ---------- */
+  .demo-badge{position:fixed;top:14px;right:14px;z-index:2000;background:var(--orange);color:#fff;
+    font-size:11px;font-weight:700;letter-spacing:.14em;padding:8px 14px;border-radius:999px;
+    box-shadow:0 6px 18px rgba(198,93,33,.35);text-transform:uppercase}
+
+  /* ---------- Sticky nav ---------- */
+  nav{position:sticky;top:0;z-index:1000;background:rgba(250,245,235,.94);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand-mark{width:42px;height:42px;border-radius:50%;background:var(--forest);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:20px}
+  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:19px;line-height:1.1}
+  .brand-name small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:10px;letter-spacing:.22em;color:var(--orange);text-transform:uppercase}
+  .nav-links{display:flex;gap:26px;list-style:none;font-size:14px;font-weight:600}
+  .nav-links a{text-decoration:none;color:var(--ink);opacity:.85}
+  .nav-links a:hover{color:var(--orange)}
+  .nav-call{background:var(--forest);color:var(--cream);text-decoration:none;font-weight:700;font-size:14px;
+    padding:11px 20px;border-radius:999px;transition:transform .2s,background .2s;white-space:nowrap}
+  .nav-call:hover{background:var(--orange);transform:translateY(-1px)}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;background:var(--cream)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:84px 24px 96px}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding:56px 24px 64px}}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--orange)}
+  .hero h1{font-size:clamp(40px,5.4vw,66px);font-weight:600;letter-spacing:-.01em;margin-bottom:20px}
+  .hero h1 em{font-style:italic;color:var(--forest)}
+  .hero p.lede{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+  .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;padding:15px 28px;border-radius:999px;font-size:16px;transition:transform .2s,box-shadow .2s}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(198,93,33,.3)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(198,93,33,.4)}
+  .btn-ghost{border:2px solid var(--forest);color:var(--forest)}
+  .btn-ghost:hover{background:var(--forest);color:var(--cream)}
+  .hero-proof{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+  .hero-proof strong{color:var(--ink)}
+  .hero-art{position:relative;min-height:420px}
+  .sun{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .sun svg{width:min(420px,100%);height:auto}
+  .card-float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:16px;
+    padding:16px 18px;box-shadow:0 18px 40px rgba(30,58,42,.14);max-width:250px}
+  .card-float .stars{color:var(--gold);letter-spacing:2px;font-size:13px}
+  .card-float p{font-size:13px;line-height:1.5;color:var(--ink);margin-top:6px}
+  .card-float cite{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:6px;font-weight:600}
+  .cf1{top:6%;left:0;animation:float 7s ease-in-out infinite}
+  .cf2{bottom:8%;right:2%;animation:float 8s ease-in-out infinite reverse}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .hero-waves{position:absolute;bottom:-1px;left:0;width:100%;height:70px;display:block}
+
+  /* ---------- Award band ---------- */
+  .award-band{background:var(--forest);color:var(--cream);padding:34px 0}
+  .award-inner{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;text-align:center}
+  .award-seal{width:104px;height:104px;border-radius:50%;border:3px solid var(--gold);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;font-family:'Fraunces',serif;flex:none;position:relative;background:var(--forest-2)}
+  .award-seal::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1px dashed rgba(201,155,63,.6)}
+  .award-seal .yr{font-size:20px;font-weight:700;color:var(--gold)}
+  .award-seal .lbl{font-size:9px;letter-spacing:.18em;text-transform:uppercase;line-height:1.4;padding:0 8px}
+  .award-text{max-width:640px}
+  .award-text h2{font-size:clamp(22px,3vw,30px);font-weight:600}
+  .award-text p{opacity:.8;font-size:15px;margin-top:6px}
+
+  /* ---------- Sections ---------- */
+  section{padding:84px 0}
+  .sec-head{max-width:680px;margin-bottom:48px}
+  .sec-head h2{font-size:clamp(30px,4vw,44px);font-weight:600;margin-bottom:14px;letter-spacing:-.01em}
+  .sec-head p{color:var(--muted);font-size:17px}
+
+  /* ---------- Stats ---------- */
+  .stats{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:56px 24px;text-align:center}
+  @media(max-width:640px){.stats .wrap{grid-template-columns:1fr;gap:32px}}
+  .stat .num{font-family:'Fraunces',serif;font-size:clamp(46px,5vw,64px);font-weight:700;color:var(--forest)}
+  .stat .num .sfx{color:var(--orange)}
+  .stat .lbl{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+  /* ---------- Timeline ---------- */
+  .story{background:var(--cream)}
+  .timeline{position:relative;max-width:760px;margin:0 auto;padding-left:8px}
+  .timeline::before{content:"";position:absolute;left:23px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--orange),var(--gold),var(--forest));border-radius:3px}
+  .t-item{position:relative;padding:0 0 44px 64px}
+  .t-item:last-child{padding-bottom:0}
+  .t-dot{position:absolute;left:8px;top:2px;width:34px;height:34px;border-radius:50%;background:var(--cream);border:3px solid var(--orange);
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:14px;color:var(--orange)}
+  .t-item:nth-child(even) .t-dot{border-color:var(--forest);color:var(--forest)}
+  .t-year{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+  .t-item h3{font-size:24px;font-weight:600;margin:6px 0 8px}
+  .t-item p{color:var(--muted);font-size:16px;max-width:600px}
+  .t-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:12px;
+    box-shadow:0 10px 26px rgba(30,58,42,.08);transition:transform .25s,box-shadow .25s}
+  .t-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(30,58,42,.14)}
+
+  /* ---------- Services tabs ---------- */
+  .services{background:var(--forest);color:var(--cream)}
+  .services .sec-head p{color:rgba(250,245,235,.75)}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+  .tab-btn{background:transparent;border:1px solid rgba(250,245,235,.35);color:var(--cream);font-weight:600;font-size:14px;
+    padding:12px 20px;border-radius:999px;cursor:pointer;transition:all .2s}
+  .tab-btn:hover{border-color:var(--gold)}
+  .tab-btn.active{background:var(--orange);border-color:var(--orange);color:#fff}
+  .tab-panel{display:none;background:rgba(250,245,235,.06);border:1px solid rgba(250,245,235,.16);border-radius:20px;padding:36px}
+  .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  @media(max-width:760px){.tab-panel.active{grid-template-columns:1fr}}
+  .tab-panel h3{font-size:28px;margin-bottom:12px}
+  .tab-panel p{opacity:.85;font-size:16px}
+  .tab-panel ul{list-style:none;margin-top:16px}
+  .tab-panel li{padding:8px 0 8px 30px;position:relative;font-size:15px;opacity:.9}
+  .tab-panel li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+  .tab-cta{margin-top:20px}
+  .svc-icon{width:120px;height:120px;border-radius:24px;background:rgba(224,123,45,.16);border:1px solid rgba(224,123,45,.4);
+    display:flex;align-items:center;justify-content:center}
+  .svc-icon svg{width:64px;height:64px;stroke:var(--orange-2);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- Community ---------- */
+  .community .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  @media(max-width:860px){.community .wrap{grid-template-columns:1fr}}
+  .community h2{font-size:clamp(30px,4vw,42px);margin-bottom:16px}
+  .community p{color:var(--muted);margin-bottom:14px;font-size:16px}
+  .com-cards{display:grid;gap:16px}
+  .com-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;gap:18px;align-items:flex-start;
+    transition:transform .25s,box-shadow .25s}
+  .com-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(30,58,42,.12)}
+  .com-ico{width:52px;height:52px;flex:none;border-radius:14px;background:var(--forest);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;font-size:24px}
+  .com-card h3{font-size:19px;margin-bottom:4px}
+  .com-card p{font-size:14px;margin:0}
+
+  /* ---------- Reviews ---------- */
+  .reviews{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+  .slider{position:relative;max-width:820px;margin:0 auto}
+  .slides{position:relative;min-height:340px}
+  .slide{position:absolute;inset:0;opacity:0;transform:translateX(40px);transition:opacity .5s,transform .5s;pointer-events:none;
+    background:#fff;border:1px solid var(--line);border-radius:22px;padding:44px;display:flex;flex-direction:column;justify-content:center}
+  .slide.active{opacity:1;transform:none;pointer-events:auto;box-shadow:0 20px 50px rgba(30,58,42,.1)}
+  @media(max-width:640px){.slide{padding:32px 26px}.slides{min-height:430px}}
+  .qmark{font-family:'Fraunces',serif;font-size:64px;line-height:1;color:var(--orange);margin-bottom:10px}
+  .slide blockquote{font-family:'Fraunces',serif;font-size:clamp(18px,2.4vw,23px);line-height:1.5;font-weight:400}
+  .slide cite{display:block;font-style:normal;margin-top:18px;font-size:14px;font-weight:700}
+  .slide cite span{display:block;font-weight:400;color:var(--muted);font-size:13px}
+  .slider-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:26px}
+  .s-btn{width:48px;height:48px;border-radius:50%;border:2px solid var(--forest);background:transparent;color:var(--forest);
+    font-size:20px;cursor:pointer;transition:all .2s;line-height:1}
+  .s-btn:hover{background:var(--forest);color:var(--cream)}
+  .dots{display:flex;gap:8px}
+  .dot{width:10px;height:10px;border-radius:50%;background:#cfc2a8;cursor:pointer;transition:all .2s}
+  .dot.active{background:var(--orange);transform:scale(1.3)}
+  .review-note{text-align:center;margin-top:26px;font-size:13px;color:var(--muted)}
+
+  /* ---------- Service area ---------- */
+  .area-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:8px}
+  .town{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 10px;text-align:center;font-size:14px;font-weight:600;
+    transition:all .2s}
+  .town:hover{background:var(--forest);color:var(--cream);border-color:var(--forest);transform:translateY(-3px)}
+  .town.home{background:var(--orange);border-color:var(--orange);color:#fff}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--cream-2);border-top:1px solid var(--line)}
+  .faq-list{max-width:760px;margin:0 auto}
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  .faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-size:17px;font-weight:600;
+    font-family:'Inter',sans-serif;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink)}
+  .faq-q .plus{font-size:24px;color:var(--orange);font-weight:400;flex:none;transition:transform .3s}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a p{padding:0 24px 22px;color:var(--muted);font-size:15px}
+  .faq-a a{color:var(--orange);font-weight:700;text-decoration:none}
+
+  /* ---------- Contact / footer ---------- */
+  footer{background:var(--forest-2);color:var(--cream);padding:72px 0 110px}
+  .foot-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;margin-bottom:48px}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+  footer h2{font-size:clamp(30px,4vw,42px);margin-bottom:14px}
+  footer .sub{opacity:.75;margin-bottom:26px;font-size:16px}
+  .nap{background:rgba(250,245,235,.06);border:1px solid rgba(250,245,235,.16);border-radius:20px;padding:32px}
+  .nap-row{display:flex;gap:14px;margin-bottom:18px;font-size:16px;align-items:flex-start}
+  .nap-row .ico{font-size:20px;flex:none}
+  .nap-row a{color:var(--cream);font-weight:700;text-decoration:none}
+  .nap-row a:hover{color:var(--gold)}
+  .nap-row small{display:block;opacity:.6;font-size:13px}
+  .license-note{font-size:12px;opacity:.55;margin-top:6px}
+  .foot-bottom{border-top:1px solid rgba(250,245,235,.16);padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;opacity:.6}
+
+  /* ---------- Sticky mobile call ---------- */
+  .sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--orange);color:#fff;
+    text-align:center;font-weight:700;font-size:17px;padding:16px;text-decoration:none;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+  @media(max-width:760px){.sticky-call{display:block}footer{padding-bottom:160px}}
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo Preview</div>
+
+<!-- Sticky nav -->
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">E</span>
+      <span class="brand-name">Exodus Mechanical<small>Heat &amp; Air Conditioning</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Service Area</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-call" href="tel:+14695007977">Call (469) 500-7977</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Melissa, Texas — Family Owned</span>
+      <h1>A father&#8209;and&#8209;son <em>HVAC shop</em> Melissa raised.</h1>
+      <p class="lede">Brian has kept North Texas comfortable since 1986. Now his son Brayzon — EPA certified and trained through the Melissa High School HVAC program — is carrying the family trade forward. That's the Exodus way: neighbors serving neighbors.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+14695007977">📞 Call (469) 500-7977</a>
+        <a class="btn btn-ghost" href="#story">Meet the Family</a>
+      </div>
+      <div class="hero-proof">
+        <span><strong>Since 1986</strong> in the trade</span>
+        <span><strong>42</strong> customer reviews</span>
+        <span><strong>10 years</strong> in Melissa</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="sun">
+        <svg viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="sunGrad" cx="50%" cy="42%" r="65%">
+              <stop offset="0%" stop-color="#F2A541"/><stop offset="55%" stop-color="#E07B2D"/><stop offset="100%" stop-color="#C65D21"/>
+            </radialGradient>
+          </defs>
+          <circle cx="200" cy="180" r="120" fill="url(#sunGrad)" opacity="0.9"/>
+          <g stroke="#E07B2D" stroke-width="6" stroke-linecap="round" opacity="0.55">
+            <line x1="200" y1="14" x2="200" y2="44"/><line x1="200" y1="316" x2="200" y2="346"/>
+            <line x1="34" y1="180" x2="64" y2="180"/><line x1="336" y1="180" x2="366" y2="180"/>
+            <line x1="82" y1="62" x2="104" y2="84"/><line x1="296" y1="276" x2="318" y2="298"/>
+            <line x1="318" y1="62" x2="296" y2="84"/><line x1="104" y1="276" x2="82" y2="298"/>
+          </g>
+          <path d="M60 340 Q 130 300, 200 330 T 340 330" stroke="#1E3A2A" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M90 368 Q 160 336, 230 362 T 360 358" stroke="#C65D21" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <g fill="#1E3A2A" opacity="0.85">
+            <rect x="150" y="250" width="100" height="60" rx="8"/>
+            <polygon points="140,252 260,252 200,214"/>
+            <rect x="188" y="278" width="24" height="32" fill="#FAF5EB"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card-float cf1">
+        <div class="stars">★★★★★</div>
+        <p>"Your team is kind and respectful too. Thank you Exodus! We are blessed to have you in business!"</p>
+        <cite>— The Voelkel Family, McKinney</cite>
+      </div>
+      <div class="card-float cf2">
+        <div class="stars">★★★★★</div>
+        <p>"Tanner showed up on time… Very professional. I would definitely refer to my friends and family."</p>
+        <cite>— Kynne, Farmersville</cite>
+      </div>
+    </div>
+  </div>
+  <svg class="hero-waves" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,70 L0,70 Z" fill="#1E3A2A"/>
+  </svg>
+</header>
+
+<!-- Award band -->
+<div class="award-band">
+  <div class="wrap award-inner reveal">
+    <div class="award-seal"><span class="yr">2025</span><span class="lbl">Readers' Choice Award</span></div>
+    <div class="award-text">
+      <h2>Voted a 2025 Readers' Choice Award winner</h2>
+      <p>Our neighbors chose us — and after 10 years in Melissa, we're just getting started.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="num"><span class="count" data-target="40">0</span><span class="sfx">+</span></div><div class="lbl">Years in the trade (since 1986)</div></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-target="13">0</span></div><div class="lbl">Team members strong</div></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-target="42">0</span></div><div class="lbl">Customer reviews &amp; counting</div></div>
+  </div>
+</div>
+
+<!-- Story timeline -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2>From one man's toolbox to a family legacy</h2>
+      <p>Exodus Mechanical didn't start in a boardroom. It started with Brian's late father — an electrician — and a kid who watched, learned, and never stopped working.</p>
+    </div>
+    <div class="timeline">
+      <div class="t-item reveal">
+        <span class="t-dot">’86</span>
+        <div class="t-year">1986</div>
+        <h3>Learning the trade</h3>
+        <p>Brian enters the HVAC trade, learning the craft from his late father, an electrician — hands-on, honest work from day one.</p>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-dot">’92</span>
+        <div class="t-year">1992</div>
+        <h3>Licensed &amp; proven</h3>
+        <p>Brian earns his HVAC license and spends the years mastering heating and cooling across North Texas homes and businesses.</p>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-dot">’16</span>
+        <div class="t-year">~2016</div>
+        <h3>Exodus is born in Melissa</h3>
+        <div class="t-card">
+          <p>Brian starts Exodus Mechanical as a one-man operation right here in Melissa — built on integrity, fair prices, and showing up when he says he will.</p>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-dot">Now</span>
+        <div class="t-year">Today</div>
+        <h3>The next generation steps in</h3>
+        <div class="t-card">
+          <p>Youngest son <strong>Brayzon</strong> — EPA certified, a Texas Registered HVAC Technician, trained through the Melissa High School HVAC program — is being prepared in all aspects of the business to one day take it over. Wife <strong>Kristi</strong> keeps the family business running strong. All five kids graduated from Melissa schools.</p>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-dot">’26</span>
+        <div class="t-year">2026</div>
+        <h3>Celebrating 10 years in Melissa</h3>
+        <p>A decade of keeping our neighbors cool in August and warm in January — and a team of about 13 who treat your home like their own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="color:var(--gold)">What We Do</span>
+      <h2 style="color:var(--cream)">Heating &amp; air, done the family way</h2>
+      <p>Repairs, replacements, and tune-ups for North Texas homes — with Trane equipment and straight answers.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab-btn active" data-tab="t-ac" role="tab">Air Conditioning</button>
+      <button class="tab-btn" data-tab="t-heat" role="tab">Heating &amp; Furnaces</button>
+      <button class="tab-btn" data-tab="t-install" role="tab">New Systems</button>
+      <button class="tab-btn" data-tab="t-tune" role="tab">Inspections &amp; Tune-Ups</button>
+    </div>
+    <div class="tab-panel active reveal" id="t-ac">
+      <div>
+        <h3>Air conditioning repair &amp; service</h3>
+        <p>When the Texas heat hits, you need it fixed right — and fixed fast. We diagnose the real problem, explain it in plain English, and charge a fair price. That's why customers say we're "reasonable with service prices" and explain "in detail what the problem is and the solution."</p>
+        <ul>
+          <li>A/C repair &amp; troubleshooting</li>
+          <li>Prompt service you can count on</li>
+          <li>Kind, respectful technicians</li>
+        </ul>
+        <div class="tab-cta"><a class="btn btn-primary" href="tel:+14695007977">📞 Call (469) 500-7977</a></div>
+      </div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2v20M4 6l16 12M20 6L4 18M12 2l-2 3m2-3l2 3M12 22l-2-3m2 3l2-3M4 6l3.5.8M4 6L4.8 9.5M20 18l-3.5-.8m3.5.8l-.8-3.5M20 6l-3.5.8M20 6l-.8 3.5M4 18l3.5-.8M4 18l.8-3.5"/></svg>
+      </div>
+    </div>
+    <div class="tab-panel" id="t-heat">
+      <div>
+        <h3>Heating &amp; furnace service</h3>
+        <p>North Texas winters are short but sharp. We keep gas furnaces and heating systems running safely and efficiently — from seasonal checkups to full repairs — so your family stays warm without the worry.</p>
+        <ul>
+          <li>Furnace repair &amp; maintenance</li>
+          <li>Heat system inspections</li>
+          <li>Energy-efficient heating options</li>
+        </ul>
+        <div class="tab-cta"><a class="btn btn-primary" href="tel:+14695007977">📞 Call (469) 500-7977</a></div>
+      </div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2c1 4-3 5-3 9a5 5 0 0010 0c0-2-1-3.5-2-5-.5 1.5-1.5 2-2.5 2C15 6 13 4 12 2z"/><path d="M9 22h6"/></svg>
+      </div>
+    </div>
+    <div class="tab-panel" id="t-install">
+      <div>
+        <h3>New system installations</h3>
+        <p>When it's time for a new system, we install quality Trane equipment sized right for your home — no overselling, no pressure. Brian's 40 years in the trade means your new system is engineered for comfort and built to last.</p>
+        <ul>
+          <li>Trane equipment installations</li>
+          <li>Right-sized for your home</li>
+          <li>Whole-house air filtration options</li>
+        </ul>
+        <div class="tab-cta"><a class="btn btn-primary" href="tel:+14695007977">📞 Call (469) 500-7977</a></div>
+      </div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M4 9h5M4 15h5"/><circle cx="16.5" cy="12" r="1.5"/></svg>
+      </div>
+    </div>
+    <div class="tab-panel" id="t-tune">
+      <div>
+        <h3>Inspections &amp; tune-ups</h3>
+        <p>A little maintenance goes a long way. Our technicians show up on time, inspect your heat and A/C thoroughly, and keep everything running at its best — professional service at a very reasonable price, just ask Kynne in Farmersville.</p>
+        <ul>
+          <li>Seasonal A/C &amp; heat inspections</li>
+          <li>On-time, professional technicians</li>
+          <li>Prevent breakdowns before they happen</li>
+        </ul>
+        <div class="tab-cta"><a class="btn btn-primary" href="tel:+14695007977">📞 Call (469) 500-7977</a></div>
+      </div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Community -->
+<section class="community" id="community">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Rooted Here</span>
+      <h2>Melissa isn't our market.<br>It's our <em class="serif" style="color:var(--forest)">home.</em></h2>
+      <p>Five kids through Melissa schools. A team that lives here. A business that shows up for the community that raised it — that's the part no template website can fake.</p>
+    </div>
+    <div class="com-cards">
+      <div class="com-card reveal">
+        <div class="com-ico">🏟️</div>
+        <div><h3>Cardinal Nation Day sponsor</h3><p>Proud sponsor of Cardinal Nation Day at Coach Kenny Deel Stadium — standing behind Melissa's students and athletes.</p></div>
+      </div>
+      <div class="com-card reveal">
+        <div class="com-ico">🎓</div>
+        <div><h3>Five kids, Melissa schools</h3><p>All five of Brian and Kristi's kids graduated from Melissa schools — including Brayzon, trained through the Melissa High School HVAC program.</p></div>
+      </div>
+      <div class="com-card reveal">
+        <div class="com-ico">🤝</div>
+        <div><h3>Melissa Chamber of Commerce</h3><p>A fully licensed and insured member of the Melissa business community, invested in the town's growth.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">Reviews</span>
+      <h2>What our neighbors say</h2>
+      <p>Based on 42 rated customer reviews on our site — real words from real North Texas families.</p>
+    </div>
+    <div class="slider reveal">
+      <div class="slides">
+        <div class="slide active">
+          <div class="qmark">“</div>
+          <blockquote>Thank you so much for your prompt service with our A/C. You have always been reasonable with your service prices and explain in detail what the problem is and the solution. Your team is kind and respectful too. Thank you Exodus! We are blessed to have you in business!</blockquote>
+          <cite>— The Voelkel Family<span>McKinney · June 2026</span></cite>
+        </div>
+        <div class="slide">
+          <div class="qmark">“</div>
+          <blockquote>Tanner showed up on time and took care of heat and AC inspection. Very professional. I would definitely refer to my friends and family. Price was very reasonable also.</blockquote>
+          <cite>— Kynne<span>Farmersville · March 2026</span></cite>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="s-btn" id="prevSlide" aria-label="Previous review">‹</button>
+        <div class="dots"><span class="dot active" data-i="0"></span><span class="dot" data-i="1"></span></div>
+        <button class="s-btn" id="nextSlide" aria-label="Next review">›</button>
+      </div>
+      <p class="review-note">Quotes from customer reviews on exodusmechanical.com · Also rated 4.0 (78 reviews) on PremierBuilders</p>
+    </div>
+  </div>
+</section>
+
+<!-- Service area -->
+<section id="areas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Service Area</span>
+      <h2>Proudly serving Melissa &amp; 22 surrounding towns</h2>
+      <p>From Allen to Whitewright — if you're in North Texas, chances are we're already your neighbors' HVAC company.</p>
+    </div>
+    <div class="area-grid reveal">
+      <div class="town home">Melissa ★</div>
+      <div class="town">Allen</div><div class="town">Anna</div><div class="town">Bells</div>
+      <div class="town">Blue Ridge</div><div class="town">Celina</div><div class="town">Denison</div>
+      <div class="town">Fairview</div><div class="town">Farmersville</div><div class="town">Frisco</div>
+      <div class="town">Howe</div><div class="town">Lavon</div><div class="town">Leonard</div>
+      <div class="town">Lowry Crossing</div><div class="town">Lucas</div><div class="town">McKinney</div>
+      <div class="town">Plano</div><div class="town">Princeton</div><div class="town">Prosper</div>
+      <div class="town">Sherman</div><div class="town">Trenton</div><div class="town">Van Alystane</div>
+      <div class="town">Whitewright</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">Good to Know</span>
+      <h2>Questions, answered straight</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Do you offer emergency service?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — call or text for emergency service at <a href="tel:+14695007977">(469) 500-7977</a>. When your A/C quits on a 100° day, you talk to a real person from a local family shop.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are your hours?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Monday–Friday, 8:00 AM–6:00 PM. For after-hours emergencies, call or text <a href="tel:+14695007977">(469) 500-7977</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What equipment do you install?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We install Trane equipment — including high-efficiency gas furnaces and whole-house air filtration systems — sized and installed right for your home.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are you licensed?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — TX License #TACLA13786E (as listed on our site). We're fully licensed and insured, and a member of the Melissa Chamber of Commerce.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Which towns do you serve?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Melissa and 22 surrounding North Texas towns — including Allen, Anna, Celina, Frisco, McKinney, Plano, Prosper, and Sherman. See the full list above.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact / footer -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--gold)">Get in Touch</span>
+        <h2>Talk to the family,<br>not a call center.</h2>
+        <p class="sub">Call or text — you'll reach folks who live in Melissa and know your street.</p>
+        <a class="btn btn-primary" href="tel:+14695007977" style="font-size:18px;padding:18px 34px">📞 (469) 500-7977</a>
+      </div>
+      <div class="nap reveal">
+        <div class="nap-row"><span class="ico">📞</span><div><a href="tel:+14695007977">(469) 500-7977</a><small>Call or text — including emergency service</small></div></div>
+        <div class="nap-row"><span class="ico">📍</span><div>PO Box 231, Melissa, TX 75454<small>Family-owned &amp; operated in Melissa</small></div></div>
+        <div class="nap-row"><span class="ico">🕗</span><div>Monday–Friday · 8:00 AM–6:00 PM<small>Emergency service: call or text anytime</small></div></div>
+        <p class="license-note">TX License #TACLA13786E (as listed on their site) · Melissa Chamber of Commerce member</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Exodus Mechanical Heat &amp; Air Conditioning — Demo preview</span>
+      <span>A NoFluff Marketing website concept · <a href="tel:+14695007977" style="color:var(--gold);font-weight:700">(469) 500-7977</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14695007977">📞 Tap to Call (469) 500-7977</a>
+
+<script>
+  // --- Scroll reveal ---
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // --- Animated counters ---
+  const cio = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.target, dur = 1400, t0 = performance.now();
+      const tick = (t)=>{ const p = Math.min((t-t0)/dur,1), ease = 1-Math.pow(1-p,3);
+        el.textContent = Math.round(target*ease);
+        if(p<1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+      cio.unobserve(el);
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+
+  // --- Service tabs ---
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(btn=>btn.addEventListener('click',()=>{
+    tabBtns.forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  }));
+
+  // --- Testimonial slider ---
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let cur = 0, timer;
+  function go(i){
+    cur = (i+slides.length)%slides.length;
+    slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
+    dots.forEach((d,k)=>d.classList.toggle('active',k===cur));
+  }
+  function auto(){ clearInterval(timer); timer = setInterval(()=>go(cur+1), 8000); }
+  document.getElementById('prevSlide').addEventListener('click',()=>{go(cur-1);auto();});
+  document.getElementById('nextSlide').addEventListener('click',()=>{go(cur+1);auto();});
+  dots.forEach(d=>d.addEventListener('click',()=>{go(+d.dataset.i);auto();}));
+  auto();
+
+  // --- FAQ accordion ---
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+    q.addEventListener('click',()=>{
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+      if(!open){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight+'px'; }
+    });
+  });
+</script>
+</body>
+</html>
