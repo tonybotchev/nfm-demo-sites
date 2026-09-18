@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joe Funk Electric · Frisco, TX — One Flat Price, Quoted First</title>
+<meta name="description" content="Joe Funk Electric, Frisco TX. Upfront flat-rate pricing — one price quoted before work starts. 4.8 across 254 reviews on HomeAdvisor. Call (469) 658-5522.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1E3A; --navy2:#0A1B33; --navy3:#0E2547;
+  --cyan:#46E6FF; --cyan-dim:rgba(70,230,255,.35);
+  --white:#F2F7FF; --muted:#8FA6C4;
+  --line:rgba(120,180,255,.18); --line2:rgba(120,180,255,.32);
+  --hot:#FF8A5C;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --disp:"Space Grotesk",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--disp); background:var(--navy); color:var(--white);
+  line-height:1.6; overflow-x:hidden;
+  background-image:
+    linear-gradient(rgba(120,190,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,190,255,.055) 1px, transparent 1px),
+    linear-gradient(rgba(120,190,255,.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,190,255,.11) 1px, transparent 1px);
+  background-size:8px 8px, 8px 8px, 40px 40px, 40px 40px;
+}
+::selection{background:var(--cyan);color:var(--navy2)}
+a{color:var(--cyan)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono)}
+.figtag{
+  display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:3px;
+  color:var(--cyan);border:1px solid var(--line2);padding:7px 14px;border-radius:2px;
+  background:rgba(70,230,255,.05);margin-bottom:20px;
+}
+h2{font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:700;line-height:1.12;letter-spacing:-.01em;margin-bottom:14px}
+h2 .cy{color:var(--cyan)}
+.sub{color:var(--muted);font-size:17px;max-width:660px}
+section{padding:104px 0;position:relative}
+
+/* ---------- demo badge ---------- */
+.demo-badge{
+  position:fixed;top:76px;right:14px;z-index:2000;
+  font-family:var(--mono);font-size:10px;letter-spacing:2.5px;font-weight:700;
+  color:var(--cyan);background:rgba(11,30,58,.92);border:1px solid var(--cyan-dim);
+  padding:9px 14px;border-radius:2px;backdrop-filter:blur(6px);
+}
+
+/* ---------- fixed title block (drawing plate, not a nav) ---------- */
+.titleblock{
+  position:fixed;top:0;left:0;right:0;z-index:1500;height:60px;
+  background:rgba(10,27,51,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line2);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 22px;font-family:var(--mono);
+}
+.tb-left{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:1.5px;color:var(--white)}
+.tb-bolt{width:30px;height:30px;border:1.5px solid var(--cyan);border-radius:2px;display:flex;align-items:center;justify-content:center}
+.tb-doc{font-size:10px;color:var(--muted);letter-spacing:2px}
+.tb-call{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:1px;
+  color:var(--navy2);background:var(--cyan);padding:10px 20px;border-radius:2px;
+  transition:transform .2s, box-shadow .2s;
+}
+.tb-call:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(70,230,255,.35)}
+
+/* ---------- HERO : full blueprint sheet ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;position:relative;overflow:hidden}
+#heroTraces{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-in{position:relative;z-index:2}
+.sheet-corner{
+  position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:2.5px;color:var(--muted);
+  z-index:2;opacity:.85;
+}
+.corner-tl{top:86px;left:22px}.corner-tr{top:86px;right:22px}
+.corner-bl{bottom:22px;left:22px}.corner-br{bottom:22px;right:22px}
+.hero h1{
+  font-size:clamp(2.9rem,7.2vw,5.6rem);font-weight:700;line-height:1.02;letter-spacing:-.02em;
+  margin:18px 0 22px;text-transform:uppercase;
+}
+.hero h1 .out{color:transparent;-webkit-text-stroke:1.5px var(--cyan)}
+.hero h1 .solid{color:var(--white)}
+.spec-line{
+  font-family:var(--mono);font-size:13px;letter-spacing:2px;color:var(--cyan);
+  border-left:3px solid var(--cyan);padding-left:16px;margin:6px 0 26px;line-height:2;
+}
+.cert-card{
+  display:inline-block;margin-top:34px;border:1px solid var(--line2);border-radius:3px;
+  background:rgba(14,37,71,.75);padding:22px 28px;position:relative;
+}
+.cert-card::before{
+  content:"CERTIFIED SPEC";position:absolute;top:-11px;left:22px;background:var(--navy);
+  padding:0 10px;font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--cyan);
+}
+.cert-row{display:flex;align-items:center;gap:18px}
+.cert-num{font-size:52px;font-weight:700;line-height:1}
+.cert-meta{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--muted);line-height:1.9}
+.cert-meta b{color:var(--white)}
+.cert-stars{display:flex;gap:5px;margin-top:8px}
+.hero-cta{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:2px;
+  font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:1.5px;text-decoration:none;
+  transition:transform .2s, box-shadow .2s;cursor:pointer;border:none;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--cyan);color:var(--navy2);box-shadow:0 12px 32px rgba(70,230,255,.28)}
+.btn-line{border:1.5px solid var(--line2);color:var(--white);background:rgba(70,230,255,.04)}
+.ruler{height:14px;margin-top:44px;opacity:.5;
+  background:repeating-linear-gradient(90deg, var(--line2) 0 1px, transparent 1px 40px);
+  -webkit-mask-image:linear-gradient(180deg,#000 0 6px,transparent 6px);
+          mask-image:linear-gradient(180deg,#000 0 6px,transparent 6px);
+}
+
+/* ---------- COMPARISON : circuit selector ---------- */
+.compare-shell{
+  border:1px solid var(--line2);border-radius:3px;background:rgba(10,27,51,.7);
+  max-width:940px;margin:40px auto 0;position:relative;overflow:hidden;
+}
+.compare-head{display:flex;justify-content:space-between;align-items:center;padding:18px 26px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:2.5px;color:var(--muted)}
+.circuit-switch{display:flex;background:var(--navy2);border:1px solid var(--line2);border-radius:3px;padding:5px;position:relative;max-width:520px;margin:30px auto 0}
+.circuit-switch button{
+  flex:1;padding:15px 10px;border:none;background:transparent;color:var(--muted);
+  font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:2px;cursor:pointer;
+  position:relative;z-index:2;transition:color .25s;
+}
+.circuit-switch button.active{color:var(--navy2)}
+.switch-pill{
+  position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:2px;
+  background:var(--cyan);transition:left .3s cubic-bezier(.6,0,.2,1.2);z-index:1;
+}
+.switch-pill.b{left:calc(50%)}
+.c-panel{display:none;padding:44px 40px 40px;animation:fadein .35s ease}
+.c-panel.active{display:block}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+.schem{
+  border:1px dashed var(--line2);border-radius:3px;padding:28px;margin-bottom:30px;
+  font-family:var(--mono);font-size:13px;letter-spacing:.5px;
+}
+.schem .row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dotted var(--line);color:var(--muted)}
+.schem .row:last-child{border-bottom:none}
+.schem .row .v{color:var(--white);text-align:right}
+.schem .row .q{color:var(--hot);font-weight:700}
+.stamp{
+  display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:2.5px;
+  padding:13px 28px;border-radius:2px;transform:rotate(-2deg);
+}
+.stamp.bad{color:var(--hot);border:2px solid var(--hot);background:rgba(255,138,92,.08)}
+.stamp.good{color:var(--cyan);border:2px solid var(--cyan);background:rgba(70,230,255,.08)}
+.c-copy{color:var(--muted);font-size:16px;max-width:600px;margin:0 auto 8px}
+
+/* ---------- TELEMETRY : animated counters ---------- */
+.telemetry{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(10,27,51,.55);padding:64px 0}
+.tele-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;text-align:center}
+.tele .n{font-size:56px;font-weight:700;color:var(--white);line-height:1;font-variant-numeric:tabular-nums}
+.tele .n .unit{color:var(--cyan);font-size:30px}
+.tele .l{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;color:var(--muted);margin-top:12px}
+.tele .tick{width:44px;height:2px;background:var(--cyan);margin:14px auto 0;opacity:.7}
+
+/* ---------- DIAGNOSTICS terminal ---------- */
+.diag-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;margin-top:38px}
+.chan{
+  display:flex;align-items:center;gap:16px;width:100%;text-align:left;cursor:pointer;
+  background:rgba(10,27,51,.7);border:1px solid var(--line2);border-radius:3px;
+  padding:20px 22px;color:var(--white);font-family:var(--disp);margin-bottom:14px;
+  transition:border-color .25s, transform .2s, background .25s;
+}
+.chan:hover{border-color:var(--cyan);transform:translateX(6px)}
+.chan.active{border-color:var(--cyan);background:rgba(70,230,255,.07);box-shadow:inset 4px 0 0 var(--cyan)}
+.chan .ch-no{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);display:block;margin-bottom:4px}
+.chan .ch-t{font-weight:600;font-size:16px}
+.chan.hot{border-color:rgba(255,138,92,.5)}
+.chan.hot.active{border-color:var(--hot);background:rgba(255,138,92,.07);box-shadow:inset 4px 0 0 var(--hot)}
+.chan svg{flex:0 0 40px}
+.terminal{
+  border:1px solid var(--line2);border-radius:3px;background:#081426;min-height:380px;
+  display:flex;flex-direction:column;overflow:hidden;
+}
+.term-bar{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted)}
+.term-dot{width:10px;height:10px;border-radius:50%}
+.term-body{padding:28px;font-family:var(--mono);font-size:15px;line-height:1.9;flex:1}
+.term-prompt{color:var(--cyan)}
+#termOut{color:var(--white);white-space:pre-wrap}
+#termOut::after{content:"▌";color:var(--cyan);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.term-cta{padding:0 28px 28px}
+.term-cta a{
+  display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;font-weight:700;
+  letter-spacing:1.5px;color:var(--navy2);background:var(--cyan);text-decoration:none;
+  padding:14px 26px;border-radius:2px;
+}
+
+/* ---------- FIELD REPORT : rating gauge ---------- */
+.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:44px}
+.gauge-box{border:1px solid var(--line2);border-radius:3px;background:rgba(10,27,51,.7);padding:40px 30px 30px;text-align:center;position:relative}
+.gauge-box::before{content:"FIG. 04 — RATING GAUGE";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--navy);padding:0 12px;font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--cyan);white-space:nowrap}
+#needle{transition:transform 1.6s cubic-bezier(.25,.8,.25,1);transform-origin:100px 100px}
+.big-stars{display:flex;gap:8px;justify-content:center;margin:22px 0 10px}
+.report-num{font-size:64px;font-weight:700;line-height:1}
+.report-cap{font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--muted);margin-top:14px;line-height:2}
+.report-cap b{color:var(--white)}
+
+/* ---------- WORK ORDER : quote form ---------- */
+.wo-shell{border:1px solid var(--line2);border-radius:3px;background:rgba(10,27,51,.7);margin-top:40px;display:grid;grid-template-columns:1fr 1.15fr;overflow:hidden}
+.wo-left{padding:48px 44px;border-right:1px solid var(--line)}
+.wo-row{display:flex;gap:16px;align-items:flex-start;margin:26px 0;font-size:16px}
+.wo-row .k{font-family:var(--mono);font-size:10px;letter-spacing:2.5px;color:var(--cyan);flex:0 0 74px;padding-top:5px}
+.wo-row a{color:var(--white);text-decoration:none;font-weight:600;border-bottom:1px solid var(--cyan-dim)}
+.wo-row .d{color:var(--muted);font-size:14px}
+form{padding:48px 44px}
+.f-line{margin-bottom:20px}
+.f-line label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:2.5px;color:var(--cyan);margin-bottom:9px}
+.f-line input,.f-line textarea{
+  width:100%;padding:15px 16px;border-radius:2px;border:1px solid var(--line2);
+  background:#081426;color:var(--white);font-family:var(--disp);font-size:15px;
+  transition:border-color .2s;
+}
+.f-line input:focus,.f-line textarea:focus{outline:none;border-color:var(--cyan)}
+.f-line textarea{resize:vertical;min-height:110px}
+.wo-note{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;color:var(--muted);margin-top:16px;line-height:1.9}
+.form-ok{padding:60px 44px;text-align:center}
+.form-ok .ok-big{font-size:26px;font-weight:700;margin-bottom:12px}
+.form-ok p{color:var(--muted)}
+
+/* ---------- REVISIONS : FAQ accordion ---------- */
+.rev-table{max-width:860px;margin:36px auto 0;border:1px solid var(--line2);border-radius:3px;overflow:hidden}
+.rev-item{border-bottom:1px solid var(--line)}
+.rev-item:last-child{border-bottom:none}
+.rev-q{
+  width:100%;text-align:left;background:rgba(10,27,51,.5);border:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:18px;
+  padding:24px 28px;color:var(--white);font-family:var(--disp);font-size:17px;font-weight:600;
+}
+.rev-q .rev-no{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--cyan);flex:0 0 64px}
+.rev-q .plus{font-family:var(--mono);font-size:24px;color:var(--cyan);transition:transform .25s;flex:0 0 auto}
+.rev-item.open .plus{transform:rotate(45deg)}
+.rev-a{max-height:0;overflow:hidden;transition:max-height .32s ease;background:#081426}
+.rev-a p{padding:6px 28px 28px 92px;color:var(--muted);font-size:15px;line-height:1.8}
+.rev-a a{color:var(--cyan)}
+
+/* ---------- FOOTER : title block ---------- */
+footer{border-top:1px solid var(--line2);background:var(--navy2);padding:44px 0 120px}
+.fb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);line-height:2.2}
+.fb-grid b{color:var(--white);display:block;font-size:12px;margin-bottom:6px}
+.fb-grid a{color:var(--cyan);text-decoration:none}
+.fb-ruler{height:14px;margin-top:34px;opacity:.5;
+  background:repeating-linear-gradient(90deg, var(--line2) 0 1px, transparent 1px 40px);
+  -webkit-mask-image:linear-gradient(0deg,#000 0 6px,transparent 6px);
+          mask-image:linear-gradient(0deg,#000 0 6px,transparent 6px);
+}
+
+/* ---------- sticky mobile call ---------- */
+.sticky-call{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;
+  background:var(--cyan);color:var(--navy2);text-align:center;padding:17px;
+  font-family:var(--mono);font-weight:700;font-size:15px;letter-spacing:1.5px;text-decoration:none;
+  border-top:2px solid var(--navy2);
+}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .diag-grid,.report-grid,.wo-shell{grid-template-columns:1fr}
+  .wo-left{border-right:none;border-bottom:1px solid var(--line)}
+  section{padding:72px 0}
+  .demo-badge{top:auto;bottom:70px}
+  .sticky-call{display:block}
+  body{padding-bottom:58px}
+  .rev-a p{padding-left:28px}
+  .tb-doc{display:none}
+  .c-panel{padding:32px 22px}
+  .terminal{min-height:340px}
+  .sheet-corner{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO PREVIEW · DWG JFE</div>
+
+<!-- fixed drawing title block -->
+<div class="titleblock">
+  <div class="tb-left">
+    <span class="tb-bolt">
+      <svg width="15" height="20" viewBox="0 0 15 20" fill="none"><path d="M8.5 1 L2 11 H7 L6 19 L13 8.5 H8.2 Z" stroke="#46E6FF" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </span>
+    JOE FUNK ELECTRIC
+    <span class="tb-doc">DWG. NO. JFE-260918 · FRISCO, TX</span>
+  </div>
+  <a class="tb-call" href="tel:+14696585522">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    (469) 658-5522
+  </a>
+</div>
+
+<!-- ================= SHEET 01 : HERO ================= -->
+<header class="hero" id="top">
+  <svg id="heroTraces" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#46E6FF" stroke-width="1.5" opacity=".22">
+      <path id="t1" class="trace" d="M-20 180 H420 L500 260 H760 L840 340 H1100 L1180 420 V700 H1460"/>
+      <path id="t2" class="trace" d="M-20 640 H260 L340 560 H640 L720 480 H980 L1060 400 V120 H1460"/>
+      <path id="t3" class="trace" d="M200 -20 V220 L280 300 H520 L600 380 H900"/>
+      <path id="t4" class="trace" d="M1240 -20 V160 L1160 240 H880 L800 320 V560"/>
+      <path id="t5" class="trace" d="M-20 420 H180 L260 500 H480"/>
+      <path id="t6" class="trace" d="M980 920 V720 L1060 640 H1340"/>
+    </g>
+    <g fill="#0B1E3A" stroke="#46E6FF" stroke-width="1.5" opacity=".9">
+      <circle class="node" cx="1100" cy="340" r="6"/><circle class="node" cx="480" cy="500" r="6"/>
+      <circle class="node" cx="900" cy="380" r="6"/><circle class="node" cx="800" cy="560" r="6"/>
+      <circle class="node" cx="1060" cy="640" r="6"/><circle class="node" cx="340" cy="560" r="6"/>
+    </g>
+    <g fill="#46E6FF" opacity=".9">
+      <circle r="3.5"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#t1"/></animateMotion></circle>
+      <circle r="3.5"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#t2"/></animateMotion></circle>
+      <circle r="3.5"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#t4"/></animateMotion></circle>
+    </g>
+  </svg>
+
+  <span class="sheet-corner corner-tl">SHEET 01 / POWER SPEC</span>
+  <span class="sheet-corner corner-tr">FIG. 01 — CIRCUIT PLAN</span>
+  <span class="sheet-corner corner-bl">GRID REF · FRISCO, TX</span>
+  <span class="sheet-corner corner-br">SCALE — NTS</span>
+
+  <div class="wrap hero-in">
+    <span class="figtag">FRISCO, TEXAS — ELECTRICIAN</span>
+    <h1>
+      <span class="out">One flat price.</span><br>
+      <span class="solid">Quoted first.</span><br>
+      <span class="out">Invoiced exact.</span>
+    </h1>
+    <div class="spec-line">
+      SPEC 01 — UPFRONT FLAT-RATE PRICING<br>
+      ONE PRICE QUOTED BEFORE WORK STARTS · YOU APPROVE IT FIRST · THAT'S THE INVOICE NUMBER
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="tel:+14696585522">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        CALL (469) 658-5522
+      </a>
+      <a class="btn btn-line" href="#diagnostics">RUN A DIAGNOSTIC ↓</a>
+    </div>
+    <div>
+      <div class="cert-card">
+        <div class="cert-row">
+          <div class="cert-num">4.8</div>
+          <div>
+            <div class="cert-stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            </div>
+            <div class="cert-meta"><b>4.8 OF 5</b> — ACROSS <b>254 REVIEWS</b><br>ON HOMEADVISOR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ruler"></div>
+  </div>
+</header>
+
+<!-- ================= FIG. 02 : CIRCUIT COMPARISON ================= -->
+<section id="compare">
+  <div class="wrap" style="text-align:center">
+    <span class="figtag reveal">FIG. 02 — CIRCUIT COMPARISON</span>
+    <h2 class="reveal">Two ways to wire the invoice.<br><span class="cy">Only one is drawn in your favor.</span></h2>
+    <p class="sub reveal" style="margin:0 auto">Flip the selector. Same job, two pricing circuits — see which one carries the risk.</p>
+
+    <div class="compare-shell reveal">
+      <div class="compare-head"><span>SPEC 02 · PRICING CIRCUITS</span><span>POS A / POS B</span></div>
+      <div style="padding:0 26px">
+        <div class="circuit-switch" id="circuitSwitch">
+          <div class="switch-pill" id="switchPill"></div>
+          <button class="active" data-pos="a">CIRCUIT A · HOURLY</button>
+          <button data-pos="b">CIRCUIT B · FLAT-RATE</button>
+        </div>
+      </div>
+
+      <div class="c-panel active" id="posA">
+        <div class="schem" style="text-align:left">
+          <div class="row"><span>LABOR RATE</span><span class="v">$/HR — METER RUNNING</span></div>
+          <div class="row"><span>TROUBLESHOOTING TIME</span><span class="v q">? HRS</span></div>
+          <div class="row"><span>PARTS RUNS</span><span class="v q">? HRS</span></div>
+          <div class="row"><span>FINAL TOTAL</span><span class="v q">UNKNOWN UNTIL INVOICE</span></div>
+        </div>
+        <p class="c-copy">The clock runs while they troubleshoot and drive for parts. You don't know the total until the invoice arrives — and the slower the work, the more you pay.</p>
+        <div class="stamp bad">PRICING RISK — CARRIED BY YOU</div>
+      </div>
+
+      <div class="c-panel" id="posB">
+        <div class="schem" style="text-align:left">
+          <div class="row"><span>SCOPE ASSESSED</span><span class="v">ON SITE, BEFORE WORK</span></div>
+          <div class="row"><span>PRICE QUOTED</span><span class="v" style="color:var(--cyan)">ONE FLAT NUMBER</span></div>
+          <div class="row"><span>CUSTOMER APPROVAL</span><span class="v" style="color:var(--cyan)">REQUIRED FIRST</span></div>
+          <div class="row"><span>INVOICE TOTAL</span><span class="v" style="color:var(--cyan)">= APPROVED NUMBER</span></div>
+        </div>
+        <p class="c-copy">Instead of billing by the hour, Joe quotes one flat price for the job before starting. You approve it first — that's the number on the invoice.</p>
+        <div class="stamp good">PRICING RISK — REMOVED</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SYSTEM TELEMETRY ================= -->
+<div class="telemetry">
+  <div class="wrap tele-grid">
+    <div class="tele reveal">
+      <div class="n"><span data-count="4.8" data-decimals="1">0</span><span class="unit">/5</span></div>
+      <div class="l">AVG RATING — HOMEADVISOR</div><div class="tick"></div>
+    </div>
+    <div class="tele reveal">
+      <div class="n"><span data-count="254">0</span></div>
+      <div class="l">REVIEWS — HOMEADVISOR</div><div class="tick"></div>
+    </div>
+    <div class="tele reveal">
+      <div class="n">1<span class="unit">×</span></div>
+      <div class="l">FLAT PRICE QUOTED BEFORE WORK STARTS</div><div class="tick"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FIG. 03 : DIAGNOSTIC TERMINAL ================= -->
+<section id="diagnostics">
+  <div class="wrap">
+    <span class="figtag reveal">FIG. 03 — DIAGNOSTIC TERMINAL</span>
+    <h2 class="reveal">Select the channel.<br><span class="cy">Read the diagnosis.</span></h2>
+    <p class="sub reveal">Tap what you're seeing at your place. Joe confirms it in person — with an upfront flat-rate quote before any work begins.</p>
+
+    <div class="diag-grid">
+      <div class="reveal">
+        <button class="chan active" data-ch="01" data-text="Lights flicker or dim when appliances kick on. That's often a loose connection or an overloaded circuit — both worth a professional look before they get worse.">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 4a9 9 0 0 0-5.2 16.3c1.2 1 2.2 2.3 2.2 3.7h6c0-1.4 1-2.7 2.2-3.7A9 9 0 0 0 20 4z" stroke="#46E6FF" stroke-width="2"/><path d="M17 28h6M18 32h4" stroke="#46E6FF" stroke-width="2" stroke-linecap="round"/></svg>
+          <span><span class="ch-no">CH-01</span><span class="ch-t">Flickering / dimming lights</span></span>
+        </button>
+        <button class="chan" data-ch="02" data-text="A breaker that keeps tripping is doing its job — protecting you. But the underlying cause (overload, short, or failing breaker) needs a licensed electrician to trace.">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="6" width="24" height="28" rx="3" stroke="#46E6FF" stroke-width="2"/><path d="M20 12v8M20 20l4 2" stroke="#46E6FF" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="27" r="2" fill="#46E6FF"/></svg>
+          <span><span class="ch-no">CH-02</span><span class="ch-t">Breaker keeps tripping</span></span>
+        </button>
+        <button class="chan" data-ch="03" data-text="Dead outlets are usually a tripped GFCI, a failed outlet, or a wiring break upstream. Quick to diagnose in person.">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="8" width="20" height="24" rx="3" stroke="#46E6FF" stroke-width="2"/><circle cx="17" cy="18" r="1.8" fill="#46E6FF"/><circle cx="23" cy="18" r="1.8" fill="#46E6FF"/><path d="M16 26h8" stroke="#46E6FF" stroke-width="2" stroke-linecap="round"/></svg>
+          <span><span class="ch-no">CH-03</span><span class="ch-t">Dead outlets</span></span>
+        </button>
+        <button class="chan hot" data-ch="04" data-text="Warm outlets or switch plates, or any burning smell, are the one thing you shouldn't wait on. Cut power to the circuit and call (469) 658-5522.">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 5l12 22H8z" stroke="#FF8A5C" stroke-width="2" stroke-linejoin="round"/><path d="M20 15v7M20 27v.5" stroke="#FF8A5C" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <span><span class="ch-no" style="color:var(--hot)">CH-04 · PRIORITY</span><span class="ch-t">Warm outlet / burning smell</span></span>
+        </button>
+      </div>
+
+      <div class="terminal reveal">
+        <div class="term-bar">
+          <span class="term-dot" style="background:#FF8A5C"></span>
+          <span class="term-dot" style="background:#46E6FF"></span>
+          <span class="term-dot" style="background:#8FA6C4"></span>
+          &nbsp;JFE://DIAGNOSTICS — READOUT <span id="termCh" style="color:var(--cyan)">CH-01</span>
+        </div>
+        <div class="term-body">
+          <div class="term-prompt">jfe@field:~$ run_diagnosis</div>
+          <div id="termOut"></div>
+        </div>
+        <div class="term-cta">
+          <a href="tel:+14696585522">CALL (469) 658-5522 — FLAT-RATE QUOTE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FIG. 04 : FIELD REPORT ================= -->
+<section id="report" style="padding-top:20px">
+  <div class="wrap">
+    <span class="figtag reveal">FIELD REPORT — CUSTOMER SIGNAL</span>
+    <h2 class="reveal">The needle holds at <span class="cy">4.8.</span></h2>
+    <p class="sub reveal">254 homeowners weighed in on HomeAdvisor. The reading hasn't moved.</p>
+
+    <div class="report-grid">
+      <div class="gauge-box reveal">
+        <svg viewBox="0 0 200 122" width="100%" style="max-width:340px;margin:0 auto;display:block" aria-hidden="true">
+          <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="rgba(120,180,255,.25)" stroke-width="10" stroke-linecap="round"/>
+          <path id="gaugeArc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#46E6FF" stroke-width="10" stroke-linecap="round" stroke-dasharray="251.4" stroke-dashoffset="251.4"/>
+          <g stroke="rgba(120,180,255,.5)" stroke-width="1.5">
+            <line x1="20" y1="100" x2="30" y2="100"/><line x1="180" y1="100" x2="170" y2="100"/>
+            <line x1="42" y1="45" x2="49" y2="52"/><line x1="158" y1="45" x2="151" y2="52"/>
+            <line x1="100" y1="20" x2="100" y2="30"/>
+          </g>
+          <g id="needle">
+            <line x1="100" y1="100" x2="100" y2="42" stroke="#F2F7FF" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="7" fill="#46E6FF"/>
+          </g>
+          <text x="20" y="118" fill="#8FA6C4" font-family="JetBrains Mono" font-size="9" text-anchor="middle">0</text>
+          <text x="180" y="118" fill="#8FA6C4" font-family="JetBrains Mono" font-size="9" text-anchor="middle">5</text>
+        </svg>
+        <div class="report-cap" style="margin-top:6px">LIVE READING · <b>HOMEADVISOR RATING</b></div>
+      </div>
+      <div class="reveal">
+        <div class="report-num">4.8</div>
+        <div class="big-stars" style="justify-content:flex-start">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#46E6FF"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <p class="sub"><b style="color:var(--white)">4.8 out of 5</b> across <b style="color:var(--white)">254 reviews</b> on HomeAdvisor. On the finished site, your real reviews stream in here — front and center, where they belong.</p>
+        <div style="margin-top:26px">
+          <a class="btn btn-solid" href="tel:+14696585522">CALL (469) 658-5522</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FIG. 05 : WORK ORDER ================= -->
+<section id="workorder" style="padding-top:20px">
+  <div class="wrap">
+    <span class="figtag reveal">FIG. 05 — WORK ORDER</span>
+    <h2 class="reveal">Open a work order.<br><span class="cy">Get the flat-rate price first.</span></h2>
+    <p class="sub reveal">One flat price, quoted before work starts. No hourly meter.</p>
+
+    <div class="wo-shell reveal">
+      <div class="wo-left">
+        <div class="mono" style="font-size:11px;letter-spacing:2.5px;color:var(--cyan);margin-bottom:8px">CHANNELS — DIRECT LINE</div>
+        <div class="wo-row">
+          <span class="k">TEL</span>
+          <div><a href="tel:+14696585522">(469) 658-5522</a><div class="d">Fastest — call for your flat-rate quote</div></div>
+        </div>
+        <div class="wo-row">
+          <span class="k">MAIL</span>
+          <div><a href="mailto:info@joefunkelectric.com">info@joefunkelectric.com</a><div class="d">Send photos of the problem if you like</div></div>
+        </div>
+        <div class="wo-row">
+          <span class="k">BASE</span>
+          <div>Frisco, TX<div class="d">Call to ask about your area</div></div>
+        </div>
+        <div class="wo-row">
+          <span class="k">RATING</span>
+          <div>4.8 / 5<div class="d">Across 254 reviews on HomeAdvisor</div></div>
+        </div>
+      </div>
+      <form id="quoteForm" novalidate>
+        <div class="f-line"><label for="fName">LINE 01 — YOUR NAME</label><input id="fName" type="text" placeholder="Full name" required></div>
+        <div class="f-line"><label for="fPhone">LINE 02 — PHONE</label><input id="fPhone" type="tel" placeholder="(469) 000-0000" required></div>
+        <div class="f-line"><label for="fEmail">LINE 03 — EMAIL</label><input id="fEmail" type="email" placeholder="you@email.com"></div>
+        <div class="f-line"><label for="fMsg">LINE 04 — WHAT'S GOING ON ELECTRICALLY?</label><textarea id="fMsg" placeholder="What's going on electrically?"></textarea></div>
+        <button class="btn btn-solid" type="submit" style="width:100%;justify-content:center">REQUEST A QUOTE</button>
+        <div class="wo-note">DEMO PREVIEW — NO DATA IS SENT.<br>ON THE LIVE SITE THIS OPENS A REAL WORK ORDER.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FIG. 06 : REVISIONS (FAQ) ================= -->
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="figtag reveal">FIG. 06 — REVISION TABLE</span>
+      <h2 class="reveal">Straight answers,<br><span class="cy">no revisions needed.</span></h2>
+    </div>
+    <div class="rev-table reveal">
+      <div class="rev-item">
+        <button class="rev-q"><span class="rev-no">REV A</span>How do I get a price?<span class="plus">+</span></button>
+        <div class="rev-a"><p>Call <a href="tel:+14696585522">(469) 658-5522</a> — you'll get an upfront flat-rate quote before any work begins.</p></div>
+      </div>
+      <div class="rev-item">
+        <button class="rev-q"><span class="rev-no">REV B</span>How does flat-rate pricing work?<span class="plus">+</span></button>
+        <div class="rev-a"><p>Instead of billing by the hour, Joe quotes one flat price for the job before starting. You approve it first — that's the number on the invoice.</p></div>
+      </div>
+      <div class="rev-item">
+        <button class="rev-q"><span class="rev-no">REV C</span>What do your reviews say?<span class="plus">+</span></button>
+        <div class="rev-a"><p>4.8 out of 5 across 254 reviews on HomeAdvisor.</p></div>
+      </div>
+      <div class="rev-item">
+        <button class="rev-q"><span class="rev-no">REV D</span>Where are you located?<span class="plus">+</span></button>
+        <div class="rev-a"><p>Joe Funk Electric is based in Frisco, TX — call <a href="tel:+14696585522">(469) 658-5522</a> to ask about your area.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TITLE BLOCK FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fb-grid">
+      <div><b>JOE FUNK ELECTRIC</b>Frisco, TX<br>Upfront flat-rate pricing</div>
+      <div><b>PHONE</b><a href="tel:+14696585522">(469) 658-5522</a></div>
+      <div><b>EMAIL</b><a href="mailto:info@joefunkelectric.com">info@joefunkelectric.com</a></div>
+      <div><b>RATING</b>4.8 of 5<br>254 reviews — HomeAdvisor</div>
+    </div>
+    <div class="fb-ruler"></div>
+    <div class="mono" style="margin-top:22px;font-size:10px;letter-spacing:2.5px;color:var(--muted);text-align:center">DWG. NO. JFE-260918 · DEMO PREVIEW · SHEET 01 OF 01</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14696585522">CALL (469) 658-5522</a>
+
+<script>
+(function(){
+  /* ---- 1. hero circuit traces draw themselves ---- */
+  var traces=document.querySelectorAll('.trace');
+  traces.forEach(function(p,i){
+    var len=p.getTotalLength();
+    p.style.strokeDasharray=len; p.style.strokeDashoffset=len;
+    p.getBoundingClientRect();
+    p.style.transition='stroke-dashoffset 1.8s ease '+(0.15+i*0.22)+'s';
+    requestAnimationFrame(function(){p.style.strokeDashoffset='0';});
+  });
+
+  /* ---- 2. circuit selector (flat-rate vs hourly) ---- */
+  var swBtns=document.querySelectorAll('#circuitSwitch button'),
+      pill=document.getElementById('switchPill');
+  swBtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      swBtns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      pill.classList.toggle('b', b.dataset.pos==='b');
+      document.getElementById('posA').classList.toggle('active', b.dataset.pos==='a');
+      document.getElementById('posB').classList.toggle('active', b.dataset.pos==='b');
+    });
+  });
+
+  /* ---- 3. diagnostic terminal typewriter ---- */
+  var chans=document.querySelectorAll('.chan'),
+      termOut=document.getElementById('termOut'),
+      termCh=document.getElementById('termCh'),
+      typeTimer=null;
+  function typeText(text){
+    if(typeTimer) clearInterval(typeTimer);
+    termOut.textContent=''; var i=0;
+    typeTimer=setInterval(function(){
+      termOut.textContent=text.slice(0,++i);
+      if(i>=text.length) clearInterval(typeTimer);
+    },14);
+  }
+  chans.forEach(function(c){
+    c.addEventListener('click',function(){
+      chans.forEach(function(x){x.classList.remove('active');});
+      c.classList.add('active');
+      termCh.textContent='CH-'+c.dataset.ch;
+      termCh.style.color = c.classList.contains('hot') ? '#FF8A5C' : '#46E6FF';
+      typeText(c.dataset.text);
+    });
+  });
+  typeText(chans[0].dataset.text); /* boot readout on load */
+
+  /* ---- 4. revision-table FAQ accordion ---- */
+  document.querySelectorAll('.rev-item').forEach(function(item){
+    var q=item.querySelector('.rev-q'), a=item.querySelector('.rev-a');
+    q.addEventListener('click',function(){
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.rev-item').forEach(function(x){
+        x.classList.remove('open'); x.querySelector('.rev-a').style.maxHeight=null;
+      });
+      if(!open){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
+    });
+  });
+
+  /* ---- 5. counters + reveal + gauge ---- */
+  function animCount(el){
+    var target=parseFloat(el.dataset.count),
+        dec=parseInt(el.dataset.decimals||'0',10),
+        dur=1500, st=performance.now();
+    function tick(n){
+      var p=Math.min((n-st)/dur,1), e=1-Math.pow(1-p,3), v=target*e;
+      el.textContent = dec ? v.toFixed(dec) : Math.round(v);
+      if(p<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var gauged=false;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.classList.add('in');
+      e.target.querySelectorAll('[data-count]').forEach(animCount);
+      if(e.target.querySelector('.tele-grid') && !gauged){
+        gauged=true;
+        setTimeout(function(){
+          document.getElementById('gaugeArc').style.transition='stroke-dashoffset 1.6s cubic-bezier(.25,.8,.25,1)';
+          document.getElementById('gaugeArc').style.strokeDashoffset=(251.4*(1-0.96)).toFixed(1);
+          document.getElementById('needle').style.transform='rotate(82.8deg)';
+        },250);
+      }
+      io.unobserve(e.target);
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  /* gauge arc also retrigger-safe if report section reveals independently */
+  var ioGauge=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !gauged){
+        gauged=true;
+        setTimeout(function(){
+          var arc=document.getElementById('gaugeArc');
+          arc.style.transition='stroke-dashoffset 1.6s cubic-bezier(.25,.8,.25,1)';
+          arc.style.strokeDashoffset=(251.4*(1-0.96)).toFixed(1);
+          document.getElementById('needle').style.transform='rotate(82.8deg)';
+        },250);
+        ioGauge.disconnect();
+      }
+    });
+  },{threshold:.3});
+  ioGauge.observe(document.getElementById('report'));
+
+  /* ---- 6. work order form (demo only) ---- */
+  document.getElementById('quoteForm').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var name=document.getElementById('fName'), phone=document.getElementById('fPhone'), ok=true;
+    [name,phone].forEach(function(f){
+      f.style.borderColor = f.value.trim() ? 'rgba(120,180,255,.2)' : '#FF8A5C';
+      if(!f.value.trim()) ok=false;
+    });
+    if(!ok) return;
+    var form=this;
+    form.innerHTML='<div class="form-ok"><div class="ok-big">Work order received.</div>'+
+      '<p>Thanks — we\'ll be in touch shortly.<br><span class="mono" style="font-size:11px;letter-spacing:2px">DEMO PREVIEW — NO DATA SENT</span></p></div>';
+  });
+})();
+</script>
+</body>
+</html>
