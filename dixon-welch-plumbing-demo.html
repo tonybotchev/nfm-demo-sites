@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dixon Welch Plumbing — Melissa's Hometown Plumber | Demo Preview</title>
+<meta name="description" content="Demo concept for Dixon Welch Plumbing, 1708 Cooper St, Melissa TX. Family-owned-and-run hometown plumber. Call (972) 562-4681.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e2233;
+    --navy-deep:#081625;
+    --navy-ink:#12293d;
+    --copper:#c47a35;
+    --copper-bright:#e0994f;
+    --amber:#e5b264;
+    --paper:#f6f0e3;
+    --paper-deep:#efe6d2;
+    --ink:#1d2c3b;
+    --muted:#5b6b7c;
+    --card:#fffdf8;
+    --line:rgba(14,34,51,.14);
+    --shadow:0 18px 45px -18px rgba(8,22,37,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Fraunces',Georgia,serif}
+  a{color:inherit}
+  img{max-width:100%}
+
+  /* ---------- Demo badge ---------- */
+  .demo-badge{
+    position:fixed;top:0;left:50%;transform:translateX(-50%);
+    z-index:200;background:var(--copper);color:#fff;
+    font-size:.72rem;font-weight:700;letter-spacing:.14em;
+    padding:.45rem 1.1rem;border-radius:0 0 12px 12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap;
+  }
+
+  /* ---------- Sticky nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(14,34,51,.96);backdrop-filter:blur(8px);
+    color:#f3ead7;border-bottom:2px solid var(--copper);
+  }
+  .nav-inner{
+    max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:1rem;
+    padding:.8rem 1.25rem;
+  }
+  .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;margin-right:auto}
+  .brand-mark{
+    width:42px;height:42px;flex:0 0 42px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,var(--copper-bright),var(--copper) 70%);
+    display:grid;place-items:center;box-shadow:0 4px 12px rgba(196,122,53,.5);
+  }
+  .brand-mark svg{width:24px;height:24px;stroke:#fffdf8}
+  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;line-height:1.15}
+  .brand-name small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.22em;color:var(--amber)}
+  .nav-links{display:none;gap:1.4rem;font-size:.85rem;font-weight:600;letter-spacing:.04em}
+  .nav-links a{text-decoration:none;opacity:.85;transition:opacity .2s}
+  .nav-links a:hover{opacity:1;color:var(--amber)}
+  .nav-call{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--copper);color:#fff;text-decoration:none;font-weight:700;font-size:.88rem;
+    padding:.65rem 1.15rem;border-radius:999px;transition:transform .2s, box-shadow .2s;
+    box-shadow:0 6px 16px rgba(196,122,53,.4);
+  }
+  .nav-call:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(196,122,53,.5)}
+  @media(min-width:860px){.nav-links{display:flex}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;color:#f6efdd;overflow:hidden;
+    background:
+      radial-gradient(900px 420px at 85% -10%, rgba(224,153,79,.28), transparent 60%),
+      radial-gradient(700px 500px at 8% 110%, rgba(196,122,53,.18), transparent 60%),
+      linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, #0b1e30 100%);
+  }
+  .hero::before{ /* blueprint grid */
+    content:"";position:absolute;inset:0;opacity:.10;
+    background-image:linear-gradient(rgba(229,178,100,.5) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(229,178,100,.5) 1px,transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+  .hero-inner{
+    position:relative;max-width:1140px;margin:0 auto;
+    padding:5.5rem 1.25rem 4.5rem;display:grid;gap:2.5rem;
+  }
+  @media(min-width:900px){.hero-inner{grid-template-columns:1.25fr .85fr;align-items:center;padding:7rem 1.25rem 6rem}}
+  .kicker{
+    display:inline-flex;align-items:center;gap:.6rem;
+    font-size:.72rem;font-weight:700;letter-spacing:.22em;color:var(--amber);
+    text-transform:uppercase;margin-bottom:1.1rem;
+  }
+  .kicker::before{content:"";width:34px;height:2px;background:var(--copper-bright)}
+  .hero h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2.5rem,6vw,4.3rem);line-height:1.04;letter-spacing:-.01em;
+    margin-bottom:1.2rem;
+  }
+  .hero h1 em{font-style:italic;color:var(--amber)}
+  .hero p.lede{font-size:1.08rem;opacity:.88;max-width:34rem;margin-bottom:2rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2.2rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;
+    padding:.95rem 1.7rem;border-radius:999px;transition:transform .2s, box-shadow .2s;font-size:1rem;
+  }
+  .btn-copper{background:linear-gradient(180deg,var(--copper-bright),var(--copper));color:#fff;box-shadow:0 10px 26px rgba(196,122,53,.45)}
+  .btn-copper:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(196,122,53,.55)}
+  .btn-ghost{border:1.5px solid rgba(246,239,221,.5);color:#f6efdd}
+  .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:1.6rem;font-size:.88rem;opacity:.85}
+  .hero-meta div{display:flex;gap:.55rem;align-items:center}
+  .hero-meta svg{width:17px;height:17px;stroke:var(--amber);flex:0 0 17px}
+
+  .hero-card{
+    background:rgba(255,253,248,.05);border:1px solid rgba(229,178,100,.35);
+    border-radius:18px;padding:1.8rem;backdrop-filter:blur(4px);box-shadow:var(--shadow);
+    position:relative;
+  }
+  .hero-card .quote-mark{font-family:'Fraunces',serif;font-size:3.2rem;color:var(--copper-bright);line-height:1}
+  .hero-card blockquote{font-family:'Fraunces',serif;font-size:1.25rem;font-style:italic;line-height:1.5;margin:.4rem 0 1rem}
+  .hero-card cite{font-style:normal;font-size:.82rem;letter-spacing:.06em;color:var(--amber);font-weight:600}
+  .hero-card .card-foot{margin-top:1.2rem;padding-top:1.1rem;border-top:1px dashed rgba(229,178,100,.4);font-size:.85rem;opacity:.85}
+
+  .scroll-hint{
+    position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);
+    font-size:.68rem;letter-spacing:.28em;color:rgba(246,239,221,.55);text-transform:uppercase;
+  }
+
+  /* ---------- Blueprint divider ---------- */
+  .divider{
+    display:flex;align-items:center;gap:1rem;max-width:1140px;margin:0 auto;
+    padding:0 1.25rem;color:var(--copper);
+  }
+  .divider::before,.divider::after{content:"";flex:1;border-top:2px dashed rgba(196,122,53,.55)}
+  .divider svg{width:34px;height:34px;stroke:var(--copper)}
+
+  section{padding:4.5rem 0}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 1.25rem}
+  .section-kicker{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--copper);margin-bottom:.8rem}
+  .section-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.12;margin-bottom:1rem}
+  .section-sub{color:var(--muted);max-width:42rem;margin-bottom:2.6rem;font-size:1.02rem}
+
+  /* ---------- Story ---------- */
+  .story{background:var(--paper)}
+  .story-grid{display:grid;gap:2.5rem}
+  @media(min-width:900px){.story-grid{grid-template-columns:1fr 1fr;align-items:start}}
+  .story-copy p{margin-bottom:1.2rem;color:#33475c}
+  .story-copy p strong{color:var(--navy)}
+  .dropcap::first-letter{
+    font-family:'Fraunces',serif;font-size:3.4rem;float:left;line-height:.85;
+    padding:.25rem .6rem .1rem 0;color:var(--copper);font-weight:700;
+  }
+  .story-card{
+    background:var(--card);border-radius:18px;padding:2rem;box-shadow:var(--shadow);
+    border-top:5px solid var(--copper);position:relative;
+  }
+  .story-card .q{font-family:'Fraunces',serif;font-style:italic;font-size:1.18rem;line-height:1.55;color:var(--navy-ink);margin-bottom:1rem}
+  .story-card .who{font-size:.8rem;font-weight:700;letter-spacing:.08em;color:var(--copper);text-transform:uppercase}
+  .story-card .src{font-size:.78rem;color:var(--muted)}
+  .memory-strip{
+    margin-top:2rem;display:flex;gap:1rem;align-items:flex-start;
+    background:var(--navy);color:#f3ead7;border-radius:14px;padding:1.4rem 1.6rem;
+  }
+  .memory-strip svg{width:30px;height:30px;stroke:var(--amber);flex:0 0 30px;margin-top:.2rem}
+  .memory-strip p{font-size:.95rem}
+  .memory-strip strong{color:var(--amber)}
+
+  /* ---------- Stats ---------- */
+  .stats{background:var(--navy);color:#f3ead7;position:relative;overflow:hidden}
+  .stats::before{content:"";position:absolute;inset:0;opacity:.08;
+    background-image:linear-gradient(rgba(229,178,100,.6) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(229,178,100,.6) 1px,transparent 1px);
+    background-size:40px 40px}
+  .stats .wrap{position:relative}
+  .stats .section-kicker{color:var(--amber)}
+  .stats .section-sub{color:rgba(243,234,215,.7)}
+  .stat-grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .stat{
+    background:rgba(255,253,248,.05);border:1px solid rgba(229,178,100,.3);
+    border-radius:16px;padding:1.8rem 1.4rem;text-align:center;
+    transition:transform .25s, border-color .25s;
+  }
+  .stat:hover{transform:translateY(-6px);border-color:var(--copper-bright)}
+  .stat .num{font-family:'Fraunces',serif;font-size:2.9rem;font-weight:700;color:var(--amber);line-height:1}
+  .stat .lbl{font-size:.82rem;letter-spacing:.06em;margin-top:.6rem;color:rgba(243,234,215,.85)}
+  .stats-note{margin-top:1.6rem;font-size:.8rem;color:rgba(243,234,215,.6)}
+
+  /* ---------- Services tabs ---------- */
+  .services{background:var(--paper-deep)}
+  .tabs{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.8rem}
+  .tab-btn{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:.92rem;
+    padding:.8rem 1.5rem;border-radius:999px;cursor:pointer;
+    border:1.5px solid var(--line);background:var(--card);color:var(--navy);
+    transition:all .22s;
+  }
+  .tab-btn:hover{border-color:var(--copper);transform:translateY(-2px)}
+  .tab-btn.active{background:var(--navy);color:#f6efdd;border-color:var(--navy);box-shadow:var(--shadow)}
+  .tab-panels{position:relative}
+  .tab-panel{
+    display:none;background:var(--card);border-radius:20px;padding:2.2rem;
+    box-shadow:var(--shadow);border:1px solid var(--line);
+    grid-template-columns:1fr;gap:1.6rem;
+  }
+  .tab-panel.active{display:grid;animation:fadeUp .45s ease both}
+  @media(min-width:800px){.tab-panel.active{grid-template-columns:1.2fr .8fr;align-items:center}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .tab-panel h3{font-family:'Fraunces',serif;font-size:1.7rem;margin-bottom:.8rem;color:var(--navy)}
+  .tab-panel p{color:#33475c;margin-bottom:1rem}
+  .tab-panel .from{font-size:.82rem;color:var(--muted);border-left:3px solid var(--copper);padding-left:1rem;margin:1.2rem 0;font-style:italic}
+  .tab-cta{
+    background:linear-gradient(150deg,var(--navy),var(--navy-deep));color:#f3ead7;
+    border-radius:14px;padding:1.8rem;text-align:center;
+  }
+  .tab-cta p{font-size:.9rem;opacity:.8;margin-bottom:1rem;color:#f3ead7}
+  .service-note{margin-top:1.4rem;font-size:.8rem;color:var(--muted);font-style:italic}
+
+  /* ---------- Service area ---------- */
+  .area{background:var(--paper)}
+  .area-grid{display:grid;gap:2rem}
+  @media(min-width:900px){.area-grid{grid-template-columns:1fr 1fr;align-items:center}}
+  .area-card{background:var(--card);border-radius:18px;padding:2.2rem;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .area-card address{font-style:normal;font-size:1.05rem;margin:1rem 0}
+  .area-card address strong{font-family:'Fraunces',serif;font-size:1.4rem;display:block;color:var(--navy)}
+  .hours-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem}
+  .hours-table td{padding:.55rem 0;border-bottom:1px dashed var(--line)}
+  .hours-table td:last-child{text-align:right;font-weight:600}
+  .hours-src{font-size:.78rem;color:var(--muted)}
+  .map-art{
+    border-radius:18px;overflow:hidden;box-shadow:var(--shadow);
+    background:linear-gradient(150deg,var(--navy-deep),var(--navy));color:#f3ead7;
+    padding:2.2rem;position:relative;min-height:340px;display:flex;flex-direction:column;justify-content:center;
+  }
+  .map-art::before{content:"";position:absolute;inset:0;opacity:.12;
+    background-image:linear-gradient(rgba(229,178,100,.5) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(229,178,100,.5) 1px,transparent 1px);
+    background-size:36px 36px}
+  .map-art .pin{position:relative;text-align:center}
+  .map-art .pin svg{width:58px;height:58px;stroke:var(--copper-bright);margin:0 auto .8rem}
+  .map-art h3{position:relative;font-family:'Fraunces',serif;font-size:1.9rem;margin-bottom:.4rem}
+  .map-art p{position:relative;opacity:.8;font-size:.95rem;max-width:22rem;margin:0 auto}
+
+  /* ---------- Reviews ---------- */
+  .reviews{background:var(--paper-deep)}
+  .review-grid{display:grid;gap:1.4rem}
+  @media(min-width:900px){.review-grid{grid-template-columns:repeat(3,1fr)}}
+  .review-card{
+    background:var(--card);border-radius:18px;padding:1.9rem;box-shadow:0 10px 30px -14px rgba(8,22,37,.25);
+    border:1px solid var(--line);display:flex;flex-direction:column;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .review-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+  .review-card .stars{color:var(--copper);letter-spacing:.15em;font-size:1rem;margin-bottom:.9rem}
+  .review-card blockquote{font-size:.95rem;color:#33475c;flex:1;margin-bottom:1.2rem}
+  .review-card .who{font-size:.8rem;font-weight:700;color:var(--navy)}
+  .review-card .src{font-size:.76rem;color:var(--muted)}
+  .review-card.featured{border-top:5px solid var(--copper)}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--paper)}
+  .faq-list{max-width:780px}
+  .faq-item{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:.9rem;overflow:hidden;transition:box-shadow .25s}
+  .faq-item.open{box-shadow:var(--shadow)}
+  .faq-q{
+    width:100%;background:none;border:none;cursor:pointer;text-align:left;
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;
+    padding:1.25rem 1.5rem;font-family:'Inter',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);
+  }
+  .faq-q .icon{
+    flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--paper-deep);
+    display:grid;place-items:center;font-size:1.2rem;color:var(--copper);transition:transform .3s, background .3s;
+  }
+  .faq-item.open .faq-q .icon{transform:rotate(45deg);background:var(--copper);color:#fff}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a p{padding:0 1.5rem 1.4rem;color:#33475c;font-size:.95rem}
+  .faq-a a{color:var(--copper);font-weight:700}
+
+  /* ---------- Contact ---------- */
+  .contact{background:linear-gradient(160deg,var(--navy-deep),var(--navy));color:#f3ead7;position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;opacity:.09;
+    background-image:linear-gradient(rgba(229,178,100,.6) 1px,transparent 1px),
+                     linear-gradient(90deg,rgba(229,178,100,.6) 1px,transparent 1px);
+    background-size:44px 44px}
+  .contact .wrap{position:relative;text-align:center;max-width:760px}
+  .contact .section-kicker{color:var(--amber)}
+  .contact h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin-bottom:1rem}
+  .contact h2 em{font-style:italic;color:var(--amber)}
+  .contact .lede{opacity:.85;margin-bottom:2rem}
+  .big-call{
+    display:inline-flex;align-items:center;gap:.8rem;text-decoration:none;
+    font-family:'Fraunces',serif;font-size:clamp(1.5rem,4vw,2.3rem);font-weight:700;color:#fff;
+    background:linear-gradient(180deg,var(--copper-bright),var(--copper));
+    padding:1.1rem 2.4rem;border-radius:999px;box-shadow:0 14px 36px rgba(196,122,53,.5);
+    transition:transform .2s, box-shadow .2s;margin-bottom:2rem;
+  }
+  .big-call:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 44px rgba(196,122,53,.6)}
+  .nap-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;font-size:.95rem;opacity:.9}
+  .nap-row div{display:flex;align-items:center;gap:.6rem}
+  .nap-row svg{width:17px;height:17px;stroke:var(--amber)}
+  .nap-row a{color:#f3ead7}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy-deep);color:rgba(243,234,215,.75);padding:2.2rem 0 6.5rem;font-size:.85rem}
+  footer .wrap{display:flex;flex-direction:column;gap:.6rem;align-items:center;text-align:center}
+  footer .demo-line{font-size:.72rem;letter-spacing:.14em;color:var(--amber);font-weight:700;text-transform:uppercase}
+
+  /* ---------- Sticky mobile call ---------- */
+  .mobile-call{
+    position:fixed;bottom:0;left:0;right:0;z-index:150;
+    background:rgba(8,22,37,.97);border-top:2px solid var(--copper);
+    padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+    display:flex;gap:.8rem;align-items:center;justify-content:center;
+  }
+  .mobile-call a.call-now{
+    flex:1;max-width:420px;text-align:center;text-decoration:none;font-weight:700;color:#fff;
+    background:linear-gradient(180deg,var(--copper-bright),var(--copper));
+    padding:.85rem;border-radius:12px;font-size:1.02rem;
+    box-shadow:0 6px 18px rgba(196,122,53,.45);
+  }
+  @media(min-width:860px){.mobile-call{display:none}}
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo Preview — concept site, not affiliated</div>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Dixon Welch Plumbing — home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3 3.7-3.7z"/>
+        </svg>
+      </span>
+      <span class="brand-name">Dixon Welch<small>Plumbing · Melissa TX</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#story">Story</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-call" href="tel:+19725624681" aria-label="Call Dixon Welch Plumbing at (972) 562-4681">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+      (972) 562-4681
+    </a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="kicker">Melissa, Texas · Family-Owned-and-Run</span>
+      <h1>The <em>hometown plumber</em> Melissa calls by name.</h1>
+      <p class="lede">When a water heater gave out, one neighbor waited three days on another plumber — then remembered it was Dixon. He came out within a few hours and got it taken care of at a very reasonable price.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-copper" href="tel:+19725624681">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+          Call (972) 562-4681
+        </a>
+        <a class="btn btn-ghost" href="#story">Our story</a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          1708 Cooper St, Melissa, TX 75454
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          Mon–Fri 9 AM–6 PM
+        </div>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Customer review">
+      <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+      <blockquote>Water leak between meter and the sprinkler double check… Very cold, Ronnie came out and got it done quickly in an affordable repair. Put in copper U as it should have been done in the beginning. Highly recommended. Melissa TX home town plumber!</blockquote>
+      <cite>— Jim Bortzfield</cite>
+      <div class="card-foot">PlumbersWorldwide review · August 2015 · Real review, unedited</div>
+    </aside>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">Scroll</div>
+</header>
+
+<!-- ============ STORY ============ -->
+<div class="divider" aria-hidden="true" style="padding-top:3rem">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7m16 10V7M4 7h16M4 12h16M4 17h16"/><circle cx="4" cy="7" r="1.6"/><circle cx="20" cy="17" r="1.6"/></svg>
+</div>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-copy reveal">
+        <div class="section-kicker">The story</div>
+        <h2 class="section-title">The shop people remember <span style="color:var(--copper)">by name.</span></h2>
+        <p class="dropcap">Dixon Welch Plumbing doesn't need a slogan — the neighbors wrote one. A reviewer calls them the <strong>&ldquo;Melissa TX home town plumber,&rdquo;</strong> and that's exactly how the shop earned it: one remembered name at a time.</p>
+        <p>Another customer spent three days waiting on a different plumber because they weren't sure who had installed the water heater originally. Then they remembered: <strong>it was Dixon.</strong> He came out within a few hours and got it taken care of at a very reasonable price.</p>
+        <p>It's family-owned-and-run, and it shows in the work — fixed fast, done right, and priced fair. That's the whole business model, and it's been working in Melissa for years.</p>
+        <div class="memory-strip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <p><strong>Why it matters:</strong> when your plumber is a name, not a dispatch number, you get the person who remembers your house — not the next available truck.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="story-card">
+          <div class="q">&ldquo;Waited on a different plumber for 3 days because wasn't sure who put the water heater in originally. Finally remembered it was Dixon and he came out within a few hours and got it taken care of at a very reasonable price.&rdquo;</div>
+          <div class="who">Birdeye reviewer</div>
+          <div class="src">Birdeye · Real review, unedited · reviewer name not shown on listing</div>
+        </div>
+        <div class="story-card" style="margin-top:1.4rem;border-top-color:var(--navy)">
+          <div class="q">&ldquo;Extremely helpful. VERY trust worthy and fixed the issue fast and effective. Would definitely use next time needed. Family owned and ran right! Thanks for providing a great service!&rdquo;</div>
+          <div class="who">jason freeman</div>
+          <div class="src">PlumbersWorldwide · August 2017 · Real review, unedited</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-kicker">What the directories say</div>
+      <h2 class="section-title" style="color:#f6efdd">Small footprint. <span style="color:var(--amber)">Real words.</span></h2>
+      <p class="section-sub">Every rating below comes from a live third-party directory listing — nothing here is paid for or polished up.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat reveal">
+        <div class="num"><span class="counter" data-target="3.7" data-decimals="1">0</span></div>
+        <div class="lbl">Birdeye rating · 3 reviews<br>(profile unclaimed)</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num"><span class="counter" data-target="5" data-decimals="0">0</span>.0</div>
+        <div class="lbl">OneAllRatings · 2 reviews</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num"><span class="counter" data-target="3" data-decimals="0">0</span></div>
+        <div class="lbl">PlumbersWorldwide reviews<br>2015–2017</div>
+      </div>
+    </div>
+    <p class="stats-note reveal">Ratings shown exactly as published on each directory. Google reviews were not checked.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<div class="divider" aria-hidden="true" style="padding-top:3rem;background:var(--paper-deep)">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7m16 10V7M4 7h16M4 12h16M4 17h16"/><circle cx="4" cy="7" r="1.6"/><circle cx="20" cy="17" r="1.6"/></svg>
+</div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-kicker">Services</div>
+      <h2 class="section-title">What neighbors call about</h2>
+      <p class="section-sub">The work below is drawn from what customers themselves describe in reviews, plus the shop's directory listings. Call to confirm your job — the fastest answer comes straight from the shop at <a href="tel:+19725624681" style="color:var(--copper);font-weight:700">(972) 562-4681</a>.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Service categories">
+      <button class="tab-btn active" role="tab" aria-selected="true" data-tab="residential">Residential</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="commercial">Commercial</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="heaters">Water Heaters</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-tab="leaks">Leak &amp; Line Repair</button>
+    </div>
+
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" id="panel-residential" role="tabpanel">
+        <div>
+          <h3>Residential plumbing</h3>
+          <p>Home plumbing work for Melissa households — the everyday fixes, replacements, and repairs that keep a house running. This is the shop's home turf: the hometown plumber neighbors call by first name.</p>
+          <div class="from">Listed for residential work on the shop's directory profiles.</div>
+        </div>
+        <div class="tab-cta">
+          <p>Have a plumbing problem at home?</p>
+          <a class="btn btn-copper" href="tel:+19725624681">Call (972) 562-4681</a>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-commercial" role="tabpanel">
+        <div>
+          <h3>Commercial plumbing</h3>
+          <p>Beyond homes, the shop is listed for commercial plumbing work too — businesses in and around Melissa with a leak, a line problem, or equipment that needs attention.</p>
+          <div class="from">Listed for residential + commercial work on the shop's directory profiles.</div>
+        </div>
+        <div class="tab-cta">
+          <p>Business with a plumbing issue?</p>
+          <a class="btn btn-copper" href="tel:+19725624681">Call (972) 562-4681</a>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-heaters" role="tabpanel">
+        <div>
+          <h3>Water heaters</h3>
+          <p>Water heater installation and service is the job that made the shop's reputation — the customer who waited three days on another plumber before remembering <em>it was Dixon</em> who had put theirs in originally.</p>
+          <div class="from">From a Birdeye review: &ldquo;…wasn't sure who put the water heater in originally. Finally remembered it was Dixon and he came out within a few hours…&rdquo;</div>
+        </div>
+        <div class="tab-cta">
+          <p>Water heater acting up?</p>
+          <a class="btn btn-copper" href="tel:+19725624681">Call (972) 562-4681</a>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="panel-leaks" role="tabpanel">
+        <div>
+          <h3>Leak &amp; line repair</h3>
+          <p>From a water leak between the meter and the sprinkler double check to a line that was patched wrong the first time — fixed with copper, &ldquo;as it should have been done in the beginning.&rdquo; Even on a very cold day, the job got done quickly.</p>
+          <div class="from">From Jim Bortzfield's PlumbersWorldwide review (August 2015): &ldquo;Put in copper U as it should have been done in the beginning.&rdquo;</div>
+        </div>
+        <div class="tab-cta">
+          <p>See water where it shouldn't be?</p>
+          <a class="btn btn-copper" href="tel:+19725624681">Call (972) 562-4681</a>
+        </div>
+      </div>
+    </div>
+    <p class="service-note reveal">Service descriptions are based on customer reviews and public directory listings — not an official service list. The shop publishes no service list of its own; call to confirm any job.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREA ============ -->
+<div class="divider" aria-hidden="true" style="padding-top:3rem">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7m16 10V7M4 7h16M4 12h16M4 17h16"/><circle cx="4" cy="7" r="1.6"/><circle cx="20" cy="17" r="1.6"/></svg>
+</div>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <div class="section-kicker">Find us</div>
+        <h2 class="section-title">Rooted in Melissa.</h2>
+        <address>
+          <strong>Dixon Welch Plumbing</strong>
+          1708 Cooper St<br>
+          Melissa, TX 75454
+        </address>
+        <table class="hours-table" aria-label="Business hours">
+          <tr><td>Monday – Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday – Sunday</td><td>Closed</td></tr>
+        </table>
+        <p class="hours-src">Hours as listed on Birdeye and directory data.</p>
+        <div style="margin-top:1.6rem">
+          <a class="btn btn-copper" href="tel:+19725624681">Call (972) 562-4681</a>
+        </div>
+      </div>
+      <div class="map-art reveal">
+        <div class="pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <h3 class="serif">Melissa, Texas</h3>
+          <p>Home base on Cooper St — serving homes and businesses across Melissa and the surrounding Collin County area.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-kicker">Reviews</div>
+      <h2 class="section-title">In their customers' words</h2>
+      <p class="section-sub">Every quote below is a real review, shown unedited with its source. Nothing added, nothing polished.</p>
+    </div>
+    <div class="review-grid">
+      <article class="review-card featured reveal">
+        <div class="stars" aria-label="No star rating published">★★★★★</div>
+        <blockquote>&ldquo;Water leak between meter and the sprinkler double check. Installed with rubber fittings that were shoved around in ground movement. Very cold, Ronnie came out and got it done quickly in an affordable repair. Put in copper U as it should have been done in the beginning. Highly recommended. Melissa TX home town plumber!&rdquo;</blockquote>
+        <div class="who">Jim Bortzfield</div>
+        <div class="src">PlumbersWorldwide · August 2015</div>
+      </article>
+      <article class="review-card reveal">
+        <div class="stars" aria-label="No star rating published">★★★★★</div>
+        <blockquote>&ldquo;Extremely helpful. VERY trust worthy and fixed the issue fast and effective. Would definitely use next time needed. Family owned and ran right! Thanks for providing a great service!&rdquo;</blockquote>
+        <div class="who">jason freeman</div>
+        <div class="src">PlumbersWorldwide · August 2017</div>
+      </article>
+      <article class="review-card reveal">
+        <div class="stars" aria-label="No star rating published">★★★★★</div>
+        <blockquote>&ldquo;Waited on a different plumber for 3 days because wasn't sure who put the water heater in originally. Finally remembered it was Dixon and he came out within a few hours and got it taken care of at a very reasonable price.&rdquo;</blockquote>
+        <div class="who">Birdeye reviewer</div>
+        <div class="src">Birdeye · date not shown on listing</div>
+      </article>
+    </div>
+    <p class="service-note reveal" style="margin-top:1.6rem">Star graphics above are decorative — review sources show no overall star figure for these two PlumbersWorldwide reviews. Directory ratings: Birdeye 3.7 / 3 reviews (unclaimed profile), OneAllRatings 5 / 2 reviews. Google reviews were not checked.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<div class="divider" aria-hidden="true" style="padding-top:3rem">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7m16 10V7M4 7h16M4 12h16M4 17h16"/><circle cx="4" cy="7" r="1.6"/><circle cx="20" cy="17" r="1.6"/></svg>
+</div>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-kicker">FAQ</div>
+      <h2 class="section-title">Good to know</h2>
+      <p class="section-sub">Straight answers — only what's actually published about the shop.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Where is the shop located?<span class="icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>1708 Cooper St, Melissa, TX 75454 — verified across multiple live directory listings (Birdeye, PlumbersWorldwide, PrimeBuyersReport).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What are your hours?<span class="icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Monday through Friday, 9:00 AM to 6:00 PM; closed Saturday and Sunday — as listed on Birdeye and directory data. The shop publishes no hours of its own, so call <a href="tel:+19725624681">(972) 562-4681</a> to confirm before heading over.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do I get in touch?<span class="icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>By phone: <a href="tel:+19725624681">(972) 562-4681</a>. It's the contact listed on every directory profile — the shop publishes no public email address, so calling is the way to reach them.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you handle commercial work as well as homes?<span class="icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Directory listings describe the shop as serving both residential and commercial customers. Confirm your specific project when you call <a href="tel:+19725624681">(972) 562-4681</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What should I do if I spot a leak?<span class="icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Shut off the water to the affected area if you safely can, then call <a href="tel:+19725624681">(972) 562-4681</a> right away. One reviewer had a leak between the meter and the sprinkler line fixed quickly — fast calls keep small leaks from becoming big ones.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you offer free estimates or online booking?<span class="icon" aria-hidden="true">+</span></button>
+        <div class="faq-a"><p>Neither is published anywhere — the shop has no website and no online booking path. Your best bet is a quick call to <a href="tel:+19725624681">(972) 562-4681</a> to ask.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-kicker">Contact</div>
+      <h2>Talk to the <em>hometown plumber.</em></h2>
+      <p class="lede">No forms, no phone trees — the shop lists one number, and it rings at the shop. Monday–Friday, 9 AM–6 PM.</p>
+      <a class="big-call" href="tel:+19725624681" aria-label="Call Dixon Welch Plumbing at (972) 562-4681">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+        (972) 562-4681
+      </a>
+      <div class="nap-row">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          1708 Cooper St, Melissa, TX 75454
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          Mon–Fri 9 AM–6 PM · Closed Sat/Sun
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="demo-line">Demo Preview — concept prepared by NoFluff Marketing</div>
+    <div><strong>Dixon Welch Plumbing</strong> · <a href="tel:+19725624681" style="color:inherit">(972) 562-4681</a></div>
+    <div>1708 Cooper St, Melissa, TX 75454</div>
+    <div>Mon–Fri 9:00 AM–6:00 PM · Closed Sat/Sun (hours per Birdeye)</div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CALL ============ -->
+<div class="mobile-call">
+  <a class="call-now" href="tel:+19725624681">Call (972) 562-4681</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---- Scroll reveal ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ ro.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---- Animated counters ---- */
+  var counters = document.querySelectorAll('.counter');
+  function animateCounter(el){
+    var target = parseFloat(el.getAttribute('data-target'));
+    var decimals = parseInt(el.getAttribute('data-decimals')||'0',10);
+    var dur = 1400, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      var eased = 1 - Math.pow(1-p, 3);
+      el.textContent = (target*eased).toFixed(decimals);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toFixed(decimals);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ animateCounter(e.target); co.unobserve(e.target); }
+      });
+    },{threshold:.5});
+    counters.forEach(function(c){ co.observe(c); });
+  }
+
+  /* ---- Service tabs ---- */
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  var panels = {
+    residential: document.getElementById('panel-residential'),
+    commercial: document.getElementById('panel-commercial'),
+    heaters: document.getElementById('panel-heaters'),
+    leaks: document.getElementById('panel-leaks')
+  };
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      Object.keys(panels).forEach(function(k){ panels[k].classList.remove('active'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      var p = panels[btn.getAttribute('data-tab')];
+      if(p){ p.classList.add('active'); }
+    });
+  });
+
+  /* ---- FAQ accordion ---- */
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+        o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+        q.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
