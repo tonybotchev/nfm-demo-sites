@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garner Heating &amp; Air Conditioning — Gunter, TX | Owner-Operator HVAC</title>
+<meta name="description" content="Garner Heating & Air Conditioning — owner-operator Jody Garner. 20+ years keeping North Texas cool and warm. AC repair, heating, new systems, indoor air quality. Call (903) 821-6789.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF4E8; --paper2:#F4ECDA; --card:#FFFDF7;
+  --ink:#241B11; --ink-soft:#4A3E2E; --muted:#7A6A54;
+  --copper:#B0511F; --copper-deep:#8A3E15; --copper-pale:#EFD9C4;
+  --tan:#E6D7B8; --line:#DCCDAE;
+  --radius:14px;
+  --shadow:0 18px 40px -18px rgba(60,38,14,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--copper);color:#fff}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+a{color:var(--copper-deep)}
+img{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- DEMO badge ---------- */
+.demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);color:var(--paper);text-align:center;font-size:12.5px;letter-spacing:.22em;font-weight:700;padding:9px 12px;text-transform:uppercase}
+.demo-ribbon b{color:#F5B26B}
+body{padding-top:38px}
+
+/* ---------- Sticky nav ---------- */
+.nav{position:sticky;top:38px;z-index:150;background:rgba(250,244,232,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.brand{font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand .mark{width:38px;height:38px;flex:0 0 38px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:15px}
+.nav-links a:hover{color:var(--copper-deep)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--copper);color:#fff!important;text-decoration:none;font-weight:700;font-size:16px;padding:13px 26px;border-radius:999px;border:none;cursor:pointer;box-shadow:0 10px 24px -10px rgba(176,81,31,.7);transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn:hover{background:var(--copper-deep);transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(138,62,21,.7)}
+.btn.ghost{background:transparent;color:var(--copper-deep)!important;border:2px solid var(--copper);box-shadow:none}
+.btn.ghost:hover{background:var(--copper-pale)}
+.nav-cta{padding:10px 20px;font-size:15px}
+.burger{display:none;background:none;border:none;font-size:28px;cursor:pointer;color:var(--ink)}
+
+/* ---------- Hero (asymmetric editorial) ---------- */
+.hero{position:relative;overflow:hidden;padding:72px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-deep);margin-bottom:22px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--copper)}
+.hero h1{font-size:clamp(42px,5.4vw,68px);font-weight:600;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--copper-deep)}
+.hero p.lede{font-size:19px;color:var(--ink-soft);max-width:34em;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.hero-note{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px dashed var(--copper);border-radius:var(--radius);padding:14px 18px;max-width:26em;font-size:14.5px;color:var(--ink-soft)}
+.hero-art{position:relative}
+.hero-art .frame{background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:34px;box-shadow:var(--shadow);transform:rotate(1.2deg)}
+.hero-art .margin-note{position:absolute;right:-8px;top:-26px;background:var(--ink);color:var(--paper);font-family:'Fraunces',serif;font-style:italic;font-size:15px;padding:8px 16px;border-radius:999px;transform:rotate(-3deg);box-shadow:var(--shadow)}
+.squiggle{display:block;width:100%;height:26px;margin:56px 0 0;color:var(--copper);opacity:.85}
+
+/* ---------- Credentials band ---------- */
+.band{background:var(--ink);color:var(--paper);padding:58px 0;margin-top:8px}
+.band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}
+.stat .num{font-family:'Fraunces',serif;font-size:52px;font-weight:700;color:#F5B26B}
+.stat .num sup{font-size:28px}
+.stat .lbl{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#CBBFA9;margin-top:6px}
+.stat .src{font-size:12.5px;color:#8f8471;margin-top:4px}
+
+/* ---------- Sections ---------- */
+section.block{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.sec-head .kicker{margin-bottom:14px}
+.sec-head h2{font-size:clamp(30px,3.6vw,44px);margin-bottom:14px}
+.sec-head p{color:var(--ink-soft);font-size:18px}
+
+/* ---------- Service tabs ---------- */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tab{border:2px solid var(--line);background:var(--card);color:var(--ink-soft);font-weight:700;font-size:15.5px;padding:12px 22px;border-radius:999px;cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--copper)}
+.tab.active{background:var(--copper);border-color:var(--copper);color:#fff}
+.tab-panels{position:relative}
+.tab-panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:40px;box-shadow:var(--shadow)}
+.tab-panel.active{display:grid;grid-template-columns:120px 1fr;gap:32px;align-items:start;animation:fadeUp .35s ease}
+.tab-panel h3{font-size:26px;margin-bottom:10px}
+.tab-panel p{color:var(--ink-soft)}
+.tab-panel ul{margin:16px 0 0 2px;list-style:none}
+.tab-panel li{padding:7px 0 7px 30px;position:relative;color:var(--ink-soft)}
+.tab-panel li::before{content:"✓";position:absolute;left:0;color:var(--copper-deep);font-weight:800}
+.svc-icon{width:104px;height:104px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ---------- Owner story (editorial) ---------- */
+.owner{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.owner-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.owner-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:38px;box-shadow:var(--shadow);transform:rotate(-1deg)}
+.owner-card .who{font-family:'Fraunces',serif;font-size:30px;font-weight:700}
+.owner-card .role{color:var(--copper-deep);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin:6px 0 18px}
+.owner-card dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:15px}
+.owner-card dt{font-weight:700;color:var(--ink)}
+.owner-card dd{color:var(--ink-soft)}
+.pull{border-left:4px solid var(--copper);padding:6px 0 6px 26px;margin:26px 0}
+.pull p{font-family:'Fraunces',serif;font-size:24px;font-style:italic;line-height:1.45;color:var(--ink)}
+.pull cite{display:block;margin-top:12px;font-style:normal;font-family:'Inter',sans-serif;font-size:14px;color:var(--muted)}
+.owner-copy p{margin-bottom:18px;color:var(--ink-soft);font-size:18px}
+.owner-copy p strong{color:var(--ink)}
+
+/* ---------- Reviews slider ---------- */
+.slider{position:relative;max-width:820px;margin:0 auto}
+.slide{display:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:48px;box-shadow:var(--shadow);text-align:center}
+.slide.active{display:block;animation:fadeUp .4s ease}
+.slide .stars{color:var(--copper);font-size:24px;letter-spacing:6px;margin-bottom:18px}
+.slide blockquote{font-family:'Fraunces',serif;font-size:21px;font-style:italic;line-height:1.6;color:var(--ink);margin-bottom:18px}
+.slide cite{font-style:normal;font-size:14px;color:var(--muted)}
+.slider-nav{display:flex;justify-content:center;gap:14px;margin-top:24px;align-items:center}
+.snav{width:46px;height:46px;border-radius:50%;border:2px solid var(--copper);background:transparent;color:var(--copper-deep);font-size:20px;cursor:pointer;font-weight:700}
+.snav:hover{background:var(--copper);color:#fff}
+.dots{display:flex;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--line);cursor:pointer;border:none}
+.dot.active{background:var(--copper)}
+.review-foot{text-align:center;margin-top:26px;font-size:14.5px;color:var(--muted)}
+
+/* ---------- Areas ---------- */
+.areas{background:var(--ink);color:var(--paper);border-radius:26px;padding:60px;margin:0 24px}
+.areas h2{color:var(--paper);font-size:clamp(28px,3.4vw,40px);margin-bottom:8px}
+.areas p.sub{color:#CBBFA9;margin-bottom:30px}
+.town-chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{border:1.5px dashed #F5B26B;color:#F5B26B;font-weight:700;padding:10px 20px;border-radius:999px;font-size:15.5px}
+.chip.home{background:#F5B26B;color:var(--ink);border-style:solid}
+
+/* ---------- Estimate form ---------- */
+.form-shell{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:48px;box-shadow:var(--shadow);position:relative}
+.form-shell::before{content:"No obligation — just a straight answer";position:absolute;top:-16px;left:50%;transform:translateX(-50%) rotate(-1.5deg);background:var(--copper);color:#fff;font-size:13.5px;font-weight:700;padding:7px 18px;border-radius:999px;white-space:nowrap}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.f-field label{display:block;font-weight:700;font-size:14px;margin-bottom:7px}
+.f-field input,.f-field select,.f-field textarea{width:100%;border:2px solid var(--line);border-radius:10px;padding:13px 15px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
+.f-field input:focus,.f-field select:focus,.f-field textarea:focus{outline:none;border-color:var(--copper)}
+.f-field.full{grid-column:1/-1}
+.form-note{font-size:13.5px;color:var(--muted);margin-top:14px;text-align:center}
+.demo-notice{display:none;background:var(--copper-pale);border:2px dashed var(--copper-deep);border-radius:12px;padding:18px;margin-top:18px;font-size:15px;color:var(--ink)}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;text-align:left;font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:var(--ink);padding:22px 40px 22px 0;cursor:pointer;position:relative}
+.faq-q::after{content:"+";position:absolute;right:4px;top:20px;font-size:30px;color:var(--copper-deep);font-family:'Inter',sans-serif;transition:transform .25s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--ink-soft)}
+.faq-a p{padding:0 0 24px;font-size:16.5px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#CBBFA9;padding:56px 0 110px;margin-top:40px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;margin-bottom:34px}
+.foot-grid h3{color:var(--paper);font-size:19px;margin-bottom:14px}
+.foot-grid p,.foot-grid li{font-size:15px;margin-bottom:8px}
+.foot-grid ul{list-style:none}
+.foot-grid a{color:#F5B26B;text-decoration:none}
+.foot-grid a:hover{text-decoration:underline}
+.foot-bottom{border-top:1px solid #3d3325;padding-top:22px;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- Sticky mobile call ---------- */
+.mobile-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:160;background:var(--copper);color:#fff;text-align:center;font-weight:800;font-size:18px;padding:16px;text-decoration:none;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+.mobile-call small{display:block;font-size:12px;font-weight:500;opacity:.9}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero-grid,.owner-grid{grid-template-columns:1fr;gap:36px}
+  .band-grid{grid-template-columns:repeat(2,1fr)}
+  .tab-panel.active{grid-template-columns:1fr}
+  .svc-icon{width:72px;height:72px}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;align-items:stretch;padding:12px 24px 20px;border-bottom:1px solid var(--line);gap:4px}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:10px 0;border-bottom:1px solid var(--paper2)}
+  .burger{display:block}
+  .mobile-call{display:block}
+  .f-row{grid-template-columns:1fr}
+  .form-shell{padding:34px 24px}
+  .foot-grid{grid-template-columns:1fr}
+  .areas{margin:0 12px;padding:44px 28px}
+  footer{padding-bottom:140px}
+  section.block{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Demo preview &nbsp;·&nbsp; <b>not the live site</b> &nbsp;·&nbsp; built for Garner Heating &amp; Air Conditioning</div>
+
+<!-- ============ STICKY NAV ============ -->
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" stroke="#B0511F" stroke-width="3"/>
+        <path d="M24 12v14" stroke="#B0511F" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="24" cy="31" r="5" fill="#B0511F"/>
+        <path d="M14 20l-3-3M34 20l3-3M14 34l-3 3M34 34l3 3" stroke="#B0511F" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      Garner Heating &amp; Air
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#jody">Meet Jody</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn nav-cta" href="tel:+19038216789">📞 (903) 821-6789</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="kicker">Gunter · Tioga · North Texas</span>
+      <h1>The man who <em>answers</em> the phone is the man who <em>fixes</em> your AC.</h1>
+      <p class="lede">Garner Heating &amp; Air Conditioning is an owner-operator shop. No call centers, no upsell scripts — Jody Garner has kept North Texas homes cool and warm for over 20 years, working on all major brands, residential and commercial.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+19038216789">📞 Call Jody — (903) 821-6789</a>
+        <a class="btn ghost" href="#estimate">Request an estimate</a>
+      </div>
+      <div class="hero-note">
+        <span aria-hidden="true">✎</span>
+        <span><strong>Straight talk:</strong> if your system can be repaired economically, Jody will repair it. If it's done, he'll tell you that too. That's 20+ years of word-of-mouth in one sentence.</span>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="margin-note">owner-operated, 20+ yrs</div>
+      <div class="frame">
+        <svg viewBox="0 0 420 340" width="100%" role="img" aria-label="Hand-drawn style illustration of a home with heating and cooling">
+          <g stroke="#B0511F" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 190 L210 90 L360 190" />
+            <path d="M95 170 L95 280 L325 280 L325 170" />
+            <rect x="185" y="215" width="52" height="65" rx="4"/>
+            <circle cx="228" cy="248" r="3.5" fill="#B0511F"/>
+            <path d="M120 130 h44 M120 145 h30" stroke-width="3"/>
+            <path d="M40 300 h340" stroke-dasharray="10 8" stroke-width="3"/>
+            <g transform="translate(330,60)">
+              <circle r="26" stroke-width="4"/>
+              <path d="M0 -38 v-8 M0 38 v8 M-38 0 h-8 M38 0 h8 M-27 -27 l-6 -6 M27 27 l6 6 M27 -27 l6 -6 M-27 27 l-6 6" stroke-width="3.5"/>
+            </g>
+            <g transform="translate(80,60)" stroke-width="3.5">
+              <path d="M0 -22 v44 M-19 -11 l19 11 19 -11 M-19 11 l19 11 19 -11"/>
+              <path d="M-19 -11 v22 M19 -11 v22" />
+            </g>
+            <path d="M250 190 q10 -18 20 0 q10 18 20 0" stroke-width="3"/>
+          </g>
+          <text x="210" y="322" text-anchor="middle" font-family="Fraunces,serif" font-style="italic" font-size="19" fill="#4A3E2E">cool in August · warm in January</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <svg class="squiggle" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 13 Q 25 3, 50 13 T 100 13 T 150 13 T 200 13 T 250 13 T 300 13 T 350 13 T 400 13 T 450 13 T 500 13 T 550 13 T 600 13 T 650 13 T 700 13 T 750 13 T 800 13 T 850 13 T 900 13 T 950 13 T 1000 13 T 1050 13 T 1100 13 T 1150 13 T 1200 13" fill="none" stroke="currentColor" stroke-width="3"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ============ CREDENTIALS BAND ============ -->
+<div class="band">
+  <div class="wrap band-grid">
+    <div class="stat reveal"><div class="num"><span data-count="20">0</span>+</div><div class="lbl">Years in business</div><div class="src">as published on garnerair.com</div></div>
+    <div class="stat reveal"><div class="num"><span data-count="5" data-decimals="1">0</span></div><div class="lbl">Birdeye rating</div><div class="src">Birdeye · 2 reviews</div></div>
+    <div class="stat reveal"><div class="num"><span data-count="1">0</span></div><div class="lbl">Owner-operator</div><div class="src">You deal with Jody, not a call center</div></div>
+    <div class="stat reveal"><div class="num">All</div><div class="lbl">Major brands serviced</div><div class="src">residential &amp; commercial</div></div>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What Jody does</span>
+      <h2>Heating &amp; cooling, done by the guy whose name is on the truck.</h2>
+      <p>Repairs, replacements, tune-ups, and indoor air quality — for homes and businesses across the area.</p>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="Services">
+      <button class="tab active" data-tab="t-repair" role="tab">AC &amp; Heat Repair</button>
+      <button class="tab" data-tab="t-install" role="tab">New Systems</button>
+      <button class="tab" data-tab="t-maint" role="tab">Maintenance</button>
+      <button class="tab" data-tab="t-iaq" role="tab">Indoor Air Quality</button>
+    </div>
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" id="t-repair" role="tabpanel">
+        <svg class="svc-icon" viewBox="0 0 100 100" fill="none" stroke="#B0511F" stroke-width="4" stroke-linecap="round"><path d="M55 10 L30 55 h18 L42 90 L72 42 h-18 Z" stroke-linejoin="round"/></svg>
+        <div>
+          <h3>AC &amp; heat repair</h3>
+          <p>When the system quits on the hottest week of the year, you don't need a sales pitch — you need a diagnosis. Jody works on all major brands and has spent 20+ years learning what actually fails and what actually fixes it.</p>
+          <ul>
+            <li>Diagnosis first, straight answers — repair it if it's worth repairing</li>
+            <li>All major brands, residential and commercial</li>
+            <li>Aging systems kept running economically (just ask his customers)</li>
+          </ul>
+          <p style="margin-top:18px"><a class="btn" href="tel:+19038216789">📞 (903) 821-6789</a></p>
+        </div>
+      </div>
+      <div class="tab-panel" id="t-install" role="tabpanel">
+        <svg class="svc-icon" viewBox="0 0 100 100" fill="none" stroke="#B0511F" stroke-width="4" stroke-linecap="round"><path d="M20 80 V45 L50 20 L80 45 V80" stroke-linejoin="round"/><path d="M38 80 V58 h24 v22"/><path d="M62 34 l6 -8 6 8" /></svg>
+        <div>
+          <h3>New system installation &amp; replacement</h3>
+          <p>When a unit is truly done, Jody handles the full changeout — sized right for your home, installed cleanly, and coordinated around your schedule (one customer notes he "perfectly orchestrated the removal and re-installation around the repair schedule").</p>
+          <ul>
+            <li>Right-sized equipment for your home, not an oversized upsell</li>
+            <li>Clean installs, coordinated around your other home projects</li>
+            <li>Residential and commercial installations</li>
+          </ul>
+          <p style="margin-top:18px"><a class="btn" href="tel:+19038216789">📞 (903) 821-6789</a></p>
+        </div>
+      </div>
+      <div class="tab-panel" id="t-maint" role="tabpanel">
+        <svg class="svc-icon" viewBox="0 0 100 100" fill="none" stroke="#B0511F" stroke-width="4" stroke-linecap="round"><circle cx="50" cy="50" r="34"/><path d="M50 32 v18 l14 10"/></svg>
+        <div>
+          <h3>Maintenance &amp; tune-ups</h3>
+          <p>Most breakdowns announce themselves months early — to someone who knows what to look for. Regular checkups keep the system efficient, catch small problems before they become August emergencies, and stretch the life of the equipment you already own.</p>
+          <ul>
+            <li>Seasonal tune-ups before the heat and the cold hit</li>
+            <li>Coil, filter, refrigerant, and electrical checks</li>
+            <li>Keeps aging systems running economically, longer</li>
+          </ul>
+          <p style="margin-top:18px"><a class="btn" href="tel:+19038216789">📞 (903) 821-6789</a></p>
+        </div>
+      </div>
+      <div class="tab-panel" id="t-iaq" role="tabpanel">
+        <svg class="svc-icon" viewBox="0 0 100 100" fill="none" stroke="#B0511F" stroke-width="4" stroke-linecap="round"><path d="M30 70 q-12 -6 -8 -20 q10 -2 12 -14 q12 0 14 12 q14 0 14 14 q0 12 -12 12 Z" stroke-linejoin="round"/><path d="M62 74 q10 2 8 12 M72 66 q12 2 10 14" stroke-width="3"/></svg>
+        <div>
+          <h3>Indoor air quality</h3>
+          <p>Comfort isn't just temperature — it's the air your family breathes. Garner offers indoor air quality products designed with your household in mind, from filtration upgrades to whole-home solutions matched to your system.</p>
+          <ul>
+            <li>Filtration and purification options for your existing system</li>
+            <li>Recommendations matched to your home and your equipment</li>
+            <li>Ask Jody what's worth it — and what isn't</li>
+          </ul>
+          <p style="margin-top:18px"><a class="btn" href="tel:+19038216789">📞 (903) 821-6789</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OWNER STORY ============ -->
+<section class="block owner" id="jody">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The whole business model</span>
+      <h2>Meet Jody.</h2>
+    </div>
+    <div class="owner-grid">
+      <div class="owner-card reveal">
+        <div class="who">Jody Garner</div>
+        <div class="role">Owner · Operator · Technician</div>
+        <dl>
+          <dt>Trade</dt><dd>Heating &amp; air conditioning</dd>
+          <dt>Experience</dt><dd>Over 20 years (per garnerair.com)</dd>
+          <dt>Brands</dt><dd>All major brands</dd>
+          <dt>Work</dt><dd>Residential &amp; commercial</dd>
+          <dt>License</dt><dd>TACLA016579C <span style="color:var(--muted);font-size:13px">(as published on garnerair.com)</span></dd>
+          <dt>Phone</dt><dd><a href="tel:+19038216789" style="font-weight:700">(903) 821-6789</a></dd>
+        </dl>
+      </div>
+      <div class="owner-copy reveal">
+        <p>There's no service manager between you and the person doing the work. Garner Heating &amp; Air is an owner-operator shop — when you call, <strong>you deal with Jody</strong>, the owner, not a call center or a sales rep.</p>
+        <p>That's not a marketing line. It's the reason his customers span <strong>generations of the same family</strong>:</p>
+        <div class="pull">
+          <p>"Jody Garner was the HVAC go-to guy for my parents for many years. So, we trusted their evaluation and began to use Jody for our own heating and AC needs, and have been glad we did."</p>
+          <cite>— Birdeye review</cite>
+        </div>
+        <p>One longtime customer puts it even plainer, after 69 years of hiring HVAC techs: <strong>"Garner is the best ever."</strong> Fair. Honest. Reliable. The sharpest technician work they've seen — including a unit problem that had gone unfixed for 8 years, solved in about an hour.</p>
+        <p><a class="btn" href="tel:+19038216789">📞 Talk to Jody — (903) 821-6789</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="block" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="kicker" style="justify-content:center">Word of mouth, on the record</span>
+      <h2>Every review earned. All of them, right here.</h2>
+      <p>Not a wall of anonymous stars — the actual words of actual neighbors.</p>
+    </div>
+    <div class="slider reveal">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Jody Garner was the HVAC go-to guy for my parents for many years. So, we trusted their evaluation and began to use Jody for our own heating and AC needs, and have been glad we did. Jody is always courteous and responsive and he has helped us keep our aging system running very economically."</blockquote>
+        <cite>— Birdeye review</cite>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The best heating &amp; AC company I have had to work on my unit. Fair, honest and reliable. In my 69 years of having work done on my unit Garner is the best ever. Can't say enough about Jordan the technician that came and worked on the unit — the sharpest technician I have ever worked with."</blockquote>
+        <cite>— Birdeye review</cite>
+      </div>
+      <div class="slider-nav">
+        <button class="snav" id="prevSlide" aria-label="Previous review">‹</button>
+        <div class="dots" id="dots"></div>
+        <button class="snav" id="nextSlide" aria-label="Next review">›</button>
+      </div>
+    </div>
+    <p class="review-foot reveal">Rated 5.0 on Birdeye · <a href="tel:+19038216789">Had Jody out recently? Call and tell him — reviews keep small shops alive.</a></p>
+  </div>
+</section>
+
+<!-- ============ AREAS ============ -->
+<div class="wrap">
+  <div class="areas reveal" id="areas">
+    <span class="kicker" style="color:#F5B26B">Where Jody works</span>
+    <h2 class="serif">Home turf, and everywhere the work takes him.</h2>
+    <p class="sub">Based between Gunter and Tioga, serving homes and businesses across the area.</p>
+    <div class="town-chips">
+      <span class="chip home">Gunter</span>
+      <span class="chip home">Tioga</span>
+      <span class="chip">Sherman</span>
+      <span class="chip">North Texas</span>
+      <span class="chip">DFW area</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ESTIMATE FORM ============ -->
+<section class="block" id="estimate">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="kicker" style="justify-content:center">Get it looked at</span>
+      <h2>Request an estimate.</h2>
+      <p>Tell Jody what's going on — he'll tell you straight what it needs.</p>
+    </div>
+    <div class="form-shell reveal">
+      <form id="estForm">
+        <div class="f-row">
+          <div class="f-field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" placeholder="Jane Smith" required></div>
+          <div class="f-field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="(903) 555-0100" required></div>
+        </div>
+        <div class="f-row">
+          <div class="f-field"><label for="f-type">What's going on?</label>
+            <select id="f-type" name="type">
+              <option>AC not cooling / blowing warm</option>
+              <option>Heat not working</option>
+              <option>System making strange noises</option>
+              <option>Need a new system / replacement quote</option>
+              <option>Maintenance / tune-up</option>
+              <option>Indoor air quality</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="f-field"><label for="f-town">Town</label><input id="f-town" name="town" type="text" placeholder="Gunter"></div>
+        </div>
+        <div class="f-row">
+          <div class="f-field full"><label for="f-msg">Details (optional)</label><textarea id="f-msg" name="message" rows="4" placeholder="e.g. Upstairs unit quit yesterday afternoon, downstairs still running…"></textarea></div>
+        </div>
+        <button class="btn" type="submit" style="width:100%;justify-content:center;font-size:18px">Send it to Jody →</button>
+        <p class="form-note">Prefer to talk? <a href="tel:+19038216789" style="font-weight:700">(903) 821-6789</a> · jody@garnerair.com</p>
+        <div class="demo-notice" id="demoNotice">📋 <strong>Demo preview:</strong> on the live site this form sends your request straight to Jody — no accounts, no portals, no waiting on hold.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="block" id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="kicker" style="justify-content:center">Straight answers</span>
+      <h2>Questions neighbors ask.</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q">Will I actually talk to Jody, or a call center?</button>
+        <div class="faq-a"><p>Jody. Garner Heating &amp; Air is an owner-operator shop — you deal with Jody himself, not a call center. Call <a href="tel:+19038216789">(903) 821-6789</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What brands do you service?</button>
+        <div class="faq-a"><p>All major brands — and with 20+ years in the trade, Jody's worked on just about everything out there, including units other techs gave up on.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">My system is old. Repair or replace?</button>
+        <div class="faq-a"><p>That's exactly the question to ask Jody directly. His customers specifically praise him for keeping aging systems running economically — and for telling it straight when a unit is truly done.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are your hours?</button>
+        <div class="faq-a"><p>Monday–Friday, 8:00 AM–5:00 PM. If the system quits after hours or on a weekend, call <a href="tel:+19038216789">(903) 821-6789</a> and leave a message — we'll get back to you as soon as we're in.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are you licensed?</button>
+        <div class="faq-a"><p>License #TACLA016579C, as published on garnerair.com. Jody's been in the business over 20 years serving North Texas and the DFW area.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you do commercial work too?</button>
+        <div class="faq-a"><p>Yes — residential and commercial. If it heats or cools a building, it's in Jody's wheelhouse.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3 class="serif">Garner Heating &amp; Air Conditioning</h3>
+        <p>Owner-operator HVAC — heating, cooling, and indoor air quality for North Texas homes and businesses, for over 20 years.</p>
+      </div>
+      <div>
+        <h3>Get in touch</h3>
+        <ul>
+          <li>📞 <a href="tel:+19038216789">(903) 821-6789</a></li>
+          <li>✉️ <a href="mailto:jody@garnerair.com">jody@garnerair.com</a></li>
+          <li>📍 387 Scoggins Rd, Tioga, TX 76271</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <ul>
+          <li>Mon–Fri: 8:00 AM – 5:00 PM</li>
+          <li>Sat–Sun: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Garner Heating &amp; Air Conditioning · Jody Garner, owner-operator</span>
+      <span>Demo preview — not the live site</span>
+    </div>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:+19038216789">📞 Call Jody — (903) 821-6789<small>Tap to call now</small></a>
+
+<script>
+/* Mobile nav */
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});
+});
+
+/* Scroll reveal */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* Animated counters */
+var cio=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var el=e.target,end=parseFloat(el.dataset.count),dec=parseInt(el.dataset.decimals||'0',10),t0=null;
+    function tick(t){if(!t0)t0=t;var p=Math.min((t-t0)/1400,1),v=end*(1-Math.pow(1-p,3));
+      el.textContent=dec?v.toFixed(dec):Math.round(v);
+      if(p<1)requestAnimationFrame(tick);}
+    requestAnimationFrame(tick);cio.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+
+/* Service tabs */
+var tabs=document.querySelectorAll('.tab');
+tabs.forEach(function(t){
+  t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false');});
+    document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+    t.classList.add('active');t.setAttribute('aria-selected','true');
+    document.getElementById(t.dataset.tab).classList.add('active');
+  });
+});
+
+/* Review slider */
+var slides=document.querySelectorAll('.slide'),cur=0,dotsBox=document.getElementById('dots');
+slides.forEach(function(_,i){
+  var d=document.createElement('button');d.className='dot'+(i===0?' active':'');d.setAttribute('aria-label','Review '+(i+1));
+  d.addEventListener('click',function(){go(i);});dotsBox.appendChild(d);
+});
+var dots=dotsBox.querySelectorAll('.dot');
+function go(i){cur=(i+slides.length)%slides.length;
+  slides.forEach(function(s,k){s.classList.toggle('active',k===cur);});
+  dots.forEach(function(d,k){d.classList.toggle('active',k===cur);});
+}
+document.getElementById('prevSlide').addEventListener('click',function(){go(cur-1);});
+document.getElementById('nextSlide').addEventListener('click',function(){go(cur+1);});
+setInterval(function(){go(cur+1);},9000);
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+
+/* Estimate form (demo) */
+document.getElementById('estForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('demoNotice').style.display='block';
+  document.getElementById('demoNotice').scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
