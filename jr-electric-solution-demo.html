@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JR Electric Solution — Anna, TX Electrician | Jose &amp; the Crew</title>
+<meta name="description" content="JR Electric Solution LLC, Anna TX. 4.9-star electrician — troubleshooting, panel work, outdoor lighting, the odd jobs others won't touch. Call (972) 302-4200.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0a07; --ink2:#161009; --ink3:#211607;
+  --amber:#ffb300; --amber2:#ff8a00;
+  --paper:#faf5ea; --mut:#b3a687;
+  --line:rgba(255,179,0,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+::selection{background:var(--amber);color:#0d0a07}
+h1,h2,h3,.disp{font-family:'Archivo Black',sans-serif;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+.demo-badge{position:fixed;top:12px;left:50%;transform:translateX(-50%) rotate(1.5deg);z-index:2000;
+  background:var(--amber);color:#0d0a07;font-weight:700;font-size:12px;letter-spacing:.14em;
+  padding:8px 18px;border-radius:3px;box-shadow:0 6px 24px rgba(255,179,0,.35)}
+.demo-badge small{display:block;font-size:9px;letter-spacing:.08em;font-weight:500}
+
+nav{position:sticky;top:0;z-index:1000;background:rgba(13,10,7,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1180px;margin:0 auto}
+.brand{font-family:'Archivo Black';font-size:17px}
+.brand b{color:var(--amber)}
+.nav-links{display:flex;gap:24px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a{text-decoration:none;opacity:.7;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--amber)}
+.nav-call{background:var(--amber);color:#0d0a07!important;font-weight:700;padding:10px 20px;border-radius:40px;text-decoration:none;opacity:1!important;transition:.2s;white-space:nowrap}
+.nav-call:hover{box-shadow:0 8px 26px rgba(255,179,0,.45);transform:scale(1.04)}
+@media(max-width:880px){.nav-links{display:none}}
+
+/* Hero — circuit board composition */
+.hero{position:relative;min-height:94vh;display:flex;align-items:center;padding:130px 0 90px;overflow:hidden;
+  background:radial-gradient(1000px 600px at 80% 20%, rgba(255,179,0,.12), transparent 60%), var(--ink)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;mask-image:radial-gradient(700px 500px at 70% 30%,#000,transparent 75%)}
+.bolt{position:absolute;right:6%;top:12%;width:min(300px,32vw);opacity:.9;filter:drop-shadow(0 0 40px rgba(255,179,0,.5));animation:flick 4s ease-in-out infinite}
+@keyframes flick{0%,100%{opacity:.9}92%{opacity:.9}93%{opacity:.4}94%{opacity:.9}96%{opacity:.6}97%{opacity:.9}}
+.hero-in{position:relative;z-index:2}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--amber);color:var(--amber);font-weight:700;font-size:12px;letter-spacing:.2em;padding:9px 18px;border-radius:30px;margin-bottom:28px;text-transform:uppercase}
+.hero-kicker i{width:8px;height:8px;border-radius:50%;background:var(--amber);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.2}}
+.hero h1{font-size:clamp(50px,8.6vw,116px);line-height:.95;text-transform:uppercase}
+.hero h1 .hl{position:relative;display:inline-block;color:var(--amber)}
+.hero h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:14px;background:var(--amber);opacity:.25;transform:skewX(-12deg)}
+.hero-sub{font-size:clamp(16px,2.1vw,21px);color:var(--mut);max-width:600px;margin:26px 0 36px;line-height:1.6}
+.hero-sub strong{color:var(--paper)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:17px 36px;font-weight:700;letter-spacing:.06em;text-decoration:none;font-size:14px;text-transform:uppercase;border-radius:40px;transition:.22s}
+.btn-solid{background:linear-gradient(135deg,var(--amber),var(--amber2));color:#0d0a07}
+.btn-solid:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(255,179,0,.4)}
+.btn-ghost{border:2px solid rgba(255,179,0,.5);color:var(--amber)}
+.btn-ghost:hover{border-color:var(--amber);background:rgba(255,179,0,.08)}
+.chips{margin-top:46px;display:flex;gap:14px;flex-wrap:wrap}
+.fchip{background:rgba(255,179,0,.08);border:1px solid var(--line);border-radius:14px;padding:14px 22px;font-size:14px}
+.fchip b{display:block;color:var(--amber);font-family:'Archivo Black';font-size:24px}
+@media(max-width:900px){.bolt{opacity:.25;top:6%}}
+
+/* Power strip divider */
+.strip{background:linear-gradient(90deg,var(--amber),var(--amber2));color:#0d0a07;overflow:hidden;white-space:nowrap;padding:12px 0}
+.strip span{font-family:'Archivo Black';font-size:17px;display:inline-block;padding:0 30px;letter-spacing:.05em;animation:mq 26s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.sec{padding:100px 0}
+.sec-head{margin-bottom:50px;max-width:760px}
+.sec-tag{color:var(--amber);font-weight:700;letter-spacing:.24em;font-size:12px;text-transform:uppercase;display:block;margin-bottom:14px}
+.sec-head h2{font-size:clamp(34px,5vw,62px);line-height:1.02;text-transform:uppercase}
+.sec-head p{color:var(--mut);margin-top:16px;line-height:1.7;font-size:17px}
+
+/* Tabs */
+.tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.tab{background:transparent;border:1px solid var(--line);color:var(--mut);font-family:'Space Grotesk';font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:14px 28px;border-radius:40px;cursor:pointer;transition:.25s}
+.tab.on,.tab:hover{background:var(--amber);color:#0d0a07;border-color:var(--amber)}
+.tabpanes{position:relative}
+.tabpane{display:none;grid-template-columns:repeat(3,1fr);gap:18px}
+.tabpane.on{display:grid;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.scard{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:34px 28px;transition:.28s;position:relative;overflow:hidden}
+.scard::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--amber),var(--amber2));transform:scaleX(0);transform-origin:left;transition:.3s}
+.scard:hover{transform:translateY(-8px);border-color:rgba(255,179,0,.5);box-shadow:0 20px 44px rgba(0,0,0,.5)}
+.scard:hover::after{transform:scaleX(1)}
+.scard .ico{font-size:38px;margin-bottom:18px;display:block}
+.scard h3{font-size:20px;margin-bottom:12px;text-transform:uppercase}
+.scard p{color:var(--mut);font-size:15px;line-height:1.65}
+@media(max-width:860px){.tabpane.on{grid-template-columns:1fr}}
+
+/* Jose feature */
+.jose{background:linear-gradient(150deg,var(--ink3),var(--ink));border:1px solid var(--line);border-radius:24px;padding:64px 56px;display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:center;position:relative;overflow:hidden}
+.jose::before{content:"“";position:absolute;top:-30px;left:30px;font-family:'Archivo Black';font-size:220px;color:rgba(255,179,0,.1)}
+.jose h3{font-size:clamp(26px,3.6vw,42px);text-transform:uppercase;margin-bottom:20px;position:relative}
+.jose h3 em{color:var(--amber);font-style:normal}
+.jose p{color:var(--mut);line-height:1.75;margin-bottom:16px;position:relative}
+.jose p strong{color:var(--paper)}
+.jose-side{background:rgba(255,179,0,.07);border:1px dashed rgba(255,179,0,.4);border-radius:16px;padding:30px;position:relative}
+.jose-side h4{color:var(--amber);font-family:'Archivo Black';font-size:15px;letter-spacing:.06em;margin-bottom:14px;text-transform:uppercase}
+.jose-side ul{list-style:none}
+.jose-side li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--mut)}
+.jose-side li:last-child{border:none}
+.jose-side li b{color:var(--paper)}
+@media(max-width:860px){.jose{grid-template-columns:1fr;padding:40px 28px}}
+
+/* Process steps — diagonal */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:10px}
+.step{padding:40px 30px;border-top:3px solid var(--amber);position:relative;background:var(--ink2)}
+.step:nth-child(2){background:var(--ink3);transform:translateY(18px)}
+.step:nth-child(3){transform:translateY(36px)}
+.step .n{font-family:'Archivo Black';font-size:56px;color:transparent;-webkit-text-stroke:1.5px var(--amber)}
+.step h3{font-size:19px;text-transform:uppercase;margin:12px 0 10px}
+.step p{color:var(--mut);font-size:15px;line-height:1.65}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.step:nth-child(2),.step:nth-child(3){transform:none}}
+
+/* Stats */
+.stats{background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;padding:64px 0}
+.stat b{font-family:'Archivo Black';font-size:clamp(36px,4.6vw,60px);color:var(--amber);display:block}
+.stat span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+@media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Reviews slider */
+.twrap{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:var(--ink2)}
+.tslides{display:flex;transition:transform .5s ease}
+.tslide{min-width:100%;padding:60px 50px}
+.tslide .stars{color:var(--amber);font-size:20px;letter-spacing:.3em;margin-bottom:20px}
+.tslide blockquote{font-size:clamp(18px,2.4vw,26px);line-height:1.55;font-weight:500;margin-bottom:20px}
+.tslide cite{font-style:normal;color:var(--mut);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.tslide cite b{color:var(--amber)}
+.tnav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-top:1px solid var(--line)}
+.tnav button{background:none;border:1px solid var(--amber);color:var(--amber);width:46px;height:46px;border-radius:50%;font-size:18px;cursor:pointer;transition:.2s}
+.tnav button:hover{background:var(--amber);color:#0d0a07}
+.tdots{display:flex;gap:8px}
+.tdots i{width:10px;height:10px;border-radius:50%;background:rgba(255,179,0,.25);cursor:pointer}
+.tdots i.on{background:var(--amber)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line)}
+.faq:last-of-type{border-bottom:1px solid var(--line)}
+.faq q{display:flex;justify-content:space-between;align-items:center;quotes:none;cursor:pointer;padding:22px 8px;font-weight:700;font-size:17px}
+.faq q span:last-child{color:var(--amber);font-size:24px;transition:.3s}
+.faq.open q span:last-child{transform:rotate(45deg)}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--mut);line-height:1.7}
+.faq .a div{padding:0 8px 24px;max-width:780px}
+
+/* Form */
+.form-card{background:var(--ink2);border:1px solid var(--line);border-radius:24px;padding:56px 48px;max-width:780px;margin:0 auto;position:relative;overflow:hidden}
+.form-card::before{content:"";position:absolute;top:-70px;right:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,0,.25),transparent 70%)}
+.form-card h3{font-size:clamp(24px,3.4vw,38px);text-transform:uppercase;margin-bottom:10px}
+.form-card>p{color:var(--mut);margin-bottom:28px;line-height:1.6}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-card input,.form-card select,.form-card textarea{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--paper);padding:15px 16px;font-family:inherit;font-size:15px;border-radius:12px}
+.form-card input:focus,.form-card select:focus,.form-card textarea:focus{outline:none;border-color:var(--amber)}
+.form-card textarea{grid-column:1/-1;min-height:110px;resize:vertical}
+.form-card button{width:100%;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#0d0a07;border:none;padding:18px;font-family:'Archivo Black';font-size:16px;cursor:pointer;border-radius:40px;transition:.2s;text-transform:uppercase;letter-spacing:.05em}
+.form-card button:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,179,0,.4)}
+.fine{font-size:12px;color:var(--mut);text-align:center;margin-top:14px}
+@media(max-width:640px){.frow{grid-template-columns:1fr}.form-card{padding:36px 24px}}
+
+footer{background:#080604;border-top:1px solid var(--line);padding:60px 0 120px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.foot-grid h4{font-family:'Archivo Black';font-size:14px;color:var(--amber);margin-bottom:16px;letter-spacing:.06em}
+.foot-grid p,.foot-grid a{color:var(--mut);font-size:15px;line-height:1.9;text-decoration:none}
+.foot-grid a:hover{color:var(--amber)}
+.foot-big{font-family:'Archivo Black';font-size:clamp(26px,4vw,44px);margin:36px 0 8px}
+.foot-big a{color:var(--amber);text-decoration:none}
+.foot-note{font-size:12px;color:#6b5f45;margin-top:26px;line-height:1.7}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+
+.mcall{position:fixed;bottom:0;left:0;right:0;z-index:1500;display:none;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#0d0a07;text-align:center;padding:16px;font-family:'Archivo Black';font-size:17px;text-decoration:none}
+@media(max-width:880px){.mcall{display:block}}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO PREVIEW<small>Concept by NoFluff Marketing — not the business's live site</small></div>
+
+<nav>
+  <div class="nav-in">
+    <div class="brand">JR ELECTRIC <b>SOLUTION</b></div>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#jose">Jose</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-call" href="tel:+19723024200">📞 (972) 302-4200</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="bolt" viewBox="0 0 100 160" fill="none"><path d="M58 4 14 92h28l-8 64 52-88H58l8-64z" fill="#ffb300" opacity=".9"/><path d="M58 4 14 92h28l-8 64 52-88H58l8-64z" stroke="#ff8a00" stroke-width="3"/></svg>
+  <div class="wrap hero-in">
+    <span class="hero-kicker"><i></i>Anna, TX · Residential Electrician</span>
+    <h1>THE JOBS<br>OTHER GUYS<br><span class="hl">WON'T TOUCH.</span></h1>
+    <p class="hero-sub">Jose and the crew at <strong>JR Electric Solution</strong> wire the tricky stuff — retractable awnings with no existing wiring, outdoor lighting, rental-property fixes — and they do it with <strong>small-shop care</strong> the big companies can't copy.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="tel:+19723024200">Call (972) 302-4200</a>
+      <a class="btn btn-ghost" href="#quote">Get a Free Quote</a>
+    </div>
+    <div class="chips">
+      <div class="fchip"><b>4.9★</b>14 Birdeye reviews</div>
+      <div class="fchip"><b>5.0★</b>BestProsInTown</div>
+      <div class="fchip"><b>Sat</b>Open 8–12</div>
+    </div>
+  </div>
+</header>
+
+<div class="strip"><span>⚡ TROUBLESHOOTING ⚡ PANEL UPGRADES ⚡ OUTDOOR LIGHTING ⚡ EV CHARGERS ⚡ WIRING REPAIRS ⚡ TROUBLESHOOTING ⚡ PANEL UPGRADES ⚡ OUTDOOR LIGHTING ⚡ EV CHARGERS ⚡ WIRING REPAIRS ⚡</span></div>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-tag">What they wire</span><h2>Pick your project.</h2><p>From a dead outlet to a full outdoor setup — if it runs on electricity in your home or rental, Jose's crew handles it.</p></div>
+    <div class="tabs rv" id="tabs">
+      <button class="tab on" data-t="t1">Home Electrical</button>
+      <button class="tab" data-t="t2">Outdoor &amp; Specialty</button>
+      <button class="tab" data-t="t3">Rentals &amp; Repairs</button>
+    </div>
+    <div class="tabpanes rv">
+      <div class="tabpane on" id="t1">
+        <div class="scard"><span class="ico">🔍</span><h3>Troubleshooting &amp; Repairs</h3><p>Dead outlets, flickering lights, breakers that keep tripping — diagnosed properly and fixed right the first time, not patched.</p></div>
+        <div class="scard"><span class="ico">🔌</span><h3>Outlets &amp; Switches</h3><p>New outlets, GFCI protection where code requires it, dimmers, smart switches — installed clean and tested.</p></div>
+        <div class="scard"><span class="ico">⚡</span><h3>Panel Work</h3><p>Breaker replacements, panel tune-ups, and capacity checks so your home's electrical heart is safe and up to code.</p></div>
+      </div>
+      <div class="tabpane" id="t2">
+        <div class="scard"><span class="ico">⛱️</span><h3>Retractable Awnings</h3><p>Their signature odd-job: wiring motorized retractable awnings from scratch where no wiring existed. Four sets installed for one happy customer.</p></div>
+        <div class="scard"><span class="ico">💡</span><h3>Outdoor Lighting</h3><p>Landscape and security lighting that actually gets wired correctly — fixtures placed, circuits run, timers set.</p></div>
+        <div class="scard"><span class="ico">🔋</span><h3>EV Chargers &amp; Dryer Plugs</h3><p>240V circuits for EV chargers and dryer outlets — including rental properties that need it done fast and right.</p></div>
+      </div>
+      <div class="tabpane" id="t3">
+        <div class="scard"><span class="ico">🏠</span><h3>Rental-Property Work</h3><p>Landlords call Jose for turnover fixes and tenant issues — dryer plugs, dead circuits, quick safe repairs between leases.</p></div>
+        <div class="scard"><span class="ico">🧰</span><h3>Fixture Installs</h3><p>Ceiling fans, light fixtures, bath fans — the "small" jobs the big shops won't schedule, done with care.</p></div>
+        <div class="scard"><span class="ico">🛡️</span><h3>Safety Checks</h3><p>A second set of trained eyes on older wiring before it becomes a problem. Straight answers, no scare tactics.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat rv"><b><span class="count" data-n="4.9" data-dec="1">0</span>★</b><span>Birdeye · 14 reviews</span></div>
+    <div class="stat rv"><b><span class="count" data-n="5">0</span>.0★</b><span>BestProsInTown</span></div>
+    <div class="stat rv"><b><span class="count" data-n="100">0</span>%</b><span>5-star reviewers</span></div>
+    <div class="stat rv"><b>ANNA</b><span>Home base, TX</span></div>
+  </div>
+</section>
+
+<section class="sec" id="jose">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-tag">Why neighbors ask for Jose</span></div>
+    <div class="jose rv">
+      <div>
+        <h3>Small shop.<br><em>Big follow-through.</em></h3>
+        <p>Reviewers don't say "the technician was fine." They say <strong>Jose</strong> — by name. The guy who wired four retractable awnings where no wiring existed. Who listens, checks in on daily progress, and doesn't leave until you're pleased.</p>
+        <p>That's the whole pitch: <strong>a real electrician who answers, shows up, and treats your house like it's his own.</strong> No dispatch queue. No "we'll send whoever's free."</p>
+        <p><strong>Anna-based, serving Anna and the surrounding Collin County area.</strong></p>
+        <div style="margin-top:26px"><a class="btn btn-solid" href="tel:+19723024200">Call Jose's Crew</a></div>
+      </div>
+      <div class="jose-side">
+        <h4>Reviewers mention</h4>
+        <ul>
+          <li><b>Efficient</b> — in, fixed, cleaned up</li>
+          <li><b>Knowledgeable</b> — explains before he bills</li>
+          <li><b>Prompt</b> — shows up when he says</li>
+          <li><b>Competitive rates</b> — fair pricing, no games</li>
+          <li><b>Above &amp; beyond</b> — beats every obstacle on the job</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="process" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-tag">How it works</span><h2>Three steps. No drama.</h2></div>
+    <div class="steps rv">
+      <div class="step"><div class="n">01</div><h3>You call</h3><p>Talk to a real person. Describe the problem — dead outlet, new awning, rental turnover — and get a straight answer on timing.</p></div>
+      <div class="step"><div class="n">02</div><h3>Jose diagnoses</h3><p>On-site look, plain-English explanation, competitive quote before any work starts. No pressure, no mystery fees.</p></div>
+      <div class="step"><div class="n">03</div><h3>It's done right</h3><p>Clean work, tested before they leave, and follow-up that keeps reviewers coming back with five stars.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-tag">Word on the street</span><h2>14 reviews. Zero complaints.</h2></div>
+    <div class="twrap rv">
+      <div class="tslides" id="tslides">
+        <div class="tslide"><div class="stars">★★★★★</div><blockquote>"Jose and his team installed four sets of retractable awnings, as well as outdoor light fixtures. No pre-existing wiring existed, so they successfully completed that task as well. Jose went above and beyond his duty to make sure all of my requirements were met."</blockquote><cite><b>Birdeye review</b></cite></div>
+        <div class="tslide"><div class="stars">★★★★★</div><blockquote>"Efficient, knowledgeable, promptness, professional and competitive rate!!!"</blockquote><cite><b>Nancy Chian</b> · BestProsInTown · Jan 2025</cite></div>
+        <div class="tslide"><div class="stars">★★★★★</div><blockquote>"Jose put in a new dryer plug for one of my rentals. Did a great job! 👍"</blockquote><cite><b>Birdeye review</b></cite></div>
+        <div class="tslide"><div class="stars">★★★★★</div><blockquote>"Excellent work! Would definitely call again for future electrical needs."</blockquote><cite><b>Birdeye review</b></cite></div>
+      </div>
+      <div class="tnav">
+        <button id="tprev" aria-label="Previous">←</button>
+        <div class="tdots" id="tdots"></div>
+        <button id="tnext" aria-label="Next">→</button>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:14px;font-size:13px">4.9★ across 14 Birdeye reviews (profile unclaimed) · 5.0★ BestProsInTown. Some reviewer names did not render on source pages.</p>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-tag">Good to know</span><h2>Quick answers.</h2></div>
+    <div class="rv" style="max-width:860px">
+      <div class="faq"><q>Do you really wire retractable awnings?<span>+</span></q><div class="a"><div>Yes — it's one of their most-mentioned jobs. A reviewer had four sets of motorized awnings plus outdoor fixtures wired where no wiring existed at all.</div></div></div>
+      <div class="faq"><q>Do you work on rental properties?<span>+</span></q><div class="a"><div>Yes. Landlords call for turnover fixes like dryer plugs and dead circuits — fast, safe, and priced fairly.</div></div></div>
+      <div class="faq"><q>What are your hours?<span>+</span></q><div class="a"><div>Monday–Friday 8:00 AM–5:00 PM, Saturday 8:00 AM–12:00 PM, closed Sunday (per current listings).</div></div></div>
+      <div class="faq"><q>Where are you based?<span>+</span></q><div class="a"><div>2812 Plantation Dr, Anna, TX — serving Anna and the surrounding Collin County area.</div></div></div>
+      <div class="faq"><q>How do I get a quote?<span>+</span></q><div class="a"><div>Call (972) 302-4200 — you'll talk through the job and get a competitive rate before any work begins.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="quote" style="padding-top:20px">
+  <div class="wrap">
+    <div class="form-card rv">
+      <h3>Get a free quote</h3>
+      <p>Describe the job — big or odd — and Jose's crew will call back with a straight quote. In a hurry? <a href="tel:+19723024200" style="color:var(--amber);font-weight:700">(972) 302-4200</a>.</p>
+      <form onsubmit="return qSubmit(event)">
+        <div class="frow">
+          <input required placeholder="Your name" aria-label="Your name">
+          <input required type="tel" placeholder="Phone number" aria-label="Phone number">
+        </div>
+        <div class="frow">
+          <select aria-label="Project type"><option>Troubleshooting / repair</option><option>Outdoor lighting</option><option>Retractable awning wiring</option><option>EV charger / 240V circuit</option><option>Rental property work</option><option>Something else</option></select>
+          <input placeholder="Town (e.g. Anna)" aria-label="Town">
+        </div>
+        <textarea placeholder="What's the job?"></textarea>
+        <div style="margin-top:16px"><button type="submit">Request My Free Quote</button></div>
+        <p class="fine">Demo form — in the live build this sends straight to JR Electric Solution.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-big"><a href="tel:+19723024200">(972) 302-4200</a></div>
+    <div class="foot-grid">
+      <div><h4>JR ELECTRIC SOLUTION LLC</h4><p>2812 Plantation Dr<br>Anna, TX 75409</p></div>
+      <div><h4>HOURS</h4><p>Mon–Fri: 8:00 AM – 5:00 PM<br>Sat: 8:00 AM – 12:00 PM<br>Sun: Closed</p></div>
+      <div><h4>SERVICES</h4><p>Troubleshooting &amp; Repairs<br>Outdoor &amp; Specialty Wiring<br>Rental-Property Work</p></div>
+    </div>
+    <p class="foot-note">Demo preview built by NoFluff Marketing. Business details verified from public listings 2026-09-19. Hours per BestProsInTown/Google listing (Birdeye shows conflicting hours — confirm).</p>
+  </div>
+</footer>
+
+<a class="mcall" href="tel:+19723024200">⚡ CALL (972) 302-4200</a>
+
+<script>
+// Tabs
+const tabs=document.querySelectorAll('.tab');
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('on'));t.classList.add('on');
+  document.querySelectorAll('.tabpane').forEach(p=>p.classList.remove('on'));
+  document.getElementById(t.dataset.t).classList.add('on');
+}));
+// FAQ
+document.querySelectorAll('.faq').forEach(f=>{
+  f.querySelector('q').addEventListener('click',()=>{
+    const a=f.querySelector('.a'),open=f.classList.contains('open');
+    document.querySelectorAll('.faq.open').forEach(o=>{o.classList.remove('open');o.querySelector('.a').style.maxHeight=null;});
+    if(!open){f.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+// Slider
+const slides=document.getElementById('tslides'),dots=document.getElementById('tdots');
+let ti=0;const n=slides.children.length;
+for(let i=0;i<n;i++){const d=document.createElement('i');if(!i)d.classList.add('on');d.onclick=()=>go(i);dots.appendChild(d);}
+function go(i){ti=(i+n)%n;slides.style.transform='translateX(-'+ti*100+'%)';[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===ti));}
+document.getElementById('tprev').onclick=()=>go(ti-1);
+document.getElementById('tnext').onclick=()=>go(ti+1);
+setInterval(()=>go(ti+1),7500);
+// Counters
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){anim(e.target);io.unobserve(e.target);}})},{threshold:.5});
+document.querySelectorAll('.count').forEach(c=>io.observe(c));
+function anim(el){const t=parseFloat(el.dataset.n),dec=+(el.dataset.dec||0);let s=null;
+  function f(ts){if(!s)s=ts;const p=Math.min((ts-s)/1400,1),v=t*(1-Math.pow(1-p,3));
+    el.textContent=dec?v.toFixed(dec):Math.round(v);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+// Reveal
+const io2=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io2.observe(el));
+function qSubmit(e){e.preventDefault();alert('Thanks! In the live build this sends your request straight to JR Electric Solution at (972) 302-4200.');return false;}
+</script>
+</body>
+</html>
