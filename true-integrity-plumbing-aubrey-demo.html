@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>True Integrity Plumbing — Aubrey, TX | Honest Plumbing Since 2008</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#101c2c; --navy2:#16263c; --copper:#c07a3a; --copper-l:#e3a95f;
+  --cream:#f7f1e6; --paper:#fbf8f1; --ink:#243042; --muted:#6b7484;
+  --green:#2e7d4f; --line:#e6dcc8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;line-height:1.15;color:var(--navy)}
+a{color:inherit}
+img{max-width:100%}
+/* demo badge */
+.demo-badge{position:fixed;top:14px;right:14px;z-index:200;background:repeating-linear-gradient(45deg,#f5c518,#f5c518 12px,#111 12px,#111 24px);color:#111;font-weight:800;font-size:12px;letter-spacing:2px;padding:9px 14px;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.35);border:2px solid #111}
+.demo-badge span{background:#f5c518;padding:2px 6px}
+/* topbar + nav */
+.topbar{background:var(--navy);color:#dfe6f0;font-size:13.5px;padding:8px 6vw;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{color:var(--copper-l);font-weight:700;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(247,241,230,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:'Playfair Display',serif;font-weight:900;font-size:21px;color:var(--navy);text-decoration:none}
+.brand em{color:var(--copper);font-style:normal}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;font-weight:600;font-size:15px;color:var(--navy);position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--copper);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--navy);color:#fff!important;text-decoration:none;font-weight:700;padding:10px 22px;border-radius:4px}
+.nav-cta:hover{background:var(--copper)}
+.menu-btn{display:none;background:none;border:0;font-size:28px;cursor:pointer;color:var(--navy)}
+/* hero */
+.hero{background:linear-gradient(115deg,var(--navy) 0%,var(--navy2) 62%,#1e3250 100%);color:#eef2f8;overflow:hidden;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 85% 10%,rgba(192,122,58,.25),transparent 60%),
+  radial-gradient(500px 260px at 8% 90%,rgba(192,122,58,.14),transparent 60%)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:84px 24px 90px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative}
+.kicker{color:var(--copper-l);letter-spacing:3px;font-weight:700;font-size:13px;text-transform:uppercase;margin-bottom:18px}
+.hero h1{color:#fff;font-size:clamp(38px,5vw,60px);font-weight:900;margin-bottom:20px}
+.hero h1 em{color:var(--copper-l);font-style:italic}
+.hero p.lede{font-size:19px;color:#c9d3e2;max-width:520px;margin-bottom:32px}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 30px;border-radius:4px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.btn-copper{background:linear-gradient(135deg,var(--copper),#a8642c);color:#fff}
+.btn-ghost{border:2px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{border-color:var(--copper-l)}
+.hero-card{background:var(--paper);border-radius:10px;padding:34px 30px;color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.35);border-top:6px solid var(--copper)}
+.hero-card h3{font-size:24px;margin-bottom:6px}
+.hero-card p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:4px;font:inherit;background:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--copper)}
+.form-note{font-size:13px;color:var(--muted);margin-top:10px}
+.form-ok{display:none;background:#e9f5ec;border:1.5px solid var(--green);color:#1d5c34;padding:14px;border-radius:4px;font-weight:600;margin-top:12px}
+/* trust band */
+.trust{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-inner{max-width:1180px;margin:0 auto;padding:44px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}
+.stat .num{font-family:'Playfair Display',serif;font-size:46px;font-weight:900;color:var(--navy)}
+.stat .num small{font-size:24px;color:var(--copper)}
+.stat p{color:var(--muted);font-size:15px;margin-top:4px}
+/* sections */
+.section{max-width:1180px;margin:0 auto;padding:84px 24px}
+.sec-head{max-width:720px;margin-bottom:44px}
+.sec-head .kicker{color:var(--copper)}
+.sec-head h2{font-size:clamp(30px,3.6vw,44px);font-weight:900;margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:17px}
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story-art{background:var(--navy);border-radius:10px;padding:44px 40px;color:#e8edf5;position:relative;overflow:hidden}
+.story-art::after{content:"2008";position:absolute;right:18px;bottom:-6px;font-family:'Playfair Display',serif;font-size:120px;font-weight:900;color:rgba(255,255,255,.06)}
+.story-art blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:23px;line-height:1.5;margin-bottom:18px;position:relative;z-index:1}
+.story-art cite{font-style:normal;font-size:14px;color:var(--copper-l);font-weight:700;position:relative;z-index:1}
+.story ul{list-style:none;margin-top:24px;display:grid;gap:14px}
+.story li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
+.story li .tick{background:var(--copper);color:#fff;border-radius:50%;width:26px;height:26px;flex:0 0 26px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;margin-top:2px}
+/* service tabs */
+.tabs{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 14px 40px rgba(16,28,44,.07)}
+.tab-bar{display:flex;flex-wrap:wrap;background:var(--navy)}
+.tab-btn{flex:1 1 auto;background:none;border:0;color:#c9d3e2;font:inherit;font-weight:700;font-size:15px;padding:18px 12px;cursor:pointer;border-bottom:3px solid transparent;transition:.2s}
+.tab-btn:hover{color:#fff;background:rgba(255,255,255,.05)}
+.tab-btn.active{color:#fff;border-bottom-color:var(--copper);background:rgba(192,122,58,.12)}
+.tab-panel{display:none;padding:40px 44px;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.tab-panel.active{display:grid;animation:fadeUp .4s ease}
+.tab-panel h3{font-size:27px;margin-bottom:12px}
+.tab-panel p{color:var(--muted);margin-bottom:18px}
+.tab-panel ul{list-style:none;display:grid;gap:10px}
+.tab-panel li::before{content:"— ";color:var(--copper);font-weight:700}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+/* specialty band */
+.specialty{background:linear-gradient(120deg,#1a2f48,#0f1b2c);color:#eef2f8;border-radius:12px;padding:56px 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;position:relative;overflow:hidden}
+.specialty::before{content:"";position:absolute;width:340px;height:340px;border:26px solid rgba(192,122,58,.16);border-radius:50%;right:-90px;top:-90px}
+.specialty h2{color:#fff;font-size:clamp(28px,3.4vw,40px);margin-bottom:16px}
+.specialty h2 em{color:var(--copper-l);font-style:italic}
+.specialty p{color:#c9d3e2;margin-bottom:14px}
+.specialty ul{list-style:none;display:grid;gap:10px;margin-top:18px}
+.specialty li::before{content:"✓ ";color:var(--copper-l);font-weight:800}
+.specialty .badge-card{background:var(--paper);border-radius:10px;padding:30px;color:var(--ink);position:relative;z-index:1}
+.specialty .badge-card .big{font-family:'Playfair Display',serif;font-size:58px;font-weight:900;color:var(--navy)}
+.specialty .badge-card .big small{font-size:20px;color:var(--copper)}
+/* testimonial */
+.testi{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:52px 48px;text-align:center;position:relative}
+.testi::before{content:"“";font-family:'Playfair Display',serif;font-size:110px;color:var(--copper);opacity:.35;position:absolute;top:8px;left:40px}
+.testi blockquote{font-family:'Playfair Display',serif;font-size:clamp(20px,2.4vw,27px);font-style:italic;color:var(--navy);max-width:820px;margin:0 auto 20px;line-height:1.55}
+.testi .who{font-weight:700;color:var(--copper);font-size:16px}
+.testi .src{font-size:13.5px;color:var(--muted)}
+.stars{color:var(--copper);font-size:20px;letter-spacing:4px;margin-bottom:16px}
+/* faq */
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;font:inherit;text-align:left;padding:20px 24px;font-weight:700;font-size:17px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .plus{color:var(--copper);font-size:24px;font-weight:400;transition:transform .25s;flex:0 0 auto}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted)}
+/* service area */
+.areas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.areas span{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:9px 20px;font-weight:600;font-size:15px;transition:.2s;cursor:default}
+.areas span:hover{border-color:var(--copper);transform:translateY(-2px);box-shadow:0 6px 14px rgba(16,28,44,.08)}
+/* footer */
+footer{background:var(--navy);color:#c9d3e2}
+.foot-inner{max-width:1180px;margin:0 auto;padding:56px 24px 30px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+.foot-inner h4{color:#fff;font-family:'Playfair Display',serif;font-size:20px;margin-bottom:14px}
+.foot-inner a{color:var(--copper-l);font-weight:700;text-decoration:none}
+.foot-inner p,.foot-inner li{font-size:15px;margin-bottom:8px}
+.foot-inner ul{list-style:none}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:20px;font-size:13px;color:#8d99ac}
+/* sticky mobile call */
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--green);color:#fff;text-align:center;padding:16px;font-weight:800;font-size:18px;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.25)}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .hero-inner,.story,.specialty{grid-template-columns:1fr}
+  .tab-panel.active{grid-template-columns:1fr}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+  .foot-inner{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:18px 24px;gap:14px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .sticky-call{display:block}
+  body{padding-bottom:60px}
+}
+</style>
+</head>
+<body>
+<div class="demo-badge"><span>DEMO PREVIEW</span></div>
+<div class="topbar"><span>Serving Aubrey, Denton &amp; Frisco — up to 45 miles out</span><a href="tel:+19403650025">Call (940) 365-0025</a></div>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#">True <em>Integrity</em> Plumbing</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#heaters">Water Heaters</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-cta" href="tel:+19403650025">📞 (940) 365-0025</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="kicker">Family-run · Aubrey, Texas · Since 2008</div>
+      <h1>The plumber you only have to <em>call once.</em></h1>
+      <p class="lede">Honest value, done right the first time. Repairs, drain cleaning, hydro-jetting, water heaters, slab leaks and video inspections — backed by 18 years of Aubrey trust.</p>
+      <div class="btn-row">
+        <a class="btn btn-copper" href="tel:+19403650025">📞 Call (940) 365-0025</a>
+        <a class="btn btn-ghost" href="#estimate">Request an Appointment</a>
+      </div>
+    </div>
+    <div class="hero-card" id="estimate">
+      <h3>Request an Appointment</h3>
+      <p>Tell us what's going on — we'll confirm a time by phone.</p>
+      <form id="quoteForm" onsubmit="return fakeSubmit(event)">
+        <div class="field"><label for="qn">Name</label><input id="qn" required placeholder="Your name"></div>
+        <div class="field"><label for="qp">Phone</label><input id="qp" type="tel" required placeholder="(940) 555-0100"></div>
+        <div class="field"><label for="qs">What do you need?</label>
+          <select id="qs">
+            <option>Plumbing repair</option><option>Water heater</option><option>Drain cleaning / hydro-jetting</option><option>Slab leak</option><option>Video inspection</option><option>Something else</option>
+          </select></div>
+        <div class="field"><label for="qd">Details</label><textarea id="qd" rows="3" placeholder="Briefly describe the issue"></textarea></div>
+        <button class="btn btn-copper" type="submit" style="width:100%;border:0;cursor:pointer">Send Request</button>
+        <div class="form-ok" id="formOk">✓ Request received (demo). In the live site this calls or texts True Integrity Plumbing directly.</div>
+        <p class="form-note">Prefer to talk? <a href="tel:+19403650025" style="color:var(--copper);font-weight:700">Call (940) 365-0025</a></p>
+      </form>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="trust-inner">
+    <div class="stat reveal"><div class="num"><span class="count" data-to="18">0</span><small>+</small></div><p>Years serving North Texas</p></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-to="15">0</span><small>yrs</small></div><p>Longest customer still calling us</p></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-to="6">0</span></div><p>Core services, one honest shop</p></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-to="45">0</span><small>mi</small></div><p>Service radius from Aubrey</p></div>
+  </div>
+</section>
+
+<section class="section" id="story">
+  <div class="story">
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:20px">
+        <div class="kicker">Why "True Integrity"</div>
+        <h2>Built to put trust back into the trade.</h2>
+      </div>
+      <p style="font-size:17px;color:var(--muted);margin-bottom:16px">In February 2008, owner Travis Johnson started True Integrity Plumbing with one goal: reestablish trust in the plumbing trade in the local community's eye. Run as a family business with his wife Deanna — debt free, the way they operate.</p>
+      <ul>
+        <li><span class="tick">✓</span><span><strong>One call, one plumber.</strong> Honest value and service on every visit — that's the whole business model.</span></li>
+        <li><span class="tick">✓</span><span><strong>Residential focus,</strong> with commercial repair experience — not a jack-of-all-trades handyman.</span></li>
+        <li><span class="tick">✓</span><span><strong>Local roots:</strong> the Johnson family is part of the Aubrey community and Midway Church.</span></li>
+        <li><span class="tick">✓</span><span><strong>Repeat customers for 15+ years</strong> — because the work holds and the price is fair.</span></li>
+      </ul>
+    </div>
+    <div class="story-art reveal">
+      <blockquote>"TIP came about after a series of events in seeking the Lord's will… I love my family and I love what I do for a living."</blockquote>
+      <cite>— Travis Johnson, Owner · 380 Guide magazine profile</cite>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services" style="padding-top:0">
+  <div class="sec-head reveal">
+    <div class="kicker">What we do</div>
+    <h2>Every plumbing repair and drain cleaning need — one shop.</h2>
+    <p>Tap a service to see what's included. If it's water-related and we can't fix it, we'll tell you straight.</p>
+  </div>
+  <div class="tabs reveal">
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" onclick="showTab(0)">Plumbing Repairs</button>
+      <button class="tab-btn" onclick="showTab(1)">Drain Cleaning &amp; Hydro-Jetting</button>
+      <button class="tab-btn" onclick="showTab(2)">Water Heaters</button>
+      <button class="tab-btn" onclick="showTab(3)">Slab Leaks</button>
+      <button class="tab-btn" onclick="showTab(4)">Video Inspections</button>
+    </div>
+    <div class="tab-panel active"><div>
+      <h3>Plumbing repairs, done right the first time</h3>
+      <p>Leaks, fixtures, pipes, toilets, faucets — repaired by people who've done it for nearly two decades, not upsold by a call center.</p>
+      <ul><li>Faucets, fixtures &amp; pipe repair or replacement</li><li>Toilet repair &amp; replacement</li><li>Leak detection &amp; repair</li><li>Remodel &amp; addition plumbing installation</li></ul>
+    </div><div><a class="btn btn-copper" href="tel:+19403650025">📞 (940) 365-0025</a></div></div>
+    <div class="tab-panel"><div>
+      <h3>Drain cleaning &amp; hydro-jetting</h3>
+      <p>Slow drains and stubborn clogs cleared with the right tool — cabling for routine blockages, high-pressure hydro-jetting for grease and roots.</p>
+      <ul><li>Kitchen &amp; bathroom drain cleaning</li><li>Main-line snaking</li><li>Hydro-jetting for heavy buildup</li><li>Recurring-clog diagnosis</li></ul>
+    </div><div><a class="btn btn-copper" href="tel:+19403650025">📞 (940) 365-0025</a></div></div>
+    <div class="tab-panel"><div>
+      <h3>Water heater repair &amp; replacement</h3>
+      <p>Our most-called specialty. Tank and tankless units serviced and replaced — with a track record of permitted, inspected installs.</p>
+      <ul><li>Water heater repair &amp; service</li><li>Full replacement &amp; new installs</li><li>Tank &amp; tankless expertise</li><li>Permitted work, done to code</li></ul>
+    </div><div><a class="btn btn-copper" href="#heaters" style="text-decoration:none">See our water-heater work ↓</a></div></div>
+    <div class="tab-panel"><div>
+      <h3>Slab leak location &amp; repair</h3>
+      <p>Hot spots on the floor, a water bill that won't quit, the sound of running water with everything off — we find slab leaks fast and fix them with minimal disruption.</p>
+      <ul><li>Non-invasive leak detection</li><li>Targeted repair options</li><li>Honest guidance on re-route vs. repair</li></ul>
+    </div><div><a class="btn btn-copper" href="tel:+19403650025">📞 (940) 365-0025</a></div></div>
+    <div class="tab-panel"><div>
+      <h3>Video camera inspections</h3>
+      <p>See inside your pipes before you pay for a repair. Camera inspections take the guesswork — and the upsell — out of sewer and drain work.</p>
+      <ul><li>Sewer line camera inspection</li><li>Pre-purchase drain checks</li><li>Documented findings you can keep</li></ul>
+    </div><div><a class="btn btn-copper" href="tel:+19403650025">📞 (940) 365-0025</a></div></div>
+  </div>
+</section>
+
+<section class="section" id="heaters" style="padding-top:0">
+  <div class="specialty reveal">
+    <div>
+      <h2>Water heaters are <em>our bread and butter.</em></h2>
+      <p>Completed, permitted water-heater jobs are the backbone of our work — from simple repairs to full replacements, we do them to code and they stay done.</p>
+      <ul>
+        <li>Repair before replace — we'll tell you when a fix is the honest answer</li>
+        <li>Right-sized replacement so you're not heating water you never use</li>
+        <li>Permits pulled and work done to code (per BuildZoom permit record)</li>
+      </ul>
+      <div class="btn-row" style="margin-top:24px">
+        <a class="btn btn-copper" href="tel:+19403650025">📞 Call (940) 365-0025</a>
+      </div>
+    </div>
+    <div class="badge-card">
+      <div class="big">5.0<small> ★</small></div>
+      <p style="font-weight:700;color:var(--navy);margin:8px 0 4px">HomeAdvisor rating</p>
+      <p style="font-size:14px;color:var(--muted)">From a verified water-heater customer — after 15 years of calling us for everything else.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews" style="padding-top:0">
+  <div class="sec-head reveal">
+    <div class="kicker">Word of mouth</div>
+    <h2>Fifteen years. Zero repeat problems.</h2>
+  </div>
+  <div class="testi reveal">
+    <div class="stars">★★★★★</div>
+    <blockquote>"Couldn't have been happier with True Integrity Plumbing. We had them out for several issues over a 15 year period. Easy to work with, fast/hard working, on time, and did excellent job each time. Never had any repeat issues or needed them out for a follow up. Good people; good company. Wouldn't use anyone else."</blockquote>
+    <div class="who">Lisa C.</div>
+    <div class="src">HomeAdvisor · Water Heater Repair or Service · August 2025</div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="padding-top:0">
+  <div class="sec-head reveal">
+    <div class="kicker">Straight answers</div>
+    <h2>Questions Aubrey homeowners ask us.</h2>
+  </div>
+  <div class="reveal">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How fast can you get to me?<span class="plus">+</span></button><div class="faq-a"><p>Call <a href="tel:+19403650025" style="color:var(--copper);font-weight:700">(940) 365-0025</a> and we'll give you a straight answer. We're a small family shop — when you call, you talk to us, not a dispatch queue.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you repair before you replace?<span class="plus">+</span></button><div class="faq-a"><p>Always. The business was founded to put trust back in the trade — if a repair is the honest fix, that's what we'll recommend. If replacement is genuinely the better value, we'll show you why.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What areas do you serve?<span class="plus">+</span></button><div class="faq-a"><p>Our preferred coverage is the Aubrey, Denton and Frisco area, and we'll travel up to about 45 miles for the right job.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you do commercial work?<span class="plus">+</span></button><div class="faq-a"><p>Yes — we focus on residential plumbing but specialize in commercial repairs as well, including permitted commercial water-heater work.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you offer free estimates?<span class="plus">+</span></button><div class="faq-a"><p>Call and describe the job — we'll be upfront about pricing and whether a visit is even needed. No surprises.</p></div></div>
+  </div>
+  <div class="reveal">
+    <h3 style="margin:44px 0 6px">Where we work</h3>
+    <p style="color:var(--muted)">Proudly serving Denton County and the 380 corridor:</p>
+    <div class="areas">
+      <span>Aubrey</span><span>Denton</span><span>Frisco</span><span>Krugerville</span><span>Pilot Point</span><span>Sanger</span><span>Providence</span><span>Cross Roads</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <h4>True Integrity Plumbing</h4>
+      <p>Honest plumbing repairs, drain cleaning, hydro-jetting, water heaters, slab leaks and video inspections — serving Aubrey and North Texas since 2008.</p>
+      <p style="margin-top:12px"><a href="tel:+19403650025">📞 (940) 365-0025</a></p>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <p>2360 Brewer Rd<br>Aubrey, TX 76227</p>
+      <p>Owner: Travis Johnson</p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Hours not published online —<br>call to check availability.</p>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 True Integrity Plumbing · DEMO PREVIEW built by NoFluff Marketing — not the live site.</div>
+</footer>
+<a class="sticky-call" href="tel:+19403650025">📞 Call (940) 365-0025</a>
+
+<script>
+// tabs
+function showTab(i){
+  var btns=document.querySelectorAll('.tab-btn'),panels=document.querySelectorAll('.tab-panel');
+  btns.forEach(function(b,j){b.classList.toggle('active',j===i)});
+  panels.forEach(function(p,j){p.classList.toggle('active',j===i)});
+}
+// faq accordion
+function toggleFaq(btn){
+  var item=btn.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+}
+// scroll reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+// animated counters
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  var el=e.target,to=+el.dataset.to,t0=null;
+  function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+})},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el)});
+// demo form
+function fakeSubmit(e){e.preventDefault();document.getElementById('formOk').style.display='block';e.target.querySelector('button[type=submit]').disabled=true;return false}
+</script>
+</body>
+</html>
