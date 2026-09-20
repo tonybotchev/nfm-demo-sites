@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N-Tex Roof Systems, Inc. — Turn-Key Roofing, Wallboard & Painting | Melissa, TX</title>
+<meta name="description" content="N-Tex Roof Systems, Inc. of Melissa, TX provides turn-key roofing, wallboard and painting to general contractors, custom builders and individuals. Multi-family, student housing, assisted living and custom residential.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0d11; --steel:#141922; --steel2:#1b2230; --orange:#ff6a00; --orange-d:#d95700;
+  --paper:#f5f2ec; --paper2:#ece7db; --white:#ffffff; --gray:#9aa4b5; --line:#2b3444;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--white);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.08}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+
+/* DEMO PREVIEW badge */
+.demo-badge{position:fixed;top:14px;right:14px;z-index:9999;background:var(--orange);color:#111;font:700 12px/1 'Oswald',sans-serif;letter-spacing:.14em;padding:10px 14px;border-radius:6px;box-shadow:0 6px 24px rgba(255,106,0,.45);transform:rotate(2deg)}
+
+/* utility bar */
+.util{background:#000;color:var(--gray);font-size:12px;letter-spacing:.06em;padding:8px 0;border-bottom:1px solid var(--line)}
+.util .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.util b{color:var(--orange);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:900;background:rgba(11,13,17,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:44px;height:44px;background:var(--orange);border-radius:8px;display:grid;place-items:center;font:700 20px 'Oswald';color:#111;transform:skew(-8deg)}
+.brand-mark span{transform:skew(8deg)}
+.brand-name{font:600 20px 'Oswald';letter-spacing:.04em}
+.brand-name small{display:block;font:500 10px 'Inter';letter-spacing:.28em;color:var(--gray)}
+.nav-links{display:flex;gap:26px;font:500 13px 'Inter';letter-spacing:.08em;text-transform:uppercase}
+.nav-links a{color:var(--gray);padding:6px 2px;border-bottom:2px solid transparent;transition:.25s}
+.nav-links a:hover,.nav-links a.active{color:var(--white);border-bottom-color:var(--orange)}
+.nav-call{background:var(--orange);color:#111!important;font:700 13px 'Oswald';letter-spacing:.1em;padding:10px 18px;border-radius:8px;border:none!important;transition:.25s}
+.nav-call:hover{background:#fff;transform:translateY(-2px)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:#fff;font-size:20px;padding:6px 12px;cursor:pointer}
+
+/* hero */
+.hero{position:relative;padding:88px 0 96px;overflow:hidden;background:
+  linear-gradient(rgba(11,13,17,.88),rgba(11,13,17,.94)),
+  repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,106,0,.10) 39px,rgba(255,106,0,.10) 40px),
+  repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,106,0,.10) 39px,rgba(255,106,0,.10) 40px),
+  var(--ink)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;font:600 12px 'Inter';letter-spacing:.3em;text-transform:uppercase;color:var(--orange);margin-bottom:18px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--orange)}
+.hero h1{font-size:clamp(42px,5.6vw,76px);font-weight:700;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.lede{font-size:18px;color:#cdd5e1;max-width:520px;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 14px 'Oswald';letter-spacing:.1em;text-transform:uppercase;padding:16px 28px;border-radius:10px;transition:.25s;cursor:pointer;border:none}
+.btn-primary{background:var(--orange);color:#111;box-shadow:0 10px 30px rgba(255,106,0,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(255,106,0,.5)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+.bid-card{background:rgba(20,25,34,.9);border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:0 30px 60px rgba(0,0,0,.5);position:relative;overflow:hidden}
+.bid-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:repeating-linear-gradient(90deg,var(--orange) 0 18px,#111 18px 36px)}
+.bid-card h3{font-size:22px;margin-bottom:6px}
+.bid-card p.sub{color:var(--gray);font-size:14px;margin-bottom:20px}
+.bid-row{margin-bottom:14px}
+.bid-row label{display:block;font:600 11px 'Inter';letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin-bottom:8px}
+.bid-scopes{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);border-radius:999px;padding:9px 16px;font:600 13px 'Inter';cursor:pointer;transition:.2s;color:#cdd5e1;background:transparent}
+.chip.on{background:var(--orange);border-color:var(--orange);color:#111}
+.bid-types{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bid-out{background:rgba(255,106,0,.08);border:1px dashed var(--orange);border-radius:10px;padding:16px;font-size:14px;color:#e8dcc8;display:none;margin-top:6px}
+.bid-out.show{display:block;animation:fadeUp .4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* marquee */
+.marquee{background:var(--orange);color:#111;overflow:hidden;white-space:nowrap;padding:12px 0;transform:rotate(-1deg) scale(1.02);margin:10px 0 0}
+.marquee-track{display:inline-block;animation:scroll 26s linear infinite;font:600 16px 'Oswald';letter-spacing:.22em}
+.marquee-track span{margin:0 26px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:88px 0}
+.sec-head{margin-bottom:48px}
+.sec-head h2{font-size:clamp(30px,3.6vw,48px);margin-bottom:12px}
+.sec-head h2 em{font-style:normal;color:var(--orange)}
+.sec-head p{color:var(--gray);max-width:640px;font-size:17px}
+
+/* scopes */
+.scopes{background:var(--paper);color:var(--ink)}
+.scopes .sec-head p{color:#5a6272}
+.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scope-card{background:#fff;border-radius:var(--radius);padding:36px 30px;border-top:6px solid var(--orange);box-shadow:0 12px 30px rgba(11,13,17,.08);transition:.3s;position:relative;overflow:hidden}
+.scope-card:hover{transform:translateY(-10px);box-shadow:0 26px 50px rgba(11,13,17,.16)}
+.scope-num{font:700 64px 'Oswald';color:rgba(11,13,17,.07);position:absolute;top:14px;right:20px}
+.scope-card h3{font-size:24px;margin:14px 0 10px}
+.scope-card p{color:#5a6272;font-size:15px}
+.scope-icon{width:56px;height:56px;border-radius:12px;background:var(--ink);display:grid;place-items:center;font-size:26px}
+
+/* project types tabs */
+.tabs{background:var(--steel)}
+.tab-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tab-btn{background:transparent;border:1px solid var(--line);color:var(--gray);font:600 14px 'Oswald';letter-spacing:.1em;text-transform:uppercase;padding:14px 22px;border-radius:10px;cursor:pointer;transition:.25s}
+.tab-btn.on{background:var(--orange);border-color:var(--orange);color:#111}
+.tab-btn:hover:not(.on){border-color:var(--orange);color:#fff}
+.tab-panel{display:none;background:var(--steel2);border:1px solid var(--line);border-radius:var(--radius);padding:40px;animation:fadeUp .4s ease}
+.tab-panel.on{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.tab-panel h3{font-size:30px;margin-bottom:12px;color:var(--orange)}
+.tab-panel p{color:#cdd5e1}
+.tab-panel ul{margin-top:16px;list-style:none}
+.tab-panel li{padding:8px 0 8px 28px;position:relative;color:#cdd5e1;font-size:15px}
+.tab-panel li::before{content:"▸";position:absolute;left:4px;color:var(--orange);font-weight:700}
+.tab-art{background:linear-gradient(135deg,#0b0d11,#232c3d);border:1px solid var(--line);border-radius:10px;min-height:230px;display:grid;place-items:center;font:700 92px 'Oswald';color:rgba(255,106,0,.16);text-align:center;line-height:1}
+
+/* numbers */
+.numbers{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.num{padding:26px 10px;border:1px solid var(--line);border-radius:var(--radius);background:var(--steel);transition:.3s}
+.num:hover{border-color:var(--orange);transform:translateY(-4px)}
+.num b{display:block;font:700 52px 'Oswald';color:var(--orange)}
+.num span{font:500 12px 'Inter';letter-spacing:.2em;text-transform:uppercase;color:var(--gray)}
+
+/* process */
+.process{background:var(--paper);color:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}
+.step{background:#fff;border-radius:var(--radius);padding:30px 24px;box-shadow:0 10px 26px rgba(11,13,17,.07);position:relative;transition:.3s}
+.step:hover{transform:translateY(-8px)}
+.step::before{counter-increment:step;content:"0" counter(step);font:700 44px 'Oswald';color:var(--orange)}
+.step h3{font-size:19px;margin:10px 0 8px}
+.step p{font-size:14px;color:#5a6272}
+
+/* FAQ */
+.faq{background:var(--steel)}
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;background:var(--steel2);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:#fff;font:600 17px 'Inter';text-align:left;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .plus{font:700 24px 'Oswald';color:var(--orange);transition:.3s;flex-shrink:0}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:#cdd5e1;font-size:15px}
+.faq-a p{padding:0 26px 24px}
+
+/* contact / bid builder */
+.contact{background:linear-gradient(180deg,var(--ink),#0e1420)}
+.bid-builder{background:var(--steel2);border:1px solid var(--line);border-radius:18px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.bid-builder h3{font-size:26px;margin-bottom:8px}
+.bid-builder .hint{color:var(--gray);font-size:14px;margin-bottom:24px}
+.field{margin-bottom:20px}
+.field label{display:block;font:600 11px 'Inter';letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
+.checkline{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;cursor:pointer;transition:.2s;font-size:15px}
+.checkline:hover{border-color:var(--orange)}
+.checkline input{accent-color:var(--orange);width:18px;height:18px;cursor:pointer}
+select,input[type=text]{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:10px;color:#fff;padding:14px;font:500 15px 'Inter'}
+select:focus,input[type=text]:focus{outline:2px solid var(--orange);border-color:var(--orange)}
+.bid-summary{background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:28px;min-height:100%}
+.bid-summary h4{font:600 15px 'Oswald';letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.bid-summary .sum-line{font-size:15px;color:#e8dcc8;margin-bottom:8px}
+.bid-summary .empty{color:var(--gray);font-size:14px}
+
+/* footer */
+footer{background:#000;border-top:1px solid var(--line);padding:56px 0 130px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.foot-grid h4{font:600 14px 'Oswald';letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+.foot-grid p,.foot-grid a{color:var(--gray);font-size:14px;display:block;margin-bottom:8px}
+.foot-grid a.tel{color:#fff;font:700 22px 'Oswald';letter-spacing:.04em}
+.foot-grid a.tel:hover{color:var(--orange)}
+.foot-note{border-top:1px solid var(--line);padding-top:22px;color:#5a6272;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;bottom:0;left:0;right:0;z-index:950;background:rgba(11,13,17,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px;display:none}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:#111;font:700 17px 'Oswald';letter-spacing:.08em;text-transform:uppercase;padding:15px;border-radius:10px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:960px){
+  .hero .wrap,.tab-panel.on,.bid-builder{grid-template-columns:1fr}
+  .scope-grid{grid-template-columns:1fr}
+  .num-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--steel);flex-direction:column;padding:18px 22px;gap:14px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .foot-grid{grid-template-columns:1fr}
+  section{padding:64px 0}
+}
+@media(max-width:640px){
+  .steps{grid-template-columns:1fr}
+  .num-grid{grid-template-columns:1fr 1fr}
+  .sticky-call{display:block}
+  .bid-types{grid-template-columns:1fr}
+  .bid-builder{padding:28px 20px}
+  .tab-panel{padding:26px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<div class="util">
+  <div class="wrap">
+    <span>Contractor licenses: <b>39648 · AEC1043 · R10-0162</b></span>
+    <span>Commercial roofing sub · <b>Melissa, TX</b></span>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><span>N</span></span>
+      <span class="brand-name">N-TEX ROOF SYSTEMS<small>Melissa · Texas</small></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#scopes">Scopes</a>
+      <a href="#projects">Project Types</a>
+      <a href="#process">Bid Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#bid" class="nav-call">Request a Bid</a>
+    </div>
+    <a href="tel:+19723473500" class="nav-call" style="margin-left:12px">Call (972) 347-3500</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">For GCs · Builders · Property Managers</span>
+      <h1>One sub.<br>Three scopes.<br><em>Zero delays.</em></h1>
+      <p class="lede">N-Tex Roof Systems, Inc. delivers turn-key roofing, wallboard, and painting for general contractors, custom builders, and individuals across the Dallas–Fort Worth area — specializing in multi-family, student housing, assisted living, and custom residential projects.</p>
+      <div class="hero-ctas">
+        <a href="tel:+19723473500" class="btn btn-primary">📞 Call (972) 347-3500</a>
+        <a href="#bid" class="btn btn-ghost">Build a Bid Request</a>
+      </div>
+    </div>
+    <div class="bid-card reveal">
+      <h3>Quick Bid Check</h3>
+      <p class="sub">Tap your scopes — then call with your list ready.</p>
+      <div class="bid-row">
+        <label>Scopes needed</label>
+        <div class="bid-scopes" id="heroScopes">
+          <button class="chip" data-scope="Turn-key roofing">Roofing</button>
+          <button class="chip" data-scope="Wallboard">Wallboard</button>
+          <button class="chip" data-scope="Painting">Painting</button>
+        </div>
+      </div>
+      <div class="bid-row">
+        <label>Project type</label>
+        <div class="bid-types" id="heroTypes">
+          <button class="chip" data-type="Multi-family">Multi-family</button>
+          <button class="chip" data-type="Student housing">Student housing</button>
+          <button class="chip" data-type="Assisted living">Assisted living</button>
+          <button class="chip" data-type="Custom residential">Custom residential</button>
+        </div>
+      </div>
+      <div class="bid-out" id="heroOut"></div>
+      <a href="tel:+19723473500" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:14px">Call (972) 347-3500</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>MULTI-FAMILY</span><span>◆</span><span>STUDENT HOUSING</span><span>◆</span><span>ASSISTED LIVING</span><span>◆</span><span>CUSTOM RESIDENTIAL</span><span>◆</span>
+  </div>
+</div>
+
+<section class="scopes" id="scopes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What we do</span>
+      <h2>Three scopes. <em>One contract.</em></h2>
+      <p>One vetted sub covering your envelope and interiors — fewer bids to chase, fewer schedules to juggle, one accountable crew.</p>
+    </div>
+    <div class="scope-grid">
+      <div class="scope-card reveal">
+        <span class="scope-num">01</span>
+        <div class="scope-icon">🏗️</div>
+        <h3>Turn-Key Roofing</h3>
+        <p>Complete roofing packages for new construction and re-roofs — steep-slope and membrane systems, tear-offs, replacements, and restoration. Scheduled to your critical path, not ours.</p>
+      </div>
+      <div class="scope-card reveal">
+        <span class="scope-num">02</span>
+        <div class="scope-icon">🧱</div>
+        <h3>Wallboard</h3>
+        <p>Drywall and gypsum board installation and finishing — hung, taped, and finished to spec so paint and trim stay on schedule.</p>
+      </div>
+      <div class="scope-card reveal">
+        <span class="scope-num">03</span>
+        <div class="scope-icon">🎨</div>
+        <h3>Painting</h3>
+        <p>Interior and exterior painting, coatings, and staining — the finished surface your buyer, tenant, or inspector actually sees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tabs" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Where we work</span>
+      <h2>Built for <em>your</em> project type</h2>
+      <p>Select a project type to see how N-Tex fits your bid package.</p>
+    </div>
+    <div class="tab-btns reveal" role="tablist">
+      <button class="tab-btn on" data-tab="t1">Multi-Family</button>
+      <button class="tab-btn" data-tab="t2">Student Housing</button>
+      <button class="tab-btn" data-tab="t3">Assisted Living</button>
+      <button class="tab-btn" data-tab="t4">Custom Residential</button>
+    </div>
+    <div class="tab-panel on reveal" id="t1">
+      <div>
+        <h3>Multi-Family</h3>
+        <p>Garden-style, townhome, and apartment communities need a roofing sub that can run buildings in sequence without stalling the rest of the trades.</p>
+        <ul>
+          <li>Phased roofing across multiple buildings</li>
+          <li>Wallboard + paint scopes keep interiors moving behind the envelope</li>
+          <li>One point of contact for three scopes</li>
+        </ul>
+      </div>
+      <div class="tab-art">MF</div>
+    </div>
+    <div class="tab-panel" id="t2">
+      <div>
+        <h3>Student Housing</h3>
+        <p>Hard turn dates. Zero tolerance for slip. N-Tex packages roofing, wallboard, and painting so your August delivery isn't hostage to three schedules.</p>
+        <ul>
+          <li>Move-in-date-driven scheduling</li>
+          <li>High-volume unit turnover capability</li>
+          <li>Durable finishes built for student use</li>
+        </ul>
+      </div>
+      <div class="tab-art">SH</div>
+    </div>
+    <div class="tab-panel" id="t3">
+      <div>
+        <h3>Assisted Living</h3>
+        <p>Occupied or soon-to-be-occupied care environments demand clean, quiet, coordinated work — and finishes that hold up to commercial use.</p>
+        <ul>
+          <li>Low-disruption sequencing around operations</li>
+          <li>Commercial-grade roofing and coating systems</li>
+          <li>Detail-focused interior finishes</li>
+        </ul>
+      </div>
+      <div class="tab-art">AL</div>
+    </div>
+    <div class="tab-panel" id="t4">
+      <div>
+        <h3>Custom Residential</h3>
+        <p>Custom builders get a sub that treats a one-off home like the flagship it is — envelope to final coat, handled by one accountable team.</p>
+        <ul>
+          <li>Architectural roofing details done right</li>
+          <li>Level-5-ready drywall finishing</li>
+          <li>Designer-grade interior and exterior paint</li>
+        </ul>
+      </div>
+      <div class="tab-art">CR</div>
+    </div>
+  </div>
+</section>
+
+<section class="numbers">
+  <div class="wrap">
+    <div class="num-grid">
+      <div class="num reveal"><b><span class="count" data-to="23">0</span>+</b><span>Building permits since 2008</span></div>
+      <div class="num reveal"><b><span class="count" data-to="10">0</span> yrs</b><span>Blue Book-listed commercial sub</span></div>
+      <div class="num reveal"><b><span class="count" data-to="3">0</span></b><span>Scopes under one contract</span></div>
+      <div class="num reveal"><b><span class="count" data-to="4">0</span></b><span>Project-type specializations</span></div>
+    </div>
+    <p style="text-align:center;color:var(--gray);font-size:12px;margin-top:22px">Permits: BuildZoom · Blue Book listing since 2016 · Licenses 39648 / AEC1043 / R10-0162</p>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">How it works</span>
+      <h2>From bid invite <em>to final coat</em></h2>
+      <p>A straight line from your plans to a finished building.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Send the plans</h3><p>Call with your scope list — roofing, wallboard, painting, or all three — and your project timeline.</p></div>
+      <div class="step reveal"><h3>Get one number</h3><p>A single turn-key bid covering every scope you tapped, priced to your drawings and schedule.</p></div>
+      <div class="step reveal"><h3>Build in sequence</h3><p>Envelope first, interiors behind it — one crew coordination point instead of three.</p></div>
+      <div class="step reveal"><h3>Walk it done</h3><p>Punch-list to final coat. One accountable sub from first shingle to last brushstroke.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Straight answers</span>
+      <h2>FAQ for <em>builders</em></h2>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-q">Who does N-Tex work for?<span class="plus">+</span></button>
+        <div class="faq-a"><p>General contractors, custom builders, and individuals — with deep experience in multi-family, student housing, assisted living, and custom residential projects across the Dallas–Fort Worth area and Collin County.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does "turn-key" actually cover?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Roofing, wallboard, and painting — bid as one package or individually. You get one contract, one schedule, and one crew to coordinate instead of three separate subs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are you licensed and permitted?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Contractor licenses 39648, AEC1043, and R10-0162 are on record, and BuildZoom tracks 23 building permits pulled since 2008. N-Tex has been listed in the Blue Book commercial construction directory since 2016.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I request a bid?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Call <a href="tel:+19723473500" style="color:var(--orange);font-weight:700">(972) 347-3500</a> with your plans and timeline — or use the bid builder below to assemble your scope list first, then call with it ready.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where are you based?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Melissa, Texas — 5906 N McDonald St Unit A, Melissa, TX 75454-2331. Serving the Dallas–Fort Worth metroplex and Collin County.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="bid">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Request a bid</span>
+      <h2>Build your scope list. <em>Then call.</em></h2>
+      <p>Check what you need — the builder assembles your bid request so your first call is already productive.</p>
+    </div>
+    <div class="bid-builder reveal">
+      <div>
+        <h3>Your project</h3>
+        <p class="hint">Everything you select appears in the summary on the right.</p>
+        <div class="field">
+          <label>Scopes needed</label>
+          <label class="checkline"><input type="checkbox" class="b-scope" value="Turn-key roofing"> Turn-key roofing</label>
+          <label class="checkline"><input type="checkbox" class="b-scope" value="Wallboard"> Wallboard</label>
+          <label class="checkline"><input type="checkbox" class="b-scope" value="Painting"> Painting</label>
+        </div>
+        <div class="field">
+          <label>Project type</label>
+          <select id="bType">
+            <option value="">Select project type…</option>
+            <option>Multi-family</option>
+            <option>Student housing</option>
+            <option>Assisted living</option>
+            <option>Custom residential</option>
+            <option>Other commercial</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Project location (city)</label>
+          <input type="text" id="bCity" placeholder="e.g. McKinney, TX">
+        </div>
+      </div>
+      <div class="bid-summary">
+        <h4>📋 Your bid request</h4>
+        <div id="bidSummary"><p class="empty">Select scopes and a project type to assemble your request…</p></div>
+        <a href="tel:+19723473500" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:20px">📞 Call (972) 347-3500</a>
+        <p style="color:var(--gray);font-size:12px;margin-top:12px;text-align:center">Mention your scope list when you call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>N-Tex Roof Systems, Inc.</h4>
+        <p>Turn-key roofing, wallboard &amp; painting for general contractors, custom builders &amp; individuals. Multi-family · student housing · assisted living · custom residential.</p>
+        <a class="tel" href="tel:+19723473500">(972) 347-3500</a>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <p>5906 N McDonald St Unit A<br>Melissa, TX 75454-2331</p>
+        <p>Mailing: PO Box 590, Melissa, TX</p>
+        <p>Serving Dallas–Fort Worth &amp; Collin County</p>
+      </div>
+      <div>
+        <h4>Details</h4>
+        <p>Hours: not published online — call for scheduling.</p>
+        <p>Licenses: 39648 · AEC1043 · R10-0162</p>
+        <p>Blue Book commercial listing since 2016</p>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 N-Tex Roof Systems, Inc. · Melissa, TX</span>
+      <span>DEMO PREVIEW — concept built for illustration only</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+19723473500">📞 Call (972) 347-3500</a>
+</div>
+
+<script>
+// burger
+const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+// scroll-spy
+const spySecs=[...document.querySelectorAll('section[id]')];
+const spyLinks=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+function spy(){
+  let cur='';
+  spySecs.forEach(s=>{if(scrollY>=s.offsetTop-160)cur=s.id});
+  spyLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+}
+addEventListener('scroll',spy,{passive:true});spy();
+
+// hero quick-bid chips
+const hScopes=[...document.querySelectorAll('#heroScopes .chip')];
+const hTypes=[...document.querySelectorAll('#heroTypes .chip')];
+const heroOut=document.getElementById('heroOut');
+function heroUpdate(){
+  const s=hScopes.filter(c=>c.classList.contains('on')).map(c=>c.dataset.scope);
+  const t=hTypes.find(c=>c.classList.contains('on'));
+  if(s.length||t){
+    heroOut.classList.add('show');
+    heroOut.innerHTML='<b>Your quick bid check:</b><br>'+(s.length?'Scopes: '+s.join(', ')+'<br>':'')+(t?'Project: '+t.dataset.type:'');
+  }else{heroOut.classList.remove('show');heroOut.innerHTML='';}
+}
+hScopes.forEach(c=>c.addEventListener('click',()=>{c.classList.toggle('on');heroUpdate();}));
+hTypes.forEach(c=>c.addEventListener('click',()=>{hTypes.forEach(x=>x.classList.remove('on'));c.classList.add('on');heroUpdate();}));
+
+// tabs
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  document.getElementById(b.dataset.tab).classList.add('on');
+}));
+
+// counters
+const counters=document.querySelectorAll('.count');
+const cObs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,to=+el.dataset.to;let cur=0;
+  const step=Math.max(1,Math.round(to/40));
+  const t=setInterval(()=>{cur+=step;if(cur>=to){cur=to;clearInterval(t)}el.textContent=cur},40);
+  cObs.unobserve(el);
+}),{threshold:.5});
+counters.forEach(c=>cObs.observe(c));
+
+// faq accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');const a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+// bid builder
+const bScopes=[...document.querySelectorAll('.b-scope')];
+const bType=document.getElementById('bType'),bCity=document.getElementById('bCity');
+const bidSummary=document.getElementById('bidSummary');
+function buildSummary(){
+  const s=bScopes.filter(c=>c.checked).map(c=>c.value);
+  const t=bType.value, city=bCity.value.trim();
+  if(!s.length&&!t&&!city){bidSummary.innerHTML='<p class="empty">Select scopes and a project type to assemble your request…</p>';return;}
+  let h='';
+  if(s.length)h+='<p class="sum-line"><b>Scopes:</b> '+s.join(', ')+'</p>';
+  if(t)h+='<p class="sum-line"><b>Project type:</b> '+t+'</p>';
+  if(city)h+='<p class="sum-line"><b>Location:</b> '+city.replace(/</g,'&lt;')+'</p>';
+  h+='<p class="sum-line" style="margin-top:12px;color:var(--gray);font-size:13px">Read this list when you call — it covers everything N-Tex needs to start your bid.</p>';
+  bidSummary.innerHTML=h;
+}
+bScopes.forEach(c=>c.addEventListener('change',buildSummary));
+bType.addEventListener('change',buildSummary);
+bCity.addEventListener('input',buildSummary);
+
+// reveal on scroll
+const rObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rObs.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rObs.observe(el));
+
+// duplicate marquee for seamless loop
+const track=document.getElementById('marqueeTrack');
+track.innerHTML+=track.innerHTML;
+</script>
+</body>
+</html>
