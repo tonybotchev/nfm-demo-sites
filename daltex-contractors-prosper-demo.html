@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daltex Contractors LLC | Roofing & Storm Restoration in Prosper, TX</title>
+<meta name="description" content="Daltex Contractors LLC — family-owned roofing company in Prosper, TX since 1994. Storm damage, roof replacement, insurance claims. One Call Does It All: (972) 517-2571.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141312;
+  --char:#1e1c1a;
+  --orange:#ff6b1a;
+  --amber:#ffb01a;
+  --steel:#e8e4dd;
+  --mut:#8d877c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#faf8f4;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.badge-demo{position:fixed;top:14px;right:14px;z-index:200;background:#ff4d4d;color:#fff;font-weight:800;font-size:11px;letter-spacing:2px;padding:8px 14px;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--ink);border-bottom:3px solid var(--orange)}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:13px 0;max-width:1180px;margin:0 auto;padding-left:22px;padding-right:22px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand .mark{width:46px;height:46px;background:var(--orange);clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#141312;flex-shrink:0}
+.brand .t{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;line-height:1}
+.brand .t small{display:block;font-size:10px;letter-spacing:3px;color:var(--amber);font-weight:700}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a.nl{color:#d8d3c8;text-decoration:none;font-weight:600;font-size:14.5px}
+.navlinks a.nl:hover{color:var(--amber)}
+.btn{display:inline-block;background:var(--orange);color:#141312!important;font-weight:800;text-decoration:none;padding:13px 28px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);font-size:15px;border:none;cursor:pointer;transition:background .2s,transform .2s;font-family:'Archivo',sans-serif;letter-spacing:.5px}
+.btn:hover{background:var(--amber);transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:#fff!important}
+.hamb{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+@media(max-width:880px){.navlinks{position:fixed;inset:0;background:rgba(20,19,18,.98);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .35s;z-index:99}.navlinks.open{transform:none}.hamb{display:block;z-index:101}.navlinks a.nl{font-size:20px}}
+/* HERO */
+.hero{background:
+  linear-gradient(105deg,#141312 55%,rgba(20,19,18,.55) 75%,rgba(20,19,18,.15) 100%),
+  repeating-linear-gradient(115deg,#1e1c1a 0 34px,#232019 34px 68px);
+  color:#fff;position:relative;overflow:hidden}
+.hero .wrap{padding:96px 22px 110px;position:relative;z-index:2}
+.hero .stripe{position:absolute;top:0;bottom:0;right:8%;width:120px;background:linear-gradient(var(--orange),var(--amber));transform:skewX(-12deg);opacity:.9;z-index:1}
+.hero .stripe2{right:calc(8% + 150px);opacity:.25;width:46px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(255,107,26,.16);border:1px solid var(--orange);color:var(--amber);font-size:12px;font-weight:800;letter-spacing:2.5px;padding:9px 18px;margin-bottom:24px;font-family:'Archivo',sans-serif}
+.hero h1{font-size:clamp(42px,6vw,74px);line-height:1.02;margin-bottom:20px;text-transform:uppercase}
+.hero h1 .hl{color:var(--orange)}
+.hero p.lead{font-size:18px;color:#cfc9bc;max-width:560px;margin-bottom:30px}
+.hero .ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.hero .meta{display:flex;gap:32px;flex-wrap:wrap;font-size:14px;color:#a49d8d}
+.hero .meta strong{color:#fff;display:block;font-size:17px}
+@media(max-width:700px){.hero .stripe{display:none}}
+/* RIBBON */
+.ribbon{background:var(--orange);color:#141312;overflow:hidden;white-space:nowrap;padding:14px 0}
+.ribbon .track{display:inline-block;font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:2px;font-size:15px;animation:scroll 22s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* SECTIONS */
+section{padding:90px 0}
+.sec-head{max-width:700px;margin:0 auto 54px}
+.sec-head.left{margin:0 0 44px;text-align:left}
+.kick{font-family:'Archivo',sans-serif;font-size:12px;font-weight:800;letter-spacing:3px;color:var(--orange);margin-bottom:12px}
+.sec-head h2{font-size:clamp(30px,4.2vw,46px);line-height:1.1;text-transform:uppercase}
+.sec-head p{color:var(--mut);font-size:17px;margin-top:12px}
+/* services grid */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:#fff;border:1px solid #e5e0d6;border-top:5px solid var(--ink);padding:32px 28px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-8px);border-top-color:var(--orange);box-shadow:0 24px 50px rgba(20,19,18,.12)}
+.svc .ic{font-size:34px;margin-bottom:14px;display:block}
+.svc h3{font-size:20px;margin-bottom:10px;text-transform:uppercase}
+.svc p{font-size:14.5px;color:var(--mut)}
+/* claim timeline */
+.claim{background:var(--char);color:#fff}
+.claim .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+@media(max-width:900px){.claim .wrap{grid-template-columns:1fr}}
+.claim h2{font-size:clamp(30px,4vw,44px);text-transform:uppercase;margin-bottom:16px}
+.claim h2 .hl{color:var(--orange)}
+.claim p{color:#b9b2a4;margin-bottom:20px}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--orange),var(--amber))}
+.tl-step{position:relative;padding:0 0 30px}
+.tl-step::before{content:"";position:absolute;left:-33px;top:4px;width:19px;height:19px;background:var(--orange);transform:rotate(45deg);border:3px solid var(--char)}
+.tl-step h3{font-size:18px;text-transform:uppercase;margin-bottom:6px}
+.tl-step p{font-size:14.5px;color:#a49d8d;margin:0}
+/* story */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr}}
+.story-card{background:#fff;border:1px solid #e5e0d6;padding:40px;position:relative}
+.story-card::before{content:"";position:absolute;top:0;left:0;width:70px;height:70px;background:var(--orange);clip-path:polygon(0 0,100% 0,0 100%)}
+.story-card h3{font-size:24px;margin-bottom:12px}
+.story-card p{color:var(--mut);margin-bottom:14px;font-size:15.5px}
+.story-card .who{display:flex;gap:18px;margin-top:22px;flex-wrap:wrap}
+.who .p{background:#f4f1ea;padding:16px 20px;flex:1;min-width:200px;border-left:4px solid var(--orange)}
+.who .p b{font-family:'Archivo',sans-serif;font-size:16px;display:block}
+.who .p span{font-size:13.5px;color:var(--mut)}
+/* counters */
+.counters{background:linear-gradient(135deg,var(--orange),#e04e00);color:#141312}
+.counters .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:44px 22px;text-align:center}
+.counter b{font-family:'Archivo',sans-serif;font-weight:900;font-size:44px;display:block}
+.counter span{font-size:12.5px;font-weight:800;letter-spacing:2px}
+@media(max-width:700px){.counters .wrap{grid-template-columns:repeat(2,1fr)}}
+/* gallery (CSS shingles) */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:700px){.gal{grid-template-columns:1fr}}
+.shot{height:220px;border-radius:4px;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.shot span{background:rgba(20,19,18,.82);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;margin:16px;border-radius:4px;font-family:'Archivo',sans-serif;letter-spacing:1px}
+.shot.s1{background:linear-gradient(160deg,#3a352c,#241f16 60%,#171310),repeating-linear-gradient(0deg,transparent 0 22px,rgba(255,255,255,.07) 22px 24px),repeating-linear-gradient(90deg,transparent 0 40px,rgba(0,0,0,.25) 40px 42px)}
+.shot.s2{background:linear-gradient(160deg,#2c3436,#171d1f 60%,#0e1113),repeating-linear-gradient(0deg,transparent 0 22px,rgba(255,255,255,.06) 22px 24px),repeating-linear-gradient(90deg,transparent 0 40px,rgba(0,0,0,.3) 40px 42px)}
+.shot.s3{background:linear-gradient(160deg,#4a3220,#2b1d10 60%,#191006),repeating-linear-gradient(0deg,transparent 0 22px,rgba(255,255,255,.08) 22px 24px),repeating-linear-gradient(90deg,transparent 0 40px,rgba(0,0,0,.25) 40px 42px)}
+/* faq */
+.faq{max-width:780px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid #e5e0d6;margin-bottom:12px}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-family:'Archivo',sans-serif;font-weight:800;font-size:16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;text-transform:uppercase;letter-spacing:.4px}
+.faq-q .pm{color:var(--orange);font-size:24px;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-q .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mut)}
+.faq-a p{padding:0 24px 22px;font-size:15px}
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:900px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(30px,4vw,44px);text-transform:uppercase;margin-bottom:16px}
+.contact h2 .hl{color:var(--orange)}
+.contact .info p{color:#a49d8d;margin-bottom:16px}
+.contact .big{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(28px,3.6vw,40px);color:var(--amber);text-decoration:none;display:block;margin-bottom:14px}
+.hours{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+.hours td{padding:10px 4px;border-bottom:1px solid rgba(255,255,255,.12);color:#cfc9bc}
+.hours td:last-child{text-align:right;font-weight:700;color:#fff}
+form.quote{background:#242220;border:1px solid #3a372f;padding:38px}
+form.quote h3{margin-bottom:20px;font-size:22px;text-transform:uppercase}
+form.quote .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){form.quote .row{grid-template-columns:1fr}}
+form.quote input,form.quote select,form.quote textarea{width:100%;padding:14px 16px;background:#171614;border:1px solid #3a372f;color:#fff;font-size:15px;font-family:inherit;margin-bottom:14px;border-radius:4px}
+form.quote textarea{resize:vertical;min-height:96px}
+form.quote input::placeholder,form.quote textarea::placeholder{color:#6e675a}
+form.quote select option{color:#141312}
+form.quote .btn{width:100%;margin-top:6px}
+/* footer */
+footer{background:#0d0c0b;color:#6e675a;padding:44px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#cfc9bc}
+/* sticky mobile call */
+.mcall{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(20,19,18,.96);padding:12px 16px calc(12px + env(safe-area-inset-bottom));border-top:3px solid var(--orange)}
+.mcall a{display:block;text-align:center;background:var(--orange);color:#141312;font-weight:900;text-decoration:none;padding:15px;font-size:17px;font-family:'Archivo',sans-serif;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+@media(max-width:880px){.mcall{display:block}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="badge-demo">DEMO PREVIEW</div>
+
+<nav>
+  <div class="bar">
+    <a class="brand" href="#top"><span class="mark">D</span><span class="t">DALTEX<small>CONTRACTORS LLC</small></span></a>
+    <div class="navlinks" id="navlinks">
+      <a class="nl" href="#services">Services</a>
+      <a class="nl" href="#claims">Insurance Claims</a>
+      <a class="nl" href="#story">Our Story</a>
+      <a class="nl" href="#faq">FAQ</a>
+      <a class="btn" href="tel:+19725172571">CALL (972) 517-2571</a>
+    </div>
+    <button class="hamb" id="hamb" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="stripe"></div><div class="stripe stripe2"></div>
+  <div class="wrap">
+    <span class="eyebrow">PROSPER, TX — FAMILY OWNED SINCE 1994</span>
+    <h1>Roof damage?<br><span class="hl">One call</span> does it all.</h1>
+    <p class="lead">Daltex Contractors is Prosper's family-owned roofing and storm-restoration company. 30+ years on roofs, an office manager who speaks insurance fluently, and a crew that treats your home like their own.</p>
+    <div class="ctas">
+      <a class="btn" href="tel:+19725172571">📞 (972) 517-2571</a>
+      <a class="btn dark" href="#quote" style="color:#fff">FREE ROOF INSPECTION</a>
+    </div>
+    <div class="meta">
+      <div><strong>4.8 ★</strong>46 Birdeye reviews</div>
+      <div><strong>30+ yrs</strong>On Texas roofs</div>
+      <div><strong>Since 1994</strong>Family owned</div>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon"><span class="track">ROOF REPLACEMENT &nbsp;★&nbsp; STORM DAMAGE &nbsp;★&nbsp; INSURANCE CLAIMS &nbsp;★&nbsp; GUTTERS &nbsp;★&nbsp; REMODELING &nbsp;★&nbsp; ROOF REPLACEMENT &nbsp;★&nbsp; STORM DAMAGE &nbsp;★&nbsp; INSURANCE CLAIMS &nbsp;★&nbsp; GUTTERS &nbsp;★&nbsp; REMODELING &nbsp;★&nbsp;</span></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head left rv">
+      <div class="kick">WHAT WE DO</div>
+      <h2>Roofing, restoration &amp; remodeling</h2>
+      <p>From a missing shingle to a full storm rebuild — one crew, one call, zero runaround.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc rv"><span class="ic">🏠</span><h3>Roof Replacement</h3><p>Full tear-offs and replacements done right — quality materials, clean job sites, warranties that mean something.</p></div>
+      <div class="svc rv"><span class="ic">⛈️</span><h3>Storm Damage Repair</h3><p>Hail and wind damage handled fast. We document everything so your claim holds up.</p></div>
+      <div class="svc rv"><span class="ic">📋</span><h3>Insurance Claims Help</h3><p>Tracy runs point with adjusters. We speak insurance so you don't have to fight it alone.</p></div>
+      <div class="svc rv"><span class="ic">🔧</span><h3>Roof Repairs</h3><p>Leaks, flashing, vents, and storm-lifted shingles fixed before small problems get expensive.</p></div>
+      <div class="svc rv"><span class="ic">🌧️</span><h3>Gutters</h3><p>New gutters and gutter replacement that protect your foundation and finish the roofline.</p></div>
+      <div class="svc rv"><span class="ic">🛠️</span><h3>Home Remodeling</h3><p>Full-service general contracting — kitchens, baths, and additions from the same trusted crew.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="counters">
+  <div class="wrap">
+    <div class="counter rv"><b><span class="count" data-n="30">0</span>+</b><span>YEARS IN BUSINESS</span></div>
+    <div class="counter rv"><b><span class="count" data-n="46">0</span></b><span>BIRDEYE REVIEWS</span></div>
+    <div class="counter rv"><b><span class="count" data-n="4.8" data-dec="1">0</span>★</b><span>AVERAGE RATING</span></div>
+    <div class="counter rv"><b><span class="count" data-n="2">0</span></b><span>FAMILY OWNERS</span></div>
+  </div>
+</div>
+
+<section class="claim" id="claims">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">INSURANCE CLAIMS</div>
+      <h2>Storm hit? We handle the <span class="hl">paperwork war.</span></h2>
+      <p>Most roofers hand you a ladder and wish you luck with the adjuster. Tracy Lefevre is an expert on the insurance and mortgage process — she walks your claim from first call to final check.</p>
+      <a class="btn" href="tel:+19725172571">START YOUR CLAIM — (972) 517-2571</a>
+    </div>
+    <div class="tl rv">
+      <div class="tl-step"><h3>1. Free inspection</h3><p>We climb up, document the damage with photos, and tell you straight whether you have a claim.</p></div>
+      <div class="tl-step"><h3>2. Claim filed right</h3><p>Tracy helps file with the right language and documentation so nothing gets underpaid or denied.</p></div>
+      <div class="tl-step"><h3>3. Adjuster meeting</h3><p>We meet your adjuster on the roof. Having a roofer present changes the outcome.</p></div>
+      <div class="tl-step"><h3>4. Roof restored</h3><p>Approved claim → new roof, new gutters, clean site. One call did it all.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="rv">
+        <div class="kick">OUR STORY</div>
+        <h2 style="font-size:clamp(30px,4vw,44px);text-transform:uppercase;margin-bottom:18px">A family business,<br>not a franchise.</h2>
+        <p style="color:var(--mut);margin-bottom:14px">Daltex Contractors has been family owned and operated since 1994 — over 30 years serving the Dallas–Fort Worth area from right here in Prosper.</p>
+        <p style="color:var(--mut)">No call centers. No revolving-door salesmen. You deal with Lance and Tracy — the people whose name is on the truck.</p>
+      </div>
+      <div class="story-card rv">
+        <h3>Meet the owners</h3>
+        <p>Two people. Thirty-plus years of roofing. One phone number that actually gets answered.</p>
+        <div class="who">
+          <div class="p"><b>Lance Lefevre</b><span>Owner — 30+ years in the roofing industry. He's been on the roofs, in the attics, and through every Texas storm season since the '90s.</span></div>
+          <div class="p"><b>Tracy Lefevre</b><span>Office Manager — your insurance-claims expert. She knows the insurance and mortgage process cold and fights for every dollar you're owed.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head left rv"><div class="kick">RECENT WORK</div><h2>Built for Texas weather</h2></div>
+    <div class="gal rv">
+      <div class="shot s1"><span>FULL ROOF REPLACEMENT</span></div>
+      <div class="shot s2"><span>STORM RESTORATION</span></div>
+      <div class="shot s3"><span>GUTTERS + ROOFLINE</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="kick">QUESTIONS</div><h2>Straight answers</h2></div>
+    <div class="faq rv">
+      <div class="faq-item"><button class="faq-q">Will you help with my insurance claim?<span class="pm">+</span></button><div class="faq-a"><p>Yes — it's one of our specialties. Tracy Lefevre is an expert on the insurance and mortgage process. We document the damage, help file the claim correctly, and meet your adjuster on the roof.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How do I know if hail damaged my roof?<span class="pm">+</span></button><div class="faq-a"><p>You often can't tell from the ground — that's exactly why we offer free inspections. We'll get on the roof, photograph everything, and give you an honest answer with zero pressure.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you only do roofing?<span class="pm">+</span></button><div class="faq-a"><p>No. We're a full-service general contractor — roof replacement, storm damage restoration, gutters, and home remodeling. One call does it all.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are you local to Prosper?<span class="pm">+</span></button><div class="faq-a"><p>Yes. We're based at 1225 Chandler Cir in Prosper and have served the Dallas–Fort Worth area since 1994. Family owned — not a storm-chasing outfit.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What are your hours?<span class="pm">+</span></button><div class="faq-a"><p>Monday–Friday 8 AM–5 PM, Saturday 9 AM–1 PM, closed Sunday. Storm damage can't wait — call <a href="tel:+19725172571" style="font-weight:700">(972) 517-2571</a> and we'll get you scheduled.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap">
+    <div class="info rv">
+      <div class="kick">FREE INSPECTION</div>
+      <h2>Get on the <span class="hl">schedule.</span></h2>
+      <p>Roof damage gets worse — and more expensive — the longer it waits. Call now or send the form and we'll reach out the same business day.</p>
+      <a class="big" href="tel:+19725172571">(972) 517-2571</a>
+      <p>✉️ <a href="mailto:info@daltexcontractors.com" style="color:#cfc9bc">info@daltexcontractors.com</a></p>
+      <table class="hours">
+        <tr><td>Monday – Friday</td><td>8:00 AM – 5:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 1:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p>📍 1225 Chandler Cir, Prosper, TX 75078<br>Serving Prosper &amp; the Dallas–Fort Worth area</p>
+    </div>
+    <form class="quote rv" id="qform">
+      <h3>Request free inspection</h3>
+      <div class="row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+      </div>
+      <select name="service" required>
+        <option value="">What do you need?</option>
+        <option>Free roof inspection</option>
+        <option>Storm / hail damage</option>
+        <option>Roof replacement</option>
+        <option>Roof repair</option>
+        <option>Insurance claim help</option>
+        <option>Gutters</option>
+        <option>Remodeling</option>
+      </select>
+      <textarea name="details" placeholder="Tell us what's going on (leaks, storm date, missing shingles...)"></textarea>
+      <button class="btn" type="submit">SEND REQUEST →</button>
+      <p id="qok" style="display:none;margin-top:14px;color:var(--amber);font-weight:700">Got it — we'll call you back the same business day to schedule your free inspection.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Daltex Contractors LLC</strong><br>1225 Chandler Cir, Prosper, TX 75078<br><a href="tel:+19725172571">(972) 517-2571</a> · <a href="mailto:info@daltexcontractors.com">info@daltexcontractors.com</a></div>
+    <div>Mon–Fri 8 AM–5 PM · Sat 9 AM–1 PM · Sun closed</div>
+  </div>
+</footer>
+
+<div class="mcall"><a href="tel:+19725172571">📞 CALL (972) 517-2571 — FREE INSPECTION</a></div>
+
+<script>
+const hamb=document.getElementById('hamb'),nl=document.getElementById('navlinks');
+hamb.addEventListener('click',()=>nl.classList.toggle('open'));
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);
+  const el=e.target,n=parseFloat(el.dataset.n),dec=+(el.dataset.dec||0),t0=performance.now();
+  (function tick(t){const p=Math.min(1,(t-t0)/1300),v=n*(1-Math.pow(1-p,3));
+    el.textContent=dec?v.toFixed(dec):Math.round(v);if(p<1)requestAnimationFrame(tick)})(t0);
+}}),{threshold:.6});
+document.querySelectorAll('.count').forEach(c=>io.observe(c));
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io2.observe(el));
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const it=q.parentElement,a=it.querySelector('.faq-a'),open=it.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('open');x.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+}));
+document.getElementById('qform').addEventListener('submit',e=>{e.preventDefault();e.target.querySelector('#qok').style.display='block';e.target.querySelectorAll('input,textarea,select').forEach(f=>f.value='')});
+</script>
+</body>
+</html>
