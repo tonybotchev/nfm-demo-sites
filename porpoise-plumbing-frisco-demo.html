@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porpoise Plumbing, LLC | Frisco Plumber — Plumbing Done With a Porpoise</title>
+<meta name="description" content="Porpoise Plumbing, LLC — Frisco's 5-star plumber. Owner Robert White, RMP-43223. Same-day emergency service Mon–Sat. Call (972) 430-6006.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#04263b;
+  --ocean:#073b57;
+  --aqua:#2ec4e6;
+  --foam:#e9f7fb;
+  --sand:#fdf6ec;
+  --coral:#ff7a59;
+  --ink:#0a2233;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--sand);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque',sans-serif}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.badge-demo{position:fixed;top:14px;right:14px;z-index:200;background:#ff4d4d;color:#fff;font-weight:800;font-size:11px;letter-spacing:2px;padding:8px 14px;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(4,38,59,.94);backdrop-filter:blur(12px);border-bottom:2px solid rgba(46,196,230,.35)}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:13px 0;max-width:1180px;margin:0 auto;padding-left:22px;padding-right:22px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand .mark{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#5fd8f2,var(--aqua) 55%,#0d7fa3);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;box-shadow:0 4px 14px rgba(46,196,230,.5)}
+.brand .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;line-height:1}
+.brand .t small{display:block;font-size:10px;letter-spacing:2.5px;color:var(--aqua);font-family:'Inter',sans-serif;font-weight:700}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a.nl{color:#cfe9f2;text-decoration:none;font-weight:600;font-size:14.5px}
+.navlinks a.nl:hover{color:#fff}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--aqua),#1aa8cc);color:#03222f!important;font-weight:800;text-decoration:none;padding:13px 28px;border-radius:100px;font-size:15px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 20px rgba(46,196,230,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(46,196,230,.5)}
+.btn.coral{background:linear-gradient(135deg,var(--coral),#f25a3c);color:#fff!important;box-shadow:0 6px 20px rgba(255,122,89,.4)}
+.hamb{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+@media(max-width:880px){.navlinks{position:fixed;inset:0;background:rgba(4,38,59,.98);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform .35s;z-index:99}.navlinks.open{transform:none}.hamb{display:block;z-index:101}.navlinks a.nl{font-size:20px}}
+/* HERO */
+.hero{background:linear-gradient(180deg,#04263b 0%,#073b57 60%,#0a4a6b 100%);color:#fff;position:relative;overflow:hidden}
+.bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.bub{position:absolute;bottom:-40px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.5),rgba(255,255,255,.06));animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-110vh)}}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:90px 22px 130px;position:relative;z-index:2}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding:60px 22px 110px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(46,196,230,.15);border:1px solid rgba(46,196,230,.5);color:#a8e6f7;font-size:12px;font-weight:800;letter-spacing:2.5px;padding:9px 18px;border-radius:100px;margin-bottom:22px}
+.hero h1{font-size:clamp(38px,5.2vw,60px);line-height:1.05;margin-bottom:18px;font-weight:800}
+.hero h1 .hl{color:var(--aqua)}
+.hero p.lead{font-size:18px;color:#c3dde8;max-width:520px;margin-bottom:14px}
+.hero .stars{color:#ffd166;font-size:17px;font-weight:700;margin-bottom:26px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero .creds{display:flex;gap:24px;flex-wrap:wrap;font-size:13.5px;color:#9fc4d4}
+.hero .creds strong{color:#fff;display:block;font-size:16px}
+/* porpoise art */
+.fin{position:relative;height:480px;display:flex;align-items:center;justify-content:center}
+.fin svg{width:100%;max-width:420px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.4));animation:swim 5s ease-in-out infinite}
+@keyframes swim{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(2deg)}}
+.fin .tag{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);border-radius:14px;padding:14px 20px;font-size:14px;font-weight:600}
+.fin .t1{top:6%;left:0}.fin .t2{bottom:8%;right:0}
+.fin .tag b{color:var(--aqua);font-family:'Bricolage Grotesque',sans-serif;font-size:19px;display:block}
+/* wave divider */
+.wave{display:block;width:100%;height:80px;margin-bottom:-1px}
+/* emergency strip */
+.emg{background:var(--coral);color:#fff}
+.emg .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 22px;flex-wrap:wrap}
+.emg h3{font-size:22px}
+.emg p{font-size:15px;opacity:.95}
+.emg .btn{background:#fff;color:#c2432b!important;box-shadow:none}
+/* SECTIONS */
+section{padding:88px 0}
+.sec-head{max-width:680px;margin:0 auto 52px;text-align:center}
+.kick{font-size:12px;font-weight:800;letter-spacing:3px;color:#0d8fb5;margin-bottom:12px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);line-height:1.12;margin-bottom:14px}
+.sec-head p{color:#54707f;font-size:17px}
+/* service cards */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:#fff;border-radius:22px;padding:34px 30px;box-shadow:0 14px 40px rgba(4,38,59,.07);border-bottom:5px solid var(--aqua);transition:transform .3s,box-shadow .3s}
+.svc:hover{transform:translateY(-8px) rotate(-.4deg);box-shadow:0 26px 60px rgba(4,38,59,.14)}
+.svc .ic{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#d8f3fb,#a9e6f7);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:16px}
+.svc h3{font-size:20px;margin-bottom:10px}
+.svc p{font-size:14.5px;color:#54707f}
+/* owner */
+.owner{background:var(--deep);color:#fff;border-radius:30px;padding:0;overflow:hidden}
+.owner .in{display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:860px){.owner .in{grid-template-columns:1fr}}
+.owner .txt{padding:60px 54px}
+.owner .kick{color:var(--aqua)}
+.owner h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:18px}
+.owner p{color:#b9d4df;margin-bottom:16px;font-size:16px}
+.owner .sig{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;color:var(--aqua);margin-top:20px}
+.owner .art{background:linear-gradient(150deg,#0a4a6b,#04263b);display:flex;align-items:center;justify-content:center;font-size:110px;min-height:340px;position:relative;overflow:hidden}
+.owner .art::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,rgba(46,196,230,.4),transparent 60%)}
+/* testimonials */
+.testi{background:var(--foam)}
+.tslider{max-width:760px;margin:0 auto;position:relative}
+.tcard{background:#fff;border-radius:24px;padding:48px 52px;box-shadow:0 20px 60px rgba(4,38,59,.1);display:none;position:relative}
+.tcard.active{display:block;animation:fadeUp .45s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.tcard .qmark{font-family:'Bricolage Grotesque',sans-serif;font-size:70px;color:var(--aqua);line-height:.6;display:block;margin-bottom:16px}
+.tcard p{font-size:18px;font-style:italic;color:#2c4a5c;margin-bottom:22px}
+.tcard .who{display:flex;align-items:center;gap:14px}
+.tcard .ava{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--aqua),#0d7fa3);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px}
+.tcard .who b{display:block}
+.tcard .who span{font-size:13.5px;color:#6b8a9b}
+.tdots{display:flex;gap:10px;justify-content:center;margin-top:28px}
+.tdot{width:12px;height:12px;border-radius:50%;background:#b9d4df;border:none;cursor:pointer;transition:all .25s}
+.tdot.active{background:var(--aqua);transform:scale(1.4)}
+/* counters */
+.counters{background:linear-gradient(120deg,var(--ocean),var(--deep))}
+.counters .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:48px 22px;text-align:center;color:#fff}
+.counter b{font-family:'Bricolage Grotesque',sans-serif;font-size:44px;color:var(--aqua);display:block}
+.counter span{font-size:12.5px;font-weight:700;letter-spacing:2px;color:#a8cddb}
+@media(max-width:700px){.counters .wrap{grid-template-columns:repeat(2,1fr)}}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.faq-item{background:#fff;border-radius:16px;margin-bottom:12px;box-shadow:0 6px 20px rgba(4,38,59,.05);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-weight:700;font-size:16px;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:inherit}
+.faq-q .pm{width:30px;height:30px;border-radius:50%;background:var(--foam);color:#0d8fb5;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s}
+.faq-item.open .faq-q .pm{transform:rotate(45deg);background:var(--aqua);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:#54707f}
+.faq-a p{padding:0 24px 22px;font-size:15px}
+/* contact */
+.contact{background:var(--deep);color:#fff;position:relative}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;position:relative;z-index:2}
+@media(max-width:900px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(30px,4vw,44px);margin-bottom:16px}
+.contact h2 .hl{color:var(--aqua)}
+.contact .info p{color:#a8cddb;margin-bottom:16px}
+.contact .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);color:var(--aqua);text-decoration:none;display:block;margin-bottom:10px}
+.hours{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+.hours td{padding:10px 4px;border-bottom:1px solid rgba(255,255,255,.12);color:#c3dde8}
+.hours td:last-child{text-align:right;font-weight:700;color:#fff}
+form.quote{background:rgba(255,255,255,.06);border:1px solid rgba(46,196,230,.3);border-radius:22px;padding:38px;backdrop-filter:blur(8px)}
+form.quote h3{margin-bottom:20px;font-size:22px}
+form.quote .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){form.quote .row{grid-template-columns:1fr}}
+form.quote input,form.quote select,form.quote textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;font-size:15px;font-family:inherit;margin-bottom:14px}
+form.quote textarea{resize:vertical;min-height:96px}
+form.quote input::placeholder,form.quote textarea::placeholder{color:#7fa3b3}
+form.quote select option{color:#04263b}
+form.quote .btn{width:100%;margin-top:6px}
+/* footer */
+footer{background:#02141f;color:#7fa3b3;padding:44px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c3dde8}
+/* sticky mobile call */
+.mcall{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(4,38,59,.96);padding:12px 16px calc(12px + env(safe-area-inset-bottom));border-top:2px solid rgba(46,196,230,.4)}
+.mcall a{display:block;text-align:center;background:linear-gradient(135deg,var(--aqua),#1aa8cc);color:#03222f;font-weight:800;text-decoration:none;padding:15px;border-radius:100px;font-size:17px}
+@media(max-width:880px){.mcall{display:block}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="badge-demo">DEMO PREVIEW</div>
+
+<nav>
+  <div class="bar">
+    <a class="brand" href="#top"><span class="mark">🐬</span><span class="t">Porpoise Plumbing<small>FRISCO, TX · RMP-43223</small></span></a>
+    <div class="navlinks" id="navlinks">
+      <a class="nl" href="#services">Services</a>
+      <a class="nl" href="#owner">Our Story</a>
+      <a class="nl" href="#reviews">Reviews</a>
+      <a class="nl" href="#faq">FAQ</a>
+      <a class="btn" href="tel:+19724306006">Call (972) 430-6006</a>
+    </div>
+    <button class="hamb" id="hamb" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bubbles" id="bubbles"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">FRISCO, TEXAS — LICENSED PLUMBER</span>
+      <h1>Plumbing done <span class="hl">with a porpoise.</span></h1>
+      <p class="lead">Leaks, clogs, water heaters, gas lines — Frisco's friendliest plumber shows up on time, explains everything in plain English, and treats you like family.</p>
+      <div class="stars">★★★★★ 5.0 · 403 Birdeye reviews</div>
+      <div class="ctas">
+        <a class="btn coral" href="tel:+19724306006">🚨 Emergency? Call Now</a>
+        <a class="btn" href="#quote" style="background:rgba(255,255,255,.12);color:#fff!important;box-shadow:none;border:1px solid rgba(255,255,255,.4)">Get a Free Quote</a>
+      </div>
+      <div class="creds">
+        <div><strong>Robert White</strong>Owner &amp; Founder</div>
+        <div><strong>10+ years</strong>Experience</div>
+        <div><strong>Mon–Sat</strong>Same-day emergency</div>
+      </div>
+    </div>
+    <div class="fin" aria-hidden="true">
+      <svg viewBox="0 0 200 120" fill="none">
+        <path d="M20 70 Q60 20 120 30 Q160 36 175 15 Q170 40 150 50 Q160 55 172 52 Q160 68 140 66 Q100 110 55 95 Q30 88 20 70Z" fill="url(#pg)" stroke="#a8e6f7" stroke-width="2"/>
+        <circle cx="55" cy="55" r="4" fill="#04263b"/>
+        <path d="M75 62 Q95 68 115 60" stroke="#04263b" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M100 34 Q110 18 128 20 Q118 28 112 38Z" fill="#2ec4e6"/>
+        <defs><linearGradient id="pg" x1="20" y1="30" x2="175" y2="95"><stop stop-color="#5fd8f2"/><stop offset="1" stop-color="#1aa8cc"/></linearGradient></defs>
+      </svg>
+      <div class="tag t1"><b>Same-day</b>emergency service</div>
+      <div class="tag t2"><b>100%</b>satisfaction promise</div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,50 L1440,80 L0,80 Z" fill="#ff7a59"/></svg>
+</header>
+
+<div class="emg">
+  <div class="wrap">
+    <div><h3>🚨 Plumbing emergency?</h3><p>Emergencies are first-come, first-served — a plumber can typically arrive the same day, Mon–Sat, 7 AM–5:30 PM. Don't wait on a leak.</p></div>
+    <a class="btn" href="tel:+19724306006">CALL (972) 430-6006</a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick">WHAT WE FIX</div>
+      <h2>Every pipe, drain &amp; fixture</h2>
+      <p>Residential and commercial — if water runs through it, we handle it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc rv"><div class="ic">💧</div><h3>Leak Repair</h3><p>Dripping faucets, hidden pipe leaks, slab leaks — found fast and fixed right the first time.</p></div>
+      <div class="svc rv"><div class="ic">🚿</div><h3>Drain Cleaning</h3><p>Stubborn clogs cleared with pro equipment. Sewer lines, kitchen sinks, main drains.</p></div>
+      <div class="svc rv"><div class="ic">🔥</div><h3>Water Heaters</h3><p>Traditional and tankless — repair, replacement, and new installs sized for your home.</p></div>
+      <div class="svc rv"><div class="ic">🚽</div><h3>Toilets &amp; Fixtures</h3><p>Running toilets, new installs, faucet and fixture upgrades throughout the house.</p></div>
+      <div class="svc rv"><div class="ic">🧪</div><h3>Water Filtration</h3><p>Softeners and whole-home filtration for cleaner, better-tasting Frisco water.</p></div>
+      <div class="svc rv"><div class="ic">🔩</div><h3>Gas Lines</h3><p>Licensed gas line work — installs, repairs, and safety checks done by the book.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="counters">
+  <div class="wrap">
+    <div class="counter rv"><b><span class="count" data-n="403">0</span></b><span>BIRDEYE REVIEWS</span></div>
+    <div class="counter rv"><b><span class="count" data-n="5" data-dec="1">0</span>★</b><span>AVERAGE RATING</span></div>
+    <div class="counter rv"><b><span class="count" data-n="10">0</span>+</b><span>YEARS EXPERIENCE</span></div>
+    <div class="counter rv"><b><span class="count" data-n="100">0</span>%</b><span>SATISFACTION PROMISE</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="owner rv" id="owner">
+      <div class="in">
+        <div class="txt">
+          <div class="kick">OUR STORY</div>
+          <h2>Built from the ground up — by Robert.</h2>
+          <p>"I built my company from the ground up. With over 10 years of experience, I bring the knowledge and skills needed to handle any plumbing issue with confidence and precision."</p>
+          <p>"My customers are not just customers, they are family. I look forward to serving you and building a lasting relationship."</p>
+          <div class="sig">— Robert White, Owner &amp; Founder</div>
+        </div>
+        <div class="art">🔧</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick">REVIEWS</div>
+      <h2>Frisco keeps calling back</h2>
+      <p>5.0 stars across 403 Birdeye reviews — here's what your neighbors say.</p>
+    </div>
+    <div class="tslider rv">
+      <div class="tcard active">
+        <span class="qmark">"</span>
+        <p>I'm in a new home and my master bath tub wouldn't shut off. Porpoise Plumbing was able to make it out the same day and Robert did an amazing job. Keep up the wonderful work and excellent service!</p>
+        <div class="who"><div class="ava">L</div><div><b>Lori K.</b><span>Review on Yelp</span></div></div>
+      </div>
+      <div class="tcard">
+        <span class="qmark">"</span>
+        <p>This morning we discovered our water heater sprang a major leak, called Porpoise Plumbing. Robert arrived within an hour, installed a new water heater, &amp; life was happy again by 11 am! Highly recommend!</p>
+        <div class="who"><div class="ava">B</div><div><b>Ben M.</b><span>Review on Yelp</span></div></div>
+      </div>
+      <div class="tcard">
+        <span class="qmark">"</span>
+        <p>Had an emergency with low hot water pressure. Robert came to my place right on time and was able to diagnose and fix the problem within 30 minutes. He was professional, polite, and super nice. I highly recommend these guys!</p>
+        <div class="who"><div class="ava">E</div><div><b>Edward Fremont</b><span>Facebook Review</span></div></div>
+      </div>
+      <div class="tdots">
+        <button class="tdot active" data-s="0" aria-label="Review 1"></button>
+        <button class="tdot" data-s="1" aria-label="Review 2"></button>
+        <button class="tdot" data-s="2" aria-label="Review 3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick">QUESTIONS</div>
+      <h2>Before you call</h2>
+    </div>
+    <div class="faq rv">
+      <div class="faq-item"><button class="faq-q">Do you offer emergency service?<span class="pm">+</span></button><div class="faq-a"><p>Yes. Emergencies are handled first-come, first-served, and a plumber can typically arrive the same day between 7 AM and 5:30 PM, Monday through Saturday. Call <a href="tel:+19724306006" style="font-weight:700">(972) 430-6006</a> right away.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are you licensed?<span class="pm">+</span></button><div class="faq-a"><p>Yes — Porpoise Plumbing is a licensed Texas plumbing company, RMP-43223, and a member of the Frisco Chamber.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you give free estimates?<span class="pm">+</span></button><div class="faq-a"><p>We provide upfront pricing before any work begins — you'll always know the cost before we start. No surprises, ever.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What areas do you serve?<span class="pm">+</span></button><div class="faq-a"><p>We're based in Frisco at 6735 Salt Cedar Way and serve Frisco plus surrounding areas. Call to confirm your address.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What if I'm not happy with the work?<span class="pm">+</span></button><div class="faq-a"><p>We stand behind every job with a 100% satisfaction guarantee. If something isn't right, we make it right.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap">
+    <div class="info rv">
+      <div class="kick">GET HELP NOW</div>
+      <h2>Dive in. <span class="hl">We'll handle the rest.</span></h2>
+      <p>Call for emergencies — or send the form and we'll get back to you fast. Emergencies always jump the line.</p>
+      <a class="big" href="tel:+19724306006">(972) 430-6006</a>
+      <p>✉️ <a href="mailto:service@porpoiseplumbing.com" style="color:#c3dde8">service@porpoiseplumbing.com</a></p>
+      <table class="hours">
+        <tr><td>Emergency service</td><td>Mon–Sat · 7 AM–5:30 PM</td></tr>
+        <tr><td>Same-day arrival</td><td>First-come, first-served</td></tr>
+        <tr><td>License</td><td>RMP-43223</td></tr>
+      </table>
+      <p>📍 6735 Salt Cedar Way, Building 1, Suite 300, Frisco, TX 75034<br>Serving Frisco, TX and surrounding areas</p>
+    </div>
+    <form class="quote rv" id="qform">
+      <h3>Request service</h3>
+      <div class="row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+      </div>
+      <select name="service" required>
+        <option value="">What do you need?</option>
+        <option>🚨 Emergency repair</option>
+        <option>Leak repair</option>
+        <option>Drain cleaning</option>
+        <option>Water heater</option>
+        <option>Toilet / fixture</option>
+        <option>Water filtration</option>
+        <option>Gas line</option>
+      </select>
+      <textarea name="details" placeholder="Tell us what's going on..."></textarea>
+      <button class="btn" type="submit">Send Request →</button>
+      <p id="qok" style="display:none;margin-top:14px;color:var(--aqua);font-weight:700">Thanks — we'll be in touch shortly. For emergencies, call (972) 430-6006 now.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Porpoise Plumbing, LLC</strong><br>6735 Salt Cedar Way, Building 1, Suite 300, Frisco, TX 75034<br><a href="tel:+19724306006">(972) 430-6006</a> · <a href="mailto:service@porpoiseplumbing.com">service@porpoiseplumbing.com</a><br>RMP-43223</div>
+    <div>Emergency: Mon–Sat 7 AM–5:30 PM<br>Same-day, first-come first-served</div>
+  </div>
+</footer>
+
+<div class="mcall"><a href="tel:+19724306006">🚨 Call (972) 430-6006 — Same-Day Service</a></div>
+
+<script>
+const hamb=document.getElementById('hamb'),nl=document.getElementById('navlinks');
+hamb.addEventListener('click',()=>nl.classList.toggle('open'));
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+// bubbles
+const bw=document.getElementById('bubbles');
+for(let i=0;i<18;i++){const b=document.createElement('div');b.className='bub';
+  const s=6+Math.random()*22;b.style.cssText='width:'+s+'px;height:'+s+'px;left:'+Math.random()*100+'%;animation-duration:'+(7+Math.random()*10)+'s;animation-delay:'+(Math.random()*10)+'s';
+  bw.appendChild(b)}
+// testimonial slider
+const cards=document.querySelectorAll('.tcard'),dots=document.querySelectorAll('.tdot');let cur=0,auto;
+function show(i){cur=(i+cards.length)%cards.length;cards.forEach((c,k)=>c.classList.toggle('active',k===cur));dots.forEach((d,k)=>d.classList.toggle('active',k===cur))}
+dots.forEach(d=>d.addEventListener('click',()=>{show(+d.dataset.s);reset()}));
+function reset(){clearInterval(auto);auto=setInterval(()=>show(cur+1),6000)}reset();
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);
+  const el=e.target,n=parseFloat(el.dataset.n),dec=+(el.dataset.dec||0),t0=performance.now();
+  (function tick(t){const p=Math.min(1,(t-t0)/1300),v=n*(1-Math.pow(1-p,3));
+    el.textContent=dec?v.toFixed(dec):Math.round(v);if(p<1)requestAnimationFrame(tick)})(t0);
+}}),{threshold:.6});
+document.querySelectorAll('.count').forEach(c=>io.observe(c));
+// reveal
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io2.observe(el));
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const it=q.parentElement,a=it.querySelector('.faq-a'),open=it.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('open');x.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+}));
+// form
+document.getElementById('qform').addEventListener('submit',e=>{e.preventDefault();e.target.querySelector('#qok').style.display='block';e.target.querySelectorAll('input,textarea,select').forEach(f=>f.value='')});
+</script>
+</body>
+</html>
