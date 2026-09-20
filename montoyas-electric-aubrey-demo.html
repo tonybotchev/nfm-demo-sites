@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montoya's Electric — Aubrey, TX | Generators · EV Chargers · Smart Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0e12; --bg2:#11161d; --panel:#151b24; --line:#232c39;
+  --volt:#ffd400; --volt-d:#e0b800; --txt:#e8edf3; --mut:#9aa5b4; --ok:#37d67a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+.mono{font-family:'JetBrains Mono',monospace}
+h1,h2,h3{line-height:1.12;letter-spacing:-.5px}
+a{color:inherit}
+.demo-badge{position:fixed;top:14px;right:14px;z-index:200;background:repeating-linear-gradient(45deg,#ffd400,#ffd400 12px,#0b0e12 12px,#0b0e12 24px);color:#0b0e12;font-weight:700;font-size:12px;letter-spacing:2px;padding:9px 14px;border-radius:3px;border:2px solid #ffd400;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+.demo-badge span{background:#ffd400;padding:2px 6px;font-family:'JetBrains Mono',monospace}
+/* nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(11,14,18,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{text-decoration:none;font-weight:700;font-size:19px;display:flex;align-items:center;gap:10px}
+.bolt{display:inline-flex;width:34px;height:34px;background:var(--volt);color:#0b0e12;border-radius:6px;align-items:center;justify-content:center;font-size:20px;font-weight:700}
+.brand small{display:block;font-size:10px;letter-spacing:3px;color:var(--mut);font-family:'JetBrains Mono',monospace;font-weight:400}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{text-decoration:none;font-size:14.5px;color:var(--mut);font-weight:500}
+.nav-links a:hover{color:var(--volt)}
+.nav-cta{background:var(--volt);color:#0b0e12!important;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:14px}
+.nav-cta:hover{background:#fff}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:6px;color:var(--txt);font-size:22px;padding:4px 12px;cursor:pointer}
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(700px 340px at 80% -10%,rgba(255,212,0,.12),transparent 60%),
+  linear-gradient(180deg,#0d1219 0%,var(--bg) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.16;mask-image:radial-gradient(70% 80% at 50% 20%,#000,transparent)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:96px 24px 84px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:1}
+.status-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 16px;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--ok);margin-bottom:22px}
+.status-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--ok);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(40px,5.2vw,64px);font-weight:700;margin-bottom:20px}
+.hero h1 .volt{color:var(--volt)}
+.hero p.lede{color:var(--mut);font-size:18px;max-width:520px;margin-bottom:14px}
+.hero p.lede b{color:var(--txt)}
+.spec-tags{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 32px}
+.spec-tags span{border:1px solid var(--line);background:var(--panel);padding:8px 16px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--volt)}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:6px;transition:transform .18s,box-shadow .18s;font-size:16px}
+.btn:hover{transform:translateY(-2px)}
+.btn-volt{background:var(--volt);color:#0b0e12;box-shadow:0 8px 26px rgba(255,212,0,.25)}
+.btn-volt:hover{box-shadow:0 12px 32px rgba(255,212,0,.4)}
+.btn-line{border:1.5px solid var(--line);color:var(--txt);background:var(--panel)}
+/* live load widget */
+.load-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:32px;position:relative;overflow:hidden}
+.load-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--volt),#ff9d00,var(--volt))}
+.load-card h3{font-size:20px;margin-bottom:4px}
+.load-card .sub{color:var(--mut);font-size:14px;margin-bottom:22px}
+.meter{margin-bottom:18px}
+.meter .lbl{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--mut);margin-bottom:8px}
+.meter .bar{height:10px;background:#0b0e12;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.meter .fill{height:100%;width:0;background:linear-gradient(90deg,var(--volt-d),var(--volt));border-radius:99px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.load-total{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:18px;margin-top:6px}
+.load-total .n{font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:700;color:var(--volt)}
+.load-cta{margin-top:18px}
+/* stat strip */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.stats-inner{max-width:1200px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat{border-left:3px solid var(--volt);padding-left:20px}
+.stat .n{font-family:'JetBrains Mono',monospace;font-size:38px;font-weight:700;color:#fff}
+.stat .n em{font-style:normal;color:var(--volt);font-size:24px}
+.stat p{color:var(--mut);font-size:14px;margin-top:4px}
+/* sections */
+.section{max-width:1200px;margin:0 auto;padding:88px 24px}
+.sec-k{font-family:'JetBrains Mono',monospace;color:var(--volt);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+.sec-head h2{font-size:clamp(30px,3.8vw,46px);font-weight:700;margin-bottom:14px;max-width:760px}
+.sec-head p{color:var(--mut);font-size:17px;max-width:680px}
+/* service grid */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.svc{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:30px 26px;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-6px);border-color:var(--volt);box-shadow:0 18px 44px rgba(255,212,0,.12)}
+.svc .ic{font-size:34px;margin-bottom:14px}
+.svc h3{font-size:19px;margin-bottom:10px}
+.svc p{color:var(--mut);font-size:14.5px}
+.svc .tag{position:absolute;top:16px;right:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#0b0e12;background:var(--volt);padding:3px 10px;border-radius:99px;font-weight:700}
+/* audit interactive */
+.audit{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:44px;margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.audit h3{font-size:24px;margin-bottom:8px}
+.audit .sub{color:var(--mut);font-size:15px;margin-bottom:22px}
+.chk{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;cursor:pointer;transition:.2s;background:var(--bg2)}
+.chk:hover{border-color:var(--volt)}
+.chk input{width:20px;height:20px;accent-color:var(--volt);margin-top:2px;flex:0 0 auto;cursor:pointer}
+.chk b{font-size:15px;display:block}
+.chk small{color:var(--mut);font-size:13px}
+.audit-result{background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:30px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.audit-result .score{font-family:'JetBrains Mono',monospace;font-size:56px;font-weight:700;color:var(--volt)}
+.audit-result p{color:var(--mut);font-size:14.5px;margin:10px 0 20px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:28px 24px;position:relative}
+.step .n{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--volt);letter-spacing:2px;margin-bottom:12px}
+.step h3{font-size:18px;margin-bottom:8px}
+.step p{color:var(--mut);font-size:14.5px}
+/* review strip */
+.review-strip{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:44px;display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+.review-strip .big{font-family:'JetBrains Mono',monospace;font-size:64px;font-weight:700;color:var(--volt);line-height:1}
+.review-strip .big small{font-size:20px;color:var(--mut)}
+.review-strip p{color:var(--mut);max-width:560px}
+.review-strip p b{color:var(--txt)}
+/* faq */
+.faq-item{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;color:var(--txt);font:inherit;text-align:left;padding:20px 24px;font-weight:700;font-size:16.5px;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq-q .pm{color:var(--volt);font-family:'JetBrains Mono',monospace;font-size:20px;transition:transform .25s;flex:0 0 auto}
+.faq-item.open .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a p{padding:0 24px 22px;color:var(--mut);font-size:15.5px}
+/* estimate */
+.est{background:linear-gradient(135deg,#141b26,#0d1420);border:1px solid var(--line);border-radius:12px;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.est h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:14px}
+.est h2 .volt{color:var(--volt)}
+.est p{color:var(--mut);margin-bottom:20px}
+.est ul{list-style:none;display:grid;gap:12px;color:var(--mut);font-size:15px}
+.est ul b{color:var(--txt)}
+.field{margin-bottom:14px}
+.field label{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:1px;color:var(--volt);margin-bottom:8px;text-transform:uppercase}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:6px;font:inherit;background:var(--bg);color:var(--txt)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--volt)}
+.form-ok{display:none;background:rgba(55,214,122,.12);border:1px solid var(--ok);color:var(--ok);padding:14px;border-radius:6px;font-weight:600;margin-top:12px}
+/* footer */
+footer{border-top:1px solid var(--line);background:#080b0f}
+.foot-inner{max-width:1200px;margin:0 auto;padding:56px 24px 28px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+.foot-inner h4{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--volt);font-family:'JetBrains Mono',monospace;margin-bottom:16px;font-weight:400}
+.foot-inner p,.foot-inner li{color:var(--mut);font-size:14.5px;margin-bottom:8px}
+.foot-inner ul{list-style:none}
+.foot-inner a{color:var(--volt);font-weight:700;text-decoration:none}
+.foot-bottom{text-align:center;padding:22px;border-top:1px solid var(--line);color:#5b6572;font-size:12.5px;font-family:'JetBrains Mono',monospace}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--volt);color:#0b0e12;text-align:center;padding:16px;font-weight:700;font-size:18px;text-decoration:none;font-family:'JetBrains Mono',monospace}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){
+  .hero-inner,.audit,.est{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .foot-inner{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);flex-direction:column;padding:18px 24px;gap:14px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .sticky-call{display:block}
+  body{padding-bottom:60px}
+}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo-badge"><span>DEMO PREVIEW</span></div>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#"><span class="bolt">⚡</span><span>MONTOYA'S ELECTRIC<small>AUBREY · TEXAS</small></span></a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#audit">Panel Check</a></li>
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#proof">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-cta" href="tel:+12149399265">(214) 939-9265</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="status-chip"><span class="dot"></span> Now wiring Aubrey &amp; the 380 corridor</div>
+      <h1>Power for the <span class="volt">modern</span> Texas home.</h1>
+      <p class="lede">Generators, EV chargers, smart-home wiring, panel upgrades, pool &amp; hot-tub electrical — installed by a licensed-shop electrician, <b>not</b> a handyman with a ladder.</p>
+      <div class="spec-tags">
+        <span>⚡ EV CHARGERS</span><span>🔋 GENERATORS</span><span>🏠 SMART HOME</span><span>🏊 POOL / HOT TUB</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-volt" href="tel:+12149399265">📞 (214) 939-9265</a>
+        <a class="btn btn-line" href="#estimate">Get a Free Estimate</a>
+      </div>
+    </div>
+    <div class="load-card reveal">
+      <h3>What's your home asking for?</h3>
+      <p class="sub">Most standard home panels were sized <b style="color:var(--volt)">before</b> anyone imagined EV chargers, hot tubs, and workshops on one service.</p>
+      <div class="meter"><div class="lbl"><span>EV CHARGER</span><span>+40A</span></div><div class="bar"><div class="fill" data-w="40"></div></div></div>
+      <div class="meter"><div class="lbl"><span>HOT TUB / SPA</span><span>+50A</span></div><div class="bar"><div class="fill" data-w="50"></div></div></div>
+      <div class="meter"><div class="lbl"><span>WORKSHOP / RV OUTLET</span><span>+30A</span></div><div class="bar"><div class="fill" data-w="30"></div></div></div>
+      <div class="meter"><div class="lbl"><span>POOL EQUIPMENT</span><span>+25A</span></div><div class="bar"><div class="fill" data-w="25"></div></div></div>
+      <div class="load-total"><span class="mono" style="color:var(--mut);font-size:13px">TYPICAL ADD-ONS</span><span class="n">+145A</span></div>
+      <p class="sub" style="margin:14px 0 0">Adding any of these without a panel check risks nuisance trips — or worse. We check first, then wire.</p>
+      <div class="load-cta"><a class="btn btn-volt" href="#audit" style="width:100%;text-align:center">Run the 30-second panel check ↓</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal"><div class="n"><span class="count" data-to="10">0</span><em>+</em></div><p>Permitted electrical projects (BuildZoom, last 4 yrs)</p></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-to="5">0</span><em>.0</em></div><p>Birdeye rating — every review 5 stars</p></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-to="12">0</span><em>+</em></div><p>Specialty services: EV, generators, smart home &amp; more</p></div>
+    <div class="stat reveal"><div class="n"><span class="count" data-to="145">0</span><em>A</em></div><p>Typical new load modern homes add</p></div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="sec-head reveal">
+    <div class="sec-k">// services</div>
+    <h2>Not your granddad's electrician.</h2>
+    <p>Repairs and remodels, yes — but our real work is the modern load: the chargers, generators, and smart systems the corridor's new homes keep adding.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc reveal"><span class="tag">HIGH DEMAND</span><div class="ic">🔌</div><h3>EV Charger Installation</h3><p>Level 2 home chargers sized to your panel and your car's draw. Clean conduit runs, permitted where required.</p></div>
+    <div class="svc reveal"><span class="tag">HIGH DEMAND</span><div class="ic">🔋</div><h3>Whole-Home Generators</h3><p>Automatic standby generators with transfer switches — sized to your essentials so Texas storms don't run your life.</p></div>
+    <div class="svc reveal"><div class="ic">🏠</div><h3>Smart Home &amp; Cameras</h3><p>Smart switches, panels, and camera wiring that actually works — clean power, clean data, no Wi-Fi dead-zone guessing.</p></div>
+    <div class="svc reveal"><div class="ic">⚡</div><h3>Panel Upgrades</h3><p>Main-service updates from tired 100A panels to 200A+ — the foundation every EV charger and hot tub depends on.</p></div>
+    <div class="svc reveal"><div class="ic">🏊</div><h3>Pool &amp; Hot Tub Electrical</h3><p>GFCI protection, pumps, heaters, and lighting wired to code — the wettest work in the house, done the safest.</p></div>
+    <div class="svc reveal"><div class="ic">🛠️</div><h3>Repairs &amp; Remodels</h3><p>Troubleshooting, new construction, ground-up builds, RV outlets, and electrical-only trenching for outbuildings.</p></div>
+  </div>
+</section>
+
+<section class="section" id="audit" style="padding-top:0">
+  <div class="sec-head reveal">
+    <div class="sec-k">// 30-second panel check</div>
+    <h2>Can your panel handle modern life?</h2>
+    <p>Check everything that applies — we'll tell you straight whether your panel is ready or needs a look.</p>
+  </div>
+  <div class="audit reveal">
+    <div>
+      <h3>What are you running (or planning)?</h3>
+      <p class="sub">Tap each item. This is a demo — your answers don't go anywhere yet.</p>
+      <label class="chk"><input type="checkbox" data-a="40"><span><b>EV charger</b><small>+40A typical draw</small></span></label>
+      <label class="chk"><input type="checkbox" data-a="50"><span><b>Hot tub / spa</b><small>+50A typical draw</small></span></label>
+      <label class="chk"><input type="checkbox" data-a="30"><span><b>Workshop / RV outlet</b><small>+30A typical draw</small></span></label>
+      <label class="chk"><input type="checkbox" data-a="25"><span><b>Pool equipment</b><small>+25A typical draw</small></span></label>
+      <label class="chk"><input type="checkbox" data-a="20"><span><b>Breaker trips more than twice a year</b><small>Warning sign — panel may be undersized</small></span></label>
+      <label class="chk"><input type="checkbox" data-a="15"><span><b>Home built before 2000</b><small>Older 100A panels weren't built for this</small></span></label>
+    </div>
+    <div class="audit-result">
+      <div class="score" id="auditScore">0A</div>
+      <p id="auditMsg">Select items on the left to see your added load — and whether your panel can take it.</p>
+      <a class="btn btn-volt" href="tel:+12149399265">📞 Ask us: (214) 939-9265</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process" style="padding-top:0">
+  <div class="sec-head reveal">
+    <div class="sec-k">// how it works</div>
+    <h2>From first call to flipped breaker.</h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><div class="n">01</div><h3>Call or request</h3><p>Describe the job — EV charger, generator, dead outlet. We listen first, quote second.</p></div>
+    <div class="step reveal"><div class="n">02</div><h3>Panel &amp; load check</h3><p>We verify your service can handle the new load before anyone touches a wire.</p></div>
+    <div class="step reveal"><div class="n">03</div><h3>Clean install</h3><p>Permitted where required, to code everywhere. No spaghetti in the attic.</p></div>
+    <div class="step reveal"><div class="n">04</div><h3>Walkthrough</h3><p>We show you what changed, label what matters, and leave the place cleaner than we found it.</p></div>
+  </div>
+</section>
+
+<section class="section" id="proof" style="padding-top:0">
+  <div class="review-strip reveal">
+    <div class="big">5.0<small>/5</small></div>
+    <div>
+      <h3 style="margin-bottom:8px">Every review is five stars.</h3>
+      <p><b>Birdeye 5.0 across 6 reviews</b> — homeowners in Aubrey and Krugerville rating the work at the top of the scale. We claim and manage our review presence so every new customer sees it first.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="padding-top:0">
+  <div class="sec-head reveal">
+    <div class="sec-k">// faq</div>
+    <h2>Straight answers, no jargon.</h2>
+  </div>
+  <div class="reveal">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do I need a panel upgrade for an EV charger?<span class="pm">+</span></button><div class="faq-a"><p>Often, yes — a Level 2 charger pulls about 40 amps, and many older 100A panels don't have the headroom. We check your panel and load calculation first and give you the honest answer before quoting anything.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What size generator do I need?<span class="pm">+</span></button><div class="faq-a"><p>It depends on what you want to keep running — essentials (fridge, heat, well pump) vs. the whole house. We size the generator to your actual load so you don't overpay for capacity you'll never use.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you do new construction and remodels?<span class="pm">+</span></button><div class="faq-a"><p>Yes — new construction, ground-up builds, remodels, plus specialty runs like RV outlets, hot-tub feeds, and electrical-only trenching.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you licensed?<span class="pm">+</span></button><div class="faq-a"><p>Electrical work in Texas requires a TDLR license, and we work within that framework — ask us for our license details on the call and we'll provide them. Never hire an unlicensed electrician for panel or service work.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What areas do you serve?<span class="pm">+</span></button><div class="faq-a"><p>We're based in Aubrey and serve the surrounding 380 corridor — Krugerville, Pilot Point, Providence Village, Cross Roads, and nearby Denton County towns.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="estimate" style="padding-top:0">
+  <div class="est reveal">
+    <div>
+      <h2>Get a <span class="volt">free estimate.</span></h2>
+      <p>Tell us what you need power for. We'll call back with a straight quote — no pressure, no upsell.</p>
+      <ul>
+        <li>⚡ <b>EV chargers, generators, panels</b> — our specialty</li>
+        <li>📋 <b>Permits handled</b> where the job requires them</li>
+        <li>🏠 <b>Residential &amp; light commercial</b> across the corridor</li>
+      </ul>
+    </div>
+    <form id="quoteForm" onsubmit="return fakeSubmit(event)">
+      <div class="field"><label for="qn">Name</label><input id="qn" required placeholder="Your name"></div>
+      <div class="field"><label for="qp">Phone</label><input id="qp" type="tel" required placeholder="(214) 555-0100"></div>
+      <div class="field"><label for="qs">Project type</label>
+        <select id="qs"><option>EV charger installation</option><option>Generator installation</option><option>Panel upgrade</option><option>Smart home / cameras</option><option>Pool / hot tub electrical</option><option>Repair / troubleshooting</option><option>New construction / remodel</option></select></div>
+      <div class="field"><label for="qd">Details</label><textarea id="qd" rows="3" placeholder="What are you looking to power?"></textarea></div>
+      <button class="btn btn-volt" type="submit" style="width:100%;border:0;cursor:pointer">Request My Free Estimate</button>
+      <div class="form-ok" id="formOk">✓ Received (demo). The live form calls Montoya's Electric directly.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <h4>Montoya's Electric</h4>
+      <p>Generators, EV chargers, smart-home wiring, panel upgrades, pool &amp; hot-tub electrical, repairs and new construction.</p>
+      <p style="margin-top:10px"><a href="tel:+12149399265">📞 (214) 939-9265</a></p>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <ul>
+        <li>10335 Quail Pointe Rd</li>
+        <li>Aubrey, TX 76227</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Mon–Fri 9:00 AM – 6:00 PM<br><span style="font-size:13px">(call to confirm — directory listings vary)</span></p>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 MONTOYA'S ELECTRIC · DEMO PREVIEW BY NOFLUFF MARKETING — NOT THE LIVE SITE</div>
+</footer>
+<a class="sticky-call" href="tel:+12149399265">📞 CALL (214) 939-9265</a>
+
+<script>
+// faq
+function toggleFaq(btn){
+  var item=btn.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+}
+// reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+// counters
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  var el=e.target,to=+el.dataset.to,t0=null;
+  function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1300,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+})},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el)});
+// load meter bars animate on reveal
+var mio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;mio.unobserve(e.target);
+  e.target.querySelectorAll('.fill').forEach(function(f,i){setTimeout(function(){f.style.width=f.dataset.w+'%'},i*160)});
+})},{threshold:.35});
+var lc=document.querySelector('.load-card');if(lc)mio.observe(lc);
+// panel check audit
+var boxes=document.querySelectorAll('.chk input');
+boxes.forEach(function(b){b.addEventListener('change',audit)});
+function audit(){
+  var total=0;boxes.forEach(function(b){if(b.checked)total+=+b.dataset.a});
+  document.getElementById('auditScore').textContent=total+'A';
+  var msg=document.getElementById('auditMsg');
+  if(total===0)msg.textContent='Select items on the left to see your added load — and whether your panel can take it.';
+  else if(total<60)msg.textContent='Moderate added load. Most healthy 200A panels absorb this — but get the panel checked before you wire.';
+  else msg.textContent='Heavy added load. This is panel-upgrade territory for many homes — call us before you buy equipment.';
+}
+// demo form
+function fakeSubmit(e){e.preventDefault();document.getElementById('formOk').style.display='block';e.target.querySelector('button[type=submit]').disabled=true;return false}
+</script>
+</body>
+</html>
