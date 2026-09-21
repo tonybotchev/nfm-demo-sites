@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Brian Wong, DDS — Frisco Dentist Since 1999 | DEMO PREVIEW</title>
+<meta name="description" content="DEMO PREVIEW — Brian Wong D.D.S. P.A., Frisco TX. Board-certified dentist in practice since 1999. 5.0 rating across 529 patient reviews.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14243e; --ink-deep:#0d1828; --paper:#faf6ec; --paper-dim:#f3ecdc;
+  --copper:#c25e3a; --copper-deep:#a34c2d; --mist:#e7ece5; --sage:#5f7a68;
+  --gold:#e2a93e; --line:rgba(20,36,62,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+img{max-width:100%}
+a{color:inherit}
+::selection{background:var(--copper);color:#fff}
+
+/* DEMO badge */
+.demo-badge{position:fixed;top:12px;right:12px;z-index:999;background:#b3261e;color:#fff;font-size:11px;font-weight:800;letter-spacing:.18em;padding:9px 14px;border-radius:4px;box-shadow:0 6px 20px rgba(0,0,0,.25);pointer-events:none}
+.demo-note{position:fixed;bottom:12px;left:12px;z-index:999;background:rgba(13,24,40,.85);color:#ffd9a0;font-size:10.5px;letter-spacing:.08em;padding:8px 12px;border-radius:4px;pointer-events:none;max-width:62vw}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:18px 4vw;transition:.35s;background:transparent}
+nav.scrolled{background:rgba(250,246,236,.96);backdrop-filter:blur(10px);box-shadow:0 2px 24px rgba(20,36,62,.12);padding:12px 4vw}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mono{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700;font-size:18px;transition:.35s}
+nav.scrolled .brand .mono{background:var(--copper)}
+.brand .bt{line-height:1.15}
+.brand .bt b{font-family:'Fraunces',serif;font-size:19px;display:block;color:#fff;transition:.35s}
+.brand .bt span{font-size:10.5px;letter-spacing:.24em;color:rgba(255,255,255,.7);transition:.35s}
+nav.scrolled .brand .bt b{color:var(--ink)}
+nav.scrolled .brand .bt span{color:var(--ink);opacity:.6}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a.nl{text-decoration:none;font-size:13.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.85;transition:.25s}
+nav.scrolled .nav-links a.nl{color:var(--ink)}
+.nav-links a.nl:hover{opacity:1;color:var(--copper)}
+.call-btn{display:inline-flex;align-items:center;gap:9px;background:var(--copper);color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 22px;border-radius:999px;transition:.25s;box-shadow:0 8px 22px rgba(194,94,58,.35)}
+.call-btn:hover{background:var(--copper-deep);transform:translateY(-2px)}
+.call-btn svg{width:16px;height:16px}
+.burger{display:none;background:none;border:none;color:#fff;font-size:28px;cursor:pointer}
+@media(max-width:880px){.nav-links{display:none}.burger{display:block}nav.scrolled .burger{color:var(--ink)}}
+.mobile-menu{position:fixed;inset:0;background:var(--ink-deep);z-index:950;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateY(-100%);transition:.4s}
+.mobile-menu.open{transform:none}
+.mobile-menu a{color:var(--paper);text-decoration:none;font-family:'Fraunces',serif;font-size:30px}
+.mobile-menu .close{position:absolute;top:22px;right:28px;background:none;border:none;color:#fff;font-size:34px;cursor:pointer}
+
+/* Hero */
+.hero{min-height:100svh;background:radial-gradient(1200px 700px at 78% 12%,#24395c 0%,var(--ink-deep) 62%) ,var(--ink-deep);color:var(--paper);display:grid;grid-template-columns:1.08fr .92fr;gap:3vw;align-items:center;padding:130px 5vw 70px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 600px at 12% 88%,rgba(194,94,58,.16),transparent 60%);pointer-events:none}
+.hero-rail{position:absolute;right:18px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:11px;letter-spacing:.5em;color:rgba(250,246,236,.35);text-transform:uppercase}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:26px}
+.hero-kicker::before{content:"";width:44px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(44px,5.6vw,84px);font-weight:600}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.sub{margin:26px 0 34px;font-size:18px;max-width:34rem;color:rgba(250,246,236,.82)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;border:1.5px solid rgba(250,246,236,.4);color:var(--paper);text-decoration:none;font-weight:600;padding:13px 26px;border-radius:999px;transition:.25s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-meta{margin-top:44px;display:flex;gap:34px;flex-wrap:wrap}
+.hero-meta div b{font-family:'Fraunces',serif;font-size:30px;color:var(--gold);display:block}
+.hero-meta div span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,246,236,.6)}
+
+.hero-card{position:relative;background:var(--paper);color:var(--ink);border-radius:22px;padding:38px 36px;box-shadow:0 40px 80px rgba(0,0,0,.4);transform:rotate(2deg);max-width:420px;justify-self:end;z-index:2}
+.hero-card .stars{color:var(--gold);font-size:26px;letter-spacing:4px}
+.hero-card .big{font-family:'Fraunces',serif;font-size:64px;font-weight:700;line-height:1;margin:8px 0 4px}
+.hero-card .lbl{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);opacity:.6;font-weight:700}
+.hero-card hr{border:none;border-top:1px solid var(--line);margin:20px 0}
+.hero-card .notchain{font-family:'Fraunces',serif;font-style:italic;font-size:20px}
+.hero-card .since{display:inline-block;margin-top:14px;background:var(--ink);color:var(--paper);font-size:12px;letter-spacing:.2em;font-weight:700;padding:8px 16px;border-radius:999px;text-transform:uppercase}
+.smile-arc{position:absolute;left:-70px;bottom:-40px;width:220px;opacity:.9;transform:rotate(-8deg)}
+@media(max-width:960px){.hero{grid-template-columns:1fr;padding-top:120px}.hero-card{justify-self:start;transform:rotate(0);margin-top:10px}.hero-rail{display:none}}
+
+/* Ticker */
+.ticker{background:var(--copper);color:#fff;overflow:hidden;white-space:nowrap;padding:15px 0;border-top:3px solid var(--ink-deep);border-bottom:3px solid var(--ink-deep)}
+.ticker .track{display:inline-block;animation:tick 26s linear infinite;font-weight:800;letter-spacing:.24em;font-size:13.5px;text-transform:uppercase}
+.ticker .track span{margin:0 26px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* Sections */
+section.block{padding:110px 5vw;max-width:1240px;margin:0 auto}
+.kicker{font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--copper);font-weight:800;margin-bottom:18px}
+h2.sec{font-size:clamp(34px,4vw,56px);margin-bottom:14px}
+.sec-sub{font-size:18px;opacity:.75;max-width:44rem;margin-bottom:56px}
+
+/* Difference rows */
+.diff-row{display:grid;grid-template-columns:110px 1fr 1.2fr;gap:3vw;align-items:start;padding:44px 10px;border-top:1px solid var(--line);transition:.3s;border-radius:12px}
+.diff-row:last-child{border-bottom:1px solid var(--line)}
+.diff-row:hover{background:#fff;box-shadow:0 24px 50px rgba(20,36,62,.1);padding-left:26px;padding-right:26px}
+.diff-num{font-family:'Fraunces',serif;font-size:64px;font-weight:300;color:var(--copper);line-height:1}
+.diff-row h3{font-size:27px;margin-bottom:10px}
+.diff-row p{font-size:16px;opacity:.78}
+@media(max-width:760px){.diff-row{grid-template-columns:1fr;gap:8px}}
+
+/* Timeline */
+.band-ink{background:var(--ink-deep);color:var(--paper)}
+.band-ink .kicker{color:var(--gold)}
+.tl{position:relative;margin-top:64px;padding-left:8px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--copper))}
+.tl-item{position:relative;padding:0 0 44px 54px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px rgba(226,169,62,.18)}
+.tl-item .yr{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-size:20px}
+.tl-item h3{font-size:24px;margin:4px 0 8px}
+.tl-item p{opacity:.75;max-width:40rem}
+
+/* Tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.tab{background:transparent;border:1.5px solid var(--line);color:var(--ink);font-family:'DM Sans';font-weight:700;font-size:15px;padding:12px 26px;border-radius:999px;cursor:pointer;transition:.25s}
+.tab.active,.tab:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tab-panels{background:#fff;border-radius:20px;padding:46px 44px;box-shadow:0 24px 60px rgba(20,36,62,.1);margin-top:22px;min-height:300px}
+.tab-panel{display:none;animation:fade .45s ease}
+.tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}}
+.svc{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)}
+.svc:last-child{border:none}
+.svc .dot{flex:0 0 12px;width:12px;height:12px;border-radius:50%;background:var(--copper);margin-top:7px}
+.svc b{display:block;font-size:16.5px}
+.svc span{font-size:14.5px;opacity:.7}
+@media(max-width:700px){.tab-panel.active{grid-template-columns:1fr}.tab-panels{padding:30px 24px}}
+
+/* Counters */
+.band-copper{background:linear-gradient(135deg,var(--copper),var(--copper-deep));color:#fff}
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;max-width:1240px;margin:0 auto;padding:84px 5vw}
+.counters .c b{font-family:'Fraunces',serif;font-size:clamp(44px,5vw,72px);display:block;line-height:1}
+.counters .c span{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;font-weight:600}
+@media(max-width:700px){.counters{grid-template-columns:1fr 1fr;gap:36px}}
+
+/* Letters slider */
+.letters{position:relative;max-width:820px;margin:0 auto}
+.letter{background:#fff;border-radius:6px 22px 6px 22px;padding:52px 54px;box-shadow:0 30px 70px rgba(20,36,62,.14);display:none;position:relative}
+.letter.active{display:block;animation:fade .5s ease}
+.letter::before{content:"“";position:absolute;top:6px;left:26px;font-family:'Fraunces',serif;font-size:110px;color:var(--copper);opacity:.22}
+.letter p{font-family:'Fraunces',serif;font-size:clamp(19px,2.4vw,25px);font-style:italic;line-height:1.5;margin-bottom:22px}
+.letter .who{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--copper)}
+.slider-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:30px}
+.sbtn{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--line);background:#fff;font-size:20px;cursor:pointer;transition:.25s;color:var(--ink)}
+.sbtn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dots{display:flex;gap:10px}
+.dot2{width:10px;height:10px;border-radius:50%;background:var(--line);cursor:pointer;transition:.25s;border:none}
+.dot2.active{background:var(--copper);transform:scale(1.35)}
+@media(max-width:600px){.letter{padding:40px 28px}}
+
+/* Visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:3vw;margin-top:10px}
+.visit-card{background:#fff;border-radius:20px;padding:44px 40px;box-shadow:0 24px 60px rgba(20,36,62,.1)}
+.visit-card h3{font-size:26px;margin-bottom:20px}
+.hours-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed var(--line);font-size:16px}
+.hours-row:last-child{border:none}
+.hours-row b{font-weight:700}
+.addr{font-size:17px;line-height:1.7}
+.addr b{font-family:'Fraunces',serif;font-size:21px}
+.emg{margin-top:26px;background:var(--paper-dim);border-left:5px solid var(--copper);padding:20px 22px;border-radius:0 12px 12px 0;font-size:15px}
+.emg b{display:block;margin-bottom:6px;font-size:16px}
+@media(max-width:820px){.visit-grid{grid-template-columns:1fr}}
+.map-btn{display:inline-flex;margin-top:22px;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:999px;transition:.25s}
+.map-btn:hover{background:var(--copper)}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:none;text-align:left;font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--ink);padding:24px 8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .pm{font-size:30px;color:var(--copper);font-weight:300;transition:.3s;flex:0 0 auto}
+.faq-item.open .faq-q .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.faq-a p{padding:0 8px 26px;font-size:16px;opacity:.78;max-width:46rem}
+
+/* Footer */
+footer{background:var(--ink-deep);color:var(--paper);padding:70px 5vw 40px}
+.foot-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:3vw}
+.foot-grid h4{font-family:'Fraunces',serif;font-size:22px;margin-bottom:14px;color:var(--gold)}
+.foot-grid p,.foot-grid a{font-size:15px;opacity:.85;line-height:1.9;text-decoration:none}
+.foot-grid a:hover{color:var(--gold);opacity:1}
+.foot-base{max-width:1240px;margin:44px auto 0;padding-top:24px;border-top:1px solid rgba(250,246,236,.15);font-size:12.5px;opacity:.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+
+/* Sticky mobile call */
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--copper);color:#fff;text-align:center;text-decoration:none;font-weight:800;font-size:18px;padding:17px;letter-spacing:.04em;box-shadow:0 -8px 30px rgba(0,0,0,.25)}
+@media(max-width:760px){.sticky-call{display:block}footer{padding-bottom:120px}.demo-note{display:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO PREVIEW</div>
+<div class="demo-note">Demo preview only — not a live site. Built for Brian Wong D.D.S. P.A., Frisco TX.</div>
+
+<nav id="nav">
+  <a class="brand" href="#top">
+    <span class="mono">BW</span>
+    <span class="bt"><b>Wong DDS</b><span>FRISCO · TEXAS</span></span>
+  </a>
+  <div class="nav-links">
+    <a class="nl" href="#difference">The Practice</a>
+    <a class="nl" href="#services">Services</a>
+    <a class="nl" href="#reviews">Reviews</a>
+    <a class="nl" href="#visit">Visit</a>
+    <a class="call-btn" href="tel:+14695981998">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+      (469) 598-1998</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+</nav>
+<div class="mobile-menu" id="mmenu">
+  <button class="close" id="mclose" aria-label="Close">×</button>
+  <a href="#difference">The Practice</a>
+  <a href="#services">Services</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#visit">Visit</a>
+  <a href="tel:+14695981998" style="color:var(--gold)">Call (469) 598-1998</a>
+</div>
+
+<header class="hero" id="top">
+  <div class="hero-rail">Brian Wong DDS · Frisco Texas · Est. 1999</div>
+  <div>
+    <span class="hero-kicker rv">Frisco, Texas — Est. 1999</span>
+    <h1 class="rv">One dentist.<br>Twenty-six years of <em>five-star</em> smiles.</h1>
+    <p class="sub rv">No chains. No revolving-door associates. Just Dr. Brian Wong — a board-certified dentist Frisco families have trusted with their smiles since 1999.</p>
+    <div class="hero-ctas rv">
+      <a class="call-btn" href="tel:+14695981998">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+        Call (469) 598-1998</a>
+      <a class="btn-ghost" href="#difference">Why patients stay →</a>
+    </div>
+    <div class="hero-meta rv">
+      <div><b>5.0 ★</b><span>529 patient reviews</span></div>
+      <div><b>1999</b><span>in practice since</span></div>
+      <div><b>1</b><span>dentist — every visit</span></div>
+    </div>
+  </div>
+  <div class="hero-card rv">
+    <svg class="smile-arc" viewBox="0 0 200 100" fill="none"><path d="M10 20 Q100 130 190 20" stroke="#c25e3a" stroke-width="10" stroke-linecap="round"/></svg>
+    <div class="stars">★★★★★</div>
+    <div class="big">5.0</div>
+    <div class="lbl">529 verified patient reviews</div>
+    <hr>
+    <p class="notchain">Not a chain. Not a franchise.<br>A dentist who knows your name.</p>
+    <span class="since">Serving Frisco since 1999</span>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="track" id="tickTrack">
+    <span>Board-Certified</span>✦<span>In practice since 1999</span>✦<span>Baylor trained</span>✦<span>VA Hospital residency</span>✦<span>529 five-star reviews</span>✦<span>Conservative, honest dentistry</span>✦
+  </div>
+</div>
+
+<section class="block" id="difference">
+  <p class="kicker rv">The practice</p>
+  <h2 class="sec rv">Dentistry the way it used to be done — <span class="serif" style="font-style:italic;color:var(--copper)">on purpose.</span></h2>
+  <p class="sec-sub rv">Dr. Wong opened his doors in Frisco in 1999 — first as Stonebriar Dental, now as Brian Wong D.D.S. P.A. The name on the door changed. Nothing else did.</p>
+
+  <div class="diff-row rv">
+    <div class="diff-num">01</div>
+    <div><h3>You see the dentist. Every time.</h3></div>
+    <div><p>No handoffs to whoever's on shift. Dr. Wong examines, diagnoses, and treats his own patients — the same doctor year after year, which is exactly why families have stayed for 15, 20 years.</p></div>
+  </div>
+  <div class="diff-row rv">
+    <div class="diff-num">02</div>
+    <div><h3>Conservative by philosophy.</h3></div>
+    <div><p>Patients call him "awesome and very conservative" — treatment that's recommended because it's needed, explained until it's understood. No upsells, no pressure, no surprises.</p></div>
+  </div>
+  <div class="diff-row rv">
+    <div class="diff-num">03</div>
+    <div><h3>Modern where it counts.</h3></div>
+    <div><p>Minimally invasive techniques and current technology for efficient, comfortable treatment — paired with the old-fashioned habit of following up and answering your questions personally.</p></div>
+  </div>
+</section>
+
+<div class="band-ink">
+<section class="block" id="story">
+  <p class="kicker rv">The dentist</p>
+  <h2 class="sec rv" style="color:var(--paper)">The road to Frisco</h2>
+  <div class="tl">
+    <div class="tl-item rv"><div class="yr">1992</div><h3>Baylor University</h3><p>Bachelor of Science in Biology — the foundation for a career built on getting the details right.</p></div>
+    <div class="tl-item rv"><div class="yr">1990s</div><h3>Baylor College of Dentistry</h3><p>Dental school in Dallas, followed by a general-practice residency at the VA Hospital in Dallas.</p></div>
+    <div class="tl-item rv"><div class="yr">1999</div><h3>Practice opens in Frisco</h3><p>Dr. Wong opens his own practice — first as Stonebriar Dental, later renamed Brian Wong D.D.S. P.A.</p></div>
+    <div class="tl-item rv"><div class="yr">Today</div><h3>8050 Preston Rd, Frisco</h3><p>Still independent, still the same dentist — now with 529 five-star reviews and generations of Frisco families.</p></div>
+  </div>
+</section>
+</div>
+
+<section class="block" id="services">
+  <p class="kicker rv">Services</p>
+  <h2 class="sec rv">Complete care, one roof</h2>
+  <p class="sec-sub rv">General, cosmetic, and restorative dentistry — diagnosed and delivered by Dr. Wong himself.</p>
+  <div class="tabs rv" role="tablist">
+    <button class="tab active" data-tab="t1" role="tab">General</button>
+    <button class="tab" data-tab="t2" role="tab">Cosmetic</button>
+    <button class="tab" data-tab="t3" role="tab">Restorative</button>
+  </div>
+  <div class="tab-panels rv">
+    <div class="tab-panel active" id="t1">
+      <div class="svc"><span class="dot"></span><div><b>Exams &amp; cleanings</b><span>Thorough checkups that catch small problems before they become big ones.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Periodontal treatment</b><span>Gum-disease care that protects the foundation of your smile.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Preventive care</b><span>Conservative, education-first dentistry focused on keeping teeth healthy.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Emergency guidance</b><span>Tooth pain, swelling, or a knocked-out tooth — call and you'll be heard.</span></div></div>
+    </div>
+    <div class="tab-panel" id="t2">
+      <div class="svc"><span class="dot"></span><div><b>Teeth whitening</b><span>In-office and take-home options for a brighter smile.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Porcelain veneers</b><span>Natural-looking transformations designed around your face.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Bonding &amp; contouring</b><span>Subtle reshaping for chips, gaps, and uneven edges.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Tooth-colored fillings</b><span>Repairs that disappear into your natural smile.</span></div></div>
+    </div>
+    <div class="tab-panel" id="t3">
+      <div class="svc"><span class="dot"></span><div><b>Dental crowns</b><span>Strong, natural-looking protection for damaged teeth.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Bridges</b><span>Fixed replacements that close gaps and restore your bite.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Root canal treatment</b><span>Save the tooth, stop the pain — gently.</span></div></div>
+      <div class="svc"><span class="dot"></span><div><b>Implant restoration</b><span>Crowns, implant-retained bridges, and hybrid implants.</span></div></div>
+    </div>
+  </div>
+  <p class="rv" style="margin-top:26px;font-size:15px;opacity:.7">Not sure what you need? That's what the exam is for — <a href="tel:+14695981998" style="color:var(--copper);font-weight:700">call (469) 598-1998</a> and ask.</p>
+</section>
+
+<div class="band-copper">
+  <div class="counters">
+    <div class="c rv"><b><span class="count" data-to="26">0</span>+</b><span>Years in practice</span></div>
+    <div class="c rv"><b><span class="count" data-to="529">0</span></b><span>Patient reviews</span></div>
+    <div class="c rv"><b>5.0★</b><span>Average rating</span></div>
+    <div class="c rv"><b>1</b><span>Dentist, every visit</span></div>
+  </div>
+</div>
+
+<section class="block" id="reviews">
+  <p class="kicker rv" style="text-align:center">Patient letters</p>
+  <h2 class="sec rv" style="text-align:center">Frisco keeps the receipts</h2>
+  <p class="sec-sub rv" style="text-align:center;margin-left:auto;margin-right:auto">5.0 stars across 529 reviews. Here's what a few of them say.</p>
+  <div class="letters rv">
+    <div class="letter active">
+      <p>I have been going to Dr. Wong for over 15 years. Since day 1, I've been treated like family. Dr. Wong is HIGHLY recommended!</p>
+      <div class="who">M. M. — Google review</div>
+    </div>
+    <div class="letter">
+      <p>I was a patient of Dr. Wong's for years, since 2003 or so. Gentle, caring, and considerate staff. Very professional group and I have recommended many friends as a result.</p>
+      <div class="who">F. G. — Yelp review</div>
+    </div>
+    <div class="letter">
+      <p>Dr. Wong is professional, thorough, and warm. I felt welcomed and seen from the very first cleaning. If you're looking for a new dentist, I highly recommend Dr. Wong.</p>
+      <div class="who">K. W. — Google review</div>
+    </div>
+    <div class="letter">
+      <p>My husband and I have been seeing Dr. Wong for over 10 years and he is the nicest man and really good at what he does!</p>
+      <div class="who">D. R. — Facebook review</div>
+    </div>
+    <div class="letter">
+      <p>A wonderful, caring man and dentist. Highly recommended to anyone living in the Metroplex.</p>
+      <div class="who">Birdeye patient review</div>
+    </div>
+  </div>
+  <div class="slider-nav rv">
+    <button class="sbtn" id="prevL" aria-label="Previous review">←</button>
+    <div class="dots" id="dots"></div>
+    <button class="sbtn" id="nextL" aria-label="Next review">→</button>
+  </div>
+</section>
+
+<section class="block" id="visit">
+  <p class="kicker rv">Visit us</p>
+  <h2 class="sec rv">Come see the practice</h2>
+  <p class="sec-sub rv">Real hours, real address, real phone number — on the page, where they belong.</p>
+  <div class="visit-grid">
+    <div class="visit-card rv">
+      <h3>Hours</h3>
+      <div class="hours-row"><span>Monday – Thursday</span><b>8:00 AM – 5:00 PM</b></div>
+      <div class="hours-row"><span>Friday</span><b>8:30 AM – 2:00 PM</b></div>
+      <div class="hours-row"><span>Saturday – Sunday</span><b>Closed</b></div>
+      <div class="emg"><b>Tooth emergency?</b>Constant tooth pain, a swollen jaw, or a knocked-out tooth — call as early as you can and we'll take care of you.</div>
+    </div>
+    <div class="visit-card rv">
+      <h3>Find us</h3>
+      <p class="addr"><b>Brian Wong D.D.S. P.A.</b><br>8050 Preston Rd, Suite 210<br>Frisco, TX 75034</p>
+      <p style="margin-top:18px;font-size:17px"><b>Phone:</b> <a href="tel:+14695981998" style="color:var(--copper);font-weight:700">(469) 598-1998</a></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=8050+Preston+Rd+Suite+210+Frisco+TX+75034" target="_blank" rel="noopener">Get directions →</a>
+      <p style="margin-top:18px;font-size:14px;opacity:.65">Serving Frisco and surrounding communities.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:20px">
+  <p class="kicker rv">Good to know</p>
+  <h2 class="sec rv">Questions, answered</h2>
+  <div style="margin-top:40px">
+    <div class="faq-item rv">
+      <button class="faq-q">Will I actually see Dr. Wong? <span class="pm">+</span></button>
+      <div class="faq-a"><p>Yes. This is a solo practice — Dr. Wong examines, diagnoses, and treats his own patients. That's the whole point, and it's why so many families have stayed for a decade or more.</p></div>
+    </div>
+    <div class="faq-item rv">
+      <button class="faq-q">What counts as a dental emergency? <span class="pm">+</span></button>
+      <div class="faq-a"><p>Constant, throbbing tooth pain, a swollen jaw or mouth, or a knocked-out tooth. Call as early as you can — you'll be heard, not put on hold.</p></div>
+    </div>
+    <div class="faq-item rv">
+      <button class="faq-q">I'm nervous about dentists. Is this the right office? <span class="pm">+</span></button>
+      <div class="faq-a"><p>Ask his patients: "gentle, caring," "treated like family," "welcomed and seen from the very first cleaning." Conservative treatment, explained until you understand it — no pressure, ever.</p></div>
+    </div>
+    <div class="faq-item rv">
+      <button class="faq-q">Do you take my insurance? <span class="pm">+</span></button>
+      <div class="faq-a"><p>The office works with many major dental plans. The fastest answer is a two-minute call: <a href="tel:+14695981998" style="color:var(--copper);font-weight:700">(469) 598-1998</a>.</p></div>
+    </div>
+    <div class="faq-item rv">
+      <button class="faq-q">Where are you located? <span class="pm">+</span></button>
+      <div class="faq-a"><p>8050 Preston Rd, Suite 210, Frisco, TX 75034 — easy to reach from anywhere in Frisco and the surrounding communities.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Brian Wong D.D.S. P.A.</h4>
+      <p>8050 Preston Rd, Suite 210<br>Frisco, TX 75034<br><a href="tel:+14695981998">(469) 598-1998</a></p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Mon – Thu: 8:00 AM – 5:00 PM<br>Fri: 8:30 AM – 2:00 PM<br>Sat – Sun: Closed</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <p><a href="#difference">The practice</a><br><a href="#services">Services</a><br><a href="#reviews">Patient reviews</a><br><a href="tel:+14695981998">Call the office</a></p>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>Brian Wong D.D.S. P.A. — Frisco, Texas. In practice since 1999.</span>
+    <span>DEMO PREVIEW — not a live site.</span>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14695981998">📞 Call (469) 598-1998</a>
+
+<script>
+// Nav scroll
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+// Mobile menu
+const mm=document.getElementById('mmenu');
+document.getElementById('burger').onclick=()=>mm.classList.add('open');
+document.getElementById('mclose').onclick=()=>mm.classList.remove('open');
+mm.querySelectorAll('a').forEach(a=>a.onclick=()=>mm.classList.remove('open'));
+// Reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// Counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const to=+e.target.dataset.to,t0=performance.now(),d=1600;
+  (function step(t){const p=Math.min((t-t0)/d,1),v=Math.round(to*(1-Math.pow(1-p,3)));
+    e.target.textContent=v;if(p<1)requestAnimationFrame(step)})(t0);
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+// Tabs
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');document.getElementById(t.dataset.tab).classList.add('active');
+});
+// Letters slider
+const letters=[...document.querySelectorAll('.letter')],dotsBox=document.getElementById('dots');
+let li=0,timer;
+letters.forEach((_,i)=>{const d=document.createElement('button');d.className='dot2'+(i?'':' active');d.setAttribute('aria-label','Review '+(i+1));d.onclick=()=>show(i);dotsBox.appendChild(d)});
+function show(i){li=(i+letters.length)%letters.length;letters.forEach((l,k)=>l.classList.toggle('active',k===li));[...dotsBox.children].forEach((d,k)=>d.classList.toggle('active',k===li));restart()}
+function restart(){clearInterval(timer);timer=setInterval(()=>show(li+1),7000)}
+document.getElementById('prevL').onclick=()=>show(li-1);
+document.getElementById('nextL').onclick=()=>show(li+1);
+restart();
+// FAQ
+document.querySelectorAll('.faq-item').forEach(it=>{
+  const q=it.querySelector('.faq-q'),a=it.querySelector('.faq-a');
+  q.onclick=()=>{const open=it.classList.toggle('open');a.style.maxHeight=open?a.scrollHeight+'px':'0'};
+});
+// Ticker duplicate for seamless loop
+const tr=document.getElementById('tickTrack');tr.innerHTML+=tr.innerHTML;
+</script>
+</body>
+</html>
