@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premier Air &amp; Electric — Melissa, TX | Heating, Air &amp; Electrical</title>
+<meta name="description" content="Family-owned heating, air conditioning & electrical service in Melissa, TX. Over 20 years of experience. Call (972) 375-9960.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF4E9; --paper:#FFFDF7; --ink:#1E1A14; --pine:#1E3A2B; --pine-deep:#142A1F;
+  --copper:#C16A2B; --copper-deep:#9A5220; --gold:#E3A84B; --sage:#8FA98F; --line:#E4D8C3;
+  --card-shadow:0 18px 45px -18px rgba(30,26,20,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+::selection{background:var(--copper);color:#fff}
+
+/* ===== DEMO badge — every screen ===== */
+.demo-ribbon{position:fixed;top:0;left:0;z-index:2000;background:repeating-linear-gradient(45deg,#B4531F,#B4531F 12px,#8f3d14 12px,#8f3d14 24px);color:#fff;font-weight:800;font-size:11px;letter-spacing:.18em;padding:9px 42px;transform:rotate(-38deg) translate(-38px,14px);box-shadow:0 4px 14px rgba(0,0,0,.3);text-transform:uppercase}
+.demo-note{position:fixed;bottom:10px;left:10px;z-index:2000;background:rgba(30,26,20,.85);color:#F5E9D3;font-size:10.5px;letter-spacing:.08em;padding:6px 12px;border-radius:20px;text-transform:uppercase}
+
+/* ===== Emergency strip ===== */
+.emg{background:var(--pine-deep);color:#F5E9D3;text-align:center;font-size:13.5px;font-weight:600;letter-spacing:.04em;padding:9px 16px}
+.emg a{color:var(--gold);font-weight:800;text-decoration:none;border-bottom:1px dashed var(--gold)}
+.emg .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff5d5d;margin-right:8px;animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ===== Nav ===== */
+nav{position:sticky;top:0;z-index:1500;background:rgba(250,244,233,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:42px;height:42px;border-radius:50%;background:conic-gradient(from 200deg,var(--copper),var(--gold),var(--copper));display:grid;place-items:center;color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:19px;box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.brand b{font-family:'Fraunces',serif;font-size:19px;display:block;line-height:1.1}
+.brand small{font-size:10.5px;letter-spacing:.22em;color:var(--copper-deep);font-weight:700}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600}
+.nav-links a:hover{color:var(--copper-deep)}
+.call-pill{background:var(--pine);color:#fff!important;padding:11px 20px;border-radius:30px;font-weight:700;box-shadow:0 8px 20px -8px rgba(30,58,43,.7);transition:transform .2s}
+.call-pill:hover{transform:translateY(-2px);background:var(--pine-deep)}
+@media(max-width:860px){.nav-links a:not(.call-pill){display:none}}
+
+/* ===== Hero ===== */
+.hero{max-width:1180px;margin:0 auto;padding:64px 22px 40px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--pine);color:#F5E9D3;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;border-radius:24px;margin-bottom:20px}
+.hero h1{font-size:clamp(40px,5.4vw,68px);margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--copper-deep)}
+.hero p.lead{font-size:18px;color:#5b5346;max-width:520px;margin-bottom:28px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s,box-shadow .2s;cursor:pointer;border:none}
+.btn-copper{background:linear-gradient(135deg,var(--copper),var(--copper-deep));color:#fff;box-shadow:0 14px 30px -12px rgba(193,106,43,.7)}
+.btn-copper:hover{transform:translateY(-3px)}
+.btn-ghost{background:transparent;color:var(--pine-deep);border:2px solid var(--pine)}
+.btn-ghost:hover{background:var(--pine);color:#fff}
+.trust-row{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:#5b5346}
+.trust-item svg{width:20px;height:20px;stroke:var(--copper-deep)}
+
+/* Thermostat widget */
+.thermo-wrap{background:linear-gradient(160deg,var(--pine-deep),var(--pine));border-radius:28px;padding:38px 30px 30px;color:#F5E9D3;box-shadow:var(--card-shadow);position:relative;overflow:hidden}
+.thermo-wrap::before{content:"";position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(227,168,75,.35),transparent 70%)}
+.thermo-wrap h3{font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.thermo-wrap p{font-size:13.5px;opacity:.8;margin-bottom:14px}
+#thermoCanvas{display:block;margin:0 auto;cursor:grab;touch-action:none}
+.thermo-readout{text-align:center;margin-top:6px}
+.thermo-readout .temp{font-family:'Fraunces',serif;font-size:52px;font-weight:700;line-height:1}
+.thermo-readout .status{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:4px}
+
+/* ===== Ticker ===== */
+.ticker{background:var(--ink);color:#F5E9D3;overflow:hidden;white-space:nowrap;padding:14px 0;border-top:3px solid var(--copper);border-bottom:3px solid var(--copper)}
+.ticker-track{display:inline-block;animation:scroll 38s linear infinite;font-size:14px;font-weight:500}
+.ticker-track span{margin:0 34px}
+.ticker-track .star{color:var(--gold)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== Sections ===== */
+section{padding:84px 22px}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-kicker{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-deep);margin-bottom:12px}
+.sec-title{font-size:clamp(30px,3.6vw,46px);margin-bottom:16px;max-width:720px}
+.sec-sub{color:#5b5346;font-size:17px;max-width:640px;margin-bottom:44px}
+
+/* Services tabs */
+.tabs-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tab-btn{padding:13px 26px;border-radius:12px;border:2px solid var(--line);background:var(--paper);font-weight:700;font-size:15px;cursor:pointer;transition:all .22s;color:var(--ink)}
+.tab-btn.active{background:var(--pine);border-color:var(--pine);color:#fff;box-shadow:0 10px 24px -10px rgba(30,58,43,.6)}
+.tab-panels{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:44px;box-shadow:var(--card-shadow);min-height:300px}
+@media(max-width:700px){.tab-panels{padding:28px 22px}}
+.tab-panel{display:none;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.tab-panel.active{display:grid;animation:fadeUp .45s ease}
+@media(max-width:760px){.tab-panel.active{grid-template-columns:1fr}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-size:28px;margin-bottom:12px;color:var(--pine-deep)}
+.tab-panel ul{list-style:none;margin:18px 0 26px}
+.tab-panel li{padding:9px 0 9px 30px;position:relative;font-size:15.5px}
+.tab-panel li::before{content:"✓";position:absolute;left:4px;color:var(--copper-deep);font-weight:800}
+.tab-art{border-radius:16px;min-height:280px;display:grid;place-items:center;color:#fff;font-family:'Fraunces',serif;font-size:26px;font-style:italic;text-align:center;padding:34px;line-height:1.35}
+
+/* Counters */
+.stats{background:linear-gradient(160deg,var(--pine-deep),#0f2018);color:#F5E9D3}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center}
+@media(max-width:760px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat .num{font-family:'Fraunces',serif;font-size:clamp(40px,4.6vw,58px);font-weight:700;color:var(--gold)}
+.stat .lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-top:6px;font-weight:600}
+
+/* Family story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media(max-width:900px){.story{grid-template-columns:1fr}}
+.story-card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:48px 42px;box-shadow:var(--card-shadow);position:relative}
+.story-card::before{content:"“";position:absolute;top:6px;left:26px;font-family:'Fraunces',serif;font-size:110px;color:var(--line);line-height:1}
+.story-card p{font-size:17.5px;margin-bottom:16px;color:#4a4234}
+.story-card .sig{font-family:'Fraunces',serif;font-style:italic;font-size:20px;color:var(--copper-deep)}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Slider */
+.slider-shell{background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--card-shadow);padding:52px 48px;position:relative;overflow:hidden}
+@media(max-width:700px){.slider-shell{padding:36px 22px}}
+.slide{display:none;animation:fadeUp .5s ease}
+.slide.active{display:block}
+.slide .stars{color:var(--copper);font-size:20px;letter-spacing:4px;margin-bottom:16px}
+.slide blockquote{font-family:'Fraunces',serif;font-size:clamp(19px,2.4vw,25px);font-style:italic;line-height:1.5;margin-bottom:20px;color:#3d362a}
+.slide .who{font-weight:700}
+.slide .src{font-size:13px;color:#8a7f6a;letter-spacing:.06em}
+.slider-nav{display:flex;gap:12px;margin-top:28px;align-items:center}
+.snav{width:46px;height:46px;border-radius:50%;border:2px solid var(--line);background:var(--cream);font-size:19px;cursor:pointer;transition:all .2s;color:var(--ink)}
+.snav:hover{background:var(--pine);color:#fff;border-color:var(--pine)}
+.sdots{display:flex;gap:8px;margin-left:8px}
+.sdot{width:10px;height:10px;border-radius:50%;background:var(--line);cursor:pointer;transition:all .2s}
+.sdot.active{background:var(--copper);transform:scale(1.3)}
+
+/* FAQ */
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden;transition:box-shadow .2s}
+.faq-item.open{box-shadow:var(--card-shadow)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:22px 26px;font-size:17px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink);font-family:'Inter',sans-serif}
+.faq-q .pm{flex:none;width:32px;height:32px;border-radius:50%;background:var(--pine);color:#fff;display:grid;place-items:center;font-size:18px;transition:transform .3s}
+.faq-item.open .pm{transform:rotate(45deg);background:var(--copper)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{padding:0 26px 24px;color:#5b5346;font-size:15.5px}
+
+/* Estimate form */
+.estimate{background:linear-gradient(150deg,#241a10,#3a2a16);color:#F5E9D3;border-radius:28px;padding:56px 48px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+@media(max-width:900px){.estimate{grid-template-columns:1fr;padding:40px 26px}}
+.est-form{background:rgba(255,253,247,.06);border:1px solid rgba(227,168,75,.35);border-radius:20px;padding:34px}
+.est-form label{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:16px 0 6px}
+.est-form label:first-child{margin-top:0}
+.est-form input,.est-form select,.est-form textarea{width:100%;padding:13px 15px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:15px;font-family:'Inter',sans-serif}
+.est-form input::placeholder,.est-form textarea::placeholder{color:rgba(245,233,211,.5)}
+.est-form option{color:#1E1A14}
+.est-note{font-size:12.5px;opacity:.65;margin-top:14px}
+
+/* Service area strip */
+.area-band{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.area-band .towns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+.town{padding:10px 22px;border:1.5px solid var(--line);border-radius:26px;font-weight:600;font-size:14.5px;background:var(--cream);transition:all .2s;cursor:default}
+.town:hover{border-color:var(--copper);color:var(--copper-deep);transform:translateY(-2px)}
+
+/* Sticky mobile call */
+.sticky-call{position:fixed;bottom:0;left:0;right:0;z-index:1500;display:none;background:var(--pine-deep);padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-shadow:0 -6px 24px rgba(0,0,0,.3)}
+@media(max-width:760px){.sticky-call{display:block}}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--copper),var(--copper-deep));color:#fff;font-weight:800;font-size:17px;text-decoration:none;padding:14px;border-radius:14px}
+
+/* Footer */
+footer{background:var(--ink);color:#cfc4ae;padding:56px 22px 110px;text-align:center}
+@media(min-width:761px){footer{padding-bottom:56px}}
+footer .fname{font-family:'Fraunces',serif;font-size:26px;color:#F5E9D3;margin-bottom:10px}
+footer address{font-style:normal;font-size:15px;line-height:1.9}
+footer a{color:var(--gold);text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Demo Preview</div>
+<div class="demo-note">Demo preview only — not a live site</div>
+
+<div class="emg"><span class="dot"></span>No AC or heat? 24/7 emergency service — <a href="tel:+19723759960">call (972) 375-9960</a></div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">P</span>
+      <span><b>Premier Air &amp; Electric</b><small>MELISSA, TEXAS</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#family">Our Family</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a class="call-pill" href="tel:+19723759960">📞 (972) 375-9960</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div>
+    <span class="eyebrow">Family-owned · Melissa, TX · 20+ years</span>
+    <h1>Home comfort, <em>handled like family.</em></h1>
+    <p class="lead">Premier Air &amp; Electric is a family-owned heating, air conditioning, and electrical company right here in Melissa. When your system quits, the people who answer know your name — not a call center.</p>
+    <div class="hero-cta">
+      <a class="btn btn-copper" href="tel:+19723759960">📞 Call (972) 375-9960</a>
+      <a class="btn btn-ghost" href="#estimate">Get a Free Estimate</a>
+    </div>
+    <div class="trust-row">
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>BBB A+ Accredited</span>
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>177 American Standard reviews</span>
+      <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>24/7 Emergency Service</span>
+    </div>
+  </div>
+  <div class="thermo-wrap reveal">
+    <h3>Try it — your comfort dial</h3>
+    <p>Drag the dial. This is how easy getting help should feel.</p>
+    <canvas id="thermoCanvas" width="280" height="280" aria-label="Interactive comfort dial"></canvas>
+    <div class="thermo-readout">
+      <div class="temp"><span id="thermoTemp">72</span>°</div>
+      <div class="status" id="thermoStatus">Comfortable</div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span><span class="star">★★★★★</span> "They do the best job and are honest and fair with their prices" — Kathryn D.</span>
+    <span><span class="star">★★★★★</span> "Diagnosed the problem and replaced the sensor within 3 hours" — Michael A.</span>
+    <span><span class="star">★★★★★</span> "Came out during the snowmageddon when my HVAC fan motor blew out" — Tessa H.</span>
+    <span><span class="star">★★★★★</span> "Trust the company that services a large investment like a new AC unit" — Frank K.</span>
+    <span><span class="star">★★★★★</span> "David was so polite, took his time, was knowledgeable" — Jessica T.</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-kicker reveal">What we do</div>
+    <h2 class="sec-title reveal">One family company. Every system in your home.</h2>
+    <p class="sec-sub reveal">Heating, cooling, and electrical — repaired, installed, and maintained by the same trusted local crew. Tap a service to see what's included.</p>
+    <div class="tabs-bar reveal" role="tablist">
+      <button class="tab-btn active" data-tab="repair">AC &amp; Heat Repair</button>
+      <button class="tab-btn" data-tab="install">System Installation</button>
+      <button class="tab-btn" data-tab="maint">Maintenance Plans</button>
+      <button class="tab-btn" data-tab="elec">Electrical</button>
+    </div>
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" id="tab-repair">
+        <div>
+          <h3>Fast, honest repairs</h3>
+          <p>When other companies jump straight to "replace the whole system," we diagnose first and fix what's actually broken. Same-day response for breakdowns.</p>
+          <ul>
+            <li>AC repair — all makes &amp; models</li>
+            <li>Furnace &amp; heat pump repair</li>
+            <li>Thermostat diagnosis &amp; replacement</li>
+            <li>Free service call with any major repair</li>
+          </ul>
+          <a class="btn btn-copper" href="tel:+19723759960">📞 Call for Repair</a>
+        </div>
+        <div class="tab-art" style="background:linear-gradient(140deg,#1E3A2B,#3d6b4f)">"They diagnosed the problem and replaced the sensor within 3 hours of my initial call."<br><span style="font-size:16px;font-style:normal;opacity:.8">— Michael A., verified review</span></div>
+      </div>
+      <div class="tab-panel" id="tab-install">
+        <div>
+          <h3>New systems, sized right</h3>
+          <p>A new AC is a five-figure decision. We size it to your home, install it cleanly, and stand behind the work — including correcting ductwork mistakes others left behind.</p>
+          <ul>
+            <li>Full system replacement &amp; new installs</li>
+            <li>Free estimates on equipment replacement</li>
+            <li>1-year free maintenance agreement with every new system</li>
+            <li>High-efficiency American Standard equipment</li>
+          </ul>
+          <a class="btn btn-copper" href="tel:+19723759960">📞 Free Install Estimate</a>
+        </div>
+        <div class="tab-art" style="background:linear-gradient(140deg,#9A5220,#C16A2B)">"Their crews were very professional, punctual, and worked very quickly… a FIVE STAR company, from Top to Bottom."<br><span style="font-size:16px;font-style:normal;opacity:.85">— Frank K., verified review</span></div>
+      </div>
+      <div class="tab-panel" id="tab-maint">
+        <div>
+          <h3>Maintenance that pays for itself</h3>
+          <p>Twice-a-year tune-ups catch the small stuff before it becomes a no-AC Saturday in August. Members get priority scheduling when it matters most.</p>
+          <ul>
+            <li>Spring AC tune-up &amp; fall heat check</li>
+            <li>Energy Savings Preventative Maintenance Plan</li>
+            <li>Priority scheduling for members</li>
+            <li>Lower energy bills, longer equipment life</li>
+          </ul>
+          <a class="btn btn-copper" href="tel:+19723759960">📞 Ask About Plans</a>
+        </div>
+        <div class="tab-art" style="background:linear-gradient(140deg,#142A1F,#1E3A2B)">"They are consistently diligent in their work and have always made an effort to fit me into their schedule."<br><span style="font-size:16px;font-style:normal;opacity:.85">— Kathryn D., verified review</span></div>
+      </div>
+      <div class="tab-panel" id="tab-elec">
+        <div>
+          <h3>Electrical, done right</h3>
+          <p>We're licensed for both sides of the wall — so the same family company that keeps you cool can also keep your home powered safely.</p>
+          <ul>
+            <li>Panel upgrades &amp; breaker work</li>
+            <li>Lighting, fans &amp; fixture installs</li>
+            <li>Troubleshooting &amp; code corrections</li>
+            <li>Residential &amp; light commercial</li>
+          </ul>
+          <a class="btn btn-copper" href="tel:+19723759960">📞 Call an Electrician</a>
+        </div>
+        <div class="tab-art" style="background:linear-gradient(140deg,#5b3a17,#8a5a24)">One company for your comfort <em>and</em> your power — no juggling contractors.<br><span style="font-size:16px;font-style:normal;opacity:.85">Residential &amp; light commercial</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat reveal"><div class="num"><span class="count" data-target="20">0</span>+</div><div class="lbl">Years of experience</div></div>
+      <div class="stat reveal"><div class="num"><span class="count" data-target="177">0</span></div><div class="lbl">Reviews on American&nbsp;Standard</div></div>
+      <div class="stat reveal"><div class="num"><span class="count" data-target="14">0</span></div><div class="lbl">Five-star Angi reviews</div></div>
+      <div class="stat reveal"><div class="num">24/7</div><div class="lbl">Emergency service</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="family">
+  <div class="wrap story">
+    <div class="reveal">
+      <div class="sec-kicker">The family behind it</div>
+      <h2 class="sec-title">Run by a family, in the town they call home.</h2>
+      <p class="sec-sub" style="margin-bottom:0">Premier Air &amp; Electric is family-owned and operated by Lee and Sondra Baker — active in the local Chamber of Commerce, and built over 20+ years on a simple idea: treat every customer like family, because most of them are neighbors.</p>
+    </div>
+    <div class="story-card reveal">
+      <p>When the Texas snowmageddon knocked out Tessa's HVAC fan motor, the Premier crew came out in it — assessed the best solution, stayed on time, kept her informed, and installed a whole new system.</p>
+      <p>That's the whole business model: show up, be honest, do it right.</p>
+      <div class="sig">— The Premier family, Melissa TX</div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-kicker reveal">Proof, not promises</div>
+    <h2 class="sec-title reveal">Neighbors who'd call us again.</h2>
+    <div class="slider-shell reveal">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Absolutely love the folks at Premier! They are consistently diligent in their work and have always made an effort to fit me into their schedule… They do the best job and are honest and fair with their prices and I recommend Premier over any competitor, hands down."</blockquote>
+        <div class="who">Kathryn Daniel</div><div class="src">americanstandardair.com · Nov 2023</div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Premier Air &amp; Electric is OUTSTANDING. They are incredibly knowledgeable, trustworthy, and responsive. They installed our upstairs HVAC unit ~ 3 years ago, and they have been there for us every time we have needed them since… HIGHLY RECOMMEND!"</blockquote>
+        <div class="who">Michael's Private Side</div><div class="src">americanstandardair.com · Jul 2025</div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Everyone at Premier is terrific. We have had other companies service our air conditioners and were never satisfied and treated well until we started using Premier. Being able to trust the company that services a large investment like a new AC unit is the best reason to work with Premier."</blockquote>
+        <div class="who">Frank Kinney</div><div class="src">premierairandelectric.com</div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Premier was excellent. I cannot thank Lee, Jimmy, TJ, and the rest of the team for not only coming out during the snowmageddon when my HVAC fan motor blew out… I am keeping them on my trusted contractor list."</blockquote>
+        <div class="who">Tessa Hoskin</div><div class="src">premierairandelectric.com</div>
+      </div>
+      <div class="slider-nav">
+        <button class="snav" id="prevSlide" aria-label="Previous review">←</button>
+        <button class="snav" id="nextSlide" aria-label="Next review">→</button>
+        <div class="sdots" id="slideDots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:860px">
+    <div class="sec-kicker reveal">Good to know</div>
+    <h2 class="sec-title reveal">Questions Melissa homeowners ask.</h2>
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-q">Do you really offer 24/7 emergency service?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Yes. Heating and cooling emergencies don't keep office hours, so neither do we. If your system quits overnight or on a weekend, call <a href="tel:+19723759960" style="color:var(--copper-deep);font-weight:700">(972) 375-9960</a> and you'll reach a real person.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is the estimate really free?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Estimates on equipment replacement are free, and any major repair includes a free service call. We'll tell you what's wrong and what it costs before any work starts — no surprises.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Will you try to sell me a whole new system?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Only if you actually need one. Our reviewers say it best: we've fixed furnaces and ACs "on multiple occasions when other companies went straight to insisting on full replacement." We repair first, replace when it's the honest answer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does the maintenance plan include?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Our Energy Savings Preventative Maintenance Plan covers seasonal tune-ups that keep your system efficient, catch small problems early, and lower your energy bills. Buy a new system from us and your first year of maintenance is free.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Which areas do you serve?<span class="pm">+</span></button>
+        <div class="faq-a"><p>We're based in Melissa, TX and serve Melissa and the surrounding Collin County communities for residential and light commercial work.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="estimate" style="padding-top:20px">
+  <div class="wrap">
+    <div class="estimate reveal">
+      <div>
+        <div class="sec-kicker" style="color:var(--gold)">Free estimates</div>
+        <h2 class="sec-title" style="color:#F5E9D3">Tell us what's going on. We'll take it from there.</h2>
+        <p style="opacity:.85;margin-bottom:26px">Free estimates on equipment replacement · free service call with major repairs · 1-year free maintenance with every new system.</p>
+        <a class="btn btn-copper" href="tel:+19723759960">📞 Prefer to talk? (972) 375-9960</a>
+      </div>
+      <form class="est-form" onsubmit="event.preventDefault();this.innerHTML='<h3 style=&quot;color:#F5E9D3;font-size:24px;margin-bottom:10px&quot;>Thanks — we\'ll be in touch shortly.</h3><p style=&quot;opacity:.8&quot;>Demo preview: this form doesn\'t send anywhere yet.</p>';">
+        <label for="n">Name</label><input id="n" placeholder="Your name" required>
+        <label for="p">Phone</label><input id="p" type="tel" placeholder="(972) 555-0100" required>
+        <label for="s">What do you need?</label>
+        <select id="s">
+          <option>AC repair</option><option>Heating repair</option>
+          <option>New system / replacement</option><option>Maintenance plan</option>
+          <option>Electrical work</option><option>Something else</option>
+        </select>
+        <label for="m">Details</label><textarea id="m" rows="3" placeholder="e.g. Upstairs AC blowing warm air since yesterday…"></textarea>
+        <button class="btn btn-copper" type="submit" style="width:100%;justify-content:center;margin-top:20px">Request My Free Estimate</button>
+        <p class="est-note">Demo preview — this form is illustrative only and does not send data anywhere.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="area-band">
+  <section style="padding:60px 22px">
+    <div class="wrap">
+      <div class="sec-kicker reveal">Proudly local</div>
+      <h2 class="sec-title reveal" style="margin:0 auto">Based in Melissa, serving our neighbors.</h2>
+      <div class="towns reveal">
+        <span class="town">Melissa</span><span class="town">Anna</span><span class="town">McKinney</span>
+        <span class="town">Allen</span><span class="town">Plano</span><span class="town">Prosper</span>
+        <span class="town">Celina</span><span class="town">Frisco</span><span class="town">Howe</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="fname">Premier Air &amp; Electric</div>
+  <address>
+    5818 N McDonald St, Melissa, TX 75454<br>
+    <a href="tel:+19723759960">(972) 375-9960</a><br>
+    Mon–Sat: 8:00 AM – 5:00 PM · Sun: Closed<br>
+    24/7 emergency service available
+  </address>
+  <p style="margin-top:18px;font-size:12px;opacity:.6">DEMO PREVIEW — prepared by NoFluff Marketing. Not a live site.</p>
+</footer>
+
+<div class="sticky-call"><a href="tel:+19723759960">📞 Call Premier Air &amp; Electric — (972) 375-9960</a></div>
+
+<script>
+// ===== Scroll reveal =====
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ===== Service tabs =====
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ===== Counters =====
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,target=+el.dataset.target,t0=performance.now(),dur=1400;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),v=Math.round(target*(1-Math.pow(1-p,3)));
+    el.textContent=v;if(p<1)requestAnimationFrame(tick)})(t0);
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+
+// ===== Thermostat dial (canvas) =====
+(function(){
+  const cv=document.getElementById('thermoCanvas'),ctx=cv.getContext('2d');
+  const T=document.getElementById('thermoTemp'),S=document.getElementById('thermoStatus');
+  let temp=72,drag=false;
+  function status(t){if(t<66)return'Chilly — heat on';if(t>78)return'Too warm — cool it';if(t<70||t>75)return'Adjusting…';return'Comfortable'}
+  function draw(){
+    const w=cv.width,h=cv.height,cx=w/2,cy=h/2,R=104;
+    ctx.clearRect(0,0,w,h);
+    // track
+    const a0=Math.PI*0.75,a1=Math.PI*2.25;
+    ctx.lineWidth=26;ctx.lineCap='round';
+    ctx.strokeStyle='rgba(255,255,255,.12)';
+    ctx.beginPath();ctx.arc(cx,cy,R,a0,a1);ctx.stroke();
+    const frac=(temp-60)/(85-60);
+    const grad=ctx.createLinearGradient(0,0,w,0);
+    grad.addColorStop(0,'#E3A84B');grad.addColorStop(1,'#C16A2B');
+    ctx.strokeStyle=grad;
+    ctx.beginPath();ctx.arc(cx,cy,R,a0,a0+frac*(a1-a0));ctx.stroke();
+    // ticks
+    ctx.fillStyle='rgba(245,233,211,.55)';ctx.font='11px Inter';
+    for(let t=60;t<=85;t+=5){const a=a0+((t-60)/25)*(a1-a0);
+      const x1=cx+Math.cos(a)*(R-32),y1=cy+Math.sin(a)*(R-32);
+      ctx.fillText(t, x1-8, y1+4);}
+    // knob
+    const ka=a0+frac*(a1-a0),kx=cx+Math.cos(ka)*R,ky=cy+Math.sin(ka)*R;
+    ctx.beginPath();ctx.arc(kx,ky,17,0,7);ctx.fillStyle='#FAF4E9';ctx.fill();
+    ctx.beginPath();ctx.arc(kx,ky,17,0,7);ctx.strokeStyle='#C16A2B';ctx.lineWidth=5;ctx.stroke();
+    T.textContent=temp;S.textContent=status(temp);
+  }
+  function setFromEvent(e){
+    const r=cv.getBoundingClientRect();
+    const x=(e.touches?e.touches[0].clientX:e.clientX)-r.left-(r.width/2);
+    const y=(e.touches?e.touches[0].clientY:e.clientY)-r.top-(r.height/2);
+    let a=Math.atan2(y,x);if(a<Math.PI*0.75&&a>-Math.PI)a+=Math.PI*2;
+    a=Math.max(Math.PI*0.75,Math.min(Math.PI*2.25,a));
+    temp=Math.round(60+((a-Math.PI*0.75)/(Math.PI*1.5))*25);draw();
+  }
+  cv.addEventListener('pointerdown',e=>{drag=true;cv.setPointerCapture(e.pointerId);setFromEvent(e)});
+  cv.addEventListener('pointermove',e=>{if(drag)setFromEvent(e)});
+  cv.addEventListener('pointerup',()=>drag=false);
+  draw();
+})();
+
+// ===== Testimonial slider =====
+(function(){
+  const slides=[...document.querySelectorAll('.slide')],dots=document.getElementById('slideDots');
+  let i=0,timer;
+  slides.forEach((_,n)=>{const d=document.createElement('span');d.className='sdot'+(n?'':' active');
+    d.addEventListener('click',()=>go(n));dots.appendChild(d)});
+  const ds=[...dots.children];
+  function go(n){slides[i].classList.remove('active');ds[i].classList.remove('active');
+    i=(n+slides.length)%slides.length;slides[i].classList.add('active');ds[i].classList.add('active');restart()}
+  function restart(){clearInterval(timer);timer=setInterval(()=>go(i+1),7000)}
+  document.getElementById('prevSlide').onclick=()=>go(i-1);
+  document.getElementById('nextSlide').onclick=()=>go(i+1);
+  restart();
+})();
+
+// ===== FAQ accordion =====
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+  });
+});
+
+// ===== Duplicate ticker for seamless loop =====
+const tr=document.getElementById('tickerTrack');tr.innerHTML+=tr.innerHTML;
+</script>
+</body>
+</html>
