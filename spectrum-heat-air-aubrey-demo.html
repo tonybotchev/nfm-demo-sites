@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spectrum Heat and Air — Aubrey, TX | AC & Heating, Service Over Sales</title>
+<meta name="description" content="Demo preview. Spectrum Heat and Air, Aubrey TX: residential & commercial HVAC, maintenance programs, founded 2011. Birdeye 4.8/99. Call (940) 323-2300.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,500&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1c33; --ink:#12263f; --paper:#fbf9f5; --cream:#f3ede2;
+  --amber:#f2a33c; --copper:#d9712b; --cyan:#3fc1d8; --mint:#7fd8c4;
+  --violet:#8b7fd4; --rose:#e87a8a;
+  --grad:linear-gradient(100deg,var(--cyan),var(--mint) 25%,var(--amber) 55%,var(--copper) 75%,var(--rose));
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-.01em}
+a{color:inherit}
+::selection{background:var(--amber);color:var(--navy)}
+
+/* demo bar */
+.demo-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);color:#fff;font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:7px 10px}
+.demo-bar b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:.22em}
+
+/* nav */
+nav{position:fixed;top:30px;left:0;right:0;z-index:150;background:rgba(251,249,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(10,28,51,.08)}
+.nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:34px;height:34px;border-radius:10px;background:var(--grad);box-shadow:0 4px 14px rgba(242,163,60,.4)}
+.brand-name{font-family:'Fraunces',serif;font-size:21px;font-weight:700;color:var(--navy)}
+.brand-name span{color:var(--copper)}
+.nav-links{display:flex;gap:26px;font-size:14px;font-weight:600}
+.nav-links a{text-decoration:none;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--grad);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.nav-call{display:flex;align-items:center;gap:8px;background:var(--navy);color:#fff;text-decoration:none;padding:11px 20px;border-radius:999px;font-weight:700;font-size:14px;transition:transform .25s,box-shadow .25s}
+.nav-call:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(10,28,51,.28)}
+.burger{display:none;background:none;border:0;font-size:26px;color:var(--navy);cursor:pointer}
+@media(max-width:860px){.nav-links{display:none}.burger{display:block}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 22px 90px;overflow:hidden;background:radial-gradient(1100px 600px at 85% 10%,rgba(63,193,216,.14),transparent),radial-gradient(900px 600px at 10% 90%,rgba(242,163,60,.16),transparent),var(--paper)}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.hero-in{position:relative;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+@media(max-width:940px){.hero-in{grid-template-columns:1fr}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--copper);margin-bottom:18px}
+.eyebrow::before{content:"";width:34px;height:3px;background:var(--grad);border-radius:2px}
+.hero h1{font-size:clamp(44px,6.4vw,84px);line-height:1.02;color:var(--navy)}
+.hero h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lede{font-size:19px;color:#3c5470;max-width:520px;margin:22px 0 34px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--grad);color:var(--navy);font-weight:700;text-decoration:none;padding:17px 34px;border-radius:999px;font-size:16px;box-shadow:0 12px 30px rgba(242,163,60,.35);transition:transform .25s}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02)}
+.btn-ghost{border:2px solid var(--navy);color:var(--navy);font-weight:700;text-decoration:none;padding:15px 32px;border-radius:999px;font-size:16px;transition:all .25s}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.hero-card{background:#fff;border-radius:24px;padding:34px;box-shadow:0 30px 70px rgba(10,28,51,.14);border:1px solid rgba(10,28,51,.06);position:relative;overflow:hidden}
+.hero-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--grad)}
+.rating-row{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.stars{color:var(--amber);font-size:26px;letter-spacing:2px}
+.rating-num{font-family:'Fraunces',serif;font-size:44px;font-weight:700;color:var(--navy)}
+.hero-card p{font-size:15px;color:#54687f}
+.counter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px;padding-top:22px;border-top:1px dashed rgba(10,28,51,.15)}
+.counter b{font-family:'Fraunces',serif;font-size:30px;color:var(--navy);display:block}
+.counter span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6a7f95}
+
+/* marquee */
+.marquee{background:var(--navy);color:#fff;overflow:hidden;padding:16px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:54px;animation:slide 28s linear infinite;font-size:14px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.marquee-track i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:96px 22px}
+.wrap{max-width:1200px;margin:0 auto}
+.sec-head{max-width:640px;margin-bottom:52px}
+.sec-head h2{font-size:clamp(32px,4.4vw,52px);color:var(--navy);line-height:1.1;margin-bottom:14px}
+.sec-head p{color:#54687f;font-size:17px}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tab-btn{border:2px solid rgba(10,28,51,.14);background:#fff;border-radius:999px;padding:12px 26px;font-family:'Sora';font-weight:700;font-size:15px;cursor:pointer;color:var(--navy);transition:all .25s}
+.tab-btn.active,.tab-btn:hover{border-color:transparent;background:var(--navy);color:#fff;box-shadow:0 10px 22px rgba(10,28,51,.22)}
+.tab-panel{display:none;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.tab-panel.active{display:grid;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(max-width:800px){.tab-panel.active{grid-template-columns:1fr}}
+.tab-copy h3{font-size:30px;color:var(--navy);margin-bottom:12px}
+.tab-copy p{color:#54687f;margin-bottom:18px}
+.check-list{list-style:none;display:grid;gap:12px}
+.check-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.check-list li::before{content:"✓";flex:0 0 26px;height:26px;border-radius:50%;background:var(--grad);color:var(--navy);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:13px}
+.tab-visual{border-radius:22px;min-height:300px;background:linear-gradient(135deg,#0a1c33,#1c3a5e 60%,#d9712b);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:28px}
+.tab-visual .tint{position:absolute;inset:0;background:var(--grad);opacity:.25;mix-blend-mode:overlay}
+.tab-visual h4{position:relative;color:#fff;font-family:'Fraunces',serif;font-size:26px;line-height:1.25}
+.tab-visual h4 small{display:block;font-family:'Sora';font-size:13px;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-bottom:8px}
+
+/* creed */
+.creed{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.creed .sec-head h2{color:#fff}
+.creed .sec-head p{color:#b9c6d6}
+.creed-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.creed-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px 24px;transition:transform .3s,background .3s;position:relative}
+.creed-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.09)}
+.creed-card::before{content:"";position:absolute;top:22px;left:24px;right:24px;height:3px;border-radius:2px;background:var(--grad);opacity:0;transition:opacity .3s}
+.creed-card:hover::before{opacity:1}
+.creed-card h3{font-size:21px;margin:14px 0 8px;color:#fff}
+.creed-card p{font-size:14px;color:#b9c6d6}
+.creed-ico{font-size:30px}
+
+/* reviews slider */
+.slider{position:relative;max-width:840px;margin:0 auto}
+.slide{display:none;background:#fff;border-radius:24px;padding:52px 46px;box-shadow:0 24px 60px rgba(10,28,51,.1);border:1px solid rgba(10,28,51,.06);text-align:center}
+.slide.active{display:block;animation:fadeUp .5s ease}
+.slide .stars{font-size:22px;margin-bottom:16px}
+.slide blockquote{font-family:'Fraunces',serif;font-size:clamp(19px,2.6vw,26px);font-style:italic;color:var(--navy);line-height:1.45;margin-bottom:20px}
+.slide cite{font-style:normal;font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--copper);text-transform:uppercase}
+.slide .src{display:block;font-size:12px;color:#8aa0b5;margin-top:6px;letter-spacing:.04em}
+.slider-nav{display:flex;justify-content:center;gap:14px;margin-top:26px;align-items:center}
+.sbtn{width:52px;height:52px;border-radius:50%;border:2px solid var(--navy);background:#fff;color:var(--navy);font-size:20px;cursor:pointer;transition:all .25s}
+.sbtn:hover{background:var(--navy);color:#fff}
+.dots{display:flex;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(10,28,51,.18);cursor:pointer;transition:all .3s}
+.dot.active{background:var(--copper);transform:scale(1.35)}
+
+/* faq */
+.faq{background:var(--cream)}
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:14px}
+.faq-item{background:#fff;border-radius:16px;border:1px solid rgba(10,28,51,.08);overflow:hidden}
+.faq-q{width:100%;background:none;border:0;text-align:left;padding:22px 26px;font-family:'Sora';font-size:17px;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-q .plus{flex:0 0 34px;height:34px;border-radius:50%;background:var(--grad);color:var(--navy);font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;transition:transform .35s}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{padding:0 26px 24px;color:#54687f;font-size:15px}
+
+/* area */
+.area-band{background:linear-gradient(120deg,#0a1c33 30%,#1d3a5f);color:#fff;text-align:center}
+.area-band h2{color:#fff;font-size:clamp(30px,4vw,46px);margin-bottom:14px}
+.towns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+.town{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:10px 24px;font-size:14px;font-weight:600;transition:all .25s}
+.town:hover{background:var(--grad);color:var(--navy);border-color:transparent}
+
+/* estimate */
+.estimate .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:880px){.estimate .wrap{grid-template-columns:1fr}}
+.form-card{background:#fff;border-radius:24px;padding:40px;box-shadow:0 30px 70px rgba(10,28,51,.13);border-top:6px solid transparent;border-image:var(--grad) 1}
+.form-card h3{font-size:28px;color:var(--navy);margin-bottom:8px}
+.form-card>p{color:#54687f;font-size:14px;margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#54687f;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:2px solid rgba(10,28,51,.14);border-radius:12px;padding:13px 16px;font-family:'Sora';font-size:15px;color:var(--ink);background:#fff;transition:border .25s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--copper)}
+.form-note{font-size:12px;color:#8aa0b5;margin-top:14px}
+.form-ok{display:none;background:#eefbf3;border:2px solid #4caf7d;border-radius:14px;padding:20px;color:#1f6b41;font-weight:600}
+
+/* footer */
+footer{background:var(--navy);color:#dbe5f0;padding:60px 22px 110px}
+.foot-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid h4{font-family:'Sora';font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+.foot-grid p,.foot-grid a{font-size:15px;color:#dbe5f0;text-decoration:none}
+.foot-grid a:hover{color:var(--amber)}
+.foot-bottom{max-width:1200px;margin:44px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:#8aa0b5;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* sticky mobile call */
+.sticky-call{position:fixed;left:16px;right:16px;bottom:16px;z-index:180;display:none;background:var(--grad);color:var(--navy);font-weight:800;text-align:center;text-decoration:none;padding:17px;border-radius:999px;font-size:17px;box-shadow:0 14px 34px rgba(217,113,43,.45)}
+@media(max-width:860px){.sticky-call{display:block}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">★ <b>Demo Preview</b> — concept mockup built for Spectrum Heat and Air · Aubrey, TX</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top"><span class="brand-mark"></span><span class="brand-name">Spectrum <span>Heat &amp; Air</span></span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#creed">Why Us</a><a href="#reviews">Reviews</a><a href="#area">Service Area</a><a href="#estimate">Get Service</a>
+    </div>
+    <a class="nav-call" href="tel:+19403232300">📞 (940) 323-2300</a>
+    <button class="burger" aria-label="menu" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='64px';document.querySelector('.nav-links').style.right='16px';document.querySelector('.nav-links').style.background='#fff';document.querySelector('.nav-links').style.padding='18px';document.querySelector('.nav-links').style.borderRadius='14px';">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-in">
+    <div class="reveal in">
+      <span class="eyebrow">Aubrey, TX · Since 2011</span>
+      <h1>Comfort you can see. <em>Service, not sales.</em></h1>
+      <p class="lede">Spectrum Heat and Air keeps North Texas homes and businesses cool — with transparent pricing, techs you'll know by name, and 25+ years of HVAC experience behind every visit.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="tel:+19403232300">📞 Call (940) 323-2300</a>
+        <a class="btn-ghost" href="#estimate">Request Service</a>
+      </div>
+    </div>
+    <div class="hero-card reveal in">
+      <div class="rating-row"><span class="stars">★★★★★</span><span class="rating-num" data-count="4.8" data-dec="1">0</span></div>
+      <p><strong>99 reviews on Birdeye.</strong> Customers ask for Travis by name. A local real estate office trusts Spectrum across "many different properties."</p>
+      <div class="counter-grid">
+        <div class="counter"><b data-count="2011" data-year="1">0</b><span>Founded</span></div>
+        <div class="counter"><b data-count="25" data-plus="1">0</b><span>Yrs Experience</span></div>
+        <div class="counter"><b data-count="24">0</b><span>Support Line*</span></div>
+      </div>
+      <p style="font-size:11px;color:#8aa0b5;margin-top:10px">*24/7 customer support availability, per spectrumfullservice.com</p>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="marquee-track">
+  <span>AC Repair</span><i>✦</i><span>Heating Service</span><i>✦</i><span>New Installations</span><i>✦</i><span>Maintenance Programs</span><i>✦</i><span>Commercial HVAC</span><i>✦</i><span>Mini-Splits</span><i>✦</i><span>Indoor Air Quality</span><i>✦</i><span>AC Repair</span><i>✦</i><span>Heating Service</span><i>✦</i><span>New Installations</span><i>✦</i><span>Maintenance Programs</span><i>✦</i><span>Commercial HVAC</span><i>✦</i><span>Mini-Splits</span><i>✦</i><span>Indoor Air Quality</span><i>✦</i>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>One team for your whole system.</h2>
+      <p>Residential, commercial, and light industrial — repairs, replacements, and maintenance programs tailored to your property.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab-btn active" data-tab="t1">Residential HVAC</button>
+      <button class="tab-btn" data-tab="t2">Commercial &amp; Industrial</button>
+      <button class="tab-btn" data-tab="t3">Maintenance Programs</button>
+      <button class="tab-btn" data-tab="t4">Installations</button>
+    </div>
+    <div class="tab-panel active reveal" id="t1">
+      <div class="tab-copy">
+        <h3>Your home, handled like our own.</h3>
+        <p>From a no-cool afternoon to a full system replacement, our techs show up on time, find the real problem, and work until it's solved — then explain what they did in plain English.</p>
+        <ul class="check-list">
+          <li>AC repair &amp; diagnostics — all makes and models</li>
+          <li>Heating repair, furnaces &amp; heat pumps</li>
+          <li>Ductwork, mini-splits &amp; indoor air quality</li>
+          <li>Repair-vs-replace guidance with real numbers, no pressure</li>
+        </ul>
+      </div>
+      <div class="tab-visual"><div class="tint"></div><h4><small>Residential</small>"They got right on the job, answered all my questions, and didn't try to sell me something I didn't need." — Donna P.</h4></div>
+    </div>
+    <div class="tab-panel" id="t2">
+      <div class="tab-copy">
+        <h3>Built for businesses that can't go down.</h3>
+        <p>Rooftop units, package systems, chillers, and full facility programs — plus general contracting and in-house masonry for commercial and multifamily projects.</p>
+        <ul class="check-list">
+          <li>Commercial service, replacement &amp; preventative maintenance</li>
+          <li>Split systems, package units, chillers &amp; mini-splits</li>
+          <li>Scheduled programs that meet your facility's calendar</li>
+          <li>General contracting for commercial &amp; multifamily projects</li>
+        </ul>
+      </div>
+      <div class="tab-visual"><div class="tint"></div><h4><small>Commercial</small>"When we have a need, they have someone out ASAP. Their prompt service and quality work is of the utmost importance to us." — Zoe T., medical office</h4></div>
+    </div>
+    <div class="tab-panel" id="t3">
+      <div class="tab-copy">
+        <h3>Small tune-ups beat big breakdowns.</h3>
+        <p>Preventative inspections catch malfunctioning parts and refrigerant leaks early, keep filters clean, and extend the life of your system — residential and commercial plans available.</p>
+        <ul class="check-list">
+          <li>Seasonal inspections &amp; system testing</li>
+          <li>Coil cleaning, filter changes &amp; safety checks</li>
+          <li>Priority scheduling for plan members</li>
+          <li>Residential &amp; commercial plans tailored to you</li>
+        </ul>
+      </div>
+      <div class="tab-visual"><div class="tint"></div><h4><small>Maintenance</small>One call keeps you ahead of the Texas summer — not behind it.</h4></div>
+    </div>
+    <div class="tab-panel" id="t4">
+      <div class="tab-copy">
+        <h3>The right system, sized right.</h3>
+        <p>A new system is one of the biggest investments a homeowner makes. We walk you through sizing, efficiency, and real cost — so you decide with confidence, not pressure.</p>
+        <ul class="check-list">
+          <li>Free consultation &amp; load calculation</li>
+          <li>Repair-vs-replacement cost comparison</li>
+          <li>Professional installation, all major brands</li>
+          <li>Post-install support &amp; maintenance</li>
+        </ul>
+      </div>
+      <div class="tab-visual"><div class="tint"></div><h4><small>Installations</small>"They helped correct it... trustworthy and professional." — John N.</h4></div>
+    </div>
+  </div>
+</section>
+
+<section class="creed" id="creed">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>The Spectrum standard: service over sales.</h2>
+      <p>Founded in 2011 by Brad Bates — with Kenny Williams joining as partner in 2014 — on a simple belief: serving the customer's real needs, not "selling," is what builds a company.</p>
+    </div>
+    <div class="creed-grid">
+      <div class="creed-card reveal"><div class="creed-ico">🂡</div><h3>We Show Our Cards</h3><p>Transparency flows through every part of the job — pricing, options, and honest repair-vs-replace numbers.</p></div>
+      <div class="creed-card reveal"><div class="creed-ico">🎓</div><h3>Questions Welcomed</h3><p>Techs who explain what's actually wrong before touching anything — so you choose what's best for you.</p></div>
+      <div class="creed-card reveal"><div class="creed-ico">⏱</div><h3>One Client at a Time</h3><p>We show up on time, find the real problem, and work until the problem is solved.</p></div>
+      <div class="creed-card reveal"><div class="creed-ico">🏠</div><h3>Treat the Property Like It's Yours</h3><p>We offer the solutions we'd want in our own homes — background-checked, full-time employees.</p></div>
+      <div class="creed-card reveal"><div class="creed-ico">🤝</div><h3>Service Over Sales</h3><p>Serving real needs — not selling — creates long-term relationships and future opportunities.</p></div>
+      <div class="creed-card reveal"><div class="creed-ico">✓</div><h3>It's Always Okay to Do the Right Thing</h3><p>"We aren't perfect, but we are committed to pursuing lives of integrity. It starts at home and shows up in our work."</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">Proof, not promises</span>
+      <h2>4.8 stars across 99 reviews.</h2>
+      <p>Real customers, real techs, real names. (Ratings via Birdeye.)</p>
+    </div>
+    <div class="slider reveal">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Travis Hundley was friendly, easygoing, and great to work with. He really went out of his way to troubleshoot the issue and made sure everything was clearly explained. Highly recommend asking for Travis!"</blockquote>
+        <cite>Birdeye Reviewer</cite><span class="src">via Birdeye · Spectrum Heat and Air</span>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Spectrum Heat &amp; Air has been our trusted HVAC company for years. As a real estate office, we've relied on them for countless A/C repairs and HVAC services across many different properties — prompt, high-quality work at competitive prices."</blockquote>
+        <cite>Birdeye Reviewer — Real Estate Office</cite><span class="src">via Birdeye · Spectrum Heat and Air</span>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Fast, friendly, and efficient! Travis found the issue right away and was helpful in showing me how our system at our new home works. Last night we slept soundly in our air conditioned bedroom."</blockquote>
+        <cite>Birdeye Reviewer</cite><span class="src">via Birdeye · Spectrum Heat and Air</span>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Since opening our new medical office we are very pleased with the service we receive from Spectrum. When we have a need, they have someone out ASAP."</blockquote>
+        <cite>Zoe T. — Commercial Client</cite><span class="src">published on spectrumfullservice.com</span>
+      </div>
+      <div class="slider-nav">
+        <button class="sbtn" id="prev" aria-label="previous">‹</button>
+        <div class="dots" id="dots"></div>
+        <button class="sbtn" id="next" aria-label="next">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="eyebrow" style="justify-content:center">Straight answers</span>
+      <h2>Questions? Welcomed.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item"><button class="faq-q">How fast can you get to a no-cool call?<span class="plus">+</span></button><div class="faq-a"><p>Customer support is available 24/7, and our techs prioritize no-cool calls. Call <a href="tel:+19403232300">(940) 323-2300</a> and we'll get you on the schedule the same day whenever possible.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you service all brands?<span class="plus">+</span></button><div class="faq-a"><p>Yes — split systems, package units, chillers, and mini-splits from all major manufacturers, residential and commercial.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How do I know whether to repair or replace?<span class="plus">+</span></button><div class="faq-a"><p>We'll show you the real cost of repair vs. replacement side by side — no pressure. Our standard: give you options and expert guidance, then you decide.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you work with businesses and property managers?<span class="plus">+</span></button><div class="faq-a"><p>Yes. We run preventative maintenance programs for commercial facilities, work with real estate offices across many properties, and can design a service program tailored to your buildings.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Who will show up at my door?<span class="plus">+</span></button><div class="faq-a"><p>Full-time, background-checked employees — many customers ask for their tech by name. You'll always know who's coming and what they're doing.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="area-band" id="area">
+  <div class="wrap reveal">
+    <h2>Based in Aubrey. Serving North Texas.</h2>
+    <p style="color:#b9c6d6;max-width:560px;margin:0 auto">14551 Industrial Park, Aubrey, TX 76227 — residential and commercial HVAC across the DFW Metroplex, including Denton, Grayson, and Cooke counties.</p>
+    <div class="towns">
+      <span class="town">Aubrey</span><span class="town">Denton</span><span class="town">Celina</span><span class="town">Prosper</span><span class="town">Frisco</span><span class="town">Pilot Point</span><span class="town">Krugerville</span><span class="town">Sanger</span><span class="town">Little Elm</span><span class="town">Cross Roads</span><span class="town">Gunter</span><span class="town">Tioga</span>
+    </div>
+  </div>
+</section>
+
+<section class="estimate" id="estimate">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Get service</span>
+      <h2 style="font-size:clamp(32px,4.4vw,52px);color:var(--navy);line-height:1.1;margin-bottom:16px">No-cool today? Don't wait.</h2>
+      <p style="color:#54687f;font-size:17px;max-width:440px">Send a request and we'll call you back to schedule. Need us right now? Call <a href="tel:+19403232300" style="font-weight:700;color:var(--copper)">(940) 323-2300</a>.</p>
+      <div style="margin-top:26px;display:grid;gap:14px">
+        <div style="display:flex;gap:12px;align-items:center"><span style="font-size:26px">🕗</span><span><strong>Mon–Fri</strong> · 8:00 AM – 5:00 PM</span></div>
+        <div style="display:flex;gap:12px;align-items:center"><span style="font-size:26px">📍</span><span>14551 Industrial Park, Aubrey, TX 76227</span></div>
+        <div style="display:flex;gap:12px;align-items:center"><span style="font-size:26px">📞</span><a href="tel:+19403232300" style="font-weight:700;color:var(--navy);font-size:19px">(940) 323-2300</a></div>
+      </div>
+    </div>
+    <div class="form-card reveal">
+      <h3>Request Service</h3>
+      <p>Residential or commercial — tell us what's going on.</p>
+      <form id="svc-form" onsubmit="return fakeSubmit(event)">
+        <div class="field"><label for="n">Name</label><input id="n" required placeholder="Your name"></div>
+        <div class="field"><label for="p">Phone</label><input id="p" type="tel" required placeholder="(555) 000-0000"></div>
+        <div class="field"><label for="s">Service needed</label><select id="s"><option>AC repair</option><option>Heating repair</option><option>New installation / replacement</option><option>Maintenance program</option><option>Commercial service</option><option>Something else</option></select></div>
+        <div class="field"><label for="m">What's happening?</label><textarea id="m" rows="3" placeholder="e.g. AC blowing warm air since yesterday"></textarea></div>
+        <button class="btn-primary" type="submit" style="border:0;width:100%;cursor:pointer;font-family:'Sora'">Request Service →</button>
+      </form>
+      <div class="form-ok" id="form-ok">✓ Request received in this demo preview. On a live site, this would go straight to the Spectrum team.</div>
+      <p class="form-note">Demo preview only — this form does not submit anywhere.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Spectrum Heat and Air</h4>
+      <p>14551 Industrial Park<br>Aubrey, TX 76227<br><a href="tel:+19403232300">(940) 323-2300</a></p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Mon–Fri: 8:00 AM – 5:00 PM<br>Sat–Sun: Closed</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <p>AC &amp; heating repair · Installations<br>Maintenance programs · Commercial HVAC<br>General contracting</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Spectrum Heat and Air · Aubrey, TX</span>
+    <span>★ DEMO PREVIEW — concept mockup, not a live site</span>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+19403232300">📞 Call Spectrum — (940) 323-2300</a>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);anim(e.target)}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+function anim(el){
+  const t=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),plus=el.dataset.plus,year=el.dataset.year;
+  const t0=performance.now(),dur=1400;
+  (function f(n){const p=Math.min(1,(n-t0)/dur),v=t*(1-Math.pow(1-p,3));
+    el.textContent=year?Math.round(v):(dec?v.toFixed(dec):Math.round(v))+(plus&&p===1?"+":"");
+    if(p<1)requestAnimationFrame(f)})(t0);
+}
+
+// tabs
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');
+}));
+
+// slider
+const slides=[...document.querySelectorAll('.slide')],dotsEl=document.getElementById('dots');let cur=0,timer;
+slides.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i?'':' active');d.onclick=()=>go(i);dotsEl.appendChild(d)});
+function go(i){slides[cur].classList.remove('active');dotsEl.children[cur].classList.remove('active');
+  cur=(i+slides.length)%slides.length;slides[cur].classList.add('active');dotsEl.children[cur].classList.add('active');restart()}
+function restart(){clearInterval(timer);timer=setInterval(()=>go(cur+1),7000)}
+document.getElementById('prev').onclick=()=>go(cur-1);document.getElementById('next').onclick=()=>go(cur+1);restart();
+
+// faq accordion
+document.querySelectorAll('.faq-item').forEach(it=>{
+  it.querySelector('.faq-q').addEventListener('click',()=>{
+    const open=it.classList.contains('open'),a=it.querySelector('.faq-a');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+
+// canvas: drifting spectrum ribbons
+const cv=document.getElementById('hero-canvas'),cx=cv.getContext('2d');let W,H,ps=[];
+function size(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}
+size();addEventListener('resize',size);
+const cols=['#3fc1d8','#7fd8c4','#f2a33c','#d9712b','#e87a8a'];
+for(let i=0;i<26;i++)ps.push({x:Math.random(),y:Math.random(),r:60+Math.random()*130,c:cols[i%5],dx:(Math.random()-.5)*.0006,dy:(Math.random()-.5)*.0006});
+(function draw(){cx.clearRect(0,0,W,H);ps.forEach(p=>{p.x+=p.dx;p.y+=p.dy;if(p.x<-.2)p.x=1.2;if(p.x>1.2)p.x=-.2;if(p.y<-.2)p.y=1.2;if(p.y>1.2)p.y=-.2;
+  const g=cx.createRadialGradient(p.x*W,p.y*H,0,p.x*W,p.y*H,p.r);g.addColorStop(0,p.c+'55');g.addColorStop(1,p.c+'00');
+  cx.fillStyle=g;cx.beginPath();cx.arc(p.x*W,p.y*H,p.r,0,7);cx.fill()});requestAnimationFrame(draw)})();
+
+// fake form
+function fakeSubmit(e){e.preventDefault();document.getElementById('svc-form').style.display='none';document.getElementById('form-ok').style.display='block';return false}
+</script>
+</body>
+</html>
