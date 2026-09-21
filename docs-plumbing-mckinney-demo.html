@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doc's Plumbing — McKinney, TX | One Truck. One Master Plumber.</title>
+<meta name="description" content="Doc's Plumbing — owner-operator master plumber serving McKinney & Collin County. Repairs, water heaters, drains, remodels. Call (972) 369-9959.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1823; --ink2:#12242f; --ink3:#0a141d;
+  --copper:#c87f3d; --copper-hi:#e8a558; --copper-deep:#9a5a24;
+  --paper:#f7f1e3; --paper2:#efe5cf; --line:rgba(200,127,61,.22);
+  --text:#22303b; --muted:#5d6c78; --white:#fff;
+  --shadow:0 24px 60px -24px rgba(13,24,35,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--paper);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;line-height:1.05}
+.serif{font-family:'Lora',serif;font-style:italic}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+
+/* ---------- DEMO badge (fixed = on every screen) ---------- */
+.demo-badge{position:fixed;top:14px;right:14px;z-index:2000;background:var(--copper);color:#14100a;
+  font-family:'Oswald';font-weight:700;font-size:12px;letter-spacing:.18em;padding:9px 14px 8px;
+  border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.35);transform:rotate(2deg);text-transform:uppercase}
+
+/* ---------- sticky nav: shop-ticket stub ---------- */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(13,24,35,.94);backdrop-filter:blur(10px);
+  border-bottom:3px solid var(--copper);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.nav-inner{display:flex;align-items:center;gap:18px;padding:12px 22px;max-width:1240px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--paper)}
+.brand svg{width:44px;height:44px;flex:none}
+.brand-name{font-family:'Oswald';font-weight:700;font-size:20px;letter-spacing:.08em;color:var(--paper)}
+.brand-name small{display:block;font-size:10px;letter-spacing:.3em;color:var(--copper-hi);font-weight:500}
+.nav-links{display:flex;gap:26px;margin-left:auto}
+.nav-links a{color:#cfd8de;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--copper-hi)}
+.nav-phone{display:inline-flex;align-items:center;gap:9px;background:var(--copper);color:#14100a;
+  font-family:'Oswald';font-weight:700;letter-spacing:.06em;text-decoration:none;padding:10px 18px;border-radius:4px;
+  transition:transform .2s,background .2s;font-size:15px}
+.nav-phone:hover{background:var(--copper-hi);transform:translateY(-2px)}
+@media(max-width:900px){.nav-links{display:none}.nav-inner{padding-right:76px}}
+
+/* ---------- hero: blueprint shop ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:var(--paper);
+  background:
+    linear-gradient(rgba(200,127,61,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,127,61,.07) 1px,transparent 1px),
+    radial-gradient(1200px 600px at 70% 20%,#16303f 0%,var(--ink) 60%);
+  background-size:44px 44px,44px 44px,cover;overflow:hidden}
+#drips{position:absolute;inset:0;pointer-events:none}
+.hero-inner{position:relative;z-index:2;padding:110px 0 90px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--copper);color:var(--copper-hi);
+  font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:26px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:#7ddf8a;box-shadow:0 0 10px #7ddf8a;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.hero h1{font-size:clamp(3.2rem,10vw,7.2rem);font-weight:700;color:var(--paper)}
+.hero h1 .cu{color:var(--copper-hi)}
+.pipe-rule{display:flex;align-items:center;gap:0;margin:26px 0;max-width:560px}
+.pipe-rule .seg{height:10px;background:linear-gradient(180deg,var(--copper-hi),var(--copper-deep));border-radius:5px;flex:1}
+.pipe-rule .joint{width:26px;height:26px;flex:none;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--copper-hi),var(--copper-deep));
+  border:3px solid rgba(0,0,0,.35);margin:0 -6px;position:relative;z-index:1}
+.hero-sub{font-size:clamp(1.15rem,2.6vw,1.6rem);color:#e7ddc9;max-width:640px;margin-bottom:14px}
+.proof-strip{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:26px 0 34px;color:#e7ddc9;font-size:15px}
+.stars{color:var(--copper-hi);letter-spacing:3px;font-size:19px}
+.proof-strip .src{border:1px solid var(--line);border-radius:100px;padding:5px 14px;font-size:13px;color:#cdbfa6}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Oswald';font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;text-decoration:none;padding:17px 32px;border-radius:4px;font-size:17px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-solid{background:linear-gradient(180deg,var(--copper-hi),var(--copper));color:#14100a;box-shadow:0 14px 34px -12px rgba(200,127,61,.7)}
+.btn-solid:hover{transform:translateY(-3px);box-shadow:0 20px 40px -12px rgba(200,127,61,.8)}
+.btn-ghost{border:2px solid rgba(247,241,227,.5);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--copper-hi);color:var(--copper-hi);transform:translateY(-3px)}
+.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);color:var(--copper-hi);
+  font-size:12px;letter-spacing:.3em;text-transform:uppercase;z-index:2;animation:bob 2.2s infinite}
+@keyframes bob{50%{transform:translate(-50%,8px)}}
+
+/* ---------- town ticker ---------- */
+.ticker{background:var(--copper);color:#14100a;overflow:hidden;border-top:3px solid #14100a;border-bottom:3px solid #14100a}
+.ticker-track{display:flex;gap:0;white-space:nowrap;padding:13px 0;animation:tick 30s linear infinite;width:max-content}
+.ticker span{font-family:'Oswald';font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:15px;padding:0 26px;position:relative}
+.ticker span::after{content:"◆";position:absolute;right:-8px;font-size:10px;top:4px;opacity:.6}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- section scaffolding ---------- */
+section{padding:96px 0}
+.kicker{font-family:'Oswald';font-weight:600;color:var(--copper-deep);letter-spacing:.3em;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+.sec-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:var(--ink);margin-bottom:12px}
+.sec-lede{font-size:1.12rem;color:var(--muted);max-width:640px;margin-bottom:48px}
+
+/* ---------- the ticket: services tabs ---------- */
+.ticket-zone{background:linear-gradient(180deg,var(--paper) 0%,var(--paper2) 100%)}
+.ticket{background:var(--white);border-radius:10px;box-shadow:var(--shadow);overflow:hidden;border:1px solid #e3d7bd}
+.ticket-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;
+  padding:22px 34px;background:var(--ink);color:var(--paper)}
+.ticket-head .no{font-family:'Oswald';font-weight:700;letter-spacing:.14em;font-size:15px;color:var(--copper-hi)}
+.ticket-head .meta{font-size:13px;color:#aeb9c2;letter-spacing:.06em}
+.perf{height:22px;background-image:radial-gradient(circle at 11px 11px,var(--paper2) 9px,transparent 10px);
+  background-size:30px 22px;background-repeat:repeat-x;background-color:var(--white)}
+.ticket-body{display:grid;grid-template-columns:300px 1fr;min-height:380px}
+.ticket-tabs{background:#f3ecdb;border-right:2px dashed #d8c9a6;padding:26px 0;display:flex;flex-direction:column}
+.tab-btn{background:none;border:none;text-align:left;font-family:'Oswald';font-weight:600;font-size:16px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--text);padding:18px 30px;cursor:pointer;border-left:5px solid transparent;
+  display:flex;align-items:center;gap:12px;transition:all .2s;width:100%}
+.tab-btn .ico{font-size:20px;filter:grayscale(.2)}
+.tab-btn:hover{background:rgba(200,127,61,.12)}
+.tab-btn.active{background:var(--white);border-left-color:var(--copper);color:var(--ink);box-shadow:inset 0 0 0 1px #eee2c8}
+.tab-panel{display:none;padding:38px 42px;animation:fadeUp .45s ease}
+.tab-panel.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-size:1.7rem;margin-bottom:6px;color:var(--ink)}
+.tab-panel .visit{font-family:'Lora';font-style:italic;color:var(--muted);margin-bottom:20px;font-size:1.02rem}
+.svc-list{list-style:none;display:grid;gap:12px;margin-bottom:26px}
+.svc-list li{display:flex;gap:12px;align-items:flex-start;font-size:1.02rem;font-weight:500}
+.svc-list li::before{content:"✓";color:var(--copper-deep);font-weight:700;flex:none;margin-top:1px}
+.tab-cta{display:inline-flex;align-items:center;gap:10px;font-family:'Oswald';font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--copper-deep);text-decoration:none;font-size:15px;border-bottom:2px solid var(--copper)}
+@media(max-width:820px){.ticket-body{grid-template-columns:1fr}.ticket-tabs{flex-direction:row;overflow-x:auto;border-right:none;border-bottom:2px dashed #d8c9a6;padding:0}
+.tab-btn{white-space:nowrap;border-left:none;border-bottom:4px solid transparent;padding:16px 20px}
+.tab-btn.active{border-bottom-color:var(--copper);box-shadow:none}}
+
+/* ---------- counters ---------- */
+.counters{background:var(--ink);color:var(--paper);padding:70px 0;border-top:3px solid var(--copper);border-bottom:3px solid var(--copper)}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.count .num{font-family:'Oswald';font-weight:700;font-size:clamp(2.4rem,5vw,3.6rem);color:var(--copper-hi)}
+.count .lbl{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#aeb9c2;margin-top:6px}
+@media(max-width:700px){.count-grid{grid-template-columns:repeat(2,1fr);gap:34px}}
+
+/* ---------- reviews slider ---------- */
+.reviews{background:var(--paper)}
+.slider{position:relative;max-width:820px;margin:0 auto;background:var(--white);border-radius:12px;box-shadow:var(--shadow);
+  padding:56px 60px 44px;border-top:6px solid var(--copper);overflow:hidden;transition:transform .3s}
+.slider:hover{transform:translateY(-4px)}
+.slide{display:none;animation:fadeUp .5s ease}
+.slide.active{display:block}
+.slide .qmark{font-family:'Lora';font-size:64px;line-height:.6;color:var(--copper);opacity:.55;display:block;margin-bottom:14px}
+.slide blockquote{font-family:'Lora';font-style:italic;font-size:clamp(1.15rem,2.4vw,1.45rem);color:var(--text);margin-bottom:22px}
+.slide .who{font-weight:700;font-size:15px}
+.slide .src{font-size:13px;color:var(--muted);letter-spacing:.06em}
+.slide .sstars{color:var(--copper-deep);letter-spacing:3px;margin-bottom:12px}
+.s-nav{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:30px}
+.s-arrow{background:var(--ink);color:var(--paper);border:none;width:48px;height:48px;border-radius:50%;font-size:20px;
+  cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.s-arrow:hover{background:var(--copper);color:#14100a;transform:scale(1.08)}
+.s-dots{display:flex;gap:10px}
+.s-dot{width:11px;height:11px;border-radius:50%;border:2px solid var(--copper-deep);background:transparent;cursor:pointer;padding:0;transition:all .2s}
+.s-dot.active{background:var(--copper-deep);transform:scale(1.25)}
+@media(max-width:640px){.slider{padding:40px 26px 32px}}
+
+/* ---------- Rocky: the man behind the wrench ---------- */
+.rocky{background:radial-gradient(900px 500px at 20% 10%,#16303f 0%,var(--ink3) 65%);color:var(--paper)}
+.rocky .kicker{color:var(--copper-hi)}
+.rocky-grid{display:grid;grid-template-columns:340px 1fr;gap:60px;align-items:center}
+.stamp-card{background:rgba(247,241,227,.04);border:1px solid var(--line);border-radius:12px;padding:44px 30px;text-align:center;transition:transform .3s}
+.stamp-card:hover{transform:translateY(-6px) rotate(-1deg)}
+.stamp-card svg{width:190px;height:190px;margin:0 auto 18px;display:block}
+.stamp-card .cap{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#aeb9c2}
+.rocky h2{font-size:clamp(2rem,5vw,3rem);color:var(--paper);margin-bottom:8px}
+.rocky .role{color:var(--copper-hi);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:14px;margin-bottom:24px}
+.pull{font-family:'Lora';font-style:italic;font-size:clamp(1.25rem,2.6vw,1.6rem);color:#f0e7d2;
+  border-left:5px solid var(--copper);padding-left:26px;margin:28px 0}
+.pull-src{font-size:13px;color:#aeb9c2;font-style:normal;font-family:'Inter';letter-spacing:.08em}
+.rocky p.body{color:#c9d2d8;margin-bottom:16px;max-width:600px}
+@media(max-width:860px){.rocky-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ---------- emergency strip ---------- */
+.emergency{background:linear-gradient(120deg,var(--copper-deep),var(--copper) 55%,var(--copper-hi));color:#14100a;padding:64px 0}
+.em-inner{display:flex;flex-wrap:wrap;align-items:center;gap:26px;justify-content:space-between}
+.em-inner h2{font-size:clamp(1.8rem,4.5vw,2.8rem)}
+.em-inner p{font-weight:600;max-width:520px}
+.em-btn{background:#14100a;color:var(--paper);font-family:'Oswald';font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;font-size:20px;padding:18px 40px;border-radius:6px;transition:transform .2s;white-space:nowrap}
+.em-btn:hover{transform:scale(1.05)}
+.em-hours{font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.85;margin-top:10px}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--paper)}
+.faq-list{max-width:800px;margin:0 auto;display:grid;gap:14px}
+.faq-item{background:var(--white);border-radius:8px;box-shadow:0 8px 24px -14px rgba(13,24,35,.35);overflow:hidden;border:1px solid #e9dec3}
+.faq-q{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:22px 26px;cursor:pointer;font-family:'Oswald';font-weight:600;font-size:1.05rem;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--ink);text-align:left}
+.faq-q .plus{flex:none;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:20px;
+  display:flex;align-items:center;justify-content:center;transition:transform .3s,background .3s;font-family:'Inter'}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--copper);color:#14100a}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{padding:0 26px 24px;color:var(--muted)}
+.faq-a a{color:var(--copper-deep);font-weight:700}
+
+/* ---------- work order form ---------- */
+.workorder{background:var(--ink2);color:var(--paper)}
+.workorder .sec-title{color:var(--paper)}
+.workorder .sec-lede{color:#aeb9c2}
+.wo-grid{display:grid;grid-template-columns:1fr 380px;gap:50px;align-items:start}
+form.wo{background:rgba(247,241,227,.05);border:1px solid var(--line);border-radius:12px;padding:36px;display:grid;gap:18px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-hi);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:rgba(13,24,35,.6);border:1px solid var(--line);border-radius:6px;
+  color:var(--paper);padding:14px 16px;font-size:16px;font-family:'Inter';transition:border .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--copper-hi)}
+.field textarea{min-height:110px;resize:vertical}
+.wo-note{font-size:13px;color:#8fa0ab}
+.wo-side h3{color:var(--copper-hi);font-size:1.3rem;margin-bottom:14px}
+.wo-side ul{list-style:none;display:grid;gap:14px}
+.wo-side li{display:flex;gap:12px;color:#c9d2d8}
+.wo-side li::before{content:"→";color:var(--copper-hi);font-weight:700}
+.wo-success{display:none;background:rgba(125,223,138,.1);border:1px solid #7ddf8a;border-radius:8px;padding:26px}
+.wo-success h3{color:#7ddf8a;font-size:1.4rem;margin-bottom:10px}
+@media(max-width:900px){.wo-grid{grid-template-columns:1fr}}
+
+/* ---------- footer: NAP + hours only ---------- */
+footer{background:var(--ink3);color:#aeb9c2;padding:56px 0 120px;border-top:3px solid var(--copper)}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px}
+.foot-grid h4{font-family:'Oswald';color:var(--paper);letter-spacing:.14em;text-transform:uppercase;font-size:14px;margin-bottom:14px}
+.foot-grid p,.foot-grid a{font-size:15px;color:#aeb9c2;text-decoration:none;line-height:2}
+.foot-grid a:hover{color:var(--copper-hi)}
+.foot-demo{margin-top:36px;padding-top:22px;border-top:1px solid rgba(174,185,194,.2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7c8b96}
+@media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+
+/* ---------- sticky mobile call ---------- */
+.m-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--copper);
+  color:#14100a;text-align:center;font-family:'Oswald';font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;padding:17px;font-size:17px;box-shadow:0 -8px 30px rgba(0,0,0,.35)}
+@media(max-width:768px){.m-call{display:block}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.22s}.rv.d3{transition-delay:.34s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.ticker-track{animation:none}#drips{display:none}.scroll-cue{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo Preview</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Doc's Plumbing home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#e8a558" stroke-width="4"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#e8a558" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <text x="50" y="46" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="700" font-size="26" fill="#f7f1e3">D</text>
+        <text x="50" y="70" text-anchor="middle" font-family="Oswald,sans-serif" font-size="11" letter-spacing="2" fill="#e8a558">PLUMBING</text>
+      </svg>
+      <span class="brand-name">DOC'S PLUMBING<small>MCKINNEY · TEXAS</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#ticket">The Ticket</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#rocky">Rocky</a>
+      <a href="#faq">FAQ</a>
+      <a href="#workorder">Work Order</a>
+    </div>
+    <a class="nav-phone" href="tel:+19723699959">☎ (972) 369-9959</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <canvas id="drips" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <span class="eyebrow rv"><span class="dot"></span> McKinney, TX — Collin County</span>
+    <h1 class="rv d1">DOC'S <span class="cu">PLUMBING</span></h1>
+    <div class="pipe-rule rv d1" aria-hidden="true"><div class="seg"></div><div class="joint"></div><div class="seg"></div><div class="joint"></div><div class="seg"></div></div>
+    <p class="hero-sub serif rv d2">One truck. One master plumber. No runaround — just the name half of Collin County already has in their phone.</p>
+    <div class="proof-strip rv d2">
+      <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+      <span><strong>5.0</strong> · 18 verified reviews</span>
+      <span class="src">Birdeye</span>
+    </div>
+    <div class="hero-ctas rv d3">
+      <a class="btn btn-solid" href="tel:+19723699959">Call Rocky — (972) 369-9959</a>
+      <a class="btn btn-ghost" href="#ticket">See today's ticket ↓</a>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>McKinney</span><span>Allen</span><span>Frisco</span><span>Plano</span><span>Prosper</span><span>Celina</span><span>Anna</span><span>Melissa</span><span>Fairview</span><span>Lucas</span>
+  </div>
+</div>
+
+<!-- ============ THE TICKET / SERVICES ============ -->
+<section class="ticket-zone" id="ticket">
+  <div class="wrap">
+    <p class="kicker rv">Services</p>
+    <h2 class="sec-title rv">Today's ticket —<br>pick your job</h2>
+    <p class="sec-lede rv">Everything on one work order, priced straight and explained plain. Tap a tab to see what's on it.</p>
+    <div class="ticket rv">
+      <div class="ticket-head">
+        <span class="no">WORK ORDER № 0417</span>
+        <span class="meta">Doc's Plumbing · 3487 Co Rd 317, McKinney, TX</span>
+      </div>
+      <div class="perf" aria-hidden="true"></div>
+      <div class="ticket-body">
+        <div class="ticket-tabs" role="tablist">
+          <button class="tab-btn active" role="tab" data-tab="repair"><span class="ico">🔧</span>Repairs &amp; Repipes</button>
+          <button class="tab-btn" role="tab" data-tab="heaters"><span class="ico">♨️</span>Water Heaters</button>
+          <button class="tab-btn" role="tab" data-tab="drains"><span class="ico">🌀</span>Drains &amp; Sewer</button>
+          <button class="tab-btn" role="tab" data-tab="fixtures"><span class="ico">🚿</span>Fixtures &amp; Remodels</button>
+        </div>
+        <div class="tab-panels">
+          <div class="tab-panel active" id="tab-repair">
+            <h3>Repairs &amp; Repipes</h3>
+            <p class="visit">Rocky finds the leak, shows you exactly where it is, and fixes it once — the right way.</p>
+            <ul class="svc-list">
+              <li>Pipe repair &amp; whole-home repiping</li>
+              <li>Leak detection — hidden leaks found without tearing the house apart</li>
+              <li>Burst &amp; frozen pipe repair</li>
+              <li>Gas &amp; water line replacement</li>
+            </ul>
+            <a class="tab-cta" href="tel:+19723699959">Put it on the ticket — call now</a>
+          </div>
+          <div class="tab-panel" id="tab-heaters">
+            <h3>Water Heaters</h3>
+            <p class="visit">No hot water is a same-day problem. Rocky diagnoses it, prices it flat, and gets the showers back.</p>
+            <ul class="svc-list">
+              <li>Water heater installation &amp; replacement</li>
+              <li>Water heater repair &amp; troubleshooting</li>
+              <li>Tank &amp; tankless guidance — honest advice on which fits your house</li>
+            </ul>
+            <a class="tab-cta" href="tel:+19723699959">Put it on the ticket — call now</a>
+          </div>
+          <div class="tab-panel" id="tab-drains">
+            <h3>Drains &amp; Sewer</h3>
+            <p class="visit">Stubborn clogs and slow drains, cleared clean — shoe covers on, mats down, spotless when he leaves.</p>
+            <ul class="svc-list">
+              <li>Drain cleaning — kitchen, bath &amp; main lines</li>
+              <li>Sewer line repair &amp; replacement</li>
+              <li>Clog diagnosis with straight-talk options</li>
+            </ul>
+            <a class="tab-cta" href="tel:+19723699959">Put it on the ticket — call now</a>
+          </div>
+          <div class="tab-panel" id="tab-fixtures">
+            <h3>Fixtures &amp; Remodels</h3>
+            <p class="visit">From a running toilet to a full bath refresh — installed right, cleaned up after, priced fair.</p>
+            <ul class="svc-list">
+              <li>Toilet, faucet &amp; fixture installation</li>
+              <li>Bath &amp; kitchen remodel plumbing</li>
+              <li>Routine maintenance &amp; honest second opinions</li>
+            </ul>
+            <a class="tab-cta" href="tel:+19723699959">Put it on the ticket — call now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTERS ============ -->
+<div class="counters">
+  <div class="wrap count-grid">
+    <div class="count rv"><div class="num" data-target="5" data-dec="1">0</div><div class="lbl">Star rating · Birdeye</div></div>
+    <div class="count rv d1"><div class="num" data-target="18">0</div><div class="lbl">Verified reviews</div></div>
+    <div class="count rv d2"><div class="num" data-target="15">0</div><div class="lbl">Yrs pulling permits in Collin County*</div></div>
+    <div class="count rv d3"><div class="num" data-target="1">0</div><div class="lbl">Owner-operator on every job</div></div>
+  </div>
+  <p class="wrap" style="margin-top:22px;font-size:12px;color:#7c8b96">*Permit history on record since 2011 (BuildZoom).</p>
+</div>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <p class="kicker rv">Word around the county</p>
+    <h2 class="sec-title rv">Folks don't call the company.<br>They call Rocky.</h2>
+    <p class="sec-lede rv">Real reviews from real neighbors — every one of them names the man, not the brand.</p>
+    <div class="slider rv" id="slider">
+      <div class="slide active">
+        <span class="qmark">“</span>
+        <div class="sstars">★★★★★</div>
+        <blockquote>Doc's was referred to us by another plumber we have trusted for years. The referral was a clear testament of Doc's integrity. When we have plumbing needs, Doc's will be our go-to.</blockquote>
+        <p class="who">A McKinney homeowner</p><p class="src">Birdeye review · 5.0/18</p>
+      </div>
+      <div class="slide">
+        <span class="qmark">“</span>
+        <div class="sstars">★★★★★</div>
+        <blockquote>On time, knowledgeable, reasonably priced and efficient. Rocky did a fabulous job! We will continue to use Doc's Plumbing going forward.</blockquote>
+        <p class="who">Jawad Manekia</p><p class="src">PlumbersWorldwide</p>
+      </div>
+      <div class="slide">
+        <span class="qmark">“</span>
+        <div class="sstars">★★★★★</div>
+        <blockquote>Rocky with Docs Plumbing has been my plumber of choice for several years. Reliable, competitive prices and he does great work!!</blockquote>
+        <p class="who">Brian Colehour</p><p class="src">VerView</p>
+      </div>
+      <div class="slide">
+        <span class="qmark">“</span>
+        <div class="sstars">★★★★★</div>
+        <blockquote>Very customer friendly with excellent service and fast repair. Along with being very prompt and gave us an honest price.</blockquote>
+        <p class="who">Jane Hancock</p><p class="src">PlumbersWorldwide</p>
+      </div>
+      <div class="slide">
+        <span class="qmark">“</span>
+        <div class="sstars">★★★★★</div>
+        <blockquote>I am so thankful to Doc's Plumbing! Rocky was quick, affordable, and gracious in helping me with an un-ladylike problem!</blockquote>
+        <p class="who">Kate Presto</p><p class="src">VerView</p>
+      </div>
+      <div class="slide">
+        <span class="qmark">“</span>
+        <div class="sstars">★★★★★</div>
+        <blockquote>Fast, friendly service. Best rate. Dependable. Would highly recommend.</blockquote>
+        <p class="who">Amy Pruett</p><p class="src">PlumbersWorldwide</p>
+      </div>
+    </div>
+    <div class="s-nav rv">
+      <button class="s-arrow" id="sPrev" aria-label="Previous review">‹</button>
+      <div class="s-dots" id="sDots"></div>
+      <button class="s-arrow" id="sNext" aria-label="Next review">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROCKY ============ -->
+<section class="rocky" id="rocky">
+  <div class="wrap">
+    <p class="kicker rv">The man behind the wrench</p>
+    <div class="rocky-grid">
+      <div class="stamp-card rv">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="94" fill="none" stroke="#c87f3d" stroke-width="5"/>
+          <circle cx="100" cy="100" r="82" fill="none" stroke="#c87f3d" stroke-width="1.5" stroke-dasharray="5 6"/>
+          <defs><path id="arcTop" d="M100,100 m-64,0 a64,64 0 1,1 128,0"/></defs>
+          <text font-family="Oswald,sans-serif" font-size="17" letter-spacing="4" fill="#e8a558" font-weight="600">
+            <textPath href="#arcTop" startOffset="50%" text-anchor="middle">DOC'S PLUMBING · MCKINNEY TX ·</textPath>
+          </text>
+          <g stroke="#f7f1e3" stroke-width="9" stroke-linecap="round" fill="none">
+            <path d="M78 128 L122 84"/>
+            <circle cx="126" cy="80" r="12" fill="none"/>
+            <path d="M122 68 l8 8 M130 76 l-4 10" stroke-width="7"/>
+          </g>
+          <text x="100" y="162" text-anchor="middle" font-family="Oswald,sans-serif" font-size="15" letter-spacing="5" fill="#e8a558">EST. CO. RD. 317</text>
+        </svg>
+        <p class="cap">Owner-operator · County Road 317</p>
+      </div>
+      <div>
+        <h2 class="rv">Rocky Pressnell</h2>
+        <p class="role rv">Owner &amp; master plumber — the "Doc"</p>
+        <p class="body rv">Doc's Plumbing isn't a call center with a logo. It's Rocky — a master plumber working out of McKinney's County Road 317, pulling permits in Collin County since 2011, and showing up himself to every job he takes.</p>
+        <p class="body rv">Ask around and you'll hear the same thing: fair prices, straight talk, and work that holds. Even other plumbers send their customers his way.</p>
+        <blockquote class="pull rv">"Doc's was referred to us by another plumber we have trusted for years. The referral was a clear testament of Doc's integrity."
+          <footer class="pull-src" style="margin-top:12px">— BIRDEYE REVIEW, 5.0/18</footer>
+        </blockquote>
+        <a class="btn btn-solid rv" href="tel:+19723699959" style="margin-top:10px">Call Rocky — (972) 369-9959</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMERGENCY ============ -->
+<div class="emergency">
+  <div class="wrap em-inner">
+    <div class="rv">
+      <h2>Water where it shouldn't be?</h2>
+      <p>Don't wait on a callback queue — call the man himself.</p>
+      <p class="em-hours">Mon–Fri 9:00 AM–5:00 PM · Call for after-hours help</p>
+    </div>
+    <a class="em-btn rv" href="tel:+19723699959">☎ (972) 369-9959</a>
+  </div>
+</div>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <p class="kicker rv">Straight answers</p>
+    <h2 class="sec-title rv">Before you call</h2>
+    <p class="sec-lede rv">The questions everybody asks — answered the way Rocky would answer them.</p>
+    <div class="faq-list">
+      <div class="faq-item rv">
+        <button class="faq-q">How fast can you get here?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Call <a href="tel:+19723699959">(972) 369-9959</a> and describe what's happening — Rocky will tell you straight whether he handles it, how soon he can be there, and what the visit costs. No phone trees, no dispatchers.</p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">Do you give free estimates?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — estimates are free. You'll get a flat, honest price before any work starts, and the number doesn't move once the wrench comes out.</p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">What kind of work do you do?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Residential and commercial plumbing: repairs and repipes, leak detection, water heater install and repair, drain cleaning, sewer lines, fixture installs, and bath &amp; kitchen remodel plumbing — plus routine maintenance.</p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">Where do you work?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Based on County Road 317 in McKinney, serving McKinney and the surrounding Collin County towns — Allen, Frisco, Plano, Prosper, Celina, Anna, Melissa and nearby.</p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">Why "Doc's"?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Because that's what everybody calls him. His name is Rocky Pressnell — owner and master plumber, and the only name his customers ever need.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ORDER ============ -->
+<section class="workorder" id="workorder">
+  <div class="wrap">
+    <p class="kicker rv">Skip the phone tag</p>
+    <h2 class="sec-title rv">Start a work order</h2>
+    <p class="sec-lede rv">Tell Rocky what's wrong in 30 seconds. He'll call you back with a straight answer and a time.</p>
+    <div class="wo-grid">
+      <form class="wo rv" id="woForm">
+        <div class="field"><label for="wName">Your name</label><input id="wName" name="name" type="text" placeholder="Jane Hancock" required></div>
+        <div class="field"><label for="wPhone">Your phone</label><input id="wPhone" name="phone" type="tel" placeholder="(972) 555-0100" required></div>
+        <div class="field"><label for="wSvc">What's the job?</label>
+          <select id="wSvc" name="service">
+            <option>Repair / leak</option><option>Water heater</option><option>Drain / sewer</option>
+            <option>Fixture install</option><option>Remodel plumbing</option><option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="wMsg">What's happening?</label><textarea id="wMsg" name="message" placeholder="Kitchen sink's been slow for a week, now it's standing water…"></textarea></div>
+        <button class="btn btn-solid" type="submit" style="justify-content:center;border:none;cursor:pointer">Send the work order</button>
+        <p class="wo-note">Preview demo — no backend attached. In a hurry? Call <a href="tel:+19723699959" style="color:var(--copper-hi)">(972) 369-9959</a>.</p>
+        <div class="wo-success" id="woSuccess">
+          <h3>✓ Ticket's on the board</h3>
+          <p style="color:#c9d2d8">In the live version this goes straight to Rocky. For now, the fastest way is still the phone: <a href="tel:+19723699959" style="color:var(--copper-hi);font-weight:700">(972) 369-9959</a>.</p>
+        </div>
+      </form>
+      <div class="wo-side rv d1">
+        <h3>How it works</h3>
+        <ul>
+          <li>You describe the problem — 30 seconds, plain English.</li>
+          <li>Rocky calls back with a straight answer and a time.</li>
+          <li>He shows up, prices it flat, and fixes it right the first time.</li>
+          <li>You pay a fair price — the kind his reviewers keep mentioning.</li>
+        </ul>
+        <p style="margin-top:26px;color:#8fa0ab;font-size:14px">Prefer to just talk? <a href="tel:+19723699959" style="color:var(--copper-hi);font-weight:700">(972) 369-9959</a>, Mon–Fri 9–5.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER: real NAP + hours only ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Doc's Plumbing</h4>
+        <p>3487 Co Rd 317<br>McKinney, TX 75069</p>
+      </div>
+      <div>
+        <h4>Call</h4>
+        <p><a href="tel:+19723699959">(972) 369-9959</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Fri: 9:00 AM – 5:00 PM<br><span style="font-size:13px">Call for after-hours help</span></p>
+      </div>
+    </div>
+    <p class="foot-demo">Demo preview — concept site, not affiliated with or endorsed by the business.</p>
+  </div>
+</footer>
+
+<a class="m-call" href="tel:+19723699959">☎ Tap to call Rocky — (972) 369-9959</a>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav shadow */
+  var nav = document.getElementById('nav');
+  addEventListener('scroll', function(){ nav.classList.toggle('scrolled', scrollY > 10); }, {passive:true});
+
+  /* scroll reveal */
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); }, {threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  /* counters */
+  var cio = new IntersectionObserver(function(es){ es.forEach(function(e){
+    if(!e.isIntersecting) return; cio.unobserve(e.target);
+    var el = e.target, target = parseFloat(el.dataset.target), dec = parseInt(el.dataset.dec||'0',10), t0 = null;
+    if(reduce){ el.textContent = target.toFixed(dec); return; }
+    function step(t){ if(!t0) t0=t; var p=Math.min((t-t0)/1400,1), ease=1-Math.pow(1-p,3);
+      el.textContent=(target*ease).toFixed(dec); if(p<1) requestAnimationFrame(step); else el.textContent=target.toFixed(dec); }
+    requestAnimationFrame(step);
+  }); }, {threshold:.5});
+  document.querySelectorAll('.num').forEach(function(el){ cio.observe(el); });
+
+  /* service tabs */
+  var btns = document.querySelectorAll('.tab-btn'), panels = document.querySelectorAll('.tab-panel');
+  btns.forEach(function(b){ b.addEventListener('click', function(){
+    btns.forEach(function(x){x.classList.remove('active')}); panels.forEach(function(x){x.classList.remove('active')});
+    b.classList.add('active'); document.getElementById('tab-'+b.dataset.tab).classList.add('active');
+  }); });
+
+  /* testimonial slider */
+  var slides = document.querySelectorAll('.slide'), dotsBox = document.getElementById('sDots'), cur = 0, timer;
+  slides.forEach(function(_,i){ var d=document.createElement('button'); d.className='s-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Go to review '+(i+1));
+    d.addEventListener('click',function(){ go(i); restart(); }); dotsBox.appendChild(d); });
+  var dots = dotsBox.querySelectorAll('.s-dot');
+  function go(i){ slides[cur].classList.remove('active'); dots[cur].classList.remove('active');
+    cur=(i+slides.length)%slides.length; slides[cur].classList.add('active'); dots[cur].classList.add('active'); }
+  function restart(){ clearInterval(timer); if(!reduce) timer=setInterval(function(){go(cur+1)},6000); }
+  document.getElementById('sPrev').addEventListener('click',function(){go(cur-1);restart()});
+  document.getElementById('sNext').addEventListener('click',function(){go(cur+1);restart()});
+  document.getElementById('slider').addEventListener('mouseenter',function(){clearInterval(timer)});
+  document.getElementById('slider').addEventListener('mouseleave',restart);
+  restart();
+
+  /* faq accordion */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q=item.querySelector('.faq-q'), a=item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null; });
+      if(!open){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
+    });
+  });
+
+  /* work order form (demo only) */
+  document.getElementById('woForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('woSuccess').style.display='block';
+    this.querySelector('button[type=submit]').style.display='none';
+    document.getElementById('woSuccess').scrollIntoView({behavior: reduce?'auto':'smooth', block:'center'});
+  });
+
+  /* hero drip canvas */
+  var cv=document.getElementById('drips');
+  if(cv && !reduce){
+    var ctx=cv.getContext('2d'), W, H, drops=[];
+    function size(){ W=cv.width=cv.offsetWidth; H=cv.height=cv.offsetHeight; }
+    size(); addEventListener('resize', size);
+    function spawn(){ return {x:Math.random()*W, y:-20, r:2+Math.random()*4, v:1.2+Math.random()*2.2, wob:Math.random()*6.28, wobV:.01+Math.random()*.03, a:.12+Math.random()*.22}; }
+    for(var i=0;i<26;i++){ var d=spawn(); d.y=Math.random()*H; drops.push(d); }
+    var ripples=[];
+    function frame(){
+      if(!document.hidden){
+        ctx.clearRect(0,0,W,H);
+        drops.forEach(function(d){
+          d.y+=d.v; d.wob+=d.wobV;
+          var x=d.x+Math.sin(d.wob)*14;
+          var g=ctx.createRadialGradient(x,d.y,0,x,d.y,d.r*3);
+          g.addColorStop(0,'rgba(232,165,88,'+d.a+')'); g.addColorStop(1,'rgba(232,165,88,0)');
+          ctx.fillStyle=g; ctx.beginPath(); ctx.arc(x,d.y,d.r*3,0,6.29); ctx.fill();
+          ctx.fillStyle='rgba(247,241,227,'+(d.a*.8)+')';
+          ctx.beginPath(); ctx.arc(x,d.y,d.r*.7,0,6.29); ctx.fill();
+          if(d.y>H+20){ if(Math.random()<.5) ripples.push({x:x,y:H-40,r:2,a:.3}); Object.assign(d, spawn()); }
+        });
+        ripples=ripples.filter(function(r){ return r.a>0.01; });
+        ripples.forEach(function(r){ r.r+=1.6; r.a*=.94;
+          ctx.strokeStyle='rgba(200,127,61,'+r.a+')'; ctx.lineWidth=1.5;
+          ctx.beginPath(); ctx.ellipse(r.x,r.y,r.r,r.r*.4,0,0,6.29); ctx.stroke(); });
+      }
+      requestAnimationFrame(frame);
+    }
+    frame();
+  }
+
+  /* duplicate ticker content for seamless loop */
+  var tt=document.getElementById('tickerTrack'); tt.innerHTML += tt.innerHTML;
+})();
+</script>
+</body>
+</html>
