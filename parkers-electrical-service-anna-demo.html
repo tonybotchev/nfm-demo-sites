@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parker's Electrical Service — Anna, TX Electrician | Rex Parker, 39 Years</title>
+<meta name="description" content="Parker's Electrical Service — owner-operator Rex Parker, 39 years of electrical experience in Anna, TX. Licensed & insured, $85/hr, emergency service. Call (214) 577-0914.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10141b; --ink2:#171d27; --paper:#f4f1ea; --amber:#ffb400; --amber-deep:#e09a00;
+  --line:#2a3242; --muted:#9aa3b2; --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--paper);overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+
+/* DEMO ribbon — visible on every screen */
+.demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--amber);color:#141414;
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;text-align:center;
+  padding:6px 10px;font-weight:600}
+.demo-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;
+  border:1px dashed var(--amber);color:var(--amber);padding:4px 10px;margin-top:14px}
+
+/* NAV */
+nav{position:fixed;top:26px;left:0;right:0;z-index:150;display:flex;align-items:center;justify-content:space-between;
+  padding:14px 4vw;background:rgba(16,20,27,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.bolt{width:34px;height:34px;background:var(--amber);clip-path:polygon(55% 0,20% 55%,45% 55%,40% 100%,82% 42%,55% 42%);flex:none}
+.brand-name{font-family:'Archivo Black',sans-serif;font-size:15px;letter-spacing:1px;line-height:1.1}
+.brand-name small{display:block;font-family:'JetBrains Mono',monospace;font-weight:400;font-size:10px;color:var(--amber);letter-spacing:3px}
+.nav-links{display:flex;gap:26px;font-size:13px;font-weight:600;letter-spacing:1px}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--amber)}
+.nav-call{background:var(--amber);color:#141414 !important;font-weight:700;padding:10px 20px;border-radius:4px;
+  text-decoration:none;font-size:13px;letter-spacing:.5px;transition:transform .2s, box-shadow .2s}
+.nav-call:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,180,0,.35)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 6vw 60px;overflow:hidden}
+#storm{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero-inner{position:relative;z-index:2;max-width:1100px}
+.kicker{font-family:'JetBrains Mono',monospace;color:var(--amber);letter-spacing:4px;font-size:12px;margin-bottom:18px}
+.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(44px,9vw,118px);line-height:.95;letter-spacing:-1px}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--amber)}
+.hero-sub{max-width:560px;color:var(--muted);font-size:17px;line-height:1.7;margin:26px 0 34px}
+.hero-sub strong{color:var(--paper)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:4px;font-weight:700;
+  font-size:15px;text-decoration:none;letter-spacing:.5px;transition:transform .2s, box-shadow .2s}
+.btn-amber{background:var(--amber);color:#141414}
+.btn-amber:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(255,180,0,.4)}
+.btn-ghost{border:1px solid var(--line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.hero-meta{margin-top:44px;display:flex;gap:36px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+.hero-meta b{color:var(--amber)}
+
+/* ticker */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink2);
+  overflow:hidden;white-space:nowrap;padding:14px 0;position:relative;z-index:2}
+.ticker span{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:2px;
+  color:var(--muted);padding:0 26px;animation:tick 28s linear infinite}
+.ticker span i{color:var(--amber);font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:90px 6vw;position:relative}
+.wrap{max-width:1100px;margin:0 auto}
+.sec-label{font-family:'JetBrains Mono',monospace;color:var(--amber);letter-spacing:4px;font-size:12px;margin-bottom:14px}
+.sec-title{font-family:'Archivo Black',sans-serif;font-size:clamp(30px,5vw,56px);line-height:1.05;margin-bottom:18px}
+.sec-lede{color:var(--muted);font-size:16px;line-height:1.7;max-width:640px;margin-bottom:44px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+/* counters */
+.band{background:var(--amber);color:#141414;padding:56px 6vw}
+.band-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;text-align:center}
+.stat b{font-family:'Archivo Black',sans-serif;font-size:clamp(40px,5vw,64px);display:block;line-height:1}
+.stat span{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px}
+
+/* work order */
+.order{background:var(--ink2);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.order-head{display:flex;justify-content:space-between;align-items:center;background:var(--ink);
+  padding:18px 26px;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;color:var(--muted)}
+.order-head b{color:var(--amber)}
+.tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tab{flex:1 1 auto;background:none;border:none;color:var(--muted);font-family:'Inter',sans-serif;font-weight:700;
+  font-size:14px;padding:18px 12px;cursor:pointer;letter-spacing:.5px;border-right:1px solid var(--line);transition:all .2s}
+.tab:last-child{border-right:none}
+.tab:hover{color:var(--paper)}
+.tab.active{background:var(--amber);color:#141414}
+.tabpanes{padding:10px 30px 30px}
+.pane{display:none}
+.pane.active{display:block;animation:fadein .4s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.line{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 4px;
+  border-bottom:1px dashed var(--line);font-size:15px;transition:background .2s,padding .2s}
+.line:hover{background:rgba(255,180,0,.05);padding-left:12px}
+.line:last-child{border-bottom:none}
+.line .job{font-weight:600}
+.line .job small{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:4px}
+.line .rate{font-family:'JetBrains Mono',monospace;color:var(--amber);font-size:13px;white-space:nowrap}
+.order-foot{padding:18px 26px;border-top:1px solid var(--line);font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* owner */
+.owner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:860px){.owner{grid-template-columns:1fr}}
+.owner-card{background:var(--ink2);border:1px solid var(--line);border-radius:10px;padding:44px;position:relative;overflow:hidden}
+.owner-card:before{content:"";position:absolute;top:0;left:0;width:100%;height:5px;background:var(--amber)}
+.owner-card h3{font-family:'Archivo Black',sans-serif;font-size:28px;margin-bottom:6px}
+.owner-card .role{font-family:'JetBrains Mono',monospace;color:var(--amber);font-size:12px;letter-spacing:3px;margin-bottom:22px}
+.owner-card p{color:var(--muted);line-height:1.8;font-size:15px;margin-bottom:16px}
+.owner-card p strong{color:var(--paper)}
+.quote-mark{font-family:'Archivo Black',sans-serif;font-size:90px;color:var(--amber);line-height:0.6;display:block;margin-bottom:18px}
+blockquote.review{background:var(--paper);color:#1a1a1a;border-radius:10px;padding:44px;position:relative;transition:transform .3s,box-shadow .3s}
+blockquote.review:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:0 24px 60px rgba(255,180,0,.18)}
+blockquote.review p{font-size:17px;line-height:1.75;font-style:italic}
+blockquote.review footer{margin-top:22px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#666}
+.stars{color:var(--amber-deep);font-size:20px;letter-spacing:4px;margin-bottom:14px}
+
+/* FAQ */
+.faq-item{border:1px solid var(--line);border-radius:8px;margin-bottom:14px;background:var(--ink2);overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:var(--amber)}
+.faq-q{width:100%;background:none;border:none;color:var(--paper);font-family:'Inter',sans-serif;font-weight:700;
+  font-size:16px;text-align:left;padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .x{font-family:'JetBrains Mono',monospace;color:var(--amber);font-size:22px;transition:transform .3s;flex:none}
+.faq-item.open .x{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--muted);line-height:1.75;font-size:15px}
+.faq-a div{padding:0 26px 24px}
+.faq-a a{color:var(--amber)}
+
+/* area */
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:13px;border:1px solid var(--line);border-radius:30px;
+  padding:10px 22px;color:var(--muted);transition:all .2s;cursor:default}
+.chip:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-3px)}
+.chip.home{background:var(--amber);color:#141414;border-color:var(--amber);font-weight:600}
+
+/* form */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+form{background:var(--ink2);border:1px solid var(--line);border-radius:10px;padding:40px}
+form label{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--muted);margin:18px 0 8px}
+form label:first-child{margin-top:0}
+form input,form select,form textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:6px;
+  color:var(--paper);padding:14px 16px;font-family:'Inter',sans-serif;font-size:15px;transition:border-color .2s}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--amber)}
+form textarea{min-height:110px;resize:vertical}
+.form-note{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.6}
+.form-ok{display:none;background:rgba(255,180,0,.08);border:1px solid var(--amber);border-radius:8px;
+  padding:24px;margin-top:18px;font-size:14px;line-height:1.7}
+.nap li{list-style:none;margin-bottom:26px;display:flex;gap:16px;align-items:flex-start}
+.nap .ic{width:44px;height:44px;flex:none;background:rgba(255,180,0,.1);border:1px solid var(--amber);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.nap b{display:block;font-size:15px;margin-bottom:4px}
+.nap span{color:var(--muted);font-size:14px;line-height:1.6}
+.nap a{color:var(--amber);text-decoration:none;font-weight:600}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:50px 6vw 110px;text-align:center}
+footer .fbrand{font-family:'Archivo Black',sans-serif;font-size:20px;margin-bottom:12px}
+footer p{color:var(--muted);font-size:14px;line-height:1.9}
+footer a{color:var(--amber);text-decoration:none;font-weight:600}
+
+/* sticky mobile call */
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--amber);
+  color:#141414;text-align:center;font-weight:800;font-size:17px;padding:18px;text-decoration:none;letter-spacing:1px}
+@media(max-width:860px){.sticky-call{display:block}}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">⚠ DEMO PREVIEW — mockup built for Parker's Electrical Service · not a live site</div>
+
+<nav>
+  <a class="brand" href="#top">
+    <span class="bolt"></span>
+    <span class="brand-name">PARKER'S<small>ELECTRICAL SERVICE</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#rex">Why Rex</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-call" href="tel:+12145770914">Call (214) 577-0914</a>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="storm"></canvas>
+  <div class="hero-inner">
+    <div class="kicker rv">ANNA, TEXAS · LICENSED &amp; INSURED ELECTRICIAN</div>
+    <h1 class="rv">39 YEARS.<br><span class="stroke">ONE ELECTRICIAN.</span><br>ZERO SHORTCUTS.</h1>
+    <p class="hero-sub rv">Parker's Electrical Service is owner-operator <strong>Rex Parker</strong> — doing everything from a ceiling fan to full commercial work, at a straight <strong>$85/hr</strong>. No dispatchers. No upsells. Just the guy who shows up.</p>
+    <div class="hero-ctas rv">
+      <a class="btn btn-amber" href="tel:+12145770914">⚡ Call Rex: (214) 577-0914</a>
+      <a class="btn btn-ghost" href="#services">See the work ↓</a>
+    </div>
+    <div class="hero-meta rv">
+      <span><b>◆</b> 39 YRS EXPERIENCE</span>
+      <span><b>◆</b> $85/HR FLAT</span>
+      <span><b>◆</b> EMERGENCY SERVICE</span>
+      <span><b>◆</b> TX LICENSE #24360</span>
+    </div>
+    <span class="demo-tag">DEMO PREVIEW</span>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <span><i>⚡</i> PANEL UPGRADES <i>⚡</i> TROUBLESHOOTING <i>⚡</i> CEILING FANS &amp; LIGHTING <i>⚡</i> BARN &amp; WORKSHOP WIRING <i>⚡</i> HOT TUB CIRCUITS <i>⚡</i> SURGE PROTECTION <i>⚡</i> REMODEL WIRING <i>⚡</i> EMERGENCY CALLS <i>⚡</i> PANEL UPGRADES <i>⚡</i> TROUBLESHOOTING <i>⚡</i> CEILING FANS &amp; LIGHTING <i>⚡</i> BARN &amp; WORKSHOP WIRING <i>⚡</i> HOT TUB CIRCUITS <i>⚡</i> SURGE PROTECTION <i>⚡</i> REMODEL WIRING <i>⚡</i> EMERGENCY CALLS&nbsp;</span>
+</div>
+
+<div class="band">
+  <div class="band-grid">
+    <div class="stat rv"><b><span class="count" data-to="39">0</span></b><span>YEARS OF EXPERIENCE</span></div>
+    <div class="stat rv"><b>$<span class="count" data-to="85">0</span></b><span>PER HOUR, STRAIGHT RATE</span></div>
+    <div class="stat rv"><b><span class="count" data-to="5" data-dec="1">0</span>★</b><span>ANGI CUSTOMER RATING</span></div>
+    <div class="stat rv"><b><span class="count" data-to="30">0</span> MI</b><span>SERVICE RADIUS (McKINNEY)</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-label rv">WORK ORDER #001 — WHAT REX DOES</div>
+    <h2 class="sec-title rv">Pick a job.<br>Rex has done it for decades.</h2>
+    <p class="sec-lede rv">From hanging a ceiling fan to wiring commercial construction — small in number, big on personal attention. Straight $85/hr, one man.</p>
+    <div class="order rv">
+      <div class="order-head"><span>WORK ORDER · <b>PARKER'S ELECTRICAL SERVICE</b></span><span>ANNA, TX</span></div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-pane="p-res">Residential</button>
+        <button class="tab" data-pane="p-com">Commercial</button>
+        <button class="tab" data-pane="p-barn">Barns &amp; Outbuildings</button>
+        <button class="tab" data-pane="p-emg">Troubleshooting &amp; Emergency</button>
+      </div>
+      <div class="tabpanes">
+        <div class="pane active" id="p-res">
+          <div class="line"><span class="job">Ceiling fans &amp; light fixtures<small>Install, replace, or relocate — done right the first time.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Service upgrades &amp; panel replacement<small>Modern panels that keep up with today's loads.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Whole-home surge protection<small>Shield your electronics from Texas storm surges.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Remodel &amp; addition wiring<small>Kitchen, bath, and room additions wired to code.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Lighting efficiency upgrades<small>Cut the bill without cutting the light.</small></span><span class="rate">$85/HR</span></div>
+        </div>
+        <div class="pane" id="p-com">
+          <div class="line"><span class="job">Commercial service calls<small>Keep the business running — fast diagnosis, clean repair.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Commercial construction wiring<small>From tenant improvements to full build-outs.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Commercial lighting upgrades<small>Efficiency retrofits for offices, retail, and shops.</small></span><span class="rate">$85/HR</span></div>
+        </div>
+        <div class="pane" id="p-barn">
+          <div class="line"><span class="job">Barn &amp; workshop wiring<small>Power where you actually work — rural Collin County specialty.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Outbuilding circuits<small>Detached garages, sheds, and shops wired safe.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Hot tub &amp; spa circuits<small>Dedicated circuits installed to code for spas and hot tubs.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Outdoor &amp; landscape lighting<small>Security and curb appeal after dark.</small></span><span class="rate">$85/HR</span></div>
+        </div>
+        <div class="pane" id="p-emg">
+          <div class="line"><span class="job">Emergency electrical service<small>Power problems can't wait — Rex answers.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Troubleshooting &amp; repairs<small>Flickering lights, dead outlets, mystery breakers — found and fixed.</small></span><span class="rate">$85/HR</span></div>
+          <div class="line"><span class="job">Storm &amp; surge damage<small>Post-storm inspection and repair to get you safe again.</small></span><span class="rate">$85/HR</span></div>
+        </div>
+      </div>
+      <div class="order-foot"><span>TRIP CHARGES APPLY OUTSIDE 30-MI RADIUS OF McKINNEY</span><span><a href="tel:+12145770914" style="color:var(--amber)">CALL (214) 577-0914 →</a></span></div>
+    </div>
+    <span class="demo-tag">DEMO PREVIEW</span>
+  </div>
+</section>
+
+<section id="rex" style="background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap owner">
+    <div class="owner-card rv">
+      <h3>Meet Rex.</h3>
+      <div class="role">OWNER · OPERATOR · ELECTRICIAN</div>
+      <p>Rex Parker has been doing electrical work for <strong>39 years</strong> — and Parker's Electrical Service is still a one-man shop on purpose. When you call, <strong>you get Rex</strong>: licensed and insured, Texas EC #24360, at a straight $85 an hour.</p>
+      <p>"We are small in number but provide personal attention" isn't a slogan — it's the whole business model. Ceiling fan or commercial build-out, the guy who quotes it is the guy who wires it.</p>
+      <a class="btn btn-amber" href="tel:+12145770914" style="margin-top:10px">Call Rex Direct</a>
+    </div>
+    <div class="rv">
+      <span class="quote-mark">“</span>
+      <blockquote class="review">
+        <div class="stars">★★★★★</div>
+        <p>Rex (the owner) came out to install a surge protector on our main panel to protect us from a surge during storms. He also evaluated the power panel to see why we were having fluctuations in our power. For some reason, our dining room lights went out and he also fixed this. I had some problems with my luton wall switches and had a new switch on hand and he installed (at no charge) a outdoor light switch that had broken. I was quite pleased. It turns out that the transformer outside is causing some issues with our electricity. He was right on time and an extremely nice guy!</p>
+        <footer>— MICHELLE B., ANGI REVIEW · 5.0 RATING · AUG 2009</footer>
+      </blockquote>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:30px"><span class="demo-tag">DEMO PREVIEW</span></div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-label rv">STRAIGHT ANSWERS</div>
+    <h2 class="sec-title rv">Questions Anna asks Rex.</h2>
+    <p class="sec-lede rv">No fine print. This is how a 39-year electrician actually works.</p>
+    <div class="rv">
+      <div class="faq-item">
+        <button class="faq-q">What does Rex charge?<span class="x">+</span></button>
+        <div class="faq-a"><div>$85.00 per hour, one man, straight rate — published up front, not sprung on you at the end. Trip charges apply outside a 30-mile radius of McKinney.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is Parker's licensed and insured?<span class="x">+</span></button>
+        <div class="faq-a"><div>Yes. Licensed and insured, Texas Electrical Contractor #24360. 39 years of experience behind every job.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you handle electrical emergencies?<span class="x">+</span></button>
+        <div class="faq-a"><div>Yes — emergency services are offered. If your power's out or something smells like it's burning, <a href="tel:+12145770914">call (214) 577-0914</a> right away.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer free estimates?<span class="x">+</span></button>
+        <div class="faq-a"><div>No free project estimates — Rex bills his honest $85/hr rate for the time he spends on your job, including the look. What you get instead: a straight answer and no upsell.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What areas do you serve?<span class="x">+</span></button>
+        <div class="faq-a"><div>Based in Anna, TX, serving the 30-mile radius around McKinney — including Melissa, Van Alstyne, Princeton, Celina, Blue Ridge, and Sherman. Trip charges apply beyond 30 miles.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Will I actually get Rex, or a crew?<span class="x">+</span></button>
+        <div class="faq-a"><div>It's a small, owner-operated shop — when you call Parker's, you reach the shop directly, not a call center. And Rex is the man who shows up with the tools.</div></div>
+      </div>
+    </div>
+    <span class="demo-tag">DEMO PREVIEW</span>
+  </div>
+</section>
+
+<section id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-label rv">SERVICE AREA</div>
+    <h2 class="sec-title rv" style="font-size:clamp(24px,4vw,40px)">Anna first. The corridor covered.</h2>
+    <div class="chips rv">
+      <span class="chip home">★ Anna</span><span class="chip">Melissa</span><span class="chip">Van Alstyne</span>
+      <span class="chip">McKinney</span><span class="chip">Princeton</span><span class="chip">Celina</span>
+      <span class="chip">Blue Ridge</span><span class="chip">Sherman</span><span class="chip">Prosper</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--ink2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-label rv">GET ON REX'S SCHEDULE</div>
+    <h2 class="sec-title rv">One call. The owner answers.</h2>
+    <p class="sec-lede rv">Tell Rex what's going on — he'll tell you straight whether it's a quick fix or a bigger job.</p>
+    <div class="contact-grid">
+      <form id="svc-form" class="rv" novalidate>
+        <label for="f-name">YOUR NAME</label>
+        <input id="f-name" name="name" type="text" placeholder="Jane Doe" required>
+        <label for="f-phone">PHONE</label>
+        <input id="f-phone" name="phone" type="tel" placeholder="(214) 555-0100" required>
+        <label for="f-type">WHAT'S THE JOB?</label>
+        <select id="f-type" name="type">
+          <option>Troubleshooting / repair</option>
+          <option>Panel upgrade / replacement</option>
+          <option>Ceiling fan / lighting</option>
+          <option>Barn / workshop / outbuilding</option>
+          <option>Hot tub / spa circuit</option>
+          <option>Remodel / addition wiring</option>
+          <option>Emergency — power issue</option>
+          <option>Something else</option>
+        </select>
+        <label for="f-msg">DESCRIBE IT</label>
+        <textarea id="f-msg" name="msg" placeholder="Dining room lights keep flickering…"></textarea>
+        <button class="btn btn-amber" type="submit" style="width:100%;justify-content:center;margin-top:22px;border:none;cursor:pointer">Request a Callback</button>
+        <p class="form-note">Preview form — in the live site this goes straight to Rex. Fastest path today: call <a href="tel:+12145770914" style="color:var(--amber)">(214) 577-0914</a>.</p>
+        <div class="form-ok" id="form-ok">✓ <b>Got it.</b> In the live version, Rex gets this instantly. This is a demo preview — to actually reach him, call <a href="tel:+12145770914" style="color:var(--amber)">(214) 577-0914</a>.</div>
+      </form>
+      <ul class="nap rv">
+        <li><span class="ic">📞</span><span><b>Call or text</b><a href="tel:+12145770914">(214) 577-0914</a><br><span>You reach Rex — the owner, not a call center.</span></span></li>
+        <li><span class="ic">📍</span><span><b>Based in Anna</b><span>124 Stanley Falls Drive<br>Anna, TX 75409</span></span></li>
+        <li><span class="ic">⚡</span><span><b>Emergency service offered</b><span>Power out? Something sparking? Call now.</span></span></li>
+        <li><span class="ic">💲</span><span><b>Straight $85/hr</b><span>One man, published rate. Trip charges apply outside 30 miles of McKinney.</span></span></li>
+      </ul>
+    </div>
+    <span class="demo-tag">DEMO PREVIEW</span>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">PARKER'S ELECTRICAL SERVICE</div>
+  <p>124 Stanley Falls Drive, Anna, TX 75409<br>
+  <a href="tel:+12145770914">(214) 577-0914</a><br>
+  Hours: not published — call for availability · Emergency service offered<br>
+  Licensed &amp; insured · TX EC #24360 · 39 years of experience</p>
+  <span class="demo-tag">DEMO PREVIEW — mockup by NoFluff Marketing · not a live site</span>
+</footer>
+
+<a class="sticky-call" href="tel:+12145770914">⚡ Call Rex Now — (214) 577-0914</a>
+
+<script>
+// ---------- lightning storm canvas ----------
+(function(){
+  var c=document.getElementById('storm'),x=c.getContext('2d'),W,H,bolts=[];
+  function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+  size();addEventListener('resize',size);
+  function bolt(x0,y0){
+    var pts=[[x0,y0]],x1=x0,y1=y0;
+    while(y1<H*0.9){x1+=(Math.random()-0.5)*46;y1+=14+Math.random()*26;pts.push([x1,y1]);
+      if(Math.random()<0.14){var bx=x1,by=y1;for(var i=0;i<5;i++){bx+=(Math.random()-0.5)*60;by+=10+Math.random()*20;pts.push([bx,by,'j']);bx=x1;by=y1;}}}
+    return {pts:pts,life:1};
+  }
+  function draw(b){
+    x.save();x.globalAlpha=Math.max(0,b.life)*0.9;
+    x.strokeStyle='#ffb400';x.lineWidth=2.4;x.shadowColor='#ffb400';x.shadowBlur=18;
+    x.beginPath();var pen=false;
+    b.pts.forEach(function(p){if(p[2]==='j'){pen=false;return;}if(!pen){x.moveTo(p[0],p[1]);pen=true;}else{x.lineTo(p[0],p[1]);}});
+    x.stroke();x.restore();
+  }
+  setInterval(function(){if(document.hidden)return;if(bolts.length<3&&Math.random()<0.5)bolts.push(bolt(Math.random()*W,0));},900);
+  (function loop(){
+    x.clearRect(0,0,W,H);
+    bolts=bolts.filter(function(b){b.life-=0.06;return b.life>0;});
+    bolts.forEach(draw);
+    requestAnimationFrame(loop);
+  })();
+})();
+
+// ---------- scroll reveal ----------
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+})();
+
+// ---------- counters ----------
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;io.unobserve(e.target);
+    var el=e.target,to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0'),t0=null;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1400),v=to*(1-Math.pow(1-p,3));
+      el.textContent=dec?v.toFixed(dec):Math.round(v);if(p<1)requestAnimationFrame(step);else el.textContent=dec?to.toFixed(dec):to;}
+    requestAnimationFrame(step);
+  })},{threshold:0.6});
+  document.querySelectorAll('.count').forEach(function(el){io.observe(el);});
+})();
+
+// ---------- tabs ----------
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(o){o.classList.remove('active');});
+    document.querySelectorAll('.pane').forEach(function(o){o.classList.remove('active');});
+    t.classList.add('active');
+    document.getElementById(t.dataset.pane).classList.add('active');
+  });
+});
+
+// ---------- faq ----------
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+// ---------- form ----------
+document.getElementById('svc-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('form-ok').style.display='block';
+  this.querySelector('button[type=submit]').textContent='Request Received ✓';
+});
+</script>
+</body>
+</html>
