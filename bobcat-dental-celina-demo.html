@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bobcat Dental | Celina's Hometown Dental Team</title>
+<meta name="description" content="Bobcat Dental — general, implant & sedation dentistry for the whole family in Celina, TX. Early-morning hours. Call (972) 382-2900.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF6EC; --cream2:#F5EDDD; --teal:#0E4B4A; --teal-deep:#083937;
+  --orange:#E8722A; --orange-soft:#F9C89B; --ink:#232720; --muted:#6B6A61;
+  --white:#FFFFFF; --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;line-height:1.12}
+img{max-width:100%}
+a{color:inherit}
+/* ---------- demo badge ---------- */
+.demo-badge{position:fixed;top:14px;left:14px;z-index:2000;background:#1c1c1c;color:#fff;font-size:11px;letter-spacing:.18em;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);text-transform:uppercase}
+.demo-badge span{color:#FFD34D}
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:1000;background:rgba(251,246,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid #E8DCC4;transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 8px 24px rgba(35,39,32,.10)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:14px;background:var(--teal);display:grid;place-items:center;flex:none}
+.brand-name{font-family:'Fraunces',serif;font-weight:900;font-size:1.3rem;color:var(--teal);line-height:1}
+.brand-name small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.22em;color:var(--orange);text-transform:uppercase}
+.nav-links{display:flex;gap:26px;font-weight:600;font-size:.94rem}
+.nav-links a{text-decoration:none;color:var(--ink);position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--orange);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;font-weight:700;padding:13px 26px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 10px 24px rgba(232,114,42,.35)}
+.btn:hover{transform:translateY(-2px);background:#D5621F;box-shadow:0 14px 30px rgba(232,114,42,.45)}
+.btn.teal{background:var(--teal);box-shadow:0 10px 24px rgba(14,75,74,.35)}
+.btn.teal:hover{background:var(--teal-deep)}
+.btn.ghost{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
+.btn.ghost:hover{background:var(--teal);color:#fff}
+.nav-cta{padding:10px 20px;font-size:.9rem}
+@media(max-width:860px){.nav-links{display:none}}
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1100px 500px at 85% -10%,#F9E3C6 0%,transparent 60%),radial-gradient(900px 480px at -10% 110%,#DCEBE8 0%,transparent 55%),var(--cream)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:76px 22px 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-top:52px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #E8DCC4;color:var(--teal);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:20px}
+.eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--orange);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.5}}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.2rem);font-weight:900;color:var(--teal);margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:32rem;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-proof{display:flex;gap:26px;flex-wrap:wrap}
+.proof-item{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:600;color:var(--teal)}
+.proof-item .stars{color:var(--orange);letter-spacing:2px;font-size:1rem}
+/* hero card */
+.hero-card{background:#fff;border-radius:26px;padding:10px;box-shadow:0 30px 70px rgba(14,75,74,.16);transform:rotate(1.5deg);transition:transform .4s}
+.hero-card:hover{transform:rotate(0) scale(1.01)}
+.hero-card-inner{border-radius:18px;background:linear-gradient(160deg,var(--teal) 0%,var(--teal-deep) 100%);padding:34px 30px;color:#fff;position:relative;overflow:hidden}
+.hero-card-inner::before{content:"";position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:rgba(232,114,42,.22)}
+.paw{position:absolute;opacity:.16;right:22px;bottom:16px}
+.hc-eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);font-weight:700;margin-bottom:12px}
+.hc-title{font-size:1.7rem;font-weight:700;margin-bottom:8px}
+.hc-hours{list-style:none;margin:16px 0 22px;font-size:.95rem}
+.hc-hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.25)}
+.hc-hours li:last-child{border:none}
+.hc-phone{display:block;text-align:center;background:var(--orange);color:#fff;font-weight:800;font-size:1.35rem;padding:15px;border-radius:14px;text-decoration:none;transition:transform .2s,background .2s}
+.hc-phone:hover{transform:scale(1.03);background:#D5621F}
+.hc-note{text-align:center;font-size:.82rem;opacity:.85;margin-top:10px}
+/* ---------- trust band ---------- */
+.trust{background:var(--teal);color:#fff;padding:34px 22px}
+.trust-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+@media(max-width:700px){.trust-inner{grid-template-columns:repeat(2,1fr)}}
+.stat-num{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:900;color:var(--orange-soft)}
+.stat-label{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;opacity:.85;font-weight:600}
+/* ---------- sections ---------- */
+section.block{padding:80px 22px}
+.wrap{max-width:1150px;margin:0 auto}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.sec-head .kicker{color:var(--orange);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;margin-bottom:12px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--teal);font-weight:900;margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+/* ---------- services tabs ---------- */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.tab-btn{border:2px solid #E4D6B8;background:#fff;color:var(--teal);font-weight:700;padding:12px 22px;border-radius:999px;cursor:pointer;font-size:.95rem;transition:all .25s;font-family:'Inter',sans-serif}
+.tab-btn:hover{border-color:var(--orange)}
+.tab-btn.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tab-panels{max-width:860px;margin:0 auto}
+.tab-panel{display:none;background:#fff;border-radius:var(--radius);padding:38px 36px;box-shadow:0 18px 44px rgba(35,39,32,.08);border-top:5px solid var(--orange)}
+.tab-panel.active{display:block;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-size:1.5rem;color:var(--teal);margin-bottom:10px}
+.tab-panel p{color:var(--muted);margin-bottom:18px}
+.tab-panel ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+@media(max-width:600px){.tab-panel ul{grid-template-columns:1fr}}
+.tab-panel li{padding-left:30px;position:relative;font-weight:500}
+.tab-panel li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:800}
+/* ---------- story ---------- */
+.story{background:var(--cream2)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr}}
+.story h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--teal);font-weight:900;margin-bottom:18px}
+.story p{color:var(--muted);margin-bottom:16px}
+.story p strong{color:var(--ink)}
+.story-card{background:#fff;border-radius:var(--radius);padding:34px;box-shadow:0 18px 44px rgba(35,39,32,.08);position:relative;overflow:hidden}
+.story-card::before{content:"“";position:absolute;top:-6px;left:18px;font-family:'Fraunces',serif;font-size:6rem;color:#F0E4CC;line-height:1}
+.story-card blockquote{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--teal);font-weight:500;margin-bottom:14px;position:relative}
+.story-card cite{font-style:normal;font-weight:700;color:var(--orange);font-size:.9rem}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:#fff;border:1px solid #E8DCC4;padding:9px 18px;border-radius:999px;font-weight:600;font-size:.88rem;color:var(--teal)}
+/* ---------- testimonials slider ---------- */
+.testi{background:var(--teal);color:#fff;position:relative;overflow:hidden}
+.testi .sec-head h2{color:#fff}
+.testi .sec-head p{color:#CFE3E1}
+.slider{max-width:760px;margin:0 auto;position:relative;min-height:250px}
+.slide{display:none;text-align:center;padding:10px 20px}
+.slide.active{display:block;animation:fadeUp .5s ease}
+.slide .stars{color:var(--orange-soft);letter-spacing:4px;font-size:1.2rem;margin-bottom:16px}
+.slide blockquote{font-family:'Fraunces',serif;font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.45;margin-bottom:18px}
+.slide cite{font-style:normal;font-weight:600;color:var(--orange-soft);font-size:.92rem;letter-spacing:.06em}
+.slider-nav{display:flex;justify-content:center;gap:14px;margin-top:26px}
+.slider-nav button{background:rgba(255,255,255,.14);border:none;color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.3rem;cursor:pointer;transition:background .25s}
+.slider-nav button:hover{background:var(--orange)}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.dot-nav{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:background .25s}
+.dot-nav.active{background:var(--orange-soft)}
+.testi .attr{text-align:center;font-size:.8rem;opacity:.7;margin-top:22px}
+/* ---------- area ---------- */
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:8px}
+.area-card{background:#fff;border-radius:14px;padding:22px 16px;text-align:center;font-weight:700;color:var(--teal);box-shadow:0 10px 26px rgba(35,39,32,.07);transition:transform .25s,box-shadow .25s;border-bottom:4px solid transparent}
+.area-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(14,75,74,.16);border-bottom-color:var(--orange)}
+.area-card small{display:block;font-weight:500;color:var(--muted);font-size:.78rem;margin-top:4px}
+/* ---------- faq ---------- */
+.faq{max-width:800px;margin:0 auto}
+.faq-item{background:#fff;border-radius:14px;margin-bottom:12px;box-shadow:0 8px 22px rgba(35,39,32,.06);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-weight:700;font-size:1.02rem;color:var(--teal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'Inter',sans-serif}
+.faq-q .plus{flex:none;width:30px;height:30px;border-radius:50%;background:var(--cream2);display:grid;place-items:center;font-size:1.2rem;color:var(--orange);transition:transform .3s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--orange);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted)}
+/* ---------- cta band ---------- */
+.cta-band{background:linear-gradient(135deg,var(--orange) 0%,#D5621F 100%);color:#fff;text-align:center;padding:70px 22px;border-radius:28px;max-width:1150px;margin:0 auto 80px;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;left:-80px;bottom:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.12)}
+.cta-band h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:900;margin-bottom:14px}
+.cta-band p{max-width:520px;margin:0 auto 28px;font-size:1.08rem;opacity:.95}
+.cta-band .btn{background:#fff;color:var(--orange);box-shadow:0 12px 30px rgba(0,0,0,.2);font-size:1.15rem;padding:16px 40px}
+.cta-band .btn:hover{background:var(--teal);color:#fff}
+/* ---------- footer ---------- */
+footer{background:var(--teal-deep);color:#DCEBE8;padding:56px 22px 110px}
+.foot-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+footer h4{color:#fff;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+footer p,footer li{font-size:.94rem;margin-bottom:8px;list-style:none}
+footer a{color:#fff;text-decoration:none;font-weight:600}
+footer a:hover{color:var(--orange-soft)}
+.foot-hours li{display:flex;justify-content:space-between;gap:12px}
+.foot-bottom{max-width:1100px;margin:40px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:.82rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;opacity:.8}
+/* ---------- sticky mobile call ---------- */
+.mobile-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--teal);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.mobile-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:#fff;font-weight:800;font-size:1.1rem;text-decoration:none;padding:14px;border-radius:14px}
+@media(max-width:760px){.mobile-call{display:block}.nav-cta{display:none}}
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo <span>Preview</span> — for Bobcat Dental</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7.5" r="2.2" fill="#F9C89B"/><circle cx="12" cy="5.5" r="2.2" fill="#F9C89B"/><circle cx="17" cy="7.5" r="2.2" fill="#F9C89B"/><ellipse cx="12" cy="14.5" rx="4.4" ry="3.6" fill="#F9C89B"/></svg>
+      </span>
+      <span class="brand-name">Bobcat Dental<small>Celina, Texas</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#story">Our Story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn nav-cta" href="tel:+19723822900">📞 (972) 382-2900</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="reveal visible">
+      <span class="eyebrow"><span class="dot"></span> Early-morning appointments</span>
+      <h1>Celina's hometown dental team — <em>where you're family.</em></h1>
+      <p class="lead">Routine care, implants, whitening, crowns — and gentle sedation dentistry for the whole family. Early-morning hours so you never miss work or school.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+19723822900">📞 Call (972) 382-2900</a>
+        <a class="btn ghost" href="#services">Explore services</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><span class="stars">★★★★★</span> 4.9 rating</div>
+        <div class="proof-item"><span class="stars">♥</span> 315 patient reviews <span style="font-weight:400;font-size:.8rem">(Birdeye)</span></div>
+        <div class="proof-item">⏰ Early-morning hours</div>
+      </div>
+    </div>
+    <div class="hero-card reveal visible">
+      <div class="hero-card-inner">
+        <svg class="paw" width="120" height="120" viewBox="0 0 24 24" fill="#fff"><circle cx="7" cy="7.5" r="2.2"/><circle cx="12" cy="5.5" r="2.2"/><circle cx="17" cy="7.5" r="2.2"/><ellipse cx="12" cy="14.5" rx="4.4" ry="3.6"/></svg>
+        <div class="hc-eyebrow">Book your visit</div>
+        <div class="hc-title serif">One call does it all.</div>
+        <ul class="hc-hours">
+          <li><span>Mon – Wed</span><strong>7:00 AM – 2:00 PM</strong></li>
+          <li><span>Thursday</span><strong>8:00 AM – 5:00 PM</strong></li>
+          <li><span>Friday</span><strong>7:00 AM – 1:00 PM</strong></li>
+          <li><span>Sat – Sun</span><strong>Closed</strong></li>
+        </ul>
+        <a class="hc-phone" href="tel:+19723822900">📞 (972) 382-2900</a>
+        <div class="hc-note">No insurance? No problem — call us, we can help.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="trust-inner">
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="315">0</span>+</div><div class="stat-label">Patient reviews</div></div>
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="4.9" data-decimal="1">0</span>★</div><div class="stat-label">Birdeye rating</div></div>
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="7">0</span> AM</div><div class="stat-label">Doors open weekdays</div></div>
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="6">0</span></div><div class="stat-label">Towns served</div></div>
+  </div>
+</div>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">What we do</div>
+      <h2>Complete care for every smile in the family</h2>
+      <p>From six-month cleanings to full implants — all under one roof, with sedation options for nervous patients.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab-btn active" data-tab="t1">Preventive</button>
+      <button class="tab-btn" data-tab="t2">Cosmetic</button>
+      <button class="tab-btn" data-tab="t3">Implants & Restorative</button>
+      <button class="tab-btn" data-tab="t4">Sedation</button>
+      <button class="tab-btn" data-tab="t5">Emergency</button>
+    </div>
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" id="t1">
+        <h3>Preventive care that keeps you ahead</h3>
+        <p>Regular checkups catch small issues before they become big bills. We make routine visits quick, comfortable, and honest.</p>
+        <ul><li>Exams & cleanings</li><li>Kids' dentistry</li><li>Routine preventive care</li><li>Sedation for anxious patients</li></ul>
+        <a class="btn teal" href="tel:+19723822900">📞 Book a cleaning</a>
+      </div>
+      <div class="tab-panel" id="t2">
+        <h3>A smile you'll want to show off</h3>
+        <p>Subtle improvements or a full refresh — cosmetic work designed around your face, not a template.</p>
+        <ul><li>Professional whitening</li><li>Porcelain crowns</li><li>Routine services</li><li>Preventive care</li></ul>
+        <a class="btn teal" href="tel:+19723822900">📞 Ask about whitening</a>
+      </div>
+      <div class="tab-panel" id="t3">
+        <h3>Replace what's missing — for good</h3>
+        <p>Dental implants that look, feel, and chew like the real thing, plus crowns to rebuild damaged teeth.</p>
+        <ul><li>Dental implants</li><li>Porcelain crowns</li><li>Professional whitening</li><li>Routine services</li></ul>
+        <a class="btn teal" href="tel:+19723822900">📞 Discuss implants</a>
+      </div>
+      <div class="tab-panel" id="t4">
+        <h3>Nervous? We've got you.</h3>
+        <p>Sedation dentistry for the entire family — anxious patients, kids, and anyone who'd rather nap through the appointment.</p>
+        <ul><li>Sedation options for all ages</li><li>Judgment-free visits</li><li>Comfort-first approach</li><li>Serving Celina, Prosper & Gunter families</li></ul>
+        <a class="btn teal" href="tel:+19723822900">📞 Talk through options</a>
+      </div>
+      <div class="tab-panel" id="t5">
+        <h3>Toothache? Call us.</h3>
+        <p>Dental emergencies don't wait. Have one? Call now at (972) 382-2900 — that's our line, and we'll take it from there.</p>
+        <ul><li>Call first — we'll guide you</li><li>Easy to reach, by Brookshire's at Celina Town Center</li><li>Open weekdays from 7:00 AM (Thu 8:00 AM)</li><li>Sedation available if you're anxious</li></ul>
+        <a class="btn" href="tel:+19723822900">📞 Call now — (972) 382-2900</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block story" id="story">
+  <div class="wrap story-grid">
+    <div class="reveal">
+      <div class="kicker" style="color:var(--orange);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;margin-bottom:12px">Our story</div>
+      <h2>Celina's hometown dentist.<br>Built for the neighbors.</h2>
+      <p>Bobcat Dental is a general-practice dental office proudly serving <strong>Celina, Prosper, and the surrounding communities</strong>. Dr. Dong Lee and the team offer all types of dentistry — routine services, implants, and sedation dentistry for the entire family.</p>
+      <p>We're the practice where reviewers <strong>name the staff like family</strong> — because here, that's exactly how you're treated.</p>
+      <div class="chip-row">
+        <span class="chip">🦷 Dr. Dong Lee, DDS</span>
+        <span class="chip">📍 By Brookshire's · Celina Town Center</span>
+        <span class="chip">⏰ Early-morning hours</span>
+        <span class="chip">✨ Implants · Whitening · Crowns</span>
+      </div>
+    </div>
+    <div class="story-card reveal">
+      <blockquote>I love Bobcat Dental. They treat me like family and my teeth feel great.</blockquote>
+      <cite>— Birdeye patient review</cite>
+      <div style="margin-top:22px;padding-top:20px;border-top:1px dashed #E8DCC4">
+        <blockquote style="font-size:1.05rem">Great overall experience. Very professional and no pressure to buy other treatments/procedures.</blockquote>
+        <cite>— Birdeye patient review</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block testi" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker" style="color:var(--orange-soft)">Patient reviews</div>
+      <h2>4.9 stars across 315 reviews</h2>
+      <p>Real words from real neighbors — via Birdeye.</p>
+    </div>
+    <div class="slider reveal" id="slider">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Dr. Lucas, Traceey and Mandy are absolutely wonderful! The team is professional, compassionate and will put ill nerves at ease."</blockquote>
+        <cite>— Birdeye review</cite>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My appointment went very smoothly and everyone worked diligently while exhibiting hospitality. I would recommend anyone to Bobcat Dental."</blockquote>
+        <cite>— Birdeye review</cite>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Y'all made me feel so comfortable. I was nervous at first, but that quickly faded away. Thank you for creating such a happy, comfortable environment."</blockquote>
+        <cite>— Birdeye review</cite>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Very prompt, friendly staff and solved my tooth pain."</blockquote>
+        <cite>— Birdeye review</cite>
+      </div>
+    </div>
+    <div class="slider-nav reveal">
+      <button id="prev" aria-label="Previous review">‹</button>
+      <button id="next" aria-label="Next review">›</button>
+    </div>
+    <div class="dots reveal" id="dots"></div>
+    <div class="attr reveal">All quotes via Birdeye · 4.9/315</div>
+  </div>
+</section>
+
+<section class="block" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Service area</div>
+      <h2>Proudly serving the 380 corridor</h2>
+      <p>Conveniently located by Brookshire's in the Celina Town Center — easy to reach from anywhere north of Dallas.</p>
+    </div>
+    <div class="area-grid reveal">
+      <div class="area-card">Celina<small>Home base</small></div>
+      <div class="area-card">Prosper<small>10 min south</small></div>
+      <div class="area-card">Gunter<small>15 min north</small></div>
+      <div class="area-card">Frisco<small>20 min south</small></div>
+      <div class="area-card">McKinney<small>20 min east</small></div>
+      <div class="area-card">Pilot Point<small>15 min west</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Good to know</div>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q">Do you take my insurance? <span class="plus">+</span></button>
+        <div class="faq-a"><p>We work with most major dental plans — and if you don't have insurance, no problem. Call us at (972) 382-2900 and we'll walk through options that fit your budget.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">I'm anxious about dental visits. Can you help? <span class="plus">+</span></button>
+        <div class="faq-a"><p>That's our specialty. We offer sedation dentistry for the entire family, and our reviews are full of nervous patients who now actually look forward to their visits.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you see kids? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — we're a family practice. Many parents book the whole family in one block so it's a single trip.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are your hours? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Mon–Wed 7:00 AM–2:00 PM, Thu 8:00 AM–5:00 PM, Fri 7:00 AM–1:00 PM. Early-morning slots are popular — call ahead to grab yours.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where are you located? <span class="plus">+</span></button>
+        <div class="faq-a"><p>1060 S Preston Rd, Suite 110, Celina, TX 75009 — right by Brookshire's in the Celina Town Center.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="cta-band reveal">
+    <h2 class="serif">Ready for a dental visit worth smiling about?</h2>
+    <p>One call books the whole family. Early-morning appointments available — no insurance? No problem.</p>
+    <a class="btn" href="tel:+19723822900">📞 Call (972) 382-2900</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Bobcat Dental</h4>
+      <p>1060 S Preston Rd, Suite 110<br>Celina, TX 75009</p>
+      <p><a href="tel:+19723822900">📞 (972) 382-2900</a></p>
+      <p><a href="mailto:1bobcatdental@gmail.com">✉️ 1bobcatdental@gmail.com</a></p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul class="foot-hours">
+        <li><span>Mon – Wed</span><span>7:00a – 2:00p</span></li>
+        <li><span>Thursday</span><span>8:00a – 5:00p</span></li>
+        <li><span>Friday</span><span>7:00a – 1:00p</span></li>
+        <li><span>Sat – Sun</span><span>Closed</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Care</h4>
+      <ul>
+        <li>Routine & preventive</li>
+        <li>Implants & crowns</li>
+        <li>Sedation dentistry</li>
+        <li>Whitening & cosmetic</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Bobcat Dental · Celina, TX</span>
+    <span>DEMO PREVIEW — built for review</span>
+  </div>
+</footer>
+
+<div class="mobile-call"><a href="tel:+19723822900">📞 Call Bobcat Dental</a></div>
+
+<script>
+// sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,target=parseFloat(el.dataset.target),dec=parseInt(el.dataset.decimal||0),t0=performance.now(),dur=1400;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),v=target*(1-Math.pow(1-p,3));
+    el.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString();
+    if(p<1)requestAnimationFrame(tick)})(t0);
+}),{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>cio.observe(el));
+// tabs
+document.querySelectorAll('.tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(btn.dataset.tab).classList.add('active');
+}));
+// slider
+const slides=[...document.querySelectorAll('.slide')],dotsBox=document.getElementById('dots');
+let cur=0,timer;
+slides.forEach((_,i)=>{const d=document.createElement('span');d.className='dot-nav'+(i?'':' active');d.onclick=()=>go(i);dotsBox.appendChild(d)});
+const dots=[...dotsBox.children];
+function go(i){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=(i+slides.length)%slides.length;slides[cur].classList.add('active');dots[cur].classList.add('active');restart()}
+function restart(){clearInterval(timer);timer=setInterval(()=>go(cur+1),6000)}
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+restart();
+// faq accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+</script>
+</body>
+</html>
