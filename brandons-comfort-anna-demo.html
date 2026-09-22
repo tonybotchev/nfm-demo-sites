@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandon's Comfort Specialists — Anna & McKinney TX | The Crew Anna Knows by Name</title>
+<meta name="description" content="Brandon's Comfort Specialists, Anna TX. 22 years. AC repair, heating, installs, maintenance. Call (214) 544-3517.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --indigo:#131a3a; --indigo2:#1d2650; --sky:#38bdf8; --skysoft:#e0f2fe;
+    --amber:#f59e0b; --amberdark:#b45309; --bg:#f5f8fc; --ink:#182234; --muted:#5b6a82; --line:#e2eaf3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.arch{font-family:'Archivo',sans-serif;line-height:1.1;letter-spacing:-.01em}
+  a{text-decoration:none}
+
+  .demo-badge{position:fixed;top:12px;right:12px;z-index:200;background:#b3261e;color:#fff;font-size:11px;font-weight:800;letter-spacing:2px;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);text-transform:uppercase}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{font-family:'Archivo';font-weight:900;font-size:21px;color:var(--indigo)}
+  .brand .t1{color:var(--indigo)} .brand .t2{color:#0ea5e9}
+  .nav-links{display:flex;gap:20px}
+  .nav-links a{color:var(--muted);font-size:13px;font-weight:600}
+  .nav-links a:hover{color:var(--indigo)}
+  .nav-call{background:linear-gradient(135deg,#0ea5e9,#0284c7);color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;font-size:15px;white-space:nowrap;box-shadow:0 6px 18px rgba(2,132,199,.35);transition:transform .2s}
+  .nav-call:hover{transform:translateY(-2px)}
+  @media(max-width:800px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{background:radial-gradient(900px 480px at 12% 8%, #25407c 0%, var(--indigo) 60%), var(--indigo);color:#fff;overflow:hidden;position:relative}
+  .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 14s ease-in-out infinite alternate}
+  .b1{width:420px;height:420px;background:#0ea5e9;top:-120px;right:-80px}
+  .b2{width:340px;height:340px;background:#f59e0b;bottom:-140px;left:8%;animation-delay:-6s}
+  @keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,30px) scale(1.12)}}
+  .hero-inner{max-width:1180px;margin:0 auto;padding:96px 22px 100px;position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#eaf4ff;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 18px;border-radius:999px;margin-bottom:22px}
+  .pill .dot2{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}
+  .hero h1{font-size:clamp(40px,6vw,72px);font-weight:900;color:#fff}
+  .hero h1 .hl{background:linear-gradient(90deg,var(--sky),#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{color:#c3d4ea;font-size:18px;margin:20px 0 32px;max-width:560px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:700;padding:16px 32px;border-radius:999px;font-size:16.5px;transition:transform .2s, box-shadow .2s}
+  .btn-sky{background:linear-gradient(135deg,#0ea5e9,#0284c7);color:#fff;box-shadow:0 10px 26px rgba(2,132,199,.4)}
+  .btn-sky:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(2,132,199,.5)}
+  .btn-line{border:2px solid rgba(255,255,255,.35);color:#fff}
+  .btn-line:hover{border-color:var(--amber);color:var(--amber)}
+  .glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:34px;backdrop-filter:blur(8px)}
+  .glass h3{color:#fff;font-size:20px;margin-bottom:18px;font-weight:800}
+  .gstat{display:flex;align-items:center;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .gstat:last-child{border:none}
+  .gstat .n{font-family:'Archivo';font-size:32px;font-weight:900;color:var(--amber);min-width:110px}
+  .gstat .t{color:#d7e4f5;font-size:14.5px}
+
+  /* trust strip */
+  .trust{background:#fff;border-bottom:1px solid var(--line)}
+  .trust-inner{max-width:1180px;margin:0 auto;padding:26px 22px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .tbadge{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-size:13.5px;font-weight:700;color:var(--indigo);display:flex;align-items:center;gap:8px;transition:transform .2s, box-shadow .2s}
+  .tbadge:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(19,26,58,.12)}
+  .tbadge .ico{font-size:17px}
+
+  section.wrap{max-width:1180px;margin:0 auto;padding:84px 22px}
+  .kicker{color:#0284c7;font-weight:800;letter-spacing:3px;font-size:12px;text-transform:uppercase;margin-bottom:10px}
+  h2.sec{font-size:clamp(30px,4.5vw,50px);font-weight:900;color:var(--indigo);margin-bottom:12px}
+  .sec-sub{color:var(--muted);max-width:680px;margin-bottom:40px;font-size:17px}
+
+  /* service cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.cards{grid-template-columns:1fr}}
+  .scard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 28px;position:relative;overflow:hidden;transition:transform .28s, box-shadow .28s;cursor:default}
+  .scard::after{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--sky),#0284c7);opacity:0;transition:opacity .28s}
+  .scard:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(19,26,58,.14)}
+  .scard:hover::after{opacity:1}
+  .scard .e{font-size:40px;margin-bottom:14px;display:block}
+  .scard h3{font-size:21px;font-weight:800;color:var(--indigo);margin-bottom:10px}
+  .scard p{color:var(--muted);font-size:15px}
+  .scard .go{color:#0284c7;font-weight:700;font-size:14px;margin-top:14px;display:inline-block}
+
+  /* tabs (services detail) */
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:44px 0 22px}
+  .tab-btn{font-family:'Archivo';font-weight:700;font-size:14px;padding:12px 24px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--indigo);cursor:pointer;transition:all .25s}
+  .tab-btn.active{background:var(--indigo);color:#fff;border-color:var(--indigo);box-shadow:0 10px 24px rgba(19,26,58,.3)}
+  .tab-panel{display:none;background:#fff;border:1px solid var(--line);border-radius:20px;padding:38px;animation:fadeUp .45s ease}
+  .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  @media(max-width:720px){.tab-panel.active{grid-template-columns:1fr}}
+  .tab-panel h3{font-size:26px;font-weight:800;color:var(--indigo);margin-bottom:10px}
+  .tab-panel p{color:var(--muted);margin-bottom:14px}
+  .tab-panel ul{list-style:none}
+  .tab-panel li{padding:8px 0 8px 30px;position:relative;font-weight:500}
+  .tab-panel li::before{content:"✓";position:absolute;left:0;color:#0284c7;font-weight:800}
+  .tab-visual{background:linear-gradient(135deg,var(--indigo),#2b3a75);border-radius:16px;min-height:230px;display:flex;align-items:center;justify-content:center;font-size:72px}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* crew */
+  .crew{background:var(--indigo);border-radius:26px;padding:60px 40px;color:#fff;position:relative;overflow:hidden}
+  .crew::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,248,.22),transparent 70%);top:-200px;right:-140px}
+  .crew h2{color:#fff;font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:8px;position:relative}
+  .crew .sub{color:#b9c8e2;max-width:620px;margin-bottom:34px;position:relative}
+  .crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative}
+  @media(max-width:800px){.crew-grid{grid-template-columns:1fr}}
+  .person{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:28px;transition:transform .25s, background .25s}
+  .person:hover{transform:translateY(-6px);background:rgba(255,255,255,.11)}
+  .person .av{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--sky),#0284c7);display:flex;align-items:center;justify-content:center;font-family:'Archivo';font-weight:900;font-size:24px;color:#fff;margin-bottom:14px}
+  .person h3{color:#fff;font-size:20px;font-weight:800}
+  .person .role{color:var(--amber);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+  .person p{color:#c3d4ea;font-size:14.5px;font-style:italic}
+
+  /* reviews */
+  .rev-shell{background:#fff;border:1px solid var(--line);border-radius:24px;padding:56px 40px;position:relative;box-shadow:0 18px 50px rgba(19,26,58,.08)}
+  .rev-rate{display:flex;align-items:center;gap:18px;justify-content:center;margin-bottom:30px;flex-wrap:wrap}
+  .rev-rate .big{font-family:'Archivo';font-size:54px;font-weight:900;color:var(--indigo)}
+  .rev-rate .stars{color:var(--amber);font-size:26px;letter-spacing:3px}
+  .rev-rate .cap{color:var(--muted);font-size:13.5px}
+  .slide{display:none;max-width:740px;margin:0 auto;text-align:center;animation:fadeUp .4s ease}
+  .slide.active{display:block}
+  .slide p{font-size:20px;font-style:italic;color:var(--ink);margin-bottom:16px}
+  .slide .who{font-weight:800;color:var(--indigo);font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+  .slide .src{font-size:12.5px;color:var(--muted)}
+  .slider-nav{display:flex;justify-content:center;gap:10px;margin-top:26px}
+  .dot{width:11px;height:11px;border-radius:50%;background:#c9d6e4;border:none;cursor:pointer;transition:all .25s}
+  .dot.active{background:#0284c7;transform:scale(1.35)}
+
+  /* specials */
+  .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:800px){.spec-grid{grid-template-columns:1fr}}
+  .spec{background:linear-gradient(150deg,#fff 0%,var(--skysoft) 100%);border:2px dashed #0284c7;border-radius:20px;padding:34px 28px;text-align:center;transition:transform .25s}
+  .spec:hover{transform:translateY(-6px) rotate(-.5deg)}
+  .spec .price{font-family:'Archivo';font-size:44px;font-weight:900;color:var(--indigo)}
+  .spec .what{font-weight:800;color:#0284c7;letter-spacing:1px;text-transform:uppercase;font-size:13px;margin:6px 0 10px}
+  .spec p{color:var(--muted);font-size:14px}
+  .fine-print{margin-top:16px;color:var(--muted);font-size:12.5px;text-align:center}
+
+  /* faq */
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  .faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 24px;font-family:'Archivo';font-size:17px;font-weight:700;color:var(--indigo);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq-q .plus{color:#0284c7;font-size:26px;font-weight:400;transition:transform .3s}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+  .faq-a p{padding:0 24px 22px}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+  .ccard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:38px;transition:transform .25s, box-shadow .25s}
+  .ccard:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(19,26,58,.12)}
+  .ccard h3{font-size:22px;font-weight:800;color:var(--indigo);margin-bottom:16px}
+  .hours-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-weight:500;font-size:15px}
+  .hours-row:last-child{border:none}
+  .big-phone{font-family:'Archivo';font-size:clamp(28px,5vw,42px);font-weight:900;color:var(--indigo);display:block;margin:10px 0}
+  .big-phone:hover{color:#0284c7}
+
+  .cta-band{background:linear-gradient(120deg,#0ea5e9,#0284c7 60%,#0369a1);border-radius:24px;padding:64px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
+  .cta-band::before{content:"❄";position:absolute;font-size:200px;opacity:.12;right:30px;top:-30px}
+  .cta-band h2{color:#fff;font-size:clamp(30px,5vw,50px);font-weight:900;margin-bottom:12px}
+  .cta-band p{color:#e0f2fe;max-width:560px;margin:0 auto 30px}
+  .btn-white{background:#fff;color:#0369a1}
+  .btn-white:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+
+  .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .area{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:600;color:var(--indigo)}
+
+  footer{background:var(--indigo);color:#9fb0cc;padding:46px 22px 96px}
+  .foot-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px}
+  @media(max-width:720px){.foot-inner{grid-template-columns:1fr}}
+  footer h4{color:#fff;font-family:'Archivo';margin-bottom:12px;font-size:15px;letter-spacing:1px}
+  footer a{color:var(--sky);font-weight:600}
+  .fine{max-width:1180px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:12px}
+
+  .mobile-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:linear-gradient(135deg,#0ea5e9,#0284c7);color:#fff;font-weight:800;text-align:center;padding:16px;font-size:18px;font-family:'Archivo'}
+  @media(max-width:800px){.mobile-call{display:block}}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo Preview</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="t1">BRANDON'S</span> <span class="t2">COMFORT</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#crew">Our Crew</a><a href="#reviews">Reviews</a><a href="#specials">Specials</a><a href="#contact">Contact</a>
+    </div>
+    <a class="nav-call" href="tel:+12145443517">📞 (214) 544-3517</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="pill"><span class="dot2"></span> 24/7 Emergency Service · Anna &amp; McKinney TX</span>
+      <h1>The crew Anna knows <span class="hl">by name.</span></h1>
+      <p class="lead">For 22 years, Brandon's Comfort Specialists has kept North Dallas homes cool in August and warm in January — with techs customers ask for by name and an owner who won't sell you what you don't need.</p>
+      <div class="hero-cta">
+        <a class="btn btn-sky" href="tel:+12145443517">Call (214) 544-3517</a>
+        <a class="btn btn-line" href="#specials">This season's specials</a>
+      </div>
+    </div>
+    <div class="glass">
+      <h3>Why 574 reviewers say 4.8 ★</h3>
+      <div class="gstat"><div class="n"><span data-count="22">0</span> yrs</div><div class="t">Serving North Dallas homes</div></div>
+      <div class="gstat"><div class="n"><span data-count="574">0</span></div><div class="t">Birdeye reviews at 4.8 stars</div></div>
+      <div class="gstat"><div class="n">A+</div><div class="t">Better Business Bureau rating</div></div>
+      <div class="gstat"><div class="n">24/7</div><div class="t">Emergency heating &amp; cooling</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="trust-inner">
+    <span class="tbadge"><span class="ico">✓</span> 22 Years in Business</span>
+    <span class="tbadge"><span class="ico">✓</span> BBB Rating A+</span>
+    <span class="tbadge"><span class="ico">✓</span> NHVAC Certified Member</span>
+    <span class="tbadge"><span class="ico">✓</span> NATE-Certified Technicians</span>
+    <span class="tbadge"><span class="ico">✓</span> Class A Combo License</span>
+  </div>
+</div>
+
+<section class="wrap reveal" id="services">
+  <div class="kicker">What we do</div>
+  <h2 class="sec">Cooling, heating &amp; everything between</h2>
+  <p class="sec-sub">Residential and commercial — repair, replace, or maintain. Honest flat-rate pricing, factory-trained techs.</p>
+  <div class="cards">
+    <div class="scard"><span class="e">❄️</span><h3>AC Repair</h3><p>Fast, accurate diagnostics and same-day repairs when Texas heat won't wait.</p><span class="go">24/7 emergency →</span></div>
+    <div class="scard"><span class="e">🔥</span><h3>Heating &amp; Furnaces</h3><p>Furnace and heat-pump repair, tune-ups, and installs that keep winter quiet.</p><span class="go">Stay warm →</span></div>
+    <div class="scard"><span class="e">🏠</span><h3>New System Installs</h3><p>Right-sized Trane, Carrier, Lennox &amp; more — sold on what you need, never oversold.</p><span class="go">Get sized right →</span></div>
+    <div class="scard"><span class="e">🛡️</span><h3>Maintenance Plans</h3><p>Annual service agreements with priority scheduling — members stay for years.</p><span class="go">Join the plan →</span></div>
+    <div class="scard"><span class="e">🏢</span><h3>Commercial HVAC</h3><p>Same-day commercial service, walk-in coolers to open-air display cases.</p><span class="go">For business →</span></div>
+    <div class="scard"><span class="e">🌬️</span><h3>Indoor Air Quality</h3><p>Filtration and purification options that clean what your family breathes.</p><span class="go">Breathe easier →</span></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="s1">AC Repair</button>
+    <button class="tab-btn" data-tab="s2">New Installs</button>
+    <button class="tab-btn" data-tab="s3">Maintenance Plan</button>
+  </div>
+  <div class="tab-panel active" id="s1">
+    <div>
+      <h3>AC repair that respects your time</h3>
+      <p>Techs arrive on time, diagnose in plain language, and fix it right — 24/7 when the system quits at the worst moment.</p>
+      <ul><li>24/7 emergency dispatch</li><li>Upfront flat-rate pricing</li><li>All major brands serviced</li><li>Factory-trained technicians</li></ul>
+      <div style="margin-top:18px"><a class="btn btn-sky" href="tel:+12145443517">Call for repair</a></div>
+    </div>
+    <div class="tab-visual">❄️</div>
+  </div>
+  <div class="tab-panel" id="s2">
+    <div>
+      <h3>New systems, sized honestly</h3>
+      <p>"We do not oversell or under deliver." Full replacement with NATE-certified installers — and financing options on approved credit.</p>
+      <ul><li>Free replacement consultations</li><li>Right-sized equipment, never upsold</li><li>NATE-certified installation crews</li><li>Financing available (approved credit)</li></ul>
+      <div style="margin-top:18px"><a class="btn btn-sky" href="tel:+12145443517">Get a quote</a></div>
+    </div>
+    <div class="tab-visual">🏠</div>
+  </div>
+  <div class="tab-panel" id="s3">
+    <div>
+      <h3>The maintenance plan members keep for years</h3>
+      <p>One reviewer has been on the plan for years and calls it "a major cost savings." Seasonal tune-ups, priority scheduling, and a system that doesn't surprise you.</p>
+      <ul><li>Seasonal tune-ups</li><li>Priority scheduling</li><li>Repair discounts for members</li><li>Longer equipment life</li></ul>
+      <div style="margin-top:18px"><a class="btn btn-sky" href="tel:+12145443517">Join the plan</a></div>
+    </div>
+    <div class="tab-visual">🛡️</div>
+  </div>
+</section>
+
+<section class="wrap reveal" id="crew">
+  <div class="crew">
+    <div class="kicker" style="color:var(--sky)">The people, not just the company</div>
+    <h2>Techs with first names. An owner with a reputation.</h2>
+    <p class="sub">Our reviews don't just say "good service" — they name the people who showed up. Here's who answers when you call Brandon's.</p>
+    <div class="crew-grid">
+      <div class="person"><div class="av">B</div><h3>Bill</h3><div class="role">Owner</div><p>"He and Bill the owner have helped me find ways to save money and don't push useless and expensive fixes I don't need."</p></div>
+      <div class="person"><div class="av">N</div><h3>Nathan</h3><div class="role">Technician</div><p>"When Nate finds the problem he explains why his diagnosis is correct and in language I understand… texted just to check in after the install."</p></div>
+      <div class="person"><div class="av">T</div><h3>Tee</h3><div class="role">Technician</div><p>"Simple problem that he fixed right away. Great personality and efficient at getting the job done!"</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal" id="reviews">
+  <div class="kicker">574 reasons</div>
+  <h2 class="sec">Rated 4.8 by the people we keep comfortable</h2>
+  <p class="sec-sub">Real reviews, attributed to where they were posted — Birdeye, BestProsInTown, and Cozywise.</p>
+  <div class="rev-shell">
+    <div class="rev-rate">
+      <span class="big">4.8</span>
+      <span class="stars">★★★★★</span>
+      <span class="cap">574 reviews on Birdeye<br>4.8/145 on BestProsInTown · 4.7/208 on Cozywise</span>
+    </div>
+    <div class="slide active">
+      <p>"Brandon's air and especially Nathan their technician have been fantastic! … He and Bill the owner have helped me find ways to save money and don't push useless and expensive fixes I don't need. I have been part of their maintenance program for years which is a major cost savings to me."</p>
+      <div class="who">Birdeye reviewer</div><div class="src">Posted on Birdeye</div>
+    </div>
+    <div class="slide">
+      <p>"Best HVAC Contractor you will find in North TX. Been a customer for almost a decade and never a single issue that was not resolved timely. From the Owners to the Techs they are personable and trustworthy."</p>
+      <div class="who">Birdeye reviewer</div><div class="src">Posted on Birdeye</div>
+    </div>
+    <div class="slide">
+      <p>"Great service from Nathan one of their technicians, very professional, knowledgeable and respectful. Actually had to replace the entire unit and Nathan texted just to check to see if I had any questions after the install. Now that's true service!!"</p>
+      <div class="who">Birdeye reviewer</div><div class="src">Posted on Birdeye</div>
+    </div>
+    <div class="slider-nav"><button class="dot active"></button><button class="dot"></button><button class="dot"></button></div>
+  </div>
+</section>
+
+<section class="wrap reveal" id="specials">
+  <div class="kicker">Limited-time offers</div>
+  <h2 class="sec">This season's specials</h2>
+  <p class="sec-sub">Call for details — offers change with the season.</p>
+  <div class="spec-grid">
+    <div class="spec"><div class="price">$79</div><div class="what">Complete System Inspection</div><p>Full heating &amp; cooling inspection — catch small problems before they become big ones.</p></div>
+    <div class="spec"><div class="price">$99</div><div class="what">Efficiency Tune-Up</div><p>Ensure system efficiency and save money year-round with a professional tune-up.</p></div>
+    <div class="spec"><div class="price">Up to $3,000</div><div class="what">Oncor Efficiency Savings</div><p>Oncor's Home Efficiency Program savings on qualifying system upgrades.</p></div>
+  </div>
+  <p class="fine-print">Specials as listed on our current site — call (214) 544-3517 for today's details. Plus tax where applicable; financing with approved credit.</p>
+</section>
+
+<section class="wrap reveal">
+  <div class="kicker">Good to know</div>
+  <h2 class="sec">Questions, answered</h2>
+  <div style="max-width:800px;margin-top:26px">
+    <div class="faq-item"><button class="faq-q">Do you offer emergency service? <span class="plus">+</span></button><div class="faq-a"><p>Yes — 24/7 emergency heating and air conditioning service. When your system quits at 2 AM in August, we answer.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Which brands do you service? <span class="plus">+</span></button><div class="faq-a"><p>All major residential and commercial brands — our EPA-certified, factory-trained technicians work on systems of all sizes.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do you work on commercial systems? <span class="plus">+</span></button><div class="faq-a"><p>Yes — same-day commercial HVAC service, from rooftop units to walk-in coolers and open-air display cases.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How does the maintenance plan work? <span class="plus">+</span></button><div class="faq-a"><p>Annual service agreements with seasonal tune-ups and priority scheduling. Call (214) 544-3517 and we'll walk you through it.</p></div></div>
+  </div>
+</section>
+
+<section class="wrap reveal" id="contact">
+  <div class="contact-grid">
+    <div class="ccard">
+      <h3>Visit or call</h3>
+      <a class="big-phone" href="tel:+12145443517">(214) 544-3517</a>
+      <p style="color:var(--muted)">801 County Road 286, Suite 601<br>Anna, TX 75409</p>
+      <p style="margin-top:12px;color:var(--muted);font-size:14px">Email: <a href="mailto:information@brandonsac.com" style="color:#0284c7;font-weight:600">information@brandonsac.com</a></p>
+      <div class="areas">
+        <span class="area">Anna</span><span class="area">McKinney</span><span class="area">Celina</span><span class="area">Prosper</span><span class="area">Melissa</span><span class="area">Frisco</span><span class="area">Van Alstyne</span><span class="area">+ North Dallas region</span>
+      </div>
+    </div>
+    <div class="ccard">
+      <h3>Hours</h3>
+      <div class="hours-row"><span>Monday – Friday</span><span>7:00 AM – 5:00 PM</span></div>
+      <div class="hours-row"><span>Saturday</span><span>7:00 AM – 7:00 PM</span></div>
+      <div class="hours-row"><span>Sunday</span><span>7:00 AM – 7:00 PM</span></div>
+      <p style="margin-top:16px;color:var(--muted);font-size:14px">24/7 emergency service — the phone is always answered.</p>
+      <a class="btn btn-sky" href="tel:+12145443517" style="margin-top:14px">Tap to call now</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap reveal">
+  <div class="cta-band">
+    <div class="kicker" style="color:#e0f2fe">22 years · 574 reviews · one honest crew</div>
+    <h2>Comfort shouldn't be a gamble.</h2>
+    <p>Call the crew Anna knows by name — and get it fixed right the first time.</p>
+    <a class="btn btn-white" href="tel:+12145443517">Call (214) 544-3517</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div><h4>BRANDON'S COMFORT SPECIALISTS</h4><p>801 County Road 286, Suite 601<br>Anna, TX 75409</p></div>
+    <div><h4>Contact</h4><p><a href="tel:+12145443517">(214) 544-3517</a><br><a href="mailto:information@brandonsac.com">information@brandonsac.com</a><br>Mon–Fri 7 AM–5 PM · Sat–Sun 7 AM–7 PM</p></div>
+    <div><h4>Credentials</h4><p>22 years in business · BBB rating A+<br>NHVAC certified member · NATE-certified techs</p></div>
+  </div>
+  <div class="fine">© 2026 Brandon's Comfort Specialists, Anna TX. Reviews quoted with attribution to Birdeye, BestProsInTown, and Cozywise. Specials per current site — call for details.</div>
+</footer>
+
+<a class="mobile-call" href="tel:+12145443517">📞 CALL NOW — (214) 544-3517</a>
+
+<script>
+  // tabs
+  document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.getElementById(b.dataset.tab).classList.add('active');
+  }));
+  // slider
+  const slides=[...document.querySelectorAll('.slide')],dots=[...document.querySelectorAll('.dot')];
+  let cur=0;
+  function go(i){cur=(i+slides.length)%slides.length;slides.forEach((s,k)=>s.classList.toggle('active',k===cur));dots.forEach((d,k)=>d.classList.toggle('active',k===cur));}
+  dots.forEach((d,k)=>d.onclick=()=>go(k));
+  setInterval(()=>go(cur+1),7000);
+  // faq
+  document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+    const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  }));
+  // counters
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+    const el=e.target,end=parseFloat(el.dataset.count),t0=performance.now(),dur=1400;
+    (function tick(t){const p=Math.min((t-t0)/dur,1),v=end*(1-Math.pow(1-p,3));el.textContent=Math.round(v);if(p<1)requestAnimationFrame(tick);})(t0);
+  }),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+  // reveal
+  const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io2.observe(el));
+</script>
+</body>
+</html>
