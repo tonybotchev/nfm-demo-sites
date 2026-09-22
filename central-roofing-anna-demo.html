@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central Roofing, Inc. | Anna, TX Roofer Since 1991 — Demo Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#232a33;--slate2:#2e3742;--rust:#b4552d;--rust2:#d97545;--sand:#f4ede3;--cream:#faf6ee;--white:#fff;--ink:#242b34;--mut:#66707c}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Bitter',serif}
+.demo-badge{position:fixed;top:14px;right:-44px;transform:rotate(35deg);background:#c0392b;color:#fff;font:800 12px 'Inter';letter-spacing:2px;padding:8px 50px;z-index:2000;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+/* NAV */
+nav{position:sticky;top:0;z-index:1000;background:#1b2129;border-bottom:4px solid var(--rust)}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:13px 20px}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;text-decoration:none}
+.brand-mark{width:46px;height:46px;background:var(--rust);clip-path:polygon(50% 0,100% 42%,100% 100%,0 100%,0 42%);display:flex;align-items:flex-end;justify-content:center;color:#fff;font:800 15px 'Bitter';padding-bottom:7px}
+.brand b{font:800 18px 'Bitter'}
+.brand small{display:block;font:600 10px 'Inter';letter-spacing:3px;color:var(--rust2)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:#d8dee6;text-decoration:none;font:600 14px 'Inter'}
+.nav-links a:hover{color:var(--rust2)}
+.nav-call{background:var(--rust);color:#fff!important;text-decoration:none;font:700 15px 'Inter';padding:11px 22px;border-radius:6px;transition:.2s}
+.nav-call:hover{background:var(--rust2);transform:translateY(-2px)}
+@media(max-width:840px){.nav-links{display:none}}
+/* HERO with roofline */
+.hero{background:linear-gradient(160deg,#1b2129 0%,#2c3540 60%,#39434f 100%);color:#fff;padding:90px 20px 0;position:relative}
+.hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-bottom:70px}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.est{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--rust2);color:var(--rust2);font:700 13px 'Inter';letter-spacing:2px;padding:9px 18px;border-radius:4px;margin-bottom:24px}
+.est .star{color:var(--rust2)}
+.hero h1{font-size:clamp(36px,5vw,58px);font-weight:800;line-height:1.12}
+.hero h1 em{color:var(--rust2);font-style:normal}
+.hero p.lede{color:#b9c2cd;font-size:18px;margin:22px 0 32px;max-width:540px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.btn-call{background:var(--rust);color:#fff;text-decoration:none;font:700 17px 'Inter';padding:16px 34px;border-radius:6px;display:inline-flex;gap:10px;align-items:center;transition:.2s;box-shadow:0 8px 24px rgba(180,85,45,.4)}
+.btn-call:hover{background:var(--rust2);transform:translateY(-3px)}
+.btn-ghost{border:2px solid #5a6675;color:#e4e9ef;text-decoration:none;font:600 16px 'Inter';padding:15px 30px;border-radius:6px}
+.btn-ghost:hover{border-color:var(--rust2);color:#fff}
+.hero-facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px}
+.hfact b{font:800 30px 'Bitter';color:#fff;display:block}
+.hfact span{color:#93a0ae;font:600 12px 'Inter';letter-spacing:1.5px;text-transform:uppercase}
+/* Roofline art */
+.roof-art{position:relative;height:340px}
+.roof-art .house{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);width:340px;max-width:90%}
+.roof-art .sun{position:absolute;top:20px;right:24px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,var(--rust2),var(--rust));box-shadow:0 0 60px rgba(217,117,69,.55);animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 90px rgba(217,117,69,.8)}}
+.roofline{height:120px;background:var(--cream);clip-path:polygon(0 100%,0 55%,50% 0,100% 55%,100% 100%);margin-top:-2px}
+/* HERITAGE strip */
+.heritage{background:var(--cream);padding:60px 20px 30px}
+.heritage .wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center}
+@media(max-width:760px){.heritage .wrap{grid-template-columns:1fr}}
+.big-year{font:800 clamp(90px,12vw,150px)/1 'Bitter';color:var(--rust);opacity:.9}
+.heritage h2{font-size:clamp(26px,3vw,36px);margin-bottom:12px}
+.heritage p{color:var(--mut);font-size:17px;max-width:640px}
+/* PROCESS timeline */
+section{padding:80px 20px}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-kicker{color:var(--rust);font:700 13px 'Inter';letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.sec-title{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin-bottom:16px}
+.sec-sub{color:var(--mut);font-size:17px;max-width:680px;margin-bottom:44px}
+.timeline{position:relative;max-width:860px;margin:0 auto;padding-left:46px}
+.timeline::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:4px;background:linear-gradient(var(--rust),var(--rust2));border-radius:2px}
+.tstep{position:relative;background:#fff;border-radius:14px;padding:28px 30px;margin-bottom:22px;box-shadow:0 10px 30px rgba(35,42,51,.08);transition:.25s}
+.tstep:hover{transform:translateX(8px);box-shadow:0 16px 40px rgba(180,85,45,.15)}
+.tstep::before{content:attr(data-n);position:absolute;left:-46px;top:24px;width:34px;height:34px;background:var(--rust);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 15px 'Bitter';box-shadow:0 0 0 6px var(--cream)}
+.tstep h3{font-size:21px;margin-bottom:8px}
+.tstep p{color:var(--mut)}
+.tstep .call-link{color:var(--rust);font-weight:700}
+/* SERVICES tabs */
+.svc{background:var(--slate);color:#fff}
+.svc .sec-sub{color:#a7b1bd}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{background:transparent;border:2px solid #4a5563;color:#dfe5ec;font:700 15px 'Bitter';padding:13px 24px;border-radius:6px;cursor:pointer;transition:.2s}
+.tab.active{background:var(--rust);border-color:var(--rust);color:#fff}
+.tab:hover{border-color:var(--rust2)}
+.tab-panels{background:#1b2129;border:1px solid #3a4552;border-radius:16px;padding:42px;min-height:260px}
+@media(max-width:640px){.tab-panels{padding:26px 20px}}
+.tab-panel{display:none;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.tab-panel.active{display:grid;animation:fadeUp .45s ease}
+@media(max-width:760px){.tab-panel.active{grid-template-columns:1fr}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-size:25px;margin-bottom:12px;color:#fff}
+.tab-panel p{color:#a7b1bd;margin-bottom:16px}
+.tab-panel ul{list-style:none}
+.tab-panel li{padding:8px 0 8px 30px;position:relative;color:#dfe5ec}
+.tab-panel li::before{content:"◆";position:absolute;left:0;color:var(--rust2);font-size:12px;top:12px}
+.shingle-art{height:210px;border-radius:12px;background:repeating-linear-gradient(0deg,#2c3540 0 26px,#232a33 26px 30px);border:1px solid #3a4552;position:relative;overflow:hidden}
+.shingle-art::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 54px,rgba(217,117,69,.25) 54px 58px)}
+.shingle-art span{position:absolute;bottom:14px;left:18px;color:var(--rust2);font:700 14px 'Bitter';letter-spacing:1px}
+/* STORM band */
+.storm{background:linear-gradient(120deg,#3a2b22,#241a13);color:#fff;text-align:center;padding:74px 20px;position:relative;overflow:hidden}
+.storm::before{content:"⛈";position:absolute;font-size:200px;opacity:.07;right:40px;top:10px}
+.storm h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:14px}
+.storm h2 em{color:var(--rust2);font-style:normal}
+.storm p{color:#d8c9b8;font-size:18px;max-width:640px;margin:0 auto 30px}
+/* AREAS */
+.town-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:10px}
+.town{background:#fff;border:2px solid #e6ddcd;font:700 14px 'Bitter';padding:14px;border-radius:8px;text-align:center;transition:.2s}
+.town:hover{border-color:var(--rust);transform:translateY(-3px);box-shadow:0 10px 22px rgba(180,85,45,.16)}
+.town.home{background:var(--rust);color:#fff;border-color:var(--rust)}
+/* FAQ */
+.faq-item{background:#fff;border:1px solid #e6ddcd;border-radius:10px;margin-bottom:14px;overflow:hidden}
+.faq-item.open{border-color:var(--rust)}
+.faq-q{width:100%;background:none;border:none;text-align:left;font:700 17px 'Bitter';padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+.faq-q .pm{color:var(--rust);font-size:24px;transition:.25s}
+.faq-item.open .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 26px 24px;color:var(--mut)}
+/* FOOTER */
+footer{background:#141a21;color:#8b95a2;padding:56px 20px 30px}
+.foot-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+footer h4{color:#fff;font:800 16px 'Bitter';margin-bottom:16px}
+footer a{color:#c3ccd6;text-decoration:none}
+footer a:hover{color:var(--rust2)}
+footer p,footer li{font-size:15px;margin-bottom:8px;list-style:none}
+.foot-bottom{max-width:1180px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;text-align:center}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--rust);color:#fff;text-align:center;font:700 18px 'Inter';padding:17px;text-decoration:none}
+@media(max-width:840px){.sticky-call{display:block}body{padding-bottom:62px}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.count{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark">CR</span><span><b>Central Roofing, Inc.</b><small>ANNA · TEXAS · EST. 1991</small></span></a>
+    <ul class="nav-links">
+      <li><a href="#process">Our Process</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#areas">Service Area</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-call" href="tel:+12143490202">📞 (214) 349-0202</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="est"><span class="star">★</span> ROOFING ANNA, TEXAS SINCE 1991</span>
+      <h1>Three Decades of Roofs Built <em>to Outlast Texas Weather.</em></h1>
+      <p class="lede">Central Roofing has been Anna's hometown roofing contractor since 1991 — roof replacement, repair, gutters, and honest inspections from folks who live where you live.</p>
+      <div class="cta-row">
+        <a class="btn-call" href="tel:+12143490202">📞 Call (214) 349-0202</a>
+        <a class="btn-ghost" href="#process">How We Work</a>
+      </div>
+      <div class="hero-facts">
+        <div class="hfact"><b><span class="count" data-to="33">0</span>+</b><span>Years in Anna</span></div>
+        <div class="hfact"><b><span class="count" data-to="5">0</span></b><span>Roofing Services</span></div>
+        <div class="hfact"><b>1991</b><span>Serving Since</span></div>
+      </div>
+    </div>
+    <div class="roof-art">
+      <div class="sun"></div>
+      <svg class="house" viewBox="0 0 340 260">
+        <polygon points="170,20 320,120 300,120 300,240 40,240 40,120 20,120" fill="#2e3742" stroke="#d97545" stroke-width="5"/>
+        <rect x="140" y="160" width="60" height="80" fill="#1b2129" stroke="#d97545" stroke-width="4"/>
+        <rect x="70" y="150" width="44" height="40" fill="#d97545" opacity=".85"/>
+        <rect x="226" y="150" width="44" height="40" fill="#d97545" opacity=".85"/>
+        <line x1="170" y1="20" x2="170" y2="120" stroke="#d97545" stroke-width="3" opacity=".5"/>
+        <line x1="95" y1="70" x2="245" y2="70" stroke="#d97545" stroke-width="2" opacity=".35"/>
+        <line x1="60" y1="95" x2="280" y2="95" stroke="#d97545" stroke-width="2" opacity=".25"/>
+      </svg>
+    </div>
+  </div>
+  <div class="roofline"></div>
+</header>
+
+<div class="heritage">
+  <div class="wrap">
+    <div class="big-year rv">1991</div>
+    <div class="rv">
+      <div class="sec-kicker">Rooted in Anna</div>
+      <h2>A Contractor Your Neighbors Have Known for Generations</h2>
+      <p>Central Roofing — also known locally as Central Company — has worked Anna and Collin County roofs since 1991. No storm-chaser trucks, no out-of-state crews. Just a local general contractor that's been here longer than most of the subdivisions.</p>
+    </div>
+  </div>
+</div>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-kicker rv">How we work</div>
+    <h2 class="sec-title rv">From First Call to Final Shingle</h2>
+    <p class="sec-sub rv">A straightforward process, honed over 30+ years of Texas roofs.</p>
+    <div class="timeline">
+      <div class="tstep rv" data-n="1"><h3>Call &amp; Inspection</h3><p>Call <a class="call-link" href="tel:+12143490202">(214) 349-0202</a>. We come out, walk the roof, and tell you exactly what we see — repair, replacement, or nothing at all.</p></div>
+      <div class="tstep rv" data-n="2"><h3>Straightforward Quote</h3><p>One clear price for the whole job. Materials, labor, timeline — in writing, in plain English.</p></div>
+      <div class="tstep rv" data-n="3"><h3>Professional Installation</h3><p>Our crews install to manufacturer standards with a clean jobsite every single day. Most homes finished in days, not weeks.</p></div>
+      <div class="tstep rv" data-n="4"><h3>Final Walkthrough</h3><p>We walk the finished roof with you, answer every question, and make sure you're satisfied before we call it done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="sec-kicker rv">Services</div>
+    <h2 class="sec-title rv" style="color:#fff">Roofs, Gutters &amp; Everything Overhead</h2>
+    <p class="sec-sub rv">Full-service roofing for Anna and Collin County homes.</p>
+    <div class="tabs rv">
+      <button class="tab active" data-t="s0">Roof Replacement</button>
+      <button class="tab" data-t="s1">Roof Repair</button>
+      <button class="tab" data-t="s2">Metal Roofing</button>
+      <button class="tab" data-t="s3">Gutters</button>
+      <button class="tab" data-t="s4">Inspections</button>
+    </div>
+    <div class="tab-panels rv">
+      <div class="tab-panel active" id="s0">
+        <div><h3>Roof Replacement</h3><p>Asphalt shingle, tile, and slate-look systems installed to handle North Texas hail, wind, and heat. We help you pick the right material for your home and budget.</p><ul><li>Asphalt shingle systems</li><li>Tile &amp; slate-look options</li><li>Clean, fast jobsite</li></ul><br><a class="btn-call" href="tel:+12143490202">Get a Quote</a></div>
+        <div class="shingle-art"><span>ARCHITECTURAL SHINGLE</span></div>
+      </div>
+      <div class="tab-panel" id="s1">
+        <div><h3>Roof Repair</h3><p>Leaks, missing shingles, storm damage, flashing failures — we find the source and fix it right, with an honest word on whether repair is enough.</p><ul><li>Leak detection &amp; repair</li><li>Storm &amp; hail damage</li><li>Flashing &amp; vent fixes</li></ul><br><a class="btn-call" href="tel:+12143490202">Request Repair</a></div>
+        <div class="shingle-art"><span>LEAK &amp; STORM REPAIR</span></div>
+      </div>
+      <div class="tab-panel" id="s2">
+        <div><h3>Metal Roofing</h3><p>Standing-seam and metal systems that shrug off hail and last decades. A smart long-term play for Texas homes.</p><ul><li>Standing-seam metal</li><li>Hail-resistant profiles</li><li>Energy-efficient finishes</li></ul><br><a class="btn-call" href="tel:+12143490202">Ask About Metal</a></div>
+        <div class="shingle-art"><span>STANDING-SEAM METAL</span></div>
+      </div>
+      <div class="tab-panel" id="s3">
+        <div><h3>Roofing &amp; Gutters</h3><p>A roof is only as good as its drainage. We install and service gutters that move Texas downpours away from your foundation.</p><ul><li>Seamless gutter installation</li><li>Gutter repair &amp; cleaning guidance</li><li>Downspout placement</li></ul><br><a class="btn-call" href="tel:+12143490202">Talk Gutters</a></div>
+        <div class="shingle-art"><span>SEAMLESS GUTTERS</span></div>
+      </div>
+      <div class="tab-panel" id="s4">
+        <div><h3>Roof Inspections</h3><p>Buying, selling, or just wondering how many years are left? A thorough inspection with straight answers — no scare tactics.</p><ul><li>Full roof condition reports</li><li>Pre-purchase inspections</li><li>Maintenance planning</li></ul><br><a class="btn-call" href="tel:+12143490202">Book an Inspection</a></div>
+        <div class="shingle-art"><span>THOROUGH INSPECTIONS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="storm">
+  <div class="wrap">
+    <h2 class="rv">Hail Hit Anna <em>Again?</em></h2>
+    <p class="rv">North Texas storms don't schedule appointments. When hail or wind damages your roof, call a contractor who's been here since 1991 — not a truck that rolled in yesterday.</p>
+    <a class="btn-call rv" href="tel:+12143490202">📞 (214) 349-0202 — Call Now</a>
+  </div>
+</div>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="sec-kicker rv">Service area</div>
+    <h2 class="sec-title rv">Based in Anna. Trusted Across Collin County.</h2>
+    <p class="sec-sub rv">3542 County Road 177, Anna TX — our home turf.</p>
+    <div class="town-grid rv">
+      <div class="town home">📍 Anna</div><div class="town">Melissa</div><div class="town">Celina</div><div class="town">McKinney</div><div class="town">Frisco</div><div class="town">Prosper</div><div class="town">Allen</div><div class="town">Blue Ridge</div><div class="town">Farmersville</div><div class="town">Weston</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:#f1eadd">
+  <div class="wrap" style="max-width:840px">
+    <div class="sec-kicker rv">Good to know</div>
+    <h2 class="sec-title rv">Common Questions</h2>
+    <div class="rv" style="margin-top:30px">
+      <div class="faq-item"><button class="faq-q">How do I know if I need repair or replacement?<span class="pm">+</span></button><div class="faq-a"><p>Age, visible damage, and leaks tell most of the story — but the sure way is an inspection. We'll walk your roof and give you a straight answer, including when the honest answer is "you're fine for now." Call <a href="tel:+12143490202">(214) 349-0202</a>.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you handle storm and hail damage?<span class="pm">+</span></button><div class="faq-a"><p>Yes — hail and wind repair is core to what we do in North Texas. We'll document the damage clearly so you know exactly what you're dealing with.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How long does a roof replacement take?<span class="pm">+</span></button><div class="faq-a"><p>Most Anna-area homes are completed in a matter of days. We'll give you a clear timeline in writing before work begins.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What roofing materials do you install?<span class="pm">+</span></button><div class="faq-a"><p>Asphalt shingles, metal roofing, tile and slate-look systems, plus gutters — matched to your home, your budget, and Texas weather.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are you really local to Anna?<span class="pm">+</span></button><div class="faq-a"><p>Yes — based at 3542 County Road 177 in Anna, roofing this area since 1991. When you call, you reach people who live here.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="storm" style="background:linear-gradient(120deg,var(--rust),#8f3f1e)">
+  <div class="wrap">
+    <h2 class="rv">Your Roof Protects Everything Under It.</h2>
+    <p class="rv" style="color:#ffe9d9">Trust it to the contractor Anna has trusted since 1991.</p>
+    <a class="btn-call rv" style="background:#fff;color:#8f3f1e" href="tel:+12143490202">📞 Call (214) 349-0202</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div><h4>Central Roofing, Inc.</h4><p>Anna, Texas roofing contractor since 1991.<br>Roof replacement, repair, metal roofing, gutters &amp; inspections.</p></div>
+    <div><h4>Contact</h4><ul><li>📍 3542 County Road 177<br>&nbsp;&nbsp;&nbsp;&nbsp;Anna, TX 75409</li><li>📞 <a href="tel:+12143490202">(214) 349-0202</a></li></ul></div>
+    <div><h4>Hours</h4><ul><li>Call for hours &amp; scheduling</li></ul></div>
+  </div>
+  <div class="foot-bottom">© 2026 Central Roofing, Inc. · Anna, TX · Demo preview built by NoFluff Marketing</div>
+</footer>
+
+<a class="sticky-call" href="tel:+12143490202">📞 Tap to Call (214) 349-0202</a>
+
+<script>
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');document.getElementById(t.dataset.t).classList.add('active');
+}));
+document.querySelectorAll('.faq-item').forEach(it=>{const q=it.querySelector('.faq-q'),a=it.querySelector('.faq-a');q.addEventListener('click',()=>{const open=it.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('open');x.querySelector('.faq-a').style.maxHeight=null;});if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}});});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.to;let s=0;const step=Math.max(1,Math.round(to/50));const t=setInterval(()=>{s+=step;if(s>=to){s=to;clearInterval(t);}el.textContent=s;},30);cio.unobserve(el);}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+</script>
+</body>
+</html>
