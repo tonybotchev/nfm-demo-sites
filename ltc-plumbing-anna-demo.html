@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LTC Plumbing — Anna, TX | Ask for Larry</title>
+<meta name="description" content="LTC Plumbing, Anna Texas. Owner-operator Larry Montgomery. Licensed Master Plumber. Call (972) 658-0719.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1f33; --navy2:#10293f; --copper:#c98434; --copper2:#e0a458;
+    --cream:#f7f2e9; --ink:#1d2733; --muted:#5c6b7a; --line:#e4dccb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.oswald{font-family:'Oswald',sans-serif;letter-spacing:.01em;line-height:1.12}
+  img{max-width:100%;display:block}
+  a{text-decoration:none}
+
+  /* DEMO badge */
+  .demo-badge{position:fixed;top:12px;right:12px;z-index:200;background:#b3261e;color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;padding:8px 14px;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.35);text-transform:uppercase}
+
+  /* sticky nav */
+  nav{position:sticky;top:0;z-index:100;background:rgba(11,31,51,.96);backdrop-filter:blur(6px);border-bottom:3px solid var(--copper)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{color:#fff;font-family:'Oswald';font-size:24px;font-weight:700;letter-spacing:1px}
+  .brand span{color:var(--copper2)}
+  .nav-links{display:flex;gap:22px}
+  .nav-links a{color:#dfe7ef;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+  .nav-links a:hover{color:var(--copper2)}
+  .nav-call{background:var(--copper);color:#10212f;font-weight:700;padding:10px 20px;border-radius:6px;font-size:15px;white-space:nowrap;transition:transform .2s, box-shadow .2s}
+  .nav-call:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,132,52,.45)}
+  @media(max-width:760px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{background:radial-gradient(1200px 600px at 80% -10%, #16395c 0%, var(--navy) 55%) , var(--navy);color:#fff;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 26px,rgba(201,132,52,.05) 26px 28px);pointer-events:none}
+  .hero-inner{max-width:1140px;margin:0 auto;padding:84px 20px 90px;position:relative;z-index:2}
+  .eyebrow{display:inline-block;background:rgba(201,132,52,.16);border:1px solid var(--copper);color:var(--copper2);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:8px 16px;border-radius:30px;margin-bottom:22px}
+  .hero h1{font-size:clamp(42px,7vw,86px);font-weight:700;color:#fff;text-transform:uppercase}
+  .hero h1 em{font-style:normal;color:var(--copper2)}
+  .hero p.lead{max-width:620px;color:#c6d2de;font-size:19px;margin:20px 0 30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:700;padding:16px 32px;border-radius:8px;font-size:17px;transition:transform .2s, box-shadow .2s}
+  .btn-copper{background:var(--copper);color:#10212f}
+  .btn-copper:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(201,132,52,.5)}
+  .btn-ghost{border:2px solid #5c7488;color:#dfe7ef}
+  .btn-ghost:hover{border-color:var(--copper2);color:var(--copper2)}
+  .hero-chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+  .chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#eaf0f6;font-size:13px;font-weight:600;padding:9px 16px;border-radius:30px}
+  .chip b{color:var(--copper2)}
+
+  /* stats band */
+  .stats{background:var(--copper);color:#10212f}
+  .stats-inner{max-width:1140px;margin:0 auto;padding:34px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+  .stat .num{font-family:'Oswald';font-size:44px;font-weight:700}
+  .stat .lbl{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+  @media(max-width:640px){.stats-inner{grid-template-columns:repeat(2,1fr)}}
+
+  /* sections */
+  section.block{max-width:1140px;margin:0 auto;padding:80px 20px}
+  .kicker{color:var(--copper);font-weight:700;letter-spacing:3px;font-size:12px;text-transform:uppercase;margin-bottom:10px}
+  h2.sec{font-size:clamp(30px,4.5vw,48px);text-transform:uppercase;margin-bottom:14px;color:var(--navy)}
+  .sec-sub{color:var(--muted);max-width:680px;margin-bottom:36px;font-size:17px}
+
+  /* service tabs */
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .tab-btn{font-family:'Oswald';font-size:15px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 22px;border-radius:30px;border:2px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;transition:all .25s}
+  .tab-btn:hover{border-color:var(--copper)}
+  .tab-btn.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(11,31,51,.3)}
+  .tab-panels{position:relative}
+  .tab-panel{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px;box-shadow:0 14px 40px rgba(11,31,51,.08)}
+  .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;animation:fadeUp .45s ease}
+  @media(max-width:720px){.tab-panel.active{grid-template-columns:1fr}}
+  .tab-panel h3{font-size:26px;color:var(--navy);margin-bottom:10px;text-transform:uppercase}
+  .tab-panel p{color:var(--muted);margin-bottom:16px}
+  .tab-panel ul{list-style:none}
+  .tab-panel li{padding:8px 0 8px 30px;position:relative;font-weight:500}
+  .tab-panel li::before{content:"✓";position:absolute;left:0;color:var(--copper);font-weight:800}
+  .tab-art{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:12px;min-height:220px;display:flex;align-items:center;justify-content:center;color:var(--copper2);font-family:'Oswald';font-size:64px;font-weight:700;letter-spacing:2px}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* reviews slider */
+  .reviews-wrap{background:var(--navy);border-radius:18px;padding:56px 34px;color:#fff;position:relative;overflow:hidden}
+  .reviews-wrap::before{content:"“";position:absolute;top:-30px;left:30px;font-size:220px;color:rgba(201,132,52,.14);font-family:Georgia,serif}
+  .slide{display:none;max-width:760px;margin:0 auto;text-align:center;animation:fadeUp .4s ease}
+  .slide.active{display:block}
+  .slide .stars{color:var(--copper2);font-size:22px;letter-spacing:4px;margin-bottom:14px}
+  .slide p{font-size:21px;font-style:italic;color:#eef3f7;margin-bottom:18px}
+  .slide .who{font-weight:700;color:var(--copper2);letter-spacing:1px;font-size:13px;text-transform:uppercase}
+  .slide .src{font-size:12px;color:#93a4b3}
+  .slider-nav{display:flex;justify-content:center;gap:12px;margin-top:28px}
+  .dot{width:12px;height:12px;border-radius:50%;background:#3c556b;border:none;cursor:pointer;transition:all .25s}
+  .dot.active{background:var(--copper2);transform:scale(1.3)}
+  .arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:20px;transition:all .25s}
+  .arr:hover{background:var(--copper);border-color:var(--copper);color:#10212f}
+  .arr.prev{left:16px}.arr.next{right:16px}
+  @media(max-width:640px){.arr{display:none}}
+
+  /* owner story */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:800px){.story{grid-template-columns:1fr}}
+  .story-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:0 16px 44px rgba(11,31,51,.1);position:relative}
+  .story-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--copper),var(--copper2));border-radius:16px 16px 0 0}
+  .story-card h3{font-size:30px;color:var(--navy);text-transform:uppercase;margin-bottom:14px}
+  .story-card p{color:var(--muted);margin-bottom:14px}
+  .sig{font-family:'Oswald';font-size:22px;color:var(--copper);margin-top:8px}
+  .story-list{background:var(--navy);color:#eaf0f6;border-radius:16px;padding:40px}
+  .story-list h3{color:#fff;font-size:24px;text-transform:uppercase;margin-bottom:18px}
+  .story-list .item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .story-list .item:last-child{border:none}
+  .story-list .ic{background:var(--copper);color:#10212f;font-family:'Oswald';font-weight:700;width:42px;height:42px;flex:0 0 42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+  .story-list b{color:#fff}
+
+  /* hours + contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:38px;transition:transform .25s, box-shadow .25s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(11,31,51,.14)}
+  .card h3{font-size:24px;color:var(--navy);text-transform:uppercase;margin-bottom:16px}
+  .hours-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-weight:500}
+  .hours-row:last-child{border:none}
+  .closed{color:#b3261e;font-weight:700}
+  .big-phone{font-family:'Oswald';font-size:clamp(28px,5vw,44px);color:var(--navy);font-weight:700;display:block;margin:12px 0}
+  .big-phone:hover{color:var(--copper)}
+
+  /* FAQ */
+  .faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 24px;font-family:'Oswald';font-size:18px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .faq-q .plus{color:var(--copper);font-size:26px;font-weight:400;transition:transform .3s}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+  .faq-a p{padding:0 24px 22px}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg)}
+
+  /* cta band */
+  .cta-band{background:linear-gradient(120deg,var(--navy) 0%,#1b3a5c 100%);border-radius:20px;padding:60px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
+  .cta-band h2{color:#fff;font-size:clamp(30px,5vw,52px);text-transform:uppercase;margin-bottom:12px}
+  .cta-band p{color:#c6d2de;max-width:560px;margin:0 auto 30px}
+
+  footer{background:#081627;color:#9db0c2;padding:44px 20px 90px}
+  .foot-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px}
+  @media(max-width:720px){.foot-inner{grid-template-columns:1fr}}
+  footer h4{color:#fff;font-family:'Oswald';letter-spacing:1px;margin-bottom:12px;font-size:16px}
+  footer a{color:var(--copper2);font-weight:600}
+  .fine{max-width:1140px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12px}
+
+  /* sticky mobile call */
+  .mobile-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--copper);color:#10212f;font-weight:800;text-align:center;padding:16px;font-size:18px;font-family:'Oswald';letter-spacing:1px}
+  @media(max-width:760px){.mobile-call{display:block}}
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo Preview</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">LTC <span>PLUMBING</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#larry">Ask for Larry</a><a href="#hours">Hours</a>
+    </div>
+    <a class="nav-call" href="tel:+19726580719">📞 (972) 658-0719</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <span class="eyebrow">Anna, Texas · Owner-Operated</span>
+    <h1>Anna's plumber.<br><em>Ask for Larry.</em></h1>
+    <p class="lead">LTC Plumbing is a one-man-band done right: Larry Montgomery, a licensed Master Plumber, answers the calls, shows up himself, and stands behind the work. No dispatchers. No runaround.</p>
+    <div class="hero-cta">
+      <a class="btn btn-copper" href="tel:+19726580719">Call Larry — (972) 658-0719</a>
+      <a class="btn btn-ghost" href="#services">What he fixes</a>
+    </div>
+    <div class="hero-chips">
+      <span class="chip">Master Plumber <b>#19068</b> · Texas licensed</span>
+      <span class="chip"><b>4.4 ★</b> on Birdeye (9 reviews)</span>
+      <span class="chip">Serving Anna &amp; the McKinney area</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="num" data-count="4.4" data-dec="1">0</div><div class="lbl">Birdeye rating</div></div>
+    <div class="stat"><div class="num" data-count="9">0</div><div class="lbl">Verified reviews</div></div>
+    <div class="stat"><div class="num" data-count="11">0</div><div class="lbl">Yrs at The Cake Stand, McKinney</div></div>
+    <div class="stat"><div class="num" data-count="1">0</div><div class="lbl">Name to ask for: Larry</div></div>
+  </div>
+</div>
+
+<section class="block reveal" id="services">
+  <div class="kicker">What he does</div>
+  <h2 class="sec">Plumbing, minus the drama</h2>
+  <p class="sec-sub">One call, one plumber, one straight answer. Tap a service to see what's covered.</p>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="t1">Leaks &amp; Repairs</button>
+    <button class="tab-btn" data-tab="t2">Water Heaters</button>
+    <button class="tab-btn" data-tab="t3">Drains &amp; Sewer</button>
+    <button class="tab-btn" data-tab="t4">Fixtures &amp; Installs</button>
+  </div>
+  <div class="tab-panels">
+    <div class="tab-panel active" id="t1">
+      <div>
+        <h3>Leaks &amp; emergency repairs</h3>
+        <p>Drips, burst pipes, and mystery puddles — found fast and fixed right the first time.</p>
+        <ul><li>Leak detection &amp; repair</li><li>Burst pipe repair</li><li>Water line repairs</li><li>Frozen pipe thawing</li></ul>
+      </div><div class="tab-art">💧</div>
+    </div>
+    <div class="tab-panel" id="t2">
+      <div>
+        <h3>Water heaters</h3>
+        <p>Repairs and replacements for standard tank heaters — hot water back today, not next week.</p>
+        <ul><li>Water heater repair</li><li>Full replacements</li><li>Troubleshooting no-hot-water calls</li><li>Maintenance advice</li></ul>
+      </div><div class="tab-art">🔥</div>
+    </div>
+    <div class="tab-panel" id="t3">
+      <div>
+        <h3>Drains &amp; sewer</h3>
+        <p>Slow drains, clogs, and sewer line trouble — cleared with the right tools, not guesswork.</p>
+        <ul><li>Drain cleaning</li><li>Sewer line clearing</li><li>Camera pipe inspections</li><li>Clogged drain diagnosis</li></ul>
+      </div><div class="tab-art">🌀</div>
+    </div>
+    <div class="tab-panel" id="t4">
+      <div>
+        <h3>Fixtures &amp; installs</h3>
+        <p>Faucets, toilets, disposals, and valves — installed cleanly and left cleaner.</p>
+        <ul><li>Faucet &amp; toilet repair</li><li>Garbage disposal service</li><li>Fixture replacements</li><li>Water pressure adjustment</li></ul>
+      </div><div class="tab-art">🔧</div>
+    </div>
+  </div>
+</section>
+
+<section class="block reveal" id="reviews">
+  <div class="kicker">Proof, not promises</div>
+  <h2 class="sec">Anna asks for Larry by name</h2>
+  <p class="sec-sub">Real reviews from real customers — every one attributed to where it was posted.</p>
+  <div class="reviews-wrap">
+    <button class="arr prev" aria-label="Previous review">‹</button>
+    <div class="slide active">
+      <div class="stars">★★★★★</div>
+      <p>"Fast, friendly, service. I couldn't have been more pleased. Thanks Larry."</p>
+      <div class="who">Birdeye reviewer</div><div class="src">Posted on Birdeye</div>
+    </div>
+    <div class="slide">
+      <div class="stars">★★★★★</div>
+      <p>"For 11 years, Larry was my plumber at The Cake Stand in downtown McKinney. I found him to be knowledgeable, kind and fair."</p>
+      <div class="who">Tamara Heath</div><div class="src">Posted on Plumbing Portal USA</div>
+    </div>
+    <div class="slide">
+      <div class="stars">★★★★★</div>
+      <p>"I have used Larry many times and each time he was professional, friendly, and trustworthy."</p>
+      <div class="who">Heather Rawls</div><div class="src">Posted on Plumbing Portal USA</div>
+    </div>
+    <div class="slide">
+      <div class="stars">★★★★★</div>
+      <p>"Incredible service. Honest pricing!"</p>
+      <div class="who">Gary Sirota</div><div class="src">Posted on Plumbing Portal USA</div>
+    </div>
+    <button class="arr next" aria-label="Next review">›</button>
+    <div class="slider-nav"><button class="dot active"></button><button class="dot"></button><button class="dot"></button><button class="dot"></button></div>
+  </div>
+</section>
+
+<section class="block reveal" id="larry">
+  <div class="kicker">The man behind the wrench</div>
+  <h2 class="sec">Ask for Larry</h2>
+  <div class="story">
+    <div class="story-card">
+      <h3>Larry Montgomery</h3>
+      <p>Larry's been the plumber McKinney-area folks call by first name for over a decade. For 11 years he was the go-to plumber at The Cake Stand in downtown McKinney — the kind of relationship you only earn by showing up, telling the truth, and charging fair.</p>
+      <p>Now he runs LTC Plumbing out of Anna: one phone, one truck, one standard — the job done right.</p>
+      <div class="sig">— Ask for Larry · (972) 658-0719</div>
+    </div>
+    <div class="story-list">
+      <h3>Why neighbors call him back</h3>
+      <div class="item"><div class="ic">1</div><div><b>Owner does the work.</b> Larry answers, Larry shows up, Larry fixes it.</div></div>
+      <div class="item"><div class="ic">2</div><div><b>Licensed to the hilt.</b> Responsible Master Plumber #19068 on the Texas state roster — current.</div></div>
+      <div class="item"><div class="ic">3</div><div><b>Honest pricing.</b> "Incredible service. Honest pricing!" — Gary Sirota, verified review.</div></div>
+      <div class="item"><div class="ic">4</div><div><b>A decade of first-name referrals.</b> "Try LTC Plumbing — his name is Larry Montgomery." — 2014 referral, still true today.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block reveal">
+  <div class="kicker">Straight answers</div>
+  <h2 class="sec">Before you call</h2>
+  <div style="max-width:780px;margin-top:26px">
+    <div class="faq-item"><button class="faq-q">Is Larry actually licensed? <span class="plus">+</span></button><div class="faq-a"><p>Yes. LTC Plumbing holds a Responsible Master Plumber license (#19068) on the Texas State Board of Plumbing Examiners roster, verified current.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Will Larry come out himself? <span class="plus">+</span></button><div class="faq-a"><p>That's the whole point. LTC is owner-operated — the man who answers the phone is the man who fixes your plumbing.</p></div></div>
+    <div class="faq-item"><button class="faq-q">What areas does he cover? <span class="plus">+</span></button><div class="faq-a"><p>Based in Anna, TX. His long-time customers span the McKinney area — call and ask about your street.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How do I get a price? <span class="plus">+</span></button><div class="faq-a"><p>Call (972) 658-0719 and describe the job. Larry will tell you straight whether he handles it, how soon he can come, and what a visit costs.</p></div></div>
+  </div>
+</section>
+
+<section class="block reveal" id="hours">
+  <div class="contact-grid">
+    <div class="card">
+      <h3>Hours</h3>
+      <div class="hours-row"><span>Monday – Friday</span><span>9:00 AM – 6:00 PM</span></div>
+      <div class="hours-row"><span>Saturday</span><span class="closed">Closed</span></div>
+      <div class="hours-row"><span>Sunday</span><span class="closed">Closed</span></div>
+      <p style="margin-top:16px;color:var(--muted);font-size:14px">Call during business hours — the owner picks up.</p>
+    </div>
+    <div class="card">
+      <h3>Call Larry direct</h3>
+      <p style="color:var(--muted)">No dispatchers. No hold music. Just the plumber.</p>
+      <a class="big-phone" href="tel:+19726580719">(972) 658-0719</a>
+      <p style="color:var(--muted);font-size:14px">12025 County Road 290, Anna, TX 75409</p>
+      <a class="btn btn-copper" href="tel:+19726580719" style="margin-top:14px">Tap to call now</a>
+    </div>
+  </div>
+</section>
+
+<section class="block reveal">
+  <div class="cta-band">
+    <div class="kicker" style="color:var(--copper2)">One truck · one phone · one standard</div>
+    <h2>Plumbing problem? Ask for Larry.</h2>
+    <p>Leaks, water heaters, drains, fixtures — described honestly, priced fairly, fixed right.</p>
+    <a class="btn btn-copper" href="tel:+19726580719">Call (972) 658-0719</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div><h4>LTC PLUMBING</h4><p>12025 County Road 290<br>Anna, TX 75409</p></div>
+    <div><h4>Contact</h4><p><a href="tel:+19726580719">(972) 658-0719</a><br>Mon–Fri 9:00 AM – 6:00 PM<br>Sat–Sun Closed</p></div>
+    <div><h4>License</h4><p>Responsible Master Plumber #19068<br>Texas State Board of Plumbing Examiners — current</p></div>
+  </div>
+  <div class="fine">© 2026 LTC Plumbing, Anna TX. Reviews quoted with attribution to Birdeye and Plumbing Portal USA.</div>
+</footer>
+
+<a class="mobile-call" href="tel:+19726580719">📞 CALL LARRY — (972) 658-0719</a>
+
+<script>
+  // tabs
+  document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.getElementById(b.dataset.tab).classList.add('active');
+  }));
+  // slider
+  const slides=[...document.querySelectorAll('.slide')],dots=[...document.querySelectorAll('.dot')];
+  let cur=0;
+  function go(i){cur=(i+slides.length)%slides.length;slides.forEach((s,k)=>s.classList.toggle('active',k===cur));dots.forEach((d,k)=>d.classList.toggle('active',k===cur));}
+  document.querySelector('.arr.next').onclick=()=>go(cur+1);
+  document.querySelector('.arr.prev').onclick=()=>go(cur-1);
+  dots.forEach((d,k)=>d.onclick=()=>go(k));
+  setInterval(()=>go(cur+1),7000);
+  // faq
+  document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+    const item=q.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  }));
+  // counters
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+    const el=e.target,end=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),t0=performance.now(),dur=1400;
+    (function tick(t){const p=Math.min((t-t0)/dur,1),v=end*(1-Math.pow(1-p,3));el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(tick);})(t0);
+  }),{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+  // reveal
+  const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io2.observe(el));
+</script>
+</body>
+</html>
