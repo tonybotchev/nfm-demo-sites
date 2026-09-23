@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parkhaven Dental of Gunter | Family Dentist in Gunter, TX</title>
+<meta name="description" content="Parkhaven Dental of Gunter — family, cosmetic & emergency dentistry at 605 N Preston Rd Ste 100, Gunter TX. Call (903) 433-1512.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --meadow:#F2F8F1; --meadow2:#E6F0E4;
+  --pine:#1C4A38; --pine-deep:#123526; --leaf:#7FB069;
+  --lime:#C6E04C; --lime-soft:#EAF4C9;
+  --ink:#22301F; --muted:#5C6B57; --white:#FFFFFF;
+  --radius:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--meadow);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Bricolage Grotesque',Georgia,serif}
+/* ---------- demo badge ---------- */
+.demo-badge{position:fixed;top:14px;left:14px;z-index:2000;background:#12241B;color:#fff;font-size:11px;letter-spacing:.2em;font-weight:800;padding:9px 16px;border-radius:999px;text-transform:uppercase;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.demo-badge span{color:var(--lime)}
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:1000;background:rgba(242,248,241,.94);backdrop-filter:blur(10px);border-bottom:1px solid #DCE8DA;transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 10px 26px rgba(28,74,56,.12)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--pine)}
+.brand-mark{width:46px;height:46px;flex:none;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--lime),var(--leaf));display:grid;place-items:center;box-shadow:inset 0 0 0 3px rgba(255,255,255,.4)}
+.brand-name{font-weight:800;font-size:1.35rem;line-height:1.05;color:var(--pine)}
+.brand-name small{display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.22em;color:var(--leaf);text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;gap:26px;font-weight:700;font-size:.95rem}
+.nav-links a{text-decoration:none;color:var(--ink)}
+.nav-links a:hover{color:var(--pine)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--pine);color:#fff;font-weight:800;padding:13px 26px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 10px 24px rgba(28,74,56,.32)}
+.btn:hover{transform:translateY(-2px);background:var(--pine-deep)}
+.btn.lime{background:var(--lime);color:var(--pine-deep);box-shadow:0 10px 24px rgba(198,224,76,.5)}
+.btn.lime:hover{background:#B5D43A}
+.nav-cta{padding:10px 20px;font-size:.9rem}
+@media(max-width:880px){.nav-links{display:none}}
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(900px 420px at 85% 0%,#DDF0D2 0%,transparent 60%),radial-gradient(700px 380px at 0% 100%,#F7EBCB 0%,transparent 55%),var(--meadow);overflow:hidden}
+.hero-inner{max-width:1200px;margin:0 auto;padding:80px 22px 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-top:52px}}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #DCE8DA;color:var(--pine);font-weight:800;font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;padding:9px 17px;border-radius:999px;margin-bottom:20px}
+.eyebrow .leaf{width:10px;height:10px;border-radius:50% 0 50% 50%;background:var(--leaf);transform:rotate(45deg)}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4rem);font-weight:800;color:var(--pine);line-height:1.06;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--leaf)}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:32rem;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+/* hero visit card */
+.visit-card{background:var(--white);border-radius:24px;padding:34px 32px;box-shadow:0 26px 60px rgba(28,74,56,.18);border-top:8px solid var(--lime);position:relative}
+.visit-card h3{font-size:1.65rem;font-weight:800;color:var(--pine);margin-bottom:4px}
+.visit-card p.sub{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+.hours-table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:.95rem}
+.hours-table td{padding:8px 4px;border-bottom:1px dashed #E2EADF}
+.hours-table tr:last-child td{border:none}
+.hours-table td:last-child{text-align:right;font-weight:700;color:var(--pine)}
+.hours-note{font-size:.78rem;color:var(--muted);margin-bottom:18px}
+.visit-card .btn{width:100%;justify-content:center}
+.addr{display:block;text-align:center;margin-top:14px;font-size:.92rem;color:var(--muted)}
+/* ---------- stats band ---------- */
+.stats{background:var(--pine);color:#fff}
+.stats-inner{max-width:1200px;margin:0 auto;padding:52px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+@media(max-width:700px){.stats-inner{grid-template-columns:repeat(2,1fr)}}
+.stat b{display:block;font-family:'Bricolage Grotesque';font-size:2.6rem;font-weight:800;color:var(--lime)}
+.stat span{font-size:.9rem;color:#D5E4D2;font-weight:600}
+.stat small{display:block;font-size:.72rem;color:#9DB89A;margin-top:4px}
+/* ---------- sections ---------- */
+section{padding:76px 0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+.kicker{font-weight:800;color:var(--leaf);letter-spacing:.22em;text-transform:uppercase;font-size:.85rem;margin-bottom:10px}
+h2.sec-title{font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800;color:var(--pine);line-height:1.08;margin-bottom:14px}
+.sec-sub{color:var(--muted);max-width:44rem;font-size:1.05rem;margin-bottom:42px}
+/* ---------- treatment tabs ---------- */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab-btn{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.02rem;padding:12px 24px;border-radius:999px;border:2px solid #CFDDCB;background:#fff;color:var(--pine);cursor:pointer;transition:all .2s}
+.tab-btn.active{background:var(--pine);border-color:var(--pine);color:var(--lime)}
+.tab-panel{display:none;background:#fff;border-radius:24px;padding:38px 36px;box-shadow:0 16px 42px rgba(28,74,56,.10);grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.tab-panel.active{display:grid}
+@media(max-width:800px){.tab-panel.active{grid-template-columns:1fr;padding:26px 22px}}
+.tab-panel h3{font-size:1.7rem;font-weight:800;color:var(--pine);margin-bottom:12px}
+.tab-panel p{color:var(--muted);margin-bottom:16px}
+.tab-panel ul{list-style:none}
+.tab-panel ul li{padding:8px 0 8px 32px;position:relative;font-weight:600}
+.tab-panel ul li::before{content:"";position:absolute;left:6px;top:13px;width:12px;height:12px;border-radius:50% 0 50% 50%;background:var(--leaf);transform:rotate(45deg)}
+.tab-art{background:linear-gradient(135deg,var(--meadow2),var(--lime-soft));border-radius:18px;min-height:240px;display:grid;place-items:center;overflow:hidden}
+/* ---------- doctor ---------- */
+.doctor{background:#fff}
+.doc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+@media(max-width:860px){.doc-grid{grid-template-columns:1fr}}
+.doc-portrait{background:linear-gradient(150deg,var(--pine),var(--leaf));border-radius:24px;min-height:340px;display:grid;place-items:center;position:relative;overflow:hidden}
+.doc-portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(400px 220px at 70% 20%,rgba(198,224,76,.35),transparent 70%)}
+.doc-portrait .initials{font-family:'Bricolage Grotesque';font-size:5rem;font-weight:800;color:rgba(255,255,255,.9);position:relative;z-index:1}
+.doc-copy h3{font-size:1.9rem;font-weight:800;color:var(--pine);margin-bottom:6px}
+.doc-copy .cred{font-weight:700;color:var(--leaf);margin-bottom:16px;font-size:.95rem}
+.doc-copy p{color:var(--muted);margin-bottom:14px}
+.doc-attr{font-size:.8rem;color:#8AA086;border-top:1px dashed #DCE8DA;padding-top:14px;margin-top:6px}
+/* ---------- languages band ---------- */
+.langs{background:var(--lime-soft);border-radius:28px;padding:44px 40px;margin-top:10px;display:flex;gap:30px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.langs h3{font-size:1.7rem;font-weight:800;color:var(--pine)}
+.langs p{color:var(--muted);max-width:26rem}
+.lang-pills{display:flex;gap:10px;flex-wrap:wrap}
+.lang-pills span{background:var(--pine);color:#fff;font-weight:700;font-size:.9rem;padding:10px 20px;border-radius:999px}
+/* ---------- reviews ---------- */
+.rev-card{background:#fff;border-radius:24px;padding:40px 36px;box-shadow:0 16px 42px rgba(28,74,56,.10);max-width:760px;margin:0 auto 26px}
+.rev-stars{color:#E8A93D;font-size:1.3rem;letter-spacing:3px;margin-bottom:14px}
+.rev-card blockquote{font-family:'Bricolage Grotesque';font-size:1.35rem;font-weight:500;color:var(--pine);line-height:1.45;margin-bottom:16px}
+.rev-src{font-size:.85rem;color:var(--muted)}
+.rev-proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.proof-chip{background:#fff;border-radius:16px;padding:22px;box-shadow:0 10px 26px rgba(28,74,56,.08);text-align:center}
+.proof-chip b{display:block;font-family:'Bricolage Grotesque';font-size:1.9rem;color:var(--pine)}
+.proof-chip span{font-size:.88rem;color:var(--muted);font-weight:600}
+/* ---------- new patient ---------- */
+.newpat{background:var(--pine-deep);color:#fff;border-radius:28px;padding:56px 48px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media(max-width:860px){.newpat{grid-template-columns:1fr;padding:40px 28px}}
+.newpat h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;margin-bottom:14px}
+.newpat p{color:#C9DCC5;margin-bottom:16px}
+.steps{list-style:none}
+.steps li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.steps li:last-child{border:none}
+.steps .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--lime);color:var(--pine-deep);font-family:'Bricolage Grotesque';font-weight:800;display:grid;place-items:center;font-size:1.1rem}
+.steps strong{display:block;color:#fff}
+.steps small{color:#B9D2B4}
+/* ---------- faq ---------- */
+.faq-item{background:#fff;border-radius:16px;margin-bottom:12px;box-shadow:0 8px 22px rgba(28,74,56,.07);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-size:1.03rem;font-weight:700;color:var(--pine);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Nunito',sans-serif}
+.faq-q .plus{flex:none;width:30px;height:30px;border-radius:50%;background:var(--meadow2);display:grid;place-items:center;font-size:1.2rem;color:var(--pine);transition:transform .3s,background .3s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--pine);color:var(--lime)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted)}
+/* ---------- CTA ---------- */
+.cta-band{background:linear-gradient(120deg,var(--pine) 0%,var(--pine-deep) 100%);color:#fff;text-align:center;padding:70px 22px;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(198,224,76,.3),transparent 70%)}
+.cta-band h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;margin-bottom:14px;color:#fff}
+.cta-band p{font-size:1.08rem;max-width:36rem;margin:0 auto 28px;color:#D5E4D2}
+.big-tel{display:inline-block;font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(1.9rem,4.6vw,3.1rem);color:var(--pine-deep);text-decoration:none;background:var(--lime);padding:14px 40px;border-radius:999px;box-shadow:0 16px 40px rgba(198,224,76,.35)}
+.big-tel:hover{background:#B5D43A}
+/* ---------- footer ---------- */
+footer{background:var(--pine-deep);color:#A9C2A4;padding:52px 0 34px}
+.foot-grid{max-width:1200px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr}}
+footer h4{font-family:'Bricolage Grotesque';font-size:1.15rem;font-weight:800;color:#fff;margin-bottom:14px}
+footer p,footer a{font-size:.94rem;color:#A9C2A4;text-decoration:none}
+footer a:hover{color:var(--lime)}
+.foot-bottom{max-width:1200px;margin:36px auto 0;padding:18px 22px 0;border-top:1px solid #2A4636;font-size:.8rem;color:#7E9A78;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* ---------- sticky mobile call ---------- */
+.sticky-call{display:none;position:fixed;bottom:14px;left:14px;right:14px;z-index:1500;background:var(--pine);color:#fff;font-weight:800;font-size:1.05rem;text-align:center;padding:16px;border-radius:16px;text-decoration:none;box-shadow:0 12px 32px rgba(18,53,38,.5)}
+@media(max-width:760px){.sticky-call{display:block}body{padding-bottom:76px}}
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo <span>Preview</span> — Not the live site</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 4.5-6 8-6 11.5A6 6 0 0 0 12 21a6 6 0 0 0 6-6.5C18 11 16 7.5 12 3z" fill="#123526"/><path d="M12 8v9" stroke="#C6E04C" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-name">Parkhaven Dental<small>of Gunter · TX</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#doctor">Our Dentist</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn nav-cta" href="tel:+19034331512">Call (903) 433-1512</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow"><span class="leaf"></span> Gunter's Family Dental Practice</span>
+      <h1>Healthy Smiles, <em>Right Here in Gunter</em></h1>
+      <p class="lead">Parkhaven Dental of Gunter treats patients of all ages — checkups, cleanings, cosmetic care, and emergency dentistry — in a comfortable, relaxed setting, with a team that takes the time to listen.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+19034331512">Call (903) 433-1512</a>
+        <a class="btn lime" href="#newpatient">New Patients</a>
+      </div>
+      <p style="font-size:.9rem;color:var(--muted);font-weight:600">Currently accepting new patients · All ages welcome</p>
+    </div>
+    <div class="visit-card reveal">
+      <h3>Visit Us in Gunter</h3>
+      <p class="sub">605 N Preston Rd Ste 100, Gunter, TX 75058</p>
+      <table class="hours-table">
+        <tr><td>Monday – Thursday</td><td>8:00 AM – 4:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:00 AM – 12:00 PM</td></tr>
+        <tr><td>Saturday</td><td>8:00 AM – 12:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="hours-note">Hours as listed on our Birdeye profile — please call to confirm.</p>
+      <a class="btn" href="tel:+19034331512">Request an Appointment</a>
+      <span class="addr">Prefer to stop by? Walk-ins welcome during office hours.</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal"><b><span class="count" data-target="64">0</span></b><span>Birdeye reviews</span><small>rating source: Birdeye</small></div>
+    <div class="stat reveal"><b><span class="count" data-target="4.7" data-dec="1">0</span></b><span>average rating</span><small>rating source: Birdeye</small></div>
+    <div class="stat reveal"><b><span class="count" data-target="5">0</span></b><span>languages spoken</span><small>per practice contact page</small></div>
+    <div class="stat reveal"><b><span class="count" data-target="60">0</span></b><span>minute new-patient exam</span><small>per patient info page</small></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Complete care under one roof</div>
+      <h2 class="sec-title">Dental Services</h2>
+      <p class="sec-sub">Preventive, restorative, cosmetic, and emergency care for the whole family — from a child's first checkup to a full smile makeover.</p>
+    </div>
+    <div class="tabs reveal">
+      <button class="tab-btn active" data-tab="t-family">Family Care</button>
+      <button class="tab-btn" data-tab="t-cosmetic">Cosmetic</button>
+      <button class="tab-btn" data-tab="t-emergency">Emergency</button>
+    </div>
+    <div class="tab-panel active reveal" id="t-family">
+      <div>
+        <h3>Family Dentistry</h3>
+        <p>Gentle, personalized care for patients of all ages — the team takes time to understand each person's needs, goals, and lifestyle.</p>
+        <ul>
+          <li>Checkups &amp; professional cleanings</li>
+          <li>Kid-friendly dentistry</li>
+          <li>Fillings &amp; bonding</li>
+          <li>Dental education for lasting oral health</li>
+        </ul>
+      </div>
+      <div class="tab-art"><svg width="60%" viewBox="0 0 200 160" fill="none"><circle cx="100" cy="80" r="52" fill="#1C4A38" opacity=".12"/><path d="M70 78c0-16 12-26 30-26s30 10 30 26c0 22-14 40-30 40s-30-18-30-40z" fill="#1C4A38" opacity=".18" stroke="#1C4A38" stroke-width="3"/><path d="M85 75h30M85 88h30" stroke="#7FB069" stroke-width="4" stroke-linecap="round"/></svg></div>
+    </div>
+    <div class="tab-panel" id="t-cosmetic">
+      <div>
+        <h3>Cosmetic Dentistry</h3>
+        <p>Enhance the brightness, shape, and size of your teeth — customized to the smile you want, without hindering how your teeth work.</p>
+        <ul>
+          <li>Veneers</li>
+          <li>Professional teeth whitening</li>
+          <li>Crowns &amp; bridges</li>
+          <li>Smile makeovers</li>
+        </ul>
+      </div>
+      <div class="tab-art"><svg width="60%" viewBox="0 0 200 160" fill="none"><path d="M40 60c20-14 40-14 60 0s40 14 60 0" stroke="#1C4A38" stroke-width="5" stroke-linecap="round"/><path d="M40 84c20 14 40 14 60 0s40-14 60 0" stroke="#7FB069" stroke-width="5" stroke-linecap="round"/><circle cx="100" cy="120" r="10" fill="#C6E04C"/></svg></div>
+    </div>
+    <div class="tab-panel" id="t-emergency">
+      <div>
+        <h3>Emergency Dentistry</h3>
+        <p>Dental pain doesn't wait. When something hurts, call — the team will work to see you and get you comfortable fast.</p>
+        <ul>
+          <li>Toothaches &amp; dental pain</li>
+          <li>Root canals</li>
+          <li>Extractions</li>
+          <li>Broken or knocked-out teeth</li>
+        </ul>
+      </div>
+      <div class="tab-art"><svg width="60%" viewBox="0 0 200 160" fill="none"><circle cx="100" cy="80" r="46" fill="#C6E04C" opacity=".5"/><path d="M100 50v36" stroke="#1C4A38" stroke-width="8" stroke-linecap="round"/><circle cx="100" cy="102" r="5" fill="#1C4A38"/></svg></div>
+    </div>
+
+    <div class="langs reveal">
+      <div>
+        <h3>We speak your language.</h3>
+        <p>Our team welcomes patients in five languages — because great care starts with clear communication.</p>
+      </div>
+      <div class="lang-pills">
+        <span>English</span><span>Spanish</span><span>Arabic</span><span>Japanese</span><span>Korean</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="doctor" id="doctor">
+  <div class="wrap">
+    <div class="doc-grid">
+      <div class="doc-portrait reveal"><span class="initials">BL</span></div>
+      <div class="doc-copy reveal">
+        <div class="kicker">Meet the dentist</div>
+        <h3>Dr. Bryant Lee, DMD</h3>
+        <div class="cred">Doctor of Dental Medicine — Midwestern University College of Dental Medicine</div>
+        <p>Dr. Lee brings broad clinical experience — from military service and corporate offices to underserved communities and private practice — with clinical interests in general dentistry, root canals, extractions, and cosmetic procedures.</p>
+        <p>He believes in educating patients and empowering them to make good choices for their oral health — and in meeting with you personally about pain concerns before any procedure.</p>
+        <a class="btn" href="tel:+19034331512">Meet Dr. Lee — Call Today</a>
+        <p class="doc-attr">Biography as published on the practice's own About page. Colorado State University undergraduate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:20px">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <div class="kicker">Patient reviews</div>
+      <h2 class="sec-title">What Gunter Is Saying</h2>
+      <p class="sec-sub" style="margin-left:auto;margin-right:auto">Real reviews from real patients — displayed here, where they belong.</p>
+    </div>
+    <div class="rev-card reveal">
+      <div class="rev-stars">★★★★★</div>
+      <blockquote>"Amazing service, very nice people, very very careful and kind. Best dentist in the whole world."</blockquote>
+      <div class="rev-src">— Birdeye review, Parkhaven Dental Care (Gunter)</div>
+    </div>
+    <div class="rev-card reveal">
+      <div class="rev-stars">★★★★★</div>
+      <blockquote>"Loved everyone there from the receptionist to the dentist. Friendly and down to earth people but very professional!"</blockquote>
+      <div class="rev-src">— Groupon review, Park Haven Dental (Gunter)</div>
+    </div>
+    <div class="rev-proof reveal">
+      <div class="proof-chip"><b>4.7 / 5</b><span>Birdeye rating</span></div>
+      <div class="proof-chip"><b>64</b><span>Birdeye reviews</span></div>
+      <div class="proof-chip"><b>5.0 / 5</b><span>Groupon reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="newpatient" style="padding-top:20px">
+  <div class="wrap">
+    <div class="newpat reveal">
+      <div>
+        <div class="kicker" style="color:var(--lime)">New patients welcome</div>
+        <h2>Your First Visit, Explained</h2>
+        <p>No mystery, no surprises. Here's exactly what happens at your initial examination — about one hour, start to finish.</p>
+        <a class="btn lime" href="tel:+19034331512">Call to Schedule</a>
+      </div>
+      <ul class="steps">
+        <li><span class="n">1</span><div><strong>Warm welcome</strong><small>Our friendly team greets you and helps with new-patient paperwork, insurance, and privacy info.</small></div></li>
+        <li><span class="n">2</span><div><strong>Get-to-know-you exam</strong><small>We ask about your routine, listen to your concerns, and answer your questions.</small></div></li>
+        <li><span class="n">3</span><div><strong>Cleaning &amp; exam</strong><small>Our hygienist cleans your teeth, then Dr. Lee completes your examination.</small></div></li>
+        <li><span class="n">4</span><div><strong>Your plan</strong><small>Clear recommendations for proposed treatments — with education, not pressure.</small></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Good to know</div>
+      <h2 class="sec-title">Patient FAQ</h2>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-q">Are you accepting new patients?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — we're currently accepting new patients of all ages. Call <a href="tel:+19034331512" style="color:var(--pine);font-weight:800">(903) 433-1512</a> to schedule your initial examination.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What should I bring to my first visit?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Bring your insurance cards and information, any past dental records, and a list of medications or medical issues that could affect your oral health. Kids are welcome to bring a favorite stuffed animal for comfort.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you see dental emergencies?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — we perform emergency services including bonding, root canals, crowns, and bridges. If you're in pain, call and we'll work to get you seen.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if I'm nervous about dental work?<span class="plus">+</span></button>
+        <div class="faq-a"><p>You're not alone — and it's why our team takes time to listen. Dr. Lee meets with you personally to discuss pain tolerance and create a pain-management plan before any procedure.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Your Gunter Smile Starts Here</h2>
+  <p>Call Parkhaven Dental of Gunter to schedule your visit — new patients welcome.</p>
+  <a class="big-tel" href="tel:+19034331512">(903) 433-1512</a>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Parkhaven Dental of Gunter</h4>
+      <p>605 N Preston Rd Ste 100<br>Gunter, TX 75058</p>
+      <p style="margin-top:10px"><a href="tel:+19034331512" style="font-weight:800;color:var(--lime)">(903) 433-1512</a></p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Mon – Thu: 8:00 AM – 4:00 PM<br>Fri: 8:00 AM – 12:00 PM<br>Sat: 8:00 AM – 12:00 PM<br>Sun: Closed</p>
+      <p style="font-size:.78rem;margin-top:8px">Per Birdeye — call to confirm.</p>
+    </div>
+    <div>
+      <h4>Care</h4>
+      <p>Family dentistry<br>Cosmetic dentistry<br>Emergency dentistry<br>Kid-friendly care</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Parkhaven Dental of Gunter — Demo preview. Not the live site.</span>
+    <span><a href="tel:+19034331512">Call (903) 433-1512</a></span>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+19034331512">📞 Call Parkhaven Dental — (903) 433-1512</a>
+
+<script>
+// sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+// treatment tabs
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.tab).classList.add('active');
+}));
+// animated counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,target=parseFloat(el.dataset.target),dec=parseInt(el.dataset.dec||0);
+  const t0=performance.now(),dur=1400;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),v=target*(1-Math.pow(1-p,3));
+    el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(tick)})(t0);
+  cio.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+// faq accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
