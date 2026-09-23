@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selective Air | Prosper, TX HVAC — Demo Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--spruce:#0a2a30;--spruce2:#0e3a42;--ice:#eef7f6;--glacier:#d9efec;--cyan:#14b8c4;--cyan-d:#0d8b94;--amber:#f5a524;--amber-d:#d98a0e;--ink:#10181d;--mut:#5a6d75;--white:#ffffff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Space Grotesk',sans-serif}
+/* DEMO badge */
+.demo-badge{position:fixed;top:16px;right:-46px;transform:rotate(35deg);background:#c0392b;color:#fff;font:700 12px 'Space Grotesk';letter-spacing:2px;padding:8px 52px;z-index:3000;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+/* NAV */
+nav{position:sticky;top:0;z-index:2000;background:rgba(10,42,48,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--cyan)}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:13px 20px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:50%;background:conic-gradient(from 0deg,var(--cyan),var(--amber),var(--cyan));display:flex;align-items:center;justify-content:center;position:relative}
+.brand-mark::after{content:"";width:30px;height:30px;border-radius:50%;background:var(--spruce);position:absolute}
+.brand-mark b{position:relative;z-index:2;font:700 13px 'Space Grotesk';color:#fff}
+.brand b.name{font:700 17px 'Space Grotesk';letter-spacing:.4px}
+.brand small{display:block;font:600 10px 'Inter';letter-spacing:2.5px;color:var(--cyan)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:#cfe3e1;text-decoration:none;font:600 14px 'Inter';transition:.2s}
+.nav-links a:hover{color:var(--amber)}
+.nav-call{background:var(--amber);color:#241a05!important;text-decoration:none;font:700 15px 'Space Grotesk';padding:11px 22px;border-radius:30px;transition:.2s;box-shadow:0 4px 14px rgba(245,165,36,.4)}
+.nav-call:hover{background:#ffc14d;transform:translateY(-2px)}
+@media(max-width:860px){.nav-links{display:none}}
+/* HERO */
+.hero{background:linear-gradient(140deg,var(--spruce) 0%,var(--spruce2) 60%,#0a2a30 100%);color:#fff;padding:90px 20px 80px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:-140px;bottom:-140px;width:480px;height:480px;border:2px solid rgba(20,184,196,.16);border-radius:50%}
+.hero::after{content:"";position:absolute;left:-80px;bottom:-80px;width:320px;height:320px;border:2px dashed rgba(245,165,36,.14);border-radius:50%}
+.hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative;z-index:2}
+@media(max-width:920px){.hero-inner{grid-template-columns:1fr}}
+.kicker{display:inline-block;background:rgba(20,184,196,.14);border:1px solid var(--cyan);color:#7fe3ea;font:700 12px 'Inter';letter-spacing:2.5px;padding:8px 18px;border-radius:30px;margin-bottom:22px;text-transform:uppercase}
+.hero h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;line-height:1.06;letter-spacing:-.5px}
+.hero h1 .cy{color:var(--cyan)}
+.hero h1 .am{color:var(--amber)}
+.hero p.lede{color:#b9d4d2;font-size:18px;margin:22px 0 32px;max-width:560px}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.btn-call{background:var(--amber);color:#241a05;text-decoration:none;font:700 17px 'Space Grotesk';padding:16px 34px;border-radius:30px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(245,165,36,.45);transition:.2s}
+.btn-call:hover{transform:translateY(-3px);background:#ffc14d}
+.btn-ghost{border:2px solid #2b5560;color:#d9efec;text-decoration:none;font:600 16px 'Inter';padding:15px 30px;border-radius:30px;transition:.2s}
+.btn-ghost:hover{border-color:var(--cyan);color:#fff}
+.trust-chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#e2f2f0;font:600 13px 'Inter';padding:9px 16px;border-radius:30px;display:flex;align-items:center;gap:8px}
+/* Dial card */
+.dial-card{background:rgba(255,255,255,.05);border:1px solid rgba(20,184,196,.3);border-radius:24px;padding:40px 30px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.4);position:relative;overflow:hidden}
+.dial-card .lbl{color:#8fb8b4;font:600 12px 'Inter';letter-spacing:3px;text-transform:uppercase;margin-bottom:6px}
+.dial-temp{font:700 58px 'Space Grotesk';color:#fff;line-height:1}
+.dial-temp small{font-size:26px;color:var(--cyan)}
+.dial-sub{color:#b9d4d2;font-size:14px;margin:8px 0 18px}
+.floating-chip{display:inline-block;background:var(--amber);color:#241a05;font:700 14px 'Space Grotesk';padding:10px 20px;border-radius:30px;margin:6px}
+/* TICKER */
+.ticker{background:var(--amber);overflow:hidden;white-space:nowrap;padding:14px 0;border-top:2px solid var(--amber-d);border-bottom:2px solid var(--amber-d)}
+.ticker-track{display:inline-block;animation:tick 26s linear infinite}
+.ticker span{font:700 15px 'Space Grotesk';color:#241a05;letter-spacing:1px;margin:0 26px;text-transform:uppercase}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* STATS */
+.stats{background:var(--spruce);padding:56px 20px;color:#fff}
+.stats-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+@media(max-width:760px){.stats-inner{grid-template-columns:repeat(2,1fr);gap:32px}}
+.stat b{font:700 46px 'Space Grotesk';color:var(--cyan);display:block}
+.stat b.amber{color:var(--amber)}
+.stat span{color:#b9d4d2;font:600 13px 'Inter';letter-spacing:1.2px;text-transform:uppercase}
+.stat small{display:block;color:#7d9a97;font-size:12px;margin-top:6px}
+/* SECTIONS */
+section{padding:88px 20px}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-kicker{color:var(--cyan-d);font:700 13px 'Inter';letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.sec-title{font-size:clamp(30px,3.6vw,44px);font-weight:700;letter-spacing:-.5px;margin-bottom:16px}
+.sec-sub{color:var(--mut);font-size:17px;max-width:700px;margin-bottom:46px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:#fff;border:1px solid #e2edec;border-radius:20px;padding:34px 28px;transition:.28s;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--cyan),var(--amber));opacity:0;transition:.28s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 22px 48px rgba(10,42,48,.14);border-color:var(--cyan)}
+.svc:hover::before{opacity:1}
+.svc .ico{width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg,var(--ice),var(--glacier));display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.svc .ico svg{width:30px;height:30px}
+.svc h3{font-size:20px;font-weight:700;margin-bottom:10px}
+.svc p{color:var(--mut);font-size:15px}
+.svc a.call-link{display:inline-block;margin-top:16px;color:var(--cyan-d);font:700 14px 'Space Grotesk';text-decoration:none}
+.svc a.call-link:hover{color:var(--amber-d)}
+/* Mike band */
+.mike{background:linear-gradient(120deg,var(--spruce) 0%,var(--spruce2) 100%);color:#fff;position:relative;overflow:hidden}
+.mike .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+@media(max-width:880px){.mike .wrap{grid-template-columns:1fr}}
+.mike-art{width:100%;max-width:340px;margin:0 auto;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 40deg,rgba(20,184,196,.25),rgba(245,165,36,.25),rgba(20,184,196,.25));display:flex;align-items:center;justify-content:center;position:relative}
+.mike-art .inner{width:78%;aspect-ratio:1;border-radius:50%;background:var(--spruce);border:2px solid rgba(20,184,196,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+.mike-art .inner b{font:700 30px 'Space Grotesk';color:var(--amber)}
+.mike-art .inner span{color:#b9d4d2;font-size:13px;margin-top:6px}
+.mike blockquote{font:600 clamp(20px,2.4vw,27px)/1.55 'Space Grotesk';color:#7fe3ea;border-left:5px solid var(--amber);padding-left:26px;margin-bottom:22px}
+.mike p{color:#b9d4d2;margin-bottom:16px}
+.mike .who{color:#fff;font:700 15px 'Inter'}
+.mike .src{color:#8fb8b4;font-size:12px;letter-spacing:1px}
+/* Testimonials */
+.testi{background:var(--ice)}
+.slider{position:relative;max-width:840px;margin:0 auto;background:#fff;border-radius:24px;box-shadow:0 20px 50px rgba(10,42,48,.1);overflow:hidden;border-top:6px solid var(--cyan)}
+.slides{display:flex;transition:transform .5s ease}
+.slide{min-width:100%;padding:54px 50px;text-align:center}
+@media(max-width:600px){.slide{padding:38px 24px}}
+.stars{color:var(--amber);font-size:22px;letter-spacing:5px;margin-bottom:18px}
+.slide p{font-size:19px;font-style:italic;color:var(--ink);margin-bottom:24px}
+.slide .who{font:700 15px 'Space Grotesk';color:var(--spruce)}
+.slide .src{font:600 12px 'Inter';color:var(--mut);letter-spacing:1px}
+.dots{display:flex;justify-content:center;gap:10px;padding:0 0 32px;background:#fff}
+.dot{width:11px;height:11px;border-radius:50%;background:#c8dcd9;cursor:pointer;transition:.2s;border:none}
+.dot.active{background:var(--cyan);transform:scale(1.3)}
+/* Areas */
+.areas .towns{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.town{background:#fff;border:2px solid #d5e7e4;font:600 14px 'Space Grotesk';padding:11px 20px;border-radius:30px;transition:.2s;color:var(--spruce)}
+.town:hover{border-color:var(--amber);transform:translateY(-2px);box-shadow:0 8px 18px rgba(245,165,36,.2)}
+/* FAQ */
+.faq-item{background:#fff;border:1px solid #e2edec;border-radius:16px;margin-bottom:14px;overflow:hidden;transition:.2s}
+.faq-item.open{border-color:var(--cyan);box-shadow:0 10px 26px rgba(20,184,196,.12)}
+.faq-q{width:100%;background:none;border:none;text-align:left;font:700 17px 'Space Grotesk';padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+.faq-q .pm{color:var(--cyan-d);font-size:24px;line-height:1;transition:.25s;flex-shrink:0;margin-left:12px}
+.faq-item.open .pm{transform:rotate(45deg);color:var(--amber-d)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 26px 24px;color:var(--mut)}
+.faq-a a{color:var(--cyan-d);font-weight:600}
+/* CTA band */
+.cta-band{background:linear-gradient(120deg,var(--amber) 0%,var(--amber-d) 100%);color:#241a05;text-align:center;padding:76px 20px}
+.cta-band h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;margin-bottom:14px}
+.cta-band p{font-size:18px;margin-bottom:30px;opacity:.85;max-width:640px;margin-left:auto;margin-right:auto}
+.btn-dark{background:var(--spruce);color:#fff;text-decoration:none;font:700 18px 'Space Grotesk';padding:17px 44px;border-radius:30px;display:inline-block;transition:.2s;box-shadow:0 10px 26px rgba(10,42,48,.35)}
+.btn-dark:hover{transform:translateY(-3px);background:#0e3a42}
+.cta-note{margin-top:18px;font-size:14px;opacity:.75}
+/* Footer */
+footer{background:var(--spruce);color:#b9d4d2;padding:52px 20px 110px}
+.foot-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px}
+@media(max-width:760px){.foot-inner{grid-template-columns:1fr}}
+footer h4{color:#fff;font:700 16px 'Space Grotesk';margin-bottom:14px}
+footer p,footer a{color:#b9d4d2;font-size:15px;text-decoration:none}
+footer a:hover{color:var(--amber)}
+.foot-fine{max-width:1180px;margin:36px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:#7d9a97}
+/* Sticky mobile call */
+.sticky-call{position:fixed;bottom:0;left:0;right:0;z-index:2500;display:none;background:var(--spruce);padding:10px 14px;border-top:2px solid var(--cyan)}
+.sticky-call a{display:block;background:var(--amber);color:#241a05;text-align:center;font:700 17px 'Space Grotesk';padding:14px;border-radius:14px;text-decoration:none}
+@media(max-width:760px){.sticky-call{display:block}footer{padding-bottom:150px}}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><b>SA</b></span>
+      <span><b class="name">Selective Air</b><small>PROSPER, TX · HVAC</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#mike">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-call" href="tel:+14696869806">Call (469) 686-9806</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="kicker">Prosper, TX · Heating &amp; Air</span>
+      <h1>The tech your neighbors ask for <span class="cy">by name.</span></h1>
+      <p class="lede">Selective Air is a small, family-run HVAC shop in Prosper where the guy who shows up is the reason people leave five stars. Repair, replacement, and maintenance — done right, explained plainly.</p>
+      <div class="cta-row">
+        <a class="btn-call" href="tel:+14696869806">📞 Call (469) 686-9806</a>
+        <a class="btn-ghost" href="#reviews">Read the reviews</a>
+      </div>
+      <div class="trust-chips">
+        <span class="chip">★ 5.0 · 31 reviews on Directorii</span>
+        <span class="chip">⚡ Same-day service</span>
+        <span class="chip">🛠 $89 service call*</span>
+      </div>
+    </div>
+    <div class="dial-card">
+      <div class="lbl">Your home, dialed in</div>
+      <svg id="dial" viewBox="0 0 260 150" width="100%" style="max-width:320px;margin:6px auto;display:block">
+        <path d="M 30 130 A 100 100 0 0 1 230 130" fill="none" stroke="#1d4a52" stroke-width="16" stroke-linecap="round"/>
+        <path id="dialArc" d="M 30 130 A 100 100 0 0 1 230 130" fill="none" stroke="url(#grad)" stroke-width="16" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314"/>
+        <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#14b8c4"/><stop offset="1" stop-color="#f5a524"/>
+        </linearGradient></defs>
+        <g id="needle" transform="rotate(-80 130 130)">
+          <line x1="130" y1="130" x2="130" y2="52" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="130" cy="130" r="9" fill="#f5a524"/>
+        </g>
+      </svg>
+      <div class="dial-temp">72°<small>F</small></div>
+      <div class="dial-sub">Comfort, held steady — summer or winter.</div>
+      <span class="floating-chip">$89 service call*</span>
+      <span class="floating-chip">Family-run crew</span>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>Prosper</span><span>·</span><span>Frisco</span><span>·</span><span>Celina</span><span>·</span><span>McKinney</span><span>·</span><span>Allen</span><span>·</span><span>Little Elm</span><span>·</span><span>Aubrey</span><span>·</span><span>Plano</span><span>·</span><span>Carrollton</span><span>·</span><span>Coppell</span><span>·</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal"><b><span class="count" data-target="5.0" data-dec="1">0</span></b><span>Directorii rating</span><small>31 verified reviews</small></div>
+    <div class="stat reveal"><b class="amber"><span class="count" data-target="4">0</span></b><span>Person crew</span><small>family-run, not a call center</small></div>
+    <div class="stat reveal"><b>$<span class="count" data-target="89">0</span></b><span>Service call*</span><small>as listed on Thumbtack</small></div>
+    <div class="stat reveal"><b class="amber"><span class="count" data-target="20">0</span>+</b><span>Towns served</span><small>across North Texas</small></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-kicker reveal">What we do</div>
+    <h2 class="sec-title reveal">Heating &amp; air, handled end to end</h2>
+    <p class="sec-sub reveal">Every visit gets the same treatment reviewers keep writing about: a thorough inspection, a plain-English explanation, and practical options — no pressure.</p>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0d8b94" stroke-width="2"><path d="M12 2v20M4 6l16 12M20 6L4 18M12 2l-2 3m2-3l2 3M12 22l-2-3m2 3l2-3"/></svg></div>
+        <h3>AC Repair</h3>
+        <p>Same-day diagnosis and repair when your cooling quits in a Texas summer. Mike has seen it all — and explains what he finds before he fixes it.</p>
+        <a class="call-link" href="tel:+14696869806">Call for repair →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d98a0e" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16M4 9h5M4 15h5"/></svg></div>
+        <h3>AC Installation &amp; Replacement</h3>
+        <p>When repair stops making sense, get a straight recommendation on a right-sized new system — and a crew that has your home cooling the same day.</p>
+        <a class="call-link" href="tel:+14696869806">Call for a quote →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0d8b94" stroke-width="2"><path d="M12 3c2 4 6 6 6 11a6 6 0 01-12 0c0-5 4-7 6-11z"/></svg></div>
+        <h3>Heating Repair</h3>
+        <p>Furnace acting up on a cold snap? Fast, honest heating repair that gets your home warm again without the upsell.</p>
+        <a class="call-link" href="tel:+14696869806">Call for repair →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d98a0e" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Heating Installation</h3>
+        <p>Full heating system installs sized to your home and your budget, installed cleanly and tested before we leave.</p>
+        <a class="call-link" href="tel:+14696869806">Call for a quote →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0d8b94" stroke-width="2"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
+        <h3>Maintenance &amp; Tune-Ups</h3>
+        <p>Seasonal checkups that catch small problems before they become July emergencies — filters, coils, refrigerant, the works.</p>
+        <a class="call-link" href="tel:+14696869806">Schedule a tune-up →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d98a0e" stroke-width="2"><path d="M12 3v18M5 8c4 2 10 2 14 0M5 16c4-2 10-2 14 0"/></svg></div>
+        <h3>Indoor Air Quality</h3>
+        <p>Filtration and airflow improvements so the air in your home is as comfortable as the temperature.</p>
+        <a class="call-link" href="tel:+14696869806">Ask about options →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mike" id="mike">
+  <div class="wrap">
+    <div class="mike-art reveal">
+      <div class="inner">
+        <b>"Ask for Mike"</b>
+        <span>The name that shows up in review after review</span>
+      </div>
+    </div>
+    <div>
+      <div class="sec-kicker reveal" style="color:var(--cyan)">Why neighbors choose us</div>
+      <h2 class="sec-title reveal" style="color:#fff">A small shop with a big reputation</h2>
+      <blockquote class="reveal">"Mike was efficient, polite, and pleasant… he checked my AC units, proclaimed them good and that gave me a lot of relief."</blockquote>
+      <p class="reveal">Selective Air is a family-run, four-person HVAC crew based right here in Prosper. No call centers, no commission-driven techs — just people who treat your home like their own and explain everything in plain English.</p>
+      <p class="reveal">Reviewers keep saying the same things: same-day response, on-time arrival, thorough inspections, and zero pressure. That's the whole business model.</p>
+      <p class="who reveal">— don cline, Directorii review</p>
+      <p class="src reveal">5.0 · 31 REVIEWS ON DIRECTORII</p>
+      <div class="cta-row reveal" style="margin-top:26px">
+        <a class="btn-call" href="tel:+14696869806">📞 Call (469) 686-9806</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testi" id="reviews">
+  <div class="wrap">
+    <div class="sec-kicker reveal" style="text-align:center">Proof, in their words</div>
+    <h2 class="sec-title reveal" style="text-align:center">31 five-star reviews. Zero invented.</h2>
+    <p class="sec-sub reveal" style="text-align:center;margin-left:auto;margin-right:auto">Real customers, real quotes — from our site and from Directorii.</p>
+    <div class="slider reveal">
+      <div class="slides" id="slides">
+        <div class="slide"><div class="stars">★★★★★</div><p>"There is a reason Selective Air has all these 5 star reviews — they earn them! Super responsive, came out same day, on time as promised. Really friendly and knowledgeable and reasonably priced. I've found the HVAC company I will use from now on."</p><div class="who">Zindallas</div><div class="src">OUR WEBSITE · AUG 2025</div></div>
+        <div class="slide"><div class="stars">★★★★★</div><p>"Mike provides Exemplary Service! We had to replace a coil in one unit today. Mike communicated all aspects of the job. He was here to oversee each step."</p><div class="who">Terry Watson</div><div class="src">DIRECTORII</div></div>
+        <div class="slide"><div class="stars">★★★★★</div><p>"Before Selective Air came, our AC wasn't working properly and the temperature in our home was very unstable. They arrived right on time, checked the entire system thoroughly… their attitude was absolutely amazing — professional, friendly, and respectful."</p><div class="who">Ehsan Rafiei</div><div class="src">OUR WEBSITE · JUN 2025</div></div>
+        <div class="slide"><div class="stars">★★★★★</div><p>"I contacted Mike after hours and he arrived at my home in a timely manner. He provided outstanding service and is very knowledgeable of his trade."</p><div class="who">Bob Sherer</div><div class="src">DIRECTORII</div></div>
+        <div class="slide"><div class="stars">★★★★★</div><p>"He takes the time to thoroughly inspect the system, explain the issues in a way I could understand, and offer practical solutions without any pressure."</p><div class="who">Dan Ruxmohan</div><div class="src">OUR WEBSITE · JUL 2025</div></div>
+      </div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap">
+    <div class="sec-kicker reveal">Where we work</div>
+    <h2 class="sec-title reveal">Proudly serving Prosper &amp; North Texas</h2>
+    <p class="sec-sub reveal">Based at 830 Gray Wolf Dr in Prosper — and on the road across the corridor every day.</p>
+    <div class="towns reveal">
+      <span class="town">Prosper</span><span class="town">Frisco</span><span class="town">Celina</span><span class="town">McKinney</span><span class="town">Allen</span><span class="town">Little Elm</span><span class="town">Aubrey</span><span class="town">Plano</span><span class="town">Carrollton</span><span class="town">Coppell</span><span class="town">The Colony</span><span class="town">Argyle</span><span class="town">Flower Mound</span><span class="town">Southlake</span><span class="town">Roanoke</span><span class="town">Justin</span>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--ice)">
+  <div class="wrap" style="max-width:840px">
+    <div class="sec-kicker reveal">Good to know</div>
+    <h2 class="sec-title reveal">Questions, answered straight</h2>
+    <div style="margin-top:36px">
+      <div class="faq-item reveal"><button class="faq-q">How do I schedule a visit?<span class="pm">+</span></button><div class="faq-a"><p>Just call <a href="tel:+14696869806">(469) 686-9806</a>. You'll reach the actual crew — not a call center — and same-day appointments are common.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">What does a service call cost?<span class="pm">+</span></button><div class="faq-a"><p>Our service call is listed at $89 on Thumbtack, where customers also rate our response time at about 4 hours. Call for today's availability and exact pricing.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Do you work on all brands?<span class="pm">+</span></button><div class="faq-a"><p>Yes — we service, repair, and install all makes and models of residential heating and cooling equipment.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">What are your hours?<span class="pm">+</span></button><div class="faq-a"><p>Call <a href="tel:+14696869806">(469) 686-9806</a> — and yes, reviewers confirm Mike has shown up after hours when it mattered.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">How do I pay?<span class="pm">+</span></button><div class="faq-a"><p>Cash, check, credit card, Venmo, or Zelle — whatever's easiest for you.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>AC out? Heat acting up? Call the name your neighbors trust.</h2>
+    <p>Same-day service across Prosper and North Texas. One call reaches the actual crew.</p>
+    <a class="btn-dark" href="tel:+14696869806">📞 (469) 686-9806</a>
+    <div class="cta-note">* $89 service call as listed on Thumbtack</div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <h4>Selective Air LLC</h4>
+      <p>830 Gray Wolf Dr<br>Prosper, TX 75078-5121</p>
+    </div>
+    <div>
+      <h4>Call us</h4>
+      <p><a href="tel:+14696869806">(469) 686-9806</a><br>Hours: call for availability</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <p>AC repair &amp; installation<br>Heating repair &amp; installation<br>Maintenance · Indoor air quality</p>
+    </div>
+  </div>
+  <div class="foot-fine">© 2026 Selective Air LLC · 830 Gray Wolf Dr, Prosper, TX 75078-5121 · (469) 686-9806 · DEMO PREVIEW — concept site, not the live website.</div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+14696869806">📞 Call Selective Air — (469) 686-9806</a></div>
+
+<script>
+// Scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Animated counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,target=parseFloat(el.dataset.target),dec=parseInt(el.dataset.dec||0),t0=performance.now(),dur=1600;
+  (function step(t){const p=Math.min((t-t0)/dur,1),v=target*(1-Math.pow(1-p,3));el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(step)})(t0);
+}),{threshold:.5});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+// Dial needle sweep
+const dio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;dio.unobserve(e.target);
+  const n=document.getElementById('needle'),arc=document.getElementById('dialArc');
+  let a=-80;const t0=performance.now();
+  (function step(t){const p=Math.min((t-t0)/1600,1),e2=1-Math.pow(1-p,3);
+    a=-80+120*e2;n.setAttribute('transform','rotate('+a+' 130 130)');
+    arc.setAttribute('stroke-dashoffset',314-314*(e2*0.75));
+    if(p<1)requestAnimationFrame(step)})(t0);
+}),{threshold:.4});
+dio.observe(document.getElementById('dial'));
+// Ticker duplicate for seamless loop
+const tt=document.getElementById('tickerTrack');tt.innerHTML+=tt.innerHTML;
+// Testimonial slider
+const slides=document.getElementById('slides'),dots=document.getElementById('dots');let cur=0;
+const n=slides.children.length;
+for(let i=0;i<n;i++){const d=document.createElement('button');d.className='dot'+(i?'':' active');d.setAttribute('aria-label','Review '+(i+1));d.onclick=()=>go(i);dots.appendChild(d)}
+function go(i){cur=(i+n)%n;slides.style.transform='translateX(-'+cur*100+'%)';dots.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===cur))}
+setInterval(()=>go(cur+1),7000);
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(it=>{
+  const q=it.querySelector('.faq-q'),a=it.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open=it.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+</script>
+</body>
+</html>
