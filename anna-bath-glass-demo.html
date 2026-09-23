@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anna Bath &amp; Glass | Bath Glass, Windows &amp; Mirrors — Anna, TX — Demo Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --porcelain:#fbf9f5; --sand:#f3ecdd; --teal:#0d3136; --teal2:#14555c;
+  --aqua:#35c0b0; --aqua-soft:#d8f2ed; --coral:#ff7e5f; --ink:#23303a; --mut:#5f6f77;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--porcelain);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',serif}
+.demo-badge{position:fixed;top:14px;left:14px;z-index:2000;background:#c0392b;color:#fff;font:800 12px 'Outfit';letter-spacing:2px;padding:9px 18px;border-radius:30px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+/* NAV */
+nav{position:sticky;top:0;z-index:1000;background:rgba(251,249,245,.94);backdrop-filter:blur(10px);border-bottom:1px solid #e7dfce}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:13px 20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--teal)}
+.brand-mark{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--teal),var(--teal2));display:flex;align-items:center;justify-content:center;color:#fff;font:900 22px 'Fraunces';box-shadow:0 6px 16px rgba(13,49,54,.3)}
+.brand b{font:700 20px 'Fraunces';letter-spacing:.2px;display:block;line-height:1.1}
+.brand small{font:600 10px 'Outfit';letter-spacing:3px;color:var(--aqua);display:block}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px}
+.nav-links a:hover{color:var(--aqua)}
+.nav-call{background:var(--coral);color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;padding:11px 24px;border-radius:30px;transition:.2s;box-shadow:0 8px 20px rgba(255,126,95,.4)}
+.nav-call:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,126,95,.5)}
+@media(max-width:860px){.nav-links{display:none}}
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--teal) 0%,var(--teal2) 55%,#1a6f72 100%);color:#fff;padding:96px 20px 0;position:relative;overflow:hidden}
+.hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2}
+@media(max-width:920px){.hero-inner{grid-template-columns:1fr}}
+.eyebrow{color:var(--aqua);font-weight:700;font-size:13px;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:clamp(40px,5.2vw,64px);font-weight:900;line-height:1.06;color:#fff}
+.hero h1 em{color:var(--aqua);font-style:italic;font-weight:600}
+.hero p.lede{color:#cfe6e2;font-size:18px;margin:22px 0 32px;max-width:540px;font-weight:300}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn-call{background:var(--coral);color:#fff;text-decoration:none;font-weight:700;font-size:16.5px;padding:15px 34px;border-radius:30px;display:inline-flex;gap:10px;align-items:center;transition:.2s;box-shadow:0 10px 28px rgba(255,126,95,.45)}
+.btn-call:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(255,126,95,.55)}
+.btn-ghost{border:1px solid rgba(255,255,255,.4);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:14px 30px;border-radius:30px;transition:.2s}
+.btn-ghost:hover{border-color:var(--aqua);background:rgba(53,192,176,.12)}
+.hero-note{margin-top:26px;color:#9fc6c0;font-size:14px;font-style:italic;max-width:520px}
+/* wave art */
+.wave-art{position:relative;height:380px;display:flex;align-items:center;justify-content:center}
+.tile{position:absolute;border-radius:18px;backdrop-filter:blur(2px);border:1.5px solid rgba(255,255,255,.35);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.t1{width:200px;height:300px;left:8%;top:20px;background:linear-gradient(140deg,rgba(53,192,176,.35),rgba(53,192,176,.06));transform:rotate(-6deg)}
+.t2{width:170px;height:250px;left:44%;top:70px;background:linear-gradient(140deg,rgba(255,255,255,.22),rgba(255,255,255,.04));transform:rotate(4deg)}
+.t3{width:130px;height:200px;left:74%;top:30px;background:linear-gradient(140deg,rgba(255,126,95,.25),rgba(255,126,95,.05));transform:rotate(-3deg)}
+.wave-tag{position:absolute;background:rgba(251,249,245,.94);color:var(--teal);font-weight:700;font-size:13px;padding:10px 18px;border-radius:30px;box-shadow:0 10px 26px rgba(0,0,0,.25);z-index:3}
+.wt1{top:60px;right:6%}.wt2{bottom:60px;left:14%}.wt3{top:150px;left:38%}
+.hero-wave{display:block;width:100%;height:90px;margin-top:60px}
+/* CREDENTIALS band */
+.cred-band{background:var(--sand);padding:30px 20px;border-bottom:1px solid #e7dfce}
+.cred-inner{max-width:1180px;margin:0 auto;display:flex;gap:40px;flex-wrap:wrap;justify-content:center;text-align:center}
+.cred{font-weight:600;color:var(--teal);font-size:15px}
+.cred span{display:block;font-size:12px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-bottom:4px}
+/* SECTIONS */
+section{padding:88px 20px}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-eyebrow{color:var(--aqua);font-weight:700;font-size:13px;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px}
+.sec-title{font-size:clamp(32px,3.8vw,48px);font-weight:900;line-height:1.12;color:var(--teal);margin-bottom:16px}
+.sec-sub{color:var(--mut);font-size:17px;max-width:680px;margin-bottom:46px}
+/* TABS */
+.tab-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.tab-btn{border:2px solid #ddd3bd;background:#fff;color:var(--teal);font:600 15px 'Outfit';padding:13px 26px;border-radius:30px;cursor:pointer;transition:.22s}
+.tab-btn:hover{border-color:var(--aqua)}
+.tab-btn.active{background:var(--teal);border-color:var(--teal);color:#fff}
+.tab-panel{display:none;background:#fff;border:1px solid #e7dfce;border-radius:22px;padding:48px 44px;box-shadow:0 18px 50px rgba(13,49,54,.08)}
+.tab-panel.active{display:block;animation:fadein .35s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-size:30px;color:var(--teal);margin-bottom:14px}
+.tab-panel p{color:var(--mut);margin-bottom:22px;max-width:760px}
+.tab-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
+@media(max-width:700px){.tab-list{grid-template-columns:1fr}}
+.tab-list li{padding:12px 0 12px 34px;position:relative;color:var(--ink);font-weight:500}
+.tab-list li::before{content:"✓";position:absolute;left:4px;color:var(--aqua);font-weight:800}
+/* PROCESS */
+.process{background:var(--sand)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border-radius:20px;padding:40px 32px;transition:.3s;border:1px solid #e7dfce}
+.step:hover{transform:translateY(-8px);box-shadow:0 22px 48px rgba(13,49,54,.12)}
+.step .n{font:900 44px 'Fraunces';color:var(--aqua);margin-bottom:8px}
+.step h3{font-size:22px;color:var(--teal);margin-bottom:10px}
+.step p{color:var(--mut);font-size:15.5px}
+/* AREA band */
+.area{background:linear-gradient(140deg,var(--teal),var(--teal2));color:#fff;text-align:center}
+.area h2{font-size:clamp(30px,3.6vw,44px);color:#fff;margin-bottom:14px}
+.area h2 em{color:var(--aqua);font-style:italic}
+.area p{color:#cfe6e2;max-width:640px;margin:0 auto 8px;font-size:17px}
+/* WORD OF MOUTH */
+.wom{max-width:860px;margin:0 auto;background:#fff;border:2px dashed var(--aqua);border-radius:22px;padding:56px 44px;text-align:center;box-shadow:0 18px 50px rgba(13,49,54,.08)}
+.wom h2{font-size:clamp(26px,3vw,36px);color:var(--teal);margin-bottom:14px}
+.wom p{color:var(--mut);margin-bottom:26px;max-width:600px;margin-left:auto;margin-right:auto}
+/* FORM */
+.quote{background:var(--sand)}
+.form-card{background:#fff;border-radius:24px;padding:52px 48px;max-width:760px;margin:0 auto;box-shadow:0 24px 60px rgba(13,49,54,.1);border:1px solid #e7dfce}
+@media(max-width:640px){.form-card{padding:36px 24px}}
+.form-card h2{font-size:clamp(28px,3.4vw,40px);color:var(--teal);margin-bottom:10px}
+.form-card>p{color:var(--mut);margin-bottom:28px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:640px){.f-row{grid-template-columns:1fr}}
+.f-row input,.f-row select,.f-row textarea{width:100%;border:2px solid #e7dfce;border-radius:14px;padding:14px 16px;font:500 15px 'Outfit';color:var(--ink);background:var(--porcelain)}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{outline:none;border-color:var(--aqua)}
+.f-full{margin-bottom:16px}
+.f-full textarea{min-height:110px;resize:vertical}
+.btn-submit{background:var(--teal);color:#fff;border:none;font:700 17px 'Outfit';padding:16px 40px;border-radius:30px;cursor:pointer;transition:.2s;width:100%}
+.btn-submit:hover{background:var(--teal2);transform:translateY(-2px)}
+.f-confirm{display:none;background:var(--aqua-soft);border:2px solid var(--aqua);border-radius:16px;padding:24px;margin-top:20px;color:var(--teal);font-weight:600}
+.f-error{color:#c0392b;font-size:14px;font-weight:600;margin-bottom:12px;display:none}
+/* FAQ */
+.faq-item{background:#fff;border:1px solid #e7dfce;border-radius:16px;margin-bottom:14px;overflow:hidden;transition:.2s}
+.faq-item.open{border-color:var(--aqua);box-shadow:0 10px 30px rgba(53,192,176,.12)}
+.faq-q{width:100%;background:none;border:none;text-align:left;font:700 19px 'Fraunces';color:var(--teal);padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .pm{color:var(--coral);font-size:28px;transition:.25s;font-family:'Outfit';flex-shrink:0}
+.faq-item.open .pm{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 26px 24px;color:var(--mut)}
+/* FINAL */
+.final{background:linear-gradient(150deg,var(--teal),#1a6f72);color:#fff;text-align:center;padding:96px 20px}
+.final h2{font-size:clamp(32px,4.2vw,52px);color:#fff;margin-bottom:16px}
+.final h2 em{color:var(--aqua);font-style:italic}
+.final p{color:#cfe6e2;font-size:18px;margin-bottom:30px}
+.phone-big{font:900 clamp(30px,4vw,46px) 'Fraunces';color:#fff;text-decoration:none;display:block;margin-bottom:32px;letter-spacing:1px}
+.phone-big:hover{color:var(--aqua)}
+/* FOOTER */
+footer{background:var(--teal);color:#9fc6c0;padding:56px 20px 30px}
+.foot-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+footer h4{color:#fff;font:700 18px 'Fraunces';margin-bottom:16px}
+footer a{color:#cfe6e2;text-decoration:none}
+footer a:hover{color:var(--aqua)}
+footer p,footer li{font-size:15px;margin-bottom:8px;list-style:none}
+.foot-bottom{max-width:1180px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;text-align:center;color:#7ba8a2}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--coral);color:#fff;text-align:center;font:700 18px 'Outfit';padding:17px;text-decoration:none;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+@media(max-width:860px){.sticky-call{display:block}body{padding-bottom:62px}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top"><span class="brand-mark">A</span><span><b>Anna Bath &amp; Glass</b><small>ANNA · TEXAS</small></span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="nav-call" href="tel:+12147339369">📞 (214) 733-9369</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Bath Glass · Windows · Mirrors</div>
+      <h1>Anna's Glass Shop, <em>Crystal Clear.</em></h1>
+      <p class="lede">Window glass, bath and shower glass, mirrors, and window screens for Anna, Texas and the surrounding Collin County towns. One call, one local shop, one careful measurement.</p>
+      <div class="cta-row">
+        <a class="btn-call" href="tel:+12147339369">📞 Call (214) 733-9369</a>
+        <a class="btn-ghost" href="#services">See Services</a>
+      </div>
+      <p class="hero-note">A local glass and window shop at 408 Magnolia St, Anna — serving Anna and the Collin County towns around it.</p>
+    </div>
+    <div class="wave-art rv" aria-hidden="true">
+      <div class="tile t1"></div><div class="tile t2"></div><div class="tile t3"></div>
+      <span class="wave-tag wt1">✦ Shower &amp; Bath Glass</span>
+      <span class="wave-tag wt2">✦ Window Glass</span>
+      <span class="wave-tag wt3">✦ Mirrors</span>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 C360,100 1080,20 1440,60 L1440,90 L0,90 Z" fill="#f3ecdd"/></svg>
+</header>
+
+<div class="cred-band">
+  <div class="cred-inner">
+    <div class="cred"><span>Trade</span>Glass — Plate &amp; Window</div>
+    <div class="cred"><span>Home Base</span>408 Magnolia St, Anna TX</div>
+    <div class="cred"><span>Serving</span>Anna &amp; Collin County</div>
+    <div class="cred"><span>Contact</span><a href="tel:+12147339369" style="color:var(--teal)">(214) 733-9369</a></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-eyebrow rv">What we do</div>
+    <h2 class="sec-title rv">Glass Work for Bath, Windows &amp; More</h2>
+    <p class="sec-sub rv">Pick a service to see how we can help — every job measured on site and installed with care.</p>
+    <div class="tab-btns rv" role="tablist">
+      <button class="tab-btn active" data-tab="t1">Shower &amp; Bath Glass</button>
+      <button class="tab-btn" data-tab="t2">Window Installation &amp; Repair</button>
+      <button class="tab-btn" data-tab="t3">Mirrors &amp; Plate Glass</button>
+      <button class="tab-btn" data-tab="t4">Screens &amp; Window Treatments</button>
+    </div>
+    <div class="tab-panel active rv" id="t1">
+      <h3>Shower &amp; Bath Glass</h3>
+      <p>Bath glass is right in our name. Shower doors and bath glass measured to your bathroom, installed level, and sealed clean.</p>
+      <ul class="tab-list">
+        <li>Shower door &amp; enclosure glass</li>
+        <li>Custom-measured bath glass</li>
+        <li>Glass replacement for damaged panels</li>
+        <li>Local Anna shop</li>
+      </ul>
+      <a class="btn-call" href="tel:+12147339369">📞 Call for an estimate</a>
+    </div>
+    <div class="tab-panel" id="t2">
+      <h3>Window Installation &amp; Repair</h3>
+      <p>New window installs and residential glass replacement — cracked panes, foggy glass, and tired old windows made right.</p>
+      <ul class="tab-list">
+        <li>Residential window installation</li>
+        <li>Broken &amp; cracked glass replacement</li>
+        <li>Foggy double-pane glass swap-outs</li>
+        <li>Repair-first advice: fix what's fixable</li>
+      </ul>
+      <a class="btn-call" href="tel:+12147339369">📞 Call for an estimate</a>
+    </div>
+    <div class="tab-panel" id="t3">
+      <h3>Mirrors &amp; Plate Glass</h3>
+      <p>Custom-cut mirrors and plate glass for the jobs that need an exact fit — measured to the inch, finished clean.</p>
+      <ul class="tab-list">
+        <li>Custom-cut mirror work</li>
+        <li>Plate glass, cut to size</li>
+        <li>Exact measurements on every piece</li>
+        <li>Serving Anna &amp; Collin County</li>
+      </ul>
+      <a class="btn-call" href="tel:+12147339369">📞 Call for an estimate</a>
+    </div>
+    <div class="tab-panel" id="t4">
+      <h3>Screens &amp; Window Treatments</h3>
+      <p>Window screen repair and window treatment installation — the finishing details that make a house feel finished.</p>
+      <ul class="tab-list">
+        <li>Window screen install &amp; repair</li>
+        <li>Window treatment installation</li>
+        <li>Torn screens fixed or replaced</li>
+        <li>One local number: <a href="tel:+12147339369" style="color:var(--teal);font-weight:700">(214) 733-9369</a></li>
+      </ul>
+      <a class="btn-call" href="tel:+12147339369">📞 Call for an estimate</a>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-eyebrow rv">How it works</div>
+    <h2 class="sec-title rv">Measured Twice, Cut Once</h2>
+    <p class="sec-sub rv">Simple, local, no runaround.</p>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>Call &amp; Describe</h3><p>Call <a href="tel:+12147339369" style="color:var(--teal2);font-weight:700">(214) 733-9369</a> and tell us what broke, what needs measuring, or what you're planning. We'll talk it through.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>Measure &amp; Quote</h3><p>We measure carefully on site and give you a straight price — repair or replace, with the honest call on which makes sense.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>Install &amp; Enjoy</h3><p>Clean installation, level and secure, with the work area left tidy. Then you get back to enjoying the view.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="sec-eyebrow rv" style="color:var(--aqua)">Where we work</div>
+    <h2 class="rv">Proudly Based in Anna, <em>Serving Collin County.</em></h2>
+    <p class="rv">Our shop sits on Magnolia Street in Anna, Texas. We take on glass work in Anna and the Collin County towns around it — including Plano.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="wom rv">
+      <div class="sec-eyebrow">Word of mouth</div>
+      <h2>Happy With Our Work? Tell Your Neighbors.</h2>
+      <p>We're a local shop that runs on reputation. If we measured twice and cut once for you, leave us a review — it means everything to a small business like ours.</p>
+      <a class="btn-call" href="tel:+12147339369">📞 (214) 733-9369</a>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="form-card rv">
+      <div class="sec-eyebrow">Get a quote</div>
+      <h2>Request a Quote</h2>
+      <p>Tell us about your project and we'll call you back with a price. Or skip the form — <a href="tel:+12147339369" style="color:var(--teal2);font-weight:700">call (214) 733-9369</a>.</p>
+      <div class="f-error" id="fErr">Please fill in your name, phone, and a few words about the project.</div>
+      <div class="f-row">
+        <input type="text" id="fName" placeholder="Your name" aria-label="Your name">
+        <input type="tel" id="fPhone" placeholder="Your phone" aria-label="Your phone">
+      </div>
+      <div class="f-row">
+        <select id="fType" aria-label="Project type">
+          <option>Shower / bath glass</option>
+          <option>Window installation or repair</option>
+          <option>Mirror or plate glass</option>
+          <option>Screens / window treatments</option>
+          <option>Something else</option>
+        </select>
+        <input type="text" id="fTown" placeholder="Town (Anna, Plano, …)" aria-label="Town">
+      </div>
+      <div class="f-full">
+        <textarea id="fMsg" placeholder="Tell us about the project…" aria-label="Project details"></textarea>
+      </div>
+      <button class="btn-submit" id="fSubmit">Request My Estimate</button>
+      <div class="f-confirm" id="fOk">✓ Thanks — request received. We'll call you back at the number you gave. (Demo preview — in the live site this goes straight to the shop.)</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:20px">
+  <div class="wrap" style="max-width:840px">
+    <div class="sec-eyebrow rv">Good to know</div>
+    <h2 class="sec-title rv">Common Questions</h2>
+    <div class="rv" style="margin-top:30px">
+      <div class="faq-item"><button class="faq-q">Where are you located?<span class="pm">+</span></button><div class="faq-a"><p>Our shop is at 408 Magnolia St, Anna, TX 75409. We serve Anna and the surrounding Collin County towns, including Plano.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you do shower doors?<span class="pm">+</span></button><div class="faq-a"><p>Yes — bath glass is in our name. Call <a href="tel:+12147339369">(214) 733-9369</a>, describe your bathroom, and we'll talk through measuring and pricing.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can you replace a broken window pane?<span class="pm">+</span></button><div class="faq-a"><p>Yes — residential glass replacement is one of our core services. We'll look at it and give you the honest call on repair vs. replacement.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How do I get a price?<span class="pm">+</span></button><div class="faq-a"><p>Call <a href="tel:+12147339369">(214) 733-9369</a> or use the estimate form above. Straightforward pricing, no surprises.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Which towns do you serve?<span class="pm">+</span></button><div class="faq-a"><p>Anna and the Collin County towns around it, including Plano.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="final">
+  <div class="wrap">
+    <h2 class="rv">Broken Glass? Foggy Windows? <em>Let's Fix It.</em></h2>
+    <p class="rv">One call to Anna Bath &amp; Glass — Anna's local glass and window shop.</p>
+    <a class="phone-big rv" href="tel:+12147339369">(214) 733-9369</a>
+    <a class="btn-call rv" href="tel:+12147339369">📞 Tap to Call Now</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Anna Bath &amp; Glass</h4>
+      <p>Bath glass, windows, mirrors &amp; screens — Anna, Texas.</p>
+      <p><a href="tel:+12147339369">(214) 733-9369</a></p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <p>408 Magnolia St<br>Anna, TX 75409</p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Call for hours:<br><a href="tel:+12147339369">(214) 733-9369</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom">Demo preview — not the live business website. Serving Anna &amp; Collin County, TX.</div>
+</footer>
+
+<a class="sticky-call" href="tel:+12147339369">📞 Call (214) 733-9369 — Get an Estimate</a>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+    document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});
+    btn.classList.add('active');
+    document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
+  });
+});
+document.querySelectorAll('.faq-item').forEach(function(item){
+  var q=item.querySelector('.faq-q');
+  q.addEventListener('click',function(){
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');var a=item.querySelector('.faq-a');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+document.getElementById('fSubmit').addEventListener('click',function(){
+  var n=document.getElementById('fName').value.trim(),
+      p=document.getElementById('fPhone').value.trim(),
+      m=document.getElementById('fMsg').value.trim(),
+      err=document.getElementById('fErr'), ok=document.getElementById('fOk');
+  if(!n||!p||!m){err.style.display='block';ok.style.display='none';return}
+  err.style.display='none';ok.style.display='block';
+  document.getElementById('fSubmit').disabled=true;
+});
+</script>
+</body>
+</html>
