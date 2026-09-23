@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S&amp;G Roofing LLC | Aubrey, TX Roof Repair &amp; Replacement</title>
+<meta name="description" content="S&G Roofing LLC — Aubrey, TX roofing: honest repairs, full replacements, and detailed written estimates. Call (940) 305-6779.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1B2D; --navy2:#16263F; --steel:#33415C;
+  --orange:#F2641B; --orange-deep:#D14F0E; --hazard:#FFC53D;
+  --concrete:#EEF1F5; --white:#FFFFFF; --ink:#1B2432; --muted:#5B6678;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--concrete);line-height:1.62;overflow-x:hidden}
+h1,h2,h3,.cond{font-family:'Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:.01em}
+/* ---------- demo badge ---------- */
+.demo-badge{position:fixed;top:14px;left:14px;z-index:2000;background:#111;color:#fff;font-size:11px;letter-spacing:.2em;font-weight:700;padding:9px 16px;border-radius:999px;text-transform:uppercase;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.demo-badge span{color:var(--hazard)}
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:1000;background:rgba(15,27,45,.96);backdrop-filter:blur(8px);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand-mark{width:46px;height:46px;flex:none;background:linear-gradient(135deg,var(--orange),var(--orange-deep));border-radius:10px;display:grid;place-items:center}
+.brand-name{font-weight:800;font-size:1.55rem;line-height:1;color:#fff}
+.brand-name small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.6rem;letter-spacing:.24em;color:var(--hazard);text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;gap:28px;font-weight:600;font-size:.95rem}
+.nav-links a{text-decoration:none;color:#DDE4EE}
+.nav-links a:hover{color:var(--hazard)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;font-weight:700;padding:13px 26px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;font-size:1rem;font-family:'Inter',sans-serif;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 8px 22px rgba(242,100,27,.4)}
+.btn:hover{transform:translateY(-2px);background:var(--orange-deep)}
+.btn.dark{background:var(--navy);box-shadow:0 8px 22px rgba(15,27,45,.35)}
+.btn.dark:hover{background:var(--navy2)}
+.nav-cta{padding:10px 20px;font-size:.9rem}
+@media(max-width:880px){.nav-links{display:none}}
+/* ---------- hazard stripe ---------- */
+.hazard{height:10px;background:repeating-linear-gradient(-45deg,var(--hazard) 0 18px,var(--navy) 18px 36px)}
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(1000px 480px at 80% -10%,#20365A 0%,transparent 60%),var(--navy);color:#fff;overflow:hidden}
+.hero-inner{max-width:1200px;margin:0 auto;padding:84px 22px 76px;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-top:56px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(255,197,61,.12);border:1px solid rgba(255,197,61,.45);color:var(--hazard);font-weight:700;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:9px 17px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.9rem,6vw,4.6rem);font-weight:800;line-height:1.02;color:#fff;margin-bottom:20px;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--hazard)}
+.hero p.lead{font-size:1.12rem;color:#C4CEDF;max-width:33rem;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
+.hero-proof{display:flex;gap:26px;flex-wrap:wrap}
+.proof-item{display:flex;align-items:center;gap:10px;font-size:.93rem;font-weight:600;color:#E7ECF5}
+.proof-item .tick{width:30px;height:30px;border-radius:50%;background:rgba(255,197,61,.15);border:1px solid rgba(255,197,61,.5);display:grid;place-items:center;color:var(--hazard);font-weight:800}
+/* hero card */
+.hero-card{background:var(--white);color:var(--ink);border-radius:20px;padding:34px 32px;box-shadow:0 30px 70px rgba(0,0,0,.45);position:relative;overflow:hidden}
+.hero-card::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(-45deg,var(--hazard) 0 18px,var(--navy) 18px 36px)}
+.hero-card h3{font-size:1.7rem;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:6px}
+.hero-card p.sub{color:var(--muted);font-size:.95rem;margin-bottom:20px}
+.est-list{list-style:none;margin-bottom:24px}
+.est-list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed #D9E0EA;font-size:.95rem}
+.est-list li:last-child{border:none}
+.est-list .n{flex:none;width:26px;height:26px;border-radius:8px;background:var(--navy);color:var(--hazard);font-family:'Barlow Condensed';font-weight:700;display:grid;place-items:center;font-size:1rem}
+.hero-card .btn{width:100%;justify-content:center;font-size:1.05rem}
+.hero-card .alt{display:block;text-align:center;margin-top:12px;color:var(--steel);font-size:.9rem}
+.hero-card .alt a{color:var(--orange-deep);font-weight:700}
+/* ---------- section scaffolding ---------- */
+section{padding:78px 0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+.kicker{font-family:'Barlow Condensed';font-weight:700;color:var(--orange-deep);letter-spacing:.22em;text-transform:uppercase;font-size:.95rem;margin-bottom:10px}
+h2.sec-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--navy);text-transform:uppercase;line-height:1.05;margin-bottom:14px}
+.sec-sub{color:var(--muted);max-width:44rem;font-size:1.05rem;margin-bottom:44px}
+/* ---------- services tabs ---------- */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tab-btn{font-family:'Barlow Condensed';font-weight:700;font-size:1.05rem;letter-spacing:.04em;padding:12px 26px;border-radius:10px;border:2px solid #CBD4E2;background:#fff;color:var(--steel);cursor:pointer;transition:all .2s;text-transform:uppercase}
+.tab-btn.active{background:var(--navy);border-color:var(--navy);color:var(--hazard)}
+.tab-panel{display:none;background:#fff;border-radius:18px;padding:40px 36px;box-shadow:0 18px 44px rgba(15,27,45,.10);grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.tab-panel.active{display:grid}
+@media(max-width:800px){.tab-panel.active{grid-template-columns:1fr;padding:28px 22px}}
+.tab-panel h3{font-size:1.9rem;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:14px}
+.tab-panel p{color:var(--muted);margin-bottom:18px}
+.tab-panel ul{list-style:none}
+.tab-panel ul li{padding:9px 0 9px 30px;position:relative;font-weight:500;color:var(--ink)}
+.tab-panel ul li::before{content:"✓";position:absolute;left:4px;color:var(--orange-deep);font-weight:800}
+.tab-art{background:linear-gradient(135deg,var(--navy2),var(--steel));border-radius:14px;min-height:250px;display:grid;place-items:center;color:var(--hazard);overflow:hidden;position:relative}
+.tab-art svg{width:78%;height:auto}
+/* ---------- estimate section ---------- */
+.estimate{background:var(--navy);color:#fff}
+.estimate h2.sec-title{color:#fff}
+.estimate .sec-sub{color:#B9C4D8}
+.est-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+@media(max-width:900px){.est-grid{grid-template-columns:1fr}}
+.checklist{background:#fff;border-radius:18px;padding:34px 30px;color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.checklist h3{font-size:1.6rem;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:8px}
+.checklist p.sub{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+.check-item{display:flex;gap:13px;align-items:flex-start;padding:13px 14px;border-radius:10px;cursor:pointer;border:1px solid #E2E8F1;margin-bottom:10px;transition:background .2s,border-color .2s;user-select:none}
+.check-item:hover{border-color:var(--orange)}
+.check-item .box{flex:none;width:24px;height:24px;border-radius:7px;border:2px solid #AEB9CC;display:grid;place-items:center;color:#fff;font-size:.85rem;font-weight:800;transition:all .2s;margin-top:2px}
+.check-item.done{background:#FFF6EE;border-color:var(--orange)}
+.check-item.done .box{background:var(--orange);border-color:var(--orange)}
+.check-item strong{display:block;font-size:.97rem}
+.check-item small{color:var(--muted);font-size:.86rem}
+.est-copy h3{font-size:1.9rem;font-weight:700;color:var(--hazard);text-transform:uppercase;margin-bottom:16px}
+.est-copy p{color:#C4CEDF;margin-bottom:16px}
+.est-copy .btn{margin-top:10px}
+/* ---------- area ---------- */
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.area-card{background:#fff;border-radius:14px;padding:26px 22px;box-shadow:0 12px 30px rgba(15,27,45,.08);transition:transform .25s,box-shadow .25s;border-top:5px solid var(--orange)}
+.area-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(15,27,45,.16)}
+.area-card h3{font-size:1.35rem;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:8px}
+.area-card p{color:var(--muted);font-size:.94rem}
+/* ---------- faq ---------- */
+.faq-item{background:#fff;border-radius:12px;margin-bottom:12px;box-shadow:0 8px 22px rgba(15,27,45,.07);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-size:1.05rem;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif}
+.faq-q .plus{flex:none;width:30px;height:30px;border-radius:50%;background:var(--concrete);display:grid;place-items:center;font-size:1.2rem;color:var(--orange-deep);transition:transform .3s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--orange);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted)}
+/* ---------- CTA band ---------- */
+.cta-band{background:linear-gradient(120deg,var(--orange) 0%,var(--orange-deep) 100%);color:#fff;text-align:center;padding:70px 22px}
+.cta-band h2{font-size:clamp(2.1rem,4.4vw,3.2rem);font-weight:800;text-transform:uppercase;margin-bottom:14px;color:#fff}
+.cta-band p{font-size:1.1rem;max-width:36rem;margin:0 auto 28px;color:#FFF3E8}
+.big-tel{display:inline-block;font-family:'Barlow Condensed';font-weight:800;font-size:clamp(2rem,5vw,3.4rem);color:#fff;text-decoration:none;letter-spacing:.02em;background:rgba(0,0,0,.22);padding:14px 38px;border-radius:16px;border:2px dashed rgba(255,255,255,.55)}
+.big-tel:hover{background:rgba(0,0,0,.32)}
+/* ---------- footer ---------- */
+footer{background:var(--navy);color:#B9C4D8;padding:52px 0 34px}
+.foot-grid{max-width:1200px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr}}
+footer h4{font-family:'Barlow Condensed';font-size:1.2rem;font-weight:700;color:#fff;text-transform:uppercase;margin-bottom:14px;letter-spacing:.06em}
+footer p,footer a{font-size:.95rem;color:#B9C4D8;text-decoration:none}
+footer a:hover{color:var(--hazard)}
+.foot-bottom{max-width:1200px;margin:36px auto 0;padding:18px 22px 0;border-top:1px solid #22344F;font-size:.8rem;color:#7E8CA3;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* ---------- sticky mobile call ---------- */
+.sticky-call{display:none;position:fixed;bottom:14px;left:14px;right:14px;z-index:1500;background:var(--orange);color:#fff;font-weight:800;font-size:1.1rem;text-align:center;padding:16px;border-radius:14px;text-decoration:none;box-shadow:0 12px 32px rgba(209,79,14,.55)}
+@media(max-width:760px){.sticky-call{display:block}body{padding-bottom:76px}}
+/* ---------- scroll reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo <span>Preview</span> — Not the live site</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 11.5 12 4l9 7.5" stroke="#0F1B2D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 10.5V20h13v-9.5" stroke="#0F1B2D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-name">S&amp;G Roofing<small>LLC · Aubrey, TX</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#estimate">Estimates</a>
+      <a href="#area">Service Area</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn nav-cta" href="tel:+19403056779">Call (940) 305-6779</a>
+  </div>
+</nav>
+<div class="hazard"></div>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Aubrey, Texas Roofing Contractor</span>
+      <h1>Roof Repair &amp; Replacement, <em>Quoted in Writing</em></h1>
+      <p class="lead">S&amp;G Roofing handles the full job — minor repairs and complete roof replacements across Aubrey and North Texas, with detailed, itemized estimates so you know exactly what the investment covers before a single shingle moves.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+19403056779">Call for a Free Estimate</a>
+        <a class="btn dark" href="#estimate">What's in an Estimate</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><span class="tick">✓</span> Detailed written estimates</div>
+        <div class="proof-item"><span class="tick">✓</span> Repairs &amp; full replacements</div>
+        <div class="proof-item"><span class="tick">✓</span> Serving Aubrey &amp; North Texas</div>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <h3>Free Roof Inspection</h3>
+      <p class="sub">One call starts with a real inspection — not a sales pitch.</p>
+      <ul class="est-list">
+        <li><span class="n">1</span> We inspect the roof, decking, flashing &amp; ventilation.</li>
+        <li><span class="n">2</span> You get a detailed, line-by-line written estimate.</li>
+        <li><span class="n">3</span> Repairs or replacement, scheduled on your timeline.</li>
+      </ul>
+      <a class="btn" href="tel:+19403056779">Call (940) 305-6779</a>
+      <span class="alt">2340 Copal Dr, Aubrey, TX 76227 · <a href="#faq">Questions? Read the FAQ</a></span>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">What we do</div>
+      <h2 class="sec-title">Roofing Services</h2>
+      <p class="sec-sub">From a single missing shingle to a full tear-off, every job gets the same treatment: documented, itemized, and built to stand up to North Texas weather.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab-btn active" data-tab="t-repair">Roof Repair</button>
+      <button class="tab-btn" data-tab="t-replace">Full Replacement</button>
+      <button class="tab-btn" data-tab="t-storm">Storm Response</button>
+    </div>
+    <div class="tab-panel active reveal" id="t-repair">
+      <div>
+        <h3>Roof Repair</h3>
+        <p>Leaks, missing shingles, worn flashing, wind damage — small problems get honest fixes before they become big ones.</p>
+        <ul>
+          <li>Leak detection &amp; targeted repair</li>
+          <li>Shingle replacement &amp; color matching</li>
+          <li>Flashing repair at chimneys, valleys &amp; walls</li>
+          <li>Deck &amp; underlayment checks</li>
+        </ul>
+      </div>
+      <div class="tab-art"><svg viewBox="0 0 200 150" fill="none"><path d="M20 90 100 30l80 60" stroke="#FFC53D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><rect x="45" y="90" width="110" height="45" fill="#F2641B" opacity=".25" stroke="#FFC53D" stroke-width="3"/><path d="M60 60l14 8m20-24l14 8m20-24l14 8" stroke="#F2641B" stroke-width="5" stroke-linecap="round"/></svg></div>
+    </div>
+    <div class="tab-panel" id="t-replace">
+      <div>
+        <h3>Full Roof Replacement</h3>
+        <p>A complete re-roof, scoped line by line — so the final number never surprises you.</p>
+        <ul>
+          <li>Tear-off &amp; full deck inspection</li>
+          <li>New underlayment &amp; flashing</li>
+          <li>Proper ventilation — the part most bids skip</li>
+          <li>Written estimate covering the whole investment</li>
+        </ul>
+      </div>
+      <div class="tab-art"><svg viewBox="0 0 200 150" fill="none"><path d="M15 100 100 25l85 75" stroke="#FFC53D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 100h120" stroke="#F2641B" stroke-width="6" stroke-linecap="round"/><rect x="85" y="60" width="30" height="40" fill="#F2641B" opacity=".3" stroke="#FFC53D" stroke-width="3"/></svg></div>
+    </div>
+    <div class="tab-panel" id="t-storm">
+      <div>
+        <h3>Storm Response</h3>
+        <p>Hail and high wind are a fact of life in Denton County. We document the damage and help you understand the claim process.</p>
+        <ul>
+          <li>Hail &amp; wind damage inspections</li>
+          <li>Photo documentation for insurance</li>
+          <li>Emergency stop-the-water repairs</li>
+          <li>Clear scope you can hand to your adjuster</li>
+        </ul>
+      </div>
+      <div class="tab-art"><svg viewBox="0 0 200 150" fill="none"><path d="M100 20l18 34h-36z" fill="#FFC53D"/><path d="M95 60l-14 26h9l-8 20 24-30h-10l10-16z" fill="#F2641B"/><path d="M30 120h140" stroke="#FFC53D" stroke-width="6" stroke-linecap="round"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="estimate" id="estimate">
+  <div class="wrap">
+    <div class="est-grid">
+      <div class="reveal">
+        <div class="kicker" style="color:var(--hazard)">The S&amp;G difference</div>
+        <h2 class="sec-title">A Real Estimate, Not a Number on a Napkin</h2>
+        <p class="sec-sub">Roofing projects are more than shingle replacement. Tap each item to see what a detailed S&amp;G estimate covers.</p>
+        <div class="checklist">
+          <h3>Estimate Checklist</h3>
+          <p class="sub">Tap to check — this is what "detailed" looks like.</p>
+          <div class="check-item"><span class="box">✓</span><div><strong>Roof deck condition</strong><small>Soft or damaged decking found before the new roof goes on — not after.</small></div></div>
+          <div class="check-item"><span class="box">✓</span><div><strong>Insulation &amp; ventilation</strong><small>Attic airflow checked — the #1 cause of premature roof failure in Texas heat.</small></div></div>
+          <div class="check-item"><span class="box">✓</span><div><strong>Flashing &amp; valleys</strong><small>Chimneys, walls, and valleys — where North Texas roofs actually leak.</small></div></div>
+          <div class="check-item"><span class="box">✓</span><div><strong>Full cost picture</strong><small>Materials, labor, and timeline in writing — no mid-job surprises.</small></div></div>
+          <div class="check-item"><span class="box">✓</span><div><strong>Project timeline</strong><small>Clear start-to-finish schedule with communication at every stage.</small></div></div>
+        </div>
+      </div>
+      <div class="est-copy reveal">
+        <h3>Why Detail Matters</h3>
+        <p>Most roofing bids quote a price. S&amp;G quotes the whole picture: the decking underneath, the insulation and ventilation that protect the investment, and a timeline you can plan around.</p>
+        <p>That transparency is deliberate. When you can see every line of the investment, you can make a decision based on your home — not on pressure.</p>
+        <p>Based in Aubrey, serving homeowners across North Texas.</p>
+        <a class="btn" href="tel:+19403056779">Get Your Detailed Estimate — (940) 305-6779</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Where we work</div>
+      <h2 class="sec-title">Proudly Serving Aubrey &amp; North Texas</h2>
+      <p class="sec-sub">Headquartered at 2340 Copal Dr in Aubrey — a local crew, not a storm-chaser passing through.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card reveal"><h3>Aubrey</h3><p>Home base. Repairs, replacements, and inspections across the 76227.</p></div>
+      <div class="area-card reveal"><h3>Denton County</h3><p>Storm-season hail response and full re-roofs county-wide.</p></div>
+      <div class="area-card reveal"><h3>North Texas</h3><p>Residential roofing services across the greater North Texas area.</p></div>
+      <div class="area-card reveal"><h3>Insurance Support</h3><p>Documented inspections and written scopes for claim conversations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">Good to know</div>
+      <h2 class="sec-title">Roofing FAQ</h2>
+      <p class="sec-sub">Straight answers before you call.</p>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-q">Can my roof be repaired, or does it need a full replacement?<span class="plus">+</span></button>
+        <div class="faq-a"><p>It depends on age and condition. Isolated damage — missing shingles, a flashing failure, one bad valley — can usually be repaired. Widespread wear, multiple leaks, or an aging roof usually means replacement is the smarter investment. A real inspection tells you which.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does a detailed estimate include?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Every line of the job: materials, labor, decking repairs, ventilation work, and the project timeline — in writing, before anything starts. If a bid can't show you that detail, it isn't detailed.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you help with insurance claims after hail?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We document the damage with photos and provide a written scope you can hand to your adjuster — the same documentation any claim conversation needs.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I get started?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Call <a href="tel:+19403056779" style="color:var(--orange-deep);font-weight:700">(940) 305-6779</a>. We'll schedule an inspection, walk the roof, and put the detailed estimate in your hands.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Your Roof, Quoted Right</h2>
+  <p>Call S&amp;G Roofing for a detailed, written estimate — repairs or full replacement, Aubrey and North Texas.</p>
+  <a class="big-tel" href="tel:+19403056779">(940) 305-6779</a>
+</div>
+
+<div class="hazard"></div>
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>S&amp;G Roofing LLC</h4>
+      <p>2340 Copal Dr<br>Aubrey, TX 76227</p>
+      <p style="margin-top:10px"><a href="tel:+19403056779" style="font-weight:700;color:var(--hazard)">(940) 305-6779</a></p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <p>Roof repair<br>Full roof replacement<br>Storm damage response<br>Detailed written estimates</p>
+    </div>
+    <div>
+      <h4>Service Area</h4>
+      <p>Aubrey, TX — home base<br>Denton County<br>North Texas</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 S&amp;G Roofing LLC — Demo preview. Not the live site.</span>
+    <span><a href="tel:+19403056779">Call (940) 305-6779</a></span>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+19403056779">📞 Call S&amp;G Roofing — (940) 305-6779</a>
+
+<script>
+// sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+// service tabs
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.tab).classList.add('active');
+}));
+// interactive estimate checklist
+document.querySelectorAll('.check-item').forEach(i=>i.addEventListener('click',()=>i.classList.toggle('done')));
+// faq accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'),a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
