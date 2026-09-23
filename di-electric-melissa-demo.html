@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D&amp;I Electric LLC | Melissa, TX Electricians — Commercial &amp; Residential</title>
+<meta name="description" content="D&I Electric LLC — Melissa, TX electrical contractor. Commercial remodels, panel upgrades, troubleshooting, new circuits. Call (469) 826-9773.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFAF6; --paper2:#F1F0E9; --ink:#0B1E33; --ink2:#33475F;
+  --cyan:#0891B2; --cyan-bright:#06B6D4; --orange:#F25C05; --line:#D9D6C8;
+  --card:#FFFFFF; --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;
+  background-image:linear-gradient(rgba(11,30,51,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(11,30,51,.045) 1px,transparent 1px);
+  background-size:34px 34px}
+h1,h2,h3,.grotesk{font-family:'Space Grotesk',sans-serif;line-height:1.08;letter-spacing:-.01em}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit}
+/* ---------- demo badge ---------- */
+.demo-badge{position:fixed;top:14px;left:14px;z-index:2000;background:var(--ink);color:#fff;font-size:11px;letter-spacing:.18em;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(11,30,51,.35);text-transform:uppercase}
+.demo-badge span{color:var(--cyan-bright)}
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:1000;background:rgba(250,250,246,.92);backdrop-filter:blur(12px);border-bottom:2px solid var(--ink);transition:box-shadow .3s}
+.nav-inner{max-width:1180px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:46px;height:46px;border-radius:12px;background:var(--ink);display:grid;place-items:center;flex:none}
+.brand-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.3rem;line-height:1.05}
+.brand-name small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.62rem;letter-spacing:.22em;color:var(--cyan);text-transform:uppercase}
+.nav-links{display:flex;gap:24px;font-weight:600;font-size:.93rem}
+.nav-links a{text-decoration:none;color:var(--ink2);border-bottom:2px solid transparent;padding-bottom:2px;transition:all .2s}
+.nav-links a:hover{color:var(--cyan);border-bottom-color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;font-weight:700;padding:13px 28px;border-radius:12px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:4px 4px 0 var(--ink);font-family:'Space Grotesk',sans-serif}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn.cyan{background:var(--cyan)}
+.btn.ghost{background:var(--card);color:var(--ink)}
+.nav-cta{padding:9px 20px}
+@media(max-width:880px){.nav-links{display:none}}
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:2px solid var(--ink)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:78px 22px 70px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
+@media(max-width:920px){.hero-inner{grid-template-columns:1fr;padding-top:52px}}
+.tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;background:var(--ink);color:#7EE7F5;padding:8px 16px;border-radius:999px;margin-bottom:20px}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.2rem);font-weight:700;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--cyan);position:relative}
+.hero p.lead{font-size:1.1rem;color:var(--ink2);max-width:32rem;margin-bottom:28px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero-meta{display:flex;gap:24px;flex-wrap:wrap;font-size:.92rem;font-weight:600;color:var(--ink2)}
+.hero-meta .mono{font-size:.85rem}
+/* blueprint card */
+.blue-card{background:var(--ink);color:#EDF6FA;border-radius:20px;padding:34px 30px;position:relative;overflow:hidden;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--cyan)}
+.blue-card::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+.blue-card>*{position:relative}
+.bc-tag{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:#7EE7F5;margin-bottom:12px}
+.bc-title{font-size:1.8rem;font-weight:700;margin-bottom:8px}
+.bc-sub{color:#B9CDDC;font-size:.95rem;margin-bottom:22px}
+.bc-list{list-style:none;margin-bottom:24px}
+.bc-list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.95rem;color:#EDF6FA}
+.bc-list li:last-child{border:none}
+.bc-ic{flex:none;width:30px;height:30px;border-radius:9px;background:rgba(6,182,212,.22);display:grid;place-items:center;color:#7EE7F5;font-weight:700}
+.bc-phone{display:block;text-align:center;background:var(--orange);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;letter-spacing:.02em;padding:15px;border-radius:12px;text-decoration:none;border:2px solid #fff;transition:transform .2s}
+.bc-phone:hover{transform:scale(1.02)}
+.bc-note{text-align:center;font-size:.82rem;color:#B9CDDC;margin-top:12px;font-family:'IBM Plex Mono',monospace}
+/* ---------- stat band ---------- */
+.band{background:var(--ink);color:#fff;padding:38px 22px;border-bottom:2px solid var(--ink)}
+.band-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+@media(max-width:700px){.band-inner{grid-template-columns:repeat(2,1fr)}}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:2.6rem;font-weight:700;color:#7EE7F5;line-height:1}
+.stat-label{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:#B9CDDC;margin-top:6px}
+.stat-src{display:block;font-size:.68rem;color:#7A93AB;margin-top:4px;font-family:'IBM Plex Mono',monospace}
+/* ---------- sections ---------- */
+section.block{padding:80px 22px}
+.wrap{max-width:1140px;margin:0 auto}
+.sec-head{max-width:680px;margin:0 auto 48px}
+.sec-head.center{text-align:center}
+.sec-head .kicker{font-family:'IBM Plex Mono',monospace;color:var(--cyan);font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:.76rem;margin-bottom:12px}
+.sec-head h2{font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:700;margin-bottom:14px}
+.sec-head p{color:var(--ink2);font-size:1.04rem}
+/* ---------- service tabs ---------- */
+.svc-tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.svc-btn{border:2px solid var(--ink);background:var(--card);color:var(--ink);font-weight:700;padding:11px 22px;border-radius:12px;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:.98rem;transition:all .22s;box-shadow:3px 3px 0 var(--line)}
+.svc-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.svc-btn.active{background:var(--ink);color:#7EE7F5;border-color:var(--ink);box-shadow:3px 3px 0 var(--cyan)}
+.svc-panels{max-width:880px;margin:0 auto}
+.svc-panel{display:none;background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);padding:36px 34px;box-shadow:6px 6px 0 var(--line)}
+.svc-panel.active{display:block;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.svc-panel h3{font-size:1.65rem;margin-bottom:10px}
+.svc-panel h3 span{color:var(--cyan)}
+.svc-panel p{color:var(--ink2);margin-bottom:18px}
+.svc-panel ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+@media(max-width:600px){.svc-panel ul{grid-template-columns:1fr}}
+.svc-panel li{padding:10px 12px 10px 40px;position:relative;font-weight:600;background:var(--paper);border:1.5px solid var(--line);border-radius:10px;font-size:.94rem}
+.svc-panel li::before{content:"▸";position:absolute;left:14px;color:var(--orange);font-weight:700}
+/* ---------- permit proof ---------- */
+.proof{background:var(--paper2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.permit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:820px){.permit-grid{grid-template-columns:1fr}}
+.permit{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:24px;transition:transform .25s,box-shadow .25s;box-shadow:4px 4px 0 var(--line)}
+.permit:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--cyan)}
+.permit .p-num{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;color:var(--cyan);text-transform:uppercase;margin-bottom:8px}
+.permit h3{font-size:1.2rem;margin-bottom:6px}
+.permit .p-loc{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--ink2);margin-bottom:10px}
+.permit p{font-size:.93rem;color:var(--ink2)}
+.permit .p-status{display:inline-block;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:#E6F9EC;color:#166534;border:1.5px solid #166534;padding:4px 10px;border-radius:999px}
+.attr-note{font-size:.8rem;color:var(--ink2);margin-top:22px;font-family:'IBM Plex Mono',monospace}
+/* ---------- credentials band ---------- */
+.cred{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:820px){.cred{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.cred-card{min-width:78%;scroll-snap-align:center}}
+.cred-card{background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);padding:30px 26px;box-shadow:5px 5px 0 var(--line);transition:transform .25s,box-shadow .25s}
+.cred-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--orange)}
+.cred-card .c-lic{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.12em;color:var(--cyan);text-transform:uppercase;margin-bottom:10px}
+.cred-card h3{font-size:1.35rem;margin-bottom:8px}
+.cred-card p{color:var(--ink2);font-size:.93rem}
+/* ---------- areas ---------- */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+@media(max-width:820px){.area-grid{grid-template-columns:1fr}}
+.area-card{background:var(--ink);color:#EDF6FA;border-radius:var(--radius);padding:36px 32px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--cyan);position:relative;overflow:hidden}
+.area-card::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+.area-card>*{position:relative}
+.area-card h3{font-size:1.6rem;margin-bottom:10px;color:#7EE7F5}
+.area-card p{color:#B9CDDC;margin-bottom:18px}
+.area-list{display:flex;flex-wrap:wrap;gap:10px}
+.area-pill{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:999px;font-weight:600;font-size:.9rem;transition:all .22s}
+.area-pill:hover{border-color:#7EE7F5;color:#7EE7F5;transform:translateY(-3px)}
+.hq-card{background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);padding:36px 32px;box-shadow:5px 5px 0 var(--line)}
+.hq-card h3{font-size:1.6rem;margin-bottom:10px}
+.hq-card p{color:var(--ink2);margin-bottom:8px}
+.hq-card .mono{font-size:.85rem}
+/* ---------- faq ---------- */
+.faq{max-width:800px;margin:0 auto}
+.faq-item{background:var(--card);border:2px solid var(--ink);border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:3px 3px 0 var(--line)}
+.faq-item.open{border-color:var(--cyan);box-shadow:3px 3px 0 var(--cyan)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-weight:700;font-size:1rem;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif}
+.faq-q .plus{flex:none;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#7EE7F5;display:grid;place-items:center;font-size:1.2rem;transition:transform .3s,background .3s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);background:var(--cyan);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--ink2)}
+/* ---------- cta ---------- */
+.cta-band{background:var(--orange);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);color:#fff;text-align:center;padding:64px 26px;border-radius:24px;max-width:1140px;margin:0 auto 80px;position:relative;overflow:hidden}
+.cta-band::before{content:"⌁";position:absolute;font-size:15rem;opacity:.14;left:-20px;bottom:-70px;transform:rotate(8deg)}
+.cta-band h2{font-size:clamp(1.9rem,3.8vw,2.9rem);margin-bottom:14px;position:relative}
+.cta-band p{max-width:540px;margin:0 auto 28px;font-size:1.05rem;position:relative}
+.cta-band .btn{background:#fff;color:var(--ink);box-shadow:4px 4px 0 var(--ink);position:relative}
+.cta-band .btn:hover{box-shadow:6px 6px 0 var(--ink)}
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#B9CDDC;padding:52px 22px 110px}
+.foot-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+footer h4{color:#7EE7F5;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;font-family:'IBM Plex Mono',monospace;font-weight:600}
+footer p,footer li{font-size:.93rem;margin-bottom:8px;list-style:none}
+footer a{color:#fff;text-decoration:none;font-weight:700}
+footer a:hover{color:#7EE7F5}
+.foot-bottom{max-width:1100px;margin:38px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:.78rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace}
+/* ---------- sticky mobile call ---------- */
+.mobile-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--paper);border-top:2px solid var(--ink);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.mobile-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:14px;border-radius:12px;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+@media(max-width:760px){.mobile-call{display:block}.nav-cta{display:none}}
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo <span>Preview</span> — for D&amp;I Electric LLC</div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#7EE7F5"><path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5L13 2z"/></svg>
+      </span>
+      <span class="brand-name">D&amp;I Electric<small>Melissa · Texas</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#proof">Track Record</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn nav-cta" href="tel:+14698269773">☎ (469) 826-9773</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="reveal visible">
+      <span class="tag">Melissa, TX — Electrical Contractor</span>
+      <h1>Wired for work that matters. <em>Permitted to prove it.</em></h1>
+      <p class="lead">D&amp;I Electric LLC is a Melissa-based electrical contractor doing commercial remodels, panel upgrades, and repairs across North Texas — with the permit record to back it up.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+14698269773">☎ Call (469) 826-9773</a>
+        <a class="btn ghost" href="#proof">See the track record</a>
+      </div>
+      <div class="hero-meta">
+        <span>📍 <b>3311 Creekhaven Dr, Melissa TX</b></span>
+        <span>🕘 <b>Call for availability</b></span>
+      </div>
+    </div>
+    <div class="blue-card reveal visible">
+      <div class="bc-tag">// Straight to the contractor</div>
+      <div class="bc-title grotesk">Talk to David.</div>
+      <p class="bc-sub">Commercial build-outs, service upgrades, troubleshooting, new circuits — one number reaches the shop that pulls the permits.</p>
+      <ul class="bc-list">
+        <li><span class="bc-ic">✓</span><span><b>State-licensed contractor</b> — TX TDLR #35413, active</span></li>
+        <li><span class="bc-ic">✓</span><span><b>Commercial experience</b> — Sam's Club remodel circuits across Texas</span></li>
+        <li><span class="bc-ic">✓</span><span><b>Panel upgrades</b> — $3K–$4K permitted service upgrades on record</span></li>
+      </ul>
+      <a class="bc-phone" href="tel:+14698269773">☎ (469) 826-9773</a>
+      <div class="bc-note">license/permits per BuildZoom records</div>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="band-inner">
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="97">0</span></div><div class="stat-label">BuildZoom contractor score</div><span class="stat-src">top 18% of 222,249 TX contractors</span></div>
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="8">0</span></div><div class="stat-label">Permitted projects on record</div><span class="stat-src">since 2021 · per BuildZoom</span></div>
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="5">0</span></div><div class="stat-label">TX cities with permits pulled</div><span class="stat-src">Dallas · Coppell · Brownsville · McAllen · El Paso</span></div>
+    <div class="reveal"><div class="stat-num"><span class="counter" data-target="2">0</span></div><div class="stat-label">Active licenses held</div><span class="stat-src">TX TDLR · San Antonio</span></div>
+  </div>
+</div>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker">Services</div>
+      <h2>What the permit record says we do</h2>
+      <p>Every category below is drawn from D&amp;I's actual permitted work — not a wish list.</p>
+    </div>
+    <div class="svc-tabs reveal" role="tablist">
+      <button class="svc-btn active" data-tab="s1">Commercial Remodels</button>
+      <button class="svc-btn" data-tab="s2">Panel Upgrades</button>
+      <button class="svc-btn" data-tab="s3">Repairs & Troubleshooting</button>
+      <button class="svc-btn" data-tab="s4">New Circuits</button>
+    </div>
+    <div class="svc-panels reveal">
+      <div class="svc-panel active" id="s1">
+        <h3>Commercial <span>remodel wiring</span></h3>
+        <p>Retail and office remodels — adding circuits, keeping existing systems running while work happens.</p>
+        <ul><li>Retail remodel circuits</li><li>Circuit additions for new equipment</li><li>Remodel electrical coordination</li><li>Code-compliant commercial wiring</li></ul>
+        <a class="btn" href="tel:+14698269773">☎ Call about your project</a>
+      </div>
+      <div class="svc-panel" id="s2">
+        <h3>Panel &amp; <span>service upgrades</span></h3>
+        <p>Permitted service upgrades — $3,000–$4,000 jobs on record in Dallas, sized and installed to code.</p>
+        <ul><li>Existing service upgrades</li><li>Breaker & panel work</li><li>Load evaluations</li><li>Permit handling</li></ul>
+        <a class="btn" href="tel:+14698269773">☎ Talk service upgrades</a>
+      </div>
+      <div class="svc-panel" id="s3">
+        <h3>Repairs &amp; <span>troubleshooting</span></h3>
+        <p>Diagnostic electrical repair on homes — permitted repair work on record, finished and closed out.</p>
+        <ul><li>Electrical repairs</li><li>Fault finding & diagnostics</li><li>Code corrections</li><li>Safety checks</li></ul>
+        <a class="btn" href="tel:+14698269773">☎ Get it diagnosed</a>
+      </div>
+      <div class="svc-panel" id="s4">
+        <h3>New <span>circuits &amp; devices</span></h3>
+        <p>New receptacles, new walls, converted spaces — from duplex receptacles to whole garage conversions.</p>
+        <ul><li>New receptacles & devices</li><li>Dedicated circuits</li><li>Garage & patio conversions</li><li>Additions & remodels</li></ul>
+        <a class="btn" href="tel:+14698269773">☎ Plan the circuit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block proof" id="proof">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Track record</div>
+      <h2>Proof, not promises</h2>
+      <p>A sample of D&amp;I's permitted jobs — public records of real work, pulled from BuildZoom's permit data.</p>
+    </div>
+    <div class="permit-grid">
+      <div class="permit reveal">
+        <div class="p-num">Permit #2024-05346 · Dec 2024</div>
+        <h3>Sam's Club remodel — new circuits</h3>
+        <div class="p-loc">3570 W Alton Gloor Blvd, Brownsville TX</div>
+        <p>Remodel "utilizing existing circuits and adding two new circuits for the new AHU." Closed out as final.</p>
+        <span class="p-status">Final · Closed</span>
+      </div>
+      <div class="permit reveal">
+        <div class="p-num">Permit #CMM2024-04868 · Mar 2025</div>
+        <h3>Sam's Club remodel — RTU circuits</h3>
+        <div class="p-loc">1400 E Jackson Ave, McAllen TX</div>
+        <p>Store remodel "utilize existing circuits — addition two remote terminal unit." Completed.</p>
+        <span class="p-status">Complete</span>
+      </div>
+      <div class="permit reveal">
+        <div class="p-num">Permit #BLDR23-05-028097 · Jun 2024</div>
+        <h3>Home conversion — new living space</h3>
+        <div class="p-loc">100 Dobecka Dr, Coppell TX</div>
+        <p>"Converting patio and garage into livable space" — full electrical scope. Completed.</p>
+        <span class="p-status">Complete</span>
+      </div>
+      <div class="permit reveal">
+        <div class="p-num">Permit #2106033066 · Nov 2021</div>
+        <h3>Service upgrade — $3,000 scope</h3>
+        <div class="p-loc">13442 Flagstone Ln, Dallas TX</div>
+        <p>"Upgrade existing electrical service" on a single-family home. Completed.</p>
+        <span class="p-status">Complete</span>
+      </div>
+    </div>
+    <p class="attr-note">// 4 of 8 permitted projects since 2021 · full permit history per BuildZoom records</p>
+  </div>
+</section>
+
+<section class="block" id="credentials">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker">Credentials</div>
+      <h2>Licensed. Scored. On record.</h2>
+      <p>The credentials are real — they just live on a directory profile instead of a D&amp;I website.</p>
+    </div>
+    <div class="cred">
+      <div class="cred-card reveal">
+        <div class="c-lic">TX Dept. of Licensing &amp; Regulation</div>
+        <h3>TDLR #35413 — Active</h3>
+        <p>State electrician license held by David Nuno, verified active. The state credential behind every permit pulled.</p>
+      </div>
+      <div class="cred-card reveal">
+        <div class="c-lic">City of San Antonio</div>
+        <h3>SEC-26-486012 — Active</h3>
+        <p>State Electrical Contractor registration, verified active — the credential that lets D&amp;I run commercial jobs.</p>
+      </div>
+      <div class="cred-card reveal">
+        <div class="c-lic">BuildZoom contractor rating</div>
+        <h3>Score 97 — top 18%</h3>
+        <p>Ranks in the top 18% of 222,249 Texas licensed contractors — a score built on licenses and permits, not ads.</p>
+      </div>
+    </div>
+    <p class="attr-note">// license data per BuildZoom records (last verified when they checked)</p>
+  </div>
+</section>
+
+<section class="block" id="areas" style="padding-top:0">
+  <div class="wrap">
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <div class="bc-tag">// Where D&amp;I works</div>
+        <h3>Melissa-based. Permitted across Texas.</h3>
+        <p>Home base in Melissa, with permitted work on record from the Metroplex to the Valley. If it's electrical and it's permitted, D&amp;I travels for it.</p>
+        <div class="area-list">
+          <span class="area-pill">Melissa</span><span class="area-pill">Dallas</span><span class="area-pill">Coppell</span><span class="area-pill">Brownsville</span><span class="area-pill">McAllen</span><span class="area-pill">El Paso</span><span class="area-pill">Anna</span><span class="area-pill">McKinney</span><span class="area-pill">Prosper</span><span class="area-pill">Celina</span>
+        </div>
+      </div>
+      <div class="hq-card reveal">
+        <h3>Find the shop</h3>
+        <p class="mono">D&amp;I Electric LLC<br>3311 Creekhaven Dr<br>Melissa, TX 75454</p>
+        <p style="margin-top:14px"><b>Call David directly:</b> <a href="tel:+14698269773" style="font-weight:700;color:var(--cyan)">(469) 826-9773</a></p>
+        <p><b>Hours:</b> not published — call for availability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker">FAQ</div>
+      <h2>Straight answers</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q">Is D&amp;I licensed?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. David Nuno holds Texas TDLR license #35413 (active) and a State Electrical Contractor registration through the City of San Antonio, SEC-26-486012 (active) — per BuildZoom records.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you do residential or commercial?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Both. The permit record covers commercial remodels (Sam's Club circuit work), single-family service upgrades, repairs, and home conversions like patios and garages turned into living space.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where do you work?<span class="plus">+</span></button>
+        <div class="faq-a"><p>D&amp;I is based in Melissa, TX, with permitted jobs on record across Dallas, Coppell, Brownsville, McAllen, and El Paso. Call to confirm your project location.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I get an estimate?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Call (469) 826-9773 and describe the job. David will tell you straight whether it's in D&amp;I's wheelhouse and what it takes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why isn't D&amp;I online anywhere?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Honestly? They've been busy working. The permits are public record — the website is what this page would become. If you're reading this, you're seeing the fix.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <h2>One call. Real electrician.</h2>
+  <p>Commercial or residential, permitted and done right. Talk to D&amp;I today.</p>
+  <a class="btn" href="tel:+14698269773">☎ Call (469) 826-9773</a>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>D&amp;I Electric LLC</h4>
+      <p>Melissa, TX electrical contractor.<br>Commercial &amp; residential electrical.</p>
+      <p style="margin-top:14px"><a href="tel:+14698269773">(469) 826-9773</a></p>
+    </div>
+    <div>
+      <h4>Address</h4>
+      <p>3311 Creekhaven Dr<br>Melissa, TX 75454</p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Not published —<br>call for availability.</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>Demo preview — concept site, not the live business site</span>
+    <span>license/permit data per BuildZoom records</span>
+  </div>
+</footer>
+
+<div class="mobile-call">
+  <a href="tel:+14698269773">☎ Call (469) 826-9773</a>
+</div>
+
+<script>
+// sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.style.boxShadow=scrollY>10?'0 10px 28px rgba(11,30,51,.14)':'none'},{passive:true});
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+  const el=e.target,t=+el.dataset.target;let s=null;const d=1400;
+  function step(ts){if(!s)s=ts;const p=Math.min((ts-s)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}),{threshold:.5});
+document.querySelectorAll('.counter').forEach(c=>io.observe(c));
+// tabs
+document.querySelectorAll('.svc-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.svc-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.svc-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')}));
+// faq accordion
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}}));
+// scroll reveal
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');rio.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(r=>rio.observe(r));
+</script>
+</body>
+</html>
