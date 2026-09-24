@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vielman Glass Works | Aubrey, TX — Glass, Mirrors & Windows</title>
+<meta name="description" content="Aubrey's US-377 corridor glass shop: custom shower doors, mirrors, window replacement, storefront glass, fish tanks & table tops. Demo preview.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F1E4; --paper2:#EFE6D2; --ink:#221B12; --ink2:#4A4034;
+  --amber:#C77C1A; --amber-deep:#9A5C0D; --glass:#EAF2EC; --green:#175C48;
+  --line:#DCD0B8; --card:#FFFDF7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',serif;font-weight:800;line-height:1.05;letter-spacing:-0.01em}
+a{color:inherit}
+/* demo badge */
+.badge-demo{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);color:#FFE9C4;text-align:center;font-size:11px;letter-spacing:.28em;font-weight:700;padding:8px 12px;text-transform:uppercase}
+.badge-demo b{color:var(--amber);letter-spacing:.28em}
+/* nav */
+nav{position:sticky;top:33px;z-index:150;background:rgba(247,241,228,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{font-family:'Bricolage Grotesque',serif;font-weight:800;font-size:20px;display:flex;align-items:center;gap:10px}
+.brand .pane{width:26px;height:26px;border:3px solid var(--amber);transform:rotate(8deg);background:linear-gradient(135deg,rgba(23,92,72,.15),rgba(199,124,26,.15));box-shadow:3px 3px 0 var(--ink)}
+.nav-links{display:flex;gap:26px;font-size:14px;font-weight:600}
+.nav-links a{text-decoration:none;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--amber);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.btn{display:inline-block;background:var(--ink);color:#FFF6E6;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:999px;transition:transform .2s,box-shadow .2s;border:2px solid var(--ink)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(34,27,18,.25)}
+.btn.amber{background:var(--amber);border-color:var(--amber-deep);color:#231603}
+.btn.call-big{font-size:18px;padding:15px 34px}
+@media(max-width:760px){.nav-links{display:none}}
+/* hero */
+.hero{max-width:1160px;margin:0 auto;padding:70px 22px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:50px}}
+.eyebrow{display:inline-block;background:var(--green);color:#F2F7F3;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(40px,6vw,72px);margin-bottom:18px}
+.hero h1 .hl{color:var(--amber-deep);font-style:italic}
+.hero p.lede{font-size:18px;color:var(--ink2);max-width:46ch;margin-bottom:30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-note{font-size:13px;color:var(--ink2);margin-top:14px}
+/* glass card art */
+.glass-art{position:relative;background:linear-gradient(160deg,#fffdf7,#efe6d2);border:2px solid var(--ink);border-radius:18px;box-shadow:12px 12px 0 var(--amber);padding:34px;min-height:420px;overflow:hidden}
+.glass-art .shimmer{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 45%,transparent 60%);animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,100%{transform:translateX(-40%)}50%{transform:translateX(40%)}}
+.pane-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.pane{border:3px solid var(--ink);border-radius:10px;background:linear-gradient(135deg,rgba(23,92,72,.10),rgba(199,124,26,.10));min-height:120px;display:flex;align-items:flex-end;padding:12px;font-weight:700;font-size:13px;transition:transform .25s}
+.pane:hover{transform:translateY(-5px) rotate(-1deg)}
+.pane.tall{min-height:190px}
+/* marquee */
+.marquee{background:var(--ink);color:#FFE9C4;overflow:hidden;white-space:nowrap;padding:14px 0;margin:40px 0 0}
+.marquee span{display:inline-block;padding:0 28px;font-family:'Bricolage Grotesque',serif;font-weight:700;font-size:17px;letter-spacing:.06em;animation:scroll 22s linear infinite}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* stats */
+.stats{max-width:1160px;margin:0 auto;padding:56px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:24px;text-align:center;box-shadow:6px 6px 0 var(--line)}
+.stat .num{font-family:'Bricolage Grotesque',serif;font-size:42px;font-weight:800;color:var(--amber-deep)}
+.stat .lbl{font-size:13px;font-weight:600;color:var(--ink2)}
+/* services */
+.section{max-width:1160px;margin:0 auto;padding:48px 22px}
+.section h2{font-size:clamp(30px,4vw,46px);margin-bottom:10px}
+.section .sub{color:var(--ink2);margin-bottom:32px;max-width:62ch}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:26px;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-6px);box-shadow:8px 10px 0 var(--amber)}
+.svc .icon{font-size:30px;margin-bottom:12px;display:block}
+.svc h3{font-size:20px;margin-bottom:8px}
+.svc p{font-size:14px;color:var(--ink2)}
+.svc .tag{position:absolute;top:14px;right:14px;background:var(--green);color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;padding:5px 10px;border-radius:999px;text-transform:uppercase}
+/* proof band */
+.proof{background:var(--green);color:#EFF5F0;margin:64px 0 0}
+.proof .section{max-width:1160px}
+.proof h2{color:#fff}
+.proof .sub{color:#CFE0D5}
+/* slider */
+.slider{position:relative;max-width:760px;margin:0 auto}
+.slide{display:none;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:36px}
+.slide.active{display:block;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.stars{color:var(--amber);font-size:20px;letter-spacing:2px;margin-bottom:12px}
+.slide blockquote{font-family:'Bricolage Grotesque',serif;font-size:21px;font-weight:600;line-height:1.45;margin-bottom:14px}
+.slide .src{font-size:13px;opacity:.75}
+.slider-nav{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.3);border:none;cursor:pointer}
+.dot.active{background:var(--amber)}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:28px;position:relative}
+.step .n{font-family:'Bricolage Grotesque',serif;font-size:52px;font-weight:800;color:var(--paper2);-webkit-text-stroke:2px var(--amber-deep);line-height:1}
+/* faq */
+.faq-item{border:2px solid var(--ink);border-radius:12px;margin-bottom:12px;background:var(--card);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;font-family:'Bricolage Grotesque',serif;font-size:18px;font-weight:700;text-align:left;padding:18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 22px;font-size:15px;color:var(--ink2)}
+.faq-item.open .faq-a{max-height:220px;padding-bottom:18px}
+/* estimate */
+.estimate{background:linear-gradient(150deg,var(--ink),#3a2f20);color:#FFF6E6;border-radius:20px;padding:48px;margin-top:20px}
+.estimate h2{color:#fff}
+.estimate .sub{color:#E4D7BE}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;border-radius:10px;border:2px solid #5c5240;background:#FFFDF7;color:var(--ink);font-family:inherit;font-size:15px}
+.form-note{font-size:12px;color:#CBBFA6;margin-top:14px}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+/* footer */
+footer{background:var(--ink);color:#EFE6D2;margin-top:64px}
+.foot-inner{max-width:1160px;margin:0 auto;padding:48px 22px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
+@media(max-width:760px){.foot-inner{grid-template-columns:1fr}}
+.foot-inner h3{color:#FFE9C4;font-size:18px;margin-bottom:12px}
+.foot-inner a{color:#FFE9C4}
+.foot-bottom{border-top:1px solid #4a4034;text-align:center;padding:18px;font-size:12px;color:#B9AC92}
+/* mobile call */
+.m-call{display:none;position:fixed;bottom:14px;left:14px;right:14px;z-index:180;background:var(--amber);color:#231603;font-weight:800;text-align:center;padding:16px;border-radius:999px;text-decoration:none;font-size:18px;border:2px solid var(--amber-deep);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+@media(max-width:760px){.m-call{display:block}body{padding-bottom:76px}}
+</style>
+</head>
+<body>
+<div class="badge-demo"><b>Demo Preview</b> &nbsp;·&nbsp; sample site built for Vielman Glass Works &nbsp;·&nbsp; not affiliated</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand"><span class="pane"></span> Vielman Glass Works</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#story">Our Story</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn" href="tel:+19402040955">Call (940) 204-0955</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="eyebrow">Aubrey, TX · US-377 Corridor</span>
+    <h1>Aubrey's glass shop for <span class="hl">real homes</span>, not showrooms.</h1>
+    <p class="lede">Custom shower doors, mirrors, and window replacement on the US-377 corridor — from frameless doors to storefront glass… and yes, even custom fish tanks. One shop, cut right, installed right.</p>
+    <div class="hero-cta">
+      <a class="btn amber call-big" href="tel:+19402040955">📞 (940) 204-0955</a>
+      <a class="btn" href="#estimate">Free Estimate</a>
+    </div>
+    <p class="hero-note">Mon–Fri 9:00 AM – 4:00 PM · Serving Aubrey, Celina, Krugerville, Prosper, Frisco &amp; Little Elm</p>
+  </div>
+  <div class="glass-art reveal in">
+    <div class="shimmer"></div>
+    <div class="pane-grid">
+      <div class="pane tall">🚿<br>Frameless<br>Showers</div>
+      <div class="pane">🪞<br>Custom<br>Mirrors</div>
+      <div class="pane">🪟<br>Window<br>Replacement</div>
+      <div class="pane tall">🐠<br>Fish<br>Tanks</div>
+    </div>
+    <p style="margin-top:16px;font-size:13px;color:var(--ink2);position:relative">Stylized preview art — every pane above is a real service they cut and install.</p>
+  </div>
+</header>
+
+<div class="marquee"><span>SHOWER DOORS ✦ CUSTOM MIRRORS ✦ WINDOW REPLACEMENT ✦ STOREFRONT GLASS ✦ FISH TANKS ✦ TABLE TOPS ✦ INSULATED GLASS ✦ LOW-E GLASS ✦&nbsp;</span><span>SHOWER DOORS ✦ CUSTOM MIRRORS ✦ WINDOW REPLACEMENT ✦ STOREFRONT GLASS ✦ FISH TANKS ✦ TABLE TOPS ✦ INSULATED GLASS ✦ LOW-E GLASS ✦&nbsp;</span></div>
+
+<div class="stats">
+  <div class="stat reveal"><div class="num" data-count="4.7" data-dec="1">0</div><div class="lbl">Birdeye rating (14 reviews)</div></div>
+  <div class="stat reveal"><div class="num" data-count="28">0</div><div class="lbl">glass &amp; window services on the menu</div></div>
+  <div class="stat reveal"><div class="num" data-count="6">0</div><div class="lbl">corridor towns served</div></div>
+  <div class="stat reveal"><div class="num" data-count="1972">0</div><div class="lbl">family trade roots — Guatemala City</div></div>
+</div>
+
+<section class="section" id="services">
+  <h2 class="reveal">One shop. Every pane in your home.</h2>
+  <p class="sub reveal">From the shower you start your day in to the storefront your customers see — Vielman measures, cuts, and installs it.</p>
+  <div class="svc-grid">
+    <div class="svc reveal"><span class="tag">Signature</span><span class="icon">🚿</span><h3>Frameless Shower Doors</h3><p>Heavy glass, clean lines, no bulky frames. Measured and installed for your exact opening.</p></div>
+    <div class="svc reveal"><span class="icon">🪞</span><h3>Custom Mirrors</h3><p>Bathroom mirrors, mirrored walls, beveled edges — cut to fit your space, installed level and secure.</p></div>
+    <div class="svc reveal"><span class="icon">🪟</span><h3>Window Replacement</h3><p>Vinyl, aluminum, fiberglass, and retrofit windows — including energy-efficient insulated &amp; Low-E glass built for Texas heat.</p></div>
+    <div class="svc reveal"><span class="icon">🏪</span><h3>Storefront Glass</h3><p>Herculite doors, storefront windows, and commercial glass for corridor businesses.</p></div>
+    <div class="svc reveal"><span class="tag">Quirky</span><span class="icon">🐠</span><h3>Fish Tanks</h3><p>Yes, really. Custom glass aquariums — because a shop that cuts glass can cut anything.</p></div>
+    <div class="svc reveal"><span class="icon">🍽️</span><h3>Table Top Glass</h3><p>Protective glass tops for dining tables and desks, cut to your exact dimensions.</p></div>
+  </div>
+</section>
+
+<section class="proof" id="why">
+  <div class="section">
+    <h2 class="reveal">Why the corridor calls Vielman.</h2>
+    <p class="sub reveal">Not a franchise. Not a call center. A working glass shop on US-377 that shows up, measures twice, and cuts once.</p>
+    <div class="slider reveal" id="reviews">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excelente work — 5 stars. Highly recommend them. Hector and Julia are so easy to work with! Had Hector make 3 custom mirrors and hang them up. Very professional and excellent job."</blockquote>
+        <p class="src">— Birdeye review (4.7 / 14 reviews)</p>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Superior service. Very clean store. Great selection."</blockquote>
+        <p class="src">— Birdeye review (4.7 / 14 reviews)</p>
+      </div>
+      <div class="slider-nav">
+        <button class="dot active" data-i="0" aria-label="review 1"></button>
+        <button class="dot" data-i="1" aria-label="review 2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="story">
+  <div class="reveal" style="background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:48px;box-shadow:12px 12px 0 var(--green);position:relative;overflow:hidden">
+    <span class="eyebrow" style="margin-bottom:18px">Since 1972</span>
+    <h2 style="margin-bottom:16px">Ten kids. Ten bicycles. One trade.</h2>
+    <p style="font-size:18px;color:var(--ink2);max-width:64ch;margin-bottom:14px">The Vielman family started cutting glass in <strong>Guatemala City in 1972</strong> — the Vielman Brothers, ten hard-working kids, installing window glass from bicycles with panes tied to their backs with rope and a bag of tools around their necks.</p>
+    <p style="font-size:18px;color:var(--ink2);max-width:64ch;margin-bottom:14px">First shop in Los Angeles. Then Chicago. Then Frisco, Texas. Now the US-377 corridor — and your reviewers still name the people behind the counter: <strong>Hector and Julia</strong>.</p>
+    <p style="font-size:14px;color:var(--ink2);max-width:64ch">Se habla español. Three generations of measuring twice and cutting once.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="reveal">From phone call to finished pane.</h2>
+  <p class="sub reveal">No forms that vanish into the void — call, and a real person schedules your measure.</p>
+  <div class="steps">
+    <div class="step reveal"><div class="n">01</div><h3>Call &amp; describe it</h3><p>Shower door, foggy window, cracked storefront — tell us what you see. Mon–Fri, 9–4.</p></div>
+    <div class="step reveal"><div class="n">02</div><h3>We measure on site</h3><p>Glass is unforgiving. We measure twice at your home or business so it fits the first time.</p></div>
+    <div class="step reveal"><div class="n">03</div><h3>Cut, deliver, install</h3><p>Your glass is cut to spec and installed clean — then we make sure you're happy before we leave.</p></div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <h2 class="reveal">Good questions.</h2>
+  <div class="faq-item reveal"><button class="faq-q">Do you do residential and commercial? <span>+</span></button><div class="faq-a">Both. Homes get shower doors, mirrors, and window replacement; businesses get storefront glass and herculite doors.</div></div>
+  <div class="faq-item reveal"><button class="faq-q">What areas do you serve? <span>+</span></button><div class="faq-a">Aubrey, Celina, Krugerville, Frisco, Little Elm, and Prosper — the US-377 corridor and Denton County.</div></div>
+  <div class="faq-item reveal"><button class="faq-q">How do I pay? <span>+</span></button><div class="faq-a">Mastercard, Visa, Discover, Amex, cash, check, or Zelle.</div></div>
+  <div class="faq-item reveal"><button class="faq-q">How do I get an estimate? <span>+</span></button><div class="faq-a">Call (940) 204-0955 during shop hours — Mon–Fri 9 AM–4 PM — and describe the job.</div></div>
+</section>
+
+<section class="section" id="estimate">
+  <div class="estimate reveal">
+    <h2>Get a free estimate.</h2>
+    <p class="sub">Tell us about the pane, window, or project — we'll call you back during shop hours.</p>
+    <form id="est-form">
+      <div class="form-grid">
+        <div class="field"><label>Name</label><input required placeholder="Your name"></div>
+        <div class="field"><label>Phone</label><input required type="tel" placeholder="(___) ___-____"></div>
+        <div class="field"><label>Service needed</label><select><option>Shower door</option><option>Custom mirror</option><option>Window replacement</option><option>Storefront glass</option><option>Fish tank</option><option>Table top glass</option><option>Something else</option></select></div>
+        <div class="field"><label>Town</label><input placeholder="Aubrey, Celina, …"></div>
+      </div>
+      <div class="field" style="margin-top:16px"><label>Describe the job</label><textarea rows="3" placeholder="e.g. Replace foggy double-pane window in living room…"></textarea></div>
+      <div style="margin-top:20px;display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <button class="btn amber" type="submit">Request my estimate</button>
+        <a class="btn" style="background:transparent;border-color:#FFE9C4;color:#FFE9C4" href="tel:+19402040955">Or call (940) 204-0955</a>
+      </div>
+      <p class="form-note">Demo preview — this form is a placeholder and does not send anywhere.</p>
+    </form>
+    <div id="est-done" style="display:none;margin-top:20px;background:rgba(255,255,255,.08);border:1px solid #FFE9C4;border-radius:12px;padding:22px">
+      <h3 style="color:#FFE9C4">Thanks — in the live site this request goes straight to the shop.</h3>
+      <p style="font-size:14px;color:#E4D7BE">Need it now? Call <a href="tel:+19402040955" style="color:#FFE9C4">(940) 204-0955</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div><h3>Vielman Glass Works</h3><p style="font-size:14px">Aubrey's US-377 corridor glass shop — showers, mirrors, windows, storefronts.</p></div>
+    <div><h3>Visit / Call</h3><p style="font-size:14px"><a href="tel:+19402040955">(940) 204-0955</a><br>5246 U.S. 377<br>Aubrey, TX 76227</p></div>
+    <div><h3>Shop Hours</h3><p style="font-size:14px">Mon–Fri: 9:00 AM – 4:00 PM<br>Sat–Sun: Closed<br><span style="font-size:12px;color:#B9AC92">Hours &amp; address from the shop's current site — call to confirm.</span></p></div>
+  </div>
+  <div class="foot-bottom">DEMO PREVIEW — sample site for Vielman Glass Works, not affiliated. Built by NoFluff Marketing.</div>
+</footer>
+
+<a class="m-call" href="tel:+19402040955">📞 Call (940) 204-0955</a>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,end=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),t0=performance.now();
+  (function tick(t){const p=Math.min(1,(t-t0)/1400),v=end*(1-Math.pow(1-p,3));
+    el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(tick)})(t0);
+}),{threshold:.4});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+// slider
+const slides=document.querySelectorAll('.slide'),dots=document.querySelectorAll('.dot');let si=0,sti;
+function go(i){slides[si].classList.remove('active');dots[si].classList.remove('active');si=i%slides.length;slides[si].classList.add('active');dots[si].classList.add('active')}
+dots.forEach(d=>d.addEventListener('click',()=>{go(+d.dataset.i);clearInterval(sti);sti=setInterval(()=>go(si+1),6000)}));
+sti=setInterval(()=>go(si+1),6000);
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const it=q.parentElement,was=it.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f=>{f.classList.remove('open');f.querySelector('span').textContent='+'});
+  if(!was){it.classList.add('open');q.querySelector('span').textContent='−'}
+}));
+// form
+document.getElementById('est-form').addEventListener('submit',e=>{e.preventDefault();e.target.style.display='none';document.getElementById('est-done').style.display='block'});
+</script>
+</body>
+</html>
