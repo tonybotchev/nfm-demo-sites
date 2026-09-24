@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silva Installations — Motorized & Manual Shades, Melissa TX | DFW Metroplex</title>
+<meta name="description" content="Silva Installations — Melissa, TX window-treatment installer. Motorized and manual roller shades from Lutron, Qmotion, Rollease, Somfy, Screen Innovations & Progressive. Serving the DFW Metroplex.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --warm:#FAF7F1;
+  --sage:#7C8B6F;
+  --sage-deep:#5F6F54;
+  --charcoal:#26241F;
+  --amber:#D9A441;
+  --linen:#EFE9DC;
+  --linen-deep:#E5DCC8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--warm);
+  color:var(--charcoal);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;width:100%}
+section{padding:88px 0}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+
+/* ---------- DEMO badge ---------- */
+.demo-badge{
+  position:fixed;top:0;left:0;right:0;z-index:2000;
+  background:var(--charcoal);color:var(--warm);
+  text-align:center;font-size:11px;letter-spacing:.22em;font-weight:700;
+  padding:7px 12px;text-transform:uppercase;
+}
+.demo-badge span{color:var(--amber)}
+
+/* ---------- Nav ---------- */
+nav{
+  position:fixed;top:32px;left:0;right:0;z-index:1000;
+  background:rgba(250,247,241,.82);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(38,36,31,.08);
+  transition:all .35s ease;
+}
+nav .inner{max-width:1160px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:padding .35s ease}
+nav.shrunk .inner{padding:10px 24px}
+.wordmark{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(1rem,2.6vw,1.35rem);letter-spacing:.14em;text-decoration:none;white-space:nowrap}
+.wordmark em{font-style:normal;color:var(--sage-deep)}
+.nav-links{display:flex;gap:26px;font-size:.9rem;font-weight:500}
+.nav-links a{text-decoration:none;opacity:.75;transition:opacity .2s}
+.nav-links a:hover{opacity:1;color:var(--sage-deep)}
+.phone-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--charcoal);color:var(--warm);
+  font-weight:600;font-size:.92rem;text-decoration:none;
+  padding:12px 22px;border-radius:999px;
+  transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
+  white-space:nowrap;
+}
+.phone-btn:hover{background:var(--sage-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(95,111,84,.35)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:170px 0 90px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 520px at 85% 12%, rgba(217,164,65,.14), transparent 60%),
+    radial-gradient(800px 420px at 8% 88%, rgba(124,139,111,.16), transparent 60%),
+    var(--warm);
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.kicker{
+  display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--sage-deep);margin-bottom:20px;
+  border:1px solid rgba(124,139,111,.45);padding:8px 16px;border-radius:999px;background:rgba(124,139,111,.08);
+}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.2rem);margin-bottom:22px}
+.hero h1 .amber{color:var(--amber);font-style:italic}
+.hero .sub{font-size:clamp(1.02rem,1.6vw,1.2rem);opacity:.82;max-width:34rem;margin-bottom:34px}
+.hero .sub strong{color:var(--sage-deep);font-weight:600}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--sage);color:#fff;font-weight:700;font-size:1rem;text-decoration:none;
+  padding:16px 32px;border-radius:999px;border:none;cursor:pointer;
+  transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
+  box-shadow:0 12px 28px rgba(124,139,111,.35);
+}
+.btn:hover{background:var(--sage-deep);transform:translateY(-3px);box-shadow:0 16px 34px rgba(95,111,84,.42)}
+.btn.ghost{background:transparent;color:var(--charcoal);box-shadow:inset 0 0 0 2px rgba(38,36,31,.25)}
+.btn.ghost:hover{background:rgba(38,36,31,.06);box-shadow:inset 0 0 0 2px var(--charcoal);transform:translateY(-3px)}
+.hero-hours{margin-top:26px;font-size:.85rem;opacity:.65;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sage);display:inline-block;box-shadow:0 0 0 4px rgba(124,139,111,.2)}
+
+/* window + rolling shade */
+.window-scene{display:flex;justify-content:center}
+.window{
+  position:relative;width:min(340px,80vw);aspect-ratio:9/14;
+  border:14px solid #fff;border-radius:6px;overflow:hidden;
+  box-shadow:0 40px 80px rgba(38,36,31,.22), 0 4px 14px rgba(38,36,31,.12);
+  background:linear-gradient(180deg,#FDEBC8 0%,#F9DF9F 45%,#F5C86A 100%);
+}
+.window::before{ /* sun rays */
+  content:"";position:absolute;inset:0;
+  background:
+    conic-gradient(from 200deg at 50% 42%, rgba(255,255,255,.5) 0deg, transparent 14deg, rgba(255,255,255,.5) 28deg, transparent 42deg, rgba(255,255,255,.5) 56deg, transparent 70deg, rgba(255,255,255,.5) 84deg, transparent 98deg, rgba(255,255,255,.5) 112deg, transparent 126deg, rgba(255,255,255,.5) 140deg, transparent 160deg);
+  animation:rays 26s linear infinite;
+}
+@keyframes rays{to{transform:rotate(360deg)}}
+.sun{
+  position:absolute;top:16%;left:50%;width:88px;height:88px;margin-left:-44px;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%, #FFF6DF 0%, #FFE7A8 45%, #FFD97A 100%);
+  box-shadow:0 0 60px 28px rgba(255,214,120,.55);
+  animation:sunpulse 5s ease-in-out infinite;
+}
+@keyframes sunpulse{50%{box-shadow:0 0 80px 40px rgba(255,214,120,.7)}}
+.horizon{
+  position:absolute;left:0;right:0;bottom:0;height:30%;
+  background:linear-gradient(180deg, transparent, rgba(124,139,111,.5));
+}
+.horizon::after{
+  content:"";position:absolute;left:8%;right:8%;bottom:38%;height:38%;border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  background:var(--sage);opacity:.55;
+}
+.shade{
+  position:absolute;top:0;left:0;right:0;height:88%;
+  background:
+    repeating-linear-gradient(180deg, rgba(255,255,255,.05) 0 14px, transparent 14px 26px),
+    linear-gradient(180deg,#8B9B7C 0%,#7C8B6F 60%,#6C7A60 100%);
+  border-bottom:10px solid var(--charcoal);
+  transform-origin:top;
+  transition:transform 2.4s cubic-bezier(.65,0,.35,1);
+  z-index:5;
+}
+.window.reveal .shade{transform:scaleY(.06)}
+.shade-cord{position:absolute;top:88%;right:26px;width:3px;height:60px;background:var(--charcoal);z-index:6;transition:top 2.4s cubic-bezier(.65,0,.35,1)}
+.shade-cord::after{content:"";position:absolute;bottom:-8px;left:-4px;width:11px;height:11px;border-radius:50%;background:var(--amber);box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.window.reveal .shade-cord{top:6%}
+.window-tag{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:-58px;white-space:nowrap;
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--sage-deep);opacity:0;transition:opacity 1s ease .8s;
+}
+.window.reveal ~ .window-tag, .window-scene.reveal .window-tag{opacity:1}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:64px}.hero{padding:150px 0 70px}}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--charcoal);color:var(--warm);overflow:hidden;padding:22px 0;border-top:3px solid var(--amber);border-bottom:3px solid var(--amber)}
+.marquee-label{text-align:center;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:12px}
+.marquee-track{display:flex;gap:0;width:max-content;animation:scroll 30s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{
+  font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.3rem,2.6vw,1.9rem);font-style:italic;
+  padding:0 34px;white-space:nowrap;
+}
+.marquee-track span i{font-style:normal;color:var(--amber);padding-left:68px;font-size:1rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Stats ---------- */
+.stats{background:var(--linen)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px}
+.stat{
+  background:var(--warm);border-radius:20px;padding:38px 26px;text-align:center;
+  border:1px solid rgba(38,36,31,.08);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.stat:hover{transform:translateY(-8px);box-shadow:0 22px 44px rgba(38,36,31,.14)}
+.stat .num{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,4vw,3.2rem);font-weight:700;color:var(--sage-deep)}
+.stat .num .plus{color:var(--amber)}
+.stat p{font-size:.92rem;margin-top:10px;opacity:.8;font-weight:500}
+.section-head{text-align:center;max-width:640px;margin:0 auto}
+.section-head .eyebrow{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:14px}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:14px}
+.section-head p{opacity:.75}
+@media(max-width:800px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Tabs ---------- */
+.tabs-wrap{max-width:880px;margin:48px auto 0}
+.tab-btns{display:flex;gap:12px;justify-content:center;margin-bottom:34px;flex-wrap:wrap}
+.tab-btn{
+  font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;
+  padding:14px 34px;border-radius:999px;cursor:pointer;
+  border:2px solid rgba(38,36,31,.18);background:transparent;color:var(--charcoal);
+  transition:all .28s ease;
+}
+.tab-btn:hover{border-color:var(--sage);color:var(--sage-deep);transform:translateY(-2px)}
+.tab-btn.active{background:var(--sage);border-color:var(--sage);color:#fff;box-shadow:0 10px 24px rgba(124,139,111,.4)}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeUp .5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.tab-card{
+  background:#fff;border-radius:24px;padding:48px;
+  border:1px solid rgba(38,36,31,.08);box-shadow:0 24px 60px rgba(38,36,31,.08);
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+}
+.tab-card h3{font-size:1.7rem;margin-bottom:14px}
+.tab-card p{opacity:.8;margin-bottom:18px}
+.tab-card ul{list-style:none}
+.tab-card li{padding:10px 0 10px 34px;position:relative;font-weight:500}
+.tab-card li::before{
+  content:"✓";position:absolute;left:0;top:10px;width:24px;height:24px;border-radius:50%;
+  background:rgba(124,139,111,.15);color:var(--sage-deep);font-weight:700;font-size:.8rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.tab-art{
+  border-radius:16px;min-height:300px;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center;
+}
+.art-motorized{background:linear-gradient(160deg,#2E2C26 0%,#45423A 70%,#57534A 100%)}
+.art-manual{background:linear-gradient(160deg,#EFE9DC 0%,#E0D5BC 70%,#D5C8A9 100%)}
+.shade-mini{
+  width:64%;height:70%;border-radius:8px 8px 0 0;position:relative;
+  transition:transform 1.6s cubic-bezier(.65,0,.35,1);transform-origin:top;
+}
+.art-motorized .shade-mini{background:repeating-linear-gradient(180deg,rgba(255,255,255,.06) 0 10px,transparent 10px 20px),linear-gradient(180deg,#9BA98C,#7C8B6F);border-bottom:8px solid var(--amber)}
+.art-manual .shade-mini{background:repeating-linear-gradient(180deg,rgba(124,139,111,.12) 0 10px,transparent 10px 20px),linear-gradient(180deg,#FBF8F1,#EFE9DC);border-bottom:8px solid var(--sage-deep)}
+.tab-card:hover .shade-mini{transform:scaleY(.45)}
+.art-label{position:absolute;top:18px;left:20px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--amber)}
+.art-manual .art-label{color:var(--sage-deep)}
+.remote{
+  position:absolute;bottom:22px;right:22px;width:44px;height:78px;border-radius:12px;background:var(--charcoal);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+.remote i{width:14px;height:14px;border-radius:50%;background:var(--amber);display:block}
+.remote i:first-child{animation:blink 2.2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@media(max-width:760px){.tab-card{grid-template-columns:1fr;padding:32px 24px}.tab-art{min-height:220px}}
+
+/* ---------- Process ---------- */
+.process{background:var(--charcoal);color:var(--warm)}
+.process .section-head p{opacity:.7}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px;position:relative}
+.steps::before{content:"";position:absolute;top:44px;left:6%;right:6%;height:2px;background:linear-gradient(90deg,transparent,var(--sage) 20%,var(--sage) 80%,transparent);opacity:.5}
+.step{position:relative;text-align:center;padding:0 10px}
+.step .n{
+  width:88px;height:88px;margin:0 auto 22px;border-radius:50%;
+  background:var(--sage);color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:2rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;position:relative;z-index:2;
+  box-shadow:0 0 0 10px rgba(124,139,111,.18);transition:transform .3s ease,box-shadow .3s ease;
+}
+.step:hover .n{transform:scale(1.1);box-shadow:0 0 0 14px rgba(217,164,65,.22);background:var(--amber);color:var(--charcoal)}
+.step h3{font-size:1.25rem;margin-bottom:10px;color:var(--warm)}
+.step p{font-size:.92rem;opacity:.72}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr);gap:44px 16px}.steps::before{display:none}}
+
+/* ---------- Service area ---------- */
+.area{background:var(--warm)}
+.chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:44px;max-width:760px;margin-left:auto;margin-right:auto}
+.chip{
+  font-weight:600;font-size:1rem;padding:14px 28px;border-radius:999px;
+  background:var(--linen);border:2px solid transparent;cursor:default;
+  transition:all .28s ease;
+}
+.chip:hover{border-color:var(--sage);background:#fff;transform:translateY(-4px);box-shadow:0 12px 26px rgba(124,139,111,.3)}
+.chip.home{background:var(--sage);color:#fff}
+.chip.home:hover{background:var(--sage-deep);border-color:var(--sage-deep)}
+.area-note{text-align:center;margin-top:30px;font-size:.92rem;opacity:.65;font-style:italic}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--linen)}
+.faq-list{max-width:780px;margin:44px auto 0}
+.faq-item{
+  background:#fff;border-radius:16px;margin-bottom:14px;overflow:hidden;
+  border:1px solid rgba(38,36,31,.08);transition:box-shadow .3s ease;
+}
+.faq-item:hover{box-shadow:0 12px 30px rgba(38,36,31,.1)}
+.faq-item.open{box-shadow:0 14px 34px rgba(124,139,111,.18);border-color:rgba(124,139,111,.4)}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;text-align:left;
+  font-family:'Inter',sans-serif;font-size:1.02rem;font-weight:600;color:var(--charcoal);
+  padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq-q .icon{
+  flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:rgba(124,139,111,.14);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--sage-deep);
+  transition:transform .35s ease,background .35s ease,color .35s ease;
+}
+.faq-item.open .faq-q .icon{transform:rotate(45deg);background:var(--amber);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.faq-a p{padding:0 26px 24px;opacity:.8;font-size:.96rem}
+.faq-a a{color:var(--sage-deep);font-weight:600}
+
+/* ---------- Estimate form ---------- */
+.estimate .form-card{
+  max-width:760px;margin:48px auto 0;background:#fff;border-radius:28px;padding:52px;
+  border:1px solid rgba(38,36,31,.08);box-shadow:0 30px 70px rgba(38,36,31,.1);position:relative;overflow:hidden;
+}
+.estimate .form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--sage),var(--amber))}
+.field{margin-bottom:20px}
+.field label{display:block;font-weight:600;font-size:.88rem;margin-bottom:8px;letter-spacing:.02em}
+.field input,.field textarea{
+  width:100%;font-family:'Inter',sans-serif;font-size:1rem;color:var(--charcoal);
+  padding:15px 18px;border-radius:14px;border:2px solid rgba(38,36,31,.14);background:var(--warm);
+  transition:border-color .25s ease,box-shadow .25s ease;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 4px rgba(124,139,111,.18)}
+.field textarea{min-height:120px;resize:vertical}
+.form-note{font-size:.82rem;opacity:.6;margin-top:16px;text-align:center}
+.form-success{display:none;text-align:center;padding:30px 10px}
+.form-success .check{
+  width:84px;height:84px;margin:0 auto 22px;border-radius:50%;background:var(--sage);
+  color:#fff;font-size:2.4rem;display:flex;align-items:center;justify-content:center;
+  animation:pop .5s cubic-bezier(.2,1.4,.4,1);
+}
+@keyframes pop{from{transform:scale(.4);opacity:0}}
+.form-success h3{font-size:1.8rem;margin-bottom:12px}
+.form-success p{opacity:.8;margin-bottom:8px}
+.form-success .call-big{display:inline-block;margin-top:14px;font-size:1.25rem;font-weight:700;color:var(--sage-deep);text-decoration:none}
+.form-success .call-big:hover{color:var(--amber)}
+@media(max-width:640px){.estimate .form-card{padding:34px 22px}}
+
+/* ---------- Footer ---------- */
+footer{background:var(--charcoal);color:var(--warm);padding:64px 0 120px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.foot-grid h4{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:18px;font-weight:700}
+.foot-grid p,.foot-grid a{font-size:.95rem;opacity:.85;line-height:1.9}
+.foot-grid a{text-decoration:none}
+.foot-grid a:hover{color:var(--amber);opacity:1}
+.foot-brand{font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;letter-spacing:.12em;margin-bottom:14px}
+.foot-brand em{font-style:normal;color:var(--sage)}
+.foot-bottom{border-top:1px solid rgba(250,247,241,.14);padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;opacity:.6}
+.demo-flag{display:inline-block;background:var(--amber);color:var(--charcoal);font-weight:700;font-size:.68rem;letter-spacing:.18em;padding:6px 14px;border-radius:999px;text-transform:uppercase;margin-bottom:16px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+
+/* ---------- Sticky mobile call ---------- */
+.sticky-call{
+  position:fixed;bottom:0;left:0;right:0;z-index:1500;display:none;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(38,36,31,.94);backdrop-filter:blur(8px);
+  border-top:2px solid var(--amber);
+}
+.sticky-call a{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--sage);color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none;
+  padding:15px;border-radius:14px;width:100%;
+}
+.sticky-call a:active{background:var(--sage-deep)}
+@media(max-width:767px){.sticky-call{display:block}footer{padding-bottom:170px}}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO PREVIEW <span>·</span> Concept for Silva Installations</div>
+
+<nav id="nav">
+  <div class="inner">
+    <a class="wordmark" href="#top">SILVA <em>INSTALLATIONS</em></a>
+    <div class="nav-links">
+      <a href="#shades">Shades</a>
+      <a href="#process">Process</a>
+      <a href="#area">Service Area</a>
+      <a href="#faq">FAQ</a>
+      <a href="#estimate">Estimate</a>
+    </div>
+    <a class="phone-btn" href="tel:+19035177021">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (903) 517-7021
+    </a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker reveal">making your installation flawless.</span>
+      <h1 class="reveal d1">Motorized Shades, <span class="amber">Installed</span> Flawlessly.</h1>
+      <p class="sub reveal d2">Melissa-based installer of <strong>Lutron, Qmotion, Somfy &amp; more</strong> — serving the DFW Metroplex with white-glove roller-shade design and installation, motorized and manual.</p>
+      <div class="cta-row reveal d3">
+        <a class="btn" href="tel:+19035177021">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (903) 517-7021
+        </a>
+        <a class="btn ghost" href="#estimate">Get an Estimate</a>
+      </div>
+      <p class="hero-hours reveal d3"><span class="dot"></span> Mon–Fri 8–6 &nbsp;·&nbsp; Sat 10–4 &nbsp;·&nbsp; Sun closed</p>
+    </div>
+    <div class="window-scene" id="windowScene">
+      <div style="position:relative">
+        <div class="window" id="window">
+          <div class="sun"></div>
+          <div class="horizon"></div>
+          <div class="shade"></div>
+          <div class="shade-cord"></div>
+        </div>
+        <div class="window-tag">Let the light in</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-label="Brands installed">
+  <div class="marquee-label">Brands we install</div>
+  <div class="marquee-track" id="marqueeTrack">
+    <span>Lutron<i>◆</i></span><span>Qmotion<i>◆</i></span><span>Rollease<i>◆</i></span><span>Somfy<i>◆</i></span><span>Screen Innovations<i>◆</i></span><span>Progressive<i>◆</i></span>
+  </div>
+</div>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">By the numbers</div>
+      <h2>Experience You Can Measure</h2>
+      <p>A Melissa, Texas team doing one thing well: flawless shade installation.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num"><span class="count" data-target="6">0</span><span class="plus">+</span></div><p>Years serving the DFW Metroplex</p></div>
+      <div class="stat reveal d1"><div class="num"><span class="count" data-target="1000" data-suffix="s">0</span><span class="plus">+</span></div><p>Window shades put up across DFW &amp; beyond</p></div>
+      <div class="stat reveal d2"><div class="num"><span class="count" data-target="6">0</span></div><p>Premium brands designed &amp; installed</p></div>
+      <div class="stat reveal d3"><div class="num"><span class="count" data-target="1">0</span></div><p>White-glove promise on every install</p></div>
+    </div>
+    <p class="reveal" style="text-align:center;font-size:.85rem;opacity:.75;margin:18px 0 0">Figures are Silva's own published claims, per their website.</p>
+  </div>
+</section>
+
+<section id="shades">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Motorized &amp; manual</div>
+      <h2>Two Ways to Control the Light</h2>
+      <p>Silva Installations designs and installs both motorized and manual roller shades — pick the experience that fits your home.</p>
+    </div>
+    <div class="tabs-wrap reveal">
+      <div class="tab-btns" role="tablist">
+        <button class="tab-btn active" data-tab="motorized" role="tab" aria-selected="true">Motorized Shades</button>
+        <button class="tab-btn" data-tab="manual" role="tab" aria-selected="false">Manual Shades</button>
+      </div>
+      <div class="tab-panel active" id="tab-motorized" role="tabpanel">
+        <div class="tab-card">
+          <div>
+            <h3>Motorized Roller Shades</h3>
+            <p>Motorized roller shades — modern convenience, designed and installed for your home.</p>
+            <ul>
+              <li>Available from premium brands like Lutron, Qmotion &amp; Somfy</li>
+              <li>Part of Silva's white-glove design &amp; installation service</li>
+            </ul>
+          </div>
+          <div class="tab-art art-motorized" aria-hidden="true">
+            <span class="art-label">Hover to lower</span>
+            <div class="shade-mini"></div>
+            <div class="remote"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-manual" role="tabpanel">
+        <div class="tab-card">
+          <div>
+            <h3>Manual: The Classic, Done Right</h3>
+            <p>The timeless roller shade — clean lines and the same white-glove installation.</p>
+            <ul>
+              <li>Manual roller shades, designed and installed</li>
+              <li>From the same premium brand lineup</li>
+              <li>White-glove installation included</li>
+            </ul>
+          </div>
+          <div class="tab-art art-manual" aria-hidden="true">
+            <span class="art-label">Hover to lower</span>
+            <div class="shade-mini"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">How it works</div>
+      <h2 style="color:var(--warm)">From Consult to White-Glove Finish</h2>
+      <p>Design and installation handled end-to-end — Silva's published "White Glove Service" promise is making your installation flawless.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Consult</h3><p>Tell us about your windows, your light, and your style — we help you choose the right shades and brands.</p></div>
+      <div class="step reveal d1"><div class="n">2</div><h3>Measure</h3><p>We measure your windows and fit each shade to them.</p></div>
+      <div class="step reveal d2"><div class="n">3</div><h3>Install</h3><p>Our installation team puts up your shades with care — thousands of installs of experience, per Silva's own published claim.</p></div>
+      <div class="step reveal d3"><div class="n">4</div><h3>White-Glove Finish</h3><p>The white-glove promise, in Silva's own words: making your installation flawless.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Service area</div>
+      <h2>Rooted in Melissa, Serving the Metroplex</h2>
+      <p>Silva Installations is based in Melissa, Texas — and installs across the Dallas–Fort Worth Metroplex.</p>
+    </div>
+    <div class="chips reveal">
+      <span class="chip home">📍 Melissa, TX — Home Base</span>
+      <span class="chip">Dallas</span>
+      <span class="chip">Ft. Worth</span>
+      <span class="chip">Addison</span>
+      <span class="chip">Southlake</span>
+      <span class="chip">McKinney</span>
+    </div>
+    <p class="area-note reveal">…and more across the DFW Metroplex — just call and ask.</p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Good to know</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Motorized or manual — which is right for me?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Silva Installations designs and installs both motorized and manual roller shades — from brands like Lutron, Qmotion, Rollease, Somfy, Screen Innovations, and Progressive — and will help you choose the right fit for your home.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Which brands do you install?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Silva Installations works with premium shade brands including Lutron, Qmotion, Rollease, Somfy, Screen Innovations, and Progressive — for both motorized and manual roller-shade systems.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Where do you install?<span class="icon">+</span></button>
+        <div class="faq-a"><p>We're based in Melissa, Texas, and serve the Dallas–Fort Worth Metroplex — including Dallas, Ft. Worth, Addison, Southlake, and McKinney, and more.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">What are your hours?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Monday–Friday, 8:00 AM–6:00 PM, and Saturday, 10:00 AM–4:00 PM. We're closed on Sundays.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">How do I get an estimate?<span class="icon">+</span></button>
+        <div class="faq-a"><p>Just call <a href="tel:+19035177021">(903) 517-7021</a> — or send the form below and we'll get back to you to set up your consult.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="estimate" id="estimate">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Estimates</div>
+      <h2>Start With a Conversation</h2>
+      <p>Tell us about your windows — we'll take it from there.</p>
+    </div>
+    <div class="form-card reveal">
+      <form id="estimateForm" novalidate>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Your full name">
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(903) 555-0123">
+        </div>
+        <div class="field">
+          <label for="f-address">Address</label>
+          <input id="f-address" name="address" type="text" autocomplete="street-address" required placeholder="Street, city, ZIP">
+        </div>
+        <div class="field">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" placeholder="Which rooms, how many windows, motorized or manual…"></textarea>
+        </div>
+        <button class="btn" type="submit" style="width:100%;justify-content:center">Request My Estimate</button>
+        <p class="form-note">Prefer to talk? Call (903) 517-7021 — Mon–Fri 8–6, Sat 10–4.</p>
+      </form>
+      <div class="form-success" id="formSuccess" role="status">
+        <div class="check">✓</div>
+        <h3>Request received!</h3>
+        <p><em>Demo form — the live site sends this straight to Silva.</em></p>
+        <p>Prefer to talk? <a class="call-big" href="tel:+19035177021">Call (903) 517-7021</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="demo-flag">Demo Preview</span>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">SILVA <em>INSTALLATIONS</em></div>
+      </div>
+      <div>
+        <h4>Visit / Call</h4>
+        <p>3407 Windsong Ct<br>Melissa, TX 75454<br><a href="tel:+19035177021">(903) 517-7021</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Fri: 8:00 AM – 6:00 PM<br>Sat: 10:00 AM – 4:00 PM<br>Sun: Closed</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Concept demo — not the live business site.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+19035177021">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call Silva
+  </a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* --- duplicate marquee content for seamless loop --- */
+  var track = document.getElementById('marqueeTrack');
+  track.innerHTML += track.innerHTML;
+
+  /* --- nav shrink on scroll --- */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('shrunk', window.scrollY > 60); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* --- hero shade reveal: roll up on load --- */
+  var win = document.getElementById('window');
+  var scene = document.getElementById('windowScene');
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      win.classList.add('reveal');
+      scene.classList.add('reveal');
+    }, 500);
+  });
+  /* fallback if load already fired / slow */
+  setTimeout(function(){ win.classList.add('reveal'); scene.classList.add('reveal'); }, 2500);
+
+  /* --- scroll reveal --- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* --- animated counters --- */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var dur = 1600, start = null;
+    function frame(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(target * eased);
+      el.textContent = val.toLocaleString('en-US') + suffix;
+      if(p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); }
+    });
+  }, {threshold:0.5});
+  document.querySelectorAll('.count').forEach(function(el){ cio.observe(el); });
+
+  /* --- tabs --- */
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      document.getElementById('tab-' + btn.getAttribute('data-tab')).classList.add('active');
+    });
+  });
+
+  /* --- FAQ accordion --- */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+        other.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+        q.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  /* --- estimate form (demo confirmation) --- */
+  var form = document.getElementById('estimateForm');
+  var success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name');
+    var phone = document.getElementById('f-phone');
+    var addr = document.getElementById('f-address');
+    var ok = true;
+    [name, phone, addr].forEach(function(f){
+      if(!f.value.trim()){
+        ok = false;
+        f.style.borderColor = '#C0392B';
+        f.addEventListener('input', function h(){ f.style.borderColor=''; f.removeEventListener('input',h); });
+      }
+    });
+    if(!ok) return;
+    form.style.display = 'none';
+    success.style.display = 'block';
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+})();
+</script>
+</body>
+</html>
