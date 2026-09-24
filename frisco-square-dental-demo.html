@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frisco Square Dental — Gentle Dentistry at the Heart of Frisco | DEMO PREVIEW</title>
+<meta name="description" content="DEMO PREVIEW — Frisco Square Dental, Dr. Joey McElhaney, DDS. 6136 Frisco Square Blvd Ste 275, Frisco TX. Delta Dental PPO/Premier/Medicare Advantage in-network. Call (972) 712-4040.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#124034; --pine-deep:#0b2b24; --sand:#f6f1e4; --sand-dim:#ede5d2;
+  --apricot:#e08b4e; --apricot-deep:#c06f33; --seaglass:#a9cfc2; --ink:#20302b; --muted:#5c6f68;
+  --line:rgba(18,64,52,.16); --card:#fffdf8; --shadow:0 26px 60px -26px rgba(11,43,36,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--ink);background:var(--sand);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+::selection{background:var(--apricot);color:#fff}
+
+/* DEMO badge */
+.demo-badge{position:fixed;top:14px;right:14px;z-index:3000;background:#b3261e;color:#fff;font-size:11px;font-weight:800;letter-spacing:.2em;padding:10px 15px;border-radius:4px;box-shadow:0 8px 26px rgba(0,0,0,.3);pointer-events:none;text-transform:uppercase}
+
+/* utility bar */
+.utilbar{background:var(--pine-deep);color:#eaf4ef;font-size:12.5px;letter-spacing:.04em}
+.utilbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.utilbar a.tel{font-weight:700;color:#ffd9a8;text-decoration:none;font-size:14px}
+
+/* sticky nav */
+nav{position:sticky;top:0;z-index:2000;background:rgba(246,241,228,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;gap:16px}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+.brand .mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--pine),var(--pine-deep));display:grid;place-items:center;color:var(--sand);font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;box-shadow:var(--shadow)}
+.brand b{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--pine-deep);display:block;line-height:1.1}
+.brand small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.navlinks{display:flex;gap:26px;font-size:14px;font-weight:500}
+.navlinks a{text-decoration:none;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--apricot);transition:.3s}
+.navlinks a:hover::after{width:100%}
+.navcta{background:var(--apricot);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px;transition:.3s;box-shadow:0 10px 26px -10px rgba(224,139,78,.7)}
+.navcta:hover{background:var(--apricot-deep);transform:translateY(-2px)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--pine-deep) 0%,var(--pine) 58%,#1a5a4d 100%);color:#f2f7f3}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 82% 12%,rgba(224,139,78,.28),transparent 42%),
+  radial-gradient(circle at 12% 88%,rgba(169,207,194,.16),transparent 46%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:88px 24px 92px;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--seaglass);font-weight:600;margin-bottom:20px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--apricot)}
+.hero h1{font-size:clamp(42px,5.4vw,74px);color:#fff;font-weight:600}
+.hero h1 em{color:var(--apricot);font-style:italic}
+.hero p.lede{margin:22px 0 30px;font-size:18px;color:#d7e7e0;max-width:34em;font-weight:300}
+.herobtns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;border-radius:999px;padding:16px 30px;transition:.3s;font-size:15px}
+.btn-solid{background:var(--apricot);color:#fff;box-shadow:0 14px 34px -12px rgba(224,139,78,.8)}
+.btn-solid:hover{background:var(--apricot-deep);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.appt-card{background:var(--card);border-radius:22px;padding:34px;box-shadow:var(--shadow);color:var(--ink);position:relative}
+.appt-card::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;border-radius:22px 22px 0 0;background:linear-gradient(90deg,var(--apricot),var(--seaglass))}
+.appt-card h3{font-size:30px;color:var(--pine-deep);margin-bottom:6px}
+.appt-card p{font-size:14.5px;color:var(--muted);margin-bottom:18px}
+.appt-card .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.appt-card input,.appt-card select{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:14.5px;background:#fff}
+.appt-card input:focus,.appt-card select:focus{outline:none;border-color:var(--apricot)}
+.appt-card button{width:100%;border:none;cursor:pointer;margin-top:6px}
+.appt-note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.appt-note a{color:var(--apricot-deep);font-weight:600}
+
+/* insurance strip */
+.insure{background:var(--sand-dim);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.insure .wrap{display:flex;align-items:center;gap:26px;padding-top:22px;padding-bottom:22px;flex-wrap:wrap;justify-content:center}
+.insure .lbl{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--pine)}
+.insure .plans{display:flex;gap:12px;flex-wrap:wrap}
+.insure .pill{background:var(--card);border:1.5px solid var(--pine);color:var(--pine-deep);font-weight:700;font-size:14px;padding:9px 20px;border-radius:999px}
+.insure .src{font-size:11.5px;color:var(--muted)}
+
+/* sections */
+section{padding:84px 0}
+.sec-kicker{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--apricot-deep);margin-bottom:14px}
+.sec-title{font-size:clamp(32px,3.6vw,50px);color:var(--pine-deep);margin-bottom:14px}
+.sec-sub{color:var(--muted);font-size:17px;max-width:44em;margin-bottom:44px}
+
+/* stat band */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:0 0 8px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 22px;text-align:center;transition:.35s}
+.stat:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--apricot)}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--pine-deep)}
+.stat .t{font-size:13.5px;color:var(--muted);margin-top:6px}
+.stat .a{font-size:11px;color:var(--apricot-deep);font-weight:600;margin-top:8px;display:block}
+
+/* services tabs */
+.tabs{margin-top:10px}
+.tabbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tabbar button{border:1.5px solid var(--line);background:transparent;font-family:inherit;font-size:14px;font-weight:600;padding:12px 22px;border-radius:999px;cursor:pointer;color:var(--pine-deep);transition:.25s}
+.tabbar button.active,.tabbar button:hover{background:var(--pine);color:#fff;border-color:var(--pine)}
+.tabpanel{display:none;background:var(--card);border-radius:20px;padding:38px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.tabpanel.active{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;animation:fadein .45s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tabpanel h3{font-size:32px;color:var(--pine-deep);margin-bottom:12px}
+.tabpanel p{color:var(--muted);margin-bottom:16px}
+.tabpanel ul{list-style:none}
+.tabpanel li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px;display:flex;gap:10px;align-items:baseline}
+.tabpanel li::before{content:"✓";color:var(--apricot-deep);font-weight:700}
+.tabpanel .aside{background:var(--pine);color:#eaf4ef;border-radius:14px;padding:26px}
+.tabpanel .aside h4{font-family:'Cormorant Garamond',serif;font-size:24px;margin-bottom:8px;color:#fff}
+.tabpanel .aside p{color:#cfe0d9;font-size:14.5px}
+
+/* doctor band */
+.doctor{background:linear-gradient(160deg,var(--pine-deep),var(--pine));color:#eef5f1;border-radius:26px;padding:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.doctor::after{content:"“";position:absolute;right:26px;top:-10px;font-family:'Cormorant Garamond',serif;font-size:190px;color:rgba(255,255,255,.06);line-height:1}
+.doctor .mono{width:190px;height:190px;border-radius:50%;background:linear-gradient(135deg,var(--apricot),var(--apricot-deep));display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:700;color:#fff;margin:0 auto;box-shadow:0 20px 50px -14px rgba(0,0,0,.5)}
+.doctor h3{font-size:40px;color:#fff;margin-bottom:4px}
+.doctor .role{color:var(--seaglass);letter-spacing:.2em;text-transform:uppercase;font-size:12px;font-weight:600;margin-bottom:18px}
+.doctor p{color:#d3e2da;margin-bottom:14px}
+.doctor .creds{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.doctor .creds span{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 16px;font-size:12.5px}
+
+/* accessibility spotlight */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.access .art{background:linear-gradient(135deg,var(--seaglass),#dfe9e2);border-radius:22px;min-height:340px;display:grid;place-items:center;position:relative;overflow:hidden}
+.access .art .big{font-family:'Cormorant Garamond',serif;font-size:120px;color:rgba(18,64,52,.18);line-height:1}
+.access .art .cap{position:absolute;bottom:0;left:0;right:0;background:rgba(11,43,36,.85);color:#fff;font-size:13px;padding:14px 22px}
+.access h3{font-size:36px;color:var(--pine-deep);margin-bottom:14px}
+.access ul{list-style:none;margin-top:18px}
+.access li{display:flex;gap:12px;padding:10px 0;font-size:15.5px}
+.access li::before{content:"♡";color:var(--apricot-deep);font-weight:700}
+.access .src{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* FAQ */
+.faq{max-width:820px;margin:0 auto}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.3s}
+.faq-item.open{border-color:var(--apricot)}
+.faq-q{width:100%;background:none;border:none;font-family:inherit;text-align:left;padding:20px 24px;font-size:16.5px;font-weight:600;color:var(--pine-deep);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-q .plus{font-size:24px;color:var(--apricot-deep);transition:.3s;flex-shrink:0}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted);font-size:15px}
+.faq-a div{padding:0 24px 22px}
+
+/* reviews band (honest: no invented quotes) */
+.reviews-band{background:var(--pine-deep);color:#eef5f1;border-radius:26px;padding:52px;text-align:center;box-shadow:var(--shadow)}
+.reviews-band h3{font-size:36px;color:#fff;margin-bottom:12px}
+.reviews-band p{color:#cfe0d9;max-width:40em;margin:0 auto 26px}
+.reviews-band .birdeye{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:18px 34px;font-size:15px}
+.reviews-band .birdeye b{color:#ffd9a8;font-size:22px;font-family:'Cormorant Garamond',serif}
+
+/* CTA */
+.cta-band{background:linear-gradient(140deg,var(--apricot-deep),var(--apricot));border-radius:26px;padding:60px 48px;color:#fff;text-align:center;box-shadow:var(--shadow)}
+.cta-band h2{font-size:clamp(32px,4vw,52px);color:#fff;margin-bottom:14px}
+.cta-band p{max-width:36em;margin:0 auto 28px;color:#fff3e6;font-size:17px}
+.cta-band .btn-ghost{border-color:#fff}
+
+/* footer */
+footer{background:var(--pine-deep);color:#cfe0d9;padding:56px 0 110px}
+footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+footer h4{font-family:'Cormorant Garamond',serif;font-size:24px;color:#fff;margin-bottom:14px}
+footer p,footer li{font-size:14.5px;margin-bottom:8px}
+footer a{color:#ffd9a8;text-decoration:none}
+footer .flag{margin-top:22px;font-size:12.5px;color:#9fb3ab;border-top:1px solid rgba(255,255,255,.14);padding-top:16px}
+.copyright{text-align:center;font-size:12px;color:#8fa39b;margin-top:36px}
+
+/* sticky mobile call */
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:2500;background:var(--pine-deep);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--apricot);color:#fff;text-decoration:none;font-weight:700;font-size:17px;padding:14px;border-radius:14px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .wrap,.access,.doctor,.tabpanel.active{grid-template-columns:1fr}
+  .doctor{padding:38px 28px}
+  .navlinks{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  section{padding:60px 0}
+  .sticky-call{display:block}
+  .appt-card .row{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+  .cta-band{padding:44px 26px}
+}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo Preview</div>
+
+<div class="utilbar">
+  <div class="wrap">
+    <span>Mon&ndash;Thu &middot; 8:00am&ndash;4:00pm &middot; 6136 Frisco Square Blvd Ste 275, Frisco, TX</span>
+    <a class="tel" href="tel:+19727124040">Call (972) 712-4040</a>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark">F</span>
+      <span><b>Frisco Square Dental</b><small>Gentle Family Dentistry</small></span>
+    </a>
+    <div class="navlinks">
+      <a href="#services">Services</a><a href="#doctor">Dr. McElhaney</a><a href="#access">Accessible Care</a><a href="#faq">FAQ</a><a href="#visit">Visit Us</a>
+    </div>
+    <a class="navcta" href="tel:+19727124040">(972) 712-4040</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">In the heart of Frisco Square</span>
+      <h1>Dentistry that feels like <em>family</em>, right on the Square.</h1>
+      <p class="lede">One dentist. One team. One address you've walked past a hundred times. Frisco Square Dental pairs personal, continuity-first care with modern comfort — and we're in-network with Delta Dental.</p>
+      <div class="herobtns">
+        <a class="btn btn-solid" href="tel:+19727124040">&#9742; Call (972) 712-4040</a>
+        <a class="btn btn-ghost" href="#visit">Request an Appointment</a>
+      </div>
+    </div>
+    <div class="appt-card">
+      <h3>Request a visit</h3>
+      <p>Tell us what you need — we'll call you back with a time that fits. Prefer to talk? <a href="tel:+19727124040" style="color:var(--apricot-deep);font-weight:700">Call (972) 712-4040</a>.</p>
+      <div class="row">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+      </div>
+      <div class="row">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Email">
+      </div>
+      <select style="width:100%;margin-bottom:12px">
+        <option>New patient exam &amp; cleaning</option>
+        <option>Tooth pain / urgent concern</option>
+        <option>Crown, filling or implant</option>
+        <option>Cosmetic: whitening / veneers</option>
+        <option>Kids' checkup</option>
+      </select>
+      <a class="btn btn-solid" href="tel:+19727124040">Request Callback</a>
+      <p class="appt-note">Demo form — tap to call us directly at <a href="tel:+19727124040">(972) 712-4040</a>.</p>
+    </div>
+  </div>
+</header>
+
+<div class="insure">
+  <div class="wrap">
+    <span class="lbl">In-network with</span>
+    <div class="plans">
+      <span class="pill">Delta Dental PPO</span>
+      <span class="pill">Delta Dental Premier</span>
+      <span class="pill">Medicare Advantage</span>
+    </div>
+    <span class="src">per Delta Dental's provider finder &middot; accepting new patients</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="sec-kicker reveal">What we do</p>
+    <h2 class="sec-title reveal">Full-service family dentistry, minus the maze.</h2>
+    <p class="sec-sub reveal">Tap a category to see what's offered — clear, honest, and priced for neighbors, not billboards.</p>
+    <div class="tabs reveal">
+      <div class="tabbar" role="tablist">
+        <button class="active" data-tab="t1">Everyday Care</button>
+        <button data-tab="t2">Restorative</button>
+        <button data-tab="t3">Cosmetic</button>
+        <button data-tab="t4">Kids &amp; Families</button>
+      </div>
+      <div class="tabpanel active" id="t1">
+        <div>
+          <h3>Everyday Care</h3>
+          <p>The twice-a-year rhythm that keeps small issues small. Gentle hands, modern digital x-rays, and an honest conversation about what your mouth actually needs.</p>
+          <ul>
+            <li>Exams, cleanings &amp; digital x-rays</li>
+            <li>Gum health &amp; periodontal care</li>
+            <li>Night guards &amp; mouthguards</li>
+            <li>Emergency visits for tooth pain</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <h4>Why it matters</h4>
+          <p>Routine care is where the savings live. A cleaning today is a crown avoided tomorrow — and you'll get a conservative plan with plain-English options, not a sales pitch.</p>
+        </div>
+      </div>
+      <div class="tabpanel" id="t2">
+        <div>
+          <h3>Restorative</h3>
+          <p>When a tooth needs help, we rebuild it to look and feel like the real thing — conservative first, aggressive never.</p>
+          <ul>
+            <li>Tooth-colored fillings</li>
+            <li>Crowns &amp; bridges</li>
+            <li>Dental implants</li>
+            <li>Dentures &amp; partials</li>
+            <li>Root canal therapy</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <h4>Clear plans, upfront</h4>
+          <p>Every treatment plan comes with plain-English options and real costs before you commit — financial planning, not surprises.</p>
+        </div>
+      </div>
+      <div class="tabpanel" id="t3">
+        <div>
+          <h3>Cosmetic</h3>
+          <p>Small changes, big confidence. Cosmetic work that's tasteful — never one-size-fits-all "Hollywood."</p>
+          <ul>
+            <li>Professional teeth whitening</li>
+            <li>Porcelain veneers</li>
+            <li>Smile makeovers</li>
+            <li>Tooth bonding &amp; contouring</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <h4>Your smile, refined</h4>
+          <p>Bring a photo of the smile you want — Dr. McElhaney designs around your face, not a catalog.</p>
+        </div>
+      </div>
+      <div class="tabpanel" id="t4">
+        <div>
+          <h3>Kids &amp; Families</h3>
+          <p>First visits that feel like adventures, not appointments. The same dentist sees your whole family — year after year.</p>
+          <ul>
+            <li>Gentle first checkups for little ones</li>
+            <li>Sealants &amp; fluoride</li>
+            <li>Sports mouthguards</li>
+            <li>Family-block scheduling</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <h4>One dentist for the whole crew</h4>
+          <p>Kids, parents, grandparents — book everyone on the same morning and be done for six months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="n">3</div><div class="t">Delta Dental plans accepted</div><span class="a">PPO · Premier · Medicare Advantage</span></div>
+      <div class="stat reveal"><div class="n">4</div><div class="t">Days a week at the Square</div><span class="a">Mon–Thu · 8:00am–4:00pm</span></div>
+      <div class="stat reveal"><div class="n">1</div><div class="t">Dentist who knows your name</div><span class="a">Dr. Joey McElhaney, DDS</span></div>
+      <div class="stat reveal"><div class="n">275</div><div class="t">Our suite on Frisco Square Blvd</div><span class="a">6136 Frisco Square Blvd</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" style="padding-top:0">
+  <div class="wrap">
+    <div class="doctor reveal">
+      <div><div class="mono">JM</div></div>
+      <div>
+        <h3>Dr. Joey McElhaney, DDS</h3>
+        <div class="role">Your neighborhood dentist &middot; at the Square since 2004</div>
+        <p>The kind of dentist who listens first. Dr. McElhaney built Frisco Square Dental around a simple idea: quality dental care delivered with individual attention, in a comfortable setting you don't dread visiting.</p>
+        <p>His patients get the same dentist at every visit — no rotating cast, no corporate quota. Just continuity, honesty, and a location in the heart of Frisco Square.</p>
+        <div class="creds">
+          <span>General &amp; Family Dentistry</span>
+          <span>Delta Dental provider</span>
+          <span>Accepting new patients</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access" style="padding-top:0">
+  <div class="wrap">
+    <div class="access">
+      <div class="art reveal">
+        <div class="big">♡</div>
+        <div class="cap">Accessible office · treats disabled adults &amp; children · public-transit access — per Delta Dental's provider finder</div>
+      </div>
+      <div class="reveal">
+        <p class="sec-kicker">Care for every body</p>
+        <h3>A dental office that welcomes <em class="serif" style="color:var(--apricot-deep)">everyone</em>.</h3>
+        <p style="color:var(--muted)">Finding a dentist who treats patients with disabilities — adults and children alike — shouldn't be a scavenger hunt. At Frisco Square Dental, it isn't.</p>
+        <ul>
+          <li>Welcoming to patients with disabilities, adults and children</li>
+          <li>Accessible office with public-transit access</li>
+          <li>Delta Dental in-network — including Medicare Advantage</li>
+          <li>Patient, unhurried appointments at your pace</li>
+        </ul>
+        <p class="src">Accessibility attributes per Delta Dental's official provider finder (2026). Call us to talk through what you need — we'll make it work.</p>
+        <a class="btn btn-solid" href="tel:+19727124040" style="margin-top:18px">&#9742; Call (972) 712-4040</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <p class="sec-kicker reveal" style="text-align:center">Good questions</p>
+    <h2 class="sec-title reveal" style="text-align:center">Before you call</h2>
+    <div class="faq reveal" style="margin-top:36px">
+      <div class="faq-item">
+        <button class="faq-q">Do you take my insurance? <span class="plus">+</span></button>
+        <div class="faq-a"><div>We're in-network with Delta Dental PPO, Delta Dental Premier, and Delta Dental Medicare Advantage (per Delta Dental's provider finder), and we're accepting new patients. Bringing another plan? Call <a href="tel:+19727124040" style="color:var(--apricot-deep);font-weight:700">(972) 712-4040</a> and we'll check your benefits before you book.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where exactly are you? <span class="plus">+</span></button>
+        <div class="faq-a"><div>6136 Frisco Square Blvd, Suite 275 — right in Frisco Square, off Main St. near the Dallas North Tollway. Easy in, easy parking, easy out.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">When are you open? <span class="plus">+</span></button>
+        <div class="faq-a"><div>Monday through Thursday, 8:00am–4:00pm (lunch 12:30–1:00). Some directories print different hours — when in doubt, call <a href="tel:+19727124040" style="color:var(--apricot-deep);font-weight:700">(972) 712-4040</a> and we'll confirm.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">I'm anxious about dental visits. <span class="plus">+</span></button>
+        <div class="faq-a"><div>You're in good company — and in the right place. Tell us on your first call; we schedule unhurried visits, explain everything before it happens, and never push treatment you don't want.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I book? <span class="plus">+</span></button>
+        <div class="faq-a"><div>Call <a href="tel:+19727124040" style="color:var(--apricot-deep);font-weight:700">(972) 712-4040</a> or use the request form at the top of this page and we'll call you back with a time that fits.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="reviews-band reveal">
+      <h3>Turn your reviews into your strongest salesperson.</h3>
+      <p>Your patients' voices should be selling for you — not sitting on a listing that doesn't even carry your name. A live review wall on your own site shows what neighbors actually said, and with managed service your profiles get claimed, corrected, and answered.</p>
+      <div class="birdeye"><b>3.9 ★</b> &nbsp;·&nbsp; 35 reviews on Birdeye &nbsp;·&nbsp; profile currently unclaimed, listed as "Square Dental"</div>
+      <div style="margin-top:26px"><a class="btn btn-solid" href="tel:+19727124040">&#9742; Call (972) 712-4040</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Your smile deserves a dentist who knows it.</h2>
+      <p>Frisco Square Dental · 6136 Frisco Square Blvd Ste 275, Frisco, TX 75034 · Mon–Thu 8:00am–4:00pm. Delta Dental in-network. Accepting new patients.</p>
+      <div class="herobtns" style="justify-content:center">
+        <a class="btn btn-solid" href="tel:+19727124040">&#9742; Call (972) 712-4040</a>
+        <a class="btn btn-ghost" href="mailto:INFO@FRISCOSQUAREDENTAL.COM">Email Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Frisco Square Dental</h4>
+        <p>The office of Dr. Joey McElhaney, DDS<br>
+        6136 Frisco Square Blvd, Ste 275<br>
+        Frisco, TX 75034</p>
+        <p>Phone: <a href="tel:+19727124040">(972) 712-4040</a><br>
+        Email: <a href="mailto:INFO@FRISCOSQUAREDENTAL.COM">INFO@FRISCOSQUAREDENTAL.COM</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Thu: 8:00am – 4:00pm<br>(lunch 12:30–1:00)<br>Fri–Sun: Closed</p>
+      </div>
+      <div>
+        <h4>Insurance</h4>
+        <p>Delta Dental PPO · Premier · Medicare Advantage<br>Accepting new patients.<br>Other plans? Call and we'll check.</p>
+      </div>
+    </div>
+    <p class="flag">DEMO PREVIEW for Frisco Square Dental — not affiliated with or endorsed by the practice. Hours per the practice's own website (Mon–Thu 8–4); some third-party directories print different hours — call (972) 712-4040 to confirm. Birdeye 3.9/35 (unclaimed, 2026-09-24); accessibility attributes per Delta Dental's provider finder. Concept built by NoFluff Marketing — $297 build + $97/mo managed.</p>
+    <p class="copyright">© Frisco Square Dental — Demo Preview</p>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+19727124040">&#9742; Call (972) 712-4040</a></div>
+
+<script>
+// tabs
+document.querySelectorAll('.tabbar button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.tabbar button').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.tabpanel').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.getElementById(b.dataset.tab).classList.add('active');
+  });
+});
+// faq accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'), a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
