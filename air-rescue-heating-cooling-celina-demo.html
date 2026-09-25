@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Rescue Heating & Cooling — Celina, TX | DEMO PREVIEW</title>
+<meta name="description" content="DEMO PREVIEW — Family-owned HVAC in Celina, TX. AC repair, furnace service, indoor air quality. Open till 10 PM weeknights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1322; --ink2:#111c33; --ink3:#0e1830;
+  --ember:#ff5c1c; --ember-deep:#d63f0a; --ember-soft:rgba(255,92,28,.12);
+  --ice:#8fd8ff; --cream:#faf5ea; --paper:#fffdf7;
+  --mut:#8a94a8; --line:rgba(255,255,255,.09);
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:#eef2f8;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.display{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+/* DEMO badge */
+.demo-ribbon{position:fixed;top:14px;left:-46px;transform:rotate(-38deg);z-index:200;background:var(--ember);color:#fff;font:700 12px/1 'Space Grotesk';letter-spacing:.22em;padding:12px 60px;box-shadow:0 6px 24px rgba(0,0,0,.4)}
+.demo-strip{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#0a0f1d;border-top:1px solid var(--line);color:var(--mut);font-size:11.5px;letter-spacing:.08em;text-align:center;padding:9px 12px}
+/* NAV */
+.nav{position:sticky;top:0;z-index:150;background:rgba(11,19,34,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.nav-inner{display:flex;align-items:center;gap:22px;padding:14px 22px;max-width:1180px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--ember),var(--ember-deep));display:grid;place-items:center;box-shadow:0 6px 18px rgba(255,92,28,.35)}
+.brand-name{font:700 17px 'Space Grotesk';letter-spacing:.04em}
+.brand-sub{font-size:11px;color:var(--mut);letter-spacing:.28em}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-links a{font-size:13.5px;font-weight:500;color:#c9d3e6;text-decoration:none;padding:9px 13px;border-radius:9px;transition:.2s}
+.nav-links a:hover{background:rgba(255,255,255,.07);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:9px;font:700 15px 'Space Grotesk';letter-spacing:.02em;text-decoration:none;border-radius:12px;padding:13px 22px;transition:transform .18s,box-shadow .18s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px)}
+.btn-ember{background:linear-gradient(135deg,var(--ember),var(--ember-deep));color:#fff;box-shadow:0 8px 24px rgba(255,92,28,.35)}
+.btn-ice{background:rgba(143,216,255,.1);color:var(--ice);border:1px solid rgba(143,216,255,.35)}
+.nav-cta{margin-left:6px}
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1100px 520px at 80% -10%,rgba(255,92,28,.16),transparent 60%),radial-gradient(900px 500px at 10% 110%,rgba(143,216,255,.1),transparent 60%),var(--ink)}
+#aircanvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.hero-inner{position:relative;padding:92px 22px 70px;max-width:1180px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 12px 'Space Grotesk';letter-spacing:.3em;color:var(--ice);border:1px solid rgba(143,216,255,.3);border-radius:999px;padding:9px 18px;background:rgba(143,216,255,.06)}
+.eyebrow .dot{width:9px;height:9px;border-radius:50%;background:#3ddc74;box-shadow:0 0 12px #3ddc74;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.5}}
+.hero h1{font-size:clamp(42px,7vw,84px);font-weight:700;color:#fff;margin:26px 0 6px}
+.hero h1 .ember{color:var(--ember)}
+.hero .sub{font-size:clamp(16px,2.2vw,21px);color:#c2cbdf;max-width:640px;margin:14px 0 30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px}
+.hstat{display:flex;flex-direction:column;gap:2px}
+.hstat b{font:700 30px 'Space Grotesk';color:#fff}
+.hstat b .star{color:var(--ember)}
+.hstat span{font-size:12.5px;color:var(--mut);letter-spacing:.06em}
+/* MARQUEE */
+.marquee{background:var(--ember);color:#fff;overflow:hidden;white-space:nowrap;border-block:3px solid #0a0f1d}
+.marquee-track{display:inline-block;padding:13px 0;animation:scroll 26s linear infinite;font:700 14px 'Space Grotesk';letter-spacing:.24em}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* SECTIONS */
+section.block{padding:84px 0}
+.sec-eyebrow{font:700 12px 'Space Grotesk';letter-spacing:.32em;color:var(--ember);margin-bottom:14px}
+h2.sec-title{font-size:clamp(30px,4.4vw,50px);color:#fff;margin-bottom:14px}
+.sec-lede{color:#b9c2d6;max-width:680px;margin-bottom:40px;font-size:17px}
+/* TABS */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{font:600 14px 'Space Grotesk';letter-spacing:.06em;color:#c9d3e6;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:12px 22px;cursor:pointer;transition:.22s}
+.tab:hover{border-color:var(--ember);color:#fff}
+.tab.active{background:linear-gradient(135deg,var(--ember),var(--ember-deep));color:#fff;border-color:transparent;box-shadow:0 8px 22px rgba(255,92,28,.35)}
+.tabpanel{display:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.tabpanel.active{display:grid;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}}
+.svc{background:linear-gradient(160deg,var(--ink2),var(--ink3));border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.svc:hover{transform:translateY(-5px);border-color:rgba(255,92,28,.5);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.svc .ico{width:46px;height:46px;border-radius:13px;background:var(--ember-soft);display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.svc h3{font-size:18px;color:#fff;margin-bottom:8px}
+.svc p{font-size:14px;color:#aab4c9}
+/* CREW */
+.crew{background:var(--cream);color:#182338;border-radius:26px;padding:56px clamp(28px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;overflow:hidden;position:relative}
+.crew::before{content:"";position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,92,28,.12)}
+.crew .sec-eyebrow{color:var(--ember-deep)}
+.crew h2{color:#101a30;font-size:clamp(28px,3.6vw,44px);margin-bottom:16px}
+.crew blockquote{font-size:clamp(17px,2vw,21px);font-style:italic;color:#2b3a58;border-left:4px solid var(--ember);padding-left:20px;margin:20px 0}
+.crew cite{display:block;font-style:normal;font:700 15px 'Space Grotesk';color:#101a30;margin-top:10px}
+.crew-facts{display:grid;gap:14px}
+.fact{background:#fff;border:1px solid rgba(16,26,48,.1);border-radius:14px;padding:18px 20px;box-shadow:0 6px 18px rgba(16,26,48,.06)}
+.fact b{font:700 15px 'Space Grotesk';color:var(--ember-deep);display:block;margin-bottom:4px}
+.fact p{font-size:14px;color:#44536e}
+/* PROOF */
+.proof-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:26px;align-items:stretch}
+.bigstat{background:linear-gradient(150deg,var(--ember),var(--ember-deep));border-radius:var(--radius);padding:44px 36px;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;position:relative;overflow:hidden}
+.bigstat::after{content:"★★★★★";position:absolute;right:18px;bottom:8px;font-size:64px;opacity:.14;letter-spacing:6px}
+.bigstat .num{font:700 clamp(54px,6vw,80px) 'Space Grotesk';line-height:1}
+.bigstat .lbl{font-size:14px;opacity:.92;letter-spacing:.04em}
+.bigstat .src{font-size:12px;opacity:.75;margin-top:8px}
+.slider{background:var(--ink2);border:1px solid var(--line);border-radius:var(--radius);padding:40px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.slide{display:none;animation:fadeUp .45s ease}
+.slide.active{display:block}
+.slide .stars{color:var(--ember);font-size:18px;letter-spacing:3px;margin-bottom:14px}
+.slide p{font-size:clamp(16px,2vw,20px);color:#e8edf6;font-style:italic}
+.slide .who{margin-top:16px;font:600 14px 'Space Grotesk';color:var(--ice);letter-spacing:.05em}
+.slider-nav{display:flex;gap:10px;margin-top:26px;align-items:center}
+.snav{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;font-size:18px;cursor:pointer;transition:.2s}
+.snav:hover{background:var(--ember);border-color:transparent}
+.sdots{margin-left:auto;display:flex;gap:8px}
+.sdot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18);cursor:pointer;transition:.2s}
+.sdot.active{background:var(--ember);transform:scale(1.3)}
+/* COUNTERS */
+.counters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:26px}
+.counter{background:var(--ink2);border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;text-align:center}
+.counter .n{font:700 38px 'Space Grotesk';color:var(--ice)}
+.counter .n .ember{color:var(--ember)}
+.counter .l{font-size:13px;color:var(--mut);margin-top:6px}
+/* CREDENTIALS */
+.cred-band{background:linear-gradient(135deg,#0f1b33,#0b1322);border:1px solid var(--line);border-radius:var(--radius);padding:36px;display:flex;flex-wrap:wrap;gap:14px 34px;align-items:center;justify-content:center}
+.cred{display:flex;align-items:center;gap:11px;font:600 14px 'Space Grotesk';color:#dbe3f2;letter-spacing:.03em}
+.cred .tick{width:26px;height:26px;border-radius:50%;background:rgba(61,220,116,.15);color:#3ddc74;display:grid;place-items:center;font-size:14px;font-weight:700}
+.cred-note{width:100%;text-align:center;font-size:12px;color:var(--mut)}
+/* OFFERS */
+.offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.offer{background:linear-gradient(160deg,var(--ink2),var(--ink3));border:1px dashed rgba(255,92,28,.45);border-radius:var(--radius);padding:30px 26px;position:relative;transition:transform .2s,box-shadow .2s}
+.offer:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.offer .tag{position:absolute;top:-13px;left:22px;background:var(--ember);color:#fff;font:700 11px 'Space Grotesk';letter-spacing:.2em;padding:6px 14px;border-radius:999px}
+.offer h3{font-size:22px;color:#fff;margin:8px 0 8px}
+.offer p{font-size:14px;color:#aab4c9}
+/* AREA */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{font:600 14px 'Space Grotesk';letter-spacing:.04em;padding:12px 20px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:#dbe3f2;transition:.2s}
+.chip:hover{border-color:var(--ember);color:#fff;transform:translateY(-2px)}
+.chip.home{background:linear-gradient(135deg,var(--ember),var(--ember-deep));border-color:transparent;color:#fff}
+/* FAQ */
+.faq{max-width:820px}
+.faq-item{background:var(--ink2);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:rgba(255,92,28,.55)}
+.faq-q{width:100%;background:none;border:0;color:#fff;font:600 16px 'Space Grotesk';text-align:left;padding:20px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-q .plus{font-size:22px;color:var(--ember);transition:transform .3s;flex-shrink:0}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:#aab4c9;font-size:15px}
+.faq-a p{padding:0 22px 22px}
+/* FORM */
+.form-card{background:var(--paper);color:#182338;border-radius:22px;padding:clamp(30px,4vw,52px);display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.form-card h2{color:#101a30;font-size:clamp(28px,3.6vw,42px);margin-bottom:12px}
+.form-card .fine{font-size:13px;color:#6b7a96;margin-top:14px}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font:600 12.5px 'Space Grotesk';letter-spacing:.1em;color:#33415c;margin-bottom:7px;text-transform:uppercase}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid #dbe2ef;border-radius:11px;padding:13px 15px;font:500 15px 'Inter';color:#182338;background:#fff;transition:border-color .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--ember)}
+.form-ok{display:none;background:#e9fbf0;border:1.5px solid #3ddc74;color:#14532d;border-radius:12px;padding:18px;font-weight:600;margin-top:6px}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:56px 0 90px;color:#aab4c9}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
+.foot-grid h4{font:700 13px 'Space Grotesk';letter-spacing:.24em;color:#fff;margin-bottom:14px}
+.foot-grid p,.foot-grid li{font-size:14.5px;list-style:none}
+.foot-grid li{margin-bottom:8px}
+.hours-table{font-size:14px}
+.hours-table div{display:flex;justify-content:space-between;gap:16px;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+/* STICKY MOBILE CALL */
+.sticky-call{display:none;position:fixed;left:14px;right:14px;bottom:44px;z-index:190;background:linear-gradient(135deg,var(--ember),var(--ember-deep));color:#fff;font:700 17px 'Space Grotesk';letter-spacing:.04em;text-decoration:none;text-align:center;padding:17px;border-radius:16px;box-shadow:0 12px 34px rgba(255,92,28,.5)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .crew{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr}
+  .form-card{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .sticky-call{display:block}
+  .demo-strip{display:none}
+  form .row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">DEMO PREVIEW</div>
+<div class="demo-strip">DEMO PREVIEW — sample website concept for Air Rescue Heating &amp; Cooling, Celina TX. Nothing here is live. Built by NoFluff Marketing.</div>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2c1 4-3 6-3 10a5 5 0 0 0 10 0c0-2-1-3.5-2-5-.5 1.5-1.5 2-2.5 2C15 7 14 4 12 2z" fill="#fff"/><path d="M12 22a7 7 0 0 1-7-7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".55"/></svg>
+      </span>
+      <span><span class="brand-name">AIR RESCUE</span><br><span class="brand-sub">CELINA, TX</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#crew">Our Family</a>
+      <a href="#proof">Reviews</a>
+      <a href="#offers">Offers</a>
+      <a href="#area">Service Area</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-ember nav-cta" href="tel:+14692942616" style="padding:11px 18px;font-size:14px">📞 (469) 294-2616</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="aircanvas" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <span class="eyebrow"><span class="dot"></span><span id="openStatus">OPEN TODAY · 8 AM – 10 PM</span></span>
+    <h1>Celina's After-Hours <span class="ember">HVAC Rescue Crew</span></h1>
+    <p class="sub">Air Rescue Heating &amp; Cooling is a family shop run by Aaron &amp; Kecia Klause — and they mean it when they say <em>"we do some of our best work after you get off work."</em> AC, furnaces, heat pumps, and indoor air quality across Collin &amp; Denton County.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-ember" href="tel:+14692942616">📞 Call (469) 294-2616</a>
+      <a class="btn btn-ice" href="#estimate">Request an Estimate</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hstat"><b><span class="star">★</span> 4.9</b><span>482 reviews on Birdeye</span></div>
+      <div class="hstat"><b>10<span class="ember" style="color:var(--ember)">PM</span></b><span>open weeknights, till 8 Sat</span></div>
+      <div class="hstat"><b>TACLB83066E</b><span>licensed TX HVAC contractor</span></div>
+      <div class="hstat"><b>30<span style="color:var(--ember)">+</span></b><span>yrs in the service business — Aaron</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow">WHAT WE FIX</div>
+      <h2 class="sec-title">One crew. Every system.</h2>
+      <p class="sec-lede">Air Rescue services, repairs, and maintains <strong>all makes &amp; models</strong> — from AC tune-ups to full installs, plus free second opinions on repair, replacement &amp; installation.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab active" data-tab="cool">❄ Cooling</button>
+      <button class="tab" data-tab="heat">🔥 Heating</button>
+      <button class="tab" data-tab="air">🌬 Air Quality</button>
+      <button class="tab" data-tab="care">🛡 Maintenance</button>
+    </div>
+    <div class="tabpanel active reveal" id="tab-cool">
+      <div class="svc"><div class="ico">❄</div><h3>AC Repair</h3><p>Fast diagnosis and honest repair on any air conditioner — no upsell, no pressure. Free second opinions.</p></div>
+      <div class="svc"><div class="ico">🧰</div><h3>AC Maintenance</h3><p>$99 tune-ups (heating or AC) that catch small problems before they become August emergencies.</p></div>
+      <div class="svc"><div class="ico">🏠</div><h3>AC Install &amp; Replace</h3><p>Armstrong systems from Celina's only Armstrong Comfort Team dealer — sized right for your home.</p></div>
+      <div class="svc"><div class="ico">🔀</div><h3>Heat Pumps &amp; Mini-Splits</h3><p>Heat pump and ductless mini-split repair, maintenance, install and replacement.</p></div>
+    </div>
+    <div class="tabpanel reveal" id="tab-heat">
+      <div class="svc"><div class="ico">🔥</div><h3>Furnace Repair</h3><p>Gas furnace diagnostics and repair to keep North Texas cold snaps from catching you off guard.</p></div>
+      <div class="svc"><div class="ico">🏠</div><h3>Furnace Install &amp; Replace</h3><p>Armstrong gas furnaces, installed by licensed technicians who size and set up the system properly.</p></div>
+      <div class="svc"><div class="ico">🔀</div><h3>Heat Pump Services</h3><p>Year-round heat pump repair, maintenance, and replacement — one system, both seasons.</p></div>
+      <div class="svc"><div class="ico">🧪</div><h3>Free Second Opinion</h3><p>Another company quoted you a new system? Get a free second opinion before you sign anything.</p></div>
+    </div>
+    <div class="tabpanel reveal" id="tab-air">
+      <div class="svc"><div class="ico">🌬</div><h3>Indoor Air Quality</h3><p>Removing allergens, viruses, spores, pollen, bacteria, and mold from the air your family breathes.</p></div>
+      <div class="svc"><div class="ico">🧼</div><h3>Sanitizing &amp; Disinfecting</h3><p>Whole-home sanitizing services for cleaner, healthier indoor air.</p></div>
+      <div class="svc"><div class="ico">🌀</div><h3>Duct Cleaning</h3><p>Professional duct cleaning so your system — and your lungs — run clean.</p></div>
+      <div class="svc"><div class="ico">🏢</div><h3>Light Commercial HVAC</h3><p>Repair, maintenance, and installation for small commercial spaces too.</p></div>
+    </div>
+    <div class="tabpanel reveal" id="tab-care">
+      <div class="svc"><div class="ico">📋</div><h3>Maintenance Agreements</h3><p>Scheduled tune-ups and priority care that keep systems efficient and warranties intact.</p></div>
+      <div class="svc"><div class="ico">💳</div><h3>FTL Financing</h3><p>Financing options available so a new system doesn't have to wait for a perfect budget month.</p></div>
+      <div class="svc"><div class="ico">🤝</div><h3>Free Second Opinion</h3><p>On any repair, replacement, or installation quote — from a crew that won't sell you what you don't need.</p></div>
+      <div class="svc"><div class="ico">📞</div><h3>Easy Scheduling</h3><p>Call <a href="tel:+14692942616" style="color:var(--ice);font-weight:600">(469) 294-2616</a> — most of the time you'll speak to a member of the family.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="crew" style="padding-top:0">
+  <div class="wrap">
+    <div class="crew reveal">
+      <div>
+        <div class="sec-eyebrow">OUR FAMILY</div>
+        <h2>Founded by Aaron &amp; Kecia Klause. Run like family.</h2>
+        <blockquote>"I have been in the service business for over 30 years as a business owner and a technician… be honest and respectful. Try your best to do what you say you will and lastly, it is not all about the money."<cite>— Aaron and Kecia Klause, Owners</cite></blockquote>
+        <a class="btn btn-ember" href="tel:+14692942616">📞 Talk to the Family</a>
+      </div>
+      <div class="crew-facts">
+        <div class="fact"><b>Family-owned &amp; operated</b><p>"When you call, it's most likely that you'll be speaking with one of our family members."</p></div>
+        <div class="fact"><b>Serving neighbors for over a decade</b><p>Friends and neighbors across Collin and Denton County, TX — "proudly serving our community."</p></div>
+        <div class="fact"><b>Trusted advisor, not a salesperson</b><p>"We will never try to sell you something you don't need. We will present you with all of your options."</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="proof" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow">PROOF</div>
+      <h2 class="sec-title">4.9 stars. 482 reviews. Zero gimmicks.</h2>
+      <p class="sec-lede">Real words from real customers — sourced, not staged.</p>
+    </div>
+    <div class="proof-grid reveal">
+      <div class="bigstat">
+        <div class="num" data-count="4.9" data-dec="1">0</div>
+        <div class="lbl">average rating</div>
+        <div class="lbl" style="margin-top:10px"><span class="num" data-count="482" style="font-size:34px">0</span></div>
+        <div class="lbl">reviews</div>
+        <div class="src">Source: Birdeye profile, verified Sept 2026</div>
+      </div>
+      <div class="slider">
+        <div class="slide active">
+          <div class="stars">★★★★★</div>
+          <p>"We have used Air Rescue on numerous occasions and have always had a great experience. Professional and timely service is a constant with them."</p>
+          <div class="who">— Matthew Cagle · via hvacloc.com</div>
+        </div>
+        <div class="slide">
+          <div class="stars">★★★★★</div>
+          <p>"Aaron responded super fast to our call on a hot and humid Texas summer day and fixed the problem in short order. He is dependable, trustworthy, and experienced."</p>
+          <div class="who">— Birdeye review</div>
+        </div>
+        <div class="slide">
+          <div class="stars">★★★★★</div>
+          <p>"Needed an assignment on my cooling system and AIR RESCUE came out, did more than what I needed and a very affordable cost."</p>
+          <div class="who">— Ricardo Gloria · via hvacloc.com</div>
+        </div>
+        <div class="slide">
+          <div class="stars">★★★★★</div>
+          <p>"Air Rescue is wonderful, they offer impressive and prompt service. They are very courteous and kind. Will continue to do business with them."</p>
+          <div class="who">— Starla Taylor · via hvacloc.com</div>
+        </div>
+        <div class="slider-nav">
+          <button class="snav" id="prevSlide" aria-label="Previous review">‹</button>
+          <button class="snav" id="nextSlide" aria-label="Next review">›</button>
+          <div class="sdots" id="sdots"></div>
+        </div>
+      </div>
+    </div>
+    <div class="counters reveal">
+      <div class="counter"><div class="n"><span data-count="30">0</span><span class="ember">+</span></div><div class="l">years in the service business (Aaron's words)</div></div>
+      <div class="counter"><div class="n"><span data-count="10">0</span><span class="ember">PM</span></div><div class="l">open till, Monday–Friday</div></div>
+      <div class="counter"><div class="n"><span data-count="12">0</span><span class="ember">+</span></div><div class="l">towns served across Collin &amp; Denton Co.</div></div>
+      <div class="counter"><div class="n"><span data-count="99">0</span></div><div class="l">$ tune-ups — heating or AC</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="cred-band reveal">
+      <span class="cred"><span class="tick">✓</span>Licensed TX HVAC contractor — TACLB83066E</span>
+      <span class="cred"><span class="tick">✓</span>TACCA member</span>
+      <span class="cred"><span class="tick">✓</span>ACCA member</span>
+      <span class="cred"><span class="tick">✓</span>Celina's only Armstrong Comfort Team dealer</span>
+      <span class="cred"><span class="tick">✓</span>EPA Certified technicians</span>
+      <span class="cred"><span class="tick">✓</span>"A" BBB rating</span>
+      <div class="cred-note">Credentials as published by the company on their current website.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="offers" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow">CURRENT OFFERS</div>
+      <h2 class="sec-title">Deals worth calling about.</h2>
+      <p class="sec-lede">Straight from the shop — no fine-print games.</p>
+    </div>
+    <div class="offers reveal">
+      <div class="offer"><span class="tag">TUNE-UP</span><h3>$99 Tune-Ups</h3><p>Heating or AC. Get your system ready before the season turns — and save.</p></div>
+      <div class="offer"><span class="tag">SERVICE</span><h3>$10 OFF</h3><p>Your next service call. Mention this page when you book.</p></div>
+      <div class="offer"><span class="tag">NEW CUSTOMER</span><h3>$25 OFF</h3><p>First-time customers get $25 off. Try the family crew once — you'll stay.</p></div>
+      <div class="offer"><span class="tag">ALWAYS FREE</span><h3>Free 2nd Opinion</h3><p>On any repair, replacement, or installation quote. Never pay for doubt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow">WHERE WE ROLL</div>
+      <h2 class="sec-title">Proudly serving the 380 corridor.</h2>
+      <p class="sec-lede">Based at 930 W Cedar St in Celina — covering homes and light commercial across the area:</p>
+    </div>
+    <div class="chips reveal">
+      <span class="chip home">📍 Celina</span>
+      <span class="chip">Frisco</span><span class="chip">McKinney</span><span class="chip">Prosper</span>
+      <span class="chip">Little Elm</span><span class="chip">Aubrey</span><span class="chip">Pilot Point</span>
+      <span class="chip">Gunter</span><span class="chip">Tioga</span><span class="chip">Anna</span>
+      <span class="chip">Melissa</span><span class="chip">Allen</span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow">GOOD QUESTIONS</div>
+      <h2 class="sec-title">Before you call.</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">What are your hours?<span class="plus">+</span></button><div class="faq-a"><p>Monday–Friday 8:00 AM–10:00 PM, Saturday 8:00 AM–8:00 PM, Sunday 12:00–5:00 PM. Evening appointments are the house specialty.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Are you licensed and insured?<span class="plus">+</span></button><div class="faq-a"><p>Yes — Texas HVAC contractor license TACLB83066E, fully insured, and members of both TACCA and ACCA. All technicians are EPA Certified.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you really give free second opinions?<span class="plus">+</span></button><div class="faq-a"><p>On any repair, replacement, or installation quote. If another company says you need a new system, get a free second look first.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What brands do you install?<span class="plus">+</span></button><div class="faq-a"><p>Air Rescue is Celina's only Armstrong Comfort Team dealer — but they service, repair, and maintain all makes and models.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How do I schedule?<span class="plus">+</span></button><div class="faq-a"><p>Call <a href="tel:+14692942616" style="color:var(--ice);font-weight:600">(469) 294-2616</a> — most of the time you'll speak to a member of the family — or send the estimate form below.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="estimate" style="padding-top:0">
+  <div class="wrap">
+    <div class="form-card reveal">
+      <div>
+        <div class="sec-eyebrow">GET STARTED</div>
+        <h2>Request your estimate.</h2>
+        <p style="color:#44536e">Tell us what's going on — a family member will call you back to schedule. Prefer to talk now? <a href="tel:+14692942616" style="color:var(--ember-deep);font-weight:700">(469) 294-2616</a></p>
+        <p class="fine">DEMO PREVIEW — this form is a design mockup and doesn't send anywhere yet.</p>
+      </div>
+      <div>
+        <form id="estForm">
+          <div class="row">
+            <div class="field"><label>First name</label><input required placeholder="Jane"></div>
+            <div class="field"><label>Phone</label><input required type="tel" placeholder="Your phone number"></div>
+          </div>
+          <div class="field"><label>What do you need?</label>
+            <select><option>AC repair</option><option>AC maintenance / tune-up</option><option>Furnace / heating repair</option><option>New system / replacement</option><option>Free second opinion</option><option>Indoor air quality</option><option>Something else</option></select>
+          </div>
+          <div class="field"><label>What's going on?</label><textarea rows="3" placeholder="AC blowing warm since yesterday…"></textarea></div>
+          <button class="btn btn-ember" type="submit" style="width:100%;justify-content:center">Send Estimate Request</button>
+          <div class="form-ok" id="formOk">✓ Got it — in the live version this would reach the Air Rescue family directly.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>AIR RESCUE HEATING &amp; COOLING</h4>
+        <p>930 W Cedar St, Celina, TX 75009<br>
+        <a href="tel:+14692942616" style="color:var(--ice);font-weight:600">(469) 294-2616</a><br>
+        Family-owned &amp; operated</p>
+      </div>
+      <div>
+        <h4>HOURS</h4>
+        <div class="hours-table">
+          <div><span>Mon – Fri</span><span>8 AM – 10 PM</span></div>
+          <div><span>Saturday</span><span>8 AM – 8 PM</span></div>
+          <div><span>Sunday</span><span>12 PM – 5 PM</span></div>
+        </div>
+        <p style="font-size:12px;margin-top:8px">Hours per Birdeye directory listing.</p>
+      </div>
+      <div>
+        <h4>SERVICES</h4>
+        <ul><li>AC Repair &amp; Maintenance</li><li>Furnace &amp; Heat Pumps</li><li>Mini-Splits</li><li>Indoor Air Quality</li><li>Light Commercial</li></ul>
+      </div>
+    </div>
+    <p style="margin-top:36px;font-size:12.5px;color:var(--mut)">DEMO PREVIEW — concept site built by NoFluff Marketing. Not affiliated with or endorsed by the business. License &amp; credential claims shown are the company's own published claims.</p>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14692942616">📞 Call (469) 294-2616</a>
+
+<script>
+// Sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+
+// Marquee content
+const items=['OPEN TILL 10 PM WEEKNIGHTS','FAMILY-OWNED & OPERATED','FREE SECOND OPINIONS','$99 TUNE-UPS','4.9 ★ · 482 REVIEWS','CELINA, TX'];
+document.getElementById('marqueeTrack').innerHTML=(items.map(t=>`<span style="margin:0 28px">${t} ✦</span>`).join('')).repeat(2);
+
+// Open-now status (America/Chicago, their real hours)
+try{
+  const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}));
+  const d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  const close=(d===0)?17:(d===6)?20:22, open=(d===0)?12:8;
+  const el=document.getElementById('openStatus');
+  if(h>=open&&h<close){el.textContent='OPEN NOW · TILL '+(close>12?(close-12)+' PM':close+' AM');}
+  else{el.textContent='OPEN TODAY · '+(open>12?(open-12)+' PM':open+' AM')+' – '+(close>12?(close-12)+' PM':'');}
+}catch(e){}
+
+// Scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Animated counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,end=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),t0=performance.now(),dur=1400;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),v=end*(1-Math.pow(1-p,3));
+    el.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString();
+    if(p<1)requestAnimationFrame(tick)})(t0);
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+// Tabs
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+}));
+
+// Slider
+const slides=[...document.querySelectorAll('.slide')],dotsEl=document.getElementById('sdots');
+let cur=0,timer;
+slides.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i?'':' active');d.setAttribute('role','button');d.setAttribute('aria-label','Review '+(i+1));d.addEventListener('click',()=>go(i));dotsEl.appendChild(d)});
+function go(i){cur=(i+slides.length)%slides.length;
+  slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
+  [...dotsEl.children].forEach((d,k)=>d.classList.toggle('active',k===cur));restart()}
+function restart(){clearInterval(timer);timer=setInterval(()=>go(cur+1),6000)}
+document.getElementById('prevSlide').addEventListener('click',()=>go(cur-1));
+document.getElementById('nextSlide').addEventListener('click',()=>go(cur+1));
+restart();
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+}));
+
+// Form (demo only)
+document.getElementById('estForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formOk').style.display='block'});
+
+// Hero airflow canvas
+(function(){
+  const c=document.getElementById('aircanvas'),ctx=c.getContext('2d');let W,H,ps=[];
+  function rs(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;
+    ps=Array.from({length:Math.min(70,W/18)},()=>({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.4,s:.25+Math.random()*.6,o:.15+Math.random()*.4,ph:Math.random()*6.28}))}
+  rs();addEventListener('resize',rs);
+  (function loop(t){ctx.clearRect(0,0,W,H);
+    ps.forEach(p=>{p.y-=p.s;p.x+=Math.sin(t/1600+p.ph)*.25;if(p.y<-6){p.y=H+6;p.x=Math.random()*W}
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.28);
+      ctx.fillStyle=`rgba(143,216,255,${p.o})`;ctx.fill()});
+    requestAnimationFrame(loop)})(0);
+})();
+</script>
+</body>
+</html>
