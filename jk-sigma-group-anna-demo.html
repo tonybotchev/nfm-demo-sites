@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J&amp;K Sigma Group Electrical — Anna, TX Electrician | DEMO PREVIEW</title>
+<meta name="description" content="DEMO PREVIEW — J&K Sigma Group Electrical, Anna TX. Tesla-certified EV charger installation, panel upgrades, residential electrical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0e12; --panel:#14161c; --panel2:#1a1d25; --line:#262a35;
+  --amber:#ffb300; --amber-deep:#e09a00; --paper:#f5f2ea; --mut:#9aa1b2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.demo-badge{position:fixed;top:12px;right:12px;z-index:200;background:var(--amber);color:#111;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;letter-spacing:.14em;padding:8px 14px;border-radius:4px;box-shadow:0 4px 18px rgba(255,179,0,.35)}
+.nav{position:sticky;top:0;z-index:100;background:rgba(13,14,18,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:20px;letter-spacing:.02em;text-decoration:none}
+.brand .amp{color:var(--amber)}
+.brand small{display:block;font-family:'JetBrains Mono',monospace;font-weight:400;font-size:10px;letter-spacing:.32em;color:var(--mut)}
+.nav-links{display:flex;gap:26px;font-size:14px;font-weight:600}
+.nav-links a{text-decoration:none;color:var(--mut);transition:color .2s}
+.nav-links a:hover{color:var(--amber)}
+.nav-call{background:var(--amber);color:#111;font-weight:700;text-decoration:none;padding:10px 20px;border-radius:6px;font-size:14px;transition:transform .2s,box-shadow .2s}
+.nav-call:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,179,0,.35)}
+@media(max-width:860px){.nav-links{display:none}}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(700px 320px at 85% 10%,rgba(255,179,0,.14),transparent 60%),
+  radial-gradient(500px 300px at 10% 90%,rgba(255,179,0,.07),transparent 60%);}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse at 50% 30%,black 30%,transparent 75%)}
+.hero-inner{position:relative;max-width:1180px;margin:0 auto;padding:88px 20px 72px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.28em;color:var(--amber);text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(42px,7vw,84px);line-height:1.02;letter-spacing:-.01em;max-width:16ch}
+.hero h1 .volt{color:var(--amber);position:relative}
+.hero p.lede{max-width:56ch;color:var(--mut);font-size:18px;margin:22px 0 30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;padding:15px 28px;border-radius:8px;font-size:16px;transition:transform .2s,box-shadow .2s}
+.btn-amber{background:var(--amber);color:#111}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,179,0,.35)}
+.btn-ghost{border:1px solid var(--line);color:var(--paper);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--amber);transform:translateY(-2px)}
+.hero-specs{display:flex;gap:0;margin-top:44px;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex-wrap:wrap;background:var(--panel)}
+.spec{flex:1 1 160px;padding:18px 22px;border-right:1px solid var(--line)}
+.spec:last-child{border-right:0}
+.spec .k{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;color:var(--mut);text-transform:uppercase}
+.spec .v{font-weight:700;font-size:16px;margin-top:6px}
+.band{background:var(--amber);color:#111;overflow:hidden}
+.band-inner{max-width:1180px;margin:0 auto;padding:16px 20px;display:flex;gap:34px;flex-wrap:wrap;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.12em}
+.section{max-width:1180px;margin:0 auto;padding:76px 20px}
+.sec-kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.28em;color:var(--amber);text-transform:uppercase;margin-bottom:14px}
+.section h2{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.01em;margin-bottom:14px}
+.section .sub{color:var(--mut);max-width:62ch;margin-bottom:36px;font-size:17px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab-btn{background:var(--panel);border:1px solid var(--line);color:var(--paper);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.04em;padding:12px 20px;border-radius:8px;cursor:pointer;transition:all .2s}
+.tab-btn:hover{border-color:var(--amber)}
+.tab-btn.active{background:var(--amber);color:#111;border-color:var(--amber);font-weight:700}
+.tab-panels{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:38px;min-height:280px}
+.tab-panel{display:none;animation:fadeUp .4s ease}
+.tab-panel.active{display:block}
+.tab-panel h3{font-family:'Archivo',sans-serif;font-size:24px;font-weight:800;margin-bottom:12px}
+.tab-panel h3 span{color:var(--amber)}
+.tab-panel p{color:var(--mut);max-width:64ch;margin-bottom:18px}
+.tab-panel ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tab-panel li{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:15px;transition:transform .2s,border-color .2s}
+.tab-panel li:hover{transform:translateY(-3px);border-color:var(--amber)}
+.tab-panel li::before{content:"▸ ";color:var(--amber);font-weight:700}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.jeff{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--amber)}
+.jeff-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:center}
+@media(max-width:860px){.jeff-grid{grid-template-columns:1fr}}
+.jeff-card{background:var(--ink);border:1px solid var(--line);border-radius:14px;padding:34px;position:relative}
+.jeff-card::before{content:"“";font-family:'Archivo',sans-serif;font-size:84px;color:var(--amber);line-height:1;position:absolute;top:6px;left:22px;opacity:.5}
+.jeff-card p{font-size:16px;color:#d7dbe4;margin:26px 0 18px}
+.jeff-card .attr{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);letter-spacing:.06em}
+.jeff-points{list-style:none;margin-top:24px;display:grid;gap:14px}
+.jeff-points li{display:flex;gap:14px;align-items:flex-start;background:var(--panel2);border:1px solid var(--line);padding:16px 18px;border-radius:10px}
+.jeff-points .n{font-family:'JetBrains Mono',monospace;color:var(--amber);font-weight:700;font-size:13px;white-space:nowrap;padding-top:2px}
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.area-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px;transition:transform .25s,border-color .25s}
+.area-card:hover{transform:translateY(-5px);border-color:var(--amber)}
+.area-card h3{font-family:'Archivo',sans-serif;font-size:20px;font-weight:800;margin-bottom:8px}
+.area-card p{color:var(--mut);font-size:15px}
+.faq-item{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:0;color:var(--paper);font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;text-align:left;padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .plus{color:var(--amber);font-size:24px;font-weight:400;transition:transform .25s;flex-shrink:0}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mut);font-size:15px}
+.faq-a-inner{padding:0 24px 22px}
+.quote{background:linear-gradient(135deg,#171a21,#101218);border:1px solid var(--line);border-radius:18px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:860px){.quote{grid-template-columns:1fr;padding:32px 24px}}
+.quote h2{margin-bottom:12px}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--mut);text-transform:uppercase;margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:8px;color:var(--paper);padding:14px 16px;font-size:15px;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--amber)}
+.form-note{font-size:13px;color:var(--mut);margin-top:12px}
+.form-ok{display:none;background:rgba(255,179,0,.1);border:1px solid var(--amber);border-radius:10px;padding:22px;font-size:15px}
+footer{border-top:1px solid var(--line);background:#0a0b0e}
+.foot-inner{max-width:1180px;margin:0 auto;padding:48px 20px 120px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.foot-inner h4{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.24em;color:var(--amber);text-transform:uppercase;margin-bottom:14px}
+.foot-inner p,.foot-inner a{color:var(--mut);font-size:15px;text-decoration:none}
+.foot-inner a:hover{color:var(--amber)}
+.foot-brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:22px;color:var(--paper)}
+.foot-brand .amp{color:var(--amber)}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:150;background:var(--amber);color:#111;text-align:center;font-weight:800;font-size:18px;padding:16px;text-decoration:none;font-family:'Archivo',sans-serif;letter-spacing:.02em}
+@media(max-width:860px){.sticky-call{display:block}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="demo-badge">DEMO PREVIEW</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">J<span class="amp">&amp;</span>K SIGMA<small>ELECTRICAL · ANNA TX</small></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#jeff">Meet Jeff</a><a href="#area">Service Area</a><a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-call" href="tel:+14692476596">☎ (469) 247-6596</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div class="kicker reveal">Anna, Texas · Residential &amp; Small Commercial</div>
+    <h1 class="reveal">Anna's <span class="volt">EV Charger</span> Electrician.</h1>
+    <p class="lede reveal">J&amp;K Sigma Group Electrical installs Tesla Wall Connectors and every major EV charger brand — plus panel upgrades, wiring, and troubleshooting done by a licensed, insured electrician who treats your home like his own.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-amber" href="tel:+14692476596">☎ Call (469) 247-6596</a>
+      <a class="btn btn-ghost" href="#quote">Get a Free Quote →</a>
+    </div>
+    <div class="hero-specs reveal">
+      <div class="spec"><div class="k">Specialty</div><div class="v">Tesla-Certified EV installs*</div></div>
+      <div class="spec"><div class="k">Crew</div><div class="v">Licensed · Insured*</div></div>
+      <div class="spec"><div class="k">Based in</div><div class="v">Anna, TX</div></div>
+      <div class="spec"><div class="k">Quote</div><div class="v">Free consultation</div></div>
+    </div>
+    <p class="form-note reveal" style="margin-top:14px">*Per the company's own site — ask Jeff for cert details on your call.</p>
+  </div>
+</header>
+
+<div class="band">
+  <div class="band-inner">
+    <span>⚡ TESLA WALL CONNECTOR INSTALLS</span><span>⚡ PANEL UPGRADES</span><span>⚡ FREE QUOTES</span><span>⚡ ANNA TX BASED</span>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="sec-kicker reveal">What we do</div>
+  <h2 class="reveal">One electrician. Every job done right.</h2>
+  <p class="sub reveal">From the charger in your garage to the panel behind the wall — pick a specialty to see what's included.</p>
+  <div class="tabs reveal" role="tablist">
+    <button class="tab-btn active" data-tab="ev">EV Chargers</button>
+    <button class="tab-btn" data-tab="panel">Panel Upgrades</button>
+    <button class="tab-btn" data-tab="res">Residential</button>
+    <button class="tab-btn" data-tab="fix">Troubleshooting</button>
+  </div>
+  <div class="tab-panels reveal">
+    <div class="tab-panel active" id="tab-ev">
+      <h3><span>Tesla</span> &amp; all-brand EV charger installation</h3>
+      <p>Tesla-certified installation of Tesla Wall Connectors — plus ChargePoint, Rivian, Ford, GM and every other major EV brand. Safe, code-compliant charging, sized to your panel and your driving.</p>
+      <ul><li>Tesla Wall Connector installs</li><li>ChargePoint / Rivian / Ford / GM</li><li>Dedicated 240V circuits</li><li>Panel capacity checks</li><li>Code-compliant permitting guidance</li><li>Clean, labeled work</li></ul>
+    </div>
+    <div class="tab-panel" id="tab-panel">
+      <h3><span>Panel</span> upgrades &amp; replacements</h3>
+      <p>An aging or maxed-out panel is the #1 reason EV chargers, workshops, and additions stall. Jeff replaces panels and breakers, tightens every circuit, and verifies it all against code.</p>
+      <ul><li>Full panel replacements</li><li>Circuit breaker upgrades</li><li>Capacity for EV charging</li><li>Whole-panel safety inspection</li><li>Code compliance verification</li></ul>
+    </div>
+    <div class="tab-panel" id="tab-res">
+      <h3><span>Residential</span> wiring &amp; installs</h3>
+      <p>Complete home electrical work — new wiring, fixture installs, outlets and switches — done neatly, labeled clearly, and left cleaner than it was found.</p>
+      <ul><li>Home wiring &amp; rewiring</li><li>Outlet &amp; switch installation</li><li>Lighting &amp; fixture installs</li><li>Ceiling fans</li><li>Small commercial work</li></ul>
+    </div>
+    <div class="tab-panel" id="tab-fix">
+      <h3><span>Troubleshooting</span> &amp; repairs</h3>
+      <p>Dead outlets, tripping breakers, mystery flickers — diagnosed properly, explained plainly, fixed once. Jeff's reviewers say he teaches as he works, so you understand what happened and why.</p>
+      <ul><li>Dead outlet diagnosis</li><li>Breaker &amp; circuit troubleshooting</li><li>Flickering / power-loss issues</li><li>Safety inspections</li><li>Honest repair-vs-replace advice</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section jeff" id="jeff" style="border-radius:18px">
+  <div style="padding:0 4px">
+  <div class="sec-kicker reveal">Why Anna calls Jeff</div>
+  <h2 class="reveal">The electrician who teaches you while he works.</h2>
+  <p class="sub reveal">Here's what one Anna homeowner wrote after Jeff installed his EV charger — published on BusinessYab:</p>
+  <div class="jeff-grid">
+    <div class="jeff-card reveal">
+      <p>"Jeff is great! I highly recommend him for anyone that needs electrical work done. I hired him to install my EV charger in my garage. He is a true professional — he holds himself to high quality standards and makes sure to leave the work area clean."</p>
+      <p>"Jeff was kind enough to let me shadow him and he also educated me on a lot of electrical work. As he had the panel out he inspected the whole panel to make sure all of the circuits were tight and up to code."</p>
+      <div class="attr">— BUSINESSYAB FEATURED REVIEW · ANNA, TX</div>
+      <div style="margin-top:20px"><a class="btn btn-amber" href="tel:+14692476596">☎ Talk to Jeff: (469) 247-6596</a></div>
+    </div>
+    <div>
+      <ul class="jeff-points reveal">
+        <li><span class="n">01</span><span><strong>He inspects beyond the job.</strong><br><span style="color:var(--mut)">With the panel open for the charger, Jeff checked every circuit for tightness and code — unasked.</span></span></li>
+        <li><span class="n">02</span><span><strong>He explains, not just installs.</strong><br><span style="color:var(--mut)">Customers shadow the work and leave understanding their own electrical system.</span></span></li>
+        <li><span class="n">03</span><span><strong>He leaves it cleaner.</strong><br><span style="color:var(--mut)">High quality standards, honest advice, and a spotless work area — the reviewer's words, not ours.</span></span></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" id="area">
+  <div class="sec-kicker reveal">Where we work</div>
+  <h2 class="reveal">Based in Anna. Serving the corridor.</h2>
+  <p class="sub reveal">J&amp;K Sigma Group Electrical is based at 510 Niagara Falls Dr in Anna, TX — and rolls out to the surrounding North Texas towns.</p>
+  <div class="area-grid">
+    <div class="area-card reveal"><h3>📍 Anna, TX</h3><p>Home base. EV charger installs, panel upgrades, and full residential service across Anna — from new builds near US-75 to established neighborhoods.</p></div>
+    <div class="area-card reveal"><h3>🗺 Surrounding towns</h3><p>Melissa, Van Alstyne, Weston, Sherman, Denison, McKinney and nearby Collin / Grayson county communities. Not sure you're in range? One call answers it.</p></div>
+    <div class="area-card reveal"><h3>⚡ New construction</h3><p>Anna is growing fast. Builders and new homeowners get panel sizing, EV-ready wiring, and code-correct installs from day one.</p></div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="padding-top:20px">
+  <div class="sec-kicker reveal">Straight answers</div>
+  <h2 class="reveal">FAQ</h2>
+  <p class="sub reveal">The questions Anna homeowners ask before they call.</p>
+  <div class="reveal">
+    <div class="faq-item"><button class="faq-q">Do you install Tesla Wall Connectors? <span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — J&amp;K Sigma Group Electrical specializes in Tesla-certified Wall Connector installation, plus ChargePoint, Rivian, Ford, GM and other major EV brands (per the company's site — ask Jeff for certification details when you call).</div></div></div>
+    <div class="faq-item"><button class="faq-q">Will my panel handle an EV charger? <span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">That's the first thing Jeff checks. If your panel is maxed out or aging, he'll walk you through upgrade options before any charger goes on the wall — no surprises.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Are you licensed and insured? <span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">The company's site states licensed and insured. Ask Jeff directly about license numbers and coverage on your call — a good electrician expects the question.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Do you give free quotes? <span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — reach out for a free consultation and quote. Call (469) 247-6596 or use the form below.</div></div></div>
+    <div class="faq-item"><button class="faq-q">Which areas do you serve? <span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Based in Anna, TX, serving Anna and surrounding North Texas towns. Call to confirm your address is in range.</div></div></div>
+  </div>
+</section>
+
+<section class="section" id="quote" style="padding-top:20px">
+  <div class="quote reveal">
+    <div>
+      <div class="sec-kicker">Free quote</div>
+      <h2>Get it done right the first time.</h2>
+      <p class="sub" style="margin-bottom:0">Tell Jeff what you need — EV charger, panel work, or something acting strange. He'll respond with a straight answer and a free quote.</p>
+      <p class="form-note" style="margin-top:18px">Prefer to talk now?<br><a href="tel:+14692476596" style="color:var(--amber);font-weight:700;font-size:18px;text-decoration:none">☎ (469) 247-6596</a></p>
+    </div>
+    <div>
+      <form id="quoteForm">
+        <div class="field"><label for="qn">Name</label><input id="qn" name="name" required placeholder="Your name"></div>
+        <div class="field"><label for="qp">Phone</label><input id="qp" name="phone" type="tel" required placeholder="(___) ___-____"></div>
+        <div class="field"><label for="qs">What do you need?</label><select id="qs" name="service"><option>EV charger installation</option><option>Panel upgrade</option><option>Troubleshooting / repair</option><option>Wiring / outlets / fixtures</option><option>Something else</option></select></div>
+        <div class="field"><label for="qm">Details</label><textarea id="qm" name="message" rows="3" placeholder="Tell Jeff about the job…"></textarea></div>
+        <button class="btn btn-amber" type="submit" style="width:100%;justify-content:center;border:0;cursor:pointer">Request My Free Quote →</button>
+        <p class="form-note">Demo form — in the live build this sends straight to Jeff.</p>
+      </form>
+      <div class="form-ok" id="formOk">✓ <strong>Request received (demo).</strong> In the live site, this goes directly to Jeff at J&amp;K Sigma Group — no directories, no middlemen.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">J<span class="amp">&amp;</span>K SIGMA</div>
+      <p style="margin-top:10px">J&amp;K Sigma Group LLC<br>Electrical · Anna, TX</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="tel:+14692476596">☎ (469) 247-6596</a><br>510 Niagara Falls Dr<br>Anna, TX 75409</p>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <p>Hours not published —<br>call for availability.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <p>EV charger installation<br>Panel upgrades<br>Residential wiring<br>Troubleshooting &amp; repair</p>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14692476596">📞 Call (469) 247-6596</a>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+  });
+});
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'), a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('quoteForm').addEventListener('submit',e=>{
+  e.preventDefault();e.target.style.display='none';document.getElementById('formOk').style.display='block';
+});
+</script>
+</body>
+</html>
