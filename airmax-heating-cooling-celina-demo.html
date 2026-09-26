@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airmax Air Conditioning &amp; Heating | Celina, TX — HVAC Done the Family Way</title>
+<meta name="description" content="Family-owned HVAC in Celina, TX since the mid-90s. AC repair, heating, free second opinions, Max Club maintenance. Call (972) 382-3200.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f2e8; --paper2:#efe7d3; --ink:#14264a; --ink-soft:#3a4a6e;
+  --red:#d4552c; --red-deep:#a83d1d; --gold:#c99a3f; --line:#d9cfb8;
+  --teal:#1d6f6a; --card:#fffdf7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:hidden}
+.serif{font-family:'Fraunces',serif}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+/* DEMO ribbon */
+.demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:2000;background:repeating-linear-gradient(-45deg,#d4552c,#d4552c 18px,#14264a 18px,#14264a 36px);color:#fff;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:3px;padding:8px 10px;font-weight:600}
+.demo-bottom{position:fixed;bottom:0;left:0;right:0;z-index:2000;background:#14264a;color:#f7f2e8;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;padding:9px 10px}
+.demo-bottom a{color:#ffd57e;text-decoration:none;font-weight:600}
+body{padding-top:37px;padding-bottom:38px}
+/* nav */
+.nav{position:sticky;top:37px;z-index:900;background:rgba(247,242,232,.96);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:900;font-size:20px;transform:rotate(-6deg);box-shadow:3px 3px 0 var(--ink)}
+.brand b{font-family:'Fraunces',serif;font-size:21px;letter-spacing:.5px;display:block;line-height:1.1}
+.brand small{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2.5px;color:var(--ink-soft)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.4px}
+.nav-links a:hover{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff!important;font-weight:700;padding:13px 26px;border-radius:6px;text-decoration:none;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s;font-size:15px}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn.dark{background:var(--ink)}
+.hamburger{display:none;background:none;border:2px solid var(--ink);border-radius:6px;padding:8px 12px;font-size:18px;cursor:pointer;color:var(--ink)}
+/* hero */
+.hero{position:relative;padding:84px 0 70px;overflow:hidden;border-bottom:2px solid var(--ink);
+  background:radial-gradient(circle at 85% 15%,rgba(212,85,44,.12),transparent 45%),radial-gradient(circle at 10% 90%,rgba(201,154,63,.14),transparent 40%),var(--paper)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:3px;color:var(--red);font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.02;font-weight:900;letter-spacing:-1px;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--red)}
+.hero p.lead{font-size:18px;color:var(--ink-soft);max-width:520px;margin-bottom:30px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.hero-note{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);margin-top:16px}
+.ticket{background:var(--card);border:2px solid var(--ink);border-radius:12px;box-shadow:8px 8px 0 var(--ink);padding:34px 30px;position:relative;transform:rotate(1.5deg)}
+.ticket:before{content:"";position:absolute;left:-14px;top:50%;width:24px;height:24px;background:var(--paper);border:2px solid var(--ink);border-radius:50%;transform:translateY(-50%)}
+.ticket h3{font-family:'Fraunces',serif;font-size:24px;margin-bottom:6px}
+.ticket .mono{font-size:11px;letter-spacing:2px;color:var(--red);font-weight:600}
+.ticket ul{list-style:none;margin:18px 0}
+.ticket li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px;display:flex;justify-content:space-between;gap:10px}
+.ticket li span:last-child{font-family:'IBM Plex Mono',monospace;color:var(--teal);font-weight:600;white-space:nowrap}
+.seal{position:absolute;top:-34px;right:-20px;width:120px;height:120px;background:var(--gold);color:#14264a;border:2px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;font-weight:600;transform:rotate(10deg);box-shadow:4px 4px 0 var(--ink);padding:12px;line-height:1.4}
+/* marquee */
+.marquee{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;padding:12px 0}
+.marquee span{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:2.5px;display:inline-block;padding-left:100%;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-100%)}}
+/* sections */
+section{padding:76px 0}
+.sec-head{margin-bottom:44px;max-width:720px}
+.sec-head .kicker{margin-bottom:12px}
+.sec-head h2{font-size:clamp(30px,4vw,46px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:14px}
+.sec-head p{color:var(--ink-soft);font-size:17px}
+.alt{background:var(--paper2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+/* counters */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:var(--card);border:2px solid var(--ink);border-radius:10px;padding:26px 18px;text-align:center;box-shadow:5px 5px 0 var(--line)}
+.stat .num{font-family:'Fraunces',serif;font-size:44px;font-weight:900;color:var(--red);line-height:1}
+.stat .lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--ink-soft);margin-top:8px;text-transform:uppercase}
+.stat .src{font-size:11px;color:var(--ink-soft);margin-top:4px}
+/* tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab-btn{background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:11px 22px;font-weight:700;font-size:14px;cursor:pointer;color:var(--ink);font-family:'Inter',sans-serif;box-shadow:3px 3px 0 var(--line)}
+.tab-btn.active{background:var(--ink);color:var(--paper);box-shadow:3px 3px 0 var(--red)}
+.tab-panels{position:relative}
+.tab-panel{display:none;background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:38px;box-shadow:8px 8px 0 var(--line)}
+.tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:30px;animation:fadein .35s}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-family:'Fraunces',serif;font-size:26px;margin-bottom:10px}
+.tab-panel p{color:var(--ink-soft);margin-bottom:14px}
+.tab-panel ul{list-style:none}
+.tab-panel li{padding:8px 0 8px 28px;position:relative;font-size:15px}
+.tab-panel li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:800}
+.tab-price{background:var(--paper2);border:2px dashed var(--red);border-radius:10px;padding:22px;text-align:center}
+.tab-price .mono{font-size:11px;letter-spacing:2px;color:var(--red-deep);font-weight:600}
+.tab-price b{font-family:'Fraunces',serif;font-size:30px;display:block;margin:6px 0}
+.tab-price p{font-size:13px}
+/* proof wall */
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proof-card{background:var(--ink);color:var(--paper);border-radius:12px;padding:30px;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--red)}
+.proof-card .mono{font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:600}
+.proof-card h4{font-family:'Fraunces',serif;font-size:22px;margin:10px 0}
+.proof-card p{font-size:14px;color:#c8d2e8}
+/* jingle band */
+.jingle{background:var(--red);color:#fff;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.jingle .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center}
+.jingle h2{font-family:'Fraunces',serif;font-size:clamp(26px,3.4vw,40px);line-height:1.15}
+.jingle p{color:#ffe4d4;margin-top:8px;max-width:520px}
+.jingle-note{font-size:60px;filter:drop-shadow(3px 3px 0 var(--ink))}
+.play{background:#fff;color:var(--red-deep);border:2px solid var(--ink);border-radius:999px;padding:16px 34px;font-weight:800;font-size:16px;cursor:pointer;box-shadow:4px 4px 0 var(--ink);font-family:'Inter',sans-serif}
+.play:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+/* max club */
+.club-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.club-card{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:34px;box-shadow:8px 8px 0 var(--ink)}
+.club-card h3{font-family:'Fraunces',serif;font-size:26px;margin-bottom:8px}
+.charity{background:var(--teal);color:#fff;border-radius:12px;padding:34px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+.charity h3{font-family:'Fraunces',serif;font-size:26px;margin-bottom:10px}
+.charity p{color:#dff0ec}
+.benefit{display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.benefit:last-child{border:none}
+.benefit .dot{width:26px;height:26px;min-width:26px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+/* faq */
+.faq-item{background:var(--card);border:2px solid var(--ink);border-radius:10px;margin-bottom:14px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-q .plus{font-size:26px;color:var(--red);transition:transform .25s;font-weight:400}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--ink-soft);font-size:15px}
+/* form */
+.form-card{background:var(--ink);color:var(--paper);border-radius:14px;padding:44px;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--red)}
+.form-card h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.6vw,42px);margin-bottom:10px}
+.form-card p.sub{color:#c8d2e8;margin-bottom:28px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:600}
+.field input,.field select,.field textarea{background:#0d1930;border:2px solid #2c3d63;color:#fff;border-radius:8px;padding:13px 14px;font-size:15px;font-family:'Inter',sans-serif}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+.form-foot{display:flex;gap:18px;align-items:center;margin-top:24px;flex-wrap:wrap}
+.form-foot .fine{font-size:12px;color:#8fa0c2}
+.form-ok{display:none;background:var(--teal);border-radius:10px;padding:26px;margin-top:20px;font-size:16px}
+/* footer */
+footer{background:var(--ink);color:var(--paper);padding:64px 0 90px;margin-top:0}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+footer h4{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2.5px;color:var(--gold);margin-bottom:16px;font-weight:600}
+footer p,footer li{font-size:14px;color:#c8d2e8;list-style:none}
+footer a{color:#ffd57e;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.foot-note{margin-top:40px;padding-top:22px;border-top:1px solid #2c3d63;font-size:12px;color:#8fa0c2}
+/* sticky mobile call */
+.sticky-call{display:none;position:fixed;bottom:44px;left:14px;right:14px;z-index:1500;background:var(--red);color:#fff;text-align:center;font-weight:800;font-size:17px;padding:16px;border-radius:12px;text-decoration:none;border:2px solid var(--ink);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .hero-grid,.tab-panel.active,.club-grid,.jingle .wrap{grid-template-columns:1fr}
+  .stats,.proof-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px;gap:16px;border-bottom:2px solid var(--ink);align-items:flex-start}
+  .hamburger{display:block}
+  .sticky-call{display:block}
+  .seal{width:96px;height:96px;top:-26px;right:-8px;font-size:9px}
+}
+</style>
+</head>
+<body>
+<div class="demo-ribbon">DEMO PREVIEW — concept built for Airmax Air Conditioning &amp; Heating by NoFluff Marketing</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark">A</span><span><b>Airmax</b><small>AIR CONDITIONING &amp; HEATING</small></span></a>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#proof">Why Us</a><a href="#club">Max Club</a><a href="#faq">FAQ</a>
+      <a class="btn" href="tel:+19723823200">Call (972) 382-3200</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">CELINA, TX · FAMILY-OWNED HVAC</div>
+      <h1 class="serif">The Celina shop your neighbors call <em>first.</em></h1>
+      <p class="lead">Over 29 years of heating &amp; cooling done the family way — free second opinions, upfront pricing, and the only jingle in the HVAC business worth humming.</p>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+19723823200">Call (972) 382-3200</a>
+        <a class="btn dark" href="#estimate">Get a Free Second Opinion</a>
+      </div>
+      <div class="hero-note mono">TACLA19323E · LICENSED &amp; INSURED · SERVING COLLIN COUNTY + NORTH DALLAS</div>
+    </div>
+    <div class="ticket">
+      <div class="seal">25 YEARS<br>SERVING<br>CELINA</div>
+      <div class="mono">SERVICE TICKET — WHAT WE DO</div>
+      <h3 class="serif">One call. Every comfort problem.</h3>
+      <ul>
+        <li><span>AC repair &amp; replacement</span><span>Free 2nd opinion</span></li>
+        <li><span>Heating &amp; furnace service</span><span>Same-day</span></li>
+        <li><span>Maintenance &amp; tune-ups</span><span>Max Club</span></li>
+        <li><span>Indoor air quality</span><span>Online shop</span></li>
+      </ul>
+      <a class="btn" style="width:100%;text-align:center" href="tel:+19723823200">Call (972) 382-3200</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><span>FREE SECOND OPINIONS · TACLA19323E · FAMILY-OWNED · COLLIN COUNTY + NORTH DALLAS · FREE SECOND OPINIONS · TACLA19323E · FAMILY-OWNED · COLLIN COUNTY + NORTH DALLAS ·&nbsp;</span></div>
+
+<section id="proof">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">PROOF, NOT PROMISES</div>
+      <h2 class="serif">The numbers behind the name</h2>
+      <p>Three decades of work leaves a paper trail. Here's ours — pulled from public records and review platforms, not from our own website.</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="1466">0</div><div class="lbl">Reviews aggregated</div><div class="src">Birdeye 4.8 (1,448 Google + more)</div></div>
+      <div class="stat reveal"><div class="num" data-count="108">0</div><div class="lbl">BuildZoom score</div><div class="src">Top 5% of 222,249 TX contractors</div></div>
+      <div class="stat reveal"><div class="num" data-count="73">0</div><div class="lbl">Permitted projects</div><div class="src">Past 3 years (BuildZoom)</div></div>
+      <div class="stat reveal"><div class="num" data-count="29">0</div><div class="lbl">Years serving</div><div class="src">Family-owned, per company</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">WHAT WE DO</div>
+      <h2 class="serif">Every ticket the shop handles</h2>
+      <p>Tap a service to see exactly what's included — before a wrench moves, you know the number.</p>
+    </div>
+    <div class="tabs reveal">
+      <button class="tab-btn active" data-tab="t1">AC Repair &amp; Install</button>
+      <button class="tab-btn" data-tab="t2">Heating &amp; Furnaces</button>
+      <button class="tab-btn" data-tab="t3">Maintenance</button>
+      <button class="tab-btn" data-tab="t4">Air Quality</button>
+    </div>
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" id="t1">
+        <div>
+          <h3 class="serif">Air conditioning repair &amp; replacement</h3>
+          <p>Complete system replacements, repairs, and indoor air quality solutions — sized to your home, quoted before we start.</p>
+          <ul><li>Real diagnosis before any quote</li><li>Complete system replacements</li><li>Straight, upfront pricing</li><li>Certified, trained technicians</li></ul>
+        </div>
+        <div class="tab-price"><div class="mono">AIRMAX EXCLUSIVE</div><b class="serif">Free second opinions</b><p>Already have a quote? Bring it in. We'll check the diagnosis and the price — free.</p><br><a class="btn" href="tel:+19723823200">Call (972) 382-3200</a></div>
+      </div>
+      <div class="tab-panel" id="t2">
+        <div>
+          <h3 class="serif">Heating &amp; furnace service</h3>
+          <p>Routine maintenance, repairs, and replacements for furnaces and heating systems across Collin County.</p>
+          <ul><li>Furnace repair &amp; replacement</li><li>Seasonal safety checks</li><li>Multi-family &amp; light commercial</li><li>Upfront pricing, always</li></ul>
+        </div>
+        <div class="tab-price"><div class="mono">WINTER-READY</div><b class="serif">27-point inspection</b><p>Max Club members get a full 27-point heating tune-up every year.</p><br><a class="btn" href="tel:+19723823200">Call (972) 382-3200</a></div>
+      </div>
+      <div class="tab-panel" id="t3">
+        <div>
+          <h3 class="serif">Maintenance &amp; the Max Club</h3>
+          <p>Two annual tune-ups keep your equipment at optimal capacity — and catch small problems before they become July emergencies.</p>
+          <ul><li>1 heating tune-up per year</li><li>1 AC tune-up per year</li><li>Condenser coil cleaning</li><li>Priority scheduling + repair discounts</li></ul>
+        </div>
+        <div class="tab-price"><div class="mono">MAX CLUB</div><b class="serif">$25 feeds a family</b><p>Join the Max Club with a $25 donation to a local food pantry. Comfort for you, dinner for a neighbor.</p><br><a class="btn" href="tel:+19723823200">Call (972) 382-3200</a></div>
+      </div>
+      <div class="tab-panel" id="t4">
+        <div>
+          <h3 class="serif">Indoor air quality</h3>
+          <p>Air filters and indoor air quality products — order from the online shop, installed by the family you already trust.</p>
+          <ul><li>Air filtration upgrades</li><li>Online filter shop</li><li>Ductwork evaluation</li><li>Humidity &amp; ventilation fixes</li></ul>
+        </div>
+        <div class="tab-price"><div class="mono">BREATHE EASY</div><b class="serif">Online shop</b><p>Air filters and IAQ products delivered — or installed by our techs.</p><br><a class="btn" href="tel:+19723823200">Call (972) 382-3200</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">WHY AIRMAX</div>
+      <h2 class="serif">A shop with a personality, not a call center</h2>
+      <p>Three things you won't get from the big franchises.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card reveal"><div class="mono">ONLY HERE</div><h4 class="serif">The Airmax jingle</h4><p>Yes, really — an original jingle. When was the last time a franchise wrote a song for your town?</p></div>
+      <div class="proof-card reveal"><div class="mono">ONLY HERE</div><h4 class="serif">Free second opinions</h4><p>Someone quoted you $9,000? Bring the quote. We'll tell you straight whether it's right — free.</p></div>
+      <div class="proof-card reveal"><div class="mono">ONLY HERE</div><h4 class="serif">$25 feeds a family</h4><p>Max Club membership starts with a $25 donation to a local food pantry. Comfort with a conscience.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="jingle">
+  <div class="wrap">
+    <div class="jingle-note">🎺</div>
+    <div>
+      <h2>Small enough to care.<br>Big enough to take care of it.</h2>
+      <p>The Airmax promise for 29+ years: affordable rates, exceptional service, and a real family on the other end of the line.</p>
+    </div>
+    <button class="play" onclick="alert('This demo shows where the real jingle player goes — the Airmax jingle lives on their current site.')">▶ Play the jingle</button>
+  </div>
+</div>
+
+<section id="club" class="alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">THE MAX CLUB</div>
+      <h2 class="serif">Maintenance that pays for itself</h2>
+      <p>Two tune-ups a year, priority scheduling, and repair discounts — the unglamorous work that keeps July from getting expensive.</p>
+    </div>
+    <div class="club-grid">
+      <div class="club-card reveal">
+        <h3 class="serif">Annual benefits</h3>
+        <div class="benefit"><span class="dot">✓</span><span>1 heating system tune-up per year</span></div>
+        <div class="benefit"><span class="dot">✓</span><span>1 air conditioning tune-up per year</span></div>
+        <div class="benefit"><span class="dot">✓</span><span>Condenser coil cleaning</span></div>
+        <div class="benefit"><span class="dot">✓</span><span>27-point inspection</span></div>
+        <div class="benefit"><span class="dot">✓</span><span>10–15% discount on repairs</span></div>
+        <div class="benefit"><span class="dot">✓</span><span>Priority scheduling ahead of non-members</span></div>
+      </div>
+      <div class="charity reveal">
+        <h3 class="serif">$25 joins. A family eats.</h3>
+        <p>Your Max Club membership begins with a $25 donation to a local food pantry. You get two tune-ups a year and priority service — a neighbor gets dinner. That's the Airmax way.</p>
+        <br><a class="btn" href="tel:+19723823200">Join the Max Club — (972) 382-3200</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">STRAIGHT ANSWERS</div>
+      <h2 class="serif">Questions we get every week</h2>
+    </div>
+    <div class="faq-item reveal"><button class="faq-q">How much does a service call cost? <span class="plus">+</span></button><div class="faq-a"><p>Straight pricing before we start — you approve the number before a wrench moves. And if someone already gave you a number, bring it in: second opinions are free.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Are your technicians certified? <span class="plus">+</span></button><div class="faq-a"><p>Yes. All Airmax technicians are trained and certified, and the company operates under Texas license TACLA19323E.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you work on all brands? <span class="plus">+</span></button><div class="faq-a"><p>Yes — residential, light commercial, and multi-family systems from every major manufacturer.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Where are you located? <span class="plus">+</span></button><div class="faq-a"><p>216 W Pecan St in Celina, TX — family-owned and serving Collin County and the North Dallas area for over 29 years.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you offer financing? <span class="plus">+</span></button><div class="faq-a"><p>Yes — financing options are available for equipment replacements. Call for details and we'll walk you through it.</p></div></div>
+  </div>
+</section>
+
+<section id="estimate" style="padding-top:20px">
+  <div class="wrap">
+    <div class="form-card reveal">
+      <div class="kicker" style="color:var(--gold)">FREE SECOND OPINION</div>
+      <h2>Get a straight answer, free</h2>
+      <p class="sub">Already have a quote? Tell us about it. We'll check the diagnosis and the price — no charge, no pressure. Or book a tune-up. Either way, a real person calls you back.</p>
+      <form id="estForm" onsubmit="return fakeSubmit(event)">
+        <div class="form-grid">
+          <div class="field"><label>NAME</label><input required placeholder="Your name"></div>
+          <div class="field"><label>PHONE</label><input required type="tel" placeholder="(___) ___-____"></div>
+          <div class="field full"><label>WHAT'S GOING ON?</label><textarea rows="3" placeholder="e.g. Another company quoted me $8,500 for a new unit — is that right?"></textarea></div>
+        </div>
+        <div class="form-foot">
+          <button class="btn" type="submit">Request My Free Second Opinion</button>
+          <span class="fine">Prefer to talk? <a href="tel:+19723823200" style="color:#ffd57e">Call (972) 382-3200</a></span>
+        </div>
+        <div class="form-ok" id="formOk">✓ Got it. This is a demo form — on the live site, this request goes straight to the Airmax office.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>AIRMAX AIR CONDITIONING &amp; HEATING</h4>
+        <p>216 W Pecan St<br>Celina, TX 75009</p>
+        <p style="margin-top:10px"><a href="tel:+19723823200" style="font-size:20px;font-weight:700">(972) 382-3200</a></p>
+        <p><a href="mailto:service@airmaxntx.com">service@airmaxntx.com</a></p>
+      </div>
+      <div>
+        <h4>HOURS</h4>
+        <ul>
+          <li>Mon–Fri: 8:00 AM – 5:00 PM</li>
+          <li>Sat–Sun: Closed</li>
+        </ul>
+        <p style="margin-top:10px;font-size:12px">Hours per company website. Directory listings may vary — call to confirm.</p>
+      </div>
+      <div>
+        <h4>SERVICE AREA</h4>
+        <p>Collin County &amp; the North Dallas area — including Celina, Prosper, Frisco, McKinney, Allen &amp; Plano.</p>
+        <p style="margin-top:10px">TACLA19323E · Family-owned</p>
+      </div>
+    </div>
+    <div class="foot-note">DEMO PREVIEW — concept website built for Airmax Air Conditioning &amp; Heating by NoFluff Marketing. All facts from the company's own published materials and public records.</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+19723823200">📞 Call Airmax — (972) 382-3200</a>
+<div class="demo-bottom">DEMO PREVIEW · airmax-heating-cooling-celina-demo · Built by <a href="https://nofluffmarketing.io">NoFluff Marketing</a> — $297 build + $97/mo managed</div>
+
+<script>
+// tabs
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.tab).classList.add('active');
+}));
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement, a=item.querySelector('.faq-a'), open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+}));
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;io.unobserve(e.target);
+  const el=e.target,end=+el.dataset.count,t0=performance.now(),dur=1400;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),v=Math.round(end*(1-Math.pow(1-p,3)));
+    el.textContent=v.toLocaleString();if(p<1)requestAnimationFrame(tick)})(t0);
+}),{threshold:.4});
+document.querySelectorAll('.num').forEach(n=>io.observe(n));
+// reveal
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(r=>rio.observe(r));
+// demo form
+function fakeSubmit(e){e.preventDefault();document.getElementById('formOk').style.display='block';e.target.querySelector('button').disabled=true;return false}
+</script>
+</body>
+</html>
