@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Downtown McKinney Dentist | Sam Patel DDS, PA — Demo Preview</title>
+<meta name="description" content="DEMO PREVIEW — Modern family dentistry in downtown McKinney by Dr. Sam Patel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cobalt:#12245e; --cobalt-deep:#0c183f; --tangerine:#ff6a2b; --tangerine-deep:#e0511a;
+  --ivory:#fdf8f1; --paper:#ffffff; --ink:#1b2340; --mut:#5b6486; --line:#e8e0d2;
+  --sky:#eef3ff; --shadow:0 18px 50px -18px rgba(18,36,94,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Sora',sans-serif;letter-spacing:-.02em}
+img{max-width:100%;display:block}
+/* DEMO RIBBON */
+.demo-ribbon{position:fixed;top:14px;right:-44px;transform:rotate(35deg);background:var(--tangerine);color:#fff;
+  font:700 .8rem 'Sora',sans-serif;letter-spacing:.18em;padding:.55rem 3.2rem;z-index:2000;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+/* NAV */
+nav{position:sticky;top:0;z-index:1000;background:rgba(253,248,241,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.2rem}
+.brand{font-family:'Sora',sans-serif;font-weight:800;color:var(--cobalt);font-size:1.05rem;line-height:1.2}
+.brand small{display:block;font-weight:600;color:var(--tangerine-deep);font-size:.68rem;letter-spacing:.16em}
+.nav-links{display:flex;gap:1.4rem;align-items:center}
+.nav-links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem}
+.nav-links a:hover{color:var(--tangerine-deep)}
+.btn{display:inline-block;background:var(--tangerine);color:#fff;font-family:'Sora',sans-serif;font-weight:700;
+  padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;box-shadow:0 10px 24px -10px rgba(255,106,43,.7);transition:.25s;border:none;cursor:pointer;font-size:.95rem}
+.btn:hover{transform:translateY(-2px);background:var(--tangerine-deep)}
+.btn-outline{background:transparent;color:var(--cobalt);border:2px solid var(--cobalt);box-shadow:none}
+.btn-outline:hover{background:var(--cobalt);color:#fff}
+/* HERO */
+.hero{background:linear-gradient(115deg,var(--cobalt-deep) 0%,var(--cobalt) 60%,#1c3586 100%);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(700px 380px at 88% 8%,rgba(255,106,43,.32),transparent 60%),
+  radial-gradient(500px 320px at 6% 96%,rgba(120,160,255,.18),transparent 60%)}
+.hero-inner{max-width:1180px;margin:auto;padding:4.6rem 1.2rem 5.2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;position:relative;z-index:2}
+.eyebrow{color:#ffc9a8;font:700 .78rem 'Sora',sans-serif;letter-spacing:.22em;text-transform:uppercase;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08;font-weight:800;margin-bottom:1.2rem}
+.hero h1 .tang{color:var(--tangerine)}
+.hero p{color:#d7defc;font-size:1.08rem;max-width:32rem;margin-bottom:2rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-card{background:rgba(255,255,255,.96);border-radius:22px;padding:1.6rem;color:var(--ink);box-shadow:var(--shadow);transform:rotate(1.5deg)}
+.hero-card .stars{color:#f5a623;font-size:1.15rem;letter-spacing:.15em}
+.hero-card .big{font-family:'Sora',sans-serif;font-size:2.4rem;font-weight:800;color:var(--cobalt)}
+.hero-card p{font-size:.92rem;color:var(--mut);margin:.4rem 0 1rem}
+.hero-card .call{font-family:'Sora',sans-serif;font-weight:800;font-size:1.5rem;color:var(--tangerine-deep);text-decoration:none}
+/* STRIP STATS */
+.stats{background:var(--cobalt-deep);color:#fff}
+.stats-inner{max-width:1180px;margin:auto;padding:2.6rem 1.2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat .num{font-family:'Sora',sans-serif;font-weight:800;font-size:2.4rem;color:var(--tangerine)}
+.stat .lbl{color:#c9d4f7;font-size:.9rem;margin-top:.2rem}
+/* SECTIONS */
+section.block{max-width:1180px;margin:auto;padding:4.2rem 1.2rem}
+.kicker{font:700 .78rem 'Sora',sans-serif;letter-spacing:.22em;color:var(--tangerine-deep);text-transform:uppercase;margin-bottom:.6rem}
+h2.sec{font-size:clamp(1.7rem,3.6vw,2.5rem);color:var(--cobalt);margin-bottom:.8rem;font-weight:800}
+.sec-sub{color:var(--mut);max-width:44rem;margin-bottom:2.4rem;font-size:1.05rem}
+/* TABS */
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.tab-btn{font-family:'Sora',sans-serif;font-weight:700;font-size:.95rem;padding:.75rem 1.4rem;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--cobalt);cursor:pointer;transition:.2s}
+.tab-btn.active{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+.tab-panel{display:none;background:#fff;border-radius:20px;padding:2rem;box-shadow:var(--shadow);border:1px solid var(--line)}
+.tab-panel.active{display:block;animation:fadeUp .4s ease}
+.tab-panel h3{color:var(--cobalt);margin-bottom:.6rem;font-size:1.35rem}
+.tab-panel ul{margin:1rem 0 1.4rem 1.2rem;color:var(--mut)}
+.tab-panel li{margin:.45rem 0}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* OFFERS */
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1rem}
+.offer{background:linear-gradient(135deg,#fff, #fff7ef);border:2px dashed var(--tangerine);border-radius:20px;padding:1.8rem;text-align:center;transition:.25s}
+.offer:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.offer .price{font-family:'Sora',sans-serif;font-size:2.6rem;font-weight:800;color:var(--tangerine-deep)}
+.offer h3{color:var(--cobalt);margin:.4rem 0}
+.offer p{color:var(--mut);font-size:.95rem;margin-bottom:1.1rem}
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.member{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px -16px rgba(18,36,94,.2);transition:.25s}
+.member:hover{transform:translateY(-5px)}
+.member .ph{height:230px;background:linear-gradient(135deg,var(--sky),#dbe6ff);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.member .ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.member .initials{font-family:'Sora',sans-serif;font-weight:800;font-size:2rem;color:var(--cobalt);opacity:.5}
+.member .who{padding:1.2rem 1.3rem}
+.member .who h3{color:var(--cobalt);font-size:1.05rem}
+.member .who .role{color:var(--tangerine-deep);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.member .who p{color:var(--mut);font-size:.9rem;margin-top:.5rem}
+/* REVIEWS */
+.rev-band{background:var(--cobalt);color:#fff;border-radius:26px;padding:3rem 2.4rem;position:relative;overflow:hidden}
+.rev-band::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 90% 10%,rgba(255,106,43,.25),transparent 60%)}
+.rev-band h2{color:#fff}
+.rev-slider{position:relative;z-index:2;min-height:220px}
+.rev-card{display:none;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:1.8rem;backdrop-filter:blur(6px)}
+.rev-card.active{display:block;animation:fadeUp .45s ease}
+.rev-card .stars{color:#ffc24b;letter-spacing:.2em;font-size:1.1rem}
+.rev-card blockquote{font-size:1.12rem;line-height:1.7;margin:1rem 0;color:#f0f4ff}
+.rev-card .src{color:#a9b8e8;font-size:.85rem}
+.rev-dots{display:flex;gap:.6rem;margin-top:1.4rem;position:relative;z-index:2}
+.rev-dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;border:none}
+.rev-dot.active{background:var(--tangerine)}
+/* FAQ */
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:.8rem;overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:1.15rem 1.3rem;font-family:'Sora',sans-serif;font-weight:700;color:var(--cobalt);font-size:1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-q .plus{font-size:1.4rem;color:var(--tangerine-deep);flex-shrink:0;transition:.25s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--mut)}
+.faq-a p{padding:0 1.3rem 1.2rem}
+/* FORM */
+.form-wrap{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:2.4rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;border:1px solid var(--line)}
+.form-wrap h2{color:var(--cobalt)}
+.field{margin-bottom:1rem}
+.field label{display:block;font-weight:600;font-size:.85rem;margin-bottom:.35rem;color:var(--cobalt)}
+.field input,.field select,.field textarea{width:100%;padding:.8rem 1rem;border:2px solid var(--line);border-radius:12px;font:inherit}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--tangerine)}
+.form-note{font-size:.8rem;color:var(--mut);margin-top:.8rem}
+/* FOOTER */
+footer{background:var(--cobalt-deep);color:#c9d4f7;padding:3rem 1.2rem 7.5rem}
+.foot-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
+footer h4{color:#fff;font-family:'Sora',sans-serif;margin-bottom:.8rem}
+footer a{color:#ffd9bd;text-decoration:none}
+footer p{font-size:.93rem;margin:.3rem 0}
+/* MOBILE CALL */
+.mobile-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--tangerine);text-align:center;padding:.9rem;
+  font-family:'Sora',sans-serif;font-weight:800;color:#fff;text-decoration:none;font-size:1.05rem;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+/* BOTTOM STRIP */
+.demo-strip{position:fixed;bottom:0;left:0;right:0;z-index:1400;background:rgba(12,24,63,.96);color:#fff;text-align:center;
+  font-size:.78rem;padding:.5rem 3rem;letter-spacing:.06em}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;padding:3.2rem 1.2rem 3.6rem}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .team-grid,.offers,.form-wrap,.foot-inner{grid-template-columns:1fr}
+  .nav-links a:not(.btn){display:none}
+  .mobile-call{display:block}
+  .demo-strip{padding:.5rem 1rem .5rem}
+}
+</style>
+</head>
+<body>
+<div class="demo-ribbon">DEMO PREVIEW</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">Sam Patel DDS, PA<small>DOWNTOWN McKINNEY DENTIST</small></div>
+    <div class="nav-links">
+      <a href="#care">Care</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+      <a class="btn" href="tel:+19726385848">Call (972) 638-5848</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">McKinney, Texas — Since 2006</div>
+      <h1>Downtown dentistry with <span class="tang">a family-practice heart.</span></h1>
+      <p>Dr. Sam Patel has cared for McKinney smiles since 2006 — 29 years of gentle, judgment-free dentistry in the heart of downtown. New patients welcome.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+19726385848">Call (972) 638-5848</a>
+        <a class="btn btn-outline" style="border-color:#fff;color:#fff" href="#visit">Request an Appointment</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="stars">★★★★★</div>
+      <div class="big">4.9 / 183</div>
+      <p>Birdeye patient reviews — real ratings from real McKinney families.</p>
+      <a class="call" href="tel:+19726385848">(972) 638-5848</a>
+      <p style="margin-top:.6rem">401 S Tennessee St, McKinney, TX 75069</p>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat reveal"><div class="num"><span class="count" data-to="29">0</span></div><div class="lbl">years Dr. Patel practicing dentistry</div></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-to="20">0</span></div><div class="lbl">years serving McKinney (since 2006)</div></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-to="183">0</span></div><div class="lbl">five-star Birdeye reviews</div></div>
+    <div class="stat reveal"><div class="num"><span class="count" data-to="4">0</span></div><div class="lbl">counties served across North Texas</div></div>
+  </div>
+</div>
+
+<section class="block" id="care">
+  <div class="kicker reveal">Complete dental care</div>
+  <h2 class="sec reveal">One downtown office. Every smile need.</h2>
+  <p class="sec-sub reveal">From six-month cleanings to implants, Dr. Patel's team keeps your whole family's care under one roof — with the gentle pace anxious patients ask for by name.</p>
+  <div class="tabs reveal">
+    <button class="tab-btn active" data-tab="t1">Preventive</button>
+    <button class="tab-btn" data-tab="t2">Restorative</button>
+    <button class="tab-btn" data-tab="t3">Cosmetic</button>
+    <button class="tab-btn" data-tab="t4">Implants &amp; Emergency</button>
+  </div>
+  <div class="tab-panel active reveal" id="t1">
+    <h3>Preventive care that keeps you ahead</h3>
+    <ul><li>Exams, cleanings &amp; digital x-rays</li><li>Kids' dentistry with a patient, unhurried pace</li><li>Gum care &amp; hygiene coaching</li><li>Night guards &amp; athletic mouthguards</li></ul>
+    <a class="btn" href="tel:+19726385848">Call to Book a Cleaning</a>
+  </div>
+  <div class="tab-panel reveal" id="t2">
+    <h3>Restorative dentistry that feels like your tooth</h3>
+    <ul><li>Tooth-colored fillings &amp; crowns</li><li>Root canal therapy</li><li>Bridges &amp; dentures</li><li>Broken-tooth emergency repairs</li></ul>
+    <a class="btn" href="tel:+19726385848">Call About a Toothache</a>
+  </div>
+  <div class="tab-panel reveal" id="t3">
+    <h3>Cosmetic dentistry, naturally beautiful</h3>
+    <ul><li>Take-home teeth whitening — <strong>$199</strong> (kit valued at $350)</li><li>Porcelain veneers</li><li>Smile makeovers</li><li>Bonding &amp; contouring</li></ul>
+    <a class="btn" href="tel:+19726385848">Ask About Whitening</a>
+  </div>
+  <div class="tab-panel reveal" id="t4">
+    <h3>Implants &amp; same-day emergency care</h3>
+    <ul><li>Dental implants, start to finish</li><li>Severe toothache &amp; abscess care</li><li>Knocked-out or broken teeth</li><li><strong>New patient special:</strong> first exam only <strong>$122</strong></li></ul>
+    <a class="btn" href="tel:+19726385848">Call (972) 638-5848 Now</a>
+  </div>
+  <div class="offers reveal">
+    <div class="offer"><div class="price">$122</div><h3>New Patient Special</h3><p>First-time patients: discounted first exam.</p><a class="btn" href="tel:+19726385848">Claim This Offer</a></div>
+    <div class="offer"><div class="price">$199</div><h3>Take-Home Whitening</h3><p>Professional kit, valued at $350 — brighten at home.</p><a class="btn" href="tel:+19726385848">Claim This Offer</a></div>
+  </div>
+</section>
+
+<section class="block" id="team" style="padding-top:1rem">
+  <div class="kicker reveal">Meet your team</div>
+  <h2 class="sec reveal">The people behind the practice.</h2>
+  <p class="sec-sub reveal">Real neighbors, real names — most of this team has been with Dr. Patel for a decade or more.</p>
+  <div class="team-grid">
+    <div class="member reveal">
+      <div class="ph"><img src="https://www.yourdowntownmckinneydentist.com/wp-content/uploads/dr-sam-patel-1.jpg" alt="Dr. Sam Patel" loading="lazy" onerror="this.parentNode.innerHTML='<span class=initials>SP</span>'"></div>
+      <div class="who"><h3>Dr. Sam Patel</h3><div class="role">Dentist</div><p>Practicing since 1997; trained at the University of the Pacific; in McKinney since 2006. Allen dad of two who couldn't think of a better place to live.</p></div>
+    </div>
+    <div class="member reveal">
+      <div class="ph"><span class="initials">PR</span></div>
+      <div class="who"><h3>Pam Russell</h3><div class="role">Insurance Advisor</div><p>True Texan living in Anna, with the practice since 2008. She'll untangle your benefits before you sit in the chair.</p></div>
+    </div>
+    <div class="member reveal">
+      <div class="ph"><span class="initials">LM</span></div>
+      <div class="who"><h3>Lindsey Miller, R.D.A.</h3><div class="role">Clinical Coordinator</div><p>Texas born and raised, with Dr. Patel since 2009. Certified through the Academy of General Dentistry.</p></div>
+    </div>
+    <div class="member reveal">
+      <div class="ph"><span class="initials">DA</span></div>
+      <div class="who"><h3>Dawns Adams, R.D.H.</h3><div class="role">Dental Hygienist</div><p>20+ year career in dental hygiene; gentle cleanings for kids and grandparents alike. North Texas home.</p></div>
+    </div>
+    <div class="member reveal">
+      <div class="ph"><span class="initials">BT</span></div>
+      <div class="who"><h3>Blanca Torres, R.D.A.</h3><div class="role">¡Se habla español!</div><p>"Hola, me llamo Blanca!" McKinney since 2011, Collin College trained — our bilingual bridge for Spanish-speaking families.</p></div>
+    </div>
+    <div class="member reveal">
+      <div class="ph"><span class="initials">AA</span></div>
+      <div class="who"><h3>Alex Avila, R.D.A.</h3><div class="role">Dental Assistant</div><p>Born in Dallas, in McKinney since age 4; Texas Tech grad. Loves helping patients leave with confident smiles.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reviews" style="padding-top:1rem">
+  <div class="rev-band reveal">
+    <div class="kicker" style="color:#ffc9a8">Patient stories</div>
+    <h2 class="sec">McKinney keeps the five stars coming.</h2>
+    <div class="rev-slider">
+      <div class="rev-card active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My 8 and 6 year old sons love Dr. Patel and his staff. They all take the time to work with my children at the pace they need to help with overwhelm and anxiousness... My oldest is autistic and I am truly amazed at how positive the dentist experience is."</blockquote>
+        <div class="src">— Ashley, Greenville · DFWChild "Mom Approved" directory</div>
+      </div>
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>4.9 out of 5 across 183 Birdeye patient reviews — families from McKinney, Frisco, Plano, Allen and beyond rate this practice among the best-reviewed in the corridor.</blockquote>
+        <div class="src">— Birdeye.com business profile</div>
+      </div>
+    </div>
+    <div class="rev-dots"><button class="rev-dot active" data-r="0" aria-label="Review 1"></button><button class="rev-dot" data-r="1" aria-label="Review 2"></button></div>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:1rem">
+  <div class="kicker reveal">Good to know</div>
+  <h2 class="sec reveal">Questions, answered.</h2>
+  <div style="max-width:760px;margin-top:1.6rem">
+    <div class="faq-item reveal"><button class="faq-q">When are you open?<span class="plus">+</span></button><div class="faq-a"><p>Monday–Thursday 8:00 AM–5:00 PM; Friday 8:00 AM–2:00 PM by appointment only; closed weekends. Some days the team starts as early as 7:00 AM — call <a href="tel:+19726385848">(972) 638-5848</a> to confirm Friday availability.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you take my insurance?<span class="plus">+</span></button><div class="faq-a"><p>Pam, our insurance advisor, verifies your benefits before your visit so there are no surprises. We also accept cash, check, Discover, MasterCard, and Visa.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">I'm anxious about dentists. Is this the right office?<span class="plus">+</span></button><div class="faq-a"><p>Families tell us the unhurried, explain-everything pace is exactly why they stay — including parents of special-needs kids. Tell us your worries up front and we'll plan around them.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you see children?<span class="plus">+</span></button><div class="faq-a"><p>Yes — we're listed as a DFWChild "Mom Approved" practice. Kids' cleanings, checkups, and first-visit orientations are a daily part of the schedule.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">What if I have a dental emergency?<span class="plus">+</span></button><div class="faq-a"><p>Call <a href="tel:+19726385848">(972) 638-5848</a> right away — severe toothaches, broken teeth, and abscesses get priority scheduling.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">¿Hablan español?<span class="plus">+</span></button><div class="faq-a"><p>Sí — Blanca, nuestra asistente dental, habla español y con gusto le ayuda a su familia.</p></div></div>
+  </div>
+</section>
+
+<section class="block" id="visit" style="padding-top:1rem">
+  <div class="form-wrap reveal">
+    <div>
+      <div class="kicker">New patients welcome</div>
+      <h2 class="sec">Request your appointment.</h2>
+      <p class="sec-sub">Send a request and the team will confirm your time — or skip the form and call now.</p>
+      <a class="btn" href="tel:+19726385848" style="font-size:1.2rem;padding:1rem 2rem">Call (972) 638-5848</a>
+      <p class="form-note">Prefer email? Use the form — the office confirms every request by phone.</p>
+    </div>
+    <form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#12245e;font-weight:700>Thanks — this is a demo form. On the live site, this request goes straight to the front desk.</p>';">
+      <div class="field"><label>Name</label><input required placeholder="Your name"></div>
+      <div class="field"><label>Phone</label><input required type="tel" placeholder="(xxx) xxx-xxxx"></div>
+      <div class="field"><label>Reason for visit</label><select><option>New patient exam ($122 special)</option><option>Cleaning</option><option>Toothache / emergency</option><option>Whitening</option><option>Implants consult</option></select></div>
+      <div class="field"><label>Anything we should know?</label><textarea rows="3" placeholder="Insurance, anxiety, kids' ages..."></textarea></div>
+      <button class="btn" type="submit">Request Appointment</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div><h4>Sam Patel DDS, PA</h4><p>401 S Tennessee St<br>McKinney, TX 75069</p><p><a href="tel:+19726385848">(972) 638-5848</a></p></div>
+    <div><h4>Hours</h4><p>Mon–Thu: 8:00 AM – 5:00 PM<br>Fri: 8:00 AM – 2:00 PM (by appointment)<br>Sat–Sun: Closed</p><p style="font-size:.8rem;color:#8b96c4">Directory listings vary on Friday — call to confirm.</p></div>
+    <div><h4>Serving</h4><p>McKinney · Frisco · Plano · Allen · Wylie · Richardson · Garland · Rowlett · Lewisville · Carrollton</p></div>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:+19726385848">📞 Call (972) 638-5848</a>
+<div class="demo-strip">DEMO PREVIEW built by NoFluff Marketing — not the business's live site. Footer shows the real address, phone &amp; hours only.</div>
+
+<script>
+// tabs
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');
+}));
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+}));
+// review dots
+const cards=document.querySelectorAll('.rev-card'),dots=document.querySelectorAll('.rev-dot');
+dots.forEach(d=>d.addEventListener('click',()=>{
+  cards.forEach(c=>c.classList.remove('active'));dots.forEach(x=>x.classList.remove('active'));
+  cards[d.dataset.r].classList.add('active');d.classList.add('active');
+}));
+setInterval(()=>{const i=[...dots].findIndex(d=>d.classList.contains('active'));const n=(i+1)%dots.length;dots[n].click()},7000);
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){
+  const el=e.target,to=+el.dataset.to,t0=performance.now(),dur=1400;
+  const step=t=>{const p=Math.min((t-t0)/dur,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);io.unobserve(el)}}),{threshold:.5});
+document.querySelectorAll('.count').forEach(c=>io.observe(c));
+// reveal
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
