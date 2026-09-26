@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accredited Plumbing Service — Gunter, TX | DEMO PREVIEW</title>
+<meta name="description" content="DEMO PREVIEW — Accredited Plumbing Service, Gunter TX. Plumbing repairs, drain & sewer cleaning, water heaters, gas leak repair. Call (214) 548-9524.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0d2b52; --blue2:#123a6e; --blue3:#0a2140;
+  --paper:#f4f1e8; --ink:#101820;
+  --yellow:#ffd23f; --yellow-deep:#f5b800;
+  --line:rgba(255,255,255,.14); --line2:rgba(255,255,255,.07);
+  --radius:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:#fff;line-height:1.6;
+  background-color:var(--blue3);
+  background-image:
+    linear-gradient(var(--line2) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line2) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Archivo',sans-serif;letter-spacing:-.015em;line-height:1.05}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+/* DEMO badge */
+.demo-ribbon{position:fixed;top:16px;left:-48px;transform:rotate(-38deg);z-index:300;background:var(--yellow);color:#101820;font:700 12px/1 'Archivo';letter-spacing:.24em;padding:12px 62px;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.demo-strip{position:fixed;bottom:0;left:0;right:0;z-index:300;background:#081a33;border-top:1px solid var(--line);color:rgba(255,255,255,.65);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-align:center;padding:9px 12px}
+/* NAV */
+.nav{position:sticky;top:0;z-index:250;background:rgba(10,33,64,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:20px;max-width:1160px;margin:0 auto;padding:13px 22px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:46px;height:46px;border:2px solid var(--yellow);border-radius:8px;display:grid;place-items:center;background:rgba(255,210,63,.08)}
+.brand-mark svg{width:26px;height:26px}
+.brand-name{font:800 16px 'Archivo';letter-spacing:.03em}
+.brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--yellow);letter-spacing:.3em}
+.nav-links{display:flex;gap:22px;margin-left:auto;font-size:14px;font-weight:600}
+.nav-links a{text-decoration:none;opacity:.85}
+.nav-links a:hover{opacity:1;color:var(--yellow)}
+.nav-call{display:inline-flex;align-items:center;gap:9px;background:var(--yellow);color:#101820;font:800 14px 'Archivo';text-decoration:none;padding:11px 18px;border-radius:8px;letter-spacing:.02em}
+.nav-call:hover{background:#ffe08a}
+.open-chip{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;border:1px solid var(--line);border-radius:99px;padding:6px 13px;color:rgba(255,255,255,.85)}
+.open-chip .dot{width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 8px #3ddc84}
+.open-chip.closed .dot{background:#ff5c5c;box-shadow:0 0 8px #ff5c5c}
+/* HERO */
+.hero{padding:86px 0 70px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.32em;color:var(--yellow);margin-bottom:18px}
+.hero h1{font-size:clamp(42px,5.6vw,72px);font-weight:900;text-transform:uppercase}
+.hero h1 .hl{color:var(--yellow)}
+.hero p.lede{font-size:18px;color:rgba(255,255,255,.82);max-width:520px;margin:20px 0 30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font:800 16px 'Archivo';text-decoration:none;padding:16px 30px;border-radius:8px;letter-spacing:.02em}
+.btn-primary{background:var(--yellow);color:#101820}
+.btn-primary:hover{background:#ffe08a}
+.btn-ghost{border:2px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow)}
+.hero-meta{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.hero-meta div{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.7)}
+.hero-meta strong{display:block;color:#fff;font-size:15px;margin-top:3px;letter-spacing:0}
+/* spec card */
+.spec-card{background:rgba(244,241,232,.04);border:1px solid var(--line);border-radius:var(--radius);padding:8px;position:relative}
+.spec-card::before,.spec-card::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--yellow)}
+.spec-card::before{top:-2px;left:-2px;border-right:0;border-bottom:0;border-radius:8px 0 0 0}
+.spec-card::after{bottom:-2px;right:-2px;border-left:0;border-top:0;border-radius:0 0 8px 0}
+.spec-inner{background:var(--paper);color:var(--ink);border-radius:6px;padding:30px 28px}
+.spec-inner h3{font-size:20px;font-weight:800;text-transform:uppercase;margin-bottom:4px}
+.spec-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;color:#6b7280}
+.spec-rows{margin-top:18px;border-top:2px dashed #d4cfbf}
+.spec-row{display:flex;justify-content:space-between;gap:12px;padding:11px 2px;border-bottom:1px dashed #e2ddcd;font-size:14px}
+.spec-row .k{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6b7280;letter-spacing:.06em}
+.spec-row .v{font-weight:700;text-align:right}
+.spec-row .v a{color:#0d2b52;text-decoration:none;border-bottom:2px solid var(--yellow-deep)}
+.spec-note{margin-top:16px;font-size:12px;color:#6b7280;font-style:italic}
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:13px 0;background:rgba(255,210,63,.05)}
+.marquee span{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.22em;color:var(--yellow);padding:0 26px}
+/* sections */
+section.block{padding:76px 0}
+.sec-head{margin-bottom:40px}
+.sec-head .eyebrow{margin-bottom:10px}
+.sec-head h2{font-size:clamp(30px,3.6vw,46px);font-weight:900;text-transform:uppercase}
+.sec-head h2 .hl{color:var(--yellow)}
+.sec-head p{color:rgba(255,255,255,.75);max-width:640px;margin-top:12px}
+/* service tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{font:700 14px 'Archivo';letter-spacing:.03em;background:transparent;border:1px solid var(--line);color:rgba(255,255,255,.8);padding:12px 20px;border-radius:99px;cursor:pointer}
+.tab.active{background:var(--yellow);color:#101820;border-color:var(--yellow)}
+.tab:hover{border-color:var(--yellow)}
+.panels{border:1px solid var(--line);border-radius:var(--radius);background:rgba(244,241,232,.03)}
+.panel{display:none;padding:38px 36px}
+.panel.active{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.panel h3{font-size:26px;font-weight:800;text-transform:uppercase;margin-bottom:12px}
+.panel h3 .no{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--yellow);letter-spacing:.2em;display:block;margin-bottom:8px}
+.panel p{color:rgba(255,255,255,.8);font-size:15.5px}
+.panel ul{list-style:none;margin-top:16px;display:grid;gap:9px}
+.panel ul li{font-size:14.5px;color:rgba(255,255,255,.85);padding-left:26px;position:relative}
+.panel ul li::before{content:"▸";position:absolute;left:4px;color:var(--yellow);font-weight:700}
+.panel .callbox{background:var(--paper);color:var(--ink);border-radius:8px;padding:26px}
+.panel .callbox .mono{font-size:11px;letter-spacing:.24em;color:#6b7280}
+.panel .callbox a.big{font:900 30px 'Archivo';color:#0d2b52;text-decoration:none;display:block;margin:8px 0}
+.panel .callbox p{color:#4b5563;font-size:14px}
+/* why band */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why-card{border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:rgba(255,255,255,.02);transition:transform .25s,border-color .25s}
+.why-card:hover{transform:translateY(-5px);border-color:var(--yellow)}
+.why-card .num{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.24em;color:var(--yellow)}
+.why-card h3{font-size:19px;font-weight:800;text-transform:uppercase;margin:12px 0 10px}
+.why-card p{font-size:14.5px;color:rgba(255,255,255,.75)}
+/* area */
+.area-box{border:1px dashed rgba(255,210,63,.5);border-radius:var(--radius);padding:36px;background:rgba(255,210,63,.04)}
+.area-box h3{font-size:22px;font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.area-box .mono{font-size:11px;letter-spacing:.24em;color:var(--yellow)}
+.town-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.town-chips span{font-family:'IBM Plex Mono',monospace;font-size:13px;border:1px solid var(--line);border-radius:6px;padding:8px 14px;color:rgba(255,255,255,.85);background:rgba(255,255,255,.03)}
+/* estimate form */
+.est-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.est-copy h2{font-size:clamp(30px,3.4vw,44px);font-weight:900;text-transform:uppercase}
+.est-copy h2 .hl{color:var(--yellow)}
+.est-copy p{color:rgba(255,255,255,.78);margin-top:14px}
+.est-steps{margin-top:24px;display:grid;gap:14px}
+.est-step{display:flex;gap:14px;align-items:flex-start}
+.est-step .s{font:800 13px 'IBM Plex Mono';color:#101820;background:var(--yellow);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.est-step p{font-size:14.5px;color:rgba(255,255,255,.85);margin:0;padding-top:4px}
+form.workorder{background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:34px 30px;position:relative}
+form.workorder::before{content:"WORK ORDER — DEMO";position:absolute;top:-13px;left:24px;background:var(--yellow);color:#101820;font:700 11px 'IBM Plex Mono';letter-spacing:.2em;padding:5px 14px;border-radius:4px}
+form.workorder h3{font-size:21px;font-weight:800;text-transform:uppercase;margin-bottom:18px}
+.field{margin-bottom:15px}
+.field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:#6b7280;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid #d4cfbf;border-radius:6px;padding:12px 14px;font:500 15px 'Inter';background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--yellow-deep)}
+form.workorder button{width:100%;background:#0d2b52;color:#fff;font:800 16px 'Archivo';letter-spacing:.04em;border:0;border-radius:6px;padding:16px;cursor:pointer}
+form.workorder button:hover{background:#123a6e}
+.form-note{font-size:12px;color:#6b7280;margin-top:12px;text-align:center}
+/* FAQ */
+.faq{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:0;color:#fff;text-align:left;font:700 17px 'Archivo';padding:22px 6px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q .plus{font-family:'IBM Plex Mono',monospace;color:var(--yellow);font-size:22px;flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:rgba(255,255,255,.78);font-size:15px}
+.faq-a p{padding:0 6px 24px;max-width:760px}
+/* footer */
+footer.site{border-top:1px solid var(--line);padding:52px 0 90px;background:rgba(8,26,51,.7)}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+.foot-grid h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.28em;color:var(--yellow);margin-bottom:16px}
+.foot-grid p,.foot-grid a{font-size:14.5px;color:rgba(255,255,255,.8);text-decoration:none}
+.foot-grid a.big{font:800 20px 'Archivo';color:#fff}
+.foot-brand{font:900 22px 'Archivo';text-transform:uppercase}
+.foot-brand span{color:var(--yellow)}
+.copyright{margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:rgba(255,255,255,.5)}
+/* sticky mobile call */
+.sticky-call{display:none;position:fixed;bottom:44px;left:14px;right:14px;z-index:290;background:var(--yellow);color:#101820;font:800 17px 'Archivo';text-decoration:none;text-align:center;padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.5);letter-spacing:.03em}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .hero-grid,.panel.active,.est-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .sticky-call{display:block}
+  .hero{padding:60px 0 50px}
+  section.block{padding:56px 0}
+}
+</style>
+</head>
+<body>
+<div class="demo-ribbon">DEMO PREVIEW</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffd23f" stroke-width="2"><path d="M12 2v6M12 8c-4 0-7 3-7 7v7h14v-7c0-4-3-7-7-7z"/><path d="M9 22v-4M15 22v-4"/></svg>
+      </span>
+      <span><span class="brand-name">ACCREDITED PLUMBING</span><br><span class="brand-sub">SERVICE · GUNTER TX</span></span>
+    </a>
+    <span class="open-chip" id="openChip"><span class="dot"></span><span id="openText">CHECKING HOURS…</span></span>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#area">Service Area</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-call" href="tel:+12145489524">☎ (214) 548-9524</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <div class="eyebrow">GUNTER, TEXAS — PLUMBING · DRAIN · SEWER · WATER HEATERS</div>
+      <h1>One call.<br><span class="hl">Problem solved.</span></h1>
+      <p class="lede">Accredited Plumbing Service is Gunter's local plumbing shop — repairs, drain and sewer cleaning, water heater work, and gas leak repair across Grayson, Collin, and Dallas counties. When water's where it shouldn't be, you call James at <strong style="color:#fff">(214) 548-9524</strong>.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+12145489524">☎ Call (214) 548-9524</a>
+        <a class="btn btn-ghost" href="#estimate">Request a Work Order</a>
+      </div>
+      <div class="hero-meta">
+        <div>SHOP LINE<strong>(214) 548-9524</strong></div>
+        <div>HOURS<strong>Daily 8:00 AM – 8:00 PM</strong></div>
+        <div>BASED IN<strong>Gunter, TX 75058</strong></div>
+      </div>
+    </div>
+    <div class="spec-card reveal in">
+      <div class="spec-inner">
+        <div class="spec-tag">SHOP SPEC SHEET — APS-01</div>
+        <h3>Accredited Plumbing Service</h3>
+        <div class="spec-rows">
+          <div class="spec-row"><span class="k">PHONE</span><span class="v"><a href="tel:+12145489524">(214) 548-9524</a></span></div>
+          <div class="spec-row"><span class="k">SHOP</span><span class="v">119 E College St<br>Gunter, TX 75058</span></div>
+          <div class="spec-row"><span class="k">HOURS</span><span class="v">Daily 8:00 AM – 8:00 PM</span></div>
+          <div class="spec-row"><span class="k">COUNTIES</span><span class="v">Grayson · Collin · Dallas</span></div>
+          <div class="spec-row"><span class="k">TRADES</span><span class="v">Plumbing · Drain · Sewer<br>Water Heaters · Gas Lines</span></div>
+        </div>
+        <p class="spec-note">Hours per published directory listing — call to confirm.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <span>DRAIN CLEANING</span><span>·</span><span>SEWER CLEANING</span><span>·</span><span>WATER HEATERS</span><span>·</span><span>GAS LEAK REPAIR</span><span>·</span><span>BATHTUB REFINISHING</span><span>·</span><span>PLUMBING REPAIRS</span><span>·</span><span>DRAIN CLEANING</span><span>·</span><span>SEWER CLEANING</span><span>·</span><span>WATER HEATERS</span><span>·</span><span>GAS LEAK REPAIR</span><span>·</span><span>BATHTUB REFINISHING</span><span>·</span><span>PLUMBING REPAIRS</span><span>·</span>
+</div>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">SERVICE SCHEDULE</div>
+      <h2>What gets <span class="hl">fixed</span></h2>
+      <p>Tap a trade below. Every job starts the same way — one call to <a href="tel:+12145489524" style="color:var(--yellow);font-weight:700">(214) 548-9524</a>.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab active" data-tab="t1">Repairs</button>
+      <button class="tab" data-tab="t2">Drain &amp; Sewer</button>
+      <button class="tab" data-tab="t3">Water Heaters</button>
+      <button class="tab" data-tab="t4">Gas Lines</button>
+      <button class="tab" data-tab="t5">Tub Refinishing</button>
+    </div>
+    <div class="panels reveal">
+      <div class="panel active" id="t1">
+        <div>
+          <h3><span class="no">SPEC-01</span>Plumbing Repairs</h3>
+          <p>Leaks, drips, running toilets, busted fixtures, mystery water bills — the everyday failures that turn into big damage when they wait. Call early, fix it once.</p>
+          <ul>
+            <li>Leak detection and pipe repair</li>
+            <li>Fixture repair and replacement</li>
+            <li>Toilet rebuilds and replacements</li>
+            <li>General residential plumbing service</li>
+          </ul>
+        </div>
+        <div class="callbox">
+          <div class="mono">DISPATCH</div>
+          <a class="big" href="tel:+12145489524">(214) 548-9524</a>
+          <p>Daily 8:00 AM – 8:00 PM. Describe the problem — you'll get a straight answer on what it takes to fix it.</p>
+        </div>
+      </div>
+      <div class="panel" id="t2">
+        <div>
+          <h3><span class="no">SPEC-02</span>Drain &amp; Sewer Cleaning</h3>
+          <p>Slow drains, gurgling lines, backups — buildup and roots don't fix themselves. Professional cleaning clears the line all the way through instead of poking a hole in the clog.</p>
+          <ul>
+            <li>Drain cleaning, kitchen to main line</li>
+            <li>Sewer line cleaning</li>
+            <li>Recurring backup diagnosis</li>
+          </ul>
+        </div>
+        <div class="callbox">
+          <div class="mono">DISPATCH</div>
+          <a class="big" href="tel:+12145489524">(214) 548-9524</a>
+          <p>Don't wait on a sewer backup — that's the one that gets expensive fast.</p>
+        </div>
+      </div>
+      <div class="panel" id="t3">
+        <div>
+          <h3><span class="no">SPEC-03</span>Water Heaters</h3>
+          <p>Cold showers, rusty water, rumbling tanks, puddles at the base — water heaters give warnings before they quit. Repair when it makes sense, replace when it doesn't.</p>
+          <ul>
+            <li>Water heater repair and replacement</li>
+            <li>No-hot-water diagnosis</li>
+            <li>Leaking tank assessment</li>
+          </ul>
+        </div>
+        <div class="callbox">
+          <div class="mono">DISPATCH</div>
+          <a class="big" href="tel:+12145489524">(214) 548-9524</a>
+          <p>A leaking water heater can flood a garage overnight. Call the same day you spot it.</p>
+        </div>
+      </div>
+      <div class="panel" id="t4">
+        <div>
+          <h3><span class="no">SPEC-04</span>Gas Leak Repair</h3>
+          <p>Smell gas or suspect a leak at an appliance line — this is the call you don't postpone. Gas line work is licensed-trade work, handled properly and to code.</p>
+          <ul>
+            <li>Gas leak detection and repair</li>
+            <li>Appliance gas line service</li>
+          </ul>
+        </div>
+        <div class="callbox">
+          <div class="mono">DISPATCH</div>
+          <a class="big" href="tel:+12145489524">(214) 548-9524</a>
+          <p>If you smell gas strongly, leave the area and call from outside — then call the shop.</p>
+        </div>
+      </div>
+      <div class="panel" id="t5">
+        <div>
+          <h3><span class="no">SPEC-05</span>Bathtub Refinishing</h3>
+          <p>A worn, stained, or chipped tub doesn't always need a tear-out. Refinishing gives the fixture a new surface at a fraction of replacement cost and mess.</p>
+          <ul>
+            <li>Bathtub resurfacing and refinishing</li>
+            <li>Chips, stains, and worn-finish restoration</li>
+          </ul>
+        </div>
+        <div class="callbox">
+          <div class="mono">DISPATCH</div>
+          <a class="big" href="tel:+12145489524">(214) 548-9524</a>
+          <p>Ask whether refinishing fits your tub — you'll get an honest read, not a sales pitch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="why" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">FIELD NOTES</div>
+      <h2>Why Gunter <span class="hl">calls this number</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="num">NOTE — 01</div>
+        <h3>Local shop, not a dispatch center</h3>
+        <p>You're calling a Gunter shop at 119 E College St — not a national call center routing you to whoever's free. One number, one shop, accountable work.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">NOTE — 02</div>
+        <h3>Plumbing + HVAC background</h3>
+        <p>Directory profiles list James with both plumbing and HVAC trade credentials — useful when a water heater problem turns out to be a venting or combustion issue.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">NOTE — 03</div>
+        <h3>Three counties, one line</h3>
+        <p>Serving Grayson, Collin, and Dallas counties — from Gunter and Tioga down through Celina, McKinney, Frisco, Plano, and Denton.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">NOTE — 04</div>
+        <h3>Straight answers on the phone</h3>
+        <p>No contact form that goes nowhere, no chatbot. Describe the problem and get a straight answer on what it takes to fix it — daily 8 AM to 8 PM.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">NOTE — 05</div>
+        <h3>Niche work most shops skip</h3>
+        <p>Gas leak repair and bathtub refinishing aren't on every plumber's card. If that's your job, you want the shop that actually lists it.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">NOTE — 06</div>
+        <h3>Warranty? Ask.</h3>
+        <p>Directory listings say "call for details" on warranty — so call and ask before the work starts. Any shop worth hiring answers that question cleanly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="area" style="padding-top:0">
+  <div class="wrap">
+    <div class="area-box reveal">
+      <div class="mono">COVERAGE MAP — REV A</div>
+      <h3>Serving Grayson, Collin &amp; Dallas counties</h3>
+      <p style="color:rgba(255,255,255,.75);max-width:640px">Based in Gunter — running calls across the 380 corridor and the northern DFW suburbs. If you're close to one of these towns, you're in range.</p>
+      <div class="town-chips">
+        <span>Gunter</span><span>Tioga</span><span>Van Alstyne</span><span>Sherman</span><span>Denison</span><span>Howe</span><span>Celina</span><span>Prosper</span><span>McKinney</span><span>Frisco</span><span>Plano</span><span>Allen</span><span>Denton</span><span>Aubrey</span><span>Pilot Point</span><span>Collinsville</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="estimate" style="padding-top:0">
+  <div class="wrap est-grid">
+    <div class="est-copy reveal">
+      <div class="eyebrow">WORK ORDER</div>
+      <h2>Start with a <span class="hl">call</span></h2>
+      <p>There's no maze here — no form that vanishes into the void. Tell James what's wrong and you'll know fast whether it's a quick fix or a real project.</p>
+      <div class="est-steps">
+        <div class="est-step"><span class="s">1</span><p><strong>Call (214) 548-9524</strong> — daily 8:00 AM to 8:00 PM.</p></div>
+        <div class="est-step"><span class="s">2</span><p><strong>Describe the problem</strong> — leak, clog, no hot water, gas smell, tired tub.</p></div>
+        <div class="est-step"><span class="s">3</span><p><strong>Get a straight answer</strong> — what it takes, and what it costs, before anyone rolls a truck.</p></div>
+      </div>
+      <div class="hero-cta" style="margin-top:30px">
+        <a class="btn btn-primary" href="tel:+12145489524">☎ Call (214) 548-9524</a>
+      </div>
+    </div>
+    <form class="workorder reveal" onsubmit="return false;">
+      <h3>Request a callback</h3>
+      <div class="field"><label>YOUR NAME</label><input type="text" placeholder="Jane Smith"></div>
+      <div class="field"><label>PHONE</label><input type="tel" placeholder="(214) 555-0100"></div>
+      <div class="field"><label>WHAT'S WRONG</label>
+        <select>
+          <option>Leak / drip</option>
+          <option>Clogged drain</option>
+          <option>Sewer backup</option>
+          <option>Water heater problem</option>
+          <option>Gas line concern</option>
+          <option>Bathtub refinishing</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field"><label>DETAILS</label><textarea rows="3" placeholder="Kitchen sink backing up since yesterday…"></textarea></div>
+      <button type="submit">Send Work Order Request</button>
+      <p class="form-note">Demo form — on the live site this rings the shop directly.</p>
+    </form>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">COMMON QUESTIONS</div>
+      <h2>Before you <span class="hl">call</span></h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q">What are your hours? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Published hours are daily 8:00 AM to 8:00 PM, per the shop's directory listing. Call to confirm — and if it's an emergency outside those hours, call anyway and you'll know fast.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you charge for estimates? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Directory listings note that estimates are not free — call (214) 548-9524 and ask what the diagnostic visit runs before anyone comes out. Straight question, straight answer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Which areas do you serve? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Grayson, Collin, and Dallas counties — including Gunter, Tioga, Van Alstyne, Sherman, Celina, Prosper, McKinney, Frisco, Plano, Allen, Denton, and surrounding towns.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is your work warrantied? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Listings say "call for details" on warranty — ask about it on the call before work starts, and get it in writing with the quote.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">I smell gas. What do I do? <span class="plus">+</span></button>
+        <div class="faq-a"><p>If the smell is strong, leave the area first and call from outside. Then call the shop at (214) 548-9524 for gas line diagnosis and repair.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">Accredited <span>Plumbing</span> Service</div>
+        <p style="margin-top:12px">Gunter's local plumbing shop — repairs, drain &amp; sewer, water heaters, gas lines.</p>
+        <p style="margin-top:14px"><a class="big" href="tel:+12145489524">(214) 548-9524</a></p>
+      </div>
+      <div>
+        <h4>SHOP</h4>
+        <p>119 E College St<br>Gunter, TX 75058</p>
+        <p style="margin-top:12px">Daily 8:00 AM – 8:00 PM<br><span style="font-size:12px;color:rgba(255,255,255,.55)">per directory listing — call to confirm</span></p>
+      </div>
+      <div>
+        <h4>SERVICE AREA</h4>
+        <p>Grayson, Collin &amp; Dallas counties</p>
+        <p style="margin-top:12px"><a href="#estimate">Request a callback ↑</a></p>
+      </div>
+    </div>
+    <div class="copyright">© 2026 ACCREDITED PLUMBING SERVICE — GUNTER, TX · DEMO PREVIEW BUILT BY NOFLUFF MARKETING</div>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+12145489524">☎ Call (214) 548-9524</a>
+<div class="demo-strip">DEMO PREVIEW — built by NoFluff Marketing · not the business's live site</div>
+
+<script>
+// Tabs
+document.querySelectorAll('.tab').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('active')});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active')});
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    var item = q.parentElement, ans = item.querySelector('.faq-a'), open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+  });
+});
+// Scroll reveal
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+// Open-now chip (published hours: daily 8:00 AM - 8:00 PM)
+(function(){
+  var h = new Date().getHours(), open = h>=8 && h<20;
+  var chip = document.getElementById('openChip'), txt = document.getElementById('openText');
+  if(open){txt.textContent='OPEN NOW · TIL 8 PM'}else{chip.classList.add('closed');txt.textContent='CLOSED · OPENS 8 AM'}
+})();
+</script>
+</body>
+</html>
