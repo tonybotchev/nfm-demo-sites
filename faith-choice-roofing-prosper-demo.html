@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Choice Roofing, LLC | Family-Owned Roofer in Prosper, TX — 18 Years of Craft</title>
+<meta name="description" content="Faith Choice Roofing, LLC — family-owned North Dallas roofer with 18 years of experience. Roof replacement, repair, inspections, gutters. Free consultations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16263f; --navy-deep:#0e1930; --gold:#d9a441; --gold-deep:#b9822a;
+  --cream:#faf6ee; --sand:#f0e7d3; --ink:#232a35; --muted:#66707e; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;padding-top:30px}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.5px;line-height:1.12}
+.serif{font-family:'Lora',serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.demo-badge{position:fixed;top:0;left:0;right:0;z-index:2000;background:#b3261e;color:#fff;text-align:center;font-size:12px;letter-spacing:2.5px;font-weight:700;padding:7px 10px;text-transform:uppercase}
+.demo-badge span{opacity:.85;font-weight:400;letter-spacing:1px}
+/* header */
+header{position:sticky;top:30px;z-index:1000;background:rgba(250,246,238,.95);backdrop-filter:blur(10px);border-bottom:3px solid var(--gold)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0}
+.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+.brand-mark{width:46px;height:46px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:inset 0 0 0 2px var(--gold)}
+.brand-mark svg{width:26px;height:26px;fill:var(--gold)}
+.brand-name{font-family:'Oswald',sans-serif;font-size:21px;font-weight:700;color:var(--navy);text-transform:uppercase;line-height:1}
+.brand-name small{display:block;font-size:10px;letter-spacing:2.8px;color:var(--gold-deep);font-weight:600;margin-top:3px}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.6px}
+.nav-links a:hover{color:var(--gold-deep)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:14px 28px;border-radius:8px;border:none;cursor:pointer;transition:transform .18s,box-shadow .18s;text-transform:uppercase;letter-spacing:.6px;font-family:'Oswald',sans-serif}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(22,38,63,.3)}
+.btn.gold{background:var(--gold);color:#241a05}
+.btn.gold:hover{box-shadow:0 12px 26px rgba(217,164,65,.45)}
+/* hero */
+.hero{background:linear-gradient(rgba(14,25,48,.88),rgba(14,25,48,.82)),repeating-linear-gradient(45deg,rgba(217,164,65,.06) 0 14px,transparent 14px 28px),var(--navy-deep);color:#fff;text-align:center;position:relative;overflow:hidden}
+.hero .wrap{padding:96px 22px 100px;position:relative}
+.hero .cross{font-size:15px;color:var(--gold);letter-spacing:3px;margin-bottom:18px;font-weight:600}
+.hero h1{font-size:clamp(42px,6vw,72px);color:#fff;max-width:820px;margin:0 auto 20px}
+.hero h1 .hl{color:var(--gold)}
+.hero p.lead{font-family:'Lora',serif;font-size:19px;font-style:italic;color:#d8dee8;max-width:640px;margin:0 auto 34px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.hbadge{border:1.5px solid rgba(217,164,65,.55);color:var(--gold);border-radius:999px;padding:8px 18px;font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase}
+.roofline{position:absolute;bottom:-1px;left:0;right:0;height:70px}
+/* trust */
+.trust{background:var(--white);border-bottom:1px solid var(--sand)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:36px 22px}
+.tstat{text-align:center;padding:10px 6px;border-right:1px solid var(--sand)}
+.tstat:last-child{border-right:none}
+.tstat .num{font-family:'Oswald',sans-serif;font-size:46px;font-weight:700;color:var(--navy)}
+.tstat .num .g{color:var(--gold-deep)}
+.tstat .lbl{font-size:12.5px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:600;margin-top:4px}
+/* sections */
+section.block{padding:86px 0}
+.sec-head{text-align:center;max-width:720px;margin:0 auto 50px}
+.sec-head .kick{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);color:var(--navy);margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:16.5px}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border-radius:12px;padding:38px 32px;border:1px solid var(--sand);border-top:5px solid var(--gold);box-shadow:0 10px 30px rgba(22,38,63,.06);transition:transform .22s,box-shadow .22s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(22,38,63,.14)}
+.svc .ico{width:58px;height:58px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.svc .ico svg{width:30px;height:30px;fill:var(--gold)}
+.svc h3{font-size:21px;color:var(--navy);margin-bottom:10px}
+.svc p{font-size:14.5px;color:var(--muted)}
+.svc .svc-cta{display:inline-block;margin-top:16px;font-weight:700;font-size:13.5px;color:var(--gold-deep);text-transform:uppercase;letter-spacing:.8px;text-decoration:none}
+/* story band */
+.story{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:90px 22px}
+.story .kick{color:var(--gold)}
+.story h2{color:#fff;font-size:clamp(30px,4vw,44px);margin-bottom:18px}
+.story p{color:#c6cfdd;margin-bottom:14px;font-size:16px}
+.story p strong{color:#fff}
+.verse{background:rgba(217,164,65,.1);border-left:4px solid var(--gold);padding:26px 28px;border-radius:0 12px 12px 0}
+.verse .serif{font-size:21px;font-style:italic;color:#f2e7cd;line-height:1.55}
+.verse .ref{margin-top:12px;font-size:13px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;font-weight:600}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:step}
+.step{padding:36px 26px;text-align:center;position:relative;background:#fff;border:1px solid var(--sand)}
+.step:first-child{border-radius:12px 0 0 12px}.step:last-child{border-radius:0 12px 12px 0}
+.step .n{width:52px;height:52px;border-radius:50%;background:var(--gold);color:#241a05;font-family:'Oswald',sans-serif;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step h3{font-size:17px;color:var(--navy);margin-bottom:8px}
+.step p{font-size:14px;color:var(--muted)}
+/* storm */
+.storm{background:linear-gradient(120deg,#7a1a12,#a3271b);color:#fff;border-radius:18px;margin:0 22px;max-width:1096px}
+.storm .in{padding:56px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.storm h2{color:#fff;font-size:clamp(26px,3.4vw,38px);margin-bottom:10px}
+.storm p{color:#f5dcd8;max-width:560px;font-size:16px}
+/* faq */
+.faq{max-width:780px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--sand);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;font-size:16px;font-weight:700;color:var(--navy);padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
+.faq-q .plus{color:var(--gold-deep);font-size:22px;flex:none;transition:transform .25s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted);font-size:15px}
+/* estimate */
+.est{background:var(--sand)}
+.est-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
+.est-copy h2{font-size:clamp(30px,4vw,42px);color:var(--navy);margin-bottom:14px}
+.est-copy p{color:var(--muted);margin-bottom:16px;font-size:16px}
+.est-copy ul{list-style:none;margin-top:18px}
+.est-copy li{padding:8px 0 8px 32px;position:relative;font-size:15px;font-weight:500}
+.est-copy li::before{content:"✓";position:absolute;left:0;color:var(--gold-deep);font-weight:800;font-size:17px}
+.form-card{background:#fff;border-radius:14px;padding:42px;box-shadow:0 20px 50px rgba(22,38,63,.12)}
+.form-card h3{font-size:24px;color:var(--navy);margin-bottom:6px}
+.form-card>p{font-size:14.5px;color:var(--muted);margin-bottom:22px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px;text-transform:uppercase;letter-spacing:.6px}
+.field input,.field select,.field textarea{width:100%;border:2px solid var(--sand);border-radius:8px;padding:13px 15px;font-size:15px;font-family:'Inter',sans-serif;background:var(--cream)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold-deep)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-ok{display:none;background:#eef7ef;border:2px solid #2e9e5b;border-radius:8px;padding:16px;font-size:14.5px;color:#1c5c34;margin-top:8px}
+/* reviews note */
+.revnote{background:#fff;border:2px dashed var(--gold);border-radius:12px;padding:26px 32px;max-width:780px;margin:50px auto 0;text-align:center}
+.revnote .stars{color:var(--gold-deep);font-size:22px;letter-spacing:5px;margin-bottom:8px}
+.revnote p{font-size:15px;color:var(--muted)}
+.revnote strong{color:var(--navy)}
+/* footer */
+footer{background:var(--navy-deep);color:#93a0b5;padding:56px 0 96px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;margin-bottom:34px}
+.foot-grid h4{color:#fff;font-family:'Oswald',sans-serif;font-size:19px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.foot-grid p,.foot-grid a{font-size:14.5px;color:#93a0b5;text-decoration:none}
+.foot-grid a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--navy-deep);padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-shadow:0 -6px 24px rgba(0,0,0,.3)}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#241a05;font-weight:700;font-size:17px;text-decoration:none;padding:13px;border-radius:8px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.8px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:900px){
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .tstat:nth-child(2){border-right:none}
+  .svc-grid{grid-template-columns:1fr}
+  .story .wrap{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .step:first-child{border-radius:12px 12px 0 0}.step:last-child{border-radius:0 0 12px 12px}
+  .est-grid{grid-template-columns:1fr}
+  .storm .in{padding:38px 28px}
+  .nav-links{display:none}
+  .sticky-call{display:block}
+  footer{padding-bottom:120px}
+  .frow{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo Preview &nbsp;<span>— sample website concept for Faith Choice Roofing, LLC · not the live site · phone shown is a placeholder</span></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg></span>
+      <span class="brand-name">Faith Choice Roofing<small>Prosper, Texas</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn" href="#estimate">📞 (phone TBD — add before send)</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="cross">✦ &nbsp;Faith · Family · Craftsmanship&nbsp; ✦</div>
+    <h1>The roof over your head, <span class="hl">built like we live under it.</span></h1>
+    <p class="lead">Faith Choice Roofing is a family-owned North Dallas roofing company with 18 years of experience — honest inspections, quality materials, and warranties we stand behind.</p>
+    <div class="hero-ctas">
+      <a class="btn gold" href="#estimate">📞 Call (phone TBD — add before send)</a>
+      <a class="btn" style="background:transparent;border:2px solid #fff" href="#estimate">Free Consultation</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hbadge">18 Years Experience</span>
+      <span class="hbadge">Family Owned</span>
+      <span class="hbadge">Free Consultations</span>
+      <span class="hbadge">Warranties Offered</span>
+    </div>
+  </div>
+  <svg class="roofline" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,70 L720,0 L1440,70 Z" fill="#faf6ee"/></svg>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="tstat reveal"><div class="num"><span data-count="18">0</span></div><div class="lbl">years of experience</div></div>
+    <div class="tstat reveal"><div class="num"><span class="g">4.8</span><span style="font-size:24px;color:var(--gold-deep)">★</span></div><div class="lbl">HomeAdvisor rating</div></div>
+    <div class="tstat reveal"><div class="num"><span data-count="5">0</span></div><div class="lbl">roofing services</div></div>
+    <div class="tstat reveal"><div class="num"><span data-count="1">0</span></div><div class="lbl">family behind it all</div></div>
+  </div>
+</div>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">What we do</div>
+      <h2>Roofing &amp; exterior services</h2>
+      <p>From full replacements to the small repair that saves you from a big one — every job gets the same honest assessment we'd give our own family.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/></svg></div>
+        <h3>Roof Replacement</h3>
+        <p>Full asphalt shingle roof installation and replacement with quality materials, clean job sites, and warranties that mean something.</p>
+        <a class="svc-cta" href="#estimate">Get a free quote →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4L14.7 12l-2.7-2.7 2.7-3z"/></svg></div>
+        <h3>Roof Repair</h3>
+        <p>Leaks, storm damage, lifted shingles, flashing failures — diagnosed honestly and fixed right the first time.</p>
+        <a class="svc-cta" href="#estimate">Get a free quote →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 8 8h-2a6 6 0 1 1-6-6V4zm1 0h-2v6l5 3 1-1.7-4-2.3V4z"/></svg></div>
+        <h3>Roof Inspections</h3>
+        <p>Thorough inspections for buyers, sellers, and storm-season peace of mind — with photos and plain-English findings.</p>
+        <a class="svc-cta" href="#estimate">Get a free quote →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20c4-1 5-8 5-12l3-3c0 5-1 13-5 15H4zm8 0c2-1 3-4 3-7h4c0 4-2 6-4 7h-3z"/></svg></div>
+        <h3>Gutters &amp; Downspouts</h3>
+        <p>Proper water management protects your foundation, siding, and landscaping — installed and repaired to last.</p>
+        <a class="svc-cta" href="#estimate">Get a free quote →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v10.5c3 0 5.5 2.5 5.5 5.5H6.5C6.5 15.5 9 13 12 13.5V3zM5 3h2v6H5zM17 3h2v6h-2z"/></svg></div>
+        <h3>Solar Screens</h3>
+        <p>Cut heat and glare while protecting your interiors — a smart, affordable upgrade for Texas summers.</p>
+        <a class="svc-cta" href="#estimate">Get a free quote →</a>
+      </div>
+      <div class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></div>
+        <h3>Emergency Services</h3>
+        <p>Storm damage can't wait for business hours. When your roof is compromised, we respond — fast.</p>
+        <a class="svc-cta" href="#estimate">Call now →</a>
+      </div>
+    </div>
+    <div class="revnote reveal">
+      <div class="stars">★★★★★</div>
+      <p><strong>Rated 4.8 out of 5 on HomeAdvisor</strong> — our reviews live there today. This site gives them a real home, where future customers actually look.</p>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kick">Our story</div>
+      <h2>A family business,<br>built on faith.</h2>
+      <p>For <strong>18 years</strong>, Faith Choice Roofing has served North Dallas homeowners as a <strong>family-owned</strong> company — the kind where the name on the truck is the name on the work.</p>
+      <p>We believe a roof is a promise: to the family sleeping under it. So we inspect honestly, quote fairly, install carefully, and <strong>warranty our work</strong>. If we wouldn't put it on our own home, we won't put it on yours.</p>
+      <p>That's the choice behind the name — and the faith behind the choice.</p>
+    </div>
+    <div class="verse reveal">
+      <div class="serif">"Whatever you do, work at it with all your heart, as working for the Lord, not for men."</div>
+      <div class="ref">Colossians 3:23</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="process" style="padding-top:86px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">How it works</div>
+      <h2>From first call to final shingle</h2>
+      <p>A simple, no-pressure process — you'll always know what happens next.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="n">1</div><h3>Free Consultation</h3><p>Call or send the form — tell us what's going on with your roof.</p></div>
+      <div class="step"><div class="n">2</div><h3>Honest Inspection</h3><p>We inspect thoroughly and show you photos of exactly what we find.</p></div>
+      <div class="step"><div class="n">3</div><h3>Clear Proposal</h3><p>One straightforward quote. No upsells, no mystery line items.</p></div>
+      <div class="step"><div class="n">4</div><h3>Quality Build</h3><p>Clean job site, quality materials, warranty-backed workmanship.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="storm">
+  <div class="in reveal">
+    <div>
+      <h2>Storm damage? Don't wait.</h2>
+      <p>Hail and wind don't check the calendar. We offer emergency roofing services across North Dallas — call and we'll get eyes on your roof fast.</p>
+    </div>
+    <a class="btn gold" href="#estimate" style="font-size:17px">📞 (phone TBD — add before send)</a>
+  </div>
+</div>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kick">Good to know</div>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">Do you really offer free consultations?<span class="plus">+</span></button><div class="faq-a"><p>Yes. Call or send the estimate form and we'll assess your roofing needs at no charge and with no obligation — that's been our policy from day one.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What areas do you serve?<span class="plus">+</span></button><div class="faq-a"><p>We're based in Prosper and serve homeowners across North Dallas and the surrounding communities. Call to confirm your address — if we're nearby, we'll come out.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you warranty your work?<span class="plus">+</span></button><div class="faq-a"><p>Yes — we offer warranties on our roofing work. The specific terms depend on the materials and scope; we'll walk you through exactly what's covered before you sign anything.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How do I know if I need a repair or a full replacement?<span class="plus">+</span></button><div class="faq-a"><p>That's exactly what our inspection answers. We'll show you photos, explain the roof's condition honestly, and recommend the smallest fix that truly solves the problem — even if that fix is smaller than you expected.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What payment methods do you accept?<span class="plus">+</span></button><div class="faq-a"><p>We accept major credit cards, and we'll discuss payment scheduling clearly in your proposal so there are no surprises.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block est" id="estimate">
+  <div class="wrap">
+    <div class="est-grid">
+      <div class="est-copy reveal">
+        <div class="kick" style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep);font-weight:700;margin-bottom:12px">Free consultation</div>
+        <h2>Get your free roof consultation.</h2>
+        <p>No pressure, no obligation — just an honest look at your roof from a family that's been doing this for 18 years.</p>
+        <ul>
+          <li>Free, no-obligation consultation</li>
+          <li>Photo-documented inspection findings</li>
+          <li>One clear, written proposal</li>
+          <li>Warranty-backed workmanship</li>
+        </ul>
+        <p style="margin-top:22px">Prefer to talk it through? <a href="#estimate" style="font-weight:700;color:var(--navy)">Call (phone TBD — add before send)</a></p>
+      </div>
+      <div class="form-card reveal">
+        <h3 class="disp">Request your free consultation</h3>
+        <p>We respond during business hours: Mon–Fri 8 AM–7 PM, Sat 9 AM–5 PM.</p>
+        <form id="estForm">
+          <div class="frow">
+            <div class="field"><label for="n">Name</label><input id="n" required placeholder="Your name"></div>
+            <div class="field"><label for="p">Phone</label><input id="p" type="tel" required placeholder="(___) ___-____"></div>
+          </div>
+          <div class="field"><label for="s">What do you need?</label>
+            <select id="s"><option>Roof replacement</option><option>Roof repair</option><option>Roof inspection</option><option>Gutters & downspouts</option><option>Solar screens</option><option>Storm / emergency damage</option></select>
+          </div>
+          <div class="field"><label for="m">Tell us about your roof</label><textarea id="m" rows="3" placeholder="Age of roof, leaks, storm damage, timeline…"></textarea></div>
+          <button class="btn gold" type="submit" style="width:100%;justify-content:center">Request free consultation →</button>
+          <div class="form-ok" id="formOk">✓ Request received (demo). On the live site this goes straight to Faith Choice Roofing — no lead broker in between.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Faith Choice Roofing, LLC</h4>
+        <p>Family-owned roofing in North Dallas.<br>18 years of experience.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="#estimate">(phone TBD — add before send)</a> <span style="font-size:12px">(demo placeholder)</span><br>16400 Dry Creek Boulevard<br>Prosper, TX</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon – Fri · 8 AM – 7 PM<br>Sat · 9 AM – 5 PM<br>Sun · Closed</p>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Faith Choice Roofing, LLC</span><span>Demo preview concept — not the live website</span></div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="#estimate">📞 Call (phone TBD — add before send)</a></div>
+
+<script>
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){anim(e.target);io.unobserve(e.target);}}),{threshold:.4});
+document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+function anim(el){const t=+el.dataset.count;let s=performance.now(),d=1400;
+  (function f(n){const p=Math.min((n-s)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(s);}
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+}));
+// reveal
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
+// form
+document.getElementById('estForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formOk').style.display='block';});
+</script>
+</body>
+</html>
