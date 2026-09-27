@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heckadon Roofing & Construction | Prosper TX Roofing + Insurance Claim Experts</title>
+<meta name="description" content="Heckadon Roofing & Construction — Prosper, TX roofer that guides you through the insurance maze. Storm claims, roof replacement, fencing. Call (214) 783-2164.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#1b1e23; --char2:#242830; --orange:#f5661f; --orange-d:#d14e0c;
+  --paper:#f7f5f1; --ink:#22262c; --muted:#6b7280; --white:#fff; --steel:#9aa3af;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;padding-top:30px}
+h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.5px;line-height:1.08}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.demo-badge{position:fixed;top:0;left:0;right:0;z-index:2000;background:#b3261e;color:#fff;text-align:center;font-size:12px;letter-spacing:2.5px;font-weight:700;padding:7px 10px;text-transform:uppercase}
+.demo-badge span{opacity:.85;font-weight:400;letter-spacing:1px}
+/* header */
+header{position:sticky;top:30px;z-index:1000;background:var(--char);border-bottom:3px solid var(--orange)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{text-decoration:none;display:flex;align-items:center;gap:12px}
+.brand-mark{width:46px;height:46px;background:var(--orange);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);display:flex;align-items:center;justify-content:center;flex:none}
+.brand-mark span{font-family:'Archivo',sans-serif;font-weight:900;color:#fff;font-size:20px}
+.brand-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:19px;color:#fff;line-height:1.05}
+.brand-name small{display:block;font-size:10px;letter-spacing:2.4px;color:var(--orange);font-weight:700}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;font-size:13.5px;font-weight:600;color:#c9ced6;text-transform:uppercase;letter-spacing:.8px}
+.nav-links a:hover{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:14px 28px;border:none;cursor:pointer;transition:transform .18s,box-shadow .18s;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);padding-left:34px;padding-right:34px;font-family:'Archivo',sans-serif;letter-spacing:.4px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(245,102,31,.4);background:var(--orange-d)}
+.btn.dark{background:var(--char);clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.btn.dark:hover{background:#000;box-shadow:0 12px 28px rgba(0,0,0,.4)}
+/* hero — asymmetric split with diagonal */
+.hero{background:var(--char);color:#fff;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:600px}
+.hero-copy{padding:90px 40px 90px 0;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.kick{display:inline-flex;align-items:center;gap:10px;background:rgba(245,102,31,.14);border:1px solid var(--orange);color:var(--orange);font-size:12.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:8px 16px;margin-bottom:22px;align-self:flex-start}
+.hero h1{font-size:clamp(42px,5.4vw,68px);color:#fff;margin-bottom:20px}
+.hero h1 .o{color:var(--orange)}
+.hero p.lead{font-size:18px;color:#b9c0cc;max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-proof{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.hp{display:flex;align-items:center;gap:10px;font-size:14px;color:#d5dae2;font-weight:600}
+.hp .stars{color:var(--orange);letter-spacing:2px}
+.hero-visual{position:relative;background:linear-gradient(135deg,#2b3038,#1b1e23);clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hv-pattern{position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(245,102,31,.05) 0 12px,transparent 12px 30px)}
+.hv-card{position:relative;background:#fff;color:var(--ink);border-radius:14px;padding:30px 34px;max-width:380px;box-shadow:0 30px 70px rgba(0,0,0,.5);border-top:6px solid var(--orange)}
+.hv-card .q{font-size:15px;font-style:italic;color:#3a4048;line-height:1.6;margin-bottom:14px}
+.hv-card .who{font-weight:800;font-size:14px}
+.hv-card .src{font-size:12px;color:var(--muted)}
+.hv-tag{position:absolute;top:34px;right:34px;background:var(--orange);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:13px;letter-spacing:1px;padding:10px 18px;transform:rotate(3deg)}
+/* stat strip */
+.statstrip{background:var(--orange);color:#fff}
+.statstrip .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:30px 22px;gap:10px}
+.ss{text-align:center}
+.ss .n{font-family:'Archivo',sans-serif;font-weight:900;font-size:40px}
+.ss .l{font-size:12px;text-transform:uppercase;letter-spacing:1.4px;font-weight:600;opacity:.9}
+/* sections */
+section.block{padding:88px 0}
+.sec-head{max-width:740px;margin-bottom:50px}
+.sec-head.right{margin-left:auto;text-align:right}
+.sec-head.center{margin:0 auto 50px;text-align:center}
+.k2{font-size:13px;letter-spacing:2.6px;text-transform:uppercase;color:var(--orange-d);font-weight:800;margin-bottom:12px}
+.sec-head h2{font-size:clamp(32px,4.2vw,48px);color:var(--char);margin-bottom:14px}
+.sec-head p{color:var(--muted);font-size:16.5px}
+/* insurance feature */
+.insure-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.insure-copy p{color:var(--muted);margin-bottom:16px;font-size:16px}
+.insure-copy p strong{color:var(--char)}
+.timeline{position:relative;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--orange),var(--char))}
+.tl{position:relative;margin-bottom:26px;background:#fff;border-radius:12px;padding:22px 24px;box-shadow:0 10px 30px rgba(0,0,0,.06);border:1px solid #e8e4dc}
+.tl::before{content:"";position:absolute;left:-29px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--orange);border:4px solid var(--paper)}
+.tl h3{font-size:17px;margin-bottom:6px;color:var(--char)}
+.tl h3 .tag{font-size:11px;background:var(--char);color:#fff;padding:3px 10px;border-radius:999px;letter-spacing:1px;margin-left:8px;vertical-align:middle}
+.tl p{font-size:14.5px;color:var(--muted)}
+/* services */
+.svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--char);color:#fff;border-radius:14px;padding:36px 30px;position:relative;overflow:hidden;transition:transform .22s}
+.svc:hover{transform:translateY(-6px)}
+.svc::after{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--orange)}
+.svc .num{font-family:'Archivo',sans-serif;font-weight:900;font-size:52px;color:rgba(245,102,31,.28);line-height:1;margin-bottom:14px}
+.svc h3{font-size:20px;margin-bottom:10px}
+.svc p{font-size:14.5px;color:#aeb5c0}
+.svc a{display:inline-block;margin-top:16px;color:var(--orange);font-weight:700;font-size:13.5px;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
+/* slider */
+.slider-zone{background:var(--char2);color:#fff}
+.slider-zone .sec-head h2{color:#fff}
+.slider-zone .sec-head p{color:#9aa3af}
+.slider{position:relative;max-width:800px;margin:0 auto}
+.slide{display:none;background:#fff;color:var(--ink);border-radius:14px;padding:48px 54px;box-shadow:0 24px 60px rgba(0,0,0,.4);border-left:8px solid var(--orange)}
+.slide.active{display:block;animation:fadeUp .45s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.slide .stars{color:var(--orange-d);font-size:19px;letter-spacing:4px;margin-bottom:14px}
+.slide blockquote{font-size:19px;font-style:italic;line-height:1.6;color:#333a43;margin-bottom:18px}
+.slide .who{font-weight:800;font-size:15px}
+.slide .src{font-size:12.5px;color:var(--muted)}
+.slider-nav{display:flex;justify-content:center;gap:14px;margin-top:26px;align-items:center}
+.s-arrow{width:48px;height:48px;border-radius:50%;border:2px solid var(--orange);background:transparent;color:var(--orange);font-size:21px;cursor:pointer;transition:all .2s}
+.s-arrow:hover{background:var(--orange);color:#fff}
+.s-dots{display:flex;gap:8px}
+.s-dot{width:10px;height:10px;border-radius:50%;background:#4a505a;cursor:pointer;border:none;padding:0}
+.s-dot.active{background:var(--orange)}
+/* areas */
+.areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:860px;margin:0 auto}
+.chip{background:#fff;border:2px solid #e2ddd2;border-radius:999px;padding:9px 20px;font-size:14px;font-weight:600;color:var(--char);transition:all .18s}
+.chip:hover{border-color:var(--orange);color:var(--orange-d);transform:translateY(-2px)}
+.chip.home{background:var(--char);color:#fff;border-color:var(--char)}
+/* faq */
+.faq{max-width:800px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid #e8e4dc;border-radius:10px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;font-size:16px;font-weight:700;color:var(--char);padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Inter',sans-serif}
+.faq-q .plus{color:var(--orange-d);font-size:22px;flex:none;transition:transform .25s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--muted);font-size:15px}
+/* estimate */
+.est{background:linear-gradient(135deg,var(--char) 0%,#2b2118 100%);color:#fff;position:relative;overflow:hidden}
+.est .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:90px 22px}
+.est h2{color:#fff;font-size:clamp(30px,4vw,44px);margin-bottom:16px}
+.est h2 .o{color:var(--orange)}
+.est p{color:#b9c0cc;margin-bottom:14px;font-size:16px}
+.est ul{list-style:none;margin:20px 0}
+.est li{padding:9px 0 9px 34px;position:relative;font-size:15.5px;color:#d5dae2}
+.est li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:800;font-size:18px}
+.form-card{background:#fff;border-radius:14px;padding:42px;color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.form-card h3{font-size:24px;color:var(--char);margin-bottom:6px}
+.form-card>p{font-size:14px;color:var(--muted);margin-bottom:22px}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:12.5px;font-weight:700;color:var(--char);margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px}
+.field input,.field select,.field textarea{width:100%;border:2px solid #e2ddd2;border-radius:8px;padding:13px 15px;font-size:15px;font-family:'Inter',sans-serif;background:var(--paper)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-ok{display:none;background:#eef7ef;border:2px solid #2e9e5b;border-radius:8px;padding:16px;font-size:14.5px;color:#1c5c34;margin-top:8px}
+/* footer */
+footer{background:#101318;color:#8b939e;padding:56px 0 96px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;margin-bottom:34px}
+.foot-grid h4{color:#fff;font-family:'Archivo',sans-serif;font-size:17px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.foot-grid p,.foot-grid a{font-size:14.5px;color:#8b939e;text-decoration:none}
+.foot-grid a:hover{color:var(--orange)}
+.tecl{display:inline-block;margin-top:10px;border:1px solid #3a414b;border-radius:8px;padding:8px 14px;font-size:12.5px;color:#c9ced6}
+.foot-bottom{border-top:1px solid #23282f;padding-top:20px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:#101318;padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:#fff;font-weight:800;font-size:17px;text-decoration:none;padding:13px;font-family:'Archivo',sans-serif;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:940px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-copy{padding:60px 0}
+  .hero-visual{clip-path:none;min-height:340px;padding:60px 20px}
+  .hv-tag{top:16px;right:16px}
+  .statstrip .wrap{grid-template-columns:repeat(2,1fr);gap:22px}
+  .insure-grid{grid-template-columns:1fr}
+  .svc-cards{grid-template-columns:1fr}
+  .est .wrap{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .sticky-call{display:block}
+  footer{padding-bottom:120px}
+  .frow{grid-template-columns:1fr}
+  .slide{padding:34px 26px}
+  .foot-grid{grid-template-columns:1fr}
+  .sec-head.right{text-align:left;margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo Preview &nbsp;<span>— sample website concept for Heckadon Roofing &amp; Construction · not the live site</span></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><span>H</span></span>
+      <span class="brand-name">HECKADON<small>Roofing &amp; Construction</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#claims">Storm Claims</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Areas</a></li>
+    </ul>
+    <a class="btn" href="tel:+12147832164">📞 (214) 783-2164</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="kick">Licensed General Contractor · Prosper, TX</span>
+      <h1>Storm damage?<br>We speak <span class="o">insurance.</span></h1>
+      <p class="lead">Heckadon Roofing &amp; Construction doesn't just replace roofs — James walks you through the entire insurance claim, meets your adjuster, and answers your questions a year later. That's why Prosper keeps calling back.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+12147832164">📞 (214) 783-2164</a>
+        <a class="btn dark" href="#estimate">Free Inspection</a>
+      </div>
+      <div class="hero-proof">
+        <div class="hp"><span class="stars">★★★★★</span> 5.0 · 61 reviews on BestProsInTown</div>
+        <div class="hp">✓ Solar Co. ID TECL-26718</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hv-pattern"></div>
+      <div class="hv-tag">INSURANCE-CLAIM EXPERTS</div>
+      <div class="hv-card">
+        <div class="q">"James helped me navigate the insurance maze beforehand, and he continues to answer questions more than a year after the installation. I recommend him without hesitation."</div>
+        <div class="who">Gary M.</div>
+        <div class="src">August 2026 · BestProsInTown</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="statstrip">
+  <div class="wrap">
+    <div class="ss reveal"><div class="n">5.0★</div><div class="l">BestProsInTown rating</div></div>
+    <div class="ss reveal"><div class="n"><span data-count="61">0</span></div><div class="l">verified reviews</div></div>
+    <div class="ss reveal"><div class="n"><span data-count="20">0</span></div><div class="l">towns served</div></div>
+    <div class="ss reveal"><div class="n">8–8</div><div class="l">open hours, 6 days a week</div></div>
+  </div>
+</div>
+
+<section class="block" id="claims">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="k2">The Heckadon difference</div>
+      <h2>Most roofers install shingles.<br>We handle the whole claim.</h2>
+      <p>Hail, wind, tornado damage — the roof is only half the battle. The other half is the adjuster, the paperwork, and the waiting. That's the half James owns for you.</p>
+    </div>
+    <div class="insure-grid">
+      <div class="timeline reveal">
+        <div class="tl"><h3>Free storm inspection <span class="tag">STEP 1</span></h3><p>We document every inch of damage with photos — roof, fencing, gutters — so nothing gets missed.</p></div>
+        <div class="tl"><h3>We meet your adjuster <span class="tag">STEP 2</span></h3><p>James walks the roof with the insurance adjuster and speaks their language, so the scope reflects the real damage.</p></div>
+        <div class="tl"><h3>Full exterior rebuild <span class="tag">STEP 3</span></h3><p>Roof, fence, gutters — one crew, one accountable contractor for the whole claim.</p></div>
+        <div class="tl"><h3>Aftercare that lasts <span class="tag">STEP 4</span></h3><p>Questions a year later? James still answers. That aftercare is why customers come back with their second house.</p></div>
+      </div>
+      <div class="insure-copy reveal">
+        <p><strong>"James Heckadon knows how to work with insurance agencies for tackling older roofs,"</strong> wrote one customer who hired Heckadon for two houses with 15-year-old roofs — and then had them replace the ranch fence too.</p>
+        <p>Another, after tornado damage to roof and fencing: <strong>"James had extensive knowledge of the process and what to expect. Not only from him and his team, but also the insurance process."</strong></p>
+        <p>Older roofs get denied. Storm claims get underpaid. Having a contractor who has navigated hundreds of these is the difference between a check that covers it and a fight you lose.</p>
+        <a class="btn" href="tel:+12147832164" style="margin-top:12px">📞 Start with a free inspection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="services" style="background:#fff;padding-top:88px;padding-bottom:88px">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="k2">Services</div>
+      <h2>Roofing, solar &amp; full exterior work</h2>
+      <p>One contractor for the whole project — no juggling subs, no finger-pointing.</p>
+    </div>
+    <div class="svc-cards">
+      <div class="svc reveal"><div class="num">01</div><h3>Roof Replacement</h3><p>Full tear-offs and installations — shingle, metal standing seam, stone-coated steel, tile, and slate. Built for Texas weather.</p><a href="tel:+12147832164">Get a quote →</a></div>
+      <div class="svc reveal"><div class="num">02</div><h3>Storm &amp; Insurance Claims</h3><p>Hail and wind damage documentation, adjuster meetings, and claim navigation from first inspection to final check.</p><a href="tel:+12147832164">Get a quote →</a></div>
+      <div class="svc reveal"><div class="num">03</div><h3>Roof Repair &amp; Maintenance</h3><p>Leaks, flashing, and wear caught early — inspections and repairs that extend your roof's life for years.</p><a href="tel:+12147832164">Get a quote →</a></div>
+      <div class="svc reveal"><div class="num">04</div><h3>Solar Panel Installation</h3><p>Solar Company ID TECL-26718. Roof and solar from one accountable contractor — no coordination headaches.</p><a href="tel:+12147832164">Get a quote →</a></div>
+      <div class="svc reveal"><div class="num">05</div><h3>Fencing &amp; Gutters</h3><p>Custom fences and rebuilds, gutter systems — the exterior work that so often rides along with a storm claim.</p><a href="tel:+12147832164">Get a quote →</a></div>
+      <div class="svc reveal"><div class="num">06</div><h3>Commercial Roofing</h3><p>TPO, modified bitumen, and commercial systems — same claim expertise, scaled for business properties.</p><a href="tel:+12147832164">Get a quote →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="block slider-zone" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="k2" style="color:var(--orange)">Reviews</div>
+      <h2>61 five-star reviews.<br>Zero of them about shingles alone.</h2>
+      <p>Read what Prosper actually talks about — the guidance, the honesty, the follow-through.</p>
+    </div>
+    <div class="slider reveal">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Heckadon Roofing did a superb job replacing my roof. Service before and after the installation was and continues to be top notch. James helped me navigate the insurance maze beforehand, and he continues to answer questions more than a year after the installation. I recommend him without hesitation."</blockquote>
+        <div class="who">Gary M.</div><div class="src">August 2026 · BestProsInTown</div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Working with James was such a relief. Through out the entire process of repair/replacement of roof/fencing/etc due to tornado damage, James had extensive knowledge of the process and what to expect. Not only from him and his team, but also the insurance process."</blockquote>
+        <div class="who">Ashley M.</div><div class="src">July 2026 · BestProsInTown</div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I have used Heckadon Roofing for 2 houses, both of which the roofs were nearing 15 years of age. James Heckadon knows how to work with insurance agencies for tackling older roofs. For the more recent house, we also had Heckadon replace the ranch fence. Work was well-done. I highly recommend."</blockquote>
+        <div class="who">BestProsInTown reviewer</div><div class="src">June 2026 · BestProsInTown</div>
+      </div>
+      <div class="slider-nav">
+        <button class="s-arrow" id="prevSlide" aria-label="Previous review">‹</button>
+        <div class="s-dots" id="dots"></div>
+        <button class="s-arrow" id="nextSlide" aria-label="Next review">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="areas">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="k2">Service areas</div>
+      <h2>Proudly serving North Texas</h2>
+      <p>Based in Prosper — on roofs across the corridor every week.</p>
+    </div>
+    <div class="areas reveal">
+      <span class="chip home">📍 Prosper, TX</span><span class="chip">Celina</span><span class="chip">McKinney</span><span class="chip">Frisco</span><span class="chip">Anna</span><span class="chip">Melissa</span><span class="chip">Aubrey</span><span class="chip">Gunter</span><span class="chip">Allen</span><span class="chip">Van Alstyne</span><span class="chip">Pilot Point</span><span class="chip">Oak Point</span><span class="chip">Little Elm</span><span class="chip">Savannah</span><span class="chip">Lucas</span><span class="chip">Wylie</span><span class="chip">Sachse</span><span class="chip">Murphy</span><span class="chip">Carrollton</span><span class="chip">Irving</span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="k2">FAQ</div>
+      <h2>Straight answers</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">My roof is 15+ years old. Will insurance even cover it?<span class="plus">+</span></button><div class="faq-a"><p>Often, yes — but older roofs get extra scrutiny, and that's exactly where having an experienced contractor matters. James has guided many owners of aging roofs through successful claims. A free inspection will tell you where you stand before you ever file.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Will you meet my insurance adjuster?<span class="plus">+</span></button><div class="faq-a"><p>Yes. James walks the roof with your adjuster and documents damage in the terms insurers use — it's one of the most-mentioned reasons customers recommend Heckadon.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you only do roofs?<span class="plus">+</span></button><div class="faq-a"><p>No — storm claims often include fencing, gutters, and more. Heckadon handles custom fences and rebuilds, gutter systems, solar installations (TECL-26718), and general construction, so one contractor owns the whole claim.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What are your hours?<span class="plus">+</span></button><div class="faq-a"><p>Monday–Friday 8 AM–8 PM and Saturday 8 AM–8 PM; closed Sundays. Call <a href="tel:+12147832164" style="font-weight:700;color:var(--char)">(214) 783-2164</a> — after storm events, inspections are prioritized.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you work outside Prosper?<span class="plus">+</span></button><div class="faq-a"><p>Yes — 20 towns across North Texas, from Frisco and McKinney to Gunter, Anna, and Aubrey. If you're in the corridor, you're in range.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="est" id="estimate">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="k2" style="color:var(--orange)">Free inspection</div>
+      <h2>Don't guess about your roof. <span class="o">Know.</span></h2>
+      <p>Storm season, an aging roof, or a claim you're not sure about — start with a free, photo-documented inspection. No pressure, no obligation.</p>
+      <ul>
+        <li>Free photo-documented roof inspection</li>
+        <li>Honest read on repair vs. replace vs. claim</li>
+        <li>Adjuster meeting support when you file</li>
+        <li>One contractor for roof, fence &amp; gutters</li>
+      </ul>
+      <p style="margin-top:20px">Rather talk now? <a href="tel:+12147832164" style="color:#fff;font-weight:800;font-size:19px">(214) 783-2164</a></p>
+    </div>
+    <div class="form-card reveal">
+      <h3>Request your free inspection</h3>
+      <p>We respond Mon–Sat, 8 AM–8 PM. Storm damage gets priority.</p>
+      <form id="estForm">
+        <div class="frow">
+          <div class="field"><label for="n">Name</label><input id="n" required placeholder="Your name"></div>
+          <div class="field"><label for="p">Phone</label><input id="p" type="tel" required placeholder="(555) 123-4567"></div>
+        </div>
+        <div class="field"><label for="s">What happened?</label>
+          <select id="s"><option>Hail / wind damage</option><option>Roof is aging — considering replacement</option><option>Active leak</option><option>Insurance claim in progress</option><option>Just want an inspection</option></select>
+        </div>
+        <div class="field"><label for="m">Details</label><textarea id="m" rows="3" placeholder="When did the damage happen? Roof age? Anything the adjuster said…"></textarea></div>
+        <button class="btn" type="submit" style="width:100%;justify-content:center;clip-path:none;border-radius:8px">Request free inspection →</button>
+        <div class="form-ok" id="formOk">✓ Request received (demo). On the live site this goes straight to Heckadon — with your damage details attached, so James arrives already briefed.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Heckadon Roofing &amp; Construction</h4>
+        <p>Licensed general contractor in Prosper, TX.<br>Roofing, solar &amp; insurance-claim expertise.</p>
+        <span class="tecl">Solar Company ID: TECL-26718</span>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="tel:+12147832164">(214) 783-2164</a><br>1100 Terrace Manor Dr<br>Prosper, TX 75078</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon – Fri · 8 AM – 8 PM<br>Sat · 8 AM – 8 PM<br>Sun · Closed</p>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Heckadon Roofing &amp; Construction</span><span>Demo preview concept — not the live website</span></div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+12147832164">📞 Call (214) 783-2164</a></div>
+
+<script>
+// slider
+const slides=[...document.querySelectorAll('.slide')];
+const dotsBox=document.getElementById('dots');let cur=0,timer;
+slides.forEach((_,i)=>{const d=document.createElement('button');d.className='s-dot'+(i?'':' active');d.setAttribute('aria-label','Review '+(i+1));d.onclick=()=>go(i);dotsBox.appendChild(d);});
+const dots=[...dotsBox.children];
+function go(i){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=(i+slides.length)%slides.length;slides[cur].classList.add('active');dots[cur].classList.add('active');restart();}
+function restart(){clearInterval(timer);timer=setInterval(()=>go(cur+1),6500);}
+document.getElementById('prevSlide').onclick=()=>go(cur-1);
+document.getElementById('nextSlide').onclick=()=>go(cur+1);
+restart();
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+}));
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){anim(e.target);io.unobserve(e.target);}}),{threshold:.4});
+document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+function anim(el){const t=+el.dataset.count;let s=performance.now(),d=1400;
+  (function f(n){const p=Math.min((n-s)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(s);}
+// reveal
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
+// form
+document.getElementById('estForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formOk').style.display='block';});
+</script>
+</body>
+</html>
