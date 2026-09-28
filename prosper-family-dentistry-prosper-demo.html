@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prosper Family Dentistry | Prosper, TX — Best Family Dentist 8 Years Running</title>
+<meta name="description" content="Prosper Family Dentistry — Dr. Jill Sentlingar & Dr. Cara Kessler. Family, cosmetic & laser dentistry in Prosper, TX. Call (972) 347-1145.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0d5c56; --teal2:#12837b; --peach:#f4a988; --peach2:#fbd9c4;
+  --cream:#fdfbf6; --ink:#22302e; --muted:#64746f; --line:#e9e0d2; --gold:#b98a2f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;padding-top:34px}
+h1,h2,h3,.serif{font-family:'Lora',Georgia,serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.demo-badge{position:fixed;top:0;left:0;right:0;z-index:2000;background:#b3261e;color:#fff;text-align:center;font-size:12px;letter-spacing:.4px;padding:8px 12px;font-weight:600}
+.demo-badge span{opacity:.85;font-weight:400}
+nav{position:sticky;top:34px;z-index:1000;background:rgba(253,251,246,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;max-width:1140px;margin:0 auto}
+.brand{color:var(--teal);text-decoration:none;font-family:'Lora',serif;font-weight:700;font-size:20px;line-height:1.15}
+.brand small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:10px;letter-spacing:3px;color:var(--gold)}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500}
+.nav-links a:hover{color:var(--teal2)}
+.nav-call{background:var(--teal);color:#fff!important;font-weight:700;padding:9px 18px;border-radius:99px;font-size:14px}
+.nav-call:hover{background:var(--teal2)}
+@media(max-width:880px){.nav-links a:not(.nav-call){display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#eef5f3 0%,var(--cream) 60%)}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,var(--peach2) 0%,transparent 65%);opacity:.7}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:76px 22px 80px;max-width:1140px;margin:0 auto}
+@media(max-width:920px){.hero-in{grid-template-columns:1fr;padding:56px 22px}}
+.award-pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--gold);border-radius:99px;padding:9px 20px;font-size:13.5px;font-weight:600;color:#7a5c14;margin-bottom:22px;box-shadow:0 6px 18px rgba(185,138,47,.15)}
+.award-pill .medal{font-size:20px}
+.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.08;font-weight:700;color:var(--teal);margin-bottom:14px}
+.hero h1 em{font-style:italic;color:var(--ink)}
+.hero .sub{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:28px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:99px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(13,92,86,.3)}
+.btn-line{border:2px solid var(--teal);color:var(--teal)}
+.hero-card{background:#fff;border-radius:26px;padding:8px;box-shadow:0 30px 60px rgba(13,92,86,.14);border:1px solid var(--line)}
+.hero-card .art{border-radius:20px;background:linear-gradient(140deg,var(--teal) 0%,var(--teal2) 60%,#1a9c90 100%);min-height:380px;display:flex;flex-direction:column;justify-content:flex-end;padding:34px;color:#fff;position:relative;overflow:hidden}
+.hero-card .art::before{content:"";position:absolute;left:8%;right:8%;bottom:-38%;height:76%;border:26px solid rgba(255,255,255,.28);border-bottom:none;border-radius:50% 50% 0 0}
+.hero-card .art blockquote{position:relative;font-family:'Lora',serif;font-size:24px;font-style:italic;line-height:1.45}
+.hero-card .art .who{position:relative;margin-top:12px;font-size:14px;opacity:.9}
+.trust-row{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px}
+.trust-row div{font-size:14px;color:var(--muted)}
+.trust-row b{color:var(--teal);font-size:19px;display:block}
+/* ribbon */
+.ribbon{background:var(--teal);color:#fff;text-align:center;padding:16px 20px;font-size:15px}
+.ribbon b{color:var(--peach2)}
+/* sections */
+section{padding:80px 0}
+.sec-kicker{color:var(--gold);font-weight:700;letter-spacing:3px;font-size:12.5px;text-transform:uppercase;margin-bottom:12px}
+h2.sec-title{font-size:clamp(30px,3.4vw,44px);font-weight:700;line-height:1.15;margin-bottom:14px;color:var(--teal)}
+.sec-lede{color:var(--muted);font-size:17px;max-width:640px;margin-bottom:38px}
+/* doctors */
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.docs{grid-template-columns:1fr}}
+.doc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px;display:flex;gap:24px;align-items:flex-start}
+.doc .mono{flex-shrink:0;width:96px;height:96px;border-radius:50%;background:linear-gradient(140deg,var(--teal),var(--teal2));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:34px;font-weight:700}
+.doc h3{font-size:23px;color:var(--teal);margin-bottom:2px}
+.doc .role{font-size:13px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:12px}
+.doc p{font-size:15px;color:var(--muted)}
+/* tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.tab{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:12px 24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--ink);transition:all .15s}
+.tab.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.tab-panel{display:none;background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px}
+.tab-panel.on{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.tab-panel h3{color:var(--teal);font-size:24px;margin-bottom:14px}
+.tab-panel ul{columns:2;column-gap:32px;list-style:none}
+@media(max-width:640px){.tab-panel ul{columns:1}}
+.tab-panel li{padding:9px 0 9px 30px;position:relative;font-size:15.5px;break-inside:avoid}
+.tab-panel li::before{content:"✓";position:absolute;left:0;color:var(--teal2);font-weight:700}
+/* risk band */
+.risk{background:linear-gradient(140deg,#0d5c56,#12837b);color:#fff;border-radius:26px;padding:52px;position:relative;overflow:hidden}
+@media(max-width:700px){.risk{padding:32px 24px}}
+.risk h2{color:#fff;font-size:clamp(26px,3vw,38px);margin-bottom:14px}
+.risk p{color:#d7e8e5;max-width:640px;font-size:17px;margin-bottom:26px}
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:760px){.risk-grid{grid-template-columns:1fr}}
+.risk-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:24px}
+.risk-card .n{font-family:'Lora',serif;font-size:30px;color:var(--peach2);font-weight:700}
+.risk-card h4{margin:8px 0 6px;font-size:17px}
+.risk-card p{font-size:14.5px;color:#cfe0dd;margin:0}
+/* hours widget */
+.hours-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+@media(max-width:820px){.hours-wrap{grid-template-columns:1fr}}
+.open-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px;text-align:center}
+.open-dot{width:18px;height:18px;border-radius:50%;display:inline-block;margin-right:10px;vertical-align:middle}
+.open-now{background:#2e7d4f;box-shadow:0 0 0 6px rgba(46,125,79,.18)}
+.open-closed{background:#c0392b;box-shadow:0 0 0 6px rgba(192,57,43,.15)}
+#openStatus{font-size:24px;font-weight:700;color:var(--teal);font-family:'Lora',serif}
+#openDetail{color:var(--muted);margin-top:8px;font-size:15px}
+.hours-tbl{width:100%;border-collapse:collapse;font-size:16px}
+.hours-tbl td{padding:13px 6px;border-bottom:1px solid var(--line)}
+.hours-tbl tr.today td{background:#eef5f3;font-weight:700;color:var(--teal)}
+.hours-tbl td:last-child{text-align:right}
+/* checklist */
+.check{background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px;max-width:760px;margin:0 auto}
+.check h3{color:var(--teal);font-size:23px;margin-bottom:6px}
+.check .hint{color:var(--muted);font-size:14.5px;margin-bottom:20px}
+.check-item{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:14px;cursor:pointer;transition:background .15s;border:1px solid transparent}
+.check-item:hover{background:#f4efe4}
+.check-item input{width:22px;height:22px;margin-top:3px;accent-color:var(--teal);flex-shrink:0;cursor:pointer}
+.check-item.done label{color:var(--muted);text-decoration:line-through}
+.check-item label{cursor:pointer;font-size:15.5px}
+.check-bar{height:10px;background:#eee7d6;border-radius:99px;overflow:hidden;margin:22px 0 10px}
+.check-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal2),var(--peach));transition:width .3s;border-radius:99px}
+#checkMsg{font-weight:600;color:var(--teal);min-height:26px;text-align:center}
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.rev-grid{grid-template-columns:1fr}}
+.rev{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 26px}
+.rev .stars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:12px}
+.rev p{font-size:15.5px;font-style:italic;color:#41514d}
+.rev .src{margin-top:14px;font-size:13px;color:var(--muted)}
+/* counters */
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+@media(max-width:700px){.counters{grid-template-columns:repeat(2,1fr)}}
+.counter{text-align:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 12px}
+.counter .num{font-family:'Lora',serif;font-size:40px;font-weight:700;color:var(--teal)}
+.counter .lbl{font-size:12.5px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+/* faq */
+.faq-item{border:1px solid var(--line);border-radius:16px;margin-bottom:12px;background:#fff;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 22px;font-size:16.5px;font-weight:600;font-family:inherit;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--ink)}
+.faq-q .pl{font-size:24px;color:var(--teal2);flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 22px 22px;color:var(--muted);font-size:15px}
+/* contact */
+.contact-sec{background:var(--teal);color:#fff}
+.contact-sec h2.sec-title{color:#fff}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:880px){.c-grid{grid-template-columns:1fr}}
+.c-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:22px;padding:36px}
+.c-card h3{font-size:23px;margin-bottom:16px;color:var(--peach2)}
+.c-line{margin:12px 0;font-size:17px}
+.c-line a{color:#fff;text-decoration:none;border-bottom:1px dotted var(--peach2)}
+form.demo-form input,form.demo-form textarea,form.demo-form select{width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:15.5px;font-family:inherit;margin-bottom:14px}
+form.demo-form input::placeholder,form.demo-form textarea::placeholder{color:#bcd4d0}
+form.demo-form label{font-size:12.5px;letter-spacing:1.5px;color:#cfe0dd;text-transform:uppercase}
+form.demo-form option{color:#22302e}
+.form-ok{display:none;background:rgba(255,255,255,.14);border:1px solid var(--peach2);border-radius:12px;padding:16px;margin-top:6px;font-size:15px}
+footer{background:#0c2b29;color:#93a8a4;padding:44px 0 110px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px;margin-bottom:28px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid h4{color:#fff;font-size:15px;margin-bottom:12px}
+.foot-grid a{color:#cfe0dd;text-decoration:none}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px}
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1500;background:var(--teal);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;font-weight:800;font-size:18px;text-decoration:none}
+@media(max-width:880px){.sticky-call{display:block}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.fine{font-size:12.5px;color:var(--muted);margin-top:14px}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO PREVIEW &nbsp;<span>— sample website concept for Prosper Family Dentistry · not the live site · phone shown is the business's real public number</span></div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">Prosper Family Dentistry<small>PROSPER, TEXAS</small></a>
+    <div class="nav-links">
+      <a href="#doctors">Doctors</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-call" href="tel:+19723471145">📞 (972) 347-1145</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-in">
+    <div>
+      <span class="award-pill"><span class="medal">🏆</span> Voted Best Family Dentist — 8 years running*</span>
+      <h1>Gentle dentistry for the <em>whole family.</em></h1>
+      <p class="sub">Dr. Jill Sentlingar and Dr. Cara Kessler combine Baylor-trained expertise with a calm, judgment-free office — from your child's first visit to Invisalign, implants, and 3D-guided care.</p>
+      <div class="cta-row">
+        <a class="btn btn-teal" href="tel:+19723471145">📞 Call (972) 347-1145</a>
+        <a class="btn btn-line" href="#visit">New-patient checklist</a>
+      </div>
+      <div class="trust-row">
+        <div><b>4.8★</b>32 local reviews</div>
+        <div><b>2</b>Baylor-trained doctors</div>
+        <div><b>8 yrs</b>Best Family Dentist*</div>
+      </div>
+      <p class="fine">*Best Family Dentist by Living Magazine, eight consecutive years — per the practice's own website.</p>
+    </div>
+    <div class="hero-card">
+      <div class="art">
+        <blockquote>"We practice risk-based, comprehensive dentistry — treating the cause, not just the tooth."</blockquote>
+        <div class="who">— The philosophy at Prosper Family Dentistry</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon">🦷 Now welcoming new patients &nbsp;·&nbsp; 201 N Preston Rd, Suite A, Prosper &nbsp;·&nbsp; <b>Call (972) 347-1145</b></div>
+
+<section id="doctors">
+  <div class="wrap">
+    <div class="sec-kicker reveal">Meet your doctors</div>
+    <h2 class="sec-title reveal">Real doctors. Real bios. Zero mystery.</h2>
+    <p class="sec-lede reveal">Two Baylor-trained dentists — not a rotating cast. You'll know exactly who's caring for your family.</p>
+    <div class="docs">
+      <div class="doc reveal">
+        <div class="mono">JS</div>
+        <div><h3>Dr. Jill Sentlingar</h3><div class="role">FAMILY DENTISTRY</div>
+        <p>Raised in Santa Clarita, California, Dr. Sentlingar earned her doctoral degree from Baylor College of Dentistry in Dallas — where she developed her love for family dentistry and caring for patients of every age.</p></div>
+      </div>
+      <div class="doc reveal">
+        <div class="mono">CK</div>
+        <div><h3>Dr. Cara Kessler</h3><div class="role">FAMILY DENTISTRY</div>
+        <p>A native Texan born and raised in Bedford, Dr. Kessler earned her Master's in Biomedical Sciences from Baylor College of Dentistry, where her research focused on TMJ — bringing a deeper understanding of jaw health to everyday care.</p></div>
+      </div>
+    </div>
+    <p class="fine reveal">Doctor biographies from the practice's own website. Photos available on their current site.</p>
+  </div>
+</section>
+
+<section id="services" style="background:#f6f1e6">
+  <div class="wrap">
+    <div class="sec-kicker reveal">Services</div>
+    <h2 class="sec-title reveal">Everything your family needs, under one roof.</h2>
+    <p class="sec-lede reveal">Tap a category to explore — from six-month cleanings to full-mouth reconstruction.</p>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab on" data-tab="t1">Preventive</button>
+      <button class="tab" data-tab="t2">Cosmetic</button>
+      <button class="tab" data-tab="t3">Restorative</button>
+      <button class="tab" data-tab="t4">Advanced tech</button>
+    </div>
+    <div class="tab-panel on reveal" id="t1">
+      <h3>Preventive care</h3>
+      <ul><li>Exams &amp; professional cleanings</li><li>Digital X-rays</li><li>Sealants</li><li>Fluoride treatments</li><li>Oral cancer screening</li><li>Kids' first visits</li></ul>
+    </div>
+    <div class="tab-panel reveal" id="t2">
+      <h3>Cosmetic dentistry</h3>
+      <ul><li>Professional whitening</li><li>Veneers</li><li>Cosmetic bonding</li><li>Smile design</li><li>Invisalign® clear aligners</li></ul>
+    </div>
+    <div class="tab-panel reveal" id="t3">
+      <h3>Restorative dentistry</h3>
+      <ul><li>Tooth-colored fillings</li><li>Crowns &amp; bridges</li><li>Dentures</li><li>Dental implants</li><li>Extractions</li><li>Full-mouth reconstruction</li></ul>
+    </div>
+    <div class="tab-panel reveal" id="t4">
+      <h3>Advanced technology</h3>
+      <ul><li>iCAT 3D imaging</li><li>Laser dentistry</li><li>Periodontal therapy</li><li>Snoring &amp; sleep apnea care</li><li>TMJ-focused evaluation</li></ul>
+    </div>
+    <p class="fine reveal">Service list from the practice's own website.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="risk reveal">
+      <div class="sec-kicker" style="color:var(--peach2)">Our philosophy</div>
+      <h2>Risk-based, comprehensive dentistry.</h2>
+      <p>Instead of fixing teeth one at a time as they break, we assess your personal risk factors — then build a plan that keeps you ahead of problems. Three steps, same visit flow:</p>
+      <div class="risk-grid">
+        <div class="risk-card"><div class="n">01</div><h4>Assess</h4><p>Full exam, 3D imaging where needed, and an honest conversation about your risk factors.</p></div>
+        <div class="risk-card"><div class="n">02</div><h4>Plan</h4><p>A prioritized, no-pressure treatment plan — what matters now, what can wait, what it costs.</p></div>
+        <div class="risk-card"><div class="n">03</div><h4>Prevent</h4><p>Targeted prevention so small issues never become big (expensive) ones.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" style="background:#f6f1e6">
+  <div class="wrap">
+    <div class="sec-kicker reveal">Hours</div>
+    <h2 class="sec-title reveal">Early hours for busy families.</h2>
+    <p class="sec-lede reveal">Open at 7:30 AM — get seen before school and work.</p>
+    <div class="hours-wrap">
+      <div class="open-card reveal">
+        <div style="margin-bottom:14px"><span class="open-dot" id="openDot"></span></div>
+        <div id="openStatus">Checking…</div>
+        <div id="openDetail"></div>
+        <div style="margin-top:22px"><a class="btn btn-teal" href="tel:+19723471145">📞 Call now</a></div>
+      </div>
+      <div class="open-card reveal" style="text-align:left">
+        <table class="hours-tbl" id="hoursTbl">
+          <tr data-day="1"><td>Monday</td><td>7:30 AM – 3:00 PM</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>7:30 AM – 3:00 PM</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>7:30 AM – 3:00 PM</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>7:30 AM – 3:00 PM</td></tr>
+          <tr data-day="5"><td>Friday</td><td>7:30 AM – 12:30 PM</td></tr>
+          <tr data-day="0"><td>Saturday</td><td>Closed</td></tr>
+          <tr data-day="6"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p class="fine">Hours per the practice's website &amp; public listing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-kicker reveal" style="text-align:center">New patients</div>
+    <h2 class="sec-title reveal" style="text-align:center">Your first-visit checklist.</h2>
+    <p class="sec-lede reveal" style="text-align:center;margin-left:auto;margin-right:auto">Tick things off as you go — when the bar hits 100%, you're ready. Then call us.</p>
+    <div class="check reveal">
+      <h3>Before your first appointment</h3>
+      <p class="hint">Tap each item to check it off.</p>
+      <div class="check-item"><input type="checkbox" id="c1"><label for="c1">Call <b>(972) 347-1145</b> to schedule — mornings fill fast</label></div>
+      <div class="check-item"><input type="checkbox" id="c2"><label for="c2">Gather your insurance card &amp; ID</label></div>
+      <div class="check-item"><input type="checkbox" id="c3"><label for="c3">List current medications &amp; health conditions</label></div>
+      <div class="check-item"><input type="checkbox" id="c4"><label for="c4">Note any tooth concerns or sensitivity</label></div>
+      <div class="check-item"><input type="checkbox" id="c5"><label for="c5">Arrive 10 minutes early — we're at 201 N Preston Rd, Suite A</label></div>
+      <div class="check-bar"><i id="checkBar"></i></div>
+      <div id="checkMsg"></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="background:#f6f1e6">
+  <div class="wrap">
+    <div class="sec-kicker reveal">Reviews</div>
+    <h2 class="sec-title reveal">4.8★ from Prosper families.</h2>
+    <p class="sec-lede reveal">32 reviews on the practice's local listing profile — here framed the way they deserve: front and center.</p>
+    <div class="counters reveal">
+      <div class="counter"><div class="num"><span data-count="4.8" data-dec="1">0</span>★</div><div class="lbl">Average rating</div></div>
+      <div class="counter"><div class="num"><span data-count="32">0</span></div><div class="lbl">Local reviews</div></div>
+      <div class="counter"><div class="num"><span data-count="8">0</span></div><div class="lbl">Years Best Family Dentist*</div></div>
+      <div class="counter"><div class="num"><span data-count="2">0</span></div><div class="lbl">Doctors on staff</div></div>
+    </div>
+    <p class="fine reveal" style="text-align:center">Rating from the practice's local listing profile (platform unconfirmed — shown as listed). *Award per practice website.</p>
+    <div style="height:30px"></div>
+    <div class="rev-grid">
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>Your patients' real reviews would appear here — pulled from your listing profiles, shown with the reviewer's name.</p><div class="src">— Illustrative placeholder</div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>Your patients' real reviews would appear here — pulled from your listing profiles, shown with the reviewer's name.</p><div class="src">— Illustrative placeholder</div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>Your patients' real reviews would appear here — pulled from your listing profiles, shown with the reviewer's name.</p><div class="src">— Illustrative placeholder</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="sec-kicker reveal">FAQ</div>
+    <h2 class="sec-title reveal">Good questions.</h2>
+    <div style="height:24px"></div>
+    <div class="faq-item reveal"><button class="faq-q">Are you accepting new patients?<span class="pl">+</span></button><div class="faq-a"><p>Yes — new patients and families are welcome. Call (972) 347-1145 and we'll find a morning slot that fits your schedule.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you see children?<span class="pl">+</span></button><div class="faq-a"><p>Absolutely — we're a family practice. Kids' exams, cleanings, sealants, and first visits are all part of everyday care here.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">What is risk-based dentistry?<span class="pl">+</span></button><div class="faq-a"><p>Instead of only treating problems as they appear, we assess your individual risk factors (decay, gum disease, bite, airway) and build a plan that prevents the next problem — not just fixes the current one.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you offer Invisalign and implants?<span class="pl">+</span></button><div class="faq-a"><p>Yes — Invisalign clear aligners, dental implants, veneers, and full-mouth reconstruction are all offered in-house, supported by iCAT 3D imaging.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Where are you located?<span class="pl">+</span></button><div class="faq-a"><p>201 N Preston Rd, Suite A, Prosper, TX 75078. Hours: Mon–Thu 7:30 AM–3:00 PM, Fri 7:30 AM–12:30 PM.</p></div></div>
+  </div>
+</section>
+
+<section class="contact-sec" id="contact">
+  <div class="wrap">
+    <div class="sec-kicker reveal" style="color:var(--peach2)">Book a visit</div>
+    <h2 class="sec-title reveal">Your family's new dental home.</h2>
+    <p class="sec-lede reveal" style="color:#cfe0dd">Call or send the form — it goes straight to Prosper Family Dentistry, no lead broker in between.</p>
+    <div class="c-grid">
+      <div class="c-card reveal">
+        <h3>Visit us</h3>
+        <p class="c-line">📞 <a href="tel:+19723471145">(972) 347-1145</a></p>
+        <p class="c-line">📍 201 N Preston Rd, Suite A<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prosper, TX 75078</p>
+        <p class="c-line">🕗 Mon–Thu · 7:30 AM – 3:00 PM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fri · 7:30 AM – 12:30 PM</p>
+        <p style="font-size:13px;color:#cfe0dd;margin-top:14px">Morning appointments go first — call early in the week for the best pick.</p>
+      </div>
+      <div class="c-card reveal">
+        <h3>Request an appointment</h3>
+        <form class="demo-form" id="apptForm">
+          <label for="aName">Name</label><input id="aName" required placeholder="Your name">
+          <label for="aPhone">Phone</label><input id="aPhone" required type="tel" placeholder="(972) 555-0100">
+          <label for="aWho">Who is the visit for?</label>
+          <select id="aWho"><option>Myself</option><option>My child</option><option>Whole family</option><option>Someone else</option></select>
+          <label for="aNeed">What do you need?</label>
+          <select id="aNeed"><option>Checkup &amp; cleaning</option><option>Tooth pain / urgent</option><option>Cosmetic consult</option><option>Invisalign consult</option><option>Implants consult</option><option>Second opinion</option></select>
+          <button class="btn" type="submit" style="width:100%;justify-content:center;background:var(--peach);color:#3a2a1a;border:none;cursor:pointer;font-size:16px">Request appointment →</button>
+          <div class="form-ok" id="formOk">✓ Request received (demo). On the live site this goes straight to Prosper Family Dentistry — no lead broker in between.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Prosper Family Dentistry</h4><p>Dr. Jill Sentlingar &amp; Dr. Cara Kessler.<br>Family, cosmetic &amp; laser dentistry in Prosper, TX.</p></div>
+      <div><h4>Contact</h4><p><a href="tel:+19723471145">(972) 347-1145</a><br>201 N Preston Rd, Suite A<br>Prosper, TX 75078</p></div>
+      <div><h4>Hours</h4><p>Mon – Thu · 7:30 AM – 3 PM<br>Fri · 7:30 AM – 12:30 PM<br>Sat – Sun · Closed</p></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Prosper Family Dentistry</span><span>Demo preview concept — not the live website. Facts from public listings.</span></div>
+  </div>
+</footer>
+
+<div class="sticky-call"><a href="tel:+19723471145">📞 Call (972) 347-1145</a></div>
+
+<script>
+// counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){anim(e.target);io.unobserve(e.target);}}),{threshold:.4});
+document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+function anim(el){const t=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0);let s=performance.now(),d=1300;
+(function f(n){const p=Math.min((n-s)/d,1),v=t*(1-Math.pow(1-p,3));el.textContent=dec?v.toFixed(dec):Math.round(v);if(p<1)requestAnimationFrame(f);})(s);}
+// reveal
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
+// faq
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;i.querySelector('.pl').textContent='+';});
+  if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';q.querySelector('.pl').textContent='–';}
+}));
+// tabs
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');document.getElementById(t.dataset.tab).classList.add('on');
+}));
+// open-now widget (hours: Mon-Thu 7:30-15:00, Fri 7:30-12:30)
+(function(){
+  const now=new Date(),d=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+  const open=d>=1&&d<=4?mins>=450&&mins<900:(d===5?mins>=450&&mins<750:false);
+  const dot=document.getElementById('openDot'),st=document.getElementById('openStatus'),de=document.getElementById('openDetail');
+  document.querySelectorAll('#hoursTbl tr').forEach(tr=>{if(+tr.dataset.day===d)tr.classList.add('today');});
+  if(open){dot.classList.add('open-now');st.textContent='Open now';de.textContent='We\'re seeing patients — call (972) 347-1145.';}
+  else{dot.classList.add('open-closed');st.textContent='Currently closed';
+    const names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let nd=d,found=false,msg='';
+    for(let i=0;i<8;i++){nd=(d+i)%7;if(nd>=1&&nd<=5){msg='We reopen '+names[nd]+' at 7:30 AM.';found=true;break;}}
+    de.textContent=found?msg+' Call (972) 347-1145 to book ahead.':'Call (972) 347-1145 to book ahead.';}
+})();
+// checklist
+const boxes=[...document.querySelectorAll('.check-item input')],bar=document.getElementById('checkBar'),msg=document.getElementById('checkMsg');
+boxes.forEach(b=>b.addEventListener('change',()=>{
+  b.closest('.check-item').classList.toggle('done',b.checked);
+  const n=boxes.filter(x=>x.checked).length,pct=n/boxes.length*100;
+  bar.style.width=pct+'%';
+  msg.textContent=n===boxes.length?'🎉 All set — call (972) 347-1145 and we\'ll take it from here!':(n>0?n+' of '+boxes.length+' done — keep going!':'');
+}));
+// form
+document.getElementById('apptForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formOk').style.display='block';e.target.querySelector('button').disabled=true;});
+</script>
+</body>
+</html>
