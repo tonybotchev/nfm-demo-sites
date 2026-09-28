@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Heating &amp; Air Conditioning | McKinney, TX — Cooling North Texas Since 1990</title>
+<meta name="description" content="Demo preview: Community Heating and Air Conditioning of McKinney, TX — a Trane dealer in retail business since 1990, serving Collin, Dallas, Denton and Rockwall counties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f1e33; --navy2:#16293f; --ice:#57c7e8; --ice-d:#2aa5cf; --white:#f7fafc; --paper:#ffffff;
+  --mut:#5b6b80; --line:rgba(15,30,51,.12); --amber:#f5a524;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--white);color:var(--navy);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Sora',sans-serif;line-height:1.12}
+.mono{font-family:'JetBrains Mono',monospace}
+img{max-width:100%;display:block}
+.demo-badge{position:fixed;top:0;left:0;right:0;z-index:2000;background:var(--ice-d);color:#04222e;text-align:center;font-size:.72rem;font-weight:700;letter-spacing:.22em;padding:.45rem 1rem;text-transform:uppercase}
+.progress{position:fixed;top:33px;left:0;height:4px;background:linear-gradient(90deg,var(--ice),var(--amber));width:0;z-index:1200}
+nav{position:sticky;top:33px;z-index:1000;background:rgba(15,30,51,.97);backdrop-filter:blur(8px)}
+.nav-in{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.7rem 1.25rem}
+.brand{font-family:'Sora';font-weight:800;font-size:1.05rem;color:#fff;text-decoration:none}
+.brand small{display:block;font-family:'JetBrains Mono';font-weight:500;font-size:.6rem;letter-spacing:.24em;color:var(--ice);text-transform:uppercase}
+.nav-links{display:flex;gap:1.25rem;margin-left:auto}
+.nav-links a{color:#cfe3f2;text-decoration:none;font-size:.86rem;font-weight:600}
+.nav-links a:hover{color:var(--ice)}
+.nav-call{background:var(--ice);color:#04222e!important;font-weight:800!important;padding:.55rem 1.05rem;border-radius:10px;text-decoration:none;font-size:.9rem;font-family:'JetBrains Mono'}
+.nav-call:hover{background:#8fdcf2}
+/* hero */
+.hero{background:
+  linear-gradient(rgba(15,30,51,.88),rgba(15,30,51,.94)),
+  repeating-linear-gradient(0deg,transparent 0 39px,rgba(87,199,232,.12) 39px 40px),
+  repeating-linear-gradient(90deg,transparent 0 39px,rgba(87,199,232,.12) 39px 40px),
+  var(--navy);
+  color:#fff;padding:4.5rem 1.25rem 4rem;position:relative}
+.hero-in{max-width:1160px;margin:0 auto}
+.eyebrow{display:inline-block;background:rgba(87,199,232,.15);border:1px solid var(--ice);color:var(--ice);font-family:'JetBrains Mono';font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.45rem .95rem;border-radius:8px;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.2rem);font-weight:800;max-width:18ch}
+.hero h1 em{font-style:normal;color:var(--ice)}
+.hero p.lede{font-size:1.12rem;max-width:58ch;margin:1.1rem 0 1.6rem;color:#cfe3f2}
+.spec-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem}
+.spec{font-family:'JetBrains Mono';font-size:.78rem;border:1px solid rgba(87,199,232,.5);color:#eaf6fb;padding:.45rem .9rem;border-radius:8px;background:rgba(87,199,232,.06)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.9rem 1.7rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:1rem;font-family:'Sora'}
+.btn-primary{background:var(--ice);color:#04222e}.btn-primary:hover{background:#8fdcf2}
+.btn-ghost{border:2px solid rgba(207,227,242,.6);color:#fff}.btn-ghost:hover{border-color:#fff}
+/* gauge */
+.gauge-wrap{max-width:1160px;margin:2rem auto 0;background:rgba(255,255,255,.05);border:1px solid rgba(87,199,232,.3);border-radius:18px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
+.gauge-lab{font-family:'JetBrains Mono';font-size:.75rem;color:var(--ice);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem}
+#gauge{width:220px;height:130px}
+.gauge-out .big{font-family:'Sora';font-size:2.4rem;font-weight:800;color:#fff}
+.gauge-out p{color:#cfe3f2;font-size:.95rem;max-width:44ch}
+input[type=range]{width:100%;accent-color:var(--ice);margin-top:.8rem}
+/* stats */
+.stats{padding:3rem 1.25rem 1rem}
+.stats-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.stat{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--ice);border-radius:12px;padding:1.4rem 1.2rem;box-shadow:0 8px 24px rgba(15,30,51,.06)}
+.stat .num{font-family:'Sora';font-size:2.1rem;font-weight:800;color:var(--navy)}
+.stat .num .ice{color:var(--ice-d)}
+.stat .lbl{font-size:.82rem;font-weight:600;color:var(--mut)}
+.stat .src{font-size:.68rem;color:var(--mut);font-style:italic}
+/* sections */
+section{padding:3.2rem 1.25rem}
+.wrap{max-width:1160px;margin:0 auto}
+.sec-kicker{font-family:'JetBrains Mono';font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ice-d);margin-bottom:.6rem}
+.sec-title{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;margin-bottom:1rem}
+.sec-sub{color:var(--mut);max-width:64ch;margin-bottom:2rem}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem}
+.tab-btn{border:2px solid var(--line);background:var(--paper);padding:.7rem 1.3rem;border-radius:10px;font-weight:700;font-size:.92rem;cursor:pointer;font-family:'Sora'}
+.tab-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tab-panel{display:none;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:2rem;box-shadow:0 12px 32px rgba(15,30,51,.07)}
+.tab-panel.active{display:block;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-size:1.35rem;margin-bottom:.5rem;color:var(--navy)}
+.tab-panel h3 .tag{font-family:'JetBrains Mono';font-size:.65rem;background:var(--ice);color:#04222e;padding:.25rem .6rem;border-radius:6px;vertical-align:middle;margin-left:.6rem;letter-spacing:.08em}
+.tab-panel ul{list-style:none;margin-top:.8rem}
+.tab-panel li{padding:.45rem 0 .45rem 1.7rem;position:relative}
+.tab-panel li::before{content:"▸";position:absolute;left:0;color:var(--ice-d);font-weight:800}
+/* heritage */
+.heritage{background:var(--navy);color:#fff;border-radius:24px;padding:2.8rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;position:relative;overflow:hidden}
+.heritage::before{content:"1990";position:absolute;right:-10px;bottom:-46px;font-family:'Sora';font-weight:800;font-size:11rem;color:rgba(87,199,232,.08);letter-spacing:-.05em}
+.heritage h2{color:#fff;font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:1rem}
+.heritage p{color:#cfe3f2}
+.heritage blockquote{font-family:'Sora';font-size:1.3rem;color:var(--ice);margin:1.2rem 0;font-weight:600}
+.trane-badge{background:#fff;color:var(--navy);border-radius:16px;padding:1.8rem;text-align:center}
+.trane-badge .logo{font-family:'Sora';font-weight:800;font-size:1.6rem;letter-spacing:.06em}
+.trane-badge .logo span{color:var(--ice-d)}
+.trane-badge p{color:var(--mut);font-size:.88rem;margin-top:.6rem}
+.trane-badge .lic{font-family:'JetBrains Mono';font-size:.75rem;margin-top:1rem;color:var(--navy);background:var(--white);border:1px dashed var(--ice-d);padding:.5rem;border-radius:8px}
+/* contact cards */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
+.ccard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.8rem;text-align:center}
+.ccard .ic{font-size:2rem}
+.ccard h3{margin:.6rem 0 .4rem;font-size:1.15rem}
+.ccard a{color:var(--ice-d);font-weight:700;text-decoration:none;font-size:1.1rem;font-family:'JetBrains Mono'}
+.ccard p{font-size:.85rem;color:var(--mut);margin-top:.4rem}
+/* faq */
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:.8rem;background:var(--paper);overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:1.1rem 1.3rem;font-family:'Sora';font-weight:700;font-size:1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--navy)}
+.faq-q span.ic{color:var(--ice-d);font-size:1.3rem;font-weight:800;transition:transform .25s}
+.faq-item.open .faq-q span.ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 1.3rem;color:var(--mut)}
+.faq-item.open .faq-a{max-height:320px;padding-bottom:1.2rem}
+/* marquee */
+.marquee{background:var(--navy);color:var(--ice);overflow:hidden;padding:.7rem 0;white-space:nowrap;font-family:'JetBrains Mono';font-size:.82rem;letter-spacing:.08em}
+.marquee span{display:inline-block;padding:0 2rem;animation:scrollX 24s linear infinite}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+/* footer */
+footer{background:var(--navy);color:#cfe3f2;padding:2.5rem 1.25rem 6rem}
+.foot-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.foot-in h4{color:#fff;font-family:'Sora';margin-bottom:.6rem}
+.foot-in a{color:var(--ice);text-decoration:none;font-weight:600}
+.foot-base{text-align:center;margin-top:2rem;font-size:.78rem;color:#7c8fa6}
+.sticky-call{position:fixed;bottom:0;left:0;right:0;z-index:1500;background:rgba(15,30,51,.97);padding:.7rem 1rem;display:flex;justify-content:center;border-top:3px solid var(--ice)}
+.sticky-call a.call{flex:1;max-width:480px;text-align:center;background:var(--ice);color:#04222e;font-weight:800;padding:.85rem;border-radius:10px;text-decoration:none;font-size:1.05rem;font-family:'JetBrains Mono'}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:820px){.gauge-wrap,.heritage{grid-template-columns:1fr}.nav-links{display:none}.heritage::before{font-size:7rem}}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo Preview — concept for Community Heating &amp; Air Conditioning</div>
+<div class="progress" id="progress"></div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">Community Heating &amp; Air<small>McKinney, TX · Since 1990</small></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#heritage">Our Story</a><a href="#contact">Contact</a><a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-call" href="tel:+19722726451">972-272-6451</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-in">
+    <span class="eyebrow">// McKinney, Texas — Est. 1990</span>
+    <h1>Comfort, engineered for <em>Texas summers</em> — for over 35 years.</h1>
+    <p class="lede">From changing your filter to upgrading your whole system: a Trane dealer that services every brand, with free in-home evaluations and installations by their own technicians. <strong>"We are homeowners too."</strong></p>
+    <div class="spec-row">
+      <span class="spec">EST. 1990</span><span class="spec">TRANE DEALER</span><span class="spec">ALL BRANDS SERVICED</span><span class="spec">COLLIN · DALLAS · DENTON · ROCKWALL</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+19722726451">Call 972-272-6451</a>
+      <a class="btn btn-ghost" href="sms:+12146684822">Text 214-668-4822</a>
+    </div>
+    <div class="gauge-wrap">
+      <div>
+        <div class="gauge-lab">Demo widget — drag the slider</div>
+        <canvas id="gauge" width="220" height="130"></canvas>
+      </div>
+      <div class="gauge-out">
+        <div class="big"><span id="tempOut">74</span>°F</div>
+        <p>It is not every day you wake up and are uncomfortable. When you do — Community takes it into consideration the moment you call. Set your comfort; they'll handle the equipment.</p>
+        <input type="range" id="tempRange" min="60" max="85" value="74" aria-label="Target temperature">
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><span>FREE IN-HOME EVALUATION /// TRANE DEALER /// SERVICING ALL BRANDS /// SINCE 1990 /// COLLIN · DALLAS · DENTON · ROCKWALL /// FREE IN-HOME EVALUATION /// TRANE DEALER /// SERVICING ALL BRANDS /// SINCE 1990 /// COLLIN · DALLAS · DENTON · ROCKWALL ///</span></div>
+
+<div class="stats">
+  <div class="stats-in">
+    <div class="stat reveal"><div class="num"><span class="ice">1990</span></div><div class="lbl">"In retail business since 1990"</div><div class="src">their own site</div></div>
+    <div class="stat reveal"><div class="num" data-count="5" data-dec="1">0</div><div class="lbl">★ on Birdeye</div><div class="src">attributed to Birdeye (6 reviews)</div></div>
+    <div class="stat reveal"><div class="num" data-count="4">0</div><div class="lbl">Counties served</div><div class="src">their own site</div></div>
+    <div class="stat reveal"><div class="num" data-count="2">0</div><div class="lbl">Ways to reach them</div><div class="src">call + text line</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="sec-kicker reveal">// Capabilities</p>
+    <h2 class="sec-title reveal">From a filter change to a full system.</h2>
+    <p class="sec-sub reveal">"Customer Service — from changing your FILTER to UPGRADING YOUR CURRENT SYSTEM. We will be there for you." Pick a lane:</p>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab-btn active" data-tab="a1">AC Repair</button>
+      <button class="tab-btn" data-tab="a2">Heating</button>
+      <button class="tab-btn" data-tab="a3">New Systems</button>
+      <button class="tab-btn" data-tab="a4">Energy &amp; Air Quality</button>
+    </div>
+    <div class="tab-panel active reveal" id="a1">
+      <h3>AC repair <span class="tag">ALL BRANDS</span></h3>
+      <p>When Texas heat wins a round, they get you cool again — and they won't turn you away over the brand on the box.</p>
+      <ul><li>All makes &amp; models serviced</li><li>Fast diagnosis, straight answers</li><li>Call or text to get on the schedule</li></ul>
+    </div>
+    <div class="tab-panel" id="a2">
+      <h3>Heating <span class="tag">ALL BRANDS</span></h3>
+      <p>Furnace and heat-pump service for the weeks North Texas actually gets cold.</p>
+      <ul><li>Heating system repair</li><li>Seasonal checkups</li><li>Honest repair-vs-replace guidance</li></ul>
+    </div>
+    <div class="tab-panel" id="a3">
+      <h3>New installations <span class="tag">TRANE DEALER</span></h3>
+      <p>"We can custom install a new Heating and Air Conditioning system to fit both your budget and your needs. We guarantee first quality installations performed by our own technicians."</p>
+      <ul><li>Free in-home evaluation</li><li>Trane equipment, all brands serviced</li><li>Installed by their own technicians — never subcontracted out</li></ul>
+    </div>
+    <div class="tab-panel" id="a4">
+      <h3>Energy &amp; air quality <span class="tag">SAVE $$$</span></h3>
+      <p>"Call us Today for your Free In Home Evaluation to Save on Energy Costs, &amp; to improve Air quality In your Home."</p>
+      <ul><li>Energy-cost evaluations</li><li>Indoor air quality improvements</li><li>Maintenance that keeps bills down</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="heritage" style="padding-top:1rem">
+  <div class="wrap">
+    <div class="heritage reveal">
+      <div>
+        <p class="sec-kicker" style="color:var(--ice)">// Our story</p>
+        <h2>The shop that's been here the whole time.</h2>
+        <p>"In retail business since 1990, Community Heating And Air Conditioning Inc. strives for Customer Service." Three and a half decades of North Texas summers — and the closing line on their own site says it best:</p>
+        <blockquote>"We are homeowners too. So, we strive to keep you comfortable, and add value to your most prized investment, your Home."</blockquote>
+        <div class="cta-row" style="margin-top:1.2rem"><a class="btn btn-primary" href="tel:+19722726451">Call 972-272-6451</a></div>
+      </div>
+      <div class="trane-badge">
+        <div class="logo">TRANE<span>®</span> DEALER</div>
+        <p>"We proudly sell TRANE equipment, but we service all other brands."</p>
+        <div class="lic">TACLB015803E — as published on communityhvac.com</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--navy);margin:0;padding-left:1.25rem;padding-right:1.25rem">
+  <div class="wrap">
+    <p class="sec-kicker reveal" style="color:var(--ice)">// Reach a human</p>
+    <h2 class="sec-title reveal" style="color:#fff">Call it or text it — your move.</h2>
+    <div class="contact-grid" style="margin-top:1.5rem">
+      <div class="ccard reveal"><div class="ic">📞</div><h3>Call</h3><a href="tel:+19722726451">972-272-6451</a><p>The fastest path to a technician.</p></div>
+      <div class="ccard reveal"><div class="ic">💬</div><h3>Text</h3><a href="sms:+12146684822">214-668-4822</a><p>Their published text line.</p></div>
+      <div class="ccard reveal"><div class="ic">📍</div><h3>Shop</h3><p style="font-weight:700;color:var(--navy)">464 Dowdy Rd<br>McKinney, TX 75069</p><p>Collin, Dallas, Denton &amp; Rockwall counties</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <p class="sec-kicker reveal">// FAQ</p>
+    <h2 class="sec-title reveal">Straight answers</h2>
+    <div class="faq-item reveal"><button class="faq-q">Do you only work on Trane systems?<span class="ic">+</span></button><div class="faq-a"><p>No. Their own words: "We proudly sell TRANE equipment, but we service all other brands."</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Is the in-home evaluation really free?<span class="ic">+</span></button><div class="faq-a"><p>Yes — they offer a free in-home evaluation to help you save on energy costs and improve indoor air quality. Call 972-272-6451 to set one up.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Who installs my system?<span class="ic">+</span></button><div class="faq-a"><p>Their own technicians: "We guarantee first quality installations performed by our own technicians."</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Are you licensed?<span class="ic">+</span></button><div class="faq-a"><p>Their site publishes license number TACLB015803E. (Published on their site — the demo doesn't claim state verification.)</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">What are your hours?<span class="ic">+</span></button><div class="faq-a"><p>Hours aren't published on their site — call 972-272-6451 or text 214-668-4822 for availability.</p></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div><h4>Community Heating &amp; Air Conditioning, Inc.</h4><p>464 Dowdy Rd<br>McKinney, TX 75069</p></div>
+    <div><h4>Call / Text</h4><p><a href="tel:+19722726451">972-272-6451</a> (call)<br><a href="sms:+12146684822">214-668-4822</a> (text)</p></div>
+    <div><h4>Hours</h4><p>Not published —<br>call for availability</p></div>
+    <div><h4>Service area</h4><p>Collin, Dallas, Denton<br>&amp; Rockwall counties</p></div>
+  </div>
+  <p class="foot-base">Demo preview built by NoFluff Marketing · concept only — nothing here is live or affiliated.</p>
+</footer>
+
+<div class="sticky-call"><a class="call" href="tel:+19722726451">📞 Call 972-272-6451</a></div>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');
+}));
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,was=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){anim(e.target);io.unobserve(e.target)}}),{threshold:.4});
+document.querySelectorAll('.num[data-count]').forEach(el=>io.observe(el));
+function anim(el){const target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suffix||'';
+  const t0=performance.now(),dur=1400;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
+    el.textContent=(target*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(tick)})(t0);}
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
+addEventListener('scroll',()=>{const h=document.documentElement;
+  document.getElementById('progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+// comfort gauge
+const cv=document.getElementById('gauge'),cx=cv.getContext('2d'),rng=document.getElementById('tempRange'),out=document.getElementById('tempOut');
+function drawGauge(t){
+  cx.clearRect(0,0,220,130);
+  const cx0=110,cy0=115,r=88;
+  for(let a=180;a<=360;a+=2){const rad=a*Math.PI/180;
+    cx.beginPath();cx.strokeStyle=a<=180+(t-60)/25*180?'#57c7e8':'rgba(87,199,232,.18)';cx.lineWidth=10;
+    cx.arc(cx0,cy0,r,rad,rad+2*Math.PI/180);cx.stroke();}
+  const na=(180+(t-60)/25*180)*Math.PI/180;
+  cx.beginPath();cx.strokeStyle='#f5a524';cx.lineWidth=4;
+  cx.moveTo(cx0,cy0);cx.lineTo(cx0+Math.cos(na)*(r-16),cy0+Math.sin(na)*(r-16));cx.stroke();
+  cx.beginPath();cx.fillStyle='#fff';cx.arc(cx0,cy0,8,0,7);cx.fill();
+}
+rng.addEventListener('input',()=>{out.textContent=rng.value;drawGauge(+rng.value)});
+drawGauge(74);
+</script>
+</body>
+</html>
