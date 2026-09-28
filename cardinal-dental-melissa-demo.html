@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardinal Dental Care | Dentist in Melissa, TX — Trusted Family Dental Care</title>
+<meta name="description" content="Demo preview: Cardinal Dental Care in Melissa, TX — a member of the AARP-selected Orahh Care Dental Community, with three dentists and gentle, personalized care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --euca:#4d6f5d; --euca-d:#38533f; --sage:#e8efe6; --cream:#fbf8f1; --terra:#c96f4a; --terra-d:#a8552f;
+  --ink:#2b332d; --mut:#6b7569; --white:#fff; --line:rgba(77,111,93,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.15}
+img{max-width:100%;display:block}
+.demo-badge{position:fixed;top:0;left:0;right:0;z-index:2000;background:var(--terra);color:#fff;text-align:center;font-size:.72rem;font-weight:700;letter-spacing:.22em;padding:.45rem 1rem;text-transform:uppercase}
+.progress{position:fixed;top:33px;left:0;height:4px;background:linear-gradient(90deg,var(--euca),var(--terra));width:0;z-index:1200}
+nav{position:sticky;top:33px;z-index:1000;background:rgba(251,248,241,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--line)}
+.nav-in{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.75rem 1.25rem}
+.brand{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--euca-d);text-decoration:none}
+.brand small{display:block;font-family:'DM Sans';font-weight:700;font-size:.6rem;letter-spacing:.26em;color:var(--terra);text-transform:uppercase}
+.nav-links{display:flex;gap:1.25rem;margin-left:auto}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:.86rem;font-weight:600}
+.nav-links a:hover{color:var(--terra-d)}
+.nav-call{background:var(--terra);color:#fff!important;font-weight:700;padding:.55rem 1.05rem;border-radius:999px;text-decoration:none;font-size:.9rem}
+.nav-call:hover{background:var(--terra-d)}
+/* hero */
+.hero{padding:4.2rem 1.25rem 3rem;background:
+  radial-gradient(900px 420px at 12% 0%,rgba(77,111,93,.16),transparent 60%),
+  radial-gradient(700px 380px at 88% 20%,rgba(201,111,74,.14),transparent 60%),var(--cream);position:relative}
+.hero-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+.eyebrow{display:inline-block;background:var(--sage);border:1px solid var(--euca);color:var(--euca-d);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.45rem .95rem;border-radius:999px;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--euca-d)}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero p.lede{font-size:1.1rem;color:var(--mut);max-width:52ch;margin:1.1rem 0 1.6rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.9rem 1.7rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:1rem}
+.btn-primary{background:var(--terra);color:#fff}.btn-primary:hover{background:var(--terra-d)}
+.btn-ghost{border:2px solid var(--euca);color:var(--euca-d)}.btn-ghost:hover{background:var(--euca);color:#fff}
+.hero-card{background:var(--white);border-radius:22px;padding:1.6rem;box-shadow:0 24px 60px rgba(77,111,93,.16);border:1px solid var(--line)}
+.hero-card .big{font-family:'DM Serif Display',serif;font-size:2.6rem;color:var(--euca-d)}
+.hero-card .cap{font-size:.82rem;color:var(--mut)}
+.aarp{margin-top:1rem;background:var(--sage);border-radius:14px;padding:1rem 1.1rem;font-size:.85rem;color:var(--euca-d)}
+.aarp strong{display:block;font-size:.95rem}
+/* stats */
+.stats{padding:1rem 1.25rem 2.5rem}
+.stats-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+.stat{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.2rem;text-align:center}
+.stat .num{font-family:'DM Serif Display',serif;font-size:2.3rem;color:var(--terra)}
+.stat .lbl{font-size:.82rem;font-weight:600;color:var(--mut)}
+.stat .src{font-size:.68rem;color:var(--mut);font-style:italic}
+/* sections */
+section{padding:3.2rem 1.25rem}
+.wrap{max-width:1160px;margin:0 auto}
+.sec-kicker{font-size:.75rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem}
+.sec-title{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--euca-d);margin-bottom:1rem}
+.sec-sub{color:var(--mut);max-width:64ch;margin-bottom:2rem}
+/* team */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+.doc{background:var(--white);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.doc:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(77,111,93,.18)}
+.doc img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.doc .body{padding:1.4rem}
+.doc h3{font-size:1.35rem;color:var(--euca-d)}
+.doc .cred{font-size:.78rem;font-weight:700;letter-spacing:.1em;color:var(--terra);text-transform:uppercase;margin:.2rem 0 .6rem}
+.doc p{font-size:.92rem;color:var(--mut)}
+.caption{font-size:.72rem;color:var(--mut);font-style:italic;margin-top:.5rem}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem}
+.tab-btn{border:2px solid var(--line);background:var(--white);padding:.7rem 1.3rem;border-radius:999px;font-weight:700;font-size:.92rem;cursor:pointer;font-family:'DM Sans'}
+.tab-btn.active{background:var(--euca);color:#fff;border-color:var(--euca)}
+.tab-panel{display:none;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:2rem}
+.tab-panel.active{display:block;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tab-panel h3{font-size:1.4rem;color:var(--euca-d);margin-bottom:.5rem}
+.tab-panel ul{list-style:none;margin-top:.8rem}
+.tab-panel li{padding:.45rem 0 .45rem 1.7rem;position:relative}
+.tab-panel li::before{content:"🌿";position:absolute;left:0}
+/* orahh band */
+.orahh{background:var(--euca);color:#fff;border-radius:24px;padding:2.6rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.orahh h2{color:#fff;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.8rem}
+.orahh p{color:#e3eae1}
+.orahh .fine{font-size:.78rem;color:#c9d4c7;margin-top:1rem;font-style:italic}
+.badge-card{background:#fff;color:var(--euca-d);border-radius:18px;padding:1.8rem;text-align:center}
+.badge-card .star{font-size:2.4rem}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.visit-card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:2rem}
+.visit-card h3{color:var(--euca-d);font-size:1.4rem;margin-bottom:1rem}
+.hours-row{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.hours-row:last-child{border:none}
+/* faq */
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:.8rem;background:var(--white);overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:1.1rem 1.3rem;font-family:'DM Sans';font-weight:700;font-size:1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--ink)}
+.faq-q span.ic{color:var(--terra);font-size:1.3rem;font-weight:800;transition:transform .25s}
+.faq-item.open .faq-q span.ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 1.3rem;color:var(--mut)}
+.faq-item.open .faq-a{max-height:320px;padding-bottom:1.2rem}
+/* marquee */
+.marquee{background:var(--euca);color:#fff;overflow:hidden;padding:.7rem 0;white-space:nowrap}
+.marquee span{display:inline-block;padding:0 2rem;font-weight:700;letter-spacing:.1em;font-size:.85rem;text-transform:uppercase;animation:scrollX 24s linear infinite}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+/* footer */
+footer{background:var(--euca-d);color:#dfe7dd;padding:2.5rem 1.25rem 6rem}
+.foot-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.foot-in h4{color:#fff;font-family:'DM Serif Display';margin-bottom:.6rem;font-weight:400}
+.foot-in a{color:#f5c9a8;text-decoration:none}
+.foot-base{text-align:center;margin-top:2rem;font-size:.78rem;color:#a9b6a6}
+.sticky-call{position:fixed;bottom:0;left:0;right:0;z-index:1500;background:rgba(56,83,63,.97);padding:.7rem 1rem;display:flex;justify-content:center;border-top:3px solid var(--terra)}
+.sticky-call a.call{flex:1;max-width:480px;text-align:center;background:var(--terra);color:#fff;font-weight:800;padding:.85rem;border-radius:12px;text-decoration:none;font-size:1.05rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:820px){.hero-in,.orahh,.visit{grid-template-columns:1fr}.nav-links{display:none}}
+</style>
+</head>
+<body>
+<div class="demo-badge">Demo Preview — concept for Cardinal Dental Care</div>
+<div class="progress" id="progress"></div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">Cardinal Dental Care<small>Melissa, TX</small></a>
+    <div class="nav-links">
+      <a href="#services">Services</a><a href="#team">Our Dentists</a><a href="#visit">Visit Us</a><a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-call" href="tel:+14699055672">Call (469) 905-5672</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-in">
+    <div>
+      <span class="eyebrow">Melissa's Home for Trusted Dental Care</span>
+      <h1>A healthy, beautiful smile — <em>cared for like family.</em></h1>
+      <p class="lede">Personalized care from three dentists you get to know by name — backed by the Orahh Care Dental Community, selected by AARP for accessible, exceptional dental care.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+14699055672">Call (469) 905-5672</a>
+        <a class="btn btn-ghost" href="#team">Meet Our Dentists</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="big" data-count="102" data-suffix="">0</div>
+      <div class="cap">reviews on chamberofcommerce.com</div>
+      <div class="aarp"><strong>✓ Orahh Care Dental Community</strong>Selected by AARP for its commitment to accessible, comprehensive dental care.</div>
+      <p class="caption" style="margin-top:.8rem">2625 Sentinel Way, Melissa, TX 75454 · Mon–Fri</p>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><span>Gentle, personalized care &nbsp;•&nbsp; Three dentists, one team &nbsp;•&nbsp; AARP-selected dental community &nbsp;•&nbsp; New patients welcome &nbsp;•&nbsp; Gentle, personalized care &nbsp;•&nbsp; Three dentists, one team &nbsp;•&nbsp; AARP-selected dental community &nbsp;•&nbsp; New patients welcome &nbsp;•&nbsp;</span></div>
+
+<div class="stats">
+  <div class="stats-in">
+    <div class="stat reveal"><div class="num" data-count="3">0</div><div class="lbl">Dentists on the team</div><div class="src">named on their own site</div></div>
+    <div class="stat reveal"><div class="num" data-count="102">0</div><div class="lbl">Reviews on chamberofcommerce.com</div><div class="src">attributed — rating not shown</div></div>
+    <div class="stat reveal"><div class="num" data-count="5" data-dec="0">0</div><div class="lbl">Weekdays open</div><div class="src">early Friday hours</div></div>
+    <div class="stat reveal"><div class="num" data-count="4.8" data-dec="1">0</div><div class="lbl">★ Dr. Zahooruddin on Healthgrades</div><div class="src">attributed to healthgrades.com (4 reviews)</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <p class="sec-kicker reveal">Care for every smile</p>
+    <h2 class="sec-title reveal">Quality, comfortable care.</h2>
+    <p class="sec-sub reveal">Whether you need preventive care or want to correct your smile, the team is here to help you achieve your smile goals.</p>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab-btn active" data-tab="s1">Preventive</button>
+      <button class="tab-btn" data-tab="s2">Cosmetic</button>
+      <button class="tab-btn" data-tab="s3">Restorative</button>
+      <button class="tab-btn" data-tab="s4">New Patients</button>
+    </div>
+    <div class="tab-panel active reveal" id="s1">
+      <h3>Preventive care</h3><p>Cleanings, exams and digital diagnostics that catch small things before they become big ones — including AI-enabled digital diagnostics for earlier detection.</p>
+      <ul><li>Routine cleanings &amp; exams</li><li>Digital X-rays</li><li>Oral health education</li></ul>
+    </div>
+    <div class="tab-panel" id="s2">
+      <h3>Cosmetic dentistry</h3><p>Correct your smile with cosmetic services designed around the look you want — personalized, never one-size-fits-all.</p>
+      <ul><li>Smile design consultations</li><li>Cosmetic corrections</li><li>Whitening options</li></ul>
+    </div>
+    <div class="tab-panel" id="s3">
+      <h3>Restorative care</h3><p>Comfortable, personalized restorative work that gets your smile back to full strength.</p>
+      <ul><li>Tooth-colored fillings</li><li>Crowns &amp; bridges</li><li>Personalized treatment plans</li></ul>
+    </div>
+    <div class="tab-panel" id="s4">
+      <h3>Your first visit</h3><p>Finding a new dental office can be a challenge — they're here to help. Expect a warm welcome, a full picture of your oral health, and a plan in plain language.</p>
+      <ul><li>What to expect, explained upfront</li><li>No pressure, no judgment</li><li>Questions welcome</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="team" style="background:var(--sage)">
+  <div class="wrap">
+    <p class="sec-kicker reveal">Meet the team</p>
+    <h2 class="sec-title reveal">Three dentists. One team. Real people.</h2>
+    <p class="sec-sub reveal">"We are committed to providing quality, compassionate care and will take the time to understand your unique needs."</p>
+    <div class="team">
+      <div class="doc reveal">
+        <img src="https://res.cloudinary.com/heartland-dental/w_400,c_fill,g_faces,f_auto,ar_1:1,d_doctorphotos:notfound11.jpg/doctorphotos/1851817043" alt="Dr. Ijeudo Ilokwu, DDS — Cardinal Dental Care, Melissa TX">
+        <div class="body"><h3>Dr. Ijeudo Ilokwu</h3><div class="cred">DDS</div><p>A skilled dentist providing comfortable, personalized care — advanced techniques with a friendly approach.</p></div>
+      </div>
+      <div class="doc reveal">
+        <img src="https://res.cloudinary.com/heartland-dental/w_400,c_fill,g_faces,f_auto,ar_1:1,d_doctorphotos:notfound11.jpg/doctorphotos/1205444106" alt="Dr. Sidra Zahooruddin, DDS — Cardinal Dental Care, Melissa TX">
+        <div class="body"><h3>Dr. Sidra Zahooruddin</h3><div class="cred">DDS · 4.8★ on Healthgrades</div><p>A personalized experience where every individual feels valued, understood, and confident about lifelong oral health.</p></div>
+      </div>
+      <div class="doc reveal">
+        <img src="https://res.cloudinary.com/heartland-dental/w_400,c_fill,g_faces,f_auto,ar_1:1,d_doctorphotos:notfound11.jpg/doctorphotos/1093454597" alt="Dr. Mitra Abdi, DDS — Cardinal Dental Care, Melissa TX">
+        <div class="body"><h3>Dr. Mitra Abdi</h3><div class="cred">DDS</div><p>Part of a team committed to quality, compassionate care — time taken to understand your unique needs.</p></div>
+      </div>
+    </div>
+    <p class="caption reveal" style="margin-top:1rem">Photos and bios from cardinaldentalcaretx.com.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="orahh reveal">
+      <div>
+        <h2>Part of something bigger — the Orahh Care Dental Community.</h2>
+        <p>A community united in delivering comprehensive lifetime oral care — modern AI-enabled digital diagnostics, personalized treatment planning, and compassionate local teams close to home.</p>
+        <p class="fine">Per their own site: dental services are provided by independent dentists. Orahh Care Dental Community is a brand owned by Heartland Dental LLC; AARP and its affiliates do not employ the dentists and staff.</p>
+      </div>
+      <div class="badge-card"><div class="star">🏅</div><h3 style="font-family:'DM Serif Display';font-size:1.5rem;margin:.5rem 0">Selected by AARP</h3><p style="color:var(--mut);font-size:.92rem">for its commitment to accessible, comprehensive dental care and exceptional patient experiences.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <p class="sec-kicker reveal">Come say hello</p>
+    <h2 class="sec-title reveal">Visit us in Melissa</h2>
+    <div class="visit" style="margin-top:1.5rem">
+      <div class="visit-card reveal">
+        <h3>Find us</h3>
+        <p><strong>Cardinal Dental Care</strong><br>2625 Sentinel Way<br>Melissa, TX 75454</p>
+        <p style="margin-top:1rem"><a href="tel:+14699055672" style="color:var(--terra-d);font-weight:700;font-size:1.15rem">(469) 905-5672</a></p>
+        <div class="cta-row" style="margin-top:1rem"><a class="btn btn-primary" href="tel:+14699055672">Call to Schedule</a></div>
+      </div>
+      <div class="visit-card reveal">
+        <h3>Hours</h3>
+        <div class="hours-row"><span>Monday – Thursday</span><span>7:30 AM – 5:30 PM</span></div>
+        <div class="hours-row"><span>Friday</span><span>7:00 AM – 5:00 PM</span></div>
+        <div class="hours-row"><span>Saturday – Sunday</span><span>Closed</span></div>
+        <p class="caption" style="margin-top:.8rem">Hours per cardinaldentalcaretx.com.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--white)">
+  <div class="wrap" style="max-width:820px">
+    <p class="sec-kicker reveal">Good to know</p>
+    <h2 class="sec-title reveal">Before your visit</h2>
+    <div class="faq-item reveal"><button class="faq-q">Are you accepting new patients?<span class="ic">+</span></button><div class="faq-a"><p>Yes — new patients are welcome. Finding a new dental office can be a challenge; the team is set up to make your first visit easy. Call (469) 905-5672.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Which dentists will I see?<span class="ic">+</span></button><div class="faq-a"><p>The Melissa team includes Dr. Ijeudo Ilokwu, Dr. Sidra Zahooruddin and Dr. Mitra Abdi — all named on the practice's own site.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">Do you take my insurance?<span class="ic">+</span></button><div class="faq-a"><p>Per Healthline FindCare, Dr. Zahooruddin accepts UnitedHealthCare, Humana, Aetna and Cigna plus other major plans — call the office to confirm your coverage before your visit.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">What is the Orahh Care Dental Community?<span class="ic">+</span></button><div class="faq-a"><p>A community of independent dental practices supported by Heartland Dental — selected by AARP for accessible, comprehensive dental care and exceptional patient experiences.</p></div></div>
+    <div class="faq-item reveal"><button class="faq-q">How do I book?<span class="ic">+</span></button><div class="faq-a"><p>The fastest path is a call: (469) 905-5672. Their site also offers online scheduling — ask when you call which is quicker for your visit type.</p></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div><h4>Cardinal Dental Care</h4><p>2625 Sentinel Way<br>Melissa, TX 75454</p></div>
+    <div><h4>Call</h4><p><a href="tel:+14699055672">(469) 905-5672</a><br>New patients welcome</p></div>
+    <div><h4>Hours</h4><p>Mon–Thu 7:30 AM–5:30 PM<br>Fri 7:00 AM–5:00 PM<br>Sat–Sun closed</p></div>
+    <div><h4>Community</h4><p>Orahh Care Dental Community<br>Selected by AARP</p></div>
+  </div>
+  <p class="foot-base">Demo preview built by NoFluff Marketing · concept only — nothing here is live or affiliated.</p>
+</footer>
+
+<div class="sticky-call"><a class="call" href="tel:+14699055672">📞 Call (469) 905-5672</a></div>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');
+}));
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement,was=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){anim(e.target);io.unobserve(e.target)}}),{threshold:.4});
+document.querySelectorAll('.num[data-count],.big[data-count]').forEach(el=>io.observe(el));
+function anim(el){const target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suffix||'';
+  const t0=performance.now(),dur=1400;
+  (function tick(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
+    el.textContent=(target*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(tick)})(t0);}
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
+addEventListener('scroll',()=>{const h=document.documentElement;
+  document.getElementById('progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+</script>
+</body>
+</html>
