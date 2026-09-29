@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Vivian's Family Dentistry — Dentist in McKinney, TX (DEMO PREVIEW)</title>
+<meta name="description" content="DEMO PREVIEW — Vivian's Family Dentistry, McKinney TX. Family dentist led by Dr. Vivian Nguyen, DDS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF5EA; --cream2:#F3ECDC; --sage:#6E8260; --sage-deep:#54634A;
+  --sage-soft:#E7ECDE; --char:#2B2A26; --char-soft:#5A574E; --gold:#C9A24B;
+  --white:#FFFFFF; --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--char);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* ---- DEMO badge ---- */
+.demo-badge{position:fixed;top:14px;right:14px;z-index:999;background:var(--char);color:var(--cream);
+  font-size:11px;font-weight:700;letter-spacing:.12em;padding:8px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.demo-badge span{color:var(--gold)}
+
+/* ---- Sticky nav ---- */
+nav{position:sticky;top:0;z-index:900;background:rgba(250,245,234,.94);backdrop-filter:blur(10px);border-bottom:1px solid #E6DCC6}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:44px;height:44px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;flex:none}
+.brand-mark svg{width:26px;height:26px;fill:#fff}
+.brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:1.06rem;line-height:1.2}
+.brand-name small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.68rem;color:var(--char-soft);letter-spacing:.06em;text-transform:uppercase}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--char-soft)}
+.nav-links a:hover{color:var(--sage-deep)}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 28px;font-size:.98rem;transition:transform .15s ease,box-shadow .15s ease}
+.btn-call{background:var(--sage);color:#fff;box-shadow:0 8px 20px rgba(110,130,96,.35)}
+.btn-call:hover{background:var(--sage-deep);transform:translateY(-2px)}
+.btn-outline{border:2px solid var(--sage);color:var(--sage-deep)}
+.btn-outline:hover{background:var(--sage-soft)}
+.hamb{display:none;background:none;border:none;font-size:1.7rem;cursor:pointer;color:var(--char)}
+
+/* ---- Hero ---- */
+.hero{position:relative;overflow:hidden;padding:72px 0 84px;background:linear-gradient(160deg,var(--cream) 0%,var(--cream2) 60%,var(--sage-soft) 130%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.kicker{display:inline-block;background:var(--sage-soft);color:var(--sage-deep);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.3rem,5vw,3.7rem);margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--sage-deep)}
+.hero p.lede{font-size:1.12rem;color:var(--char-soft);margin-bottom:26px;max-width:32rem}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero-proof{display:flex;gap:10px;flex-wrap:wrap;font-size:.85rem;color:var(--char-soft)}
+.hero-proof b{color:var(--char)}
+.hero-art{position:relative}
+.smile-card{background:var(--white);border-radius:32px;padding:36px 30px;box-shadow:0 24px 60px rgba(84,99,74,.18);position:relative;overflow:hidden}
+.smile-card .big{font-family:'Fraunces',serif;font-size:1.9rem;line-height:1.25;margin-bottom:8px}
+.smile-card .who{font-size:.85rem;color:var(--char-soft)}
+.stars{color:var(--gold);font-size:1.15rem;letter-spacing:.15em;margin:14px 0 4px}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5}
+.tooth-row{display:flex;gap:8px;margin-top:18px}
+.tooth-row svg{width:34px;height:34px;fill:var(--sage);opacity:.85}
+
+/* ---- Trust bar / counters ---- */
+.stats{background:var(--sage-deep);color:#fff;padding:44px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat-num{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:var(--cream)}
+.stat-lbl{font-size:.82rem;opacity:.85;margin-top:6px}
+.stat-lbl b{color:var(--gold)}
+
+/* ---- Sections ---- */
+section.block{padding:72px 0}
+.sec-head{max-width:44rem;margin-bottom:40px}
+.sec-head .kicker{margin-bottom:14px}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:14px}
+.sec-head p{color:var(--char-soft)}
+
+/* ---- Why / hook cards ---- */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--white);border-radius:var(--radius);padding:32px 28px;box-shadow:0 10px 30px rgba(84,99,74,.10)}
+.card .icon{width:52px;height:52px;border-radius:16px;background:var(--sage-soft);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.card .icon svg{width:28px;height:28px;fill:var(--sage-deep)}
+.card h3{font-size:1.25rem;margin-bottom:10px}
+.card p{color:var(--char-soft);font-size:.96rem}
+.card .attr{display:block;margin-top:12px;font-size:.8rem;color:var(--char-soft);font-style:italic}
+
+/* ---- Testimonial slider ---- */
+.twrap{background:var(--char);color:var(--cream);border-radius:32px;padding:56px 30px;position:relative;overflow:hidden}
+.twrap .kicker{background:rgba(255,255,255,.1);color:var(--gold)}
+.tslide{display:none;max-width:52rem;margin:0 auto;text-align:center;animation:fade .45s ease}
+.tslide.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tslide blockquote{font-family:'Fraunces',serif;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.4;margin:18px 0}
+.tslide .src{color:var(--gold);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.tnav{display:flex;justify-content:center;gap:14px;margin-top:30px}
+.tnav button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:1.2rem;cursor:pointer}
+.tnav button:hover{background:var(--sage)}
+.tdots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.tdots button{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.25);cursor:pointer;padding:0}
+.tdots button.on{background:var(--gold)}
+
+/* ---- Services tabs ---- */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.tab-btn{border:2px solid #DCD2BA;background:transparent;border-radius:999px;padding:11px 22px;font-weight:600;font-size:.95rem;cursor:pointer;color:var(--char-soft);font-family:'Inter',sans-serif}
+.tab-btn.active,.tab-btn:hover{background:var(--sage);border-color:var(--sage);color:#fff}
+.tab-panel{display:none;background:var(--white);border-radius:var(--radius);padding:38px 34px;box-shadow:0 10px 30px rgba(84,99,74,.10);margin-top:18px;animation:fade .35s ease}
+.tab-panel.active{display:block}
+.tab-panel h3{font-size:1.5rem;margin-bottom:12px}
+.tab-panel p{color:var(--char-soft);margin-bottom:16px}
+.tab-panel ul{list-style:none;margin-bottom:20px}
+.tab-panel li{padding:8px 0 8px 30px;position:relative;color:var(--char-soft)}
+.tab-panel li::before{content:"✓";position:absolute;left:0;color:var(--sage-deep);font-weight:700}
+
+/* ---- PPO band ---- */
+.ppo{background:var(--sage-soft);border-radius:32px;padding:48px 30px;text-align:center}
+.ppo h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:10px}
+.ppo p.sub{color:var(--char-soft);margin-bottom:26px}
+.ppo-logos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:20px}
+.ppo-logos span{background:#fff;border-radius:999px;padding:10px 20px;font-weight:600;font-size:.9rem;box-shadow:0 4px 12px rgba(84,99,74,.10)}
+.ppo small{color:var(--char-soft)}
+
+/* ---- FAQ ---- */
+.faq-item{background:var(--white);border-radius:16px;margin-bottom:12px;overflow:hidden;box-shadow:0 6px 18px rgba(84,99,74,.08)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--char)}
+.faq-q .plus{font-family:'Inter',sans-serif;font-size:1.4rem;color:var(--sage-deep);flex:none;transition:transform .25s}
+.faq-item.open .faq-q .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 22px;color:var(--char-soft)}
+.faq-a a{color:var(--sage-deep);font-weight:600}
+
+/* ---- Appointment ---- */
+.appt{background:linear-gradient(150deg,var(--sage-deep),var(--sage));border-radius:32px;padding:56px 30px;color:#fff}
+.appt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.appt h2{font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:14px}
+.appt p{opacity:.92;margin-bottom:14px}
+.appt .hours{background:rgba(255,255,255,.12);border-radius:18px;padding:22px 24px;font-size:.94rem}
+.appt .hours b{color:var(--gold)}
+.appt form{background:var(--cream);border-radius:22px;padding:30px;color:var(--char)}
+.appt label{display:block;font-weight:600;font-size:.86rem;margin:14px 0 6px}
+.appt input,.appt select,.appt textarea{width:100%;border:1.5px solid #DCD2BA;border-radius:12px;padding:12px 14px;font-size:1rem;font-family:'Inter',sans-serif;background:#fff;color:var(--char)}
+.appt input:focus,.appt select:focus,.appt textarea:focus{outline:none;border-color:var(--sage)}
+.appt .demo-note{background:#FFF7E3;border:1px dashed var(--gold);border-radius:12px;padding:12px 16px;font-size:.84rem;margin-bottom:6px;color:var(--char-soft)}
+.form-ok{display:none;background:var(--sage-soft);border-radius:12px;padding:18px;font-weight:600;color:var(--sage-deep);margin-top:14px}
+
+/* ---- Footer ---- */
+footer{background:var(--char);color:var(--cream);padding:54px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.foot-grid h4{font-family:'Fraunces',serif;font-size:1.05rem;margin-bottom:14px;color:var(--gold)}
+.foot-grid p,.foot-grid li{font-size:.92rem;opacity:.85}
+.foot-grid ul{list-style:none}
+.foot-grid li{padding:4px 0}
+.foot-grid a{color:var(--cream);text-decoration:none}
+.foot-grid a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:.8rem;opacity:.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ---- Sticky mobile call ---- */
+.mcall{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--sage-deep);padding:12px 18px;box-shadow:0 -6px 24px rgba(0,0,0,.25)}
+.mcall a{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--sage);color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:13px;border-radius:14px}
+
+/* ---- Scroll reveal ---- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:repeat(2,1fr);gap:30px}
+  .why-grid{grid-template-columns:1fr}
+  .appt .wrap{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px;gap:16px;border-bottom:1px solid #E6DCC6}
+  .nav-links.open{display:flex}
+  .hamb{display:block}
+  body{padding-bottom:76px}
+  .mcall{display:block}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">DEMO <span>PREVIEW</span> — not the live site</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4.5 5 8c0 2.2 1 3.9 2 5.6.9 1.6 1.5 3.2 1.6 5.3.1 1.2.6 2.1 1.6 2.1 1.5 0 1.2-2.4 1.8-4 1 1.6.3 4 1.8 4 1 0 1.5-.9 1.6-2.1.1-2.1.7-3.7 1.6-5.3 1-1.7 2-3.4 2-5.6 0-3.5-3-6-7-6z"/></svg></span>
+      <span class="brand-name">Vivian's Family Dentistry<small>McKinney, Texas</small></span>
+    </a>
+    <button class="hamb" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#services">Services</a>
+      <a href="#insurance">Insurance</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-call" href="tel:+19725476134">Call (972) 547-6134</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Family dentist in McKinney, TX</span>
+      <h1>Dentistry that feels <em>authentically McKinney.</em></h1>
+      <p class="lede">Led by Dr. Vivian Nguyen, DDS, our team treats you like a neighbor — because you are one. Friendly, caring, professional, and very good at what we do. That's what our patients say, and it's the standard we hold ourselves to every day.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-call" href="tel:+19725476134">Call (972) 547-6134</a>
+        <a class="btn btn-outline" href="#request">Request an Appointment</a>
+      </div>
+      <div class="hero-proof">
+        <span>★ <b>4.9</b> — 357 Birdeye reviews</span>
+        <span>★ <b>4.8</b> — 19 Meta reviews</span>
+        <span>★ <b>4.9</b> — 184 Chamber reviews</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="smile-card rv">
+        <div class="stars">★★★★★</div>
+        <p class="big serif">"My 5 year old loves visiting the dentist!"</p>
+        <p class="who">— Birdeye review, Vivian's Family Dentistry</p>
+        <div class="tooth-row" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4.5 5 8c0 2.2 1 3.9 2 5.6.9 1.6 1.5 3.2 1.6 5.3.1 1.2.6 2.1 1.6 2.1 1.5 0 1.2-2.4 1.8-4 1 1.6.3 4 1.8 4 1 0 1.5-.9 1.6-2.1.1-2.1.7-3.7 1.6-5.3 1-1.7 2-3.4 2-5.6 0-3.5-3-6-7-6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4.5 5 8c0 2.2 1 3.9 2 5.6.9 1.6 1.5 3.2 1.6 5.3.1 1.2.6 2.1 1.6 2.1 1.5 0 1.2-2.4 1.8-4 1 1.6.3 4 1.8 4 1 0 1.5-.9 1.6-2.1.1-2.1.7-3.7 1.6-5.3 1-1.7 2-3.4 2-5.6 0-3.5-3-6-7-6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4.5 5 8c0 2.2 1 3.9 2 5.6.9 1.6 1.5 3.2 1.6 5.3.1 1.2.6 2.1 1.6 2.1 1.5 0 1.2-2.4 1.8-4 1 1.6.3 4 1.8 4 1 0 1.5-.9 1.6-2.1.1-2.1.7-3.7 1.6-5.3 1-1.7 2-3.4 2-5.6 0-3.5-3-6-7-6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4.5 5 8c0 2.2 1 3.9 2 5.6.9 1.6 1.5 3.2 1.6 5.3.1 1.2.6 2.1 1.6 2.1 1.5 0 1.2-2.4 1.8-4 1 1.6.3 4 1.8 4 1 0 1.5-.9 1.6-2.1.1-2.1.7-3.7 1.6-5.3 1-1.7 2-3.4 2-5.6 0-3.5-3-6-7-6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4.5 5 8c0 2.2 1 3.9 2 5.6.9 1.6 1.5 3.2 1.6 5.3.1 1.2.6 2.1 1.6 2.1 1.5 0 1.2-2.4 1.8-4 1 1.6.3 4 1.8 4 1 0 1.5-.9 1.6-2.1.1-2.1.7-3.7 1.6-5.3 1-1.7 2-3.4 2-5.6 0-3.5-3-6-7-6z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="rv"><div class="stat-num"><span class="count" data-to="357">0</span></div><div class="stat-lbl">Birdeye reviews at <b>4.9★</b></div></div>
+    <div class="rv"><div class="stat-num"><span class="count" data-to="4.9" data-dec="1">0</span>★</div><div class="stat-lbl">Average Birdeye rating</div></div>
+    <div class="rv"><div class="stat-num"><span class="count" data-to="19">0</span></div><div class="stat-lbl">Meta reviews at <b>4.8★</b></div></div>
+    <div class="rv"><div class="stat-num"><span class="count" data-to="7">0</span> AM</div><div class="stat-lbl">Early opening, Tue &amp; Thu</div></div>
+  </div>
+</section>
+
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Why Vivian's</span>
+      <h2>"#1 for many reasons."</h2>
+      <p>That's how one patient put it — and the rest of our 350+ reviews say the same in different words: this is a dental office that treats you like family.</p>
+    </div>
+    <div class="why-grid">
+      <div class="card rv">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.9-9.7-9.2C.7 8.6 2.6 5 6 5c2 0 3.4 1.1 4 2.2h4C14.6 6.1 16 5 18 5c3.4 0 5.3 3.6 3.7 6.8C19.5 16.1 12 21 12 21z" transform="scale(.95) translate(1,0)"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <h3>Authentic to the McKinney culture</h3>
+        <p>Our patients' words, not ours. Dr. Vivian and her staff are friendly, caring, kind, professional — and very good at what they do.</p>
+        <span class="attr">— Birdeye review</span>
+      </div>
+      <div class="card rv">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V9h14v11z"/></svg></div>
+        <h3>Hours that fit real life</h3>
+        <p>Early 7:00 AM openings on Tuesdays and Thursdays for before-work visits — plus by-appointment Fridays and Saturdays when you need them.</p>
+        <span class="attr">— our published schedule</span>
+      </div>
+      <div class="card rv">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6L12 2z"/></svg></div>
+        <h3>Gentle, thorough care</h3>
+        <p>Calming voices through deep cleanings. Thorough exams. A 5-year-old who loves visiting the dentist. That's the experience we build every day.</p>
+        <span class="attr">— from our patient reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="twrap rv">
+      <span class="kicker">What McKinney says</span>
+      <div class="tslide active">
+        <div class="stars">★★★★★</div>
+        <blockquote>"#1 for many reasons! This place is authentic to the McKinney culture. Dr. Vivian and her staff is friendly, caring, kind, professional, and very good at what they do."</blockquote>
+        <div class="src">— Birdeye review</div>
+      </div>
+      <div class="tslide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My hygienist Jess was so thorough with my deep cleaning!! Her calming voice got me through with ease."</blockquote>
+        <div class="src">— Birdeye review</div>
+      </div>
+      <div class="tslide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My 5 year old loves visiting the dentist! I always recommend Dr. V to my friends and family."</blockquote>
+        <div class="src">— Birdeye review</div>
+      </div>
+      <div class="tslide">
+        <div class="stars">★★★★★</div>
+        <blockquote>"My best dental experiences have been with Dr. Vivian and her staff. She is thorough in her exams."</blockquote>
+        <div class="src">— Dexter P., patient testimonial</div>
+      </div>
+      <div class="tnav">
+        <button id="tprev" aria-label="Previous review">‹</button>
+        <button id="tnext" aria-label="Next review">›</button>
+      </div>
+      <div class="tdots" id="tdots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Care for the whole family</span>
+      <h2>One office, every smile</h2>
+      <p>From a child's first checkup to grandma's crown, Dr. Vivian Nguyen, DDS (Texas dental license #22908) and her team keep it personal. Call <a href="tel:+19725476134" style="font-weight:700;color:var(--sage-deep)">(972) 547-6134</a> to ask what's right for you.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab-btn active" data-tab="t1">New Patients</button>
+      <button class="tab-btn" data-tab="t2">Kids' Dentistry</button>
+      <button class="tab-btn" data-tab="t3">Everyday Care</button>
+      <button class="tab-btn" data-tab="t4">Smile Care</button>
+    </div>
+    <div class="tab-panel active rv" id="t1">
+      <h3>New here? Welcome to the family.</h3>
+      <p>Your first visit is all about you: a thorough exam (Dr. Vivian is known for them), honest answers, and a plan that fits your budget and your schedule.</p>
+      <ul>
+        <li>A dentist who actually listens before she looks</li>
+        <li>Clear explanations — no dental jargon, no pressure</li>
+        <li>Help with PPO insurance so you know your costs up front</li>
+      </ul>
+      <a class="btn btn-call" href="tel:+19725476134">Call (972) 547-6134</a>
+    </div>
+    <div class="tab-panel" id="t2">
+      <h3>Kids actually love coming here.</h3>
+      <p>"My 5 year old loves visiting the dentist!" — that's a real review from a real McKinney parent. We make first visits fun and every visit after that easy.</p>
+      <ul>
+        <li>Patient, friendly team that puts little ones at ease</li>
+        <li>Visits paced for kids — no rushing, no scary surprises</li>
+        <li>Parents always welcome in the room</li>
+      </ul>
+      <a class="btn btn-call" href="tel:+19725476134">Call (972) 547-6134</a>
+    </div>
+    <div class="tab-panel" id="t3">
+      <h3>Keep every smile healthy, year after year.</h3>
+      <p>Checkups, cleanings, and restorative care for the whole family — with the calming touch our patients write reviews about.</p>
+      <ul>
+        <li>Routine exams and professional cleanings</li>
+        <li>Early 7:00 AM appointments Tue &amp; Thu</li>
+        <li>Thorough exams that catch small issues early</li>
+      </ul>
+      <a class="btn btn-call" href="tel:+19725476134">Call (972) 547-6134</a>
+    </div>
+    <div class="tab-panel" id="t4">
+      <h3>Love the smile you see in the mirror.</h3>
+      <p>From brightening to complete smile refreshes, we'll talk honestly about what will — and won't — make a difference for your smile.</p>
+      <ul>
+        <li>A personalized smile plan, not a sales pitch</li>
+        <li>Natural-looking results that suit your face</li>
+        <li>Comfort-first approach, every step of the way</li>
+      </ul>
+      <a class="btn btn-call" href="tel:+19725476134">Call (972) 547-6134</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="insurance" style="padding-top:0">
+  <div class="wrap">
+    <div class="ppo rv">
+      <span class="kicker">Insurance welcome</span>
+      <h2>In-network with your PPO plan</h2>
+      <p class="sub">We work with the plans McKinney families actually carry. Call us at <a href="tel:+19725476134" style="font-weight:700;color:var(--sage-deep)">(972) 547-6134</a> and we'll verify your benefits before you sit down.</p>
+      <div class="ppo-logos">
+        <span>Aetna</span><span>Ameritas</span><span>Assurant</span><span>Cigna</span><span>Delta Dental</span><span>Dentemax</span><span>Guardian</span><span>Humana</span><span>MetLife</span><span>Principal Plan</span><span>UniCare</span><span>United Concordia</span>
+      </div>
+      <small>PPO in-network list per the practice's public business listing. No insurance? Call us — we'll talk through your options.</small>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="kicker">Good to know</span>
+      <h2>Questions? Answered.</h2>
+    </div>
+    <div class="rv">
+      <div class="faq-item">
+        <button class="faq-q">Where are you located?<span class="plus">+</span></button>
+        <div class="faq-a"><p>1920 Eldorado Pkwy, Suite 900, McKinney, TX 75069 — easy to reach from anywhere in McKinney and the surrounding areas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are your hours?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Monday 8–5, Tuesday 7–4, Wednesday 8–5, Thursday 7–4. Fridays and Saturdays are by appointment — just call <a href="tel:+19725476134">(972) 547-6134</a>. Closed Sundays.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you see children?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Absolutely — we're a family practice, and one of our favorite reviews is from a parent whose 5-year-old loves visiting. Kids are more than welcome.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you take my insurance?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We're an in-network PPO provider with Aetna, Ameritas, Assurant, Cigna, Delta Dental, Dentemax, Guardian, Humana, MetLife, Principal Plan, UniCare, and United Concordia (per our public business listing). Call us and we'll verify your plan.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I book a visit?<span class="plus">+</span></button>
+        <div class="faq-a"><p>The fastest way is to call <a href="tel:+19725476134">(972) 547-6134</a>, or send an appointment request with the form below and we'll get back to you.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="request" style="padding-top:0">
+  <div class="wrap">
+    <div class="appt rv">
+      <div class="wrap" style="padding:0">
+        <div>
+          <h2>Request an appointment</h2>
+          <p>Send us a note and we'll confirm your visit. Prefer to talk? Call <a href="tel:+19725476134" style="color:var(--gold);font-weight:700">(972) 547-6134</a> or email <a href="mailto:admin@viviansdentistry.com" style="color:var(--gold);font-weight:700">admin@viviansdentistry.com</a>.</p>
+          <div class="hours">
+            <p><b>Office hours</b></p>
+            <p>Mon 8–5 · Tue 7–4 · Wed 8–5 · Thu 7–4<br>Fri by appointment · Sat by appointment · Sun closed</p>
+          </div>
+        </div>
+        <form id="apptform" onsubmit="return false;">
+          <div class="demo-note"><b>Demo only:</b> this form doesn't send anything anywhere — it's a preview of how the real request form would look on the live site.</div>
+          <label for="fname">Full name</label>
+          <input id="fname" name="name" type="text" placeholder="Jane Smith" required>
+          <label for="fphone">Phone</label>
+          <input id="fphone" name="phone" type="tel" placeholder="Your phone number" required>
+          <label for="femail">Email</label>
+          <input id="femail" name="email" type="email" placeholder="you@example.com">
+          <label for="fwhen">Preferred day</label>
+          <select id="fwhen" name="when">
+            <option>Monday</option><option>Tuesday (7 AM available)</option><option>Wednesday</option><option>Thursday (7 AM available)</option><option>Friday (by appointment)</option><option>Saturday (by appointment)</option>
+          </select>
+          <label for="fmsg">Anything we should know?</label>
+          <textarea id="fmsg" name="msg" rows="3" placeholder="New patient, two kids, toothache…"></textarea>
+          <div style="margin-top:18px"><button class="btn btn-call" type="submit" style="width:100%;border:none;cursor:pointer">Send Request (demo)</button></div>
+          <div class="form-ok" id="formok">Thanks! In the live site this would go straight to the office. For now, call <a href="tel:+19725476134" style="color:var(--sage-deep)">(972) 547-6134</a>.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Vivian's Family Dentistry</h4>
+        <p>1920 Eldorado Pkwy, Suite 900<br>McKinney, TX 75069</p>
+        <p style="margin-top:10px"><a href="tel:+19725476134">(972) 547-6134</a><br><a href="mailto:admin@viviansdentistry.com">admin@viviansdentistry.com</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon 8–5 · Tue 7–4</li>
+          <li>Wed 8–5 · Thu 7–4</li>
+          <li>Fri by appointment</li>
+          <li>Sat by appointment</li>
+          <li>Sun closed</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#request">Request an appointment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Vivian's Family Dentistry, McKinney TX — demo preview</span>
+      <span>Demo preview only — not the live website</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mcall">
+  <a href="tel:+19725476134">📞 Call (972) 547-6134</a>
+</div>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// Animated counters
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if(!e.isIntersecting) return; cio.unobserve(e.target);
+  const el = e.target, to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec||'0');
+  const t0 = performance.now(), dur = 1400;
+  (function tick(t){ const p = Math.min((t-t0)/dur,1), ease = 1-Math.pow(1-p,3), v = to*ease;
+    el.textContent = dec ? v.toFixed(dec) : Math.round(v).toLocaleString();
+    if(p<1) requestAnimationFrame(tick); })(t0);
+}), {threshold:.5});
+document.querySelectorAll('.count').forEach(el => cio.observe(el));
+
+// Testimonial slider
+const slides = [...document.querySelectorAll('.tslide')];
+const dotsWrap = document.getElementById('tdots');
+let cur = 0, timer;
+slides.forEach((_,i)=>{ const d=document.createElement('button'); d.setAttribute('aria-label','Go to review '+(i+1));
+  d.onclick=()=>go(i); dotsWrap.appendChild(d); });
+const dots=[...dotsWrap.children];
+function go(i){ slides[cur].classList.remove('active'); dots[cur].classList.remove('on');
+  cur=(i+slides.length)%slides.length; slides[cur].classList.add('active'); dots[cur].classList.add('on'); restart(); }
+function restart(){ clearInterval(timer); timer=setInterval(()=>go(cur+1),7000); }
+document.getElementById('tprev').onclick=()=>go(cur-1);
+document.getElementById('tnext').onclick=()=>go(cur+1);
+dots[0].classList.add('on'); restart();
+
+// Services tabs
+document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
+}));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement, ans=item.querySelector('.faq-a'), open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+  if(!open){ item.classList.add('open'); ans.style.maxHeight=ans.scrollHeight+'px'; }
+}));
+
+// Demo form
+document.getElementById('apptform').addEventListener('submit',e=>{
+  e.preventDefault(); document.getElementById('formok').style.display='block';
+  document.getElementById('apptform').querySelector('button[type=submit]').disabled=true;
+});
+</script>
+</body>
+</html>
