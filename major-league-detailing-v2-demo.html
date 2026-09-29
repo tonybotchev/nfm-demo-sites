@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Major League Detailing &amp; Customs | Mobile Detailing — Van Alstyne, TX</title>
+<meta name="description" content="Major League Detailing & Customs — premium MOBILE auto detailing in Van Alstyne, TX. Ceramic coatings, window tint, starlight headliners. Showroom shine delivered to your driveway. Call (469) 544-4638.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1830; --navy2:#0e2242; --navy3:#132c52;
+  --field:#0fa35e; --field-dark:#087a44; --field-deep:#065c34;
+  --gold:#f5b301; --gold-soft:#ffd34d;
+  --chalk:#f7f4ea; --chalk-dim:#d9d4c2;
+  --seam:#d8412f;
+  --ink:#101418;
+  --card:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;background:var(--navy);color:var(--chalk);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.bebas{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:.04em;line-height:1.05;font-weight:400}
+.mono{font-family:'Share Tech Mono',monospace}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:72px 0;position:relative}
+
+/* ---------- scoreboard ticker ---------- */
+.ticker{background:#050c1a;border-bottom:2px solid var(--gold);overflow:hidden;white-space:nowrap;position:relative;z-index:60}
+.ticker-track{display:inline-block;padding:9px 0;animation:tick 28s linear infinite}
+.ticker span{font-family:'Share Tech Mono',monospace;font-size:13px;letter-spacing:.12em;color:var(--gold-soft);margin:0 34px;text-transform:uppercase}
+.ticker span b{color:#fff}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,24,48,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(245,179,1,.25)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-trophy{font-size:26px}
+.brand-name{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.06em;line-height:1}
+.brand-name small{display:block;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.32em;color:var(--gold);margin-top:2px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--chalk-dim);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-block;text-decoration:none;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:10px;padding:14px 28px;font-size:15px;transition:transform .15s,box-shadow .15s;cursor:pointer;border:none}
+.btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#231a00;box-shadow:0 6px 20px rgba(245,179,1,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(245,179,1,.5)}
+.btn-ghost{background:transparent;color:var(--chalk);border:2px solid rgba(247,244,234,.5)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-call{padding:10px 20px;font-size:13px}
+.burger{display:none;background:none;border:none;color:var(--chalk);font-size:26px;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;overflow:hidden;
+  background:radial-gradient(1200px 600px at 20% -10%,rgba(15,163,94,.28),transparent 60%),
+             radial-gradient(900px 500px at 85% 110%,rgba(245,179,1,.12),transparent 60%),
+             linear-gradient(180deg,#0d1f3d 0%,#0a1830 55%,#071120 100%)}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-in{position:relative;z-index:2;text-align:center;padding:90px 20px 70px}
+.kicker{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--gold);border:1px solid rgba(245,179,1,.5);border-radius:999px;padding:8px 20px;margin-bottom:22px;background:rgba(245,179,1,.08)}
+.hero h1{font-size:clamp(58px,11vw,132px);color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.35)}
+.hero h1 .gold{color:var(--gold)}
+.hero-sub{font-size:clamp(18px,2.6vw,24px);color:var(--chalk-dim);max-width:640px;margin:18px auto 8px;font-weight:500}
+.hero-sub strong{color:#fff}
+.hero-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 30px}
+.tag{font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:999px;color:var(--chalk)}
+.tag.hot{background:rgba(15,163,94,.18);border-color:var(--field);color:#c9f5dd}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-note{margin-top:18px;font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.18em;color:rgba(247,244,234,.55);text-transform:uppercase}
+
+/* ---------- section headers ---------- */
+.inning{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.inning .num{font-family:'Bebas Neue',sans-serif;font-size:15px;background:var(--seam);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;letter-spacing:.05em;flex:none;box-shadow:0 4px 0 rgba(0,0,0,.3)}
+.inning .lbl{font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.sec-title{font-size:clamp(38px,6vw,64px);color:#fff;margin-bottom:10px}
+.sec-sub{color:var(--chalk-dim);font-size:18px;max-width:640px;margin-bottom:40px}
+
+/* ---------- lineup cards ---------- */
+.lineup{background:linear-gradient(180deg,#0a1830,#0c1d38)}
+.lineup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.lineup-card{background:var(--chalk);color:var(--ink);border-radius:16px;padding:26px 24px;position:relative;overflow:hidden;
+  border:3px solid transparent;transition:transform .2s,box-shadow .2s}
+.lineup-card::before{content:"";position:absolute;inset:8px;border:2px dashed rgba(216,65,47,.55);border-radius:10px;pointer-events:none}
+.lineup-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.lineup-pos{font-family:'Bebas Neue',sans-serif;font-size:15px;color:var(--seam);letter-spacing:.2em;margin-bottom:6px}
+.lineup-card h3{font-size:32px;margin-bottom:6px}
+.lineup-card p{font-size:15px;color:#3c4450;margin-bottom:16px}
+.lineup-card .addbtn{background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px 18px;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.lineup-card .addbtn:hover{background:var(--field-dark)}
+.lineup-card .addbtn.added{background:var(--field-dark)}
+.lineup-card .svc-ico{font-size:34px;display:block;margin-bottom:8px}
+
+/* ---------- build your detail ---------- */
+.builder{background:var(--field-deep);border-top:4px solid var(--gold);border-bottom:4px solid var(--gold)}
+.builder-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.pick-list{display:grid;gap:12px}
+.pick{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .2s,background .2s}
+.pick:hover{border-color:var(--gold)}
+.pick.on{border-color:var(--gold);background:rgba(245,179,1,.12)}
+.pick .box{width:26px;height:26px;border-radius:7px;border:2px solid rgba(255,255,255,.5);flex:none;display:flex;align-items:center;justify-content:center;font-size:16px;color:transparent;transition:all .2s}
+.pick.on .box{background:var(--gold);border-color:var(--gold);color:#231a00}
+.pick .pn{font-weight:700;font-size:16px}
+.pick .pd{font-size:13px;color:var(--chalk-dim)}
+.build-card{background:#fff;color:var(--ink);border-radius:16px;padding:28px;position:sticky;top:120px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.build-card h3{font-size:30px;margin-bottom:4px}
+.build-card .bc-sub{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--field-dark);text-transform:uppercase;margin-bottom:16px}
+#build-items{list-style:none;margin-bottom:16px;min-height:60px}
+#build-items li{padding:9px 0;border-bottom:1px dashed #d8d3c0;font-weight:600;font-size:15px;display:flex;justify-content:space-between;align-items:center}
+#build-items li .rm{background:none;border:none;color:var(--seam);font-size:18px;cursor:pointer;line-height:1}
+#build-empty{color:#8a8574;font-style:italic;font-size:14px}
+.build-cta{width:100%;text-align:center;margin-top:6px}
+.build-note{font-size:12px;color:#6b6555;margin-top:10px;text-align:center}
+
+/* ---------- quiz ---------- */
+.quiz-sec{background:linear-gradient(180deg,#0c1d38,#0a1830)}
+.quiz-box{max-width:720px;margin:0 auto;background:var(--chalk);color:var(--ink);border-radius:18px;padding:40px 36px;box-shadow:0 24px 60px rgba(0,0,0,.5);position:relative;overflow:hidden}
+.quiz-box::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--seam) 0 18px,#fff 18px 36px)}
+.q-step{display:none}
+.q-step.active{display:block;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.q-q{font-family:'Bebas Neue',sans-serif;font-size:34px;margin-bottom:6px}
+.q-hint{color:#5b6470;margin-bottom:20px;font-size:15px}
+.q-opts{display:grid;gap:10px}
+.q-opt{background:#fff;border:2px solid #e2dcc8;border-radius:12px;padding:15px 18px;font-weight:600;font-size:16px;cursor:pointer;text-align:left;transition:all .18s;font-family:'Barlow',sans-serif;color:var(--ink)}
+.q-opt:hover{border-color:var(--field-dark);background:#f2faf5;transform:translateX(4px)}
+.q-progress{font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.2em;color:#8a8574;margin-bottom:14px;text-transform:uppercase}
+.q-result{text-align:center}
+.q-result .trophy{font-size:64px}
+.q-result h3{font-size:44px;margin:10px 0 6px}
+.q-result p{color:#3c4450;max-width:480px;margin:0 auto 20px}
+.q-again{background:none;border:none;color:var(--field-dark);font-weight:700;cursor:pointer;text-decoration:underline;font-size:14px;margin-top:14px}
+
+/* ---------- process ---------- */
+.process{background:#0a1830}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;counter-reset:step}
+.step{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px 22px;position:relative}
+.step .inn{font-family:'Bebas Neue',sans-serif;color:var(--gold);font-size:15px;letter-spacing:.25em;margin-bottom:8px}
+.step h3{font-size:28px;margin-bottom:8px;color:#fff}
+.step p{font-size:15px;color:var(--chalk-dim)}
+
+/* ---------- shine slider ---------- */
+.shine{background:linear-gradient(180deg,#0a1830 0%,#0d213f 100%)}
+.shine-wrap{max-width:860px;margin:0 auto}
+.shine-stage{position:relative;border-radius:18px;overflow:hidden;border:3px solid rgba(245,179,1,.4);box-shadow:0 24px 60px rgba(0,0,0,.5);user-select:none;touch-action:none}
+.shine-stage svg{display:block;width:100%;height:auto}
+.shine-after{position:absolute;inset:0;overflow:hidden}
+.shine-after svg{width:100%;height:100%}
+.shine-handle{position:absolute;top:0;bottom:0;width:4px;background:var(--gold);cursor:ew-resize;z-index:5}
+.shine-handle::after{content:"◀ ▶";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--gold);color:#231a00;font-size:11px;font-weight:700;padding:10px 8px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.5);letter-spacing:1px}
+.shine-labels{display:flex;justify-content:space-between;margin-top:12px;font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim)}
+.shine-cap{text-align:center;color:var(--chalk-dim);margin-top:14px;font-size:15px}
+
+/* ---------- seasonal band ---------- */
+.season{background:linear-gradient(120deg,#12351f 0%,#0d5c34 50%,#12351f 100%);border-top:4px solid var(--gold);border-bottom:4px solid var(--gold);padding:56px 0;overflow:hidden;position:relative}
+.season-in{display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:space-between}
+.season-copy{flex:1;min-width:280px}
+.season-eyebrow{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:.3em;color:var(--gold-soft);text-transform:uppercase;border:1px solid rgba(245,179,1,.5);padding:7px 16px;border-radius:999px;margin-bottom:14px}
+.season h2{font-size:clamp(36px,5vw,56px);color:#fff}
+.season h2 .gold{color:var(--gold)}
+.season p{color:#dcefe3;max-width:520px;margin:10px 0 18px;font-size:17px}
+.season-facts{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px}
+.season-facts span{font-size:14px;font-weight:600;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:999px}
+.countdown{background:rgba(0,0,0,.35);border:1px solid rgba(245,179,1,.4);border-radius:16px;padding:22px 28px;text-align:center;min-width:260px}
+.countdown .cd-lbl{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.26em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:8px}
+.countdown .cd-num{font-family:'Share Tech Mono',monospace;font-size:52px;color:#fff;line-height:1}
+.countdown .cd-sub{font-size:13px;color:#cfe8d6;margin-top:6px}
+
+/* ---------- towns ---------- */
+.towns{background:#0a1830;text-align:center}
+.town-chips{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.town-chips span{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.08em;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:12px 26px;border-radius:12px;color:#fff}
+.town-chips span.home{background:var(--gold);color:#231a00;border-color:var(--gold)}
+
+/* ---------- faq ---------- */
+.faq{background:#0c1d38}
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:12px}
+.faq-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:17px;text-align:left;padding:20px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q .pm{font-family:'Share Tech Mono',monospace;color:var(--gold);font-size:20px;flex:none}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--chalk-dim);font-size:15px}
+.faq-a p{padding:0 22px 20px}
+.faq-item.open .faq-a{max-height:220px}
+
+/* ---------- quote form ---------- */
+.quote{background:linear-gradient(180deg,#0c1d38,#0a1830)}
+.form-card{max-width:680px;margin:0 auto;background:var(--chalk);color:var(--ink);border-radius:18px;padding:40px 36px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.form-card h2{font-size:44px;margin-bottom:6px}
+.form-card .f-sub{color:#5b6470;margin-bottom:24px;font-size:16px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f-row.single{grid-template-columns:1fr}
+label.fl{display:block;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#4a5260;margin-bottom:6px}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;border:2px solid #e2dcc8;border-radius:10px;padding:13px 15px;font-size:16px;font-family:'Barlow',sans-serif;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--field-dark)}
+textarea{min-height:110px;resize:vertical}
+.f-checks{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 18px}
+.f-checks label{background:#fff;border:2px solid #e2dcc8;border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;cursor:pointer}
+.f-checks input{accent-color:var(--field-dark);margin-right:6px}
+.form-ok{display:none;text-align:center;padding:30px 10px}
+.form-ok .trophy{font-size:60px}
+.form-ok h3{font-size:38px;margin:10px 0}
+.form-ok p{color:#3c4450}
+
+/* ---------- footer ---------- */
+footer{background:#050c1a;border-top:2px solid var(--gold);padding:48px 0 110px}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.foot-grid h4{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.1em;color:var(--gold);margin-bottom:10px}
+.foot-grid p,.foot-grid a{color:var(--chalk-dim);font-size:15px;text-decoration:none}
+.foot-grid a:hover{color:var(--gold)}
+.demo-badge{display:inline-block;margin-top:26px;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.2em;color:#050c1a;background:var(--gold);padding:8px 16px;border-radius:6px;text-transform:uppercase;font-weight:700}
+
+/* ---------- sticky mobile call bar ---------- */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;background:rgba(5,12,26,.97);border-top:2px solid var(--gold);padding:10px 14px;gap:10px}
+.callbar a{flex:1;text-align:center;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;border-radius:10px;padding:13px 0}
+.callbar .cb-call{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#231a00}
+.callbar .cb-quote{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .builder-grid{grid-template-columns:1fr}
+  .build-card{position:static}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#0a1830;flex-direction:column;padding:18px;gap:16px;border-bottom:2px solid var(--gold)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
+@media(max-width:640px){
+  section{padding:54px 0}
+  .f-row{grid-template-columns:1fr}
+  .callbar{display:flex}
+  .quiz-box,.form-card{padding:28px 22px}
+  .season-in{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<!-- scoreboard ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker-track">
+    <span>🏆 <b>Welcome to the Show</b> — Premium Mobile Detailing</span>
+    <span>📍 Now booking: <b>2026 Holiday Lighting</b> — limited seasonal slots</span>
+    <span>🚚 We come to you — <b>Van Alstyne • Anna • Melissa • McKinney</b></span>
+    <span>📲 <b>(469) 544-4638</b> — message for a free quote</span>
+  </div>
+</div>
+
+<!-- nav -->
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <span class="brand-trophy">🏆</span>
+      <span class="brand-name">Major League<small>Detailing &amp; Customs</small></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="#lineup">The Lineup</a>
+      <a href="#builder">Build Your Detail</a>
+      <a href="#process">The Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#quote">Get a Quote</a>
+      <a class="btn btn-gold btn-call" href="tel:+14695444638">📞 Call Now</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- hero -->
+<header class="hero" id="top">
+  <canvas id="hero-canvas"></canvas>
+  <div class="wrap hero-in">
+    <span class="kicker">🏆 Van Alstyne, TX — Mobile Detailing Crew</span>
+    <h1>Welcome to<br><span class="gold">the Show</span></h1>
+    <p class="hero-sub">Premium mobile detailing with <strong>showroom shine, delivered to your driveway.</strong> Ceramic coatings, window tint, starlight headliners — we bring the whole show to you.</p>
+    <div class="hero-tags">
+      <span class="tag hot">🚚 100% Mobile — We Come To You</span>
+      <span class="tag">✨ Ceramic Coatings</span>
+      <span class="tag">🪟 Window Tint</span>
+      <span class="tag">🌟 Starlight Headliners</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#builder">⚾ Build Your Detail</a>
+      <a class="btn btn-ghost" href="tel:+14695444638">📞 (469) 544-4638</a>
+    </div>
+    <p class="hero-note">Always open · Free quotes · Van Alstyne → Anna → Melissa → McKinney</p>
+  </div>
+</header>
+
+<!-- the lineup -->
+<section class="lineup" id="lineup">
+  <div class="wrap">
+    <div class="inning rv"><span class="num">1st</span><span class="lbl">Inning — Pick your players</span></div>
+    <h2 class="sec-title rv">The Starting Lineup</h2>
+    <p class="sec-sub rv">Every service, game-ready. Tap <strong style="color:#fff">+ Add to my build</strong> on anything your ride needs, then watch your custom detail come together below.</p>
+    <div class="lineup-grid">
+      <div class="lineup-card rv">
+        <span class="svc-ico">🧼</span>
+        <div class="lineup-pos">Batting #1</div>
+        <h3>Exterior Detail</h3>
+        <p>Hand wash, wax, wheels, tires, trim — the curb-appeal leadoff hitter. Your paint, but on game day.</p>
+        <button class="addbtn" data-svc="Exterior Detail">+ Add to my build</button>
+      </div>
+      <div class="lineup-card rv">
+        <span class="svc-ico">🪑</span>
+        <div class="lineup-pos">Batting #2</div>
+        <h3>Interior Detail</h3>
+        <p>Deep vacuum, shampoo, leather care, every vent and cupholder. Step inside and it smells like new-car day.</p>
+        <button class="addbtn" data-svc="Interior Detail">+ Add to my build</button>
+      </div>
+      <div class="lineup-card rv">
+        <span class="svc-ico">✨</span>
+        <div class="lineup-pos">Batting #3</div>
+        <h3>Ceramic Coating</h3>
+        <p>The cleanup hitter. Long-term paint protection with that deep, wet-gloss shine that turns heads at every light.</p>
+        <button class="addbtn" data-svc="Ceramic Coating">+ Add to my build</button>
+      </div>
+      <div class="lineup-card rv">
+        <span class="svc-ico">🪟</span>
+        <div class="lineup-pos">Batting #4</div>
+        <h3>Window Tint</h3>
+        <p>Cooler cabin, sharper look, real UV protection. Texas sun doesn't stand a chance.</p>
+        <button class="addbtn" data-svc="Window Tint">+ Add to my build</button>
+      </div>
+      <div class="lineup-card rv">
+        <span class="svc-ico">🌟</span>
+        <div class="lineup-pos">Batting #5</div>
+        <h3>Starlight Headliner</h3>
+        <p>Hundreds of tiny stars stitched into your headliner. Night drives feel like the seventh-inning stretch — every time.</p>
+        <button class="addbtn" data-svc="Starlight Headliner">+ Add to my build</button>
+      </div>
+      <div class="lineup-card rv">
+        <span class="svc-ico">🏆</span>
+        <div class="lineup-pos">Batting #6</div>
+        <h3>The Full MVP Experience</h3>
+        <p>The whole show, top to bottom — our signature all-in detail for rides that deserve the trophy treatment.</p>
+        <button class="addbtn" data-svc="Full MVP Experience">+ Add to my build</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- build your detail -->
+<section class="builder" id="builder">
+  <div class="wrap">
+    <div class="inning rv"><span class="num">2nd</span><span class="lbl">Inning — Your custom game plan</span></div>
+    <h2 class="sec-title rv">Build Your Detail</h2>
+    <p class="sec-sub rv">You're the manager. Pick your players, and your custom build card updates live — then send it over for a free quote.</p>
+    <div class="builder-grid">
+      <div class="pick-list rv" id="pick-list">
+        <div class="pick" data-svc="Exterior Detail"><span class="box">✓</span><div><div class="pn">Exterior Detail</div><div class="pd">Hand wash, wax, wheels &amp; tires, trim dressing</div></div></div>
+        <div class="pick" data-svc="Interior Detail"><span class="box">✓</span><div><div class="pn">Interior Detail</div><div class="pd">Deep vacuum, shampoo, leather care, detail crevices</div></div></div>
+        <div class="pick" data-svc="Ceramic Coating"><span class="box">✓</span><div><div class="pn">Ceramic Coating</div><div class="pd">Long-term paint protection, deep gloss shine</div></div></div>
+        <div class="pick" data-svc="Window Tint"><span class="box">✓</span><div><div class="pn">Window Tint</div><div class="pd">Cooler cabin, sharper look, UV protection</div></div></div>
+        <div class="pick" data-svc="Starlight Headliner"><span class="box">✓</span><div><div class="pn">Starlight Headliner</div><div class="pd">Fiber-optic starry sky in your headliner</div></div></div>
+        <div class="pick" data-svc="Full MVP Experience"><span class="box">✓</span><div><div class="pn">Full MVP Experience</div><div class="pd">The whole show, top to bottom — our signature all-in</div></div></div>
+      </div>
+      <div class="build-card rv">
+        <h3>📋 Your Build Card</h3>
+        <div class="bc-sub">Major League Detailing &amp; Customs</div>
+        <ul id="build-items"><li id="build-empty">No players selected yet — tap a service to add it.</li></ul>
+        <a class="btn btn-gold build-cta" href="#quote" id="build-quote-btn">Get My Free Quote ⚾</a>
+        <p class="build-note">Free quotes · We come to you · No obligations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- quiz -->
+<section class="quiz-sec" id="quiz">
+  <div class="wrap">
+    <div class="inning rv"><span class="num">3rd</span><span class="lbl">Inning — Find your fit</span></div>
+    <h2 class="sec-title rv">What Does Your Ride Need?</h2>
+    <p class="sec-sub rv">Three quick questions. We'll call the right package for your ride — Rookie, All-Star, or full MVP.</p>
+    <div class="quiz-box rv" id="quiz-box">
+      <div class="q-step active" data-step="0">
+        <div class="q-progress">Question 1 of 3</div>
+        <div class="q-q">When's the last time your ride got the full treatment?</div>
+        <div class="q-hint">Be honest — the dugout doesn't judge.</div>
+        <div class="q-opts">
+          <button class="q-opt" data-w="R">Within the last month — just needs upkeep</button>
+          <button class="q-opt" data-w="A">A few months back — it's showing</button>
+          <button class="q-opt" data-w="M">Honestly? I can't remember. Send help.</button>
+        </div>
+      </div>
+      <div class="q-step" data-step="1">
+        <div class="q-progress">Question 2 of 3</div>
+        <div class="q-q">What's bugging you most?</div>
+        <div class="q-hint">Pick the one that hurts to look at.</div>
+        <div class="q-opts">
+          <button class="q-opt" data-w="R">Dust, fingerprints, everyday grime</button>
+          <button class="q-opt" data-w="A">Stained seats, dull paint, tired trim</button>
+          <button class="q-opt" data-w="M">I want heads turning. Full transformation.</button>
+        </div>
+      </div>
+      <div class="q-step" data-step="2">
+        <div class="q-progress">Question 3 of 3</div>
+        <div class="q-q">Dream upgrade — if you could add ONE showpiece?</div>
+        <div class="q-hint">This is the fun one.</div>
+        <div class="q-opts">
+          <button class="q-opt" data-w="R">Just make it clean — that's the dream</button>
+          <button class="q-opt" data-w="A">Window tint — sleek and cool</button>
+          <button class="q-opt" data-w="M">Starlight headliner — give me the stars 🌟</button>
+        </div>
+      </div>
+      <div class="q-step" data-step="3">
+        <div class="q-result">
+          <div class="trophy">🏆</div>
+          <div class="q-progress">The call from the dugout</div>
+          <h3 id="q-title">The All-Star</h3>
+          <p id="q-desc"></p>
+          <a class="btn btn-gold" href="#quote">Book This Package ⚾</a><br>
+          <button class="q-again" id="q-again">↻ Retake the quiz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- process -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="inning rv"><span class="num">4th</span><span class="lbl">Inning — How the show runs</span></div>
+    <h2 class="sec-title rv">From Driveway to Dugout Shine</h2>
+    <p class="sec-sub rv">No waiting rooms. No dropping off. Here's how a Major League detail goes down.</p>
+    <div class="steps">
+      <div class="step rv"><div class="inn">1st Inning</div><h3>Book Your Slot</h3><p>Call, text, or send the quote form. Tell us your ride and what it needs — free quote, no pressure.</p></div>
+      <div class="step rv"><div class="inn">2nd Inning</div><h3>We Roll Up</h3><p>Our rig comes to your driveway — Van Alstyne, Anna, Melissa, McKinney and nearby. You don't lift a finger.</p></div>
+      <div class="step rv"><div class="inn">3rd Inning</div><h3>Showtime</h3><p>Wash, wax, interior, coatings, tint, headliners — whatever's on your build card, done right at your curb.</p></div>
+      <div class="step rv"><div class="inn">4th Inning</div><h3>Final Walk-Around</h3><p>We walk the whole ride with you before we leave. Not showroom-ready? We don't pack up until it is.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- shine slider -->
+<section class="shine" id="shine">
+  <div class="wrap">
+    <div class="inning rv"><span class="num">5th</span><span class="lbl">Inning — See the difference</span></div>
+    <h2 class="sec-title rv">Drag the Mitt</h2>
+    <p class="sec-sub rv">Slide to see what a Major League detail does to tired paint.</p>
+    <div class="shine-wrap rv">
+      <div class="shine-stage" id="shine-stage">
+        <svg viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-label="Car before detailing - dull finish">
+          <rect width="800" height="420" fill="#3a3f46"/>
+          <rect width="800" height="420" fill="#2c3138" opacity="0.6"/>
+          <g fill="#484e56">
+            <ellipse cx="400" cy="330" rx="330" ry="26" fill="#22262c"/>
+            <path d="M120 300 L150 220 Q155 200 180 195 L250 185 Q270 140 330 135 L470 135 Q530 140 555 185 L640 195 Q665 200 670 220 L700 300 Q705 320 685 322 L135 322 Q115 320 120 300 Z"/>
+            <rect x="285" y="150" width="90" height="45" rx="8"/><rect x="385" y="150" width="90" height="45" rx="8"/>
+            <circle cx="230" cy="310" r="42"/><circle cx="570" cy="310" r="42"/>
+          </g>
+          <g fill="#5a6068" opacity="0.5">
+            <circle cx="200" cy="120" r="3"/><circle cx="350" cy="90" r="2"/><circle cx="500" cy="110" r="3"/><circle cx="620" cy="80" r="2"/><circle cx="280" cy="150" r="2"/><circle cx="450" cy="70" r="3"/><circle cx="600" cy="160" r="2"/><circle cx="150" cy="180" r="2"/>
+          </g>
+          <text x="400" y="60" text-anchor="middle" fill="#8a8f96" font-family="Bebas Neue, sans-serif" font-size="34" letter-spacing="6">BEFORE — DULL &amp; DUSTY</text>
+        </svg>
+        <div class="shine-after" id="shine-after" style="width:50%">
+          <svg viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-label="Car after detailing - glossy finish">
+            <defs>
+              <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3f7fd4"/><stop offset="0.5" stop-color="#2456a8"/><stop offset="1" stop-color="#16386f"/>
+              </linearGradient>
+              <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect width="800" height="420" fill="#0e2242"/>
+            <rect width="800" height="420" fill="#12305c" opacity="0.5"/>
+            <g>
+              <ellipse cx="400" cy="330" rx="330" ry="26" fill="#050c1a"/>
+              <path d="M120 300 L150 220 Q155 200 180 195 L250 185 Q270 140 330 135 L470 135 Q530 140 555 185 L640 195 Q665 200 670 220 L700 300 Q705 320 685 322 L135 322 Q115 320 120 300 Z" fill="url(#gloss)"/>
+              <path d="M170 250 L300 200 L420 195 L560 205 L630 230 L600 240 L300 245 Z" fill="url(#beam)" opacity="0.55"/>
+              <rect x="285" y="150" width="90" height="45" rx="8" fill="#0a1830"/><rect x="385" y="150" width="90" height="45" rx="8" fill="#0a1830"/>
+              <circle cx="230" cy="310" r="42" fill="#1a2230"/><circle cx="230" cy="310" r="20" fill="#39424f"/>
+              <circle cx="570" cy="310" r="42" fill="#1a2230"/><circle cx="570" cy="310" r="20" fill="#39424f"/>
+              <g fill="#fff" opacity="0.9">
+                <circle cx="250" cy="230" r="4"/><circle cx="330" cy="215" r="3"/><circle cx="480" cy="220" r="4"/><circle cx="560" cy="240" r="3"/><circle cx="400" cy="205" r="2.5"/>
+              </g>
+            </g>
+            <text x="400" y="60" text-anchor="middle" fill="#ffd34d" font-family="Bebas Neue, sans-serif" font-size="34" letter-spacing="6">AFTER — MAJOR LEAGUE GLOSS ✨</text>
+          </svg>
+        </div>
+        <div class="shine-handle" id="shine-handle" style="left:50%"></div>
+      </div>
+      <div class="shine-labels"><span>← Before</span><span>After →</span></div>
+      <p class="shine-cap">Ceramic-grade gloss. That's the Show. <a href="#builder" style="color:var(--gold);font-weight:700">Build your detail →</a></p>
+    </div>
+  </div>
+</section>
+<!-- seasonal band: ONE slim promo, clearly seasonal -->
+<section class="season" id="seasonal">
+  <div class="wrap season-in">
+    <div class="season-copy rv">
+      <span class="season-eyebrow">🎄 Seasonal — Limited Slots</span>
+      <h2>Now Booking:<br><span class="gold">2026 Holiday Lighting</span></h2>
+      <p>When detailing season slows, the lights go up. Custom-cut C9 lighting — rooflines, windows, trees — with installation, takedown, and in-season maintenance handled for you.</p>
+      <div class="season-facts">
+        <span>⭐ Custom C9 rooflines</span>
+        <span>🔧 Install + removal</span>
+        <span>🛠️ Seasonal maintenance</span>
+      </div>
+      <a class="btn btn-gold" href="#quote">Reserve My Lights 🎄</a>
+    </div>
+    <div class="countdown rv">
+      <div class="cd-lbl">Days until Christmas</div>
+      <div class="cd-num" id="cd-num">--</div>
+      <div class="cd-sub">Slots fill fast every year.<br>Detailing customers: ask about bundle savings.</div>
+    </div>
+  </div>
+</section>
+
+<!-- towns -->
+<section class="towns" id="areas">
+  <div class="wrap">
+    <div class="inning rv" style="justify-content:center"><span class="num">6th</span><span class="lbl">Inning — Home turf</span></div>
+    <h2 class="sec-title rv">We Bring the Show To You</h2>
+    <p class="sec-sub rv" style="margin-left:auto;margin-right:auto">Based in Van Alstyne, rolling out to these towns and everywhere in between. If you're close, ask — we probably come to you.</p>
+    <div class="town-chips rv">
+      <span class="home">📍 Van Alstyne</span><span>Anna</span><span>Melissa</span><span>McKinney</span><span>+ Surrounding Areas</span>
+    </div>
+  </div>
+</section>
+
+<!-- faq -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="inning rv"><span class="num">7th</span><span class="lbl">Inning — Straight answers</span></div>
+    <h2 class="sec-title rv">From the Dugout</h2>
+    <p class="sec-sub rv">The questions everybody asks before their first detail.</p>
+    <div class="faq-list">
+      <div class="faq-item rv"><button class="faq-q">Do you really come to me?<span class="pm">+</span></button><div class="faq-a"><p>Yes — that's the whole game. We're a fully mobile crew: we roll up to your driveway with everything we need. You hand over the keys and go back inside.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">What do I need to provide — water, power?<span class="pm">+</span></button><div class="faq-a"><p>Just the vehicle and a place to park it. We bring our own water, power, and professional-grade gear. Driveway, office lot, wherever works.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">How long does a detail take?<span class="pm">+</span></button><div class="faq-a"><p>Depends on the package — a maintenance wash is quick, a full MVP experience or ceramic coating takes longer. We'll give you a straight time estimate with your free quote.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">What's a starlight headliner?<span class="pm">+</span></button><div class="faq-a"><p>Hundreds of tiny fiber-optic lights installed into your headliner so your roof looks like a night sky. It's our most talked-about upgrade — check our Facebook page for recent installs.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">Do you do the Christmas lights too?<span class="pm">+</span></button><div class="faq-a"><p>Yes — every holiday season we install custom C9 Christmas lighting: rooflines, windows, trees, the works, plus takedown and in-season maintenance. Slots are limited each year, so book early.</p></div></div>
+      <div class="faq-item rv"><button class="faq-q">How do I get a quote?<span class="pm">+</span></button><div class="faq-a"><p>Call or text <a href="tel:+14695444638" style="color:var(--gold);font-weight:700">(469) 544-4638</a>, message us on Facebook, or send the form below. Quotes are free — tell us your ride and what it needs.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- quote form -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="inning rv"><span class="num">8th</span><span class="lbl">Inning — Step up to the plate</span></div>
+    <h2 class="sec-title rv" style="text-align:center">Get Your Free Quote</h2>
+    <p class="sec-sub rv" style="text-align:center;margin-left:auto;margin-right:auto">Tell us about your ride. We'll call back with a straight quote — no pressure, no obligation.</p>
+    <div class="form-card rv">
+      <form id="quote-form" novalidate>
+        <div class="f-row">
+          <div><label class="fl" for="f-name">Name</label><input type="text" id="f-name" name="name" placeholder="Your name" required></div>
+          <div><label class="fl" for="f-phone">Phone</label><input type="tel" id="f-phone" name="phone" placeholder="(xxx) xxx-xxxx" required></div>
+        </div>
+        <div class="f-row">
+          <div><label class="fl" for="f-town">Town</label>
+            <select id="f-town" name="town">
+              <option>Van Alstyne</option><option>Anna</option><option>Melissa</option><option>McKinney</option><option>Somewhere nearby</option>
+            </select>
+          </div>
+          <div><label class="fl" for="f-vehicle">Vehicle</label><input type="text" id="f-vehicle" name="vehicle" placeholder="e.g. 2026 F-250"></div>
+        </div>
+        <label class="fl">I'm interested in</label>
+        <div class="f-checks" id="f-checks">
+          <label><input type="checkbox" value="Exterior Detail">Exterior Detail</label>
+          <label><input type="checkbox" value="Interior Detail">Interior Detail</label>
+          <label><input type="checkbox" value="Ceramic Coating">Ceramic Coating</label>
+          <label><input type="checkbox" value="Window Tint">Window Tint</label>
+          <label><input type="checkbox" value="Starlight Headliner">Starlight Headliner</label>
+          <label><input type="checkbox" value="Full MVP Experience">Full MVP Experience</label>
+          <label><input type="checkbox" value="Holiday Lighting">🎄 Holiday Lighting</label>
+        </div>
+        <div class="f-row single">
+          <div><label class="fl" for="f-msg">Anything we should know?</label><textarea id="f-msg" name="message" placeholder="Stains, scratches, timeline, questions…"></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%">Send It — Get My Free Quote ⚾</button>
+        <p style="font-size:12px;color:#8a8574;text-align:center;margin-top:10px">Demo form — in production this sends straight to the shop.</p>
+      </form>
+      <div class="form-ok" id="form-ok">
+        <div class="trophy">🏆</div>
+        <h3>You're in the lineup!</h3>
+        <p>Thanks — your quote request is in. We'll call you back shortly at the number you gave. Game on.</p>
+        <p style="margin-top:14px">Need us faster? <a href="tel:+14695444638" style="color:var(--field-dark);font-weight:700">(469) 544-4638</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>🏆 Major League</h4>
+        <p>Detailing &amp; Customs<br>Premium mobile detailing.<br>Showroom shine, delivered to your driveway.</p>
+      </div>
+      <div>
+        <h4>Call the Dugout</h4>
+        <p><a href="tel:+14695444638">(469) 544-4638</a><br><a href="mailto:contact@majorleaguedetail.com">contact@majorleaguedetail.com</a><br>Always open</p>
+      </div>
+      <div>
+        <h4>Home Turf</h4>
+        <p>Jameson Rd<br>Van Alstyne, TX 75495<br>Serving Anna • Melissa • McKinney &amp; surrounding areas</p>
+      </div>
+      <div>
+        <h4>Follow the Show</h4>
+        <p><a href="https://www.facebook.com/profile.php?id=61585651757125" target="_blank" rel="noopener">Facebook — Major League Detailing &amp; Customs</a><br>Recent work, starlight installs &amp; holiday lighting updates.</p>
+      </div>
+    </div>
+    <span class="demo-badge">Demo Preview — built by NoFluff Marketing</span>
+  </div>
+</footer>
+
+<!-- sticky mobile call bar -->
+<div class="callbar">
+  <a class="cb-call" href="tel:+14695444638">📞 Call Now</a>
+  <a class="cb-quote" href="#quote">Free Quote</a>
+</div>
+
+<script>
+// ticker: duplicate for seamless loop
+(function(){var t=document.getElementById('ticker-track');t.innerHTML+=t.innerHTML;})();
+
+// mobile nav
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('nav-links').classList.toggle('open');
+});
+document.querySelectorAll('#nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('nav-links').classList.remove('open');});
+});
+
+// scroll reveal
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+// hero canvas: stadium light dust
+(function(){
+  var c=document.getElementById('hero-canvas'),x=c.getContext('2d'),W,H,P=[];
+  function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+  size();window.addEventListener('resize',size);
+  for(var i=0;i<70;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*2.4+.6,s:Math.random()*.0009+.0003,o:Math.random()*.5+.15,ph:Math.random()*6.28});
+  (function tick(t){
+    x.clearRect(0,0,W,H);
+    P.forEach(function(p){
+      p.y-=p.s;if(p.y<0){p.y=1;p.x=Math.random();}
+      var tw=p.o*(0.6+0.4*Math.sin(t/900+p.ph));
+      x.beginPath();x.arc(p.x*W,p.y*H,p.r,0,6.28);
+      x.fillStyle='rgba(255,211,77,'+tw.toFixed(3)+')';x.fill();
+    });
+    requestAnimationFrame(tick);
+  })(0);
+})();
+
+// build-your-detail state (shared by lineup buttons + pick list + quote button)
+var selected=new Set();
+var buildItems=document.getElementById('build-items');
+function renderBuild(){
+  buildItems.innerHTML='';
+  if(selected.size===0){
+    var li=document.createElement('li');li.id='build-empty';li.textContent='No players selected yet — tap a service to add it.';buildItems.appendChild(li);
+  }else{
+    selected.forEach(function(s){
+      var li=document.createElement('li');
+      var sp=document.createElement('span');sp.textContent='⚾ '+s;li.appendChild(sp);
+      var rm=document.createElement('button');rm.className='rm';rm.textContent='×';rm.setAttribute('aria-label','Remove '+s);
+      rm.addEventListener('click',function(){toggleSvc(s);});li.appendChild(rm);
+      buildItems.appendChild(li);
+    });
+  }
+  document.querySelectorAll('#pick-list .pick').forEach(function(p){p.classList.toggle('on',selected.has(p.dataset.svc));});
+  document.querySelectorAll('.lineup-card .addbtn').forEach(function(b){
+    var on=selected.has(b.dataset.svc);b.classList.toggle('added',on);
+    b.textContent=on?'✓ In Your Build':'+ Add to my build';
+  });
+}
+function toggleSvc(s){if(selected.has(s))selected.delete(s);else selected.add(s);renderBuild();}
+document.querySelectorAll('#pick-list .pick').forEach(function(p){p.addEventListener('click',function(){toggleSvc(p.dataset.svc);});});
+document.querySelectorAll('.lineup-card .addbtn').forEach(function(b){b.addEventListener('click',function(){toggleSvc(b.dataset.svc);});});
+renderBuild();
+
+// quote button carries the build into the form checkboxes
+document.getElementById('build-quote-btn').addEventListener('click',function(){
+  document.querySelectorAll('#f-checks input[type=checkbox]').forEach(function(cb){cb.checked=selected.has(cb.value);});
+});
+
+// quiz
+var scores={R:0,A:0,M:0},cur=0;
+var steps=document.querySelectorAll('.q-step');
+function showStep(n){steps.forEach(function(s,i){s.classList.toggle('active',i===n);});cur=n;}
+document.querySelectorAll('.q-opt').forEach(function(b){
+  b.addEventListener('click',function(){
+    scores[b.dataset.w]++;
+    if(cur<2){showStep(cur+1);}
+    else{
+      var win=Object.keys(scores).reduce(function(a,k){return scores[k]>scores[a]?k:a;},'R');
+      var T=document.getElementById('q-title'),D=document.getElementById('q-desc');
+      if(win==='R'){T.textContent='The Rookie Call-Up';D.textContent='Your ride just needs a solid reset — an exterior wash & wax plus an interior refresh will have it game-ready. Quick, sharp, done at your driveway.';}
+      else if(win==='A'){T.textContent='The All-Star';D.textContent='Time for the full detail treatment — deep interior, exterior revival, trim and wheels brought back to life. The everyday-driver glow-up.';}
+      else{T.textContent='The Full MVP Experience 🏆';D.textContent='Go big. The whole show, top to bottom — our signature all-in detail, and the perfect moment to add that starlight headliner you\'ve been eyeing.';}
+      showStep(3);
+    }
+  });
+});
+document.getElementById('q-again').addEventListener('click',function(){scores={R:0,A:0,M:0};showStep(0);});
+
+// shine slider
+(function(){
+  var stage=document.getElementById('shine-stage'),after=document.getElementById('shine-after'),handle=document.getElementById('shine-handle'),drag=false;
+  function setP(clientX){
+    var r=stage.getBoundingClientRect(),p=((clientX-r.left)/r.width)*100;
+    p=Math.max(4,Math.min(96,p));
+    after.style.width=p+'%';handle.style.left=p+'%';
+  }
+  stage.addEventListener('pointerdown',function(e){drag=true;stage.setPointerCapture(e.pointerId);setP(e.clientX);});
+  stage.addEventListener('pointermove',function(e){if(drag)setP(e.clientX);});
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){stage.addEventListener(ev,function(){drag=false;});});
+})();
+
+// countdown to Christmas
+(function(){
+  var el=document.getElementById('cd-num');
+  function upd(){
+    var now=new Date(),xmas=new Date(now.getFullYear(),11,25);
+    if(now>xmas)xmas=new Date(now.getFullYear()+1,11,25);
+    el.textContent=Math.ceil((xmas-now)/864e5);
+  }
+  upd();setInterval(upd,36e5);
+})();
+
+// faq accordion
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item=q.parentElement,open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');i.querySelector('.pm').textContent='+';});
+    if(!open){item.classList.add('open');q.querySelector('.pm').textContent='−';}
+  });
+});
+
+// quote form (front-end demo)
+document.getElementById('quote-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=document.getElementById('f-name'),phone=document.getElementById('f-phone'),ok=true;
+  [name,phone].forEach(function(f){f.style.borderColor=f.value.trim()?'#e2dcc8':'#d8412f';if(!f.value.trim())ok=false;});
+  if(!ok)return;
+  document.getElementById('quote-form').style.display='none';
+  document.getElementById('form-ok').style.display='block';
+});
+</script>
+</body>
+</html>
