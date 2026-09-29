@@ -277,7 +277,7 @@ footer{background:#050c1a;border-top:2px solid var(--gold);padding:48px 0 110px}
     <div class="hero-tags">
       <span class="tag hot">🚚 100% Mobile — We Come To You</span>
       <span class="tag">✨ Ceramic Coatings</span>
-      <span class="tag">🪟 Window Tint</span>
+      <span class="tag">🕶️ Window Tint</span>
       <span class="tag">🌟 Starlight Headliners</span>
     </div>
     <div class="hero-ctas">
@@ -303,7 +303,7 @@ footer{background:#050c1a;border-top:2px solid var(--gold);padding:48px 0 110px}
         <button class="addbtn" data-svc="Exterior Detail">+ Add to my build</button>
       </div>
       <div class="lineup-card rv">
-        <span class="svc-ico">🪑</span>
+        <span class="svc-ico">💺</span>
         <div class="lineup-pos">Batting #2</div>
         <h3>Interior Detail</h3>
         <p>Deep vacuum, shampoo, leather care, every vent and cupholder. Step inside and it smells like new-car day.</p>
@@ -317,7 +317,7 @@ footer{background:#050c1a;border-top:2px solid var(--gold);padding:48px 0 110px}
         <button class="addbtn" data-svc="Ceramic Coating">+ Add to my build</button>
       </div>
       <div class="lineup-card rv">
-        <span class="svc-ico">🪟</span>
+        <span class="svc-ico">🕶️</span>
         <div class="lineup-pos">Batting #4</div>
         <h3>Window Tint</h3>
         <p>Cooler cabin, sharper look, real UV protection. Texas sun doesn't stand a chance.</p>
@@ -627,9 +627,16 @@ document.querySelectorAll('#nav-links a').forEach(function(a){
   a.addEventListener('click',function(){document.getElementById('nav-links').classList.remove('open');});
 });
 
-// scroll reveal
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
-document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+// scroll reveal (guarded: older browsers without IntersectionObserver just show everything)
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+})();
 
 // hero canvas: stadium light dust
 (function(){
