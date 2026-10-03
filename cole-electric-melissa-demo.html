@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Cole Electric | Family-Owned Electrician in Melissa, TX | (469) 422-6019</title>
+<meta name="description" content="Cole Electric — the family-owned Melissa, TX electrician since 1991. Founded by Michael Cole with his daughter and son-in-law. Residential & commercial electrical. Call (469) 422-6019.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --volt:#ffd21f; --volt-deep:#e6b800; --volt-soft:#ffe873;
+  --ink:#101c3a; --ink-deep:#0a1226; --ink-line:#22325c;
+  --paper:#fffdf4; --paper-dim:#f6efda; --slate:#3c4356; --white:#ffffff;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--slate);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Archivo',sans-serif;font-stretch:110%;font-weight:800;line-height:1.02;letter-spacing:-.01em;color:var(--ink)}
+img{max-width:100%} a{color:inherit} .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+.demo-badge{position:fixed;top:0;left:0;right:0;z-index:9999;background:#0a0a0a;color:#fff;text-align:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:7px 10px;font-weight:700}
+.demo-badge b{color:var(--volt)}
+
+/* Nav */
+.nav{position:sticky;top:31px;z-index:900;background:var(--ink);border-bottom:4px solid var(--volt)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:12px 22px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.bolt{width:46px;height:46px;background:var(--volt);border-radius:12px;display:grid;place-items:center;font-size:26px;transform:rotate(-6deg)}
+.brand b{font-family:'Archivo';font-stretch:115%;font-weight:900;font-size:24px;color:#fff;letter-spacing:.02em;display:block;line-height:1;text-transform:uppercase}
+.brand small{font-size:11px;letter-spacing:.2em;color:var(--volt);text-transform:uppercase;font-weight:700}
+.nav-links{display:flex;gap:26px}
+.nav-links a{color:#dfe4f2;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+.nav-links a:hover{color:var(--volt)}
+.nav-call{background:var(--volt);color:var(--ink);font-family:'Archivo';font-weight:900;font-size:17px;text-transform:uppercase;text-decoration:none;padding:12px 22px;border-radius:999px;letter-spacing:.03em}
+.nav-call:hover{background:#fff}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* Hero */
+.hero{background:radial-gradient(1200px 600px at 85% -10%,#243a72 0%,var(--ink) 55%,var(--ink-deep) 100%);color:#fff;padding:100px 0 0;position:relative;overflow:hidden}
+.bolts-bg{position:absolute;inset:0;opacity:.08;font-size:200px;line-height:1;overflow:hidden;pointer-events:none;white-space:nowrap}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;position:relative}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,210,31,.14);border:1px solid var(--volt);color:var(--volt-soft);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(48px,7vw,96px);color:#fff}
+.hero h1 em{font-style:normal;color:var(--volt)}
+.hero-sub{font-size:19px;color:#c3cbdf;max-width:520px;margin:20px 0 28px}
+.hero-sub b{color:#fff}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.btn{display:inline-block;text-decoration:none;font-family:'Archivo';font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.03em;padding:16px 34px;border-radius:999px;transition:.18s}
+.btn-volt{background:var(--volt);color:var(--ink)}
+.btn-volt:hover{background:#fff;transform:translateY(-2px)}
+.btn-line{border:2px solid #fff;color:#fff}
+.btn-line:hover{border-color:var(--volt);color:var(--volt)}
+.hero-proof{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:56px}
+.hstat{border-left:3px solid var(--volt);padding-left:14px}
+.hstat b{display:block;font-family:'Archivo';font-weight:900;font-size:26px;color:#fff}
+.hstat span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#aab3cc;font-weight:600}
+.hero-card{background:#fff;color:var(--slate);border-radius:20px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.4);position:relative}
+.hero-card::before{content:"";position:absolute;top:-16px;left:34px;background:var(--volt);color:var(--ink);font-family:'Archivo';font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:8px 18px;border-radius:999px;content:"From their own customers"}
+.hero-card .stars{color:var(--volt-deep);font-size:20px;margin-top:14px}
+.hero-card p{font-size:16px;font-style:italic;margin:10px 0}
+.hero-card .who{font-size:13px;font-weight:700;color:var(--ink)}
+.hero-card .who small{display:block;font-weight:500;color:#8a90a3;font-size:12px}
+@media(max-width:900px){.hero-card{display:none}}
+.hero-towns{border-top:1px solid var(--ink-line);padding:16px 0;text-align:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8b95b5;font-weight:600;position:relative}
+.hero-towns b{color:var(--volt)}
+
+/* Family story */
+.family{padding:90px 0;background:var(--paper)}
+.fam-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:40px}
+@media(max-width:900px){.fam-grid{grid-template-columns:1fr}}
+.kicker{font-family:'Archivo';font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--volt-deep);font-size:13px;margin-bottom:12px}
+.sec-title{font-size:clamp(36px,4.6vw,60px);margin-bottom:16px}
+.lead{font-size:18px;color:#5a6074;max-width:640px}
+.fam-names{display:grid;gap:14px;margin-top:28px}
+.fam-card{background:#fff;border:2px solid var(--paper-dim);border-radius:16px;padding:20px 24px;display:flex;gap:18px;align-items:center;transition:.2s}
+.fam-card:hover{border-color:var(--volt);transform:translateX(6px)}
+.fam-face{width:60px;height:60px;flex:0 0 60px;border-radius:50%;background:var(--ink);color:var(--volt);display:grid;place-items:center;font-family:'Archivo';font-weight:900;font-size:24px}
+.fam-card b{font-family:'Archivo';font-weight:800;font-size:19px;color:var(--ink);display:block}
+.fam-card span{font-size:14px;color:#6b7288}
+.timeline{position:relative;background:var(--ink);border-radius:20px;padding:40px 36px;color:#fff;overflow:hidden}
+.timeline::before{content:"⚡";position:absolute;right:18px;top:10px;font-size:110px;opacity:.08}
+.tl-row{display:flex;gap:18px;margin-bottom:26px;position:relative}
+.tl-row:last-child{margin-bottom:0}
+.tl-year{background:var(--volt);color:var(--ink);font-family:'Archivo';font-weight:900;font-size:18px;padding:8px 16px;border-radius:10px;height:fit-content;flex:0 0 auto}
+.tl-row p{font-size:15px;color:#dfe4f2}
+.tl-row p b{color:var(--volt)}
+
+/* Counters */
+.counters{background:var(--volt);padding:60px 0;color:var(--ink)}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:800px){.count-grid{grid-template-columns:repeat(2,1fr)}}
+.count{text-align:center;background:rgba(255,255,255,.35);border-radius:16px;padding:26px 12px}
+.count .num{font-family:'Archivo';font-weight:900;font-size:52px;line-height:1}
+.count .lbl{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-top:8px}
+.count .src{font-size:11px;color:#5c5320;margin-top:6px}
+
+/* Services accordion */
+.svc{background:#fff;padding:90px 0}
+.svc-item{border:2px solid var(--paper-dim);border-radius:16px;margin-bottom:14px;overflow:hidden;background:var(--paper)}
+.svc-q{width:100%;background:none;border:0;display:flex;justify-content:space-between;align-items:center;gap:14px;text-align:left;padding:24px 28px;cursor:pointer}
+.svc-q .t{font-family:'Archivo';font-weight:800;font-size:22px;color:var(--ink);text-transform:uppercase}
+.svc-q .g{font-size:34px;flex:0 0 46px;height:46px;width:46px;background:var(--volt);border-radius:50%;display:grid;place-items:center;color:var(--ink);font-weight:900}
+.svc-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.svc-a div{padding:0 28px 28px;color:#5a6074;font-size:16px}
+.svc-a .go{display:inline-block;margin-top:14px;background:var(--ink);color:#fff;text-decoration:none;font-family:'Archivo';font-weight:800;font-size:15px;text-transform:uppercase;padding:12px 26px;border-radius:999px}
+.svc-a .go:hover{background:var(--volt-deep)}
+
+/* Reviews slider */
+.reviews{background:var(--ink-deep);color:#fff;padding:90px 0}
+.slider{max-width:840px;margin:44px auto 0;position:relative}
+.slide{display:none;background:#141f3d;border:1px solid var(--ink-line);border-radius:18px;padding:44px}
+.slide.active{display:block;animation:fade .35s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.slide .stars{color:var(--volt);font-size:22px}
+.slide p{font-size:19px;line-height:1.7;margin:16px 0;font-style:italic;color:#eef1f9}
+.slide .who{font-weight:700;font-size:14px;color:var(--volt-soft);text-transform:uppercase;letter-spacing:.08em}
+.slide .who small{display:block;font-weight:500;color:#8b95b5;text-transform:none;letter-spacing:0;font-size:13px}
+.slider-nav{display:flex;gap:12px;justify-content:center;margin-top:26px}
+.slider-nav button{background:transparent;border:2px solid var(--volt);color:var(--volt);font-family:'Archivo';font-weight:800;font-size:16px;text-transform:uppercase;padding:11px 28px;border-radius:999px;cursor:pointer}
+.slider-nav button:hover{background:var(--volt);color:var(--ink)}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.dot{width:11px;height:11px;border-radius:50%;background:#2c3a66;cursor:pointer}
+.dot.active{background:var(--volt)}
+
+/* FAQ */
+.faq{padding:90px 0;background:var(--paper)}
+.faq-item{background:#fff;border-radius:14px;margin-bottom:12px;border:1px solid var(--paper-dim);overflow:hidden}
+.faq-q{width:100%;background:none;border:0;text-align:left;font-family:'Archivo';font-weight:800;font-size:19px;color:var(--ink);padding:22px 26px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q span:last-child{color:var(--volt-deep);font-size:28px;line-height:1;transition:.2s}
+.faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-a div{padding:0 26px 24px;color:#5a6074}
+
+/* Area */
+.area{background:var(--volt);padding:70px 0;color:var(--ink)}
+.area-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:28px}
+.town{background:var(--ink);color:#fff;text-align:center;padding:18px 10px;border-radius:14px;font-family:'Archivo';font-weight:800;font-size:18px;text-transform:uppercase}
+.town small{display:block;font-family:'Inter';font-weight:600;font-size:11px;letter-spacing:.14em;color:var(--volt-soft);margin-top:4px}
+
+/* CTA */
+.cta{background:var(--ink);color:#fff;text-align:center;padding:100px 0;position:relative;overflow:hidden}
+.cta::before{content:"⚡⚡⚡";position:absolute;inset:0;display:grid;place-items:center;font-size:400px;opacity:.04;pointer-events:none}
+.cta h2{font-size:clamp(40px,5.5vw,72px);color:#fff;position:relative}
+.cta h2 em{font-style:normal;color:var(--volt)}
+.cta p{color:#c3cbdf;font-size:18px;max-width:580px;margin:18px auto 32px;position:relative}
+.phone-big{display:inline-block;font-family:'Archivo';font-weight:900;font-size:clamp(30px,4.6vw,54px);color:var(--ink);background:var(--volt);text-decoration:none;padding:16px 46px;border-radius:999px;position:relative}
+.phone-big:hover{background:#fff}
+.cta small{display:block;color:#8b95b5;margin-top:14px;font-size:13px;position:relative}
+
+/* Footer */
+footer{background:#070d1e;color:#9aa3bd;padding:46px 0 110px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+@media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+footer h4{color:#fff;font-family:'Archivo';font-weight:800;font-size:17px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+footer a{color:var(--volt-soft);text-decoration:none}
+.foot-note{margin-top:28px;padding-top:18px;border-top:1px solid #1a2440;font-size:12px;color:#5f6885}
+
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;background:var(--volt);color:var(--ink);text-align:center;font-family:'Archivo';font-weight:900;font-size:20px;text-transform:uppercase;padding:17px;text-decoration:none;border-top:3px solid var(--ink)}
+@media(max-width:860px){.sticky-call{display:block}}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="demo-badge">Demo Preview &bull; Concept site built by <b>NoFluff Marketing</b> for Cole Electric</div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top"><span class="bolt">⚡</span><span><b>Cole Electric</b><small>Melissa · Texas</small></span></a>
+    <nav class="nav-links">
+      <a href="#family">The Family</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-call" href="tel:+14694226019">Call (469) 422-6019</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="bolts-bg">⚡ ⚡ ⚡ ⚡ ⚡ ⚡</div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">⚡ Family-owned since 1991</span>
+      <h1>When the Power's Out, <em>You Call the Family You Know</em></h1>
+      <p class="hero-sub"><b>Cole Electric</b> — founded by Michael Cole, run with his daughter and son-in-law. The Melissa crew that hangs your 20-foot chandelier and rewires your kitchen like it's their own home.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-volt" href="tel:+14694226019">Call (469) 422-6019</a>
+        <a class="btn btn-line" href="#family">Meet the Family</a>
+      </div>
+      <div class="hero-proof">
+        <div class="hstat"><b>1991</b><span>Family-owned since</span></div>
+        <div class="hstat"><b>21</b><span>Permits pulled since 2020*</span></div>
+        <div class="hstat"><b>17+</b><span>5-star reviews on their site*</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="stars">★★★★★</div>
+      <p>"ABSOLUTLY SPECTACULAR. Jamin was punctual, knowledgeable, personable and has my highest recommendation. Made hanging a 20' entry chandalier look easy. Stop here and give them a call."</p>
+      <div class="who">Cole Electric customer <small>posted on coleelectricllc.com</small></div>
+    </div>
+  </div>
+  <div class="hero-towns"><b>Melissa, TX</b> &nbsp;·&nbsp; 5801 Private Rd 5047 &nbsp;·&nbsp; Mon–Fri 7:30 AM–4:00 PM</div>
+</section>
+
+<section class="family" id="family">
+  <div class="wrap">
+    <p class="kicker reveal">The people behind the panel</p>
+    <h2 class="sec-title reveal">Not a Truck Roll. A Family.</h2>
+    <div class="fam-grid">
+      <div class="reveal">
+        <p class="lead">Most electricians send a stranger. Cole Electric sends <b style="color:var(--ink)">the family</b> — the same names their own customers quote back to them.</p>
+        <div class="fam-names">
+          <div class="fam-card"><div class="fam-face">MC</div><div><b>Michael Cole</b><span>Founder — the name on the truck since 1991, per the company's own site</span></div></div>
+          <div class="fam-card"><div class="fam-face">BK</div><div><b>Breanna Knickerbocker</b><span>Named in customer reviews — "Jamin and Breanna upgraded our 30 year old kitchen"</span></div></div>
+          <div class="fam-card"><div class="fam-face">J</div><div><b>Jamin</b><span>Named in customer reviews — "Made hanging a 20' entry chandalier look easy"</span></div></div>
+        </div>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-row"><div class="tl-year">1991</div><p><b>Michael Cole founds the family business</b> — and 30+ years later it's still family-run, with his daughter and son-in-law on the crew.</p></div>
+        <div class="tl-row"><div class="tl-year">2020s</div><p><b>21 building permits pulled since 2020</b> — real, documented work across Collin County (BuildZoom record).</p></div>
+        <div class="tl-row"><div class="tl-year">Today</div><p><b>Kitchens, chandeliers, ceiling fans, troubleshooting</b> — the jobs customers write home about, from Melissa and beyond.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="counters">
+  <div class="wrap">
+    <div class="count-grid">
+      <div class="count reveal"><div class="num" data-count="1991" data-nocomma="1">0</div><div class="lbl">Family-owned since</div><div class="src">per company site</div></div>
+      <div class="count reveal"><div class="num" data-count="21" data-suffix="">0</div><div class="lbl">Permits since 2020</div><div class="src">BuildZoom record</div></div>
+      <div class="count reveal"><div class="num" data-count="17" data-suffix="+">0</div><div class="lbl">5-star reviews</div><div class="src">published on their own site</div></div>
+      <div class="count reveal"><div class="num" data-count="30" data-suffix="+">0</div><div class="lbl">Areas served</div><div class="src">per company site</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <p class="kicker reveal">What the family does</p>
+    <h2 class="sec-title reveal">Residential &amp; Commercial, Done Right</h2>
+    <p class="lead reveal">Tap a service to see what Cole Electric brings to it.</p>
+    <div style="max-width:860px;margin:36px auto 0">
+      <div class="svc-item reveal">
+        <button class="svc-q"><span class="t">⚡ Troubleshooting &amp; Repairs</span><span class="g">+</span></button>
+        <div class="svc-a"><div>Their stated specialty: tracking down the weird electrical gremlins nobody else can find and fixing them safe and clean. Faulty fixtures, dead circuits, mystery outages — solved.<br><a class="go" href="tel:+14694226019">Call (469) 422-6019</a></div></div>
+      </div>
+      <div class="svc-item reveal">
+        <button class="svc-q"><span class="t">🏠 Residential Remodels</span><span class="g">+</span></button>
+        <div class="svc-a"><div>Kitchen upgrades, new circuits for appliances, lighting that actually flatters the room. Karen P.'s review says it best: "They were both very professional, punctual and the quality of work was excellent."<br><a class="go" href="tel:+14694226019">Call (469) 422-6019</a></div></div>
+      </div>
+      <div class="svc-item reveal">
+        <button class="svc-q"><span class="t">🏢 Commercial Lighting &amp; Build-Outs</span><span class="g">+</span></button>
+        <div class="svc-a"><div>Commercial lighting, low-voltage runs, and facility work — the same crew that trusted partners like Powerhouse and Facility Solutions Group call on, per the company's own site.<br><a class="go" href="tel:+14694226019">Call (469) 422-6019</a></div></div>
+      </div>
+      <div class="svc-item reveal">
+        <button class="svc-q"><span class="t">🚨 24/7 Emergency Service</span><span class="g">+</span></button>
+        <div class="svc-a"><div>Electrical problems don't keep office hours. The company's own site advertises round-the-clock emergency response — call anytime at (469) 422-6019.<br><a class="go" href="tel:+14694226019">Call (469) 422-6019</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <p class="kicker reveal" style="text-align:center">Their customers, their words</p>
+    <h2 class="sec-title reveal" style="text-align:center;color:#fff">Reviews That Name Names</h2>
+    <p style="text-align:center;color:#8b95b5;font-size:14px;max-width:640px;margin:0 auto">Posted on coleelectricllc.com — the reviews their current site buries under a thin homepage.</p>
+    <div class="slider reveal">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <p>"Jamin and Breanna Knickerbocker, Cole Electric upgraded our 30 year old kitchen to receive a new microwave and double oven from a single oven. I love it especially during the holidays. They were both very professional, punctual and the quality of work was excellent."</p>
+        <div class="who">Karen P. <small>posted on coleelectricllc.com</small></div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <p>"I contacted Cole Electric about installing a couple of ceiling fans and running some low-voltage cables in my house, and I'm glad I did. They took extra care to ensure the work and work areas were clean and restored to better than when they were found. I cannot recommend Cole Electric more highly!"</p>
+        <div class="who">Steven P. <small>posted on coleelectricllc.com</small></div>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <p>"ABSOLUTLY SPECTACULAR. Jamin was punctual, knowledgeable, personable and has my highest recommendation. Made hanging a 20' entry chandalier look easy. Stop here and give them a call."</p>
+        <div class="who">Cole Electric customer <small>posted on coleelectricllc.com</small></div>
+      </div>
+      <div class="slider-nav">
+        <button id="prevSlide">← Prev</button>
+        <button id="nextSlide">Next →</button>
+      </div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <p class="kicker reveal">Good to know</p>
+    <h2 class="sec-title reveal">Questions? Ask the Family.</h2>
+    <div style="max-width:820px;margin:36px auto 0">
+      <div class="faq-item reveal"><button class="faq-q">Who will actually show up at my house? <span>+</span></button><div class="faq-a"><div>The family. Cole Electric is run by founder Michael Cole with his daughter and son-in-law — customers name Jamin and Breanna Knickerbocker in their reviews. Call (469) 422-6019 and you'll reach the shop.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Are you licensed and insured? <span>+</span></button><div class="faq-a"><div>The company describes itself as licensed and insured on its own site, and BuildZoom's record notes an electrical contractor license held by the business. Ask them directly at (469) 422-6019 for the current license number.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Do you handle commercial work? <span>+</span></button><div class="faq-a"><div>Yes — commercial lighting, low-voltage, and facility maintenance are part of the lineup, alongside residential remodels and troubleshooting.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q">What are your hours? <span>+</span></button><div class="faq-a"><div>The shop's directory listing shows Monday–Friday, 7:30 AM–4:00 PM — and their site advertises 24/7 emergency response for after-hours problems. Call (469) 422-6019.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <p class="kicker reveal" style="color:var(--ink)">Based in Melissa</p>
+    <h2 class="sec-title reveal">Proudly Serving 30+ Areas</h2>
+    <p class="lead reveal" style="color:#3d3a1e">Anchored at 5801 Private Rd 5047, Melissa, TX — reaching across Collin County and beyond.</p>
+    <div class="area-grid reveal">
+      <div class="town">Melissa<small>Home base</small></div>
+      <div class="town">Anna<small>Serving</small></div>
+      <div class="town">Celina<small>Serving</small></div>
+      <div class="town">McKinney<small>Serving</small></div>
+      <div class="town">Prosper<small>Serving</small></div>
+      <div class="town">Frisco<small>Serving</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap reveal">
+    <h2>Call the Family, <em>Not a Call Center</em></h2>
+    <p>One call reaches the shop Michael Cole built in 1991 — the family that hangs the chandelier and rewires the kitchen.</p>
+    <a class="phone-big" href="tel:+14694226019">(469) 422-6019</a>
+    <small>5801 Private Rd 5047, Melissa, TX 75454 · Mon–Fri 7:30 AM–4:00 PM</small>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Cole Electric</h4><p>5801 Private Rd 5047<br>Melissa, TX 75454</p></div>
+      <div><h4>Call</h4><p><a href="tel:+14694226019">(469) 422-6019</a></p></div>
+      <div><h4>Hours</h4><p>Mon–Fri 7:30 AM–4:00 PM<br><span style="font-size:12px;color:#5f6885">(per directory listing)</span></p></div>
+    </div>
+    <p class="foot-note">Demo preview concept by NoFluff Marketing. Business facts verified from public listings October 2026. Review counts shown are the business's own published claims; hours per directory listing. No public email found.</p>
+  </div>
+</footer>
+
+<a class="sticky-call" href="tel:+14694226019">⚡ Call Cole Electric Now</a>
+
+<script>
+// Counters
+(function(){
+  const els=document.querySelectorAll('.num[data-count]');
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(!e.isIntersecting) return; io.unobserve(e.target);
+    const el=e.target, target=+el.dataset.count, suf=el.dataset.suffix||'', noComma=el.dataset.nocomma;
+    const t0=performance.now(), dur=1400;
+    (function tick(t){ const p=Math.min(1,(t-t0)/dur), v=Math.round(target*(1-Math.pow(1-p,3)));
+      el.textContent=(noComma?v:v.toLocaleString())+suf; if(p<1) requestAnimationFrame(tick); })(t0);
+  }),{threshold:.5});
+  els.forEach(el=>io.observe(el));
+})();
+// Services accordion
+document.querySelectorAll('.svc-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement, a=item.querySelector('.svc-a'), open=item.classList.contains('open');
+  document.querySelectorAll('.svc-item').forEach(x=>{x.classList.remove('open');x.querySelector('.svc-a').style.maxHeight=null;x.querySelector('.g').textContent='+';});
+  if(!open){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; q.querySelector('.g').textContent='–'; }
+}));
+// Slider
+(function(){
+  const slides=[...document.querySelectorAll('.slide')].filter(s=>s.querySelector('p')), dots=document.getElementById('dots'); let i=0;
+  slides.forEach((_,k)=>{ const d=document.createElement('span'); d.className='dot'+(k===0?' active':''); d.onclick=()=>go(k); dots.appendChild(d); });
+  function go(k){ i=(k+slides.length)%slides.length; slides.forEach((s,j)=>s.classList.toggle('active',j===i)); dots.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===i)); }
+  document.getElementById('prevSlide').onclick=()=>go(i-1);
+  document.getElementById('nextSlide').onclick=()=>go(i+1);
+  setInterval(()=>go(i+1),8000);
+})();
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+  const item=q.parentElement, a=item.querySelector('.faq-a'), open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('open');x.querySelector('.faq-a').style.maxHeight=null;});
+  if(!open){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
+}));
+// Reveal
+const rio=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); rio.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
+</script>
+</body>
+</html>
